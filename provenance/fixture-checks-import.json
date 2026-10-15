@@ -1,0 +1,18 @@
+{
+  "schema_version": 1,
+  "origin": {
+    "repository": "Pear",
+    "revision": "951264bf5be4b9d2afb87320f5fac74778b2dd58",
+    "path": "tools/steam/fixture_checks.py",
+    "sha256": "df832c3fff37030eb89fbf45b1731ab89c8933fdf3f81eb4b8a03861aa801296"
+  },
+  "symbol": "fixture",
+  "changes": [
+    "Require completed exact FixtureContext; no old admission.",
+    "Restrict to seven bundled fixture PEs; excluded external/game/presentation branches are unavailable.",
+    "Rendering sub-branch delegated to separately preserved graphics oracle; common original assertions retained.",
+    "Canonical CandidateDescription retains exact original fields.",
+    "Both current-authority results require passed is True and equality to the exact reviewed completed assembly operation reference.",
+    "New assembly authority records use their existing core.read_ref bounded duplicate-key/reference decoder, because timing phases contain finite fractional seconds; original case/event/fixture readers remain unchanged."
+  ]
+}

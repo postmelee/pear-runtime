@@ -1,0 +1,97 @@
+{
+  "schema_version": 1,
+  "scope": "Task56 fixture parent binding import",
+  "source_repository": "https://github.com/postmelee/pear",
+  "source_checkpoint": "951264bf5be4b9d2afb87320f5fac74778b2dd58",
+  "files": [
+    {
+      "path": "pear_runtime/fixtures/inputs.py",
+      "license": "MIT",
+      "source_path": "tools/dxmt/translated_inputs.py",
+      "source_sha256": "c60d531232794fc04762023618f41b7aa31f950842be9a015951a2236f499e9e",
+      "source_size_bytes": 5768,
+      "selected_symbols": [
+        {
+          "symbol": "digest",
+          "start_line": 19,
+          "end_line": 19,
+          "sha256": "1117912448951bf90f44730f3937d91bd7fdae06b90791bbb0a617dfbd423fc6"
+        },
+        {
+          "symbol": "read",
+          "start_line": 20,
+          "end_line": 20,
+          "sha256": "8989fde591815f75d6fdddedbfdafc372927d6af87c5384903a526db1bc90a61"
+        },
+        {
+          "symbol": "save",
+          "start_line": 21,
+          "end_line": 21,
+          "sha256": "0ff092260ee5d26422686baacb0abd5117037317e1d4cbfcd33565b89c1f350f"
+        },
+        {
+          "symbol": "fact",
+          "start_line": 24,
+          "end_line": 26,
+          "sha256": "760a23045c5edcb7806a5f236cefe544ede50ff024528b780e7e18a9e9b2413c"
+        },
+        {
+          "symbol": "check_files",
+          "start_line": 33,
+          "end_line": 38,
+          "sha256": "828df99b8525867823ee7c80481714fa3000a27819ae9bf6ac0d7a2253a9ee64"
+        }
+      ],
+      "transformation": "Exact five helper function bodies; explicit imports from the canonical strict decoder and errors."
+    },
+    {
+      "path": "pear_runtime/fixtures/types.py",
+      "license": "MIT",
+      "source_path": "tools/steam/direct_prepare_v1.py",
+      "source_sha256": "e17a1e3c8cd9748a690066cef158979a8536db677493b03049b8616acfd24e9a",
+      "source_size_bytes": 19856,
+      "selected_symbols": [
+        {
+          "symbol": "Selection",
+          "start_line": 39,
+          "end_line": 41,
+          "sha256": "c6e320296a7a72d7b276a1d25554f97c3f0c3c24013e6fb0bf55aa3b053316f5"
+        }
+      ],
+      "transformation": "Original frozen dataclass fields retained in the canonical shared type module; original MIT terms and collective attribution preserved."
+    },
+    {
+      "path": "pear_runtime/fixtures/types.py",
+      "license": "MIT",
+      "source_path": "tools/steam/fixture_checks.py",
+      "source_sha256": "df832c3fff37030eb89fbf45b1731ab89c8933fdf3f81eb4b8a03861aa801296",
+      "source_size_bytes": 6346,
+      "selected_symbols": [
+        {
+          "symbol": "CandidateDescription",
+          "start_line": 18,
+          "end_line": 20,
+          "sha256": "03a388ff3a2c654190b45d7dab24776f61a5630ab21c2882cbb7d25c0c2cf731"
+        }
+      ],
+      "transformation": "Original frozen dataclass fields retained in the canonical shared type module; original MIT terms and collective attribution preserved."
+    }
+  ],
+  "related_import_records": [
+    "provenance/fixture-context-import.json",
+    "provenance/fixture-direct-import.json",
+    "provenance/fixture-checks-import.json",
+    "provenance/fixture-provider-import.json",
+    "provenance/fixture-assessment-import.json",
+    "provenance/fixture-graphics-import.json"
+  ],
+  "new_original_glue": {
+    "license": "GPL-3.0-or-later",
+    "paths": [
+      "pear_runtime/fixtures/__init__.py",
+      "pear_runtime/fixtures/__main__.py",
+      "pear_runtime/fixtures/driver.py"
+    ],
+    "reuse": "Driver reuses existing assembly lease/deadline/bounded diagnostics and delegates runtime lifecycle to the original APISession; no new runtime process launcher."
+  }
+}

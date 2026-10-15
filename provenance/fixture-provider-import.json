@@ -1,0 +1,822 @@
+{
+  "schema_version": 1,
+  "scope": "Task #56 Stage 4 canonical fixture provider source import",
+  "source_provider": "pear_runtime/providers/pear_legacy",
+  "file_count": 17,
+  "logical_source_bytes": 546159,
+  "files": [
+    {
+      "path": "tools/dxmt/common.py",
+      "destination": "pear_runtime/providers/pear_legacy/tools/dxmt/common.py",
+      "sha256": "3593e8e2a80d535143e2baae7e945ce90918520711993848dc33355d9dac0e75",
+      "size_bytes": 13699,
+      "source_repository": "https://github.com/postmelee/pear",
+      "source_checkpoint": "ea6c018565217b852b8e116d692773214cec1c20",
+      "source_path": "tools/dxmt/common.py",
+      "source_state": "exact Git blob",
+      "content_committed_at_checkpoint": true,
+      "canonical_owner": "postmelee/pear-runtime",
+      "initial_transformation": "none; exact original source bytes",
+      "mode": "100644",
+      "license": "Original Pear GPL-3.0-or-later adoption; preserve file-specific notices",
+      "load_mode": "selected_functions_or_constants",
+      "selected_symbols": [
+        "digest",
+        "fields",
+        "real_directory",
+        "write_new",
+        "clean_env"
+      ],
+      "adoption": "Canonical editable provider for selected generic functions; final owner acceptance remains the Task #56 cutover gate.",
+      "excluded": "Historical CLI/build/game entrypoints are retained source context, not selected runtime entrypoints."
+    },
+    {
+      "path": "tools/dxmt/build.py",
+      "destination": "pear_runtime/providers/pear_legacy/tools/dxmt/build.py",
+      "sha256": "283e52d5d2f9a42d403624370537e8bf4ebe1859a75a5436d57a90975e8ef144",
+      "size_bytes": 19962,
+      "source_repository": "https://github.com/postmelee/pear",
+      "source_checkpoint": "ea6c018565217b852b8e116d692773214cec1c20",
+      "source_path": "tools/dxmt/build.py",
+      "source_state": "exact Git blob",
+      "content_committed_at_checkpoint": true,
+      "canonical_owner": "postmelee/pear-runtime",
+      "initial_transformation": "none; exact original source bytes",
+      "mode": "100644",
+      "license": "Original Pear GPL-3.0-or-later adoption; preserve file-specific notices",
+      "load_mode": "selected_functions_or_constants",
+      "selected_symbols": [
+        "write_bytes"
+      ],
+      "adoption": "Canonical editable provider for selected generic functions; final owner acceptance remains the Task #56 cutover gate.",
+      "excluded": "Historical CLI/build/game entrypoints are retained source context, not selected runtime entrypoints."
+    },
+    {
+      "path": "tools/dxmt/pairing_runtime.py",
+      "destination": "pear_runtime/providers/pear_legacy/tools/dxmt/pairing_runtime.py",
+      "sha256": "617b00dbd281271b26bc1d0d9621dcd68246805218b5bf96bdc811947f9811d5",
+      "size_bytes": 43206,
+      "source_repository": "https://github.com/postmelee/pear",
+      "source_checkpoint": "ea6c018565217b852b8e116d692773214cec1c20",
+      "source_path": "tools/dxmt/pairing_runtime.py",
+      "source_state": "exact Git blob",
+      "content_committed_at_checkpoint": true,
+      "canonical_owner": "postmelee/pear-runtime",
+      "initial_transformation": "none; exact original source bytes",
+      "mode": "100644",
+      "license": "Original Pear GPL-3.0-or-later adoption; preserve file-specific notices",
+      "load_mode": "selected_functions_or_constants",
+      "selected_symbols": [
+        "same",
+        "native_error",
+        "failure_fields",
+        "wrapped_error",
+        "certificate_prefix",
+        "signer_leaf",
+        "select_functions",
+        "source_constant",
+        "legacy",
+        "pe_machine",
+        "cms_plist",
+        "native",
+        "verify_commands",
+        "profile_recipe",
+        "profile_from_logs",
+        "capture_authorization",
+        "verify_authorization",
+        "signature_recipe",
+        "signature_from_logs",
+        "signing_recipe",
+        "signatures_from_logs"
+      ],
+      "adoption": "Canonical editable provider for selected generic functions; final owner acceptance remains the Task #56 cutover gate.",
+      "excluded": "Historical CLI/build/game entrypoints are retained source context, not selected runtime entrypoints."
+    },
+    {
+      "path": "tools/wine/signing.py",
+      "destination": "pear_runtime/providers/pear_legacy/tools/wine/signing.py",
+      "sha256": "4c643405fab8b42b369a360d8431fe667f0dc60dd24c703074ff09afdcf3b71b",
+      "size_bytes": 38692,
+      "source_repository": "https://github.com/postmelee/pear",
+      "source_checkpoint": "951264bf5be4b9d2afb87320f5fac74778b2dd58",
+      "source_path": "tools/wine/signing.py",
+      "source_state": "exact Git blob",
+      "content_committed_at_checkpoint": true,
+      "canonical_owner": "postmelee/pear-runtime",
+      "initial_transformation": "none; exact original source bytes",
+      "mode": "100644",
+      "license": "Original Pear GPL-3.0-or-later adoption; preserve file-specific notices",
+      "load_mode": "selected_functions_or_constants",
+      "selected_symbols": [
+        "_relative_target",
+        "inventory",
+        "_code_parts",
+        "verify_code_origin",
+        "profile_authorization",
+        "loader_claims",
+        "signature_check"
+      ],
+      "adoption": "Canonical editable provider for selected generic functions; final owner acceptance remains the Task #56 cutover gate.",
+      "excluded": "Historical CLI/build/game entrypoints are retained source context, not selected runtime entrypoints."
+    },
+    {
+      "path": "host/probe/provisioned_probe.py",
+      "destination": "pear_runtime/providers/pear_legacy/host/probe/provisioned_probe.py",
+      "sha256": "47f49422f4d6ccefb2826690a562d4d829c007d2c5a96fc156c86f7d446e2ee3",
+      "size_bytes": 29260,
+      "source_repository": "https://github.com/postmelee/pear",
+      "source_checkpoint": "951264bf5be4b9d2afb87320f5fac74778b2dd58",
+      "source_path": "host/probe/provisioned_probe.py",
+      "source_state": "exact Git blob",
+      "content_committed_at_checkpoint": true,
+      "canonical_owner": "postmelee/pear-runtime",
+      "initial_transformation": "none; exact original source bytes",
+      "mode": "100644",
+      "license": "Original Pear GPL-3.0-or-later adoption; preserve file-specific notices",
+      "load_mode": "selected_functions_or_constants",
+      "selected_symbols": [
+        "validate_profile",
+        "APP_ID",
+        "TEAM_ID",
+        "CROSS_KEYS"
+      ],
+      "adoption": "Canonical editable provider for selected generic functions; final owner acceptance remains the Task #56 cutover gate.",
+      "excluded": "Historical CLI/build/game entrypoints are retained source context, not selected runtime entrypoints."
+    },
+    {
+      "path": "host/probe/hardened_baseline.py",
+      "destination": "pear_runtime/providers/pear_legacy/host/probe/hardened_baseline.py",
+      "sha256": "e10c985de82a93b852e8a6204c94f9877628f3cc49760b5c39d771635130947a",
+      "size_bytes": 26320,
+      "source_repository": "https://github.com/postmelee/pear",
+      "source_checkpoint": "951264bf5be4b9d2afb87320f5fac74778b2dd58",
+      "source_path": "host/probe/hardened_baseline.py",
+      "source_state": "exact Git blob",
+      "content_committed_at_checkpoint": true,
+      "canonical_owner": "postmelee/pear-runtime",
+      "initial_transformation": "none; exact original source bytes",
+      "mode": "100644",
+      "license": "Original Pear GPL-3.0-or-later adoption; preserve file-specific notices",
+      "load_mode": "selected_functions_or_constants",
+      "selected_symbols": [
+        "ALLOW_JIT"
+      ],
+      "adoption": "Canonical editable provider for selected generic functions; final owner acceptance remains the Task #56 cutover gate.",
+      "excluded": "Historical CLI/build/game entrypoints are retained source context, not selected runtime entrypoints."
+    },
+    {
+      "path": "tools/wine/common.py",
+      "destination": "pear_runtime/providers/pear_legacy/tools/wine/common.py",
+      "sha256": "5c2789ca3392f70f93c5ae0656e803c0f8a01d4cc1c1d2622e8af0014690e171",
+      "size_bytes": 7970,
+      "source_repository": "https://github.com/postmelee/pear",
+      "source_checkpoint": "951264bf5be4b9d2afb87320f5fac74778b2dd58",
+      "source_path": "tools/wine/common.py",
+      "source_state": "exact Git blob",
+      "content_committed_at_checkpoint": true,
+      "canonical_owner": "postmelee/pear-runtime",
+      "initial_transformation": "none; exact original source bytes",
+      "mode": "100644",
+      "license": "No marker in opening source; current Pear original-code GPL-3.0-or-later adoption with original third-party notices retained; inspect selected symbols before import",
+      "load_mode": "captured_module",
+      "selected_symbols": null,
+      "adoption": "Canonical editable provider for selected generic functions; final owner acceptance remains the Task #56 cutover gate.",
+      "excluded": "Historical CLI/build/game entrypoints are retained source context, not selected runtime entrypoints."
+    },
+    {
+      "path": "tools/wine/prepare.py",
+      "destination": "pear_runtime/providers/pear_legacy/tools/wine/prepare.py",
+      "sha256": "d01f104cbf49b373eeec2799d79b975523fba2960d0b92d723e5e37cdc11de50",
+      "size_bytes": 26246,
+      "source_repository": "https://github.com/postmelee/pear",
+      "source_checkpoint": "951264bf5be4b9d2afb87320f5fac74778b2dd58",
+      "source_path": "tools/wine/prepare.py",
+      "source_state": "exact Git blob",
+      "content_committed_at_checkpoint": true,
+      "canonical_owner": "postmelee/pear-runtime",
+      "initial_transformation": "none; exact original source bytes",
+      "mode": "100644",
+      "license": "No marker in opening source; current Pear original-code GPL-3.0-or-later adoption with original third-party notices retained; inspect selected symbols before import",
+      "load_mode": "captured_module",
+      "selected_symbols": null,
+      "adoption": "Canonical editable provider for selected generic functions; final owner acceptance remains the Task #56 cutover gate.",
+      "excluded": "Historical CLI/build/game entrypoints are retained source context, not selected runtime entrypoints."
+    },
+    {
+      "path": "tools/wine/toolchain.py",
+      "destination": "pear_runtime/providers/pear_legacy/tools/wine/toolchain.py",
+      "sha256": "760e701e79337635c6c8ae77fc607d4ee550932cd04c419540e44f5a9e2cb597",
+      "size_bytes": 38707,
+      "source_repository": "https://github.com/postmelee/pear",
+      "source_checkpoint": "951264bf5be4b9d2afb87320f5fac74778b2dd58",
+      "source_path": "tools/wine/toolchain.py",
+      "source_state": "exact Git blob",
+      "content_committed_at_checkpoint": true,
+      "canonical_owner": "postmelee/pear-runtime",
+      "initial_transformation": "none; exact original source bytes",
+      "mode": "100644",
+      "license": "No marker in opening source; current Pear original-code GPL-3.0-or-later adoption with original third-party notices retained; inspect selected symbols before import",
+      "load_mode": "captured_module",
+      "selected_symbols": null,
+      "adoption": "Canonical editable provider for selected generic functions; final owner acceptance remains the Task #56 cutover gate.",
+      "excluded": "Historical CLI/build/game entrypoints are retained source context, not selected runtime entrypoints."
+    },
+    {
+      "path": "tools/wine/modules.py",
+      "destination": "pear_runtime/providers/pear_legacy/tools/wine/modules.py",
+      "sha256": "ee109f7934562082a4ed74c7c6f90beec75445adff042e2b8b9e82fef086225c",
+      "size_bytes": 21610,
+      "source_repository": "https://github.com/postmelee/pear",
+      "source_checkpoint": "951264bf5be4b9d2afb87320f5fac74778b2dd58",
+      "source_path": "tools/wine/modules.py",
+      "source_state": "exact Git blob",
+      "content_committed_at_checkpoint": true,
+      "canonical_owner": "postmelee/pear-runtime",
+      "initial_transformation": "none; exact original source bytes",
+      "mode": "100644",
+      "license": "No marker in opening source; current Pear original-code GPL-3.0-or-later adoption with original third-party notices retained; inspect selected symbols before import",
+      "load_mode": "captured_module",
+      "selected_symbols": null,
+      "adoption": "Canonical editable provider for selected generic functions; final owner acceptance remains the Task #56 cutover gate.",
+      "excluded": "Historical CLI/build/game entrypoints are retained source context, not selected runtime entrypoints."
+    },
+    {
+      "path": "tools/wine/abi_review.py",
+      "destination": "pear_runtime/providers/pear_legacy/tools/wine/abi_review.py",
+      "sha256": "fa92d9707b3446f7bc806ec616a9a5637103922841b171b7659af307f6178d46",
+      "size_bytes": 20470,
+      "source_repository": "https://github.com/postmelee/pear",
+      "source_checkpoint": "951264bf5be4b9d2afb87320f5fac74778b2dd58",
+      "source_path": "tools/wine/abi_review.py",
+      "source_state": "exact Git blob",
+      "content_committed_at_checkpoint": true,
+      "canonical_owner": "postmelee/pear-runtime",
+      "initial_transformation": "none; exact original source bytes",
+      "mode": "100644",
+      "license": "No marker in opening source; current Pear original-code GPL-3.0-or-later adoption with original third-party notices retained; inspect selected symbols before import",
+      "load_mode": "captured_module",
+      "selected_symbols": null,
+      "adoption": "Canonical editable provider for selected generic functions; final owner acceptance remains the Task #56 cutover gate.",
+      "excluded": "Historical CLI/build/game entrypoints are retained source context, not selected runtime entrypoints."
+    },
+    {
+      "path": "tools/wine/dynamic_evidence.py",
+      "destination": "pear_runtime/providers/pear_legacy/tools/wine/dynamic_evidence.py",
+      "sha256": "d358c8f987297b94ba7938cc277f48b661169edf2d0400a714a914a47e6b1a0e",
+      "size_bytes": 13409,
+      "source_repository": "https://github.com/postmelee/pear",
+      "source_checkpoint": "951264bf5be4b9d2afb87320f5fac74778b2dd58",
+      "source_path": "tools/wine/dynamic_evidence.py",
+      "source_state": "exact Git blob",
+      "content_committed_at_checkpoint": true,
+      "canonical_owner": "postmelee/pear-runtime",
+      "initial_transformation": "none; exact original source bytes",
+      "mode": "100644",
+      "license": "No marker in opening source; current Pear original-code GPL-3.0-or-later adoption with original third-party notices retained; inspect selected symbols before import",
+      "load_mode": "captured_module",
+      "selected_symbols": null,
+      "adoption": "Canonical editable provider for selected generic functions; final owner acceptance remains the Task #56 cutover gate.",
+      "excluded": "Historical CLI/build/game entrypoints are retained source context, not selected runtime entrypoints."
+    },
+    {
+      "path": "tools/wine/exception_evidence.py",
+      "destination": "pear_runtime/providers/pear_legacy/tools/wine/exception_evidence.py",
+      "sha256": "db90c78f51f16d8747d751391b7cb8588ed9bda2dd0c4f3d57e6936cc2c99ded",
+      "size_bytes": 26135,
+      "source_repository": "https://github.com/postmelee/pear",
+      "source_checkpoint": "951264bf5be4b9d2afb87320f5fac74778b2dd58",
+      "source_path": "tools/wine/exception_evidence.py",
+      "source_state": "exact Git blob",
+      "content_committed_at_checkpoint": true,
+      "canonical_owner": "postmelee/pear-runtime",
+      "initial_transformation": "none; exact original source bytes",
+      "mode": "100644",
+      "license": "No marker in opening source; current Pear original-code GPL-3.0-or-later adoption with original third-party notices retained; inspect selected symbols before import",
+      "load_mode": "captured_module",
+      "selected_symbols": null,
+      "adoption": "Canonical editable provider for selected generic functions; final owner acceptance remains the Task #56 cutover gate.",
+      "excluded": "Historical CLI/build/game entrypoints are retained source context, not selected runtime entrypoints."
+    },
+    {
+      "path": "tools/wine/run_fixtures.py",
+      "destination": "pear_runtime/providers/pear_legacy/tools/wine/run_fixtures.py",
+      "sha256": "e6d79880e6fb46a20ed23f3966d3fa4139e2c78181a4ccf5e05f86e2ab87f688",
+      "size_bytes": 57987,
+      "source_repository": "https://github.com/postmelee/pear",
+      "source_checkpoint": "951264bf5be4b9d2afb87320f5fac74778b2dd58",
+      "source_path": "tools/wine/run_fixtures.py",
+      "source_state": "exact Git blob",
+      "content_committed_at_checkpoint": true,
+      "canonical_owner": "postmelee/pear-runtime",
+      "initial_transformation": "none; exact original source bytes",
+      "mode": "100644",
+      "license": "No marker in opening source; current Pear original-code GPL-3.0-or-later adoption with original third-party notices retained; inspect selected symbols before import",
+      "load_mode": "captured_module",
+      "selected_symbols": null,
+      "adoption": "Canonical editable provider for selected generic functions; final owner acceptance remains the Task #56 cutover gate.",
+      "excluded": "Historical CLI/build/game entrypoints are retained source context, not selected runtime entrypoints."
+    },
+    {
+      "path": "tools/wine/api_runner.py",
+      "destination": "pear_runtime/providers/pear_legacy/tools/wine/api_runner.py",
+      "sha256": "ae59778c676b4d1e0d4a569809f149833e23814723357a379e9bf52138879a3d",
+      "size_bytes": 87961,
+      "source_repository": "https://github.com/postmelee/pear",
+      "source_checkpoint": "951264bf5be4b9d2afb87320f5fac74778b2dd58",
+      "source_path": "tools/wine/api_runner.py",
+      "source_state": "exact Git blob",
+      "content_committed_at_checkpoint": true,
+      "canonical_owner": "postmelee/pear-runtime",
+      "initial_transformation": "none; exact original source bytes",
+      "mode": "100644",
+      "license": "No marker in opening source; current Pear original-code GPL-3.0-or-later adoption with original third-party notices retained; inspect selected symbols before import",
+      "load_mode": "captured_module",
+      "selected_symbols": null,
+      "adoption": "Canonical editable provider for selected generic functions; final owner acceptance remains the Task #56 cutover gate.",
+      "excluded": "Historical CLI/build/game entrypoints are retained source context, not selected runtime entrypoints."
+    },
+    {
+      "path": "tools/dxmt/run_pairing.py",
+      "destination": "pear_runtime/providers/pear_legacy/tools/dxmt/run_pairing.py",
+      "sha256": "038adc9355892d853dce2886f06dbeab3c073e14d343bf10aa4effc968ee6402",
+      "size_bytes": 36958,
+      "source_repository": "https://github.com/postmelee/pear",
+      "source_checkpoint": "ea6c018565217b852b8e116d692773214cec1c20",
+      "source_path": "tools/dxmt/run_pairing.py",
+      "source_state": "exact Git blob",
+      "content_committed_at_checkpoint": true,
+      "canonical_owner": "postmelee/pear-runtime",
+      "initial_transformation": "none; exact original source bytes",
+      "mode": "100644",
+      "license": "No marker in opening source; current Pear original-code GPL-3.0-or-later adoption with original third-party notices retained; inspect selected symbols before import",
+      "load_mode": "selected_functions_or_constants",
+      "selected_symbols": [
+        "local",
+        "wine_helpers",
+        "integer",
+        "failure_detail",
+        "finish_capture",
+        "cleanup_session",
+        "launch_recipes",
+        "validate_launches"
+      ],
+      "adoption": "Canonical editable provider for selected generic functions; final owner acceptance remains the Task #56 cutover gate.",
+      "excluded": "Historical CLI/build/game entrypoints are retained source context, not selected runtime entrypoints."
+    },
+    {
+      "path": "tools/sources/validate_inventory.py",
+      "destination": "pear_runtime/providers/pear_legacy/tools/sources/validate_inventory.py",
+      "sha256": "a851ee6978002a4e45934b91e4abdfe0151d73178e862e45b2b0824a4e0b3710",
+      "size_bytes": 37567,
+      "source_repository": "https://github.com/postmelee/pear",
+      "source_checkpoint": "951264bf5be4b9d2afb87320f5fac74778b2dd58",
+      "source_path": "tools/sources/validate_inventory.py",
+      "source_state": "exact checkpoint Git blob",
+      "content_committed_at_checkpoint": true,
+      "canonical_owner": "postmelee/pear-runtime",
+      "initial_transformation": "none; exact original source bytes",
+      "mode": "100644",
+      "license": "Original Pear GPL-3.0-or-later adoption; exact source notice preserved",
+      "load_mode": "captured_module",
+      "selected_symbols": null,
+      "adoption": "Canonical editable provider for selected generic functions; final owner acceptance remains the Task #56 cutover gate.",
+      "excluded": "Historical CLI/build/game entrypoints are retained source context, not selected runtime entrypoints."
+    }
+  ],
+  "original_supervisor_body_pins": [
+    {
+      "source_path": "tools/wine/run_fixtures.py",
+      "symbol": "BSDInfo",
+      "start_line": 70,
+      "end_line": 77,
+      "source_segment_sha256": "ae2ca302e247419681e9b1b87ad8d5364bb68bf1d5327b1d588a21e0911e27b9",
+      "ast_without_locations_sha256": "7729ce87637537e16575babd53af4f04f9bfa23879f69fbdd71d47a101e965f7",
+      "transformation": "none; preserve complete class body and original behavior"
+    },
+    {
+      "source_path": "tools/wine/run_fixtures.py",
+      "symbol": "DarwinObserver",
+      "start_line": 80,
+      "end_line": 174,
+      "source_segment_sha256": "df54196804f8db9966cc81203f214008f5164102dece15becac4b6887defb68c",
+      "ast_without_locations_sha256": "73d5d0f685d1e615f7dd7dd4b6ac7d9eb68b877b2e64828efc87ac8c61c14ff6",
+      "transformation": "none; preserve complete class body and original behavior"
+    },
+    {
+      "source_path": "tools/wine/run_fixtures.py",
+      "symbol": "Child",
+      "start_line": 177,
+      "end_line": 186,
+      "source_segment_sha256": "69acecb135d4ca3ed5db01358b2e167cad238988c9af9ecaaaa2213ab272d591",
+      "ast_without_locations_sha256": "4a77a80e9eaaddc1814472dcf3624be4e4874f6297c62218d382f5449b49eff4",
+      "transformation": "none; preserve complete class body and original behavior"
+    },
+    {
+      "source_path": "tools/wine/run_fixtures.py",
+      "symbol": "Session",
+      "start_line": 189,
+      "end_line": 434,
+      "source_segment_sha256": "bdbfbf64d34c0a231fc843d3d8e69d894785c40420b052cb7e39b1339cd3f840",
+      "ast_without_locations_sha256": "d8e3605c3695aaa44fd89b0680925c9eb144c92dfb42b796e60081f2cc6083f0",
+      "transformation": "none; preserve complete class body and original behavior"
+    },
+    {
+      "source_path": "tools/wine/api_runner.py",
+      "symbol": "APIObserver",
+      "start_line": 500,
+      "end_line": 559,
+      "source_segment_sha256": "28103016ef5153bf17859846d9b8f619ddba3e3d985a6f00386759d2dbe648f5",
+      "ast_without_locations_sha256": "81771e195e57b847e6eeb859ca75f3233862346e8fb3065d027f99d801cfc47b",
+      "transformation": "none; preserve complete class body and original behavior"
+    },
+    {
+      "source_path": "tools/wine/api_runner.py",
+      "symbol": "APISession",
+      "start_line": 562,
+      "end_line": 724,
+      "source_segment_sha256": "92ae460ad4f961b50f6408907cb82673a37d2abddf0e4e1b0e4f9ea2bd02ff5c",
+      "ast_without_locations_sha256": "dcf827a1fb35d1f10f0b10439f32336998382ee9ee67f430b76bce3ba5e944c6",
+      "transformation": "none; preserve complete class body and original behavior"
+    }
+  ],
+  "active_edges": [
+    {
+      "source": "tools/wine/prepare.py",
+      "target": "tools/wine/common.py",
+      "kind": "captured_original_import",
+      "line": 28
+    },
+    {
+      "source": "tools/wine/toolchain.py",
+      "target": "tools/wine/common.py",
+      "kind": "captured_original_import",
+      "line": 20
+    },
+    {
+      "source": "tools/wine/toolchain.py",
+      "target": "tools/wine/prepare.py",
+      "kind": "captured_original_import",
+      "line": 21
+    },
+    {
+      "source": "tools/wine/modules.py",
+      "target": "tools/wine/common.py",
+      "kind": "captured_original_import",
+      "line": 17
+    },
+    {
+      "source": "tools/wine/modules.py",
+      "target": "tools/wine/toolchain.py",
+      "kind": "captured_original_import",
+      "line": 18
+    },
+    {
+      "source": "tools/wine/abi_review.py",
+      "target": "tools/wine/common.py",
+      "kind": "captured_original_import",
+      "line": 22
+    },
+    {
+      "source": "tools/wine/abi_review.py",
+      "target": "tools/wine/toolchain.py",
+      "kind": "captured_original_import",
+      "line": 23
+    },
+    {
+      "source": "tools/wine/dynamic_evidence.py",
+      "target": "tools/wine/common.py",
+      "kind": "captured_original_import",
+      "line": 8
+    },
+    {
+      "source": "tools/wine/exception_evidence.py",
+      "target": "tools/wine/common.py",
+      "kind": "captured_original_import",
+      "line": 12
+    },
+    {
+      "source": "tools/wine/exception_evidence.py",
+      "target": "tools/wine/modules.py",
+      "kind": "captured_original_import",
+      "line": 13
+    },
+    {
+      "source": "tools/wine/exception_evidence.py",
+      "target": "tools/wine/abi_review.py",
+      "kind": "captured_original_import",
+      "line": 14
+    },
+    {
+      "source": "tools/wine/run_fixtures.py",
+      "target": "tools/wine/common.py",
+      "kind": "captured_original_import",
+      "line": 27
+    },
+    {
+      "source": "tools/wine/api_runner.py",
+      "target": "tools/wine/common.py",
+      "kind": "captured_original_import",
+      "line": 27
+    },
+    {
+      "source": "tools/wine/api_runner.py",
+      "target": "tools/wine/run_fixtures.py",
+      "kind": "captured_original_import",
+      "line": 28
+    },
+    {
+      "source": "tools/wine/api_runner.py",
+      "target": "tools/wine/modules.py",
+      "kind": "captured_original_import",
+      "line": 29
+    },
+    {
+      "source": "tools/wine/api_runner.py",
+      "target": "tools/wine/dynamic_evidence.py",
+      "kind": "captured_original_import",
+      "line": 30
+    },
+    {
+      "source": "tools/wine/api_runner.py",
+      "target": "tools/wine/exception_evidence.py",
+      "kind": "captured_original_import",
+      "line": 31
+    },
+    {
+      "source": "tools/wine/prepare.py",
+      "target": "tools/sources/validate_inventory.py",
+      "kind": "captured_replacement_for_original_three_statement_filesystem_loader",
+      "lines": [
+        33,
+        34,
+        35
+      ]
+    },
+    {
+      "source": "tools/dxmt/run_pairing.py:wine_helpers",
+      "target": "tools/wine/common.py",
+      "kind": "dynamic_capture_complete_before_any_module_exec"
+    },
+    {
+      "source": "tools/dxmt/run_pairing.py:wine_helpers",
+      "target": "tools/wine/prepare.py",
+      "kind": "dynamic_capture_complete_before_any_module_exec"
+    },
+    {
+      "source": "tools/dxmt/run_pairing.py:wine_helpers",
+      "target": "tools/wine/toolchain.py",
+      "kind": "dynamic_capture_complete_before_any_module_exec"
+    },
+    {
+      "source": "tools/dxmt/run_pairing.py:wine_helpers",
+      "target": "tools/wine/modules.py",
+      "kind": "dynamic_capture_complete_before_any_module_exec"
+    },
+    {
+      "source": "tools/dxmt/run_pairing.py:wine_helpers",
+      "target": "tools/wine/abi_review.py",
+      "kind": "dynamic_capture_complete_before_any_module_exec"
+    },
+    {
+      "source": "tools/dxmt/run_pairing.py:wine_helpers",
+      "target": "tools/wine/dynamic_evidence.py",
+      "kind": "dynamic_capture_complete_before_any_module_exec"
+    },
+    {
+      "source": "tools/dxmt/run_pairing.py:wine_helpers",
+      "target": "tools/wine/exception_evidence.py",
+      "kind": "dynamic_capture_complete_before_any_module_exec"
+    },
+    {
+      "source": "tools/dxmt/run_pairing.py:wine_helpers",
+      "target": "tools/wine/run_fixtures.py",
+      "kind": "dynamic_capture_complete_before_any_module_exec"
+    },
+    {
+      "source": "tools/dxmt/run_pairing.py:wine_helpers",
+      "target": "tools/wine/api_runner.py",
+      "kind": "dynamic_capture_complete_before_any_module_exec"
+    },
+    {
+      "source": "tools/dxmt/pairing_runtime.py:legacy",
+      "target": "host/probe/provisioned_probe.py",
+      "kind": "selected_pure_nodes_from_captured_bytes"
+    },
+    {
+      "source": "tools/dxmt/pairing_runtime.py:legacy",
+      "target": "host/probe/hardened_baseline.py",
+      "kind": "selected_pure_nodes_from_captured_bytes"
+    },
+    {
+      "source": "tools/dxmt/pairing_runtime.py:legacy",
+      "target": "tools/wine/signing.py",
+      "kind": "selected_pure_nodes_from_captured_bytes"
+    },
+    {
+      "source": "pear_runtime/assembly/helpers.py:signing_helpers",
+      "target": "tools/dxmt/common.py",
+      "kind": "existing_AST_selection_reuse"
+    },
+    {
+      "source": "pear_runtime/assembly/helpers.py:signing_helpers",
+      "target": "tools/dxmt/build.py",
+      "kind": "existing_AST_selection_reuse"
+    },
+    {
+      "source": "pear_runtime/assembly/helpers.py:signing_helpers",
+      "target": "tools/dxmt/pairing_runtime.py",
+      "kind": "existing_AST_selection_reuse"
+    }
+  ],
+  "adapter_origins": [
+    {
+      "source_repository": "https://github.com/postmelee/pear",
+      "source_checkpoint": "951264bf5be4b9d2afb87320f5fac74778b2dd58",
+      "source_path": "tools/fex/integration_run.py",
+      "source_sha256": "7214388252229277497da9c9466db8b8df637ada50f284cf04f3a9603272ab84",
+      "selected_symbols": [
+        {
+          "symbol": "prefix_inventory",
+          "start_line": 17,
+          "end_line": 32,
+          "sha256": "b881796caa1862ae2063062dba9f558b1b5f7f12886f56ba47038ed65f6f1bcb"
+        }
+      ],
+      "license": "Original Pear GPL-3.0-or-later adoption; exact function bodies"
+    },
+    {
+      "source_repository": "https://github.com/postmelee/pear",
+      "source_checkpoint": "951264bf5be4b9d2afb87320f5fac74778b2dd58",
+      "source_path": "tools/fex/memory_wine_run.py",
+      "source_sha256": "999b5600f4d9ba7f1b23122a6dd8e3d3a1df7153b9d2bd19175c6d4030eef30b",
+      "selected_symbols": [
+        {
+          "symbol": "fields",
+          "start_line": 59,
+          "end_line": 63,
+          "sha256": "a432f74423ebf6fd79c5cc51c0b46c73e7f439e3f12de1e3facd7453893f0ef6"
+        },
+        {
+          "symbol": "environment",
+          "start_line": 104,
+          "end_line": 112,
+          "sha256": "e6e7d9575d64f1c2e8f9671319e6e9586f004afe2eaf5d3d2ef0a8ad1dd7ef4a"
+        },
+        {
+          "symbol": "loader_environment",
+          "start_line": 115,
+          "end_line": 122,
+          "sha256": "d2a73dfcd04789b718cf45faea7b091004514cd7c1366005f55d43a530239541"
+        },
+        {
+          "symbol": "assessment_packet",
+          "start_line": 125,
+          "end_line": 129,
+          "sha256": "788224d9604886ef4ff090d7a9b73d88a6bfa628c710a7a8c4b4c4b4c588d1b4"
+        },
+        {
+          "symbol": "integer",
+          "start_line": 70,
+          "end_line": 71,
+          "sha256": "06ff3b44b4b947e758fe17a883ff004686b6845ecdb20427b61ffaeb615bd42a"
+        }
+      ],
+      "license": "Original Pear GPL-3.0-or-later adoption; exact function bodies"
+    }
+  ],
+  "licensing": "Exact imported historical bytes retain existing notices; original Pear GPL-3.0-or-later adoption applies. This source-preserving import is explicitly exempt from adding inline notices that would change reviewed source hashes. New adapter/test code carries current Pear SPDX notices.",
+  "single_owner": "Edit selected generic runtime source only at the canonical destination. Old Pear worktrees and immutable input packs remain historical evidence, not parallel editable providers. Game/account/Preview/manager policy remains Pear-owned. Four canonical FEX diagnostic readers are not duplicated.",
+  "transformations": [
+    "Provider files are unchanged; all 17 are captured and verified before any execution. Exact module source refs and provenance ref are exposed for the complete caller producer manifest.",
+    "Select the original eight run_pairing supervision functions. Keep original local/wine_helpers function bodies; bind local to captured bytes and the narrowly transformed prepare module AST.",
+    "In captured prepare only, omit its top-level sys.path insertion and replace the original three filesystem audit-loader statements with an already captured audit module lookup. Every original function/class AST stays unchanged.",
+    "Restore all nine historical aliases, the audit alias and sys.path on success or failure. Reject overlapping context use. Set __file__ to the explicit canonical provider, with no old-root fallback.",
+    "Retain the existing private toolkit STREAM_LIMIT=2MiB binding and isolated metal_pairing_images native-assessor event extension; do not change shared original EVENT sets.",
+    "Recheck all provider bytes and provenance after context use, including failure. Preserve the primary error if post-check also fails.",
+    "Current admission delegates to Stage3 assembly.verify_current_authority with an explicit independently reviewed operation_ref; no cached authority or historical grant is admitted.",
+    "Bind loader_environment to the exact original memory_wine_run.integer function in the adapter namespace; original loader_environment and integer bodies remain unchanged."
+  ],
+  "status": "Source import and portable adapter implementation; no fixture/native execution or final owner cutover is claimed",
+  "privacy": "Only source repository/checkpoint/relative paths/hashes are retained here. Private candidate/profile/operation bindings and raw execution evidence stay outside Git.",
+  "supervision_selected_bodies": [
+    {
+      "source_path": "tools/dxmt/run_pairing.py",
+      "symbol": "local",
+      "start_line": 54,
+      "end_line": 66,
+      "source_segment_sha256": "95c21c57821a90659daa4fc1bb7e1e7259df6cc9a5d8dd91d960a24d3901ec9c",
+      "transformation": "none; original selected function body"
+    },
+    {
+      "source_path": "tools/dxmt/run_pairing.py",
+      "symbol": "wine_helpers",
+      "start_line": 76,
+      "end_line": 104,
+      "source_segment_sha256": "2b13c45c0545ea3e3cb2bbefb8c1c0fb6da3fc8fba158d546ad51ef360c1456d",
+      "transformation": "none; original selected function body"
+    },
+    {
+      "source_path": "tools/dxmt/run_pairing.py",
+      "symbol": "integer",
+      "start_line": 107,
+      "end_line": 108,
+      "source_segment_sha256": "4d988b5b23c443532ba024ac4aa93f2a0a7ab61ae1686b9dbcfc0277e601756d",
+      "transformation": "none; original selected function body"
+    },
+    {
+      "source_path": "tools/dxmt/run_pairing.py",
+      "symbol": "launch_recipes",
+      "start_line": 209,
+      "end_line": 216,
+      "source_segment_sha256": "af70833b3283795432631783240f5a56e9c1f68342cfbfb3fd191fd922c6bced",
+      "transformation": "none; original selected function body"
+    },
+    {
+      "source_path": "tools/dxmt/run_pairing.py",
+      "symbol": "validate_launches",
+      "start_line": 219,
+      "end_line": 231,
+      "source_segment_sha256": "071b80710199e456531068192a7329d1aa8d859591fab1a4c5a6cc57a36405a6",
+      "transformation": "none; original selected function body"
+    },
+    {
+      "source_path": "tools/dxmt/run_pairing.py",
+      "symbol": "failure_detail",
+      "start_line": 338,
+      "end_line": 340,
+      "source_segment_sha256": "59ebdfb582e5e2bdb5082153bb00a71882742ff54f5a168c03eb1878574ccf6b",
+      "transformation": "none; original selected function body"
+    },
+    {
+      "source_path": "tools/dxmt/run_pairing.py",
+      "symbol": "finish_capture",
+      "start_line": 343,
+      "end_line": 362,
+      "source_segment_sha256": "8275ca6cdcda72b9a167b4dacd015132096115ec3fcb1576b082798b3ae05297",
+      "transformation": "none; original selected function body"
+    },
+    {
+      "source_path": "tools/dxmt/run_pairing.py",
+      "symbol": "cleanup_session",
+      "start_line": 365,
+      "end_line": 400,
+      "source_segment_sha256": "a1ed745f5736ab63a0585bed7b1449a5f10ae78b9262ae3603cde660ba68fd1e",
+      "transformation": "none; original selected function body"
+    }
+  ],
+  "supervision_adapter_origin": {
+    "source_repository": "https://github.com/postmelee/pear",
+    "source_checkpoint": "951264bf5be4b9d2afb87320f5fac74778b2dd58",
+    "source_path": "tools/fex/memory_wine_run.py",
+    "source_sha256": "999b5600f4d9ba7f1b23122a6dd8e3d3a1df7153b9d2bd19175c6d4030eef30b",
+    "symbol": "supervision",
+    "start_line": 79,
+    "end_line": 101,
+    "source_segment_sha256": "a3a298aa2e99b8f276016e473068f517f6772801fdf76885720d090981c1c27e",
+    "transformation": "Explicit one-root provider and complete pre-execution capture; original selected Task7 function bodies, private stream limit and yielded toolkit preserved. Namespace restoration and post-use source recheck cover failures."
+  },
+  "adapter_files": [
+    {
+      "path": "pear_runtime/fixtures/supervision.py",
+      "sha256": "6d16847b1745e37447c3fbd4e7435d39a6cd32c6f0d29137fb5fc8540485fbc3",
+      "license": "GPL-3.0-or-later",
+      "role": "portable source/admission adapter",
+      "size_bytes": 10244
+    },
+    {
+      "path": "pear_runtime/fixtures/admission.py",
+      "sha256": "c10a530dea1dca0c7b3f75596b40db050991ac40b72b6d12cf8d523c30082fc3",
+      "license": "GPL-3.0-or-later",
+      "role": "portable source/admission adapter",
+      "size_bytes": 1815
+    },
+    {
+      "path": "tests/fixtures/test_supervision.py",
+      "sha256": "996d67f8a59d7deb5cfc571e3377875f7afe92446b3d7b9438f2ba5c12234d53",
+      "license": "GPL-3.0-or-later",
+      "role": "synthetic portable test; no native execution",
+      "size_bytes": 13571
+    },
+    {
+      "path": "tests/fixtures/test_admission.py",
+      "sha256": "bf3673f09dcc20a65e185e92de5dc104723544d42d424b122f2ff849573b033d",
+      "license": "GPL-3.0-or-later",
+      "role": "synthetic portable test; no native execution",
+      "size_bytes": 5901
+    }
+  ],
+  "verification": {
+    "portable_test_count": 26,
+    "supervision_tests": 17,
+    "admission_tests": 9,
+    "native_execution": "unperformed",
+    "fixture_execution": "unperformed",
+    "original_classes": "Six complete source bodies and all loaded method code objects equal original compilation",
+    "provider_identity": "17 exact original files, 546159 logical source bytes",
+    "privacy": "No personal absolute path, old worktree path or private key marker in imported source/adapters/tests/provenance",
+    "test_commands": [
+      "PYTHONDONTWRITEBYTECODE=1 python3 -m unittest discover -s tests/fixtures -p test_supervision.py -v",
+      "PYTHONDONTWRITEBYTECODE=1 python3 -m unittest discover -s tests/fixtures -p test_admission.py -v"
+    ]
+  }
+}

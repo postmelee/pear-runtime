@@ -1,0 +1,91 @@
+{
+  "schema_version": 1,
+  "origin": {
+    "repository": "Pear",
+    "revision": "951264bf5be4b9d2afb87320f5fac74778b2dd58",
+    "path": "tools/steam/direct_v1.py",
+    "sha256": "da9554305e99f97821b81cb5ec0e3cb7ee1b6c0738d1846c4ef7d17d42d68635"
+  },
+  "exact_or_namespace_only_symbols": [
+    [
+      "CANDIDATES"
+    ],
+    [
+      "FIXTURES"
+    ],
+    "query_policy",
+    [
+      "OBSERVATIONS"
+    ],
+    [
+      "SEED_FEX"
+    ],
+    [
+      "DEADLINE_SECONDS"
+    ],
+    "execution_seconds",
+    "options",
+    [
+      "TRACE_PRESETS"
+    ],
+    [
+      "MENU_TRACE"
+    ],
+    [
+      "PLATFORM_TRACE"
+    ],
+    [
+      "FULL_TRACE"
+    ],
+    [
+      "GRAPHICS_TRACE"
+    ],
+    [
+      "PROGRESS_TRACE"
+    ],
+    "trace_environment",
+    "assess_trace",
+    [
+      "LOG_BUDGETS"
+    ],
+    "log_limit",
+    "assess_log_budget",
+    [
+      "SIGNAL_OPTIONS"
+    ],
+    [
+      "SIGNAL_KEY"
+    ],
+    "signal_environment",
+    "assess_signal",
+    "read_sources",
+    "complete_provenance",
+    "finish_reason",
+    "sample_interval",
+    "SampleWindows",
+    "pump_observations",
+    "attached",
+    "thread_identities",
+    "assess"
+  ],
+  "adapted_symbols": [
+    "run",
+    "stage_modules"
+  ],
+  "changes": [
+    "Strict d25-game/seven-fixture FixtureContext entrypoint; no game or legacy admission fallback.",
+    "Explicit producer/storage/context bindings replace old worktree defaults.",
+    "Selected module preimages and output inputs supplied by descriptor.",
+    "Original APISession, SampleWindows, observation pump and cleanup retained.",
+    "Inactive play-adapter branches remain unreachable under strict entry gate.",
+    "Pure historical policy helpers retained for original portable tests; not executable runtime selections.",
+    "Original main CLI excluded; separate live operation CLI owns lock.",
+    "Worker timeout/interruption propagates after original owned cleanup and case persistence, before new authority or assessment work. Existing per-session cleanup bounds remain; failed/interrupted runs cannot pass."
+  ],
+  "additional_origins": [
+    {
+      "path": "tools/wine/image_initialization_trace_run.py",
+      "symbol": "METAL_ENV"
+    }
+  ]
+}

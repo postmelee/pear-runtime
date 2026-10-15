@@ -1,0 +1,51 @@
+{
+  "schema_version": 1,
+  "scope": "Independent post-worker release inspection, outside the frozen fixture producer graph",
+  "license": "GPL-3.0-or-later for new checker and portable tests",
+  "reuse": [
+    {
+      "repository": "https://github.com/postmelee/pear",
+      "checkpoint": "951264bf5be4b9d2afb87320f5fac74778b2dd58",
+      "path": "tools/wine/run_fixtures.py",
+      "canonical_provider": "pear_runtime/providers/pear_legacy/tools/wine/run_fixtures.py",
+      "symbols": [
+        "BSDInfo"
+      ],
+      "transformation": "Exact class AST selected from the hash-checked canonical provider; no observer, session or launcher constructed",
+      "source_sha256": "e6d79880e6fb46a20ed23f3966d3fa4139e2c78181a4ccf5e05f86e2ab87f688",
+      "symbol_ast_sha256": "7729ce87637537e16575babd53af4f04f9bfa23879f69fbdd71d47a101e965f7"
+    },
+    {
+      "origin": "Task11 D36 fixture_owner and independent runtime-controls release record",
+      "semantics": "Exact recorded process birth identities, output-root handles, and actual shared lock availability are checked independently after the worker; original failed execution status remains failed",
+      "source_limit": "Historical independent release producer source was unavailable in the bounded inspected roots. This is record-level semantic reuse, not a claim of verbatim source extraction. Private original evidence remains outside Git."
+    }
+  ],
+  "boundaries": [
+    "Only explicit completed fixture operation references are consumed; missing case/process evidence is unknown",
+    "No runtime process signal, reap, launch, file deletion or old coordination write",
+    "Existing global flock is acquired nonblocking and immediately released without creation, truncation or content changes",
+    "PID birthtime mismatch is retained as reuse, never classified as an original survivor",
+    "A present worker PID without recorded birthtime or unknown group member is uncertain, not confirmed ownership",
+    "Unavailable host, permissions, tool, lock or malformed inspection is unknown, not absence",
+    "The read-only lsof child has a bounded command timeout; its output is filtered to the declared roots before retention",
+    "Inspection is a bounded post-worker observation, not a cryptographic or atomic system snapshot"
+  ],
+  "files": [
+    {
+      "path": "pear_runtime/fixtures/release.py",
+      "sha256": "62e63b909e5859fda22715e82dc588d8afe563bde58dd4cbd51056813e841033",
+      "size_bytes": 13089
+    },
+    {
+      "path": "tests/fixtures/test_release.py",
+      "sha256": "e9fbdab0dd6b41f86a6cde92bb6e9df01e5fd5486d3203e4f31a97f994ba4f77",
+      "size_bytes": 8830
+    }
+  ],
+  "verification": {
+    "portable_tests": 15,
+    "host_inspection": "unperformed by implementer",
+    "runtime_execution": "unperformed"
+  }
+}

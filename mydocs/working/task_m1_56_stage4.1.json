@@ -1,0 +1,1038 @@
+{
+  "schema_version": 1,
+  "scope": "task56_stage4_1_seven_runtime_fixtures",
+  "observed_epoch": 1792085938.078971,
+  "runtime": {
+    "sha256": "d2c30942bc1b27067cd7d674971f6cd2e3e2395e55b514c3572af164f1588e2c",
+    "size_bytes": 2455362
+  },
+  "assembly_operation": {
+    "sha256": "def3a07563a7974308029d62af9de443384479d4492c73824c74fec721447946",
+    "size_bytes": 9162
+  },
+  "producer_manifest": {
+    "sha256": "8d4a1c9183a3117a4efee33924bf51cecddcc728e2b99c85626d53c5f49bfd1e",
+    "size_bytes": 13736
+  },
+  "producer_files": 65,
+  "descriptor": {
+    "sha256": "f6017a4982067207f77b6eba1737048c71c956895b68e57320c08f3a2624c50f",
+    "size_bytes": 209422
+  },
+  "source_correspondence": {
+    "schema_version": 1,
+    "original": {
+      "sha256": "da9554305e99f97821b81cb5ec0e3cb7ee1b6c0738d1846c4ef7d17d42d68635",
+      "size_bytes": 61845
+    },
+    "current": {
+      "sha256": "979d1ce8398b54e97e3712c7f6c298e312da9f8405f70330c1ffdf6d5fdcd4b8",
+      "size_bytes": 44984
+    },
+    "pure_symbols": [
+      {
+        "symbol": "SampleWindows",
+        "non_import_ast_equal": true
+      },
+      {
+        "symbol": "assess",
+        "non_import_ast_equal": true
+      },
+      {
+        "symbol": "assess_log_budget",
+        "non_import_ast_equal": true
+      },
+      {
+        "symbol": "assess_signal",
+        "non_import_ast_equal": true
+      },
+      {
+        "symbol": "assess_trace",
+        "non_import_ast_equal": true
+      },
+      {
+        "symbol": "attached",
+        "non_import_ast_equal": true
+      },
+      {
+        "symbol": "complete_provenance",
+        "non_import_ast_equal": true
+      },
+      {
+        "symbol": "execution_seconds",
+        "non_import_ast_equal": true
+      },
+      {
+        "symbol": "finish_reason",
+        "non_import_ast_equal": true
+      },
+      {
+        "symbol": "log_limit",
+        "non_import_ast_equal": true
+      },
+      {
+        "symbol": "options",
+        "non_import_ast_equal": true
+      },
+      {
+        "symbol": "pump_observations",
+        "non_import_ast_equal": true
+      },
+      {
+        "symbol": "query_policy",
+        "non_import_ast_equal": true
+      },
+      {
+        "symbol": "read_sources",
+        "non_import_ast_equal": true
+      },
+      {
+        "symbol": "sample_interval",
+        "non_import_ast_equal": true
+      },
+      {
+        "symbol": "signal_environment",
+        "non_import_ast_equal": true
+      },
+      {
+        "symbol": "thread_identities",
+        "non_import_ast_equal": true
+      },
+      {
+        "symbol": "trace_environment",
+        "non_import_ast_equal": true
+      }
+    ],
+    "limits": "Imported module names reviewed separately; run and stage_modules are explicit adaptations."
+  },
+  "portable_tests": {
+    "tests": 281,
+    "failures": 0,
+    "errors": 0,
+    "skipped": 0,
+    "passed": true,
+    "elapsed_seconds": 1.6465897089947248,
+    "files": [
+      "tests/fixtures/assessment/test_batch.py",
+      "tests/fixtures/assessment/test_early_wait.py",
+      "tests/fixtures/assessment/test_entry_v1.py",
+      "tests/fixtures/assessment/test_failure_v1.py",
+      "tests/fixtures/assessment/test_link_v1.py",
+      "tests/fixtures/assessment/test_mutation_bound.py",
+      "tests/fixtures/assessment/test_pending_transition.py",
+      "tests/fixtures/assessment/test_query_context_v1.py",
+      "tests/fixtures/assessment/test_query_v1.py",
+      "tests/fixtures/assessment/test_repair_epoch_v1.py",
+      "tests/fixtures/assessment/test_source_owner.py",
+      "tests/fixtures/assessment/test_string_checks.py",
+      "tests/fixtures/assessment/test_wake.py",
+      "tests/fixtures/assessment/test_write.py",
+      "tests/fixtures/controls/test_control_adapters.py",
+      "tests/fixtures/controls/test_corpus_results.py",
+      "tests/fixtures/controls/test_ordering_results.py",
+      "tests/fixtures/controls/test_pairing_protocol.py",
+      "tests/fixtures/controls/test_present_frames.py",
+      "tests/fixtures/controls/test_presentation_native.py",
+      "tests/fixtures/controls/test_surface_controls.py",
+      "tests/fixtures/graphics/test_graphics_bindings.py",
+      "tests/fixtures/graphics/test_original_rendering.py",
+      "tests/fixtures/test_admission.py",
+      "tests/fixtures/test_checks.py",
+      "tests/fixtures/test_context.py",
+      "tests/fixtures/test_direct.py",
+      "tests/fixtures/test_driver.py",
+      "tests/fixtures/test_producers.py",
+      "tests/fixtures/test_release.py",
+      "tests/fixtures/test_supervision.py"
+    ],
+    "native_runtime_execution_performed": false,
+    "log": {
+      "sha256": "fff54609761ff8048f8b5751befa0969602365ceb8f9a46cc35acd6ecb26ed63",
+      "size_bytes": 381
+    }
+  },
+  "fixtures": [
+    {
+      "fixture": "code-invalidation",
+      "operation": {
+        "sha256": "cd6689fe066bbf9d67b02db6f71165be0d3103df243b61a202871349b43355e6",
+        "size_bytes": 7882
+      },
+      "case": {
+        "sha256": "5a2474578333a90cb2e92806c0a9d3f74c10aea02b91f50311824445c8987a4c",
+        "size_bytes": 2624523
+      },
+      "assessment": {
+        "sha256": "2700f36137de00d17c131ccd390c0ad675326cce734b6d0ea1183c457745f92a",
+        "size_bytes": 1404
+      },
+      "authority": [
+        {
+          "side": "before",
+          "sha256": "5afe29a0af317d4b69bbbe7da2e0b3f5ee8434cfa340b44b95eb001b1c52137d",
+          "size_bytes": 207552
+        },
+        {
+          "side": "after",
+          "sha256": "f0e8d7525bfe24a0db974fb42a4ee410e4b5b1a391cc3b947964802049280987",
+          "size_bytes": 207341
+        }
+      ],
+      "status": "passed",
+      "guest_exit": 42,
+      "owned_cleanup_complete": true,
+      "sentinel_survived": true,
+      "game_qualified": false
+    },
+    {
+      "fixture": "configured-memory",
+      "operation": {
+        "sha256": "5c69e16908a694c5769b58905121a4a5a271043eaa5bdd1c193e30c74e9e24c2",
+        "size_bytes": 7877
+      },
+      "case": {
+        "sha256": "bf59a4772bf3713f2839bd20c4acba347b11bdc1701f6300e4496e0dcefbf3c3",
+        "size_bytes": 2624417
+      },
+      "assessment": {
+        "sha256": "53b34718f5f60156cad2ef00f06f5366cb9dc8077fe3001c07d2fea9b19446dc",
+        "size_bytes": 1404
+      },
+      "authority": [
+        {
+          "side": "before",
+          "sha256": "3eb2730409736da7e3b3ea146423049bc71cc2ea998cf8dbf62643d7ec5792e7",
+          "size_bytes": 207553
+        },
+        {
+          "side": "after",
+          "sha256": "dd5eae3868acf16ea37a29dbff82d54f9f6806cb89f5833fc110db6d7c67a825",
+          "size_bytes": 207340
+        }
+      ],
+      "status": "passed",
+      "guest_exit": 42,
+      "owned_cleanup_complete": true,
+      "sentinel_survived": true,
+      "game_qualified": false
+    },
+    {
+      "fixture": "guest-fault-guard",
+      "operation": {
+        "sha256": "11b17147468fe50e2546842a1ba0e44520638da03e0bce62f26e507868be3d6a",
+        "size_bytes": 7872
+      },
+      "case": {
+        "sha256": "4a68ff7e7efc02dd9bf9ff04de9d97ca6c897619f7354f406e7f6b5db152e464",
+        "size_bytes": 2624153
+      },
+      "assessment": {
+        "sha256": "c94dacfea602313e51ab23d861b6e7afcd39452380b575226dd2e005f7b6422c",
+        "size_bytes": 1404
+      },
+      "authority": [
+        {
+          "side": "before",
+          "sha256": "1e6191135d510d60b4b0de9b513d7b4545cc0d6568144268c08067f93f53e07f",
+          "size_bytes": 207553
+        },
+        {
+          "side": "after",
+          "sha256": "e0d855a01faa4ba3be35119740c5e7b06c261cba32c65c7d6b0088dbb0d4e651",
+          "size_bytes": 207341
+        }
+      ],
+      "status": "passed",
+      "guest_exit": 42,
+      "owned_cleanup_complete": true,
+      "sentinel_survived": true,
+      "game_qualified": false
+    },
+    {
+      "fixture": "rendering-original",
+      "operation": {
+        "sha256": "a88967a907f0005828d2fbc1103088d118e228ffe9d1253d8a5b72d84485062b",
+        "size_bytes": 7891
+      },
+      "case": {
+        "sha256": "4c435b73deb629484cd1d17cbce721dfadf431c48f6123776d7c58c6ccb357e6",
+        "size_bytes": 4041852
+      },
+      "assessment": {
+        "sha256": "a6aeb46bdad58db5c98a04de8469f14c9fd392a11c3a867873d56b5a45619606",
+        "size_bytes": 3503
+      },
+      "authority": [
+        {
+          "side": "before",
+          "sha256": "7ef9ace23ea5b94175cd8d0b9e07ae6563b70dc6c286e3b9dbce90498ad8ae97",
+          "size_bytes": 207766
+        },
+        {
+          "side": "after",
+          "sha256": "8f7b12b5f4f3cd4bfe41fbad79ec79f8de2d655b7c33535552650cc717f17757",
+          "size_bytes": 207552
+        }
+      ],
+      "status": "passed",
+      "guest_exit": 42,
+      "owned_cleanup_complete": true,
+      "sentinel_survived": true,
+      "game_qualified": false
+    },
+    {
+      "fixture": "seh-unwind",
+      "operation": {
+        "sha256": "ac65ce36b04ddbffeb80aa2cfce431b1fee4606503d85193e2a5b6557b8f6cad",
+        "size_bytes": 7799
+      },
+      "case": {
+        "sha256": "9ede08ef91ab4f75ecddf7ade5bb6ddad596434db05a8ad8ea2eb490f080981e",
+        "size_bytes": 2623957
+      },
+      "assessment": {
+        "sha256": "af11b12d8a7c0aa5bb7f5e4a35bf2bb953d82f430ca5b88143f3e4e6f53ad43e",
+        "size_bytes": 1390
+      },
+      "authority": [
+        {
+          "side": "before",
+          "sha256": "d105b591d8ffee7cf53c56620a16c60580dcd5564808ec7b83fdd1ba7345103f",
+          "size_bytes": 206053
+        },
+        {
+          "side": "after",
+          "sha256": "bd424b3489eae74f6a01957a86ba79a35d6f0923db49a23c526984fb7bac319c",
+          "size_bytes": 205840
+        }
+      ],
+      "status": "passed",
+      "guest_exit": 42,
+      "owned_cleanup_complete": true,
+      "sentinel_survived": true,
+      "game_qualified": false
+    },
+    {
+      "fixture": "suspend-context",
+      "operation": {
+        "sha256": "8496dc42c445d082daea23d0e8f9a12a24050717c973474788aeaedba4ec8f38",
+        "size_bytes": 7854
+      },
+      "case": {
+        "sha256": "60eed194f57fb11e6cda075d96a7d4b7c07469b635788ace1dd460d065696e5e",
+        "size_bytes": 2624414
+      },
+      "assessment": {
+        "sha256": "77d93a164c9c044dc13153cb6e2699a56a4d98879f2e30a056416a9bb0d3728b",
+        "size_bytes": 1400
+      },
+      "authority": [
+        {
+          "side": "before",
+          "sha256": "2c057f75038f89c8dde4a837f0afa4c094c07a228cb1f0e209596d28ebc927fa",
+          "size_bytes": 207124
+        },
+        {
+          "side": "after",
+          "sha256": "6d883476b14b7028060debaf54f30489bc9f9fd23b60708566cca03f94d8cd56",
+          "size_bytes": 206911
+        }
+      ],
+      "status": "passed",
+      "guest_exit": 42,
+      "owned_cleanup_complete": true,
+      "sentinel_survived": true,
+      "game_qualified": false
+    },
+    {
+      "fixture": "tls-thread",
+      "operation": {
+        "sha256": "d0582318df64c42609ab4b1272ff3bdf0f358230f9669597531603e6330f5c4b",
+        "size_bytes": 7798
+      },
+      "case": {
+        "sha256": "3763a92ae552020a1aec58c5159c9efcbc09a956c979ffef9abc8f048b6b0f2e",
+        "size_bytes": 2623957
+      },
+      "assessment": {
+        "sha256": "ee6259ae2e33d265abf3c1ab8d5b0ad762cf36c623310570781ea4b305e4a838",
+        "size_bytes": 1390
+      },
+      "authority": [
+        {
+          "side": "before",
+          "sha256": "a6f3cfd6e455e6812255f6a58f96348b52bef82059e28d466740f3987e58d71f",
+          "size_bytes": 206047
+        },
+        {
+          "side": "after",
+          "sha256": "bc344c23573d539dd33068cfb5d3ca98a74443303522bec83411f61da8489683",
+          "size_bytes": 205842
+        }
+      ],
+      "status": "passed",
+      "guest_exit": 42,
+      "owned_cleanup_complete": true,
+      "sentinel_survived": true,
+      "game_qualified": false
+    }
+  ],
+  "protected_original_identities_checked": 29,
+  "protected_original_identities_unchanged": true,
+  "retained_output_sizes": [
+    {
+      "run": "code-invalidation-v2",
+      "regular_files": 1902,
+      "logical_bytes": 849305770,
+      "displayed_allocated_bytes": 851521536
+    },
+    {
+      "run": "configured-memory-v2",
+      "regular_files": 1902,
+      "logical_bytes": 849301362,
+      "displayed_allocated_bytes": 851513344
+    },
+    {
+      "run": "guest-fault-guard-v2",
+      "regular_files": 1902,
+      "logical_bytes": 849302597,
+      "displayed_allocated_bytes": 851517440
+    },
+    {
+      "run": "rendering-original-v2",
+      "regular_files": 1904,
+      "logical_bytes": 851880225,
+      "displayed_allocated_bytes": 854093824
+    },
+    {
+      "run": "seh-unwind-v2",
+      "regular_files": 1902,
+      "logical_bytes": 849296408,
+      "displayed_allocated_bytes": 851513344
+    },
+    {
+      "run": "suspend-context-v2",
+      "regular_files": 1902,
+      "logical_bytes": 849304661,
+      "displayed_allocated_bytes": 851521536
+    },
+    {
+      "run": "tls-thread-v2",
+      "regular_files": 1902,
+      "logical_bytes": 849298745,
+      "displayed_allocated_bytes": 851517440
+    },
+    {
+      "run": "tls-thread-on1",
+      "regular_files": 1901,
+      "logical_bytes": 849298868,
+      "displayed_allocated_bytes": 851513344
+    }
+  ],
+  "observed_filesystem_free_bytes": 25058590720,
+  "independent_release": {
+    "receipt": {
+      "sha256": "813f13cd8b061edba7819ecb04e2f0f648a18b2ea46d63b827a7173682316aec",
+      "size_bytes": 15519
+    },
+    "status": "passed",
+    "checked_process_identities": 74,
+    "checked_group_ids": 32,
+    "operations": 8,
+    "owned_output_handles": 0,
+    "observations": 2,
+    "lock_available": true,
+    "processes_signaled": false
+  },
+  "remaining_stage4": [
+    "Wine native API/ABI/thread/window and bootstrap",
+    "native pairing39+v2-23",
+    "full19CPU and ordering",
+    "presentation failure and18visibleframes",
+    "test source ownership exports and recovery"
+  ],
+  "game_execution_performed": false,
+  "ordinary_user_qualified": false,
+  "failed_attempt": {
+    "name": "tls-thread-on1",
+    "status": "failed",
+    "reason": "noninteger_json_number",
+    "runtime_fixture_assessment_passed": true,
+    "overall_passed": false,
+    "retained": true,
+    "fix": "Use the current authority JSON reader for new fractional timing fields; retain original strict case/event readers."
+  },
+  "execution_options": {
+    "observations": "on",
+    "trace": "historical",
+    "signal_resume": "off",
+    "query_observation": "off",
+    "entry_observation": "on",
+    "link_observation": "off",
+    "abort_observation": "on",
+    "correctness_not_performance": true
+  },
+  "storage_plan": {
+    "apfs_clone_credit_bytes": 0,
+    "maximum_additional_bytes": 13421356074,
+    "observed_free_bytes": 25187586048,
+    "reserve_bytes": 6442450944
+  },
+  "checkpoint_files": [
+    {
+      "path": ".github/source-notice-exceptions.json",
+      "sha256": "f7a2dcf3f86e8a5b33e54052381e286c4e4f8c060dfc71e341f9e751063354bd",
+      "size_bytes": 13973
+    },
+    {
+      "path": "NOTICE.md",
+      "sha256": "e4b51801272655c5ccd2a8ceed5ddbd222caee6144bbce705d01030a4332efb6",
+      "size_bytes": 4499
+    },
+    {
+      "path": "pear_runtime/__init__.py",
+      "sha256": "4ba9de68008a942f73deb92b7b2fc9073daa00fc6c29684ac93797cdd8751127",
+      "size_bytes": 160
+    },
+    {
+      "path": "pear_runtime/assembly/__init__.py",
+      "sha256": "a139b7754dc92d7dae1473866946c0d5aaf2e154740b8d46333a3237203dd02e",
+      "size_bytes": 182
+    },
+    {
+      "path": "pear_runtime/assembly/_byte_readers.py",
+      "sha256": "e9ac329c515afb03562bfffc0f0120c9ea15665832b085dd144579df66a7a6c0",
+      "size_bytes": 4917
+    },
+    {
+      "path": "pear_runtime/assembly/_common.py",
+      "sha256": "c311a2bda40182af833838d8409aedfa3d46cf9520975c2a5d0437921b17f578",
+      "size_bytes": 7639
+    },
+    {
+      "path": "pear_runtime/assembly/_transport.py",
+      "sha256": "0b7f15b4075117f97e8f28ac3a3cba9ae14fef20eb7b95677ecfcd76ce7020a6",
+      "size_bytes": 4199
+    },
+    {
+      "path": "pear_runtime/assembly/core.py",
+      "sha256": "042d60b2be9447a6c7816b1ace158fd24a6c35cb0f9234b689f26f6122328fda",
+      "size_bytes": 29265
+    },
+    {
+      "path": "pear_runtime/assembly/driver.py",
+      "sha256": "1b4362b2a34219cb387769ef741e6bb7f9e9645315a2d45f3eaf6f4c92b413ce",
+      "size_bytes": 15138
+    },
+    {
+      "path": "pear_runtime/assembly/helpers.py",
+      "sha256": "1c6e5a1332de5fbd6aca0327e7e0ed9d1d687ab29c6f9d305d6c1d8ab5134349",
+      "size_bytes": 6558
+    },
+    {
+      "path": "pear_runtime/build.py",
+      "sha256": "eed2094b12c64205ed740f71c95d0512943819289bc6749fac4a683da3d732f6",
+      "size_bytes": 22151
+    },
+    {
+      "path": "pear_runtime/errors.py",
+      "sha256": "0ed4c834e5fad698c25e83c1b80fd4601e37c3c2ffa36e340dedde7d36e418fa",
+      "size_bytes": 427
+    },
+    {
+      "path": "pear_runtime/fixtures/__init__.py",
+      "sha256": "3001914638d0600d44c6296f87a098ac2b45dd4f9c29399a9274df376ad7375a",
+      "size_bytes": 175
+    },
+    {
+      "path": "pear_runtime/fixtures/__main__.py",
+      "sha256": "39575a1d1093c279d056181e1619c4a5d4475f6ef60dccdf615f8ab02960f2ea",
+      "size_bytes": 144
+    },
+    {
+      "path": "pear_runtime/fixtures/admission.py",
+      "sha256": "c10a530dea1dca0c7b3f75596b40db050991ac40b72b6d12cf8d523c30082fc3",
+      "size_bytes": 1815
+    },
+    {
+      "path": "pear_runtime/fixtures/assessment/__init__.py",
+      "sha256": "1bc691471e6bfd6054b23bcc1af39f81dd4fddecec4730e2721e025b55aa5416",
+      "size_bytes": 243
+    },
+    {
+      "path": "pear_runtime/fixtures/assessment/batch.py",
+      "sha256": "59e3d5d4b9f0e2e4fc77187fe0aa39a6eacaa892d4aaa8c6dd9de28afc993030",
+      "size_bytes": 1760
+    },
+    {
+      "path": "pear_runtime/fixtures/assessment/early_wait.py",
+      "sha256": "abc130036558c5b83ab8d6fc57fb3d67b17175721c297dbc5d983fbae4d60e5f",
+      "size_bytes": 5807
+    },
+    {
+      "path": "pear_runtime/fixtures/assessment/entry.py",
+      "sha256": "12a000a428e183971c643f819600973da5fe943be6d9b51eb43abf77110a428f",
+      "size_bytes": 3269
+    },
+    {
+      "path": "pear_runtime/fixtures/assessment/failure.py",
+      "sha256": "547b3f71bbba7c3a95a825aa95a5e07aa114d6278bcc06ee6342c1c1915d0b80",
+      "size_bytes": 2024
+    },
+    {
+      "path": "pear_runtime/fixtures/assessment/link.py",
+      "sha256": "133c7b28414a7a2306a524ad5d1f3ae796db4995f14384c7e90e3f1d2012ce2b",
+      "size_bytes": 4437
+    },
+    {
+      "path": "pear_runtime/fixtures/assessment/mutation_bound.py",
+      "sha256": "267bfd003d45d277fd6feae88bb19b36bd396c30dbb68cc05a18588b7f117d9e",
+      "size_bytes": 2261
+    },
+    {
+      "path": "pear_runtime/fixtures/assessment/pending_transition.py",
+      "sha256": "ffe46804538c70fc79294474053d5a457e096dfd053a92f691c6cf197727058e",
+      "size_bytes": 2084
+    },
+    {
+      "path": "pear_runtime/fixtures/assessment/query.py",
+      "sha256": "a682d1bd2f26264d3bcbe83f8e6c341f52bb32b93b1dd18c191c4310cec27e61",
+      "size_bytes": 3577
+    },
+    {
+      "path": "pear_runtime/fixtures/assessment/query_context.py",
+      "sha256": "6ded8463bb4900c01fc63aab4bc82267592cf4ed679ef1c780aeb40347242a9b",
+      "size_bytes": 2656
+    },
+    {
+      "path": "pear_runtime/fixtures/assessment/repair_epoch.py",
+      "sha256": "1fbc6d34158b36570ebe39a10e625647db8533f3f7f0c01d64701987ed5bdb0d",
+      "size_bytes": 1714
+    },
+    {
+      "path": "pear_runtime/fixtures/assessment/source_owner.py",
+      "sha256": "43610cc4e1f5ebd671d97b81dc3b143b49491cba84ae4bfe2e5cbaff0d78d510",
+      "size_bytes": 2377
+    },
+    {
+      "path": "pear_runtime/fixtures/assessment/string.py",
+      "sha256": "0487513d38f7e827022b3ddadc89606cf70434ab8cc3a308914b4669bde2c36a",
+      "size_bytes": 3736
+    },
+    {
+      "path": "pear_runtime/fixtures/assessment/wake.py",
+      "sha256": "1e76977884ff23a7b029c238f3ca371964989ae1a2474ef35e1d0153bf6c8f00",
+      "size_bytes": 3749
+    },
+    {
+      "path": "pear_runtime/fixtures/assessment/write.py",
+      "sha256": "ca9e61a060c02660943a70257863d3de89c4bd2a402b20c2d4628c43639c77d6",
+      "size_bytes": 3527
+    },
+    {
+      "path": "pear_runtime/fixtures/capabilities/d36.json",
+      "sha256": "35aa7f4c306b96be2a9154113c54a423a737e8e9a965dd0a4cdd52727019d6d3",
+      "size_bytes": 22116
+    },
+    {
+      "path": "pear_runtime/fixtures/checks.py",
+      "sha256": "585b2449d2d486acd725073c8b5b48177d5294048011f81f4369f6d944721f36",
+      "size_bytes": 3551
+    },
+    {
+      "path": "pear_runtime/fixtures/context.py",
+      "sha256": "061aa6b62bfd8b17cf951ca5b4278cb63895a3cf7f7ff72545d4d186e0c2b1a0",
+      "size_bytes": 19138
+    },
+    {
+      "path": "pear_runtime/fixtures/controls/__init__.py",
+      "sha256": "f59b5e79456beb0821bb7207d0ac1acb3a21f744ac37bfbad228228763061a38",
+      "size_bytes": 172
+    },
+    {
+      "path": "pear_runtime/fixtures/controls/corpus.py",
+      "sha256": "1ed903da5a66e25cd36d62f29d4d935cc415f8a2d7d1d420d902c370cb0a5253",
+      "size_bytes": 14904
+    },
+    {
+      "path": "pear_runtime/fixtures/controls/pairing.py",
+      "sha256": "fa7d806f43431c55bb3d898ca31ab629ba2d804734a11f56cad2410f04a30e0f",
+      "size_bytes": 7281
+    },
+    {
+      "path": "pear_runtime/fixtures/controls/presentation.py",
+      "sha256": "d75721f978e52cf80c8c14873d8b1c2db006c72a9754df3b43ccfc1f1c4f5b67",
+      "size_bytes": 10964
+    },
+    {
+      "path": "pear_runtime/fixtures/direct.py",
+      "sha256": "979d1ce8398b54e97e3712c7f6c298e312da9f8405f70330c1ffdf6d5fdcd4b8",
+      "size_bytes": 44984
+    },
+    {
+      "path": "pear_runtime/fixtures/driver.py",
+      "sha256": "67ab8ac11dbc416283a5c048d7b012fbb5bf242caa1c4da299b4092cd90fa5c5",
+      "size_bytes": 10244
+    },
+    {
+      "path": "pear_runtime/fixtures/graphics/__init__.py",
+      "sha256": "2c1a33c3dddf1dd3fa2b91d129f05831ddaf43d0542854c7307aa5d562b8b358",
+      "size_bytes": 2177
+    },
+    {
+      "path": "pear_runtime/fixtures/graphics/backend.py",
+      "sha256": "e72158f98b5213f69933adc49ebaf738ae199dbb933ce4fb487831dd1410f945",
+      "size_bytes": 2320
+    },
+    {
+      "path": "pear_runtime/fixtures/graphics/render.py",
+      "sha256": "dc0d48d33ba34b957332ff5f345898517228645ec8879d3206d8c446e223def4",
+      "size_bytes": 5784
+    },
+    {
+      "path": "pear_runtime/fixtures/inputs.py",
+      "sha256": "ee176a0c97482e563c78576d25d42b6294f4bc98bb3878978cfc363c1163e197",
+      "size_bytes": 1223
+    },
+    {
+      "path": "pear_runtime/fixtures/producers.py",
+      "sha256": "0db06d96878f639f2624c497971d8e2faaeb224b4b3245af68798f3f852c70a0",
+      "size_bytes": 10573
+    },
+    {
+      "path": "pear_runtime/fixtures/release.py",
+      "sha256": "62e63b909e5859fda22715e82dc588d8afe563bde58dd4cbd51056813e841033",
+      "size_bytes": 13089
+    },
+    {
+      "path": "pear_runtime/fixtures/supervision.py",
+      "sha256": "6d16847b1745e37447c3fbd4e7435d39a6cd32c6f0d29137fb5fc8540485fbc3",
+      "size_bytes": 10244
+    },
+    {
+      "path": "pear_runtime/fixtures/types.py",
+      "sha256": "e2b995f72ad4afa7981c1293c9ffd6efb35e89c05f123c7d80499a6cac906622",
+      "size_bytes": 379
+    },
+    {
+      "path": "pear_runtime/providers/pear_legacy/host/probe/hardened_baseline.py",
+      "sha256": "e10c985de82a93b852e8a6204c94f9877628f3cc49760b5c39d771635130947a",
+      "size_bytes": 26320
+    },
+    {
+      "path": "pear_runtime/providers/pear_legacy/host/probe/provisioned_probe.py",
+      "sha256": "47f49422f4d6ccefb2826690a562d4d829c007d2c5a96fc156c86f7d446e2ee3",
+      "size_bytes": 29260
+    },
+    {
+      "path": "pear_runtime/providers/pear_legacy/tools/dxmt/build.py",
+      "sha256": "283e52d5d2f9a42d403624370537e8bf4ebe1859a75a5436d57a90975e8ef144",
+      "size_bytes": 19962
+    },
+    {
+      "path": "pear_runtime/providers/pear_legacy/tools/dxmt/common.py",
+      "sha256": "3593e8e2a80d535143e2baae7e945ce90918520711993848dc33355d9dac0e75",
+      "size_bytes": 13699
+    },
+    {
+      "path": "pear_runtime/providers/pear_legacy/tools/dxmt/pairing_runtime.py",
+      "sha256": "617b00dbd281271b26bc1d0d9621dcd68246805218b5bf96bdc811947f9811d5",
+      "size_bytes": 43206
+    },
+    {
+      "path": "pear_runtime/providers/pear_legacy/tools/dxmt/run_pairing.py",
+      "sha256": "038adc9355892d853dce2886f06dbeab3c073e14d343bf10aa4effc968ee6402",
+      "size_bytes": 36958
+    },
+    {
+      "path": "pear_runtime/providers/pear_legacy/tools/sources/validate_inventory.py",
+      "sha256": "a851ee6978002a4e45934b91e4abdfe0151d73178e862e45b2b0824a4e0b3710",
+      "size_bytes": 37567
+    },
+    {
+      "path": "pear_runtime/providers/pear_legacy/tools/wine/abi_review.py",
+      "sha256": "fa92d9707b3446f7bc806ec616a9a5637103922841b171b7659af307f6178d46",
+      "size_bytes": 20470
+    },
+    {
+      "path": "pear_runtime/providers/pear_legacy/tools/wine/api_runner.py",
+      "sha256": "ae59778c676b4d1e0d4a569809f149833e23814723357a379e9bf52138879a3d",
+      "size_bytes": 87961
+    },
+    {
+      "path": "pear_runtime/providers/pear_legacy/tools/wine/common.py",
+      "sha256": "5c2789ca3392f70f93c5ae0656e803c0f8a01d4cc1c1d2622e8af0014690e171",
+      "size_bytes": 7970
+    },
+    {
+      "path": "pear_runtime/providers/pear_legacy/tools/wine/dynamic_evidence.py",
+      "sha256": "d358c8f987297b94ba7938cc277f48b661169edf2d0400a714a914a47e6b1a0e",
+      "size_bytes": 13409
+    },
+    {
+      "path": "pear_runtime/providers/pear_legacy/tools/wine/exception_evidence.py",
+      "sha256": "db90c78f51f16d8747d751391b7cb8588ed9bda2dd0c4f3d57e6936cc2c99ded",
+      "size_bytes": 26135
+    },
+    {
+      "path": "pear_runtime/providers/pear_legacy/tools/wine/modules.py",
+      "sha256": "ee109f7934562082a4ed74c7c6f90beec75445adff042e2b8b9e82fef086225c",
+      "size_bytes": 21610
+    },
+    {
+      "path": "pear_runtime/providers/pear_legacy/tools/wine/prepare.py",
+      "sha256": "d01f104cbf49b373eeec2799d79b975523fba2960d0b92d723e5e37cdc11de50",
+      "size_bytes": 26246
+    },
+    {
+      "path": "pear_runtime/providers/pear_legacy/tools/wine/run_fixtures.py",
+      "sha256": "e6d79880e6fb46a20ed23f3966d3fa4139e2c78181a4ccf5e05f86e2ab87f688",
+      "size_bytes": 57987
+    },
+    {
+      "path": "pear_runtime/providers/pear_legacy/tools/wine/signing.py",
+      "sha256": "4c643405fab8b42b369a360d8431fe667f0dc60dd24c703074ff09afdcf3b71b",
+      "size_bytes": 38692
+    },
+    {
+      "path": "pear_runtime/providers/pear_legacy/tools/wine/toolchain.py",
+      "sha256": "760e701e79337635c6c8ae77fc607d4ee550932cd04c419540e44f5a9e2cb597",
+      "size_bytes": 38707
+    },
+    {
+      "path": "provenance/assembly-import.json",
+      "sha256": "d2dbdcca002e51f2c216f2621775661113d4f4ed1723f2932f6321f6c866109d",
+      "size_bytes": 22019
+    },
+    {
+      "path": "provenance/fixture-assessment-import.json",
+      "sha256": "411f722797b092e511be00e0acae905dad0651f831cf54b2247fc22e0110c33e",
+      "size_bytes": 63400
+    },
+    {
+      "path": "provenance/fixture-checks-import.json",
+      "sha256": "25a0938c76b0111f3b1d4eb36ee04ae1f5a6be7977d87a6ef0bf11b9e21b7277",
+      "size_bytes": 1016
+    },
+    {
+      "path": "provenance/fixture-context-import.json",
+      "sha256": "69f9c94cfbce338e236204b21ced599e9ed8cdc9b36ef0a9ea4d85d428d9f6df",
+      "size_bytes": 6360
+    },
+    {
+      "path": "provenance/fixture-controls-import.json",
+      "sha256": "9ab287cffd32ec157752ef4ea0e8d20061ba9d93c0ca9d7ec1d9397430f45149",
+      "size_bytes": 77414
+    },
+    {
+      "path": "provenance/fixture-direct-import.json",
+      "sha256": "8c6ba1d8d8f44c1ab00fdee2010aeddd006c5854af15dcd418dcf46b812bcb66",
+      "size_bytes": 2190
+    },
+    {
+      "path": "provenance/fixture-graphics-import.json",
+      "sha256": "4e6c3b5f3998b33e270b3f77b59a2b8835eb3f30a9921da194eb447b70717013",
+      "size_bytes": 9821
+    },
+    {
+      "path": "provenance/fixture-parent-import.json",
+      "sha256": "e5ecb7098f4f4c799397da8b03cf508aa6776dfd9dfe10b189fbc7c5d9a79d02",
+      "size_bytes": 3634
+    },
+    {
+      "path": "provenance/fixture-provider-import.json",
+      "sha256": "9400b7272bc3891e626b4aa9cf5ececefafcbcf67b0ef98877ae35f9c6db588e",
+      "size_bytes": 38823
+    },
+    {
+      "path": "provenance/fixture-release-import.json",
+      "sha256": "ce97914b0911d3a02936019ce70cabafa13b5e5c234cab41f50ed40d75ea831d",
+      "size_bytes": 2803
+    },
+    {
+      "path": "tests/fixtures/assessment/__init__.py",
+      "sha256": "2c2b8291b2fbed4b14a7d82fff7e63258a264b718c9d6b3f8b72da01e372fd88",
+      "size_bytes": 158
+    },
+    {
+      "path": "tests/fixtures/assessment/test_batch.py",
+      "sha256": "f0f02a4fa7a1ca22d524782a59af14bccfff7bfc93aadbf9e07964a569c9f6db",
+      "size_bytes": 1404
+    },
+    {
+      "path": "tests/fixtures/assessment/test_early_wait.py",
+      "sha256": "a33ba67735cba2f94bd60e4579b677f2021c425c5a08ef64386b6b3430f93cad",
+      "size_bytes": 11868
+    },
+    {
+      "path": "tests/fixtures/assessment/test_entry_v1.py",
+      "sha256": "27d35f0109d723c43928b5990c5bb638bc41bf12e0f053e2dc8bc8243a4ae36f",
+      "size_bytes": 1586
+    },
+    {
+      "path": "tests/fixtures/assessment/test_failure_v1.py",
+      "sha256": "c3494fec7f8b35e720be85b86f6d9368bec81fd48da9a0c5a4399e7faf17a521",
+      "size_bytes": 1524
+    },
+    {
+      "path": "tests/fixtures/assessment/test_link_v1.py",
+      "sha256": "b21fd25422510f3a91876c3c0093e36e294130ccc9ff3dd09fb8c4ca29cc6d29",
+      "size_bytes": 2117
+    },
+    {
+      "path": "tests/fixtures/assessment/test_mutation_bound.py",
+      "sha256": "6a7bb1b8f68d6db299da0aec5353db111934cde8f632fd3b3ac9a9f49a699c78",
+      "size_bytes": 2136
+    },
+    {
+      "path": "tests/fixtures/assessment/test_pending_transition.py",
+      "sha256": "91ff02af846234db83a8f8395dad7a3659974adc1b2df3ee00af62a02fa3fb63",
+      "size_bytes": 2279
+    },
+    {
+      "path": "tests/fixtures/assessment/test_query_context_v1.py",
+      "sha256": "a628baa56ba01e8efbc17894671edc2db3dee61bcca1adf35ce91fbdcb260603",
+      "size_bytes": 1702
+    },
+    {
+      "path": "tests/fixtures/assessment/test_query_v1.py",
+      "sha256": "6b29d3fded737badeaac31c2a33b892b4ecdd9155d644bc4cfec18ae8a15af8f",
+      "size_bytes": 3739
+    },
+    {
+      "path": "tests/fixtures/assessment/test_repair_epoch_v1.py",
+      "sha256": "e115991b4d7ad9d4c84709cb9997152f0a3d1f123dcead0e067c32ed9e71dc16",
+      "size_bytes": 1035
+    },
+    {
+      "path": "tests/fixtures/assessment/test_source_owner.py",
+      "sha256": "da417f7eace82475a5d358d07915ffd0b00e79adaeb3b387cdfc7449650e70bf",
+      "size_bytes": 1927
+    },
+    {
+      "path": "tests/fixtures/assessment/test_string_checks.py",
+      "sha256": "026b272d5463db761b18d69b30de92af129217082a5ae492db7fe82a2049b8c4",
+      "size_bytes": 2904
+    },
+    {
+      "path": "tests/fixtures/assessment/test_wake.py",
+      "sha256": "13f73b1aa120420bb3708b6e75a478c159dad74897aeafc185b43abab3968876",
+      "size_bytes": 1872
+    },
+    {
+      "path": "tests/fixtures/assessment/test_write.py",
+      "sha256": "f2937d33606c09eccd0d9d0f02d8f9bbb5f905f51ab9c14493e0f8d3186d61ff",
+      "size_bytes": 1773
+    },
+    {
+      "path": "tests/fixtures/controls/__init__.py",
+      "sha256": "66403cb353dc9d4a605134a918e326689199f27e95fb0b0d6b728efb5db41a1f",
+      "size_bytes": 93
+    },
+    {
+      "path": "tests/fixtures/controls/test_control_adapters.py",
+      "sha256": "204bb81225e07930e329879173aaf927b389e20c52ab7638201387556319d321",
+      "size_bytes": 11336
+    },
+    {
+      "path": "tests/fixtures/controls/test_corpus_results.py",
+      "sha256": "9681e5ae035b22274c609d83f5e684051999f32476699c463dafe611f5937abd",
+      "size_bytes": 6119
+    },
+    {
+      "path": "tests/fixtures/controls/test_ordering_results.py",
+      "sha256": "061a74961f77c8130bc1e2f67d5e4f2b02a4d6c8affa5f53005b4c994c3917ea",
+      "size_bytes": 3633
+    },
+    {
+      "path": "tests/fixtures/controls/test_pairing_protocol.py",
+      "sha256": "613b46e65a3d9554bd8aa97dae37745cc15cc09f1cf1b1ebc8b0bda103292bca",
+      "size_bytes": 4586
+    },
+    {
+      "path": "tests/fixtures/controls/test_present_frames.py",
+      "sha256": "39233eb7e5d63c6582984306cb51dbaeaf04a6798e1b94d8e4cd979b0126f3ed",
+      "size_bytes": 2631
+    },
+    {
+      "path": "tests/fixtures/controls/test_presentation_native.py",
+      "sha256": "6fa029187562c8e73fb8db239450f675b6c569a6eaee8c81639b05f35207079e",
+      "size_bytes": 3243
+    },
+    {
+      "path": "tests/fixtures/controls/test_surface_controls.py",
+      "sha256": "49f12191b3b9aee384a6182d03d9b1218853ccb3cc7ecf700ebaa6aab51fe9b7",
+      "size_bytes": 1274
+    },
+    {
+      "path": "tests/fixtures/graphics/__init__.py",
+      "sha256": "66403cb353dc9d4a605134a918e326689199f27e95fb0b0d6b728efb5db41a1f",
+      "size_bytes": 93
+    },
+    {
+      "path": "tests/fixtures/graphics/test_graphics_bindings.py",
+      "sha256": "4efe3033891262abb6aaa9b0688ac53d7ed65de5bca8e0022c56d618394bc3b2",
+      "size_bytes": 15201
+    },
+    {
+      "path": "tests/fixtures/graphics/test_original_rendering.py",
+      "sha256": "03161009f337ccb761bd4e8e8d8c4f4cdff630e6b24fbabd1f1541eb6ed26d3d",
+      "size_bytes": 3738
+    },
+    {
+      "path": "tests/fixtures/test_admission.py",
+      "sha256": "bf3673f09dcc20a65e185e92de5dc104723544d42d424b122f2ff849573b033d",
+      "size_bytes": 5901
+    },
+    {
+      "path": "tests/fixtures/test_checks.py",
+      "sha256": "0ee5e49c2928371afdd7a0e5260b7596260f6205b97b1dd6086b249e933a90cd",
+      "size_bytes": 5545
+    },
+    {
+      "path": "tests/fixtures/test_context.py",
+      "sha256": "f0de65c5579d6a0208b9a72fcc9df7de86c62d55120281fa6dbaed1f36b557f6",
+      "size_bytes": 14485
+    },
+    {
+      "path": "tests/fixtures/test_direct.py",
+      "sha256": "6f934c73092bef3ef0f0b65c0480edf6621ec2b5a097759ee3ca0bcc5fffb5f7",
+      "size_bytes": 10876
+    },
+    {
+      "path": "tests/fixtures/test_driver.py",
+      "sha256": "4f018033f8a9ee32eb0286d93e383c1b68c7b0fb5c5af30057c1cd76d78e51ba",
+      "size_bytes": 24708
+    },
+    {
+      "path": "tests/fixtures/test_producers.py",
+      "sha256": "25958d9f5f70b1019ea729493ba43c7f9dd93d2b6ff4d56d0ac1454f233823a8",
+      "size_bytes": 6992
+    },
+    {
+      "path": "tests/fixtures/test_release.py",
+      "sha256": "e9fbdab0dd6b41f86a6cde92bb6e9df01e5fd5486d3203e4f31a97f994ba4f77",
+      "size_bytes": 8830
+    },
+    {
+      "path": "tests/fixtures/test_supervision.py",
+      "sha256": "996d67f8a59d7deb5cfc571e3377875f7afe92446b3d7b9438f2ba5c12234d53",
+      "size_bytes": 13571
+    }
+  ],
+  "notice_review": {
+    "frozen_provider_files": 17,
+    "inline_notice_warnings": 34,
+    "adjacent_notice": "NOTICE.md",
+    "source_hashes_preserved": true,
+    "manual_review": "Original Pear adoption and per-file terms retained; warnings remain explicit, not an automated pass."
+  },
+  "diff_hygiene": {
+    "unrestricted_check": "one_known_warning",
+    "path": "pear_runtime/fixtures/checks.py",
+    "line": 51,
+    "warning": "new blank line at EOF",
+    "reason": "Preserve exact executed producer bytes; no functional impact.",
+    "all_other_whitespace_checks_passed": true
+  }
+}

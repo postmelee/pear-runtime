@@ -1,0 +1,1448 @@
+{
+  "candidate_family_boundary": "Original candidate-family constants including d25-game are unchanged grammar/policy selectors. Runtime authority is supplied by the parent exact descriptor and completed assembly operation; no old candidate builder or implicit selection is imported.",
+  "canonical_fex_readers": {
+    "direct_dependency_of_these_14_modules": false,
+    "duplicated_here": false,
+    "modules": [
+      "thread_create_observation",
+      "attach_observation",
+      "binding_census_observation",
+      "slot_lifetime_observation"
+    ],
+    "namespace": "Pear.Diagnostics",
+    "owner": "pear-fex"
+  },
+  "error_provider": "pear_runtime.errors.Error/need through pear_runtime.fixtures.inputs",
+  "external_dependencies": [
+    "pathlib.Path",
+    "re",
+    "json",
+    "pear_runtime.fixtures.inputs.read",
+    "pear_runtime.fixtures.inputs.digest",
+    "pear_runtime.fixtures.inputs.fact",
+    "pear_runtime.fixtures.inputs.need"
+  ],
+  "files": [
+    {
+      "all_non_import_ast_equal": true,
+      "all_original_failure_code_literals_preserved": true,
+      "destination_notices": [
+        "# SPDX-FileCopyrightText: 2026 Pear contributors",
+        "# SPDX-License-Identifier: MIT"
+      ],
+      "license": "MIT",
+      "namespace_bindings": [
+        "from pathlib import Path",
+        "import re",
+        "from pear_runtime.fixtures.inputs import read, digest, need",
+        "from pear_runtime.fixtures.assessment.write import assess as base_assess"
+      ],
+      "notice_adaptation": "Added leading collective Pear copyright notice for the adapted file under the approved current source policy; original MIT license marker and origin digest are unchanged.",
+      "path": "pear_runtime/fixtures/assessment/wake.py",
+      "selected_symbols": [
+        {
+          "end_line": 28,
+          "sha256": "a78fc95b8f3bd77df33e0c43542e674634e006b082148b3b3aa552e189756f17",
+          "start_line": 8,
+          "symbol": "parse"
+        },
+        {
+          "end_line": 44,
+          "sha256": "70ec5a44e62e3655fcaff42efc60d059fec120b4b7605f0b39e82660339f5887",
+          "start_line": 30,
+          "symbol": "assess"
+        }
+      ],
+      "sha256": "1e76977884ff23a7b029c238f3ca371964989ae1a2474ef35e1d0153bf6c8f00",
+      "size_bytes": 3749,
+      "source_notices": [
+        "# SPDX-License-Identifier: MIT"
+      ],
+      "source_path": "tools/steam/wake_assess.py",
+      "source_sha256": "7f9cc5212ba4850cbcfef85d9b27b098b6182e441106feba41f5abe98971433d",
+      "source_size_bytes": 3686,
+      "transformation": "Exact source body and constants; only declared import routes changed."
+    },
+    {
+      "all_non_import_ast_equal": true,
+      "all_original_failure_code_literals_preserved": true,
+      "destination_notices": [
+        "# SPDX-FileCopyrightText: 2026 Pear contributors",
+        "# SPDX-License-Identifier: MIT"
+      ],
+      "license": "MIT",
+      "namespace_bindings": [
+        "from pathlib import Path",
+        "import re",
+        "from pear_runtime.fixtures.inputs import read, digest, need",
+        "from pear_runtime.fixtures.assessment.batch import assess as base_assess"
+      ],
+      "notice_adaptation": "Added leading collective Pear copyright notice for the adapted file under the approved current source policy; original MIT license marker and origin digest are unchanged.",
+      "path": "pear_runtime/fixtures/assessment/write.py",
+      "selected_symbols": [
+        {
+          "end_line": 32,
+          "sha256": "bb4a338ea09d18b87d534f37930fd6ffef6c2b7aed7e6e7c7ca6693def3f72ca",
+          "start_line": 8,
+          "symbol": "parse"
+        },
+        {
+          "end_line": 41,
+          "sha256": "46a0a65f67b5fc197f3b2cd4d529230fcaf0ec84735f02b9e4f7ec5ac43f02c4",
+          "start_line": 34,
+          "symbol": "assess"
+        }
+      ],
+      "sha256": "ca9e61a060c02660943a70257863d3de89c4bd2a402b20c2d4628c43639c77d6",
+      "size_bytes": 3527,
+      "source_notices": [
+        "# SPDX-License-Identifier: MIT"
+      ],
+      "source_path": "tools/steam/write_assess.py",
+      "source_sha256": "3fa5f987e53018efbddbc848e3517bf2f4fb460c106ef837b42021805a7dd614",
+      "source_size_bytes": 3464,
+      "transformation": "Exact source body and constants; only declared import routes changed."
+    },
+    {
+      "all_non_import_ast_equal": true,
+      "all_original_failure_code_literals_preserved": true,
+      "destination_notices": [
+        "# SPDX-FileCopyrightText: 2026 Pear contributors",
+        "# SPDX-License-Identifier: MIT"
+      ],
+      "license": "MIT",
+      "namespace_bindings": [
+        "from pathlib import Path",
+        "import re",
+        "from pear_runtime.fixtures.inputs import read, digest, need",
+        "from pear_runtime.fixtures.assessment.string import assess as base_assess"
+      ],
+      "notice_adaptation": "Added leading collective Pear copyright notice for the adapted file under the approved current source policy; original MIT license marker and origin digest are unchanged.",
+      "path": "pear_runtime/fixtures/assessment/batch.py",
+      "selected_symbols": [
+        {
+          "end_line": 20,
+          "sha256": "57052bf833836471ba7a53e27f7f8ca671510a97f4b45cf3e1ed8ff46f9a193a",
+          "start_line": 9,
+          "symbol": "parse"
+        },
+        {
+          "end_line": 30,
+          "sha256": "9df288e1df68a0c5ee9fadfbe1b8bf363c70487b90812859d84b4d959dedc792",
+          "start_line": 22,
+          "symbol": "assess"
+        }
+      ],
+      "sha256": "59e3d5d4b9f0e2e4fc77187fe0aa39a6eacaa892d4aaa8c6dd9de28afc993030",
+      "size_bytes": 1760,
+      "source_notices": [
+        "# SPDX-License-Identifier: MIT"
+      ],
+      "source_path": "tools/steam/batch_assess.py",
+      "source_sha256": "2a846e578dbc81f5391e66dda0af135b41d228e0a8924243c4623dff90941071",
+      "source_size_bytes": 1697,
+      "transformation": "Exact source body and constants; only declared import routes changed."
+    },
+    {
+      "all_non_import_ast_equal": true,
+      "all_original_failure_code_literals_preserved": true,
+      "destination_notices": [
+        "# SPDX-FileCopyrightText: 2026 Pear contributors",
+        "# SPDX-License-Identifier: MIT"
+      ],
+      "license": "MIT",
+      "namespace_bindings": [
+        "from pathlib import Path",
+        "import json, re",
+        "from pear_runtime.fixtures.inputs import read, fact, digest, need"
+      ],
+      "notice_adaptation": "Added leading collective Pear copyright notice for the adapted file under the approved current source policy; original MIT license marker and origin digest are unchanged.",
+      "path": "pear_runtime/fixtures/assessment/string.py",
+      "selected_symbols": [
+        {
+          "end_line": 42,
+          "sha256": "1a82752e5499805a295d2347bfbf6bead095ad9e59c04241442cca6abb9d38cb",
+          "start_line": 8,
+          "symbol": "assess"
+        }
+      ],
+      "sha256": "0487513d38f7e827022b3ddadc89606cf70434ab8cc3a308914b4669bde2c36a",
+      "size_bytes": 3736,
+      "source_notices": [
+        "# SPDX-License-Identifier: MIT"
+      ],
+      "source_path": "tools/steam/string_assess.py",
+      "source_sha256": "7a5769c3ae8eded0624b875cce202302b459381c2820eb794348b028d8ede7c1",
+      "source_size_bytes": 3596,
+      "transformation": "Exact source body and constants; only declared import routes changed."
+    },
+    {
+      "all_non_import_ast_equal": true,
+      "all_original_failure_code_literals_preserved": true,
+      "destination_notices": [
+        "# SPDX-FileCopyrightText: 2026 Pear contributors",
+        "# SPDX-License-Identifier: MIT"
+      ],
+      "license": "MIT",
+      "namespace_bindings": [
+        "import re",
+        "from pear_runtime.fixtures.inputs import need"
+      ],
+      "notice_adaptation": "Added leading collective Pear copyright notice for the adapted file under the approved current source policy; original MIT license marker and origin digest are unchanged.",
+      "path": "pear_runtime/fixtures/assessment/query.py",
+      "selected_symbols": [
+        {
+          "end_line": 17,
+          "sha256": "bd048e61938718aa3917a41bfda02150803916b7f87a6bdfe6062392f9424012",
+          "start_line": 14,
+          "symbol": "environment"
+        },
+        {
+          "end_line": 39,
+          "sha256": "8cee553899786c2ad3a6496bec967ad686bd493f6912209e1dee8f6b919ae98a",
+          "start_line": 20,
+          "symbol": "records"
+        },
+        {
+          "end_line": 51,
+          "sha256": "904095209ce04e4f1b58b5e15630bec894cda107fbafccebfcf16d3839edbd81",
+          "start_line": 42,
+          "symbol": "assess"
+        }
+      ],
+      "sha256": "a682d1bd2f26264d3bcbe83f8e6c341f52bb32b93b1dd18c191c4310cec27e61",
+      "size_bytes": 3577,
+      "source_notices": [
+        "# SPDX-License-Identifier: MIT"
+      ],
+      "source_path": "tools/steam/query_observation.py",
+      "source_sha256": "ac9ebe4a1914ae0141ddf19018357e8f3d23b38a25ff76743b27b8ade49b0b8a",
+      "source_size_bytes": 3528,
+      "transformation": "Exact source body and constants; only declared import routes changed."
+    },
+    {
+      "all_non_import_ast_equal": true,
+      "all_original_failure_code_literals_preserved": true,
+      "destination_notices": [
+        "# SPDX-FileCopyrightText: 2026 Pear contributors",
+        "# SPDX-License-Identifier: MIT"
+      ],
+      "license": "MIT",
+      "namespace_bindings": [
+        "import re",
+        "from pear_runtime.fixtures.assessment import query as previous",
+        "from pear_runtime.fixtures.inputs import need"
+      ],
+      "notice_adaptation": "Added leading collective Pear copyright notice for the adapted file under the approved current source policy; original MIT license marker and origin digest are unchanged.",
+      "path": "pear_runtime/fixtures/assessment/query_context.py",
+      "selected_symbols": [
+        {
+          "end_line": 13,
+          "sha256": "f156a927ff4716ad6ce93c60127ae13fca899d03c121c459a9106bb50b754404",
+          "start_line": 11,
+          "symbol": "environment"
+        },
+        {
+          "end_line": 31,
+          "sha256": "1b4a99c0de7c2c5b62d95cb5ab9a92f008755db806a6e51f5e06a182fd0f9f11",
+          "start_line": 15,
+          "symbol": "records"
+        },
+        {
+          "end_line": 39,
+          "sha256": "a6b6ab37a060e7a91b203b15ebbe917b52431f8397068ace5b11253e73ff1624",
+          "start_line": 33,
+          "symbol": "assess"
+        }
+      ],
+      "sha256": "6ded8463bb4900c01fc63aab4bc82267592cf4ed679ef1c780aeb40347242a9b",
+      "size_bytes": 2656,
+      "source_notices": [
+        "# SPDX-License-Identifier: MIT"
+      ],
+      "source_path": "tools/steam/query_context_observation.py",
+      "source_sha256": "75a4ff7a6dd10219dd8e5abdf0e29f4d0a31fe648d4b0c8bd0086de4dc042713",
+      "source_size_bytes": 2598,
+      "transformation": "Exact source body and constants; only declared import routes changed."
+    },
+    {
+      "all_non_import_ast_equal": true,
+      "all_original_failure_code_literals_preserved": true,
+      "destination_notices": [
+        "# SPDX-FileCopyrightText: 2026 Pear contributors",
+        "# SPDX-License-Identifier: MIT"
+      ],
+      "license": "MIT",
+      "namespace_bindings": [
+        "import re",
+        "from pear_runtime.fixtures.assessment import query_context as query",
+        "from pear_runtime.fixtures.inputs import need"
+      ],
+      "notice_adaptation": "Added leading collective Pear copyright notice for the adapted file under the approved current source policy; original MIT license marker and origin digest are unchanged.",
+      "path": "pear_runtime/fixtures/assessment/entry.py",
+      "selected_symbols": [
+        {
+          "end_line": 13,
+          "sha256": "283deee600efd637d26f470a1000f32f3ed602e7132915a17592034ef2efd015",
+          "start_line": 11,
+          "symbol": "environment"
+        },
+        {
+          "end_line": 18,
+          "sha256": "d05e4d3eb2f78b90ae65ad7acb62d8a0c33d19b2c98fc5de132bbf7dee534508",
+          "start_line": 15,
+          "symbol": "settings"
+        },
+        {
+          "end_line": 31,
+          "sha256": "d4a3124b9f800013804fac88fd8c282ff7acfac202ec20a6667f19bb86f52f7d",
+          "start_line": 20,
+          "symbol": "records"
+        },
+        {
+          "end_line": 36,
+          "sha256": "b2a5222651755ea96211bdabb2a15af9f776ff2e33ce137875e72eada58ef7df",
+          "start_line": 33,
+          "symbol": "assess"
+        },
+        {
+          "end_line": 44,
+          "sha256": "9c0d65212022dca0bd4bb14ab17e7549adfab76c598b6a012349772fa1815bf1",
+          "start_line": 38,
+          "symbol": "assess_entry"
+        }
+      ],
+      "sha256": "12a000a428e183971c643f819600973da5fe943be6d9b51eb43abf77110a428f",
+      "size_bytes": 3269,
+      "source_notices": [
+        "# SPDX-License-Identifier: MIT"
+      ],
+      "source_path": "tools/steam/entry_observation.py",
+      "source_sha256": "e4a5bdf8085293081144baff7eeaab98e384b0a3bdc13007dc6acfb6884a0432",
+      "source_size_bytes": 3211,
+      "transformation": "Exact source body and constants; only declared import routes changed."
+    },
+    {
+      "all_non_import_ast_equal": true,
+      "all_original_failure_code_literals_preserved": true,
+      "destination_notices": [
+        "# SPDX-FileCopyrightText: 2026 Pear contributors",
+        "# SPDX-License-Identifier: MIT"
+      ],
+      "license": "MIT",
+      "namespace_bindings": [
+        "import re",
+        "from pear_runtime.fixtures.assessment import entry as entry",
+        "from pear_runtime.fixtures.inputs import need"
+      ],
+      "notice_adaptation": "Added leading collective Pear copyright notice for the adapted file under the approved current source policy; original MIT license marker and origin digest are unchanged.",
+      "path": "pear_runtime/fixtures/assessment/link.py",
+      "selected_symbols": [
+        {
+          "end_line": 11,
+          "sha256": "437cb54d21f98db8b14c644924d7fe1d804c3925448b7ef697709de236debdb2",
+          "start_line": 9,
+          "symbol": "mapped_name"
+        },
+        {
+          "end_line": 12,
+          "sha256": "96791fc5af936a8545c83a02da9a2a8c3080266f918163e8f2a29ec9f0053145",
+          "start_line": 12,
+          "symbol": "mapped"
+        },
+        {
+          "end_line": 13,
+          "sha256": "b9ae59bdc987d26521d96071334493004d925c4b6c5a336517cc5708cec98a9e",
+          "start_line": 13,
+          "symbol": "environment"
+        },
+        {
+          "end_line": 14,
+          "sha256": "4085d1563ce41c14a08b9feb95c3a7b3f3b10e8e1b85246fac4f782de7c08f56",
+          "start_line": 14,
+          "symbol": "entry_settings"
+        },
+        {
+          "end_line": 18,
+          "sha256": "31c7384a2a955441c2b25a6529b63648000597814d3de6f19a7ae89eb8c761cb",
+          "start_line": 15,
+          "symbol": "settings"
+        },
+        {
+          "end_line": 37,
+          "sha256": "52949e26577d58d3cca942336a3813873abf6dd4c07e9636131d914a871011bd",
+          "start_line": 19,
+          "symbol": "records"
+        },
+        {
+          "end_line": 39,
+          "sha256": "b817440d8caabf29b584a1065bb1933f864afe97a13bc907f7ea078c9859fc9d",
+          "start_line": 39,
+          "symbol": "assess"
+        },
+        {
+          "end_line": 40,
+          "sha256": "b72c3c5f030b4f7ee923bd44213130daec5cd9999711ce366f8e01124f898e1e",
+          "start_line": 40,
+          "symbol": "assess_entry"
+        },
+        {
+          "end_line": 51,
+          "sha256": "75e39a942dff9c91955f8934510473ce99456890c1d6f206ce5234e11a343efc",
+          "start_line": 41,
+          "symbol": "assess_link"
+        }
+      ],
+      "sha256": "133c7b28414a7a2306a524ad5d1f3ae796db4995f14384c7e90e3f1d2012ce2b",
+      "size_bytes": 4437,
+      "source_notices": [
+        "# SPDX-License-Identifier: MIT"
+      ],
+      "source_path": "tools/steam/link_observation.py",
+      "source_sha256": "6b726f367654037cde23a0a0eaf86cf1cb0d291a7c326b99ee6094126fe9c43f",
+      "source_size_bytes": 4379,
+      "transformation": "Exact source body and constants; only declared import routes changed."
+    },
+    {
+      "all_non_import_ast_equal": true,
+      "all_original_failure_code_literals_preserved": true,
+      "destination_notices": [
+        "# SPDX-FileCopyrightText: 2026 Pear contributors",
+        "# SPDX-License-Identifier: MIT"
+      ],
+      "license": "MIT",
+      "namespace_bindings": [
+        "import re",
+        "from pear_runtime.fixtures.inputs import need"
+      ],
+      "notice_adaptation": "Added leading collective Pear copyright notice for the adapted file under the approved current source policy; original MIT license marker and origin digest are unchanged.",
+      "path": "pear_runtime/fixtures/assessment/failure.py",
+      "selected_symbols": [
+        {
+          "end_line": 18,
+          "sha256": "cdcfbe138ecd339e928a25c5ebbbe4fcae71c03f57faf7462fc325d869cde20c",
+          "start_line": 6,
+          "symbol": "records"
+        },
+        {
+          "end_line": 25,
+          "sha256": "8114a26e1143fb1a8f3fcef5b99f270da1833752460863792b90ba81c8cb3079",
+          "start_line": 20,
+          "symbol": "assess"
+        }
+      ],
+      "sha256": "547b3f71bbba7c3a95a825aa95a5e07aa114d6278bcc06ee6342c1c1915d0b80",
+      "size_bytes": 2024,
+      "source_notices": [
+        "# SPDX-License-Identifier: MIT"
+      ],
+      "source_path": "tools/steam/failure_observation.py",
+      "source_sha256": "db09f230746c46026a32facfc0d134b9d0c303ec8b5cd908a3af9a051f324a5b",
+      "source_size_bytes": 1975,
+      "transformation": "Exact source body and constants; only declared import routes changed."
+    },
+    {
+      "all_non_import_ast_equal": true,
+      "all_original_failure_code_literals_preserved": true,
+      "destination_notices": [
+        "# SPDX-FileCopyrightText: 2026 Pear contributors",
+        "# SPDX-License-Identifier: MIT"
+      ],
+      "license": "MIT",
+      "namespace_bindings": [
+        "import re",
+        "from pear_runtime.fixtures.inputs import need"
+      ],
+      "notice_adaptation": "Added leading collective Pear copyright notice for the adapted file under the approved current source policy; original MIT license marker and origin digest are unchanged.",
+      "path": "pear_runtime/fixtures/assessment/repair_epoch.py",
+      "selected_symbols": [
+        {
+          "end_line": 15,
+          "sha256": "11adf43cf3b279a0998cb7b4b25b209e157c2167a2c751cca42bc9da4a1715e9",
+          "start_line": 6,
+          "symbol": "records"
+        },
+        {
+          "end_line": 20,
+          "sha256": "7e4a6c8627fe77bec43740b75ad71ff682c516f6c7d5783aa244445e5a96bd82",
+          "start_line": 17,
+          "symbol": "assess"
+        }
+      ],
+      "sha256": "1fbc6d34158b36570ebe39a10e625647db8533f3f7f0c01d64701987ed5bdb0d",
+      "size_bytes": 1714,
+      "source_notices": [
+        "# SPDX-License-Identifier: MIT"
+      ],
+      "source_path": "tools/steam/repair_epoch_observation.py",
+      "source_sha256": "e3c8fd2b4ffaeaaf9e5c87c06a7fea1994de1dad3fffed509f3226c4b9853ce4",
+      "source_size_bytes": 1665,
+      "transformation": "Exact source body and constants; only declared import routes changed."
+    },
+    {
+      "all_non_import_ast_equal": true,
+      "all_original_failure_code_literals_preserved": true,
+      "destination_notices": [
+        "# SPDX-FileCopyrightText: 2026 Pear contributors",
+        "# SPDX-License-Identifier: MIT"
+      ],
+      "license": "MIT",
+      "namespace_bindings": [
+        "import re",
+        "from pear_runtime.fixtures.inputs import need"
+      ],
+      "notice_adaptation": "Added leading collective Pear copyright notice for the adapted file under the approved current source policy; original MIT license marker and origin digest are unchanged.",
+      "path": "pear_runtime/fixtures/assessment/mutation_bound.py",
+      "selected_symbols": [
+        {
+          "end_line": 20,
+          "sha256": "97c3c78c1f62a70e6a8d736d1776762a75b140c7d8cc649bf43a24cb38271cbd",
+          "start_line": 6,
+          "symbol": "records"
+        },
+        {
+          "end_line": 26,
+          "sha256": "e8db14c675512b4812672c12fba2d74036bdb02100734cafcc6fc1bf828ef6d8",
+          "start_line": 22,
+          "symbol": "assess"
+        }
+      ],
+      "sha256": "267bfd003d45d277fd6feae88bb19b36bd396c30dbb68cc05a18588b7f117d9e",
+      "size_bytes": 2261,
+      "source_notices": [
+        "# SPDX-License-Identifier: MIT"
+      ],
+      "source_path": "tools/steam/mutation_bound_observation.py",
+      "source_sha256": "0b0d55e162db5ddad0d1246ba29a0229eee8cf270cf5164119fe5798864f2240",
+      "source_size_bytes": 2212,
+      "transformation": "Exact source body and constants; only declared import routes changed."
+    },
+    {
+      "all_non_import_ast_equal": true,
+      "all_original_failure_code_literals_preserved": true,
+      "destination_notices": [
+        "# SPDX-FileCopyrightText: 2026 Pear contributors",
+        "# SPDX-License-Identifier: MIT"
+      ],
+      "license": "MIT",
+      "namespace_bindings": [
+        "import re",
+        "from pear_runtime.fixtures.inputs import need",
+        "from pear_runtime.fixtures.assessment import pending_transition as prior"
+      ],
+      "notice_adaptation": "Added leading collective Pear copyright notice for the adapted file under the approved current source policy; original MIT license marker and origin digest are unchanged.",
+      "path": "pear_runtime/fixtures/assessment/early_wait.py",
+      "selected_symbols": [
+        {
+          "end_line": 20,
+          "sha256": "35fa9b6c1d7e527956cf74012d5224f86308e5ed2489b4087bfe9766fcd760ba",
+          "start_line": 9,
+          "symbol": "wait_records"
+        },
+        {
+          "end_line": 34,
+          "sha256": "01e3cbe22c12d9b4a31f895845d60629a1cefb8cf68f1bdf145899ade7360f3d",
+          "start_line": 22,
+          "symbol": "registration_records"
+        },
+        {
+          "end_line": 47,
+          "sha256": "9e61c743a3f18c84382e881ffab68b953fbf178bbee197d86cc520c7203532dc",
+          "start_line": 36,
+          "symbol": "owner_joins"
+        },
+        {
+          "end_line": 64,
+          "sha256": "745c4b783bd5e4834e99eb7346eb97c00a41b4b3ac5cbc91e58d5f0e571ec374",
+          "start_line": 50,
+          "symbol": "trigger"
+        },
+        {
+          "end_line": 68,
+          "sha256": "25b9850ea087dab226d5289b4ae4f20ef12bd7356354feb395d78190676e79ca",
+          "start_line": 66,
+          "symbol": "assess_owner"
+        },
+        {
+          "end_line": 85,
+          "sha256": "e7ca20335880e8462c7de462124ceec05025a48cc2c3a3500fe49f6fdcef698a",
+          "start_line": 70,
+          "symbol": "assess"
+        }
+      ],
+      "sha256": "abc130036558c5b83ab8d6fc57fb3d67b17175721c297dbc5d983fbae4d60e5f",
+      "size_bytes": 5807,
+      "source_notices": [
+        "# SPDX-License-Identifier: MIT"
+      ],
+      "source_path": "tools/steam/early_wait_observation.py",
+      "source_sha256": "9f1bdf6156a367968530355de06812c0c95581567ff590466ecfea1790f42d82",
+      "source_size_bytes": 5749,
+      "transformation": "Exact source body and constants; only declared import routes changed."
+    },
+    {
+      "all_non_import_ast_equal": true,
+      "all_original_failure_code_literals_preserved": true,
+      "destination_notices": [
+        "# SPDX-FileCopyrightText: 2026 Pear contributors",
+        "# SPDX-License-Identifier: MIT"
+      ],
+      "license": "MIT",
+      "namespace_bindings": [
+        "import re",
+        "from pear_runtime.fixtures.inputs import need",
+        "from pear_runtime.fixtures.assessment.mutation_bound import records as mutation_records"
+      ],
+      "notice_adaptation": "Added leading collective Pear copyright notice for the adapted file under the approved current source policy; original MIT license marker and origin digest are unchanged.",
+      "path": "pear_runtime/fixtures/assessment/source_owner.py",
+      "selected_symbols": [
+        {
+          "end_line": 19,
+          "sha256": "d41abf2ff0f638927ad56f280ba392329a07228f091aa7078565bba27107737f",
+          "start_line": 6,
+          "symbol": "records"
+        },
+        {
+          "end_line": 30,
+          "sha256": "41fc08e1f9a328389d175e675aeb1d1704cb5d235be9fdfd3b620ad8ac1b96c9",
+          "start_line": 21,
+          "symbol": "assess"
+        }
+      ],
+      "sha256": "43610cc4e1f5ebd671d97b81dc3b143b49491cba84ae4bfe2e5cbaff0d78d510",
+      "size_bytes": 2377,
+      "source_notices": [
+        "# SPDX-License-Identifier: MIT"
+      ],
+      "source_path": "tools/steam/source_owner_observation.py",
+      "source_sha256": "47ac8b2d94c0c657919f6f845f74bb4e35497e24ba128cb84f494201546f3a2d",
+      "source_size_bytes": 2319,
+      "transformation": "Exact source body and constants; only declared import routes changed."
+    },
+    {
+      "all_non_import_ast_equal": true,
+      "all_original_failure_code_literals_preserved": true,
+      "destination_notices": [
+        "# SPDX-FileCopyrightText: 2026 Pear contributors",
+        "# SPDX-License-Identifier: MIT"
+      ],
+      "license": "MIT",
+      "namespace_bindings": [
+        "import re",
+        "from pear_runtime.fixtures.assessment import source_owner as prior",
+        "from pear_runtime.fixtures.assessment.mutation_bound import records as mutation_records",
+        "from pear_runtime.fixtures.inputs import need"
+      ],
+      "notice_adaptation": "Added leading collective Pear copyright notice for the adapted file under the approved current source policy; original MIT license marker and origin digest are unchanged.",
+      "path": "pear_runtime/fixtures/assessment/pending_transition.py",
+      "selected_symbols": [
+        {
+          "end_line": 22,
+          "sha256": "375659e0be9da98acdbcea0bf31216df30f6c885a19f6973a4f305da9b96170a",
+          "start_line": 10,
+          "symbol": "records"
+        },
+        {
+          "end_line": 32,
+          "sha256": "8def2a0a2f386339e989f751235f77a3992b960dfacc58eeb10c3e295a692dbb",
+          "start_line": 24,
+          "symbol": "assess"
+        }
+      ],
+      "sha256": "ffe46804538c70fc79294474053d5a457e096dfd053a92f691c6cf197727058e",
+      "size_bytes": 2084,
+      "source_notices": [
+        "# SPDX-License-Identifier: MIT"
+      ],
+      "source_path": "tools/steam/pending_transition_observation.py",
+      "source_sha256": "3c79d0977b39828698b2f5c07e92e25d9793cfb65f19c29f88a41ff45741ad29",
+      "source_size_bytes": 2017,
+      "transformation": "Exact source body and constants; only declared import routes changed."
+    }
+  ],
+  "game_policy_boundary": "string.assess preserves the original fixtures_ref branch and fallback. New diagnostic_fixture cases also execute that fallback; absent game images do not establish game claims. Their fixture success is assessed by direct.assess afterward. Parent owns explicit game/fixture entrypoint and candidate admission.",
+  "license_preservation": {
+    "adapted_file_notice": "A leading SPDX-FileCopyrightText: 2026 Pear contributors was added to the 28 adapted MIT files under requester-approved current notice policy. Source digests identify the untouched originals; bodies and MIT terms remain unchanged.",
+    "license_text": "LICENSES/MIT.txt",
+    "policy": "Existing per-file SPDX and comments retained. New package glue uses the repository GPL-3.0-or-later default. No original file is relicensed.",
+    "source_terms": "MIT"
+  },
+  "new_entrypoint_tests": [
+    {
+      "license": "GPL-3.0-or-later",
+      "path": "tests/fixtures/test_direct.py",
+      "scope": "Strict canonical fixture context/candidate and no-game entrypoint refusals before side effects.",
+      "sha256": "1ff3e93a44710c001e8b65040f64d24d0202eb80e2190a7c40e3d3a0b8ba2f9a",
+      "size_bytes": 6239,
+      "test_execution_status": "Passed in the combined 115-test portable suite; native process/tool operations were mocked."
+    },
+    {
+      "license": "GPL-3.0-or-later",
+      "path": "tests/fixtures/test_driver.py",
+      "scope": "Closed request policies, read-only inspection, single operation lease/interval, interrupt restoration and primary error/cleanup evidence retention.",
+      "sha256": "4da18edcef471123ad1f4de4aa93ea8bcfccd86789ac461470e28e1a201958c5",
+      "size_bytes": 23376,
+      "test_execution_status": "Passed in the combined 115-test portable suite; native process/tool operations were mocked."
+    }
+  ],
+  "package_glue": [
+    {
+      "license": "GPL-3.0-or-later",
+      "path": "pear_runtime/fixtures/assessment/__init__.py",
+      "sha256": "1bc691471e6bfd6054b23bcc1af39f81dd4fddecec4730e2721e025b55aa5416",
+      "size_bytes": 243
+    },
+    {
+      "license": "GPL-3.0-or-later",
+      "path": "tests/fixtures/assessment/__init__.py",
+      "sha256": "2c2b8291b2fbed4b14a7d82fff7e63258a264b718c9d6b3f8b72da01e372fd88",
+      "size_bytes": 158
+    }
+  ],
+  "runtime_execution": "Not performed by this import or its portable tests.",
+  "schema_version": 1,
+  "scope": "Task56 Stage4 exact assessment and observation import; portable tests are separate from host execution.",
+  "source_authority": "Accepted working-tree bytes identified by exact SHA-256; these files were untracked, so the checkpoint is context, not a Git blob claim.",
+  "source_checkpoint_context": "951264bf5be4b9d2afb87320f5fac74778b2dd58",
+  "source_count": 14,
+  "source_repository": "https://github.com/postmelee/pear",
+  "test_file_count": 14,
+  "test_method_count": 79,
+  "tests": [
+    {
+      "destination_notices": [
+        "# SPDX-FileCopyrightText: 2026 Pear contributors",
+        "# SPDX-License-Identifier: MIT"
+      ],
+      "excluded_historical_invocations": [],
+      "license": "MIT",
+      "namespace_bindings": [
+        "import unittest",
+        "from pear_runtime.fixtures.assessment.wake import parse"
+      ],
+      "notice_adaptation": "Added leading collective Pear copyright notice for the adapted file under the approved current source policy; original MIT license marker and origin digest are unchanged.",
+      "path": "tests/fixtures/assessment/test_wake.py",
+      "selected_symbols": [
+        {
+          "end_line": 20,
+          "sha256": "9d843c87aaa83f8511c9848e873acf463fbd2c44e6d3a3b573c2959adebfd610",
+          "start_line": 6,
+          "symbol": "WakeObservation"
+        }
+      ],
+      "sha256": "13f73b1aa120420bb3708b6e75a478c159dad74897aeafc185b43abab3968876",
+      "size_bytes": 1872,
+      "source_notices": [
+        "# SPDX-License-Identifier: MIT"
+      ],
+      "source_path": "tests/steam/test_wake.py",
+      "source_sha256": "10b105b61073f99c405bbddef17bd0a3fe42cd027eb4b380e1c309040e086d22",
+      "source_size_bytes": 1809,
+      "test_execution_status": "Passed in the Task56 Stage4 portable assessment run; no original builder or host fixture execution is implied.",
+      "test_methods": [
+        "test_published_peer",
+        "test_nested_nonwriting",
+        "test_unknown_checkpoint",
+        "test_incomplete_or_ambiguous",
+        "test_invalid_states_or_bounds",
+        "test_empty"
+      ],
+      "transformation": "Preserve original parser/policy/sampler test assertions; change explicit import routes only except listed unimported historical admission invocations."
+    },
+    {
+      "destination_notices": [
+        "# SPDX-FileCopyrightText: 2026 Pear contributors",
+        "# SPDX-License-Identifier: MIT"
+      ],
+      "excluded_historical_invocations": [],
+      "license": "MIT",
+      "namespace_bindings": [
+        "import unittest",
+        "from pear_runtime.fixtures.assessment.write import parse"
+      ],
+      "notice_adaptation": "Added leading collective Pear copyright notice for the adapted file under the approved current source policy; original MIT license marker and origin digest are unchanged.",
+      "path": "tests/fixtures/assessment/test_write.py",
+      "selected_symbols": [
+        {
+          "end_line": 19,
+          "sha256": "e6d677c7767284abe0df691ab8b3bb83fa891711816cf9f9a06bf8910d435eea",
+          "start_line": 7,
+          "symbol": "WriteObservation"
+        }
+      ],
+      "sha256": "f2937d33606c09eccd0d9d0f02d8f9bbb5f905f51ab9c14493e0f8d3186d61ff",
+      "size_bytes": 1773,
+      "source_notices": [
+        "# SPDX-License-Identifier: MIT"
+      ],
+      "source_path": "tests/steam/test_write.py",
+      "source_sha256": "547c1333771aed26ce87f2ca5fd6fb7c9100f87d2d0b65a629910f82d9c5256f",
+      "source_size_bytes": 1710,
+      "test_execution_status": "Passed in the Task56 Stage4 portable assessment run; no original builder or host fixture execution is implied.",
+      "test_methods": [
+        "test_matched",
+        "test_replay_and_empty",
+        "test_incomplete_duplicate_ambiguous_invalid",
+        "test_truncated"
+      ],
+      "transformation": "Preserve original parser/policy/sampler test assertions; change explicit import routes only except listed unimported historical admission invocations."
+    },
+    {
+      "destination_notices": [
+        "# SPDX-FileCopyrightText: 2026 Pear contributors",
+        "# SPDX-License-Identifier: MIT"
+      ],
+      "excluded_historical_invocations": [],
+      "license": "MIT",
+      "namespace_bindings": [
+        "import unittest",
+        "from pear_runtime.fixtures.assessment.batch import parse"
+      ],
+      "notice_adaptation": "Added leading collective Pear copyright notice for the adapted file under the approved current source policy; original MIT license marker and origin digest are unchanged.",
+      "path": "tests/fixtures/assessment/test_batch.py",
+      "selected_symbols": [
+        {
+          "end_line": 18,
+          "sha256": "326433f38dacaaa3a96bdff562f2c51bdaf914fe4c00739cfe52609fd8c2c28e",
+          "start_line": 4,
+          "symbol": "BatchEvidence"
+        }
+      ],
+      "sha256": "f0f02a4fa7a1ca22d524782a59af14bccfff7bfc93aadbf9e07964a569c9f6db",
+      "size_bytes": 1404,
+      "source_notices": [
+        "# SPDX-License-Identifier: MIT"
+      ],
+      "source_path": "tests/steam/test_batch.py",
+      "source_sha256": "c87a163d47e16a1eb3d73b35b60ad65897bd0cd8bf655e016bc5dda828bfa223",
+      "source_size_bytes": 1341,
+      "test_execution_status": "Passed in the Task56 Stage4 portable assessment run; no original builder or host fixture execution is implied.",
+      "test_methods": [
+        "test_empty",
+        "test_failure_fields",
+        "test_ambiguous_process_sequence_refused",
+        "test_bound",
+        "test_unknown_phase",
+        "test_success_not_failure",
+        "test_incomplete"
+      ],
+      "transformation": "Preserve original parser/policy/sampler test assertions; change explicit import routes only except listed unimported historical admission invocations."
+    },
+    {
+      "destination_notices": [
+        "# SPDX-FileCopyrightText: 2026 Pear contributors",
+        "# SPDX-License-Identifier: MIT"
+      ],
+      "excluded_historical_invocations": [],
+      "license": "MIT",
+      "namespace_bindings": [
+        "import unittest",
+        "import json, tempfile",
+        "from pathlib import Path",
+        "from pear_runtime.fixtures.inputs import fact",
+        "import json, hashlib",
+        "from pear_runtime.fixtures.assessment.string import assess"
+      ],
+      "notice_adaptation": "Added leading collective Pear copyright notice for the adapted file under the approved current source policy; original MIT license marker and origin digest are unchanged.",
+      "path": "tests/fixtures/assessment/test_string_checks.py",
+      "selected_symbols": [
+        {
+          "end_line": 61,
+          "sha256": "0732d6649ca593e8fdb2b7da14c99465b22aa27a2379c53543fa068260856428",
+          "start_line": 30,
+          "symbol": "RunEvidence"
+        }
+      ],
+      "sha256": "026b272d5463db761b18d69b30de92af129217082a5ae492db7fe82a2049b8c4",
+      "size_bytes": 2904,
+      "source_notices": [
+        "# SPDX-License-Identifier: MIT"
+      ],
+      "source_path": "tests/steam/test_string_checks.py",
+      "source_sha256": "17063277f94a8e9e84b7d7f1c0117631ab655999930defdecd955de2aba85f21",
+      "source_size_bytes": 4071,
+      "test_execution_status": "Passed in the Task56 Stage4 portable assessment run; no original builder or host fixture execution is implied.",
+      "test_methods": [
+        "test_complete_fixture",
+        "test_success_marker_cannot_hide_exit_failure",
+        "test_success_marker_cannot_hide_cleanup_failure",
+        "test_mutated_log_refused",
+        "test_one_guard_line_counted_once"
+      ],
+      "transformation": "Select the exact RunEvidence class; ObjectCalls/coff belong to the separate historical primitive build checker and are outside the approved assessment map. Preserve original parser/policy/sampler test assertions; change explicit import routes only except listed unimported historical admission invocations."
+    },
+    {
+      "destination_notices": [
+        "# SPDX-FileCopyrightText: 2026 Pear contributors",
+        "# SPDX-License-Identifier: MIT"
+      ],
+      "excluded_historical_invocations": [
+        {
+          "end_line": 23,
+          "reason": "Historical builder-admission mock; no old candidate builder is imported. Parent owns new exact descriptor/capability/completed-operation rejection coverage.",
+          "sha256": "b0920629f393e7ccc9f91d997440f4591602981b353eb9709f9d88974bf6dc7e",
+          "start_line": 22,
+          "status": "not_applicable_to_imported_assessment_package"
+        }
+      ],
+      "license": "MIT",
+      "namespace_bindings": [
+        "from unittest import TestCase, main",
+        "from pear_runtime.fixtures.assessment import query as q",
+        "from pear_runtime.fixtures import direct"
+      ],
+      "notice_adaptation": "Added leading collective Pear copyright notice for the adapted file under the approved current source policy; original MIT license marker and origin digest are unchanged.",
+      "path": "tests/fixtures/assessment/test_query_v1.py",
+      "selected_symbols": [
+        {
+          "end_line": 50,
+          "sha256": "f738e37aef60a517b7165054457700113091a64ff5dda4d20f8001f535f007d8",
+          "start_line": 8,
+          "symbol": "QueryPolicy"
+        }
+      ],
+      "sha256": "6b29d3fded737badeaac31c2a33b892b4ecdd9155d644bc4cfec18ae8a15af8f",
+      "size_bytes": 3739,
+      "source_notices": [
+        "# SPDX-License-Identifier: MIT"
+      ],
+      "source_path": "tests/steam/test_query_v1.py",
+      "source_sha256": "4395c8f3f8cfa46a3a319ae261260bc225d481d52ec606f0903d8ccaa18be89d",
+      "source_size_bytes": 3877,
+      "test_execution_status": "Passed in the Task56 Stage4 portable assessment run; no original builder or host fixture execution is implied.",
+      "test_methods": [
+        "test_closed_options_and_routes",
+        "test_policy_contradictions_refused",
+        "test_disabled_and_historical_output_is_not_silently_filtered",
+        "test_failures_require_zero_result_without_hiding_status",
+        "test_unrelated_process_is_rejected",
+        "test_loss_duplicates_truncation_and_bounds_refused",
+        "test_concurrent_write_order_can_differ_from_query_order"
+      ],
+      "transformation": "Preserve original parser/policy/sampler test assertions; change explicit import routes only except listed unimported historical admission invocations."
+    },
+    {
+      "destination_notices": [
+        "# SPDX-FileCopyrightText: 2026 Pear contributors",
+        "# SPDX-License-Identifier: MIT"
+      ],
+      "excluded_historical_invocations": [
+        {
+          "end_line": 21,
+          "reason": "Historical builder-admission mock; no old candidate builder is imported. Parent owns new exact descriptor/capability/completed-operation rejection coverage.",
+          "sha256": "ba08e4c286d3511d45fd772ec07433429d725ade4c87c52ec00d37e276299866",
+          "start_line": 20,
+          "status": "not_applicable_to_imported_assessment_package"
+        }
+      ],
+      "license": "MIT",
+      "namespace_bindings": [
+        "from unittest import TestCase, main",
+        "from pear_runtime.fixtures.assessment import query_context as q",
+        "from . import test_query_v1 as legacy"
+      ],
+      "notice_adaptation": "Added leading collective Pear copyright notice for the adapted file under the approved current source policy; original MIT license marker and origin digest are unchanged.",
+      "path": "tests/fixtures/assessment/test_query_context_v1.py",
+      "selected_symbols": [
+        {
+          "end_line": 25,
+          "sha256": "24719502ae32c3a815c0cd69399e7a9a494d2162da08fdc3c00daceec770d015",
+          "start_line": 8,
+          "symbol": "ContextRecords"
+        }
+      ],
+      "sha256": "a628baa56ba01e8efbc17894671edc2db3dee61bcca1adf35ce91fbdcb260603",
+      "size_bytes": 1702,
+      "source_notices": [
+        "# SPDX-License-Identifier: MIT"
+      ],
+      "source_path": "tests/steam/test_query_context_v1.py",
+      "source_sha256": "ff744271992c1abc056f993926a82fc73762f139efe4eea2690c607e35c82722",
+      "source_size_bytes": 1908,
+      "test_execution_status": "Passed in the Task56 Stage4 portable assessment run; no original builder or host fixture execution is implied.",
+      "test_methods": [
+        "test_known_and_unavailable_are_distinct",
+        "test_invalid_partial_or_mixed_context_refused",
+        "test_policy_and_route"
+      ],
+      "transformation": "Preserve original parser/policy/sampler test assertions; change explicit import routes only except listed unimported historical admission invocations."
+    },
+    {
+      "destination_notices": [
+        "# SPDX-FileCopyrightText: 2026 Pear contributors",
+        "# SPDX-License-Identifier: MIT"
+      ],
+      "excluded_historical_invocations": [
+        {
+          "end_line": 22,
+          "reason": "Historical builder-admission mock; no old candidate builder is imported. Parent owns new exact descriptor/capability/completed-operation rejection coverage.",
+          "sha256": "fc78eabab233fa1c5e4355ae8b63c2dca69a3c492bd698e178edc950e70ad957",
+          "start_line": 21,
+          "status": "not_applicable_to_imported_assessment_package"
+        }
+      ],
+      "license": "MIT",
+      "namespace_bindings": [
+        "from unittest import TestCase, main",
+        "from pear_runtime.fixtures.assessment import entry as e"
+      ],
+      "notice_adaptation": "Added leading collective Pear copyright notice for the adapted file under the approved current source policy; original MIT license marker and origin digest are unchanged.",
+      "path": "tests/fixtures/assessment/test_entry_v1.py",
+      "selected_symbols": [
+        {
+          "end_line": 22,
+          "sha256": "af022eb359f694341eeb5264d7e28bbadaa3bef9245d87f4f3b47dfc2c768c2e",
+          "start_line": 6,
+          "symbol": "EntryRecords"
+        }
+      ],
+      "sha256": "27d35f0109d723c43928b5990c5bb638bc41bf12e0f053e2dc8bc8243a4ae36f",
+      "size_bytes": 1586,
+      "source_notices": [
+        "# SPDX-License-Identifier: MIT"
+      ],
+      "source_path": "tests/steam/test_entry_v1.py",
+      "source_sha256": "ac9ea544fcfa7c738cd3106009ddd13baf9f63eca7a9434ba6aae4e892a3ed70",
+      "source_size_bytes": 1774,
+      "test_execution_status": "Passed in the Task56 Stage4 portable assessment run; no original builder or host fixture execution is implied.",
+      "test_methods": [
+        "test_phase_and_identity",
+        "test_malformed_disabled_and_bounds",
+        "test_closed_policy_route"
+      ],
+      "transformation": "Preserve original parser/policy/sampler test assertions; change explicit import routes only except listed unimported historical admission invocations."
+    },
+    {
+      "destination_notices": [
+        "# SPDX-FileCopyrightText: 2026 Pear contributors",
+        "# SPDX-License-Identifier: MIT"
+      ],
+      "excluded_historical_invocations": [
+        {
+          "end_line": 31,
+          "reason": "Historical builder-admission mock; no old candidate builder is imported. Parent owns new exact descriptor/capability/completed-operation rejection coverage.",
+          "sha256": "53ed750575d54944072067ebabbd923b9a94574cb5e3b5c9106d6e4b68d7ec83",
+          "start_line": 30,
+          "status": "not_applicable_to_imported_assessment_package"
+        }
+      ],
+      "license": "MIT",
+      "namespace_bindings": [
+        "from unittest import TestCase, main",
+        "from pear_runtime.fixtures.assessment import link as l"
+      ],
+      "notice_adaptation": "Added leading collective Pear copyright notice for the adapted file under the approved current source policy; original MIT license marker and origin digest are unchanged.",
+      "path": "tests/fixtures/assessment/test_link_v1.py",
+      "selected_symbols": [
+        {
+          "end_line": 31,
+          "sha256": "ae7e395c954db8e4b7995121a6c32a80c923e459b169aaa7eab3738decdb85fe",
+          "start_line": 6,
+          "symbol": "LinkRecords"
+        }
+      ],
+      "sha256": "b21fd25422510f3a91876c3c0093e36e294130ccc9ff3dd09fb8c4ca29cc6d29",
+      "size_bytes": 2117,
+      "source_notices": [
+        "# SPDX-License-Identifier: MIT"
+      ],
+      "source_path": "tests/steam/test_link_v1.py",
+      "source_sha256": "cf73fdd66340e03c73fa4c391776eb4564bfc4b226fb22f34404c5164748afca",
+      "source_size_bytes": 2262,
+      "test_execution_status": "Passed in the Task56 Stage4 portable assessment run; no original builder or host fixture execution is implied.",
+      "test_methods": [
+        "test_actual_capacity_and_completed",
+        "test_malformed_bounds_and_identity",
+        "test_registered_process_streams_remain_distinct",
+        "test_launch_contract",
+        "test_closed_route_and_entry_reuse"
+      ],
+      "transformation": "Preserve original parser/policy/sampler test assertions; change explicit import routes only except listed unimported historical admission invocations."
+    },
+    {
+      "destination_notices": [
+        "# SPDX-FileCopyrightText: 2026 Pear contributors",
+        "# SPDX-License-Identifier: MIT"
+      ],
+      "excluded_historical_invocations": [],
+      "license": "MIT",
+      "namespace_bindings": [
+        "from unittest import TestCase, main",
+        "from pear_runtime.fixtures.assessment.failure import records",
+        "from pear_runtime.fixtures.direct import trace_environment"
+      ],
+      "notice_adaptation": "Added leading collective Pear copyright notice for the adapted file under the approved current source policy; original MIT license marker and origin digest are unchanged.",
+      "path": "tests/fixtures/assessment/test_failure_v1.py",
+      "selected_symbols": [
+        {
+          "end_line": 22,
+          "sha256": "492d504ee319ebbf282dc53efc4a17e35f06a11ce2ab5c91f420cd8a9999831f",
+          "start_line": 5,
+          "symbol": "FailureRecords"
+        }
+      ],
+      "sha256": "c3494fec7f8b35e720be85b86f6d9368bec81fd48da9a0c5a4399e7faf17a521",
+      "size_bytes": 1524,
+      "source_notices": [
+        "# SPDX-License-Identifier: MIT"
+      ],
+      "source_path": "tests/steam/test_failure_v1.py",
+      "source_sha256": "d9d564737f0a4336e1a4358b164cf1c1931ca206bbeceab5dc2b1c99b6aff834",
+      "source_size_bytes": 1459,
+      "test_execution_status": "Passed in the Task56 Stage4 portable assessment run; no original builder or host fixture execution is implied.",
+      "test_methods": [
+        "test_exact_record",
+        "test_owned_child",
+        "test_unknown_process",
+        "test_duplicate_or_exhausted",
+        "test_corrupt_records",
+        "test_closed_platform_trace"
+      ],
+      "transformation": "Preserve original parser/policy/sampler test assertions; change explicit import routes only except listed unimported historical admission invocations."
+    },
+    {
+      "destination_notices": [
+        "# SPDX-FileCopyrightText: 2026 Pear contributors",
+        "# SPDX-License-Identifier: MIT"
+      ],
+      "excluded_historical_invocations": [],
+      "license": "MIT",
+      "namespace_bindings": [
+        "from unittest import TestCase, main",
+        "from pear_runtime.fixtures.assessment.repair_epoch import records"
+      ],
+      "notice_adaptation": "Added leading collective Pear copyright notice for the adapted file under the approved current source policy; original MIT license marker and origin digest are unchanged.",
+      "path": "tests/fixtures/assessment/test_repair_epoch_v1.py",
+      "selected_symbols": [
+        {
+          "end_line": 15,
+          "sha256": "d35f9e7d0684bd1a24c65fab054c6ec04c5eb7d6ed9364c6e77d0497b7ff50c9",
+          "start_line": 4,
+          "symbol": "RepairRecords"
+        }
+      ],
+      "sha256": "e115991b4d7ad9d4c84709cb9997152f0a3d1f123dcead0e067c32ed9e71dc16",
+      "size_bytes": 1035,
+      "source_notices": [
+        "# SPDX-License-Identifier: MIT"
+      ],
+      "source_path": "tests/steam/test_repair_epoch_v1.py",
+      "source_sha256": "00def83f52ced6ab90d92daba2f3c5a4422ce914f2de829a37630571e7a4eb7b",
+      "source_size_bytes": 977,
+      "test_execution_status": "Passed in the Task56 Stage4 portable assessment run; no original builder or host fixture execution is implied.",
+      "test_methods": [
+        "test_advanced_target",
+        "test_nonadvance_or_rollback",
+        "test_rejections_retained",
+        "test_bad_identity_or_sequence"
+      ],
+      "transformation": "Preserve original parser/policy/sampler test assertions; change explicit import routes only except listed unimported historical admission invocations."
+    },
+    {
+      "destination_notices": [
+        "# SPDX-FileCopyrightText: 2026 Pear contributors",
+        "# SPDX-License-Identifier: MIT"
+      ],
+      "excluded_historical_invocations": [],
+      "license": "MIT",
+      "namespace_bindings": [
+        "from unittest import TestCase, main",
+        "from pear_runtime.fixtures.assessment import mutation_bound as m"
+      ],
+      "notice_adaptation": "Added leading collective Pear copyright notice for the adapted file under the approved current source policy; original MIT license marker and origin digest are unchanged.",
+      "path": "tests/fixtures/assessment/test_mutation_bound.py",
+      "selected_symbols": [
+        {
+          "end_line": 28,
+          "sha256": "f668f2f81439df6bd638f59370871feb802c3178452f6237e9e026a0e8bfd3f6",
+          "start_line": 5,
+          "symbol": "Counters"
+        }
+      ],
+      "sha256": "6a7bb1b8f68d6db299da0aec5353db111934cde8f632fd3b3ac9a9f49a699c78",
+      "size_bytes": 2136,
+      "source_notices": [
+        "# SPDX-License-Identifier: MIT"
+      ],
+      "source_path": "tests/steam/test_mutation_bound.py",
+      "source_sha256": "3b6ae812547baa30279588975bb4cc11cd11b2e5f5772b91fa4b7de931e30930",
+      "source_size_bytes": 2078,
+      "test_execution_status": "Passed in the Task56 Stage4 portable assessment run; no original builder or host fixture execution is implied.",
+      "test_methods": [
+        "test_timeout_and_churn_remain_distinct",
+        "test_identity_shape_and_counter_failures",
+        "test_per_process_bound_and_observation_opt_in"
+      ],
+      "transformation": "Preserve original parser/policy/sampler test assertions; change explicit import routes only except listed unimported historical admission invocations."
+    },
+    {
+      "destination_notices": [
+        "# SPDX-FileCopyrightText: 2026 Pear contributors",
+        "# SPDX-License-Identifier: MIT"
+      ],
+      "excluded_historical_invocations": [
+        {
+          "end_line": 70,
+          "reason": "Legacy no-context direct.run call. Parent owns strict d25-game/exact FixtureContext/seven-ID rejection coverage; pure helper and sampler assertions remain.",
+          "sha256": "c333c853e08dacddb59feb07ceeac78f01e923eccdcb0a386643ea71fb18ae07",
+          "start_line": 70,
+          "status": "not_applicable_to_new_fixture_entrypoint_signature"
+        },
+        {
+          "end_line": 71,
+          "reason": "Legacy no-context direct.run call. Parent owns strict d25-game/exact FixtureContext/seven-ID rejection coverage; pure helper and sampler assertions remain.",
+          "sha256": "2f895da40a8586888effa31335a0353f6e381a2784d36f4def8e844b989e29e3",
+          "start_line": 71,
+          "status": "not_applicable_to_new_fixture_entrypoint_signature"
+        },
+        {
+          "end_line": 72,
+          "reason": "Legacy no-context direct.run call. Parent owns strict d25-game/exact FixtureContext/seven-ID rejection coverage; pure helper and sampler assertions remain.",
+          "sha256": "4ccf728428d0dad5a969e6e6b271ef3ec28607ab8f6f8978fab087b89b026e1a",
+          "start_line": 72,
+          "status": "not_applicable_to_new_fixture_entrypoint_signature"
+        },
+        {
+          "end_line": 137,
+          "reason": "Legacy no-context direct.run call. Parent owns strict d25-game/exact FixtureContext/seven-ID rejection coverage; pure helper and sampler assertions remain.",
+          "sha256": "c333c853e08dacddb59feb07ceeac78f01e923eccdcb0a386643ea71fb18ae07",
+          "start_line": 137,
+          "status": "not_applicable_to_new_fixture_entrypoint_signature"
+        },
+        {
+          "end_line": 138,
+          "reason": "Legacy no-context direct.run call. Parent owns strict d25-game/exact FixtureContext/seven-ID rejection coverage; pure helper and sampler assertions remain.",
+          "sha256": "2f895da40a8586888effa31335a0353f6e381a2784d36f4def8e844b989e29e3",
+          "start_line": 138,
+          "status": "not_applicable_to_new_fixture_entrypoint_signature"
+        },
+        {
+          "end_line": 139,
+          "reason": "Legacy no-context direct.run call. Parent owns strict d25-game/exact FixtureContext/seven-ID rejection coverage; pure helper and sampler assertions remain.",
+          "sha256": "4ccf728428d0dad5a969e6e6b271ef3ec28607ab8f6f8978fab087b89b026e1a",
+          "start_line": 139,
+          "status": "not_applicable_to_new_fixture_entrypoint_signature"
+        }
+      ],
+      "license": "MIT",
+      "namespace_bindings": [
+        "from unittest import TestCase, main",
+        "from unittest.mock import patch",
+        "from pathlib import Path",
+        "import tempfile",
+        "from types import SimpleNamespace",
+        "from pear_runtime.fixtures import direct, types as prep",
+        "from pear_runtime.fixtures.assessment import early_wait as m"
+      ],
+      "notice_adaptation": "Added leading collective Pear copyright notice for the adapted file under the approved current source policy; original MIT license marker and origin digest are unchanged.",
+      "path": "tests/fixtures/assessment/test_early_wait.py",
+      "selected_symbols": [
+        {
+          "end_line": 151,
+          "sha256": "10d6e2e08b4fce458d6a4d552f55176d8acc8fff96c70923ae058f946e51b88e",
+          "start_line": 9,
+          "symbol": "EarlyWait"
+        }
+      ],
+      "sha256": "a33ba67735cba2f94bd60e4579b677f2021c425c5a08ef64386b6b3430f93cad",
+      "size_bytes": 11868,
+      "source_notices": [
+        "# SPDX-License-Identifier: MIT"
+      ],
+      "source_path": "tests/steam/test_early_wait.py",
+      "source_sha256": "c01662f5d743038eb513c37a198c700988f57b58cec55a1cc1b0c4f5b1435b82",
+      "source_size_bytes": 12823,
+      "test_execution_status": "Passed in the Task56 Stage4 portable assessment run; no original builder or host fixture execution is implied.",
+      "test_methods": [
+        "test_exact_owner_identity_join",
+        "test_unknown_and_absent_registration_remain_unknown",
+        "test_snapshot_must_be_available",
+        "test_wait_framing_identity_and_bounds",
+        "test_registration_framing_identity_and_bounds",
+        "test_maximum_frames_are_bounded_and_process_scoped",
+        "test_ambiguous_join_is_rejected",
+        "test_trigger_uses_complete_owned_rows",
+        "test_event_sampler_starts_once_only_after_attach",
+        "test_event_sampler_preserves_deadline_and_exit",
+        "test_event_sampling_has_closed_scope",
+        "test_disabled_observations_cannot_pass",
+        "test_sample_receipt_matches_observed_trigger",
+        "test_shared_owned_pipe_selects_only_target_wait",
+        "test_shared_pipe_keeps_unknown_duplicate_and_target_rejection",
+        "test_shared_pipe_sampler_waits_for_target_event",
+        "test_shared_pipe_final_receipt_has_same_owned_selection",
+        "test_short_event_sample_uses_one_second_without_upfront_symbols",
+        "test_short_event_scope_and_receipt_duration",
+        "test_short_event_deadline_and_single_launch"
+      ],
+      "transformation": "Preserve original parser/policy/sampler test assertions; change explicit import routes only except listed unimported historical admission invocations."
+    },
+    {
+      "destination_notices": [
+        "# SPDX-FileCopyrightText: 2026 Pear contributors",
+        "# SPDX-License-Identifier: MIT"
+      ],
+      "excluded_historical_invocations": [],
+      "license": "MIT",
+      "namespace_bindings": [
+        "from unittest import TestCase, main",
+        "from pear_runtime.fixtures.assessment import source_owner as m"
+      ],
+      "notice_adaptation": "Added leading collective Pear copyright notice for the adapted file under the approved current source policy; original MIT license marker and origin digest are unchanged.",
+      "path": "tests/fixtures/assessment/test_source_owner.py",
+      "selected_symbols": [
+        {
+          "end_line": 26,
+          "sha256": "b6eaf1ac9c5607e557362adbdc4118e3517d4823524f5fa3468b1e7a8b81c638",
+          "start_line": 4,
+          "symbol": "SourceOwner"
+        }
+      ],
+      "sha256": "da417f7eace82475a5d358d07915ffd0b00e79adaeb3b387cdfc7449650e70bf",
+      "size_bytes": 1927,
+      "source_notices": [
+        "# SPDX-License-Identifier: MIT"
+      ],
+      "source_path": "tests/steam/test_source_owner.py",
+      "source_sha256": "ea5dd8234fa2b192a69a4a320aaceab8aeaf1b65716c11f27b0f83705b1678e1",
+      "source_size_bytes": 1869,
+      "test_execution_status": "Passed in the Task56 Stage4 portable assessment run; no original builder or host fixture execution is implied.",
+      "test_methods": [
+        "test_known_and_unknown_are_distinct",
+        "test_shape_identity_and_unsupported_claims",
+        "test_requires_matching_failed_wait_and_opt_in"
+      ],
+      "transformation": "Preserve original parser/policy/sampler test assertions; change explicit import routes only except listed unimported historical admission invocations."
+    },
+    {
+      "destination_notices": [
+        "# SPDX-FileCopyrightText: 2026 Pear contributors",
+        "# SPDX-License-Identifier: MIT"
+      ],
+      "excluded_historical_invocations": [],
+      "license": "MIT",
+      "namespace_bindings": [
+        "from unittest import TestCase, main",
+        "from pear_runtime.fixtures.assessment import pending_transition as m"
+      ],
+      "notice_adaptation": "Added leading collective Pear copyright notice for the adapted file under the approved current source policy; original MIT license marker and origin digest are unchanged.",
+      "path": "tests/fixtures/assessment/test_pending_transition.py",
+      "selected_symbols": [
+        {
+          "end_line": 30,
+          "sha256": "fdd15723dda7e0f3bf4b9be6d94cca5c6b64b9b734d1db957da29055778296a6",
+          "start_line": 4,
+          "symbol": "PendingTransition"
+        }
+      ],
+      "sha256": "91ff02af846234db83a8f8395dad7a3659974adc1b2df3ee00af62a02fa3fb63",
+      "size_bytes": 2279,
+      "source_notices": [
+        "# SPDX-License-Identifier: MIT"
+      ],
+      "source_path": "tests/steam/test_pending_transition.py",
+      "source_sha256": "3a7786075a7de73f3a371aae26cb7888fb8f30e356a6d97849c4fe8351e27cf0",
+      "source_size_bytes": 2221,
+      "test_execution_status": "Passed in the Task56 Stage4 portable assessment run; no original builder or host fixture execution is implied.",
+      "test_methods": [
+        "test_kind_requires_available_pending_state",
+        "test_original_identity_framing_and_bounds_remain_enforced",
+        "test_matching_wait_opt_in_and_candidate_are_required"
+      ],
+      "transformation": "Preserve original parser/policy/sampler test assertions; change explicit import routes only except listed unimported historical admission invocations."
+    }
+  ],
+  "verification": {
+    "combined_portable_suite": {
+      "command": [
+        "env",
+        "PYTHONDONTWRITEBYTECODE=1",
+        "PYTHONPATH=.:tests/fixtures",
+        "python3",
+        "-m",
+        "unittest",
+        "assessment.test_wake",
+        "assessment.test_write",
+        "assessment.test_batch",
+        "assessment.test_string_checks",
+        "assessment.test_query_v1",
+        "assessment.test_query_context_v1",
+        "assessment.test_entry_v1",
+        "assessment.test_link_v1",
+        "assessment.test_failure_v1",
+        "assessment.test_repair_epoch_v1",
+        "assessment.test_mutation_bound",
+        "assessment.test_early_wait",
+        "assessment.test_source_owner",
+        "assessment.test_pending_transition",
+        "test_direct",
+        "test_driver"
+      ],
+      "errors": 0,
+      "failures": 0,
+      "foreign_tools_modules": [],
+      "skipped": 0,
+      "tests_run": 115
+    },
+    "diff_check_files": 33,
+    "failure_regression": "The log-fact failure test initially failed because the final operation remained running. The parent fixed finalization to persist failed/released evidence before rethrowing; the test and case-load/primary-error variants now pass.",
+    "native_or_runtime_execution": false,
+    "new_entrypoint_driver_tests": 36,
+    "original_source_mutations": false,
+    "portable_tests": {
+      "command": [
+        "env",
+        "PYTHONDONTWRITEBYTECODE=1",
+        "PYTHONPATH=.:tests/fixtures",
+        "python3",
+        "-m",
+        "unittest",
+        "assessment.test_wake",
+        "assessment.test_write",
+        "assessment.test_batch",
+        "assessment.test_string_checks",
+        "assessment.test_query_v1",
+        "assessment.test_query_context_v1",
+        "assessment.test_entry_v1",
+        "assessment.test_link_v1",
+        "assessment.test_failure_v1",
+        "assessment.test_repair_epoch_v1",
+        "assessment.test_mutation_bound",
+        "assessment.test_early_wait",
+        "assessment.test_source_owner",
+        "assessment.test_pending_transition"
+      ],
+      "errors": 0,
+      "failures": 0,
+      "foreign_tools_modules_loaded": [],
+      "modules": [
+        "assessment.test_wake",
+        "assessment.test_write",
+        "assessment.test_batch",
+        "assessment.test_string_checks",
+        "assessment.test_query_v1",
+        "assessment.test_query_context_v1",
+        "assessment.test_entry_v1",
+        "assessment.test_link_v1",
+        "assessment.test_failure_v1",
+        "assessment.test_repair_epoch_v1",
+        "assessment.test_mutation_bound",
+        "assessment.test_early_wait",
+        "assessment.test_source_owner",
+        "assessment.test_pending_transition"
+      ],
+      "skipped": 0,
+      "tests_run": 79,
+      "working_directory": "pear-runtime repository root"
+    },
+    "source_body_correspondence": {
+      "modules": 14,
+      "non_import_ast_equal": true
+    },
+    "test_body_correspondence": {
+      "files": 14,
+      "historical_admission_invocations_explicitly_not_applicable": 10,
+      "selected_class_bodies_equal_except_declared_admission_invocations": true
+    }
+  }
+}

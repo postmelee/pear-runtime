@@ -1,0 +1,528 @@
+{
+  "schema_version": 1,
+  "scope": "reviewed_compiled_D36_capabilities",
+  "source_commit": "c62ed75aa6a33809ddb76c7f40aabbe4f4fbdda6",
+  "public_recipe_sha256": "da647c18f8a59556c952788d1c20b64ef5ba55e3c4ef4970680faee18637d9f8",
+  "compile_units": [
+    {
+      "path": "FEXCore/Source/Interface/Core/Core.cpp",
+      "sha256": "6d429b4f031e40a7c2685f428f26f6e86cb7717fc963275dcf5b15be88300165",
+      "size_bytes": 126332,
+      "required_defines": [
+        "-DARCHITECTURE_arm64=1",
+        "-DARCHITECTURE_arm64ec=1",
+        "-DFEXCORE_HAS_PRESERVE_ALL_ATTR=0",
+        "-DFEXCORE_PRESERVE_ALL_ATTR=",
+        "-DFEX_DISABLE_TELEMETRY=1",
+        "-DFEX_HAS_PRESERVE_ALL_ATTR=0",
+        "-DFEX_PRESERVE_ALL_ATTR=",
+        "-DGLOBAL_DATA_DIRECTORY=\"/usr/local/share/fex-emu/\"",
+        "-DHAS_PROGRAM_INVOCATION_NAME=",
+        "-DINLINE=static inline",
+        "-DINLINE_LEVEL=4",
+        "-DJIT_ARM64",
+        "-DPEAR_FEX_MEMORY_OWNER=1",
+        "-DSOFTFLOAT_BUILTIN_CLZ=1",
+        "-DSOFTFLOAT_FAST_DIV32TO16=1",
+        "-DSOFTFLOAT_FAST_DIV64TO32=1",
+        "-DSOFTFLOAT_FAST_INT64=1",
+        "-DUNICODE",
+        "-D_LARGEFILE64_SOURCE",
+        "-D_UNICODE",
+        "-DPEAR_FEX_DARWIN=1",
+        "-DPEAR_FEX_DARWIN_DCACHE_LOG2=5",
+        "-DNDEBUG",
+        "-DPEAR_PHASE_OBSERVE=1"
+      ]
+    },
+    {
+      "path": "Source/Windows/ARM64EC/Module.cpp",
+      "sha256": "8b61138b67361230ebda3bca24eb95a98e5216e6495c7dca26d5a76b9b48160d",
+      "size_bytes": 103449,
+      "required_defines": [
+        "-DARCHITECTURE_arm64=1",
+        "-DARCHITECTURE_arm64ec=1",
+        "-DFEXCORE_HAS_PRESERVE_ALL_ATTR=0",
+        "-DFEXCORE_PRESERVE_ALL_ATTR=",
+        "-DFEX_DISABLE_TELEMETRY=1",
+        "-DFEX_HAS_PRESERVE_ALL_ATTR=0",
+        "-DFEX_PRESERVE_ALL_ATTR=",
+        "-DGLOBAL_DATA_DIRECTORY=\"/usr/local/share/fex-emu/\"",
+        "-DHAS_PROGRAM_INVOCATION_NAME=",
+        "-DINLINE=static inline",
+        "-DINLINE_LEVEL=4",
+        "-DPEAR_FEX_MEMORY_OWNER=1",
+        "-DRANGES_DISABLE_DEPRECATED_WARNINGS",
+        "-DSOFTFLOAT_BUILTIN_CLZ=1",
+        "-DSOFTFLOAT_FAST_DIV32TO16=1",
+        "-DSOFTFLOAT_FAST_DIV64TO32=1",
+        "-DSOFTFLOAT_FAST_INT64=1",
+        "-DUNICODE",
+        "-D_LARGEFILE64_SOURCE",
+        "-D_UNICODE",
+        "-Darm64ecfex_EXPORTS",
+        "-DPEAR_FEX_DARWIN=1",
+        "-DPEAR_FEX_DARWIN_DCACHE_LOG2=5",
+        "-DNDEBUG",
+        "-DPEAR_PHASE_OBSERVE=1"
+      ]
+    },
+    {
+      "path": "Source/Windows/Common/PearFEXMemory.cpp",
+      "sha256": "380ca354c1d424fb8f94278f834e81e339a8008a5d1c43b89e16d3376edf3f7f",
+      "size_bytes": 108871,
+      "required_defines": [
+        "-DARCHITECTURE_arm64=1",
+        "-DARCHITECTURE_arm64ec=1",
+        "-DFEXCORE_HAS_PRESERVE_ALL_ATTR=0",
+        "-DFEXCORE_PRESERVE_ALL_ATTR=",
+        "-DFEX_DISABLE_TELEMETRY=1",
+        "-DFEX_HAS_PRESERVE_ALL_ATTR=0",
+        "-DFEX_PRESERVE_ALL_ATTR=",
+        "-DGLOBAL_DATA_DIRECTORY=\"/usr/local/share/fex-emu/\"",
+        "-DHAS_PROGRAM_INVOCATION_NAME=",
+        "-DINLINE=static inline",
+        "-DINLINE_LEVEL=4",
+        "-DPEAR_FEX_MEMORY_OWNER=1",
+        "-DSOFTFLOAT_BUILTIN_CLZ=1",
+        "-DSOFTFLOAT_FAST_DIV32TO16=1",
+        "-DSOFTFLOAT_FAST_DIV64TO32=1",
+        "-DSOFTFLOAT_FAST_INT64=1",
+        "-DUNICODE",
+        "-D_LARGEFILE64_SOURCE",
+        "-D_UNICODE",
+        "-DPEAR_FEX_DARWIN=1",
+        "-DPEAR_FEX_DARWIN_DCACHE_LOG2=5",
+        "-DNDEBUG"
+      ]
+    }
+  ],
+  "capabilities": {
+    "abort_observer": true,
+    "attach_observer": true,
+    "binding_census": true,
+    "idempotent_repair": true,
+    "mismatch_observer": true,
+    "slot_lifetime_observer": true,
+    "target_observer": true,
+    "target_value2_observer": true,
+    "writer_observer": true
+  },
+  "semantics": {
+    "abort_observer": {
+      "activation": "Startup options PEAR_PHASE_OBSERVE, PEAR_FEX_ENTRY_OBSERVE and PEAR_FEX_ABORT_OBSERVE must each be exactly 1; emission also requires the resolved checkpoint sink and the original identity checks.",
+      "evidence": [
+        {
+          "end_line": 870,
+          "meaning": "Eight never-reused abort slots, activation, identity join and bounded emission.",
+          "source_id": "Source/Windows/ARM64EC/Module.cpp",
+          "start_line": 775
+        },
+        {
+          "end_line": 305,
+          "meaning": "Mismatch path begins the observation and records the FEX abort side.",
+          "source_id": "FEXCore/Source/Interface/Core/Core.cpp",
+          "start_line": 263
+        },
+        {
+          "end_line": 1955,
+          "meaning": "WriteGuard::Abort records the native-abort failure side.",
+          "source_id": "Source/Windows/Common/PearFEXMemory.cpp",
+          "start_line": 1920
+        }
+      ],
+      "kind": "compiled_observation_path",
+      "limitations": [
+        "At most eight calls per process; no complete timeline, execution, successful abort or causal diagnosis is established."
+      ],
+      "shared_header": "runtime_abort",
+      "value": true
+    },
+    "attach_observer": {
+      "activation": "Startup options PEAR_PHASE_OBSERVE and PEAR_FEX_ENTRY_OBSERVE must each be exactly 1; the initialized owner PID and resolved checkpoint sink must be available. Abort opt-in is not required.",
+      "evidence": [
+        {
+          "end_line": 1152,
+          "meaning": "Opt-in observed attach path and failed attach capture.",
+          "source_id": "FEXCore/Source/Interface/Core/Core.cpp",
+          "start_line": 1139
+        },
+        {
+          "end_line": 1188,
+          "meaning": "Binding implementation copies observed branch/identity results.",
+          "source_id": "Source/Windows/Common/PearFEXMemory.cpp",
+          "start_line": 1136
+        },
+        {
+          "end_line": 1401,
+          "meaning": "Observed attach wrapper preserves actual attach result.",
+          "source_id": "Source/Windows/Common/PearFEXMemory.cpp",
+          "start_line": 1326
+        },
+        {
+          "end_line": 49,
+          "meaning": "Activation, first failed attach capture, and conditional PEAR_ATTACH1 output.",
+          "source_id": "Pear/Diagnostics/include/PearThreadCreateRuntime.inc",
+          "start_line": 12
+        },
+        {
+          "end_line": 61,
+          "meaning": "Attach branch and diagnostic value schema.",
+          "source_id": "Pear/Diagnostics/include/PearAttachObservation.h",
+          "start_line": 1
+        }
+      ],
+      "kind": "compiled_observation_path",
+      "limitations": [
+        "First captured failure and known branch only; no successful attachment or lifecycle completion is inferred."
+      ],
+      "value": true
+    },
+    "binding_census": {
+      "activation": "Startup options PEAR_PHASE_OBSERVE and PEAR_FEX_ENTRY_OBSERVE must each be exactly 1; the initialized owner PID and resolved checkpoint sink must be available. Abort opt-in is not required.",
+      "evidence": [
+        {
+          "end_line": 1162,
+          "meaning": "Capacity failure copies current bindings under the existing guard.",
+          "source_id": "Source/Windows/Common/PearFEXMemory.cpp",
+          "start_line": 1158
+        },
+        {
+          "end_line": 42,
+          "meaning": "Bounded 64-row value-only census.",
+          "source_id": "Pear/Diagnostics/include/PearBindingCensus.h",
+          "start_line": 1
+        },
+        {
+          "end_line": 49,
+          "meaning": "Census is emitted only for captured stage-5 BindCapacity failure.",
+          "source_id": "Pear/Diagnostics/include/PearThreadCreateRuntime.inc",
+          "start_line": 41
+        },
+        {
+          "end_line": 30,
+          "meaning": "Bounded census header/row/end formatter.",
+          "source_id": "Pear/Diagnostics/include/PearBindingCensusEmit.h",
+          "start_line": 1
+        }
+      ],
+      "kind": "compiled_observation_path",
+      "limitations": [
+        "Only a capacity-failure snapshot; opaque identities do not prove native thread liveness or general allocation state."
+      ],
+      "value": true
+    },
+    "idempotent_repair": {
+      "activation": "Compiled with PEAR_FEX_MEMORY_OWNER=1; the behavior is independent of observation opt-ins and remains guarded by the original repair preconditions.",
+      "evidence": [
+        {
+          "end_line": 185,
+          "meaning": "Same retained allocation/epoch compatibility predicate.",
+          "source_id": "FEXCore/Source/Interface/Core/Core.cpp",
+          "start_line": 174
+        },
+        {
+          "end_line": 260,
+          "meaning": "Revalidates the same source, advanced epoch, matching prepared bytes and already-patched result.",
+          "source_id": "FEXCore/Source/Interface/Core/Core.cpp",
+          "start_line": 241
+        },
+        {
+          "end_line": 348,
+          "meaning": "Already-repaired path skips stores and writer scope but preserves normal publication and source update.",
+          "source_id": "FEXCore/Source/Interface/Core/Core.cpp",
+          "start_line": 261
+        },
+        {
+          "end_line": 364,
+          "meaning": "Retains the mutation turn through EC entry, reacquisition and successful byte readback; failure poisons the turn.",
+          "source_id": "FEXCore/Source/Interface/Core/Core.cpp",
+          "start_line": 350
+        }
+      ],
+      "kind": "compiled_behavior",
+      "limitations": [
+        "Only this same-patch retained-source case is covered; no general idempotence, concurrency correctness, gameplay or liveness claim."
+      ],
+      "value": true
+    },
+    "mismatch_observer": {
+      "activation": "Startup options PEAR_PHASE_OBSERVE, PEAR_FEX_ENTRY_OBSERVE and PEAR_FEX_ABORT_OBSERVE must each be exactly 1; emission also requires the resolved checkpoint sink and the original identity checks.",
+      "evidence": [
+        {
+          "end_line": 291,
+          "meaning": "Constructs the mismatch record from the guarded read and repair state.",
+          "source_id": "FEXCore/Source/Interface/Core/Core.cpp",
+          "start_line": 279
+        },
+        {
+          "end_line": 813,
+          "meaning": "Only first abort call and matching slot/lifetime can emit once.",
+          "source_id": "Source/Windows/ARM64EC/Module.cpp",
+          "start_line": 797
+        },
+        {
+          "end_line": 54,
+          "meaning": "Mismatch record and PEAR_MISMATCH1 formatter.",
+          "source_id": "Pear/Diagnostics/include/PearMismatchObservation.h",
+          "start_line": 1
+        }
+      ],
+      "kind": "compiled_observation_path",
+      "limitations": [
+        "One first-call snapshot; availability does not prove an observed mismatch or its cause."
+      ],
+      "value": true
+    },
+    "slot_lifetime_observer": {
+      "activation": "Startup options PEAR_PHASE_OBSERVE and PEAR_FEX_ENTRY_OBSERVE must each be exactly 1; the initialized owner PID and resolved checkpoint sink must be available. Abort opt-in is not required.",
+      "evidence": [
+        {
+          "end_line": 2077,
+          "meaning": "ThreadTerm scope emits explicit return after the original body.",
+          "source_id": "Source/Windows/ARM64EC/Module.cpp",
+          "start_line": 2006
+        },
+        {
+          "end_line": 1240,
+          "meaning": "Destroy scope captures original destroyed/freed outcomes.",
+          "source_id": "FEXCore/Source/Interface/Core/Core.cpp",
+          "start_line": 1211
+        },
+        {
+          "end_line": 1322,
+          "meaning": "Unregister and bridge-unregister scopes preserve the original sequence.",
+          "source_id": "Source/Windows/Common/PearFEXMemory.cpp",
+          "start_line": 1293
+        },
+        {
+          "end_line": 1958,
+          "meaning": "Includes the memory-side snapshot implementation.",
+          "source_id": "Source/Windows/Common/PearFEXMemory.cpp",
+          "start_line": 1958
+        },
+        {
+          "end_line": 47,
+          "meaning": "512-call limit, bounded CAS admission and resolved sink emission.",
+          "source_id": "Pear/Diagnostics/include/PearSlotLifetimeRuntime.inc",
+          "start_line": 21
+        },
+        {
+          "end_line": 32,
+          "meaning": "Single-attempt registry snapshot copies opaque values without owner dereferences or bridge calls under the guard.",
+          "source_id": "Pear/Diagnostics/include/PearSlotLifetimeMemory.inc",
+          "start_line": 1
+        },
+        {
+          "end_line": 47,
+          "meaning": "Explicit Return scope; missing return remains unknown.",
+          "source_id": "Pear/Diagnostics/include/PearSlotLifetime.h",
+          "start_line": 1
+        }
+      ],
+      "kind": "compiled_observation_path",
+      "limitations": [
+        "Bounded diagnostic events and explicit loss; absent return is unknown. No lifetime hold, liveness or correct deallocation is proven."
+      ],
+      "value": true
+    },
+    "target_observer": {
+      "activation": "Startup options PEAR_PHASE_OBSERVE, PEAR_FEX_ENTRY_OBSERVE and PEAR_FEX_ABORT_OBSERVE must each be exactly 1; emission also requires the resolved checkpoint sink and the original identity checks.",
+      "evidence": [
+        {
+          "end_line": 296,
+          "meaning": "Constructs the target record from captured read and writer metadata.",
+          "source_id": "FEXCore/Source/Interface/Core/Core.cpp",
+          "start_line": 292
+        },
+        {
+          "end_line": 827,
+          "meaning": "Matching first abort identity emits PEAR_TARGET1 once.",
+          "source_id": "Source/Windows/ARM64EC/Module.cpp",
+          "start_line": 814
+        },
+        {
+          "end_line": 45,
+          "meaning": "Read identity, scoped capture and target record interface.",
+          "source_id": "Pear/Diagnostics/include/PearTargetObservation.h",
+          "start_line": 1
+        }
+      ],
+      "kind": "compiled_observation_path",
+      "limitations": [
+        "Copied identity metadata is diagnostic; it grants no lease and establishes no successful game/runtime event."
+      ],
+      "value": true
+    },
+    "target_value2_observer": {
+      "activation": "Startup options PEAR_PHASE_OBSERVE, PEAR_FEX_ENTRY_OBSERVE and PEAR_FEX_ABORT_OBSERVE must each be exactly 1; emission also requires the resolved checkpoint sink and the original identity checks.",
+      "evidence": [
+        {
+          "end_line": 87,
+          "meaning": "TLS-free process-wide identity-copy slot, one CAS attempt and current-executor ticket ownership.",
+          "source_id": "Source/Windows/Common/PearFEXMemory.cpp",
+          "start_line": 35
+        },
+        {
+          "end_line": 212,
+          "meaning": "PearReadIdentityScope surrounds the existing managed-RX copy.",
+          "source_id": "FEXCore/Source/Interface/Core/Core.cpp",
+          "start_line": 207
+        },
+        {
+          "end_line": 1718,
+          "meaning": "After a successful original read, the exact request identity and retained target metadata are copied into the scope; off-path exits before TEB access.",
+          "source_id": "Source/Windows/Common/PearFEXMemory.cpp",
+          "start_line": 1687
+        },
+        {
+          "end_line": 34,
+          "meaning": "Scoped read-identity API and value fields.",
+          "source_id": "Pear/Diagnostics/include/PearTargetObservation.h",
+          "start_line": 1
+        }
+      ],
+      "kind": "compiled_observation_path",
+      "limitations": [
+        "Contention or duplicate capture is explicitly unknown. This adds no extra memory read or lease and does not establish runtime observation."
+      ],
+      "naming": "The retained target_value2 capability names the TLS-free value-copy implementation. It continues to emit PEAR_TARGET1; no TARGET2 format is claimed.",
+      "value": true
+    },
+    "writer_observer": {
+      "activation": "Startup options PEAR_PHASE_OBSERVE, PEAR_FEX_ENTRY_OBSERVE and PEAR_FEX_ABORT_OBSERVE must each be exactly 1; emission also requires the resolved checkpoint sink and the original identity checks.",
+      "evidence": [
+        {
+          "end_line": 348,
+          "meaning": "Writer scope surrounds actual repair stores and records publish/source-update outcomes.",
+          "source_id": "FEXCore/Source/Interface/Core/Core.cpp",
+          "start_line": 311
+        },
+        {
+          "end_line": 102,
+          "meaning": "Writer ring and read-cut ownership.",
+          "source_id": "Source/Windows/Common/PearFEXMemory.cpp",
+          "start_line": 89
+        },
+        {
+          "end_line": 312,
+          "meaning": "Actor lookup and bounded writer capture/snapshot interfaces.",
+          "source_id": "Source/Windows/Common/PearFEXMemory.cpp",
+          "start_line": 282
+        },
+        {
+          "end_line": 1667,
+          "meaning": "Successful managed copy records the read cut.",
+          "source_id": "Source/Windows/Common/PearFEXMemory.cpp",
+          "start_line": 1667
+        },
+        {
+          "end_line": 843,
+          "meaning": "First matching abort emits bounded cut and writer rows.",
+          "source_id": "Source/Windows/ARM64EC/Module.cpp",
+          "start_line": 828
+        },
+        {
+          "end_line": 17,
+          "meaning": "Writer record/scope interface.",
+          "source_id": "Pear/Diagnostics/include/PearWriterObservation.h",
+          "start_line": 1
+        },
+        {
+          "end_line": 71,
+          "meaning": "Bounded writer recorder and loss reporting.",
+          "source_id": "Pear/Diagnostics/include/PearWriterRing.h",
+          "start_line": 1
+        }
+      ],
+      "kind": "compiled_observation_path",
+      "limitations": [
+        "At most 64 returned writer rows with explicit loss; not complete write coverage. The already-repaired no-store path intentionally creates no writer event."
+      ],
+      "value": true
+    }
+  },
+  "limitations": [
+    "No runtime, fixture or game process was launched for this mapping.",
+    "No current observer enablement, record availability, native execution/no-Rosetta, gameplay, Steam, signing or distribution qualification is established.",
+    "Private phase selection correspondence remains an explicit local input; no private markers, addresses or selection values are published.",
+    "Any future source/configuration change requires a reviewed descriptor/recipe update and affected verification; these booleans do not authorize source changes."
+  ],
+  "source_evidence": {
+    "FEXCore/Source/Interface/Core/Core.cpp": {
+      "repository_path": "FEXCore/Source/Interface/Core/Core.cpp",
+      "sha256": "6d429b4f031e40a7c2685f428f26f6e86cb7717fc963275dcf5b15be88300165",
+      "size_bytes": 126332
+    },
+    "Pear/Diagnostics/include/PearAttachObservation.h": {
+      "repository_path": "Pear/Diagnostics/include/PearAttachObservation.h",
+      "sha256": "8d084762e3b6d58d195b91c191cce0ad4154cc41f5762671aeb6aae10ce0a854",
+      "size_bytes": 2178
+    },
+    "Pear/Diagnostics/include/PearBindingCensus.h": {
+      "repository_path": "Pear/Diagnostics/include/PearBindingCensus.h",
+      "sha256": "1efaebc7bf521a2af1b3de5e77ebb8e74d7f65192cf564a87bfdc990b032502c",
+      "size_bytes": 1854
+    },
+    "Pear/Diagnostics/include/PearBindingCensusEmit.h": {
+      "repository_path": "Pear/Diagnostics/include/PearBindingCensusEmit.h",
+      "sha256": "af906beb8ad6e4f70b465dca1140ebcdf100f9b8614f20ac4d1c9d846846d9d9",
+      "size_bytes": 1760
+    },
+    "Pear/Diagnostics/include/PearMismatchObservation.h": {
+      "repository_path": "Pear/Diagnostics/include/PearMismatchObservation.h",
+      "sha256": "466ff7a0a5d67580c295465decf5c21121901f7015bc825415fab0b6e5f40f5e",
+      "size_bytes": 2981
+    },
+    "Pear/Diagnostics/include/PearPhaseRuntime.inc": {
+      "repository_path": "Pear/Diagnostics/include/PearPhaseRuntime.inc",
+      "sha256": "a577e5a2165354910eac610427f094c2433f6c173df9e6745151ee5023b9333f",
+      "size_bytes": 5996
+    },
+    "Pear/Diagnostics/include/PearSlotLifetime.h": {
+      "repository_path": "Pear/Diagnostics/include/PearSlotLifetime.h",
+      "sha256": "da0a68d651adbafbebc03f196b6da2533ad1231814a03bab4d8729b10cf9f43d",
+      "size_bytes": 2061
+    },
+    "Pear/Diagnostics/include/PearSlotLifetimeMemory.inc": {
+      "repository_path": "Pear/Diagnostics/include/PearSlotLifetimeMemory.inc",
+      "sha256": "87a7c0731e08f043600a048334df4187bb4a8aba0fca7652de1b9a83b6bbabd6",
+      "size_bytes": 1495
+    },
+    "Pear/Diagnostics/include/PearSlotLifetimeRuntime.inc": {
+      "repository_path": "Pear/Diagnostics/include/PearSlotLifetimeRuntime.inc",
+      "sha256": "a389e934d0bba22b98a3e0d1b32290e6afedc4a9dae715cc707c9a1f2e0932e9",
+      "size_bytes": 2559
+    },
+    "Pear/Diagnostics/include/PearTargetObservation.h": {
+      "repository_path": "Pear/Diagnostics/include/PearTargetObservation.h",
+      "sha256": "99e29c2f5ab72731864b7a4e8d0fed0113f8d5362e36e946213cdf6958f6f4a2",
+      "size_bytes": 3348
+    },
+    "Pear/Diagnostics/include/PearThreadCreateRuntime.inc": {
+      "repository_path": "Pear/Diagnostics/include/PearThreadCreateRuntime.inc",
+      "sha256": "d6bfa37d532b5e0765c01801585845e45c3a970c1b3b07ce661bff2525313354",
+      "size_bytes": 3776
+    },
+    "Pear/Diagnostics/include/PearWriterObservation.h": {
+      "repository_path": "Pear/Diagnostics/include/PearWriterObservation.h",
+      "sha256": "5087c8a87de6aac1ce8fefc89e2990c3bc88812de4e27ccce3a47fce5d5d1a1f",
+      "size_bytes": 865
+    },
+    "Pear/Diagnostics/include/PearWriterRing.h": {
+      "repository_path": "Pear/Diagnostics/include/PearWriterRing.h",
+      "sha256": "7323887c88cd02dd5fb488766cdeeff489ae3b801adbdcfaf32697275faacdf3",
+      "size_bytes": 3141
+    },
+    "Source/Windows/ARM64EC/Module.cpp": {
+      "repository_path": "Source/Windows/ARM64EC/Module.cpp",
+      "sha256": "8b61138b67361230ebda3bca24eb95a98e5216e6495c7dca26d5a76b9b48160d",
+      "size_bytes": 103449
+    },
+    "Source/Windows/Common/PearFEXMemory.cpp": {
+      "repository_path": "Source/Windows/Common/PearFEXMemory.cpp",
+      "sha256": "380ca354c1d424fb8f94278f834e81e339a8008a5d1c43b89e16d3376edf3f7f",
+      "size_bytes": 108871
+    }
+  }
+}

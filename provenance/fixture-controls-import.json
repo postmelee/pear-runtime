@@ -1,0 +1,2029 @@
+{
+  "schema_version": 1,
+  "scope": "Task56 pure original pairing, CPU/ordering and presentation controls; no launcher or execution admission",
+  "source_repository": "https://github.com/postmelee/pear",
+  "source_checkpoint": "951264bf5be4b9d2afb87320f5fac74778b2dd58",
+  "files": [
+    {
+      "path": "pear_runtime/fixtures/controls/pairing.py",
+      "license": "GPL-3.0-or-later AND MIT",
+      "imported_sha256": "fa7d806f43431c55bb3d898ca31ab629ba2d804734a11f56cad2410f04a30e0f",
+      "imported_size_bytes": 7281,
+      "sources": [
+        {
+          "source": {
+            "path": "tools/dxmt/run_pairing.py",
+            "sha256": "038adc9355892d853dce2886f06dbeab3c073e14d343bf10aa4effc968ee6402",
+            "size_bytes": 36958,
+            "checkpoint_contains_exact_bytes": true
+          },
+          "selected_symbols": [
+            {
+              "symbol": "CASES",
+              "start_line": 32,
+              "end_line": 40,
+              "sha256": "81d29b6bfe27bc21d8de2b9b693d571e336b93b8109a2613d8f8e34b487411e2"
+            },
+            {
+              "symbol": "NATIVE_FIELDS",
+              "start_line": 41,
+              "end_line": 43,
+              "sha256": "99c34f2ebed2db68bd67db0b62a3ece6df1cbf0c0c47bbd8894f6604ac23b829"
+            },
+            {
+              "symbol": "PE_FIELDS",
+              "start_line": 50,
+              "end_line": 51,
+              "sha256": "08ae16d919446e7bd6baca2b40b4f8647d59d62c694fbf1f1c4d226e229b1a8d"
+            },
+            {
+              "symbol": "integer",
+              "start_line": 107,
+              "end_line": 108,
+              "sha256": "bca1755d17044083ec3733484c832580a00475b245f16eb8d1791f144b231d8d"
+            },
+            {
+              "symbol": "native_rows",
+              "start_line": 111,
+              "end_line": 153,
+              "sha256": "8a112f81c2756aed5d85acbea998f3ecdd2dbc09d0657906f688f8675f924ea5"
+            },
+            {
+              "symbol": "pe_rows",
+              "start_line": 156,
+              "end_line": 166,
+              "sha256": "029d93192424536b73ccb451d5cfe583efd4526e20bcf5474699e8405892b1d4"
+            }
+          ]
+        },
+        {
+          "source": {
+            "path": "tools/dxmt/common.py",
+            "sha256": "3593e8e2a80d535143e2baae7e945ce90918520711993848dc33355d9dac0e75",
+            "size_bytes": 13699,
+            "checkpoint_contains_exact_bytes": true
+          },
+          "selected_symbols": [
+            {
+              "symbol": "fields",
+              "start_line": 42,
+              "end_line": 45,
+              "sha256": "c1aac7be02593baa0df47408c986a680fd1f19e908ec78d552ef90fc5e7188c0"
+            }
+          ]
+        },
+        {
+          "source": {
+            "path": "tools/dxmt/translated_surface_check.py",
+            "sha256": "ec6ee5d64788bb5e295149796ab13edffc7ca481a5e16d40a5bff7c304429d74",
+            "size_bytes": 1450,
+            "checkpoint_contains_exact_bytes": true
+          },
+          "selected_symbols": [
+            {
+              "symbol": "CASES",
+              "start_line": 5,
+              "end_line": 10,
+              "sha256": "ef79457e86b49daafeab4ecf35518d33f78b1a8ca6fd15e489f3badc31dd9c7c"
+            },
+            {
+              "symbol": "controls",
+              "start_line": 12,
+              "end_line": 22,
+              "sha256": "5a743c9094b9b56f33008386760cdfd409496bc2d7211b16ff500875fc6c4318"
+            }
+          ]
+        }
+      ],
+      "transformation": "Namespace imports only for v1 constants/functions and fields. Rename the v2 CASES global to SURFACE_CASES in its declaration and controls body to avoid collision; all values/assertions/signatures unchanged."
+    },
+    {
+      "path": "pear_runtime/fixtures/controls/corpus.py",
+      "license": "MIT",
+      "imported_sha256": "1ed903da5a66e25cd36d62f29d4d935cc415f8a2d7d1d420d902c370cb0a5253",
+      "imported_size_bytes": 14904,
+      "sources": [
+        {
+          "source": {
+            "path": "tools/cpu/results.py",
+            "sha256": "a91775ac7b5c3b67479e60ef976544320c07374a68f9435edeb9184b6a5098d8",
+            "size_bytes": 6243,
+            "checkpoint_contains_exact_bytes": true
+          },
+          "selected_symbols": [
+            {
+              "symbol": "require",
+              "start_line": 11,
+              "end_line": 13,
+              "sha256": "771470ca6047ea7b84814e6cc23c2357b927e95ad29ed2fbd7b34f2969c68de4"
+            },
+            {
+              "symbol": "canonical",
+              "start_line": 16,
+              "end_line": 17,
+              "sha256": "9158bf35e7fd9ea654ab33bc9528016a3883cc1ac2485aed7b730989f90c02fd"
+            },
+            {
+              "symbol": "digest",
+              "start_line": 20,
+              "end_line": 21,
+              "sha256": "884bb01e185f2d9d9430301d9fae0ad420aa9c9ab5ec6be9c82587a6bf0ed525"
+            },
+            {
+              "symbol": "decode",
+              "start_line": 24,
+              "end_line": 32,
+              "sha256": "3f5b742fed95b17ba3f055bea93e97ba4164f5a6e2b04ca70196875aad22d803"
+            },
+            {
+              "symbol": "read",
+              "start_line": 35,
+              "end_line": 38,
+              "sha256": "b85e6d544e6cb443956f95628d63c2276a299b753e8fcfa2cb0e26ba6ce99ced"
+            },
+            {
+              "symbol": "hex64",
+              "start_line": 41,
+              "end_line": 43,
+              "sha256": "95c14d69e9129971bd6ea0bb2989207b71bf43f9b5fe15db9096d71681ba63cd"
+            },
+            {
+              "symbol": "fixture_ids",
+              "start_line": 46,
+              "end_line": 47,
+              "sha256": "303862a369d3d62319270c91f00062a50cc6656a00f80fcb7390efc73322eb43"
+            },
+            {
+              "symbol": "admit_build",
+              "start_line": 50,
+              "end_line": 65,
+              "sha256": "c335a9d98ab70439d2071314cae25067ab3fe048e68d3a726df10036d74ce1b3"
+            },
+            {
+              "symbol": "case_result",
+              "start_line": 68,
+              "end_line": 93,
+              "sha256": "fe66cf44582b7a0c901fa10eec25aac651042274d0f2e00ce3c3ab1c3796cf55"
+            },
+            {
+              "symbol": "boundary_result",
+              "start_line": 96,
+              "end_line": 106,
+              "sha256": "cce7c29dd9734ac5ac42f7740f04baea845b83fb7f76e230fed81dbe696ceb1e"
+            },
+            {
+              "symbol": "assess_records",
+              "start_line": 109,
+              "end_line": 132,
+              "sha256": "f1a405ab8a3a137610b29be96f3725e35da6bbbc09f10017d8c54a27b531b0da"
+            }
+          ]
+        },
+        {
+          "source": {
+            "path": "tools/cpu/adapt.py",
+            "sha256": "230de8c7ebca1f5302ebac83855d0e5ae1024447820ffa8059484ce338c17b45",
+            "size_bytes": 1866,
+            "checkpoint_contains_exact_bytes": true
+          },
+          "selected_symbols": [
+            {
+              "symbol": "effective_case",
+              "start_line": 18,
+              "end_line": 30,
+              "sha256": "418e028b0be13bd2065b8611d8ebaf306bd1a594ec46cdf132fdea854a37d766"
+            }
+          ]
+        },
+        {
+          "source": {
+            "path": "tools/cpu/ordering.py",
+            "sha256": "015ca52073a404faa9ed9a9b247c6abada89df48ef647d2128d729ed585446ee",
+            "size_bytes": 13863,
+            "checkpoint_contains_exact_bytes": true
+          },
+          "selected_symbols": [
+            {
+              "symbol": "assess",
+              "start_line": 17,
+              "end_line": 41,
+              "sha256": "eb37fae68efefeacf2aa170c17cb0c8e9f709863c3066ac9dd968fec1923d4bf"
+            },
+            {
+              "symbol": "policy_records",
+              "start_line": 43,
+              "end_line": 61,
+              "sha256": "cadb63f144bf3ab28f05252a7b09028ec25a072feff10a2040c9d2277afda707"
+            },
+            {
+              "symbol": "retirements",
+              "start_line": 63,
+              "end_line": 66,
+              "sha256": "a549acdae8940f5b8ce5122e916b7f02e5212ee1e173e21603c13b51e0289863"
+            }
+          ]
+        },
+        {
+          "source": {
+            "path": "tools/cpu/compare.py",
+            "sha256": "2989c8b72d988d8f5998679658099a4189ca212fe7ce488d0640c82a3cbb9c05",
+            "size_bytes": 8010,
+            "checkpoint_contains_exact_bytes": true
+          },
+          "selected_symbols": [
+            {
+              "symbol": "compare",
+              "start_line": 55,
+              "end_line": 101,
+              "sha256": "3d942af6f5e302b719dc5b714d0b4914259ff43dc1009c9342e04ac2d9857278"
+            }
+          ]
+        },
+        {
+          "source": {
+            "path": "tools/cpu/ordering.py",
+            "sha256": "015ca52073a404faa9ed9a9b247c6abada89df48ef647d2128d729ed585446ee",
+            "size_bytes": 13863,
+            "checkpoint_contains_exact_bytes": true
+          },
+          "selected_symbols": [
+            {
+              "symbol": "compare",
+              "start_line": 166,
+              "end_line": 197,
+              "sha256": "23549e5496039d2932c9b11e738c6c6d190fc7e6cbaa5d78cb94beb6fbe17cda"
+            }
+          ]
+        },
+        {
+          "source": {
+            "path": "tools/dxmt/translated_regression.py",
+            "sha256": "ef2f062623ac7c6e4a3539ca0694c6a374e737745e26463c4d0e83e6d1722ef7",
+            "size_bytes": 8539,
+            "checkpoint_contains_exact_bytes": true
+          },
+          "selected_symbols": [
+            {
+              "symbol": "corpus",
+              "start_line": 58,
+              "end_line": 95,
+              "sha256": "5f1d09c5b8139923d0c232a679f258b4790d6c7267c50dfc10e7aa1f575b021d"
+            },
+            {
+              "symbol": "ordered",
+              "start_line": 98,
+              "end_line": 124,
+              "sha256": "c8a54bc288aeef8a20c36c0933f0f570df7ee3422fc131c128253806356b1c70"
+            }
+          ]
+        }
+      ],
+      "transformation": "All eleven results functions, effective_case and three ordering functions are byte-exact. rules/manifest read the canonical imported contract data instead of old roots. Pure comparison wrappers retain original reference-log/case/feature/ordering assertions and add explicit candidate-row identity/budget admission; original runtime/signing/runner checks remain separately mandatory, never replaced by a saved pass flag. No build/native/run/cleanup function is imported."
+    },
+    {
+      "path": "pear_runtime/fixtures/controls/presentation.py",
+      "license": "MIT",
+      "imported_sha256": "d75721f978e52cf80c8c14873d8b1c2db006c72a9754df3b43ccfc1f1c4f5b67",
+      "imported_size_bytes": 10964,
+      "sources": [
+        {
+          "source": {
+            "path": "tools/dxmt/translated_present_check.py",
+            "sha256": "4a5966d03c18987da11fedf3c26d0622762b05657d1c762214d54ea3094cb63d",
+            "size_bytes": 15712,
+            "checkpoint_contains_exact_bytes": true
+          },
+          "selected_symbols": [
+            {
+              "symbol": "terminal",
+              "start_line": 10,
+              "end_line": 38,
+              "sha256": "7772b4057c07aa26d8a8a994c42b5aa422717f7bb859740b2498a9ff9ae4ae1e"
+            },
+            {
+              "symbol": "native",
+              "start_line": 40,
+              "end_line": 64,
+              "sha256": "e15ffea551e9ea63f8169236909687658a1324f36b31b50e8d8266a38d197640"
+            },
+            {
+              "symbol": "pixels",
+              "start_line": 66,
+              "end_line": 90,
+              "sha256": "a7d6418c713c059d8efe3e87522f25e9c0ff5a3f4b4c68123fcded7740c52da4"
+            },
+            {
+              "symbol": "visible",
+              "start_line": 92,
+              "end_line": 106,
+              "sha256": "8d3873d28dc0f82e058441b051adef1541c972390c6d44de29b8f97f2dcfb7c4"
+            },
+            {
+              "symbol": "visible_frames",
+              "start_line": 108,
+              "end_line": 125,
+              "sha256": "cdbab4e6f23be5d5180e46a3e3cde2bdee03a583709007299c60f6d146f09aa3"
+            }
+          ]
+        }
+      ],
+      "transformation": "terminal/native/pixels function bodies and signatures are byte-exact. visible and visible_frames only append capture_producer to their signature and replace the historical producer-path expression with that explicit path; every check remains. Actual capture, native launch and current boundary admission are not imported."
+    },
+    {
+      "path": "tests/fixtures/controls/test_pairing_protocol.py",
+      "license": "GPL-3.0-or-later",
+      "imported_sha256": "613b46e65a3d9554bd8aa97dae37745cc15cc09f1cf1b1ebc8b0bda103292bca",
+      "imported_size_bytes": 4586,
+      "sources": [
+        {
+          "source": {
+            "path": "tests/dxmt/test_run_pairing.py",
+            "sha256": "606a74158943d4dc0b21a7d0f37b765c2ad72a5534ac2c9e0d4ae62cc4311531",
+            "size_bytes": 16372,
+            "checkpoint_contains_exact_bytes": true
+          },
+          "selected_symbols": [
+            {
+              "symbol": "protocol_rows",
+              "start_line": 21,
+              "end_line": 34,
+              "sha256": "19415949b41d011448ef4410b61e856ad24bcec891235138779b1cc5e07329f8"
+            },
+            {
+              "symbol": "wire",
+              "start_line": 37,
+              "end_line": 40,
+              "sha256": "5fd8909de52ae6f87580aa5e108154658bda12c6ae6dc934f0676494842dc8d9"
+            },
+            {
+              "symbol": "ProtocolControls",
+              "start_line": 43,
+              "end_line": 141,
+              "sha256": "082b1e0785d8995ca7609ed9387904f33c462ac2bbaf7cf1dc9ea5bbe423f7d4"
+            }
+          ]
+        }
+      ],
+      "transformation": "Keep original protocol_rows/wire and first six pure ProtocolControls methods exactly; replace only module imports. Remaining original environment/lifecycle methods belong to supervision/admission and are not claimed here.",
+      "included_methods": [
+        {
+          "name": "test_complete_protocol_keeps_diagnostic_review_separate",
+          "start_line": 44,
+          "end_line": 49,
+          "sha256": "c0e9af4a4ae49b6556ddeed75652131278fb65a63d8e9738746390d7d606832d"
+        },
+        {
+          "name": "test_unknown_unbalanced_or_early_physical_lifetime_refuses",
+          "start_line": 51,
+          "end_line": 57,
+          "sha256": "b5487ff18848448764edc48e31e4e1e07ffbccc40363d9c3a2c6d3ca1c5c8462"
+        },
+        {
+          "name": "test_wrong_case_status_lease_main_thread_or_x18_refuses",
+          "start_line": 59,
+          "end_line": 65,
+          "sha256": "4699b7a7bd30255477e390e8253467f2b2bfb7f077045dada0854897b55a6d46"
+        },
+        {
+          "name": "test_duplicate_missing_reordered_and_unterminated_rows_refuse",
+          "start_line": 67,
+          "end_line": 70,
+          "sha256": "11eb7ac8caea4b4cf215a761bb0d7bf8be9b2e77b8c8e0c1094eaeb09d5b0972"
+        },
+        {
+          "name": "test_own_unknown_json_namespace_cannot_be_hidden_as_diagnostics",
+          "start_line": 72,
+          "end_line": 76,
+          "sha256": "480ac569ba7b8eebea0693e9c4380a12d80afd91c6f6e91ffd9e432de1452262"
+        },
+        {
+          "name": "test_pe_terminal_requires_primary_and_all_cleanup_success",
+          "start_line": 78,
+          "end_line": 89,
+          "sha256": "c0f6213181265f023d675e9cbd8ef7136157af7a67df10d071251e73b049a851"
+        }
+      ]
+    },
+    {
+      "path": "tests/fixtures/controls/test_surface_controls.py",
+      "license": "MIT",
+      "imported_sha256": "49f12191b3b9aee384a6182d03d9b1218853ccb3cc7ecf700ebaa6aab51fe9b7",
+      "imported_size_bytes": 1274,
+      "sources": [
+        {
+          "source": {
+            "path": "tests/dxmt/test_surface_controls.py",
+            "sha256": "b529e47a6434074167c6fc54391c0df1b86280c3bc119f7a8845e6251db1ba48",
+            "size_bytes": 1203,
+            "checkpoint_contains_exact_bytes": true
+          },
+          "selected_symbols": [
+            {
+              "symbol": "SurfaceControls",
+              "start_line": 6,
+              "end_line": 19,
+              "sha256": "b8d87e6e485dd0c980a69336c3f294dac8607c4751f8798bce237b1deee75ad5"
+            }
+          ]
+        }
+      ],
+      "transformation": "Import namespace only; all four original tests unchanged. Add the current 2026 Pear contributors copyright header; retain the original MIT notice and unchanged test bodies."
+    },
+    {
+      "path": "tests/fixtures/controls/test_presentation_native.py",
+      "license": "MIT",
+      "imported_sha256": "6fa029187562c8e73fb8db239450f675b6c569a6eaee8c81639b05f35207079e",
+      "imported_size_bytes": 3243,
+      "sources": [
+        {
+          "source": {
+            "path": "tests/dxmt/test_translated_results.py",
+            "sha256": "e557e9126724f20bf8d73e3691cf6a76d8edc9585cc12194c24dd575b714dba9",
+            "size_bytes": 8212,
+            "checkpoint_contains_exact_bytes": true
+          },
+          "selected_symbols": [
+            {
+              "symbol": "PresentationTests",
+              "start_line": 81,
+              "end_line": 127,
+              "sha256": "57dfbb89c8895f053a16f419277f2cffdef48ef5bc89bf74955a6d00865d047e"
+            }
+          ]
+        }
+      ],
+      "transformation": "Exact six original PresentationTests; only method-local import namespaces change."
+    },
+    {
+      "path": "tests/fixtures/controls/test_present_frames.py",
+      "license": "MIT",
+      "imported_sha256": "39233eb7e5d63c6582984306cb51dbaeaf04a6798e1b94d8e4cd979b0126f3ed",
+      "imported_size_bytes": 2631,
+      "sources": [
+        {
+          "source": {
+            "path": "tests/dxmt/test_present_frames.py",
+            "sha256": "64ff78d33b461f9453db71dfaba4571e504e83a5283c867d0702d273cd6804ab",
+            "size_bytes": 2549,
+            "checkpoint_contains_exact_bytes": true
+          },
+          "selected_symbols": [
+            {
+              "symbol": "VisibleFrames",
+              "start_line": 9,
+              "end_line": 38,
+              "sha256": "bacb84c771282529bf35d8a738179ff45713572a0d1cb877c7a4515ff68b4ee5"
+            }
+          ]
+        }
+      ],
+      "transformation": "Original three frame tests, namespace/pixel-mock path changes and explicit synthetic producer Path(__file__) corresponding to the new required producer argument. Add the current 2026 Pear contributors copyright header; retain the original MIT notice and unchanged test bodies."
+    },
+    {
+      "path": "tests/fixtures/controls/test_ordering_results.py",
+      "license": "MIT",
+      "imported_sha256": "061a74961f77c8130bc1e2f67d5e4f2b02a4d6c8affa5f53005b4c994c3917ea",
+      "imported_size_bytes": 3633,
+      "sources": [
+        {
+          "source": {
+            "path": "tests/cpu/test_ordering_results.py",
+            "sha256": "6abe691371214eb81652e6c59ecd00cf1395128abec075a3861358cb3d65a323",
+            "size_bytes": 3565,
+            "checkpoint_contains_exact_bytes": true
+          },
+          "selected_symbols": [
+            {
+              "symbol": "OrderingResultsTests",
+              "start_line": 7,
+              "end_line": 55,
+              "sha256": "05cc32edf5c0c048aef2e016ef6abf8a8dfd390368721e8f8c33874b12318ddc"
+            }
+          ]
+        }
+      ],
+      "transformation": "Namespace import only; all nine original finite ordering tests preserved. Add the current 2026 Pear contributors copyright header; retain the original MIT notice and unchanged test bodies."
+    },
+    {
+      "path": "tests/fixtures/controls/test_corpus_results.py",
+      "license": "MIT",
+      "imported_sha256": "9681e5ae035b22274c609d83f5e684051999f32476699c463dafe611f5937abd",
+      "imported_size_bytes": 6119,
+      "sources": [
+        {
+          "source": {
+            "path": "tests/cpu/test_harness.py",
+            "sha256": "fd3f6d8684669d8cbfb66d63494ccb9844fe262f3088de619ec4c97a96b34dac",
+            "size_bytes": 6957,
+            "checkpoint_contains_exact_bytes": true
+          },
+          "selected_symbols": [
+            {
+              "symbol": "HarnessTests",
+              "start_line": 16,
+              "end_line": 123,
+              "sha256": "525b4d3a1eff8847f3d88fb0b49dd5dcc3759519eb5873488d5d86ce97a0c5da"
+            }
+          ]
+        }
+      ],
+      "transformation": "Preserve original setUp/helpers and twelve result-contract tests. Rebind manifest file read to manifest(). Exclude only the two generator-only mixed tests; add separate duplicate JSON refusal in the new adapter tests. No source generator is imported.",
+      "included_methods": [
+        {
+          "name": "setUp",
+          "start_line": 17,
+          "end_line": 37,
+          "sha256": "8cf1cae06043cf407fed9ccc084f3a61fa2257f563253a942ba47d84a0532dc6"
+        },
+        {
+          "name": "assess",
+          "start_line": 39,
+          "end_line": 40,
+          "sha256": "12ec54440b6914a2aa083f81455408b34245e51eeeb0d305dea79dd7c3970808"
+        },
+        {
+          "name": "rejected",
+          "start_line": 42,
+          "end_line": 43,
+          "sha256": "6878a900768c981f2ec9788e69582f88ae6f213e28ad97cd7ea3c6e9c5299129"
+        },
+        {
+          "name": "test_windows_line_endings_do_not_change_contract_identity",
+          "start_line": 45,
+          "end_line": 54,
+          "sha256": "60065525886f84b1206f4ce590309d7e1e8d9b4e85096c52d1fe86a8606208d5"
+        },
+        {
+          "name": "test_declared_adaptation_preserves_original_outputs_and_boundary",
+          "start_line": 56,
+          "end_line": 63,
+          "sha256": "ddd346b91ffffe66b472ba7acd865a8ab40bb165cb40f67211ce8f7f39568127"
+        },
+        {
+          "name": "test_complete_declared_results",
+          "start_line": 65,
+          "end_line": 67,
+          "sha256": "125086267a1b1f043ae1f97e588a1f030cf1636d4b7ce2fa3e751c3632d24c05"
+        },
+        {
+          "name": "test_wrong_value_rejected_even_when_driver_claims_pass",
+          "start_line": 69,
+          "end_line": 71,
+          "sha256": "24de4e5ea509eb029b1667fa702d03956d481504388d63d40e088119b3ca501a"
+        },
+        {
+          "name": "test_missing_final_and_missing_case_rejected",
+          "start_line": 73,
+          "end_line": 75,
+          "sha256": "bfd1d93a1264446ef4352ccd71c19b0491fe9a30eeba081b55833f42325766cc"
+        },
+        {
+          "name": "test_truncated_build_cannot_shorten_comparison",
+          "start_line": 77,
+          "end_line": 80,
+          "sha256": "24974a14978b9d2db316ba1f10849f08e44355363a8ca7084d36b66378edb351"
+        },
+        {
+          "name": "test_binary_or_manifest_mix_rejected",
+          "start_line": 82,
+          "end_line": 86,
+          "sha256": "6a30eb15324fb7ff98981182cb6f8944ca690d59b421c40adfa2922007b692a0"
+        },
+        {
+          "name": "test_avx_upper_lane_corruption_rejected",
+          "start_line": 88,
+          "end_line": 90,
+          "sha256": "ea02427de9a0b6403cb2c00ebe11dbe7c6744f8dbb259165199b9dbb8dd92d6d"
+        },
+        {
+          "name": "test_feature_absence_is_unavailable_not_pass",
+          "start_line": 92,
+          "end_line": 97,
+          "sha256": "17a09320fc9270e68b1d49086eea22220dbc1eabc18ae101a3be268fc430054b"
+        },
+        {
+          "name": "test_undefined_flag_bit_is_masked_but_defined_bit_is_not",
+          "start_line": 99,
+          "end_line": 102,
+          "sha256": "9c2ecfe06fb89229b8722df4570af6d35c44bae97e1771e126274fa057e96436"
+        },
+        {
+          "name": "test_abi_state_is_independently_checked",
+          "start_line": 104,
+          "end_line": 106,
+          "sha256": "0b3dcc9355d9dd637ab97c8f5450d33cc093211751202ca7c5aae538ed5216e7"
+        },
+        {
+          "name": "test_crash_and_non_native_reference_rejected",
+          "start_line": 108,
+          "end_line": 111,
+          "sha256": "976dfc49cce742db394ec4c56649b5b08b7ea5cf97ccb7ecfcfcb081140f075e"
+        }
+      ]
+    },
+    {
+      "path": "tests/fixtures/controls/test_control_adapters.py",
+      "license": "GPL-3.0-or-later",
+      "sources": [],
+      "imported_sha256": "204bb81225e07930e329879173aaf927b389e20c52ab7638201387556319d321",
+      "imported_size_bytes": 11336,
+      "transformation": "New 18 synthetic tests for full19 completeness, native reference log/architecture and binary identity, explicit AVX unsupported status, fixed32768-pair/8-worker/8-retirement ordering, original candidate-admission refusal and presentation producer/terminal boundaries. No guest, native or capture execution."
+    }
+  ],
+  "contracts": {
+    "cpu_manifest": {
+      "source": {
+        "path": "tests/cpu/corpus.json",
+        "sha256": "c6ad9b39b475d1dbd7f0fbe377c50022a11d32d7b08e967e684b2250d1d593f9",
+        "size_bytes": 34111,
+        "checkpoint_contains_exact_bytes": true
+      },
+      "data": {
+        "boundaries": [
+          {
+            "categories": [
+              "callback"
+            ],
+            "expected": "Expected exit 42 after native file/time/event operations and exactly-once callback/context assertions; validate the same PE on native Windows.",
+            "id": "api-callback",
+            "source": {
+              "path": "tests/fex/guest_api.c",
+              "sha256": "d7d822004ec64cbd1fca703b1195abd40a55ac1d3825743178b7d7f1ed8a81ed"
+            },
+            "stage": 2,
+            "status": "unperformed"
+          },
+          {
+            "categories": [
+              "tls"
+            ],
+            "expected": "Expected exit 42; coordinator and one guest worker retain distinct TLS and return through normal thread cleanup.",
+            "id": "tls-thread",
+            "source": {
+              "path": "tests/fex/guest_thread.c",
+              "sha256": "82d3df3728da1b156b0b0c1ce01cdecb841e16358c1414937ffb6744309eef2f"
+            },
+            "stage": 2,
+            "status": "unperformed"
+          },
+          {
+            "categories": [
+              "fault",
+              "guard",
+              "callback"
+            ],
+            "expected": "Expected exit 42; one handled UD2 updates RIP/RAX, one data guard is cleared, nested native call returns correctly.",
+            "id": "guest-fault-guard",
+            "source": {
+              "path": "tests/fex/guest_exception.c",
+              "sha256": "5cd3d261ca38786c60e445eef07661a718f4a0c7b2b1e42a5f26bb1bbeae7e7a"
+            },
+            "stage": 2,
+            "status": "unperformed"
+          },
+          {
+            "categories": [
+              "code_change",
+              "memory"
+            ],
+            "expected": "Expected exit 42; coordinator and worker change 41 to 42, failed removal preserves executable metadata.",
+            "id": "code-invalidation",
+            "source": {
+              "path": "tests/fex/guest_invalidation.c",
+              "sha256": "2a61be720bf218f9bc4f2b684a7594eac849d3597b112fd5b46f44a198bf445f"
+            },
+            "stage": 2,
+            "status": "unperformed"
+          },
+          {
+            "categories": [
+              "abi"
+            ],
+            "expected": "Expected exit 42; running worker R12 is observed as 17, changed to 42 and resumed with normal join.",
+            "id": "suspend-context",
+            "source": {
+              "path": "tests/fex/guest_context.c",
+              "sha256": "a7a47ea0fb4290297911c75df3f2e62566df7a2c41614cc8bafa33cb43b1f58f"
+            },
+            "stage": 2,
+            "status": "unperformed"
+          },
+          {
+            "categories": [
+              "abi"
+            ],
+            "expected": "Exact stack alignment, nonvolatile GPRs and XMM6-XMM15 survive a native call and guest callback; capture input/output state and compare the same PE on native Windows.",
+            "id": "abi-state",
+            "source": null,
+            "stage": 2,
+            "status": "unperformed"
+          },
+          {
+            "categories": [
+              "seh",
+              "fault"
+            ],
+            "expected": "A guest frame with a declared handler receives an intentional exception, preserves nonvolatile state and executes the expected handler/finally path; compare native Windows before Pear.",
+            "id": "seh-unwind",
+            "source": null,
+            "stage": 2,
+            "status": "unperformed"
+          },
+          {
+            "categories": [
+              "atomic",
+              "ordering"
+            ],
+            "expected": "Two workers use aligned locked RMW operations; final count equals the declared combined iteration count, with no lost update; record each actual thread policy.",
+            "id": "locked-rmw",
+            "source": null,
+            "stage": 3,
+            "status": "unperformed"
+          },
+          {
+            "categories": [
+              "ordering"
+            ],
+            "expected": "Two workers perform plain assembly stores data then flag and loads flag then data; flag=1 with old data is forbidden under the declared x86 contract. Epoch handshakes remain outside the measured sequence.",
+            "id": "message-passing",
+            "source": null,
+            "stage": 3,
+            "status": "unperformed"
+          },
+          {
+            "categories": [
+              "ordering"
+            ],
+            "expected": "Two workers store own location then load the other; (0,0) is allowed without a fence. The locked/fenced variant forbids (0,0); missing worker/iteration records cannot pass.",
+            "id": "store-buffer",
+            "source": null,
+            "stage": 3,
+            "status": "unperformed"
+          }
+        ],
+        "cases": [
+          {
+            "categories": [
+              "partial_register"
+            ],
+            "config_sha256": "7c152c6cfdd839a812044451d101acd884ffd115e4bd8720d99165d872a0ba7d",
+            "contract": {
+              "environment": {},
+              "expectations": [
+                {
+                  "lane": 0,
+                  "register": "R10",
+                  "value": "0x00000000000000ff"
+                },
+                {
+                  "lane": 0,
+                  "register": "R11",
+                  "value": "0x00000000000000ff"
+                },
+                {
+                  "lane": 0,
+                  "register": "R12",
+                  "value": "0x41424344454600ff"
+                },
+                {
+                  "lane": 0,
+                  "register": "R13",
+                  "value": "0x00000000000000ff"
+                },
+                {
+                  "lane": 0,
+                  "register": "R14",
+                  "value": "0x00000000000000ff"
+                },
+                {
+                  "lane": 0,
+                  "register": "R15",
+                  "value": "0x41424344454600ff"
+                }
+              ],
+              "features": [],
+              "initial_memory": [],
+              "regions": []
+            },
+            "id": "zero-extension",
+            "masks": [
+              {
+                "bits": "0xffffffffffffffff",
+                "reason": "All bits defined by the selected instruction result."
+              },
+              {
+                "bits": "0xffffffffffffffff",
+                "reason": "All bits defined by the selected instruction result."
+              },
+              {
+                "bits": "0xffffffffffffffff",
+                "reason": "All bits defined by the selected instruction result."
+              },
+              {
+                "bits": "0xffffffffffffffff",
+                "reason": "All bits defined by the selected instruction result."
+              },
+              {
+                "bits": "0xffffffffffffffff",
+                "reason": "All bits defined by the selected instruction result."
+              },
+              {
+                "bits": "0xffffffffffffffff",
+                "reason": "All bits defined by the selected instruction result."
+              }
+            ],
+            "path": "unittests/ASM/TwoByte/0F_B6.asm",
+            "reference": "native_windows_x64_same_pe_unavailable",
+            "requirement": "required",
+            "setup": {
+              "entry": "zero_gprs_vectors_preserve_native_abi_owned_stack",
+              "mxcsr": 8064,
+              "scratch_address": 3758096384,
+              "scratch_size": 65536,
+              "termination": "capture_at_hlt_without_flag_changes",
+              "x87_control": 895
+            },
+            "sha256": "c084de325e2a765749bcb51c44e2630fe07571b5adeb660e423103a00b79a6f4"
+          },
+          {
+            "categories": [
+              "partial_register",
+              "flags"
+            ],
+            "config_sha256": "9ca2af83a178ce1a66365317bf88c752120482513d78c8c76691f80841cfa7b0",
+            "contract": {
+              "environment": {},
+              "expectations": [
+                {
+                  "lane": 0,
+                  "register": "RAX",
+                  "value": "0xaeadacac9a9a41e5"
+                },
+                {
+                  "lane": 0,
+                  "register": "RBX",
+                  "value": "0x6162636520238df8"
+                }
+              ],
+              "features": [],
+              "initial_memory": [],
+              "regions": []
+            },
+            "id": "carry-widths",
+            "masks": [
+              {
+                "bits": "0xffffffffffffffff",
+                "reason": "All bits defined by the selected instruction result."
+              },
+              {
+                "bits": "0xffffffffffffffff",
+                "reason": "All bits defined by the selected instruction result."
+              }
+            ],
+            "path": "unittests/ASM/FEX_bugs/add_sub_carry.asm",
+            "reference": "native_windows_x64_same_pe_unavailable",
+            "requirement": "required",
+            "setup": {
+              "entry": "zero_gprs_vectors_preserve_native_abi_owned_stack",
+              "mxcsr": 8064,
+              "scratch_address": 3758096384,
+              "scratch_size": 65536,
+              "termination": "capture_at_hlt_without_flag_changes",
+              "x87_control": 895
+            },
+            "sha256": "6ffa07896982c0de459445a2f71548d538402a6a36dedf0f0d8780e1b9673991"
+          },
+          {
+            "categories": [
+              "flags"
+            ],
+            "config_sha256": "612e40d3d6c469636c3b6c74ee26d4516de5e7b2598489aa03a04ffa2503c8ab",
+            "contract": {
+              "environment": {},
+              "expectations": [
+                {
+                  "lane": 0,
+                  "register": "RAX",
+                  "value": "0x0000000000004600"
+                }
+              ],
+              "features": [],
+              "initial_memory": [],
+              "regions": []
+            },
+            "id": "xor-flags",
+            "masks": [
+              {
+                "bits": "0xffffffffffffefff",
+                "reason": "LAHF AF bit (RAX bit 12) is undefined after XOR; frozen before execution."
+              }
+            ],
+            "path": "unittests/ASM/FEX_bugs/xor_flags.asm",
+            "reference": "native_windows_x64_same_pe_unavailable",
+            "requirement": "required",
+            "setup": {
+              "entry": "zero_gprs_vectors_preserve_native_abi_owned_stack",
+              "mxcsr": 8064,
+              "scratch_address": 3758096384,
+              "scratch_size": 65536,
+              "termination": "capture_at_hlt_without_flag_changes",
+              "x87_control": 895
+            },
+            "sha256": "58e8ff13cec36cfb70f4e9a07daf7323bb309a368ff08b97683f84aabfd63cbc"
+          },
+          {
+            "categories": [
+              "flags",
+              "partial_register"
+            ],
+            "config_sha256": "0ebef2bc0aa9feb2e053a4e94e62fe6857c2c01b0a228af8124ab000acb310a7",
+            "contract": {
+              "environment": {},
+              "expectations": [
+                {
+                  "lane": 0,
+                  "register": "R12",
+                  "value": "0x0000000000000202"
+                },
+                {
+                  "lane": 0,
+                  "register": "R13",
+                  "value": "0x0000000000000202"
+                },
+                {
+                  "lane": 0,
+                  "register": "R14",
+                  "value": "0x0000000000000202"
+                },
+                {
+                  "lane": 0,
+                  "register": "R15",
+                  "value": "0x0000000000000202"
+                },
+                {
+                  "lane": 0,
+                  "register": "RAX",
+                  "value": "0x0000000082345679"
+                }
+              ],
+              "features": [],
+              "initial_memory": [],
+              "regions": []
+            },
+            "id": "zero-shift-flags",
+            "masks": [
+              {
+                "bits": "0x00000000000008d5",
+                "reason": "Compare CF/PF/AF/ZF/SF/OF; exclude OS-controlled IF and reserved flags."
+              },
+              {
+                "bits": "0x00000000000008d5",
+                "reason": "Compare CF/PF/AF/ZF/SF/OF; exclude OS-controlled IF and reserved flags."
+              },
+              {
+                "bits": "0x00000000000008d5",
+                "reason": "Compare CF/PF/AF/ZF/SF/OF; exclude OS-controlled IF and reserved flags."
+              },
+              {
+                "bits": "0x00000000000008d5",
+                "reason": "Compare CF/PF/AF/ZF/SF/OF; exclude OS-controlled IF and reserved flags."
+              },
+              {
+                "bits": "0xffffffffffffffff",
+                "reason": "All bits defined by the selected instruction result."
+              }
+            ],
+            "path": "unittests/ASM/FEX_bugs/ShiftZeroFlagsUpdate.asm",
+            "reference": "native_windows_x64_same_pe_unavailable",
+            "requirement": "required",
+            "setup": {
+              "entry": "zero_gprs_vectors_preserve_native_abi_owned_stack",
+              "mxcsr": 8064,
+              "scratch_address": 3758096384,
+              "scratch_size": 65536,
+              "termination": "capture_at_hlt_without_flag_changes",
+              "x87_control": 895
+            },
+            "sha256": "9e7e59da59556c93a0346ff860270b46db99b3ecca9a6440049ef9ee9e7e8971"
+          },
+          {
+            "categories": [
+              "partial_register",
+              "atomic"
+            ],
+            "config_sha256": "6d1ccab24d955e9ea8cdce5c95683126e3c6a8ff348505440f22b346f9028457",
+            "contract": {
+              "environment": {},
+              "expectations": [
+                {
+                  "lane": 0,
+                  "register": "RAX",
+                  "value": "0x00000000ccddff00"
+                },
+                {
+                  "lane": 0,
+                  "register": "RBX",
+                  "value": "0x8899aabbccddff00"
+                }
+              ],
+              "features": [],
+              "initial_memory": [],
+              "regions": []
+            },
+            "id": "cmpxchg-eax",
+            "masks": [
+              {
+                "bits": "0xffffffffffffffff",
+                "reason": "All bits defined by the selected instruction result."
+              },
+              {
+                "bits": "0xffffffffffffffff",
+                "reason": "All bits defined by the selected instruction result."
+              }
+            ],
+            "path": "unittests/ASM/FEX_bugs/cmpxchg_eax.asm",
+            "reference": "native_windows_x64_same_pe_unavailable",
+            "requirement": "required",
+            "setup": {
+              "entry": "zero_gprs_vectors_preserve_native_abi_owned_stack",
+              "mxcsr": 8064,
+              "scratch_address": 3758096384,
+              "scratch_size": 65536,
+              "termination": "capture_at_hlt_without_flag_changes",
+              "x87_control": 895
+            },
+            "sha256": "619ed6b1aa8a9e4a7440fd22682fc388e4f70503d50f43e71deef96e0db2fbc7"
+          },
+          {
+            "categories": [
+              "atomic",
+              "memory"
+            ],
+            "config_sha256": "5d50b2349ce9ee3cbc93a923c5f3e7ef6ae2cdd162f17498a5b31abaf9a872d6",
+            "contract": {
+              "environment": {},
+              "expectations": [
+                {
+                  "lane": 0,
+                  "register": "R12",
+                  "value": "0x7172737475767779"
+                },
+                {
+                  "lane": 0,
+                  "register": "R13",
+                  "value": "0x0000000065666769"
+                },
+                {
+                  "lane": 0,
+                  "register": "R14",
+                  "value": "0x0000000000005759"
+                },
+                {
+                  "lane": 0,
+                  "register": "R15",
+                  "value": "0x0000000000000049"
+                },
+                {
+                  "lane": 0,
+                  "register": "RAX",
+                  "value": "0x4142434445464749"
+                },
+                {
+                  "lane": 0,
+                  "register": "RBX",
+                  "value": "0x5152535455565759"
+                },
+                {
+                  "lane": 0,
+                  "register": "RCX",
+                  "value": "0x6162636465666769"
+                },
+                {
+                  "lane": 0,
+                  "register": "RDX",
+                  "value": "0x7172737475767779"
+                }
+              ],
+              "features": [],
+              "initial_memory": [],
+              "regions": []
+            },
+            "id": "xadd-widths",
+            "masks": [
+              {
+                "bits": "0xffffffffffffffff",
+                "reason": "All bits defined by the selected instruction result."
+              },
+              {
+                "bits": "0xffffffffffffffff",
+                "reason": "All bits defined by the selected instruction result."
+              },
+              {
+                "bits": "0xffffffffffffffff",
+                "reason": "All bits defined by the selected instruction result."
+              },
+              {
+                "bits": "0xffffffffffffffff",
+                "reason": "All bits defined by the selected instruction result."
+              },
+              {
+                "bits": "0xffffffffffffffff",
+                "reason": "All bits defined by the selected instruction result."
+              },
+              {
+                "bits": "0xffffffffffffffff",
+                "reason": "All bits defined by the selected instruction result."
+              },
+              {
+                "bits": "0xffffffffffffffff",
+                "reason": "All bits defined by the selected instruction result."
+              },
+              {
+                "bits": "0xffffffffffffffff",
+                "reason": "All bits defined by the selected instruction result."
+              }
+            ],
+            "path": "unittests/ASM/TwoByte/0F_C0.asm",
+            "reference": "native_windows_x64_same_pe_unavailable",
+            "requirement": "required",
+            "setup": {
+              "entry": "zero_gprs_vectors_preserve_native_abi_owned_stack",
+              "mxcsr": 8064,
+              "scratch_address": 3758096384,
+              "scratch_size": 65536,
+              "termination": "capture_at_hlt_without_flag_changes",
+              "x87_control": 895
+            },
+            "sha256": "f761d450902c927361f98cf69d067fd1d9287cabd2d191a7bfa225b801a6159b"
+          },
+          {
+            "categories": [
+              "simd",
+              "float"
+            ],
+            "config_sha256": "bae1abb709927a2fd4006388e73bee261637bd50c1ef301328174085a5da47cd",
+            "contract": {
+              "environment": {},
+              "expectations": [
+                {
+                  "lane": 0,
+                  "register": "XMM0",
+                  "value": "0x4100000040c00000"
+                },
+                {
+                  "lane": 1,
+                  "register": "XMM0",
+                  "value": "0x4140000041200000"
+                },
+                {
+                  "lane": 0,
+                  "register": "XMM1",
+                  "value": "0x4100000040c00000"
+                },
+                {
+                  "lane": 1,
+                  "register": "XMM1",
+                  "value": "0x4140000041200000"
+                },
+                {
+                  "lane": 0,
+                  "register": "XMM2",
+                  "value": "0x40c0000040a00000"
+                },
+                {
+                  "lane": 1,
+                  "register": "XMM2",
+                  "value": "0x4100000040e00000"
+                }
+              ],
+              "features": [],
+              "initial_memory": [],
+              "regions": []
+            },
+            "id": "packed-float-add",
+            "masks": [
+              {
+                "bits": "0xffffffffffffffff",
+                "reason": "All bits defined by the selected instruction result."
+              },
+              {
+                "bits": "0xffffffffffffffff",
+                "reason": "All bits defined by the selected instruction result."
+              },
+              {
+                "bits": "0xffffffffffffffff",
+                "reason": "All bits defined by the selected instruction result."
+              },
+              {
+                "bits": "0xffffffffffffffff",
+                "reason": "All bits defined by the selected instruction result."
+              },
+              {
+                "bits": "0xffffffffffffffff",
+                "reason": "All bits defined by the selected instruction result."
+              },
+              {
+                "bits": "0xffffffffffffffff",
+                "reason": "All bits defined by the selected instruction result."
+              }
+            ],
+            "path": "unittests/ASM/TwoByte/0F_58.asm",
+            "reference": "native_windows_x64_same_pe_unavailable",
+            "requirement": "required",
+            "setup": {
+              "entry": "zero_gprs_vectors_preserve_native_abi_owned_stack",
+              "mxcsr": 8064,
+              "scratch_address": 3758096384,
+              "scratch_size": 65536,
+              "termination": "capture_at_hlt_without_flag_changes",
+              "x87_control": 895
+            },
+            "sha256": "8263c2c7a3421a2552ec07b1d1127cbd24749da00d7ca81e1703908ab3db5efe"
+          },
+          {
+            "categories": [
+              "simd",
+              "float"
+            ],
+            "config_sha256": "94732996eee9008952c45d4338eac7ae448aecd1d42a3979bb07f94746148fec",
+            "contract": {
+              "environment": {},
+              "expectations": [
+                {
+                  "lane": 0,
+                  "register": "XMM0",
+                  "value": "0x4014000000000000"
+                },
+                {
+                  "lane": 1,
+                  "register": "XMM0",
+                  "value": "0x5152535455565758"
+                },
+                {
+                  "lane": 0,
+                  "register": "XMM1",
+                  "value": "0x4010000000000000"
+                },
+                {
+                  "lane": 1,
+                  "register": "XMM1",
+                  "value": "0x5152535455565758"
+                },
+                {
+                  "lane": 0,
+                  "register": "XMM2",
+                  "value": "0x4039000000000000"
+                },
+                {
+                  "lane": 1,
+                  "register": "XMM2",
+                  "value": "0x5152535455565758"
+                },
+                {
+                  "lane": 0,
+                  "register": "XMM3",
+                  "value": "0x4030000000000000"
+                },
+                {
+                  "lane": 1,
+                  "register": "XMM3",
+                  "value": "0x5152535455565758"
+                },
+                {
+                  "lane": 0,
+                  "register": "XMM4",
+                  "value": "0x403a000000000000"
+                },
+                {
+                  "lane": 1,
+                  "register": "XMM4",
+                  "value": "0x5152535455565758"
+                },
+                {
+                  "lane": 0,
+                  "register": "XMM5",
+                  "value": "0x403d000000000000"
+                },
+                {
+                  "lane": 1,
+                  "register": "XMM5",
+                  "value": "0x5152535455565758"
+                }
+              ],
+              "features": [],
+              "initial_memory": [],
+              "regions": []
+            },
+            "id": "scalar-double-add",
+            "masks": [
+              {
+                "bits": "0xffffffffffffffff",
+                "reason": "All bits defined by the selected instruction result."
+              },
+              {
+                "bits": "0xffffffffffffffff",
+                "reason": "All bits defined by the selected instruction result."
+              },
+              {
+                "bits": "0xffffffffffffffff",
+                "reason": "All bits defined by the selected instruction result."
+              },
+              {
+                "bits": "0xffffffffffffffff",
+                "reason": "All bits defined by the selected instruction result."
+              },
+              {
+                "bits": "0xffffffffffffffff",
+                "reason": "All bits defined by the selected instruction result."
+              },
+              {
+                "bits": "0xffffffffffffffff",
+                "reason": "All bits defined by the selected instruction result."
+              },
+              {
+                "bits": "0xffffffffffffffff",
+                "reason": "All bits defined by the selected instruction result."
+              },
+              {
+                "bits": "0xffffffffffffffff",
+                "reason": "All bits defined by the selected instruction result."
+              },
+              {
+                "bits": "0xffffffffffffffff",
+                "reason": "All bits defined by the selected instruction result."
+              },
+              {
+                "bits": "0xffffffffffffffff",
+                "reason": "All bits defined by the selected instruction result."
+              },
+              {
+                "bits": "0xffffffffffffffff",
+                "reason": "All bits defined by the selected instruction result."
+              },
+              {
+                "bits": "0xffffffffffffffff",
+                "reason": "All bits defined by the selected instruction result."
+              }
+            ],
+            "path": "unittests/ASM/REPNE/F2_58.asm",
+            "reference": "native_windows_x64_same_pe_unavailable",
+            "requirement": "required",
+            "setup": {
+              "entry": "zero_gprs_vectors_preserve_native_abi_owned_stack",
+              "mxcsr": 8064,
+              "scratch_address": 3758096384,
+              "scratch_size": 65536,
+              "termination": "capture_at_hlt_without_flag_changes",
+              "x87_control": 895
+            },
+            "sha256": "9088b6264e9f714ef7057cc6197941f2320350e6270aafd1cd9fedf1014b1407"
+          },
+          {
+            "categories": [
+              "float",
+              "partial_register"
+            ],
+            "config_sha256": "eec20b434ed6eb8b2e80b8bc277fd408ade94be69b56faa2c2049e90b55db60f",
+            "contract": {
+              "environment": {},
+              "expectations": [
+                {
+                  "lane": 0,
+                  "register": "RAX",
+                  "value": "0x0000000000000001"
+                },
+                {
+                  "lane": 0,
+                  "register": "RBP",
+                  "value": "0x00000000fffffffe"
+                },
+                {
+                  "lane": 0,
+                  "register": "RBX",
+                  "value": "0x0000000000000002"
+                },
+                {
+                  "lane": 0,
+                  "register": "RCX",
+                  "value": "0x0000000000000003"
+                },
+                {
+                  "lane": 0,
+                  "register": "RDX",
+                  "value": "0x0000000000000004"
+                },
+                {
+                  "lane": 0,
+                  "register": "RSI",
+                  "value": "0xfffffffffffffffc"
+                }
+              ],
+              "features": [],
+              "initial_memory": [],
+              "regions": []
+            },
+            "id": "float-to-integer",
+            "masks": [
+              {
+                "bits": "0xffffffffffffffff",
+                "reason": "All bits defined by the selected instruction result."
+              },
+              {
+                "bits": "0xffffffffffffffff",
+                "reason": "All bits defined by the selected instruction result."
+              },
+              {
+                "bits": "0xffffffffffffffff",
+                "reason": "All bits defined by the selected instruction result."
+              },
+              {
+                "bits": "0xffffffffffffffff",
+                "reason": "All bits defined by the selected instruction result."
+              },
+              {
+                "bits": "0xffffffffffffffff",
+                "reason": "All bits defined by the selected instruction result."
+              },
+              {
+                "bits": "0xffffffffffffffff",
+                "reason": "All bits defined by the selected instruction result."
+              }
+            ],
+            "path": "unittests/ASM/REP/F3_2C.asm",
+            "reference": "native_windows_x64_same_pe_unavailable",
+            "requirement": "required",
+            "setup": {
+              "entry": "zero_gprs_vectors_preserve_native_abi_owned_stack",
+              "mxcsr": 8064,
+              "scratch_address": 3758096384,
+              "scratch_size": 65536,
+              "termination": "capture_at_hlt_without_flag_changes",
+              "x87_control": 895
+            },
+            "sha256": "429cc030a0d2bad143c9fa09f07722e345b0cbc1364a0d13833f3fdf79dd1c35"
+          },
+          {
+            "categories": [
+              "memory"
+            ],
+            "config_sha256": "624c38e0142ec46f53ea0a63f442ecc996f86317e08042295f5162ad6548543b",
+            "contract": {
+              "environment": {},
+              "expectations": [
+                {
+                  "lane": 0,
+                  "register": "RAX",
+                  "value": "0x00000000ddccbbaa"
+                }
+              ],
+              "features": [],
+              "initial_memory": [
+                {
+                  "address": 268435456,
+                  "bytes": "aabbccdd"
+                }
+              ],
+              "regions": [
+                {
+                  "address": 268435456,
+                  "size": 4096
+                }
+              ]
+            },
+            "id": "configured-memory",
+            "masks": [
+              {
+                "bits": "0xffffffffffffffff",
+                "reason": "All bits defined by the selected instruction result."
+              }
+            ],
+            "path": "unittests/ASM/MemoryData.asm",
+            "reference": "native_windows_x64_same_pe_unavailable",
+            "requirement": "required",
+            "setup": {
+              "entry": "zero_gprs_vectors_preserve_native_abi_owned_stack",
+              "mxcsr": 8064,
+              "scratch_address": 3758096384,
+              "scratch_size": 65536,
+              "termination": "capture_at_hlt_without_flag_changes",
+              "x87_control": 895
+            },
+            "sha256": "66bdad4663d1134b4fd2b64f49ca8e213695eb4c027a214215c5f5b2b7c038ad"
+          },
+          {
+            "categories": [
+              "memory"
+            ],
+            "config_sha256": "a175de7c275561dafbf7f45cea95bccb1b35f5d0e97a05655a94275c35350602",
+            "contract": {
+              "environment": {},
+              "expectations": [
+                {
+                  "lane": 0,
+                  "register": "RAX",
+                  "value": "0x4142434445464748"
+                },
+                {
+                  "lane": 0,
+                  "register": "RBX",
+                  "value": "0x5152535455565758"
+                },
+                {
+                  "lane": 0,
+                  "register": "RCX",
+                  "value": "0x5152535455565758"
+                }
+              ],
+              "features": [],
+              "initial_memory": [
+                {
+                  "address": 2147479552,
+                  "bytes": "4847464544434241"
+                }
+              ],
+              "regions": [
+                {
+                  "address": 2147479552,
+                  "size": 4096
+                }
+              ]
+            },
+            "id": "absolute-displacement",
+            "masks": [
+              {
+                "bits": "0xffffffffffffffff",
+                "reason": "All bits defined by the selected instruction result."
+              },
+              {
+                "bits": "0xffffffffffffffff",
+                "reason": "All bits defined by the selected instruction result."
+              },
+              {
+                "bits": "0xffffffffffffffff",
+                "reason": "All bits defined by the selected instruction result."
+              }
+            ],
+            "path": "unittests/ASM/Displacement_Encoding.asm",
+            "reference": "native_windows_x64_same_pe_unavailable",
+            "requirement": "required",
+            "setup": {
+              "entry": "zero_gprs_vectors_preserve_native_abi_owned_stack",
+              "mxcsr": 8064,
+              "scratch_address": 3758096384,
+              "scratch_size": 65536,
+              "termination": "capture_at_hlt_without_flag_changes",
+              "x87_control": 895
+            },
+            "sha256": "f5c5f90702fb1fe1c239bc7361ce31ddb536ac4fd3c65f225390ad0cfae0de27"
+          },
+          {
+            "categories": [
+              "simd",
+              "float"
+            ],
+            "config_sha256": "109faa8e17fbeecd30c2527c90ee925c51bdd2957f1b01b797c595e00197aa5d",
+            "contract": {
+              "environment": {},
+              "expectations": [
+                {
+                  "lane": 0,
+                  "register": "XMM0",
+                  "value": "0x4000000000000000"
+                },
+                {
+                  "lane": 1,
+                  "register": "XMM0",
+                  "value": "0x7d7ccd8836d09fc2"
+                },
+                {
+                  "lane": 2,
+                  "register": "XMM0",
+                  "value": "0xccdbcfc31f3ff0f3"
+                },
+                {
+                  "lane": 3,
+                  "register": "XMM0",
+                  "value": "0x108390defebac4be"
+                },
+                {
+                  "lane": 0,
+                  "register": "XMM1",
+                  "value": "0x4000000000000000"
+                },
+                {
+                  "lane": 1,
+                  "register": "XMM1",
+                  "value": "0x4549bd7eb46a1278"
+                },
+                {
+                  "lane": 2,
+                  "register": "XMM1",
+                  "value": "0x0000000000000000"
+                },
+                {
+                  "lane": 3,
+                  "register": "XMM1",
+                  "value": "0x0000000000000000"
+                },
+                {
+                  "lane": 0,
+                  "register": "XMM2",
+                  "value": "0x3ff0000000000000"
+                },
+                {
+                  "lane": 1,
+                  "register": "XMM2",
+                  "value": "0x4549bd7eb46a1278"
+                },
+                {
+                  "lane": 2,
+                  "register": "XMM2",
+                  "value": "0xf793ef673dac6e4c"
+                },
+                {
+                  "lane": 3,
+                  "register": "XMM2",
+                  "value": "0xbb7b5b3d85d34271"
+                },
+                {
+                  "lane": 0,
+                  "register": "XMM3",
+                  "value": "0x3ff0000000000000"
+                },
+                {
+                  "lane": 1,
+                  "register": "XMM3",
+                  "value": "0x4549bd7eb46a1278"
+                },
+                {
+                  "lane": 2,
+                  "register": "XMM3",
+                  "value": "0xf793ef673dac6e4c"
+                },
+                {
+                  "lane": 3,
+                  "register": "XMM3",
+                  "value": "0xbb7b5b3d85d34271"
+                }
+              ],
+              "features": [
+                "AVX"
+              ],
+              "initial_memory": [],
+              "regions": []
+            },
+            "id": "avx-lane-preservation",
+            "masks": [
+              {
+                "bits": "0xffffffffffffffff",
+                "reason": "All bits defined by the selected instruction result."
+              },
+              {
+                "bits": "0xffffffffffffffff",
+                "reason": "All bits defined by the selected instruction result."
+              },
+              {
+                "bits": "0xffffffffffffffff",
+                "reason": "All bits defined by the selected instruction result."
+              },
+              {
+                "bits": "0xffffffffffffffff",
+                "reason": "All bits defined by the selected instruction result."
+              },
+              {
+                "bits": "0xffffffffffffffff",
+                "reason": "All bits defined by the selected instruction result."
+              },
+              {
+                "bits": "0xffffffffffffffff",
+                "reason": "All bits defined by the selected instruction result."
+              },
+              {
+                "bits": "0xffffffffffffffff",
+                "reason": "All bits defined by the selected instruction result."
+              },
+              {
+                "bits": "0xffffffffffffffff",
+                "reason": "All bits defined by the selected instruction result."
+              },
+              {
+                "bits": "0xffffffffffffffff",
+                "reason": "All bits defined by the selected instruction result."
+              },
+              {
+                "bits": "0xffffffffffffffff",
+                "reason": "All bits defined by the selected instruction result."
+              },
+              {
+                "bits": "0xffffffffffffffff",
+                "reason": "All bits defined by the selected instruction result."
+              },
+              {
+                "bits": "0xffffffffffffffff",
+                "reason": "All bits defined by the selected instruction result."
+              },
+              {
+                "bits": "0xffffffffffffffff",
+                "reason": "All bits defined by the selected instruction result."
+              },
+              {
+                "bits": "0xffffffffffffffff",
+                "reason": "All bits defined by the selected instruction result."
+              },
+              {
+                "bits": "0xffffffffffffffff",
+                "reason": "All bits defined by the selected instruction result."
+              },
+              {
+                "bits": "0xffffffffffffffff",
+                "reason": "All bits defined by the selected instruction result."
+              }
+            ],
+            "path": "unittests/ASM/SSELanePreservation/addsd.asm",
+            "reference": "native_windows_x64_same_pe_unavailable",
+            "requirement": "required_if_exposed",
+            "setup": {
+              "entry": "zero_gprs_vectors_preserve_native_abi_owned_stack",
+              "mxcsr": 8064,
+              "scratch_address": 3758096384,
+              "scratch_size": 65536,
+              "termination": "capture_at_hlt_without_flag_changes",
+              "x87_control": 895
+            },
+            "sha256": "4abf97393a4734dce505abd8e7e65ada4e20df13e362f1ba70440fd8d8f818a3"
+          }
+        ],
+        "scope": "cpu_corpus_contract",
+        "sources_sha256": "69727b6125bbea096c1d635e7b2cdb5e4c794c2df9fa1964568763645e190839",
+        "unsupported": {
+          "addresses": "Required fixed guest mappings must succeed. Round/coalesce Windows reservations without silently relocating absolute operands. Scratch is guest data, not native executable memory.",
+          "config": "Match/Ignore differential-state masks, MM/x87 and non-production Env overrides are not supported by the first selected harness contract; census names exclusions.",
+          "features": "AVX lane case requires actual guest exposure plus native AVX/OSXSAVE availability; no 128-bit-only pass. Other unselected ISA features remain unqualified, not proven absent from the game.",
+          "fp": "Finite normal-value SSE conversion/arithmetic cases; arbitrary NaN payloads, x87 extended precision and all rounding/DAZ/FTZ modes remain unqualified.",
+          "i386": "Execution unperformed; module construction in #5 is not helper qualification. Required Steam helpers remain #11 dependency.",
+          "ordering": "Unperformed until actual per-thread-policy and multiworker cases execute. A single-thread xadd/cmpxchg result does not prove ordering."
+        },
+        "version": 1
+      },
+      "canonical_sha256": "c6ad9b39b475d1dbd7f0fbe377c50022a11d32d7b08e967e684b2250d1d593f9"
+    },
+    "cpu_adaptations": {
+      "source": {
+        "path": "tests/cpu/adaptations.json",
+        "sha256": "17bf454588ee9544cad95d8b78fd8d65ac5bc96579eae88d1d191b03695167ed",
+        "size_bytes": 698,
+        "checkpoint_contains_exact_bytes": true
+      },
+      "data": {
+        "cases": {
+          "absolute-displacement": {
+            "additional_expectation": {
+              "lane": 0,
+              "register": "R8",
+              "value": "0x000000007ffffff8"
+            },
+            "effective_data_page": 268496896,
+            "original_data_page": 2147479552,
+            "reason": "The Pear image arena occupies 0x7fff0000, so the original Linux fixed data page conflicts with the PE loader before instruction execution. Keep all upstream register expectations; relocate only data accesses and retain the original upper disp32 LEA boundary in R8.",
+            "source_sha256": "f5c5f90702fb1fe1c239bc7361ce31ddb536ac4fd3c65f225390ad0cfae0de27"
+          }
+        },
+        "scope": "windows_pe_fixture_adaptation",
+        "version": 1
+      },
+      "canonical_sha256": "17bf454588ee9544cad95d8b78fd8d65ac5bc96579eae88d1d191b03695167ed"
+    },
+    "ordering_budget": {
+      "source": {
+        "owner": "Pear Task6 original finite ordering build",
+        "relative_path": ".build/task6/stage3-native-pe3/build.json",
+        "sha256": "ec5a0852b361b6bc5fb5e4d4b890c1224889fb43c26bf3eb3357a2d39981d3e0"
+      },
+      "data": {
+        "iterations": 2048,
+        "rounds": 4
+      },
+      "canonical_sha256": "b4b194d5e5f1eca79c39afd30145a8affd8f02326241cff0607f43daa6c9d397",
+      "expected_measured_pairs": 32768,
+      "expected_workers": 8,
+      "expected_retirements": 8
+    }
+  },
+  "license_boundary": "Original MIT bodies keep their notices and LICENSES/MIT.txt permissions. Pear legacy source without an inline notice retains GPL-3.0-or-later under the repository policy. Corpus metadata is Pear generated data; its source identities/attribution remain unchanged. No upstream ASM or fixture binary is copied here.",
+  "required_pending_gates": [
+    "Current artifact-specific admission and producer/fixture/log binding",
+    "Original supervised fresh native runs",
+    "No reuse of old Task8 runtime execution as D36 candidate execution",
+    "Seven D36 cases do not replace these controls"
+  ],
+  "oracle_preservation_checks": [
+    {
+      "source": "tools/dxmt/run_pairing.py",
+      "destination": "pear_runtime/fixtures/controls/pairing.py",
+      "symbol": "CASES",
+      "transformation": "exact",
+      "imported_sha256": "81d29b6bfe27bc21d8de2b9b693d571e336b93b8109a2613d8f8e34b487411e2"
+    },
+    {
+      "source": "tools/dxmt/run_pairing.py",
+      "destination": "pear_runtime/fixtures/controls/pairing.py",
+      "symbol": "NATIVE_FIELDS",
+      "transformation": "exact",
+      "imported_sha256": "99c34f2ebed2db68bd67db0b62a3ece6df1cbf0c0c47bbd8894f6604ac23b829"
+    },
+    {
+      "source": "tools/dxmt/run_pairing.py",
+      "destination": "pear_runtime/fixtures/controls/pairing.py",
+      "symbol": "PE_FIELDS",
+      "transformation": "exact",
+      "imported_sha256": "08ae16d919446e7bd6baca2b40b4f8647d59d62c694fbf1f1c4d226e229b1a8d"
+    },
+    {
+      "source": "tools/dxmt/run_pairing.py",
+      "destination": "pear_runtime/fixtures/controls/pairing.py",
+      "symbol": "integer",
+      "transformation": "exact",
+      "imported_sha256": "bca1755d17044083ec3733484c832580a00475b245f16eb8d1791f144b231d8d"
+    },
+    {
+      "source": "tools/dxmt/run_pairing.py",
+      "destination": "pear_runtime/fixtures/controls/pairing.py",
+      "symbol": "native_rows",
+      "transformation": "exact",
+      "imported_sha256": "8a112f81c2756aed5d85acbea998f3ecdd2dbc09d0657906f688f8675f924ea5"
+    },
+    {
+      "source": "tools/dxmt/run_pairing.py",
+      "destination": "pear_runtime/fixtures/controls/pairing.py",
+      "symbol": "pe_rows",
+      "transformation": "exact",
+      "imported_sha256": "029d93192424536b73ccb451d5cfe583efd4526e20bcf5474699e8405892b1d4"
+    },
+    {
+      "source": "tools/dxmt/common.py",
+      "destination": "pear_runtime/fixtures/controls/pairing.py",
+      "symbol": "fields",
+      "transformation": "exact",
+      "imported_sha256": "c1aac7be02593baa0df47408c986a680fd1f19e908ec78d552ef90fc5e7188c0"
+    },
+    {
+      "source": "tools/dxmt/translated_surface_check.py",
+      "destination": "pear_runtime/fixtures/controls/pairing.py",
+      "symbol": "CASES",
+      "transformation": "v2 CASES name -> SURFACE_CASES only",
+      "imported_sha256": "55ca3b506c297b1b329c8862ca6c8ce90a030b6d8fca0d675abb455814bc6df8"
+    },
+    {
+      "source": "tools/dxmt/translated_surface_check.py",
+      "destination": "pear_runtime/fixtures/controls/pairing.py",
+      "symbol": "controls",
+      "transformation": "v2 CASES name -> SURFACE_CASES only",
+      "imported_sha256": "cbc79311906c40eab5f3efaa658908742d492e327855488135e7ba5d73cc5a2b"
+    },
+    {
+      "source": "tools/cpu/results.py",
+      "destination": "pear_runtime/fixtures/controls/corpus.py",
+      "symbol": "require",
+      "transformation": "exact",
+      "imported_sha256": "771470ca6047ea7b84814e6cc23c2357b927e95ad29ed2fbd7b34f2969c68de4"
+    },
+    {
+      "source": "tools/cpu/results.py",
+      "destination": "pear_runtime/fixtures/controls/corpus.py",
+      "symbol": "canonical",
+      "transformation": "exact",
+      "imported_sha256": "9158bf35e7fd9ea654ab33bc9528016a3883cc1ac2485aed7b730989f90c02fd"
+    },
+    {
+      "source": "tools/cpu/results.py",
+      "destination": "pear_runtime/fixtures/controls/corpus.py",
+      "symbol": "digest",
+      "transformation": "exact",
+      "imported_sha256": "884bb01e185f2d9d9430301d9fae0ad420aa9c9ab5ec6be9c82587a6bf0ed525"
+    },
+    {
+      "source": "tools/cpu/results.py",
+      "destination": "pear_runtime/fixtures/controls/corpus.py",
+      "symbol": "decode",
+      "transformation": "exact",
+      "imported_sha256": "3f5b742fed95b17ba3f055bea93e97ba4164f5a6e2b04ca70196875aad22d803"
+    },
+    {
+      "source": "tools/cpu/results.py",
+      "destination": "pear_runtime/fixtures/controls/corpus.py",
+      "symbol": "read",
+      "transformation": "exact",
+      "imported_sha256": "b85e6d544e6cb443956f95628d63c2276a299b753e8fcfa2cb0e26ba6ce99ced"
+    },
+    {
+      "source": "tools/cpu/results.py",
+      "destination": "pear_runtime/fixtures/controls/corpus.py",
+      "symbol": "hex64",
+      "transformation": "exact",
+      "imported_sha256": "95c14d69e9129971bd6ea0bb2989207b71bf43f9b5fe15db9096d71681ba63cd"
+    },
+    {
+      "source": "tools/cpu/results.py",
+      "destination": "pear_runtime/fixtures/controls/corpus.py",
+      "symbol": "fixture_ids",
+      "transformation": "exact",
+      "imported_sha256": "303862a369d3d62319270c91f00062a50cc6656a00f80fcb7390efc73322eb43"
+    },
+    {
+      "source": "tools/cpu/results.py",
+      "destination": "pear_runtime/fixtures/controls/corpus.py",
+      "symbol": "admit_build",
+      "transformation": "exact",
+      "imported_sha256": "c335a9d98ab70439d2071314cae25067ab3fe048e68d3a726df10036d74ce1b3"
+    },
+    {
+      "source": "tools/cpu/results.py",
+      "destination": "pear_runtime/fixtures/controls/corpus.py",
+      "symbol": "case_result",
+      "transformation": "exact",
+      "imported_sha256": "fe66cf44582b7a0c901fa10eec25aac651042274d0f2e00ce3c3ab1c3796cf55"
+    },
+    {
+      "source": "tools/cpu/results.py",
+      "destination": "pear_runtime/fixtures/controls/corpus.py",
+      "symbol": "boundary_result",
+      "transformation": "exact",
+      "imported_sha256": "cce7c29dd9734ac5ac42f7740f04baea845b83fb7f76e230fed81dbe696ceb1e"
+    },
+    {
+      "source": "tools/cpu/results.py",
+      "destination": "pear_runtime/fixtures/controls/corpus.py",
+      "symbol": "assess_records",
+      "transformation": "exact",
+      "imported_sha256": "f1a405ab8a3a137610b29be96f3725e35da6bbbc09f10017d8c54a27b531b0da"
+    },
+    {
+      "source": "tools/cpu/adapt.py",
+      "destination": "pear_runtime/fixtures/controls/corpus.py",
+      "symbol": "effective_case",
+      "transformation": "exact",
+      "imported_sha256": "418e028b0be13bd2065b8611d8ebaf306bd1a594ec46cdf132fdea854a37d766"
+    },
+    {
+      "source": "tools/cpu/ordering.py",
+      "destination": "pear_runtime/fixtures/controls/corpus.py",
+      "symbol": "assess",
+      "transformation": "exact",
+      "imported_sha256": "eb37fae68efefeacf2aa170c17cb0c8e9f709863c3066ac9dd968fec1923d4bf"
+    },
+    {
+      "source": "tools/cpu/ordering.py",
+      "destination": "pear_runtime/fixtures/controls/corpus.py",
+      "symbol": "policy_records",
+      "transformation": "exact",
+      "imported_sha256": "cadb63f144bf3ab28f05252a7b09028ec25a072feff10a2040c9d2277afda707"
+    },
+    {
+      "source": "tools/cpu/ordering.py",
+      "destination": "pear_runtime/fixtures/controls/corpus.py",
+      "symbol": "retirements",
+      "transformation": "exact",
+      "imported_sha256": "a549acdae8940f5b8ce5122e916b7f02e5212ee1e173e21603c13b51e0289863"
+    },
+    {
+      "source": "tools/dxmt/translated_present_check.py",
+      "destination": "pear_runtime/fixtures/controls/presentation.py",
+      "symbol": "terminal",
+      "transformation": "exact",
+      "imported_sha256": "7772b4057c07aa26d8a8a994c42b5aa422717f7bb859740b2498a9ff9ae4ae1e"
+    },
+    {
+      "source": "tools/dxmt/translated_present_check.py",
+      "destination": "pear_runtime/fixtures/controls/presentation.py",
+      "symbol": "native",
+      "transformation": "exact",
+      "imported_sha256": "e15ffea551e9ea63f8169236909687658a1324f36b31b50e8d8266a38d197640"
+    },
+    {
+      "source": "tools/dxmt/translated_present_check.py",
+      "destination": "pear_runtime/fixtures/controls/presentation.py",
+      "symbol": "pixels",
+      "transformation": "exact",
+      "imported_sha256": "a7d6418c713c059d8efe3e87522f25e9c0ff5a3f4b4c68123fcded7740c52da4"
+    },
+    {
+      "source": "tools/dxmt/translated_present_check.py",
+      "destination": "pear_runtime/fixtures/controls/presentation.py",
+      "symbol": "visible",
+      "transformation": "Explicit producer parameter and producer path expression only",
+      "imported_sha256": "4eb8de10c77e0a72104009e99b53c11317cfa33a3c3da7c9d10d3aa471832e48"
+    },
+    {
+      "source": "tools/dxmt/translated_present_check.py",
+      "destination": "pear_runtime/fixtures/controls/presentation.py",
+      "symbol": "visible_frames",
+      "transformation": "Explicit producer parameter and producer path expression only",
+      "imported_sha256": "f30fce685c9faf41fdb123f4c252eeff4307027abe5cce2a3380483afd1995d6"
+    }
+  ],
+  "pure_adapter_boundaries": {
+    "corpus.compare_result_rows": "Explicit already-admitted candidate rows and immutable native-reference logs. Preserves original mathematical/feature/full-case assertions. Returns execution_admission_performed=False; parent must supply actual live/current run binding.",
+    "corpus.compare_ordering_records": "Explicit build/reference bytes, candidate events/exit/stderr. Exact selected2048iterations*4rounds*4modes=32768pairs,8workers,8retirements. No thread launch or current authorization.",
+    "presentation.visible_and_visible_frames": "Required explicit path of the admitted capture producer replaces only the historical source root. Image content, native-window identity and capture-command assertions remain unchanged; no capture is performed."
+  }
+}

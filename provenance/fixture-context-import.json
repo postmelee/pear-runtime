@@ -1,0 +1,110 @@
+{
+  "schema_version": 1,
+  "scope": "Task #56 Stage 4 explicit fixture context and complete producer inputs",
+  "status": "29 portable context/producer tests passed; actual selected FEX06 compile/source/depfile/log join passed by read-only inspection; no host or fixture execution",
+  "original_context": {
+    "repository": "https://github.com/postmelee/pear",
+    "checkpoint": "951264bf5be4b9d2afb87320f5fac74778b2dd58",
+    "path": "tools/steam/fixture_context.py",
+    "license": "MIT; inherited source notice preserved",
+    "parent_import_record": "provenance/fixture-parent-import.json",
+    "sha256": "b0a34ad34133d7faeff12442d741078d5cfe044cd1f921bbf150fa7b1aa22dd2",
+    "size_bytes": 6085,
+    "content_committed_at_checkpoint": false,
+    "source_state": "retained owner source identified by content digest; checkpoint alone does not reconstruct it"
+  },
+  "new_producers": {
+    "path": "pear_runtime/fixtures/producers.py",
+    "license": "GPL-3.0-or-later",
+    "reuse": "Preserves direct_v1 original/snapshot row schema and source recheck contract; replaces broad old tools/host scan with explicit manifest and complete local static/dynamic input closure."
+  },
+  "manifest_shape": {
+    "schema_version": 1,
+    "scope": "fixture_producer_sources",
+    "roots": "canonical runtime repo; optional canonical fex repo only when statically consumed",
+    "files": "exact unique rows {root,path,sha256,size_bytes}; safe relative paths and bounded captured source bytes"
+  },
+  "api": [
+    "producers.manifest_for_roots(roots) prepares a reviewable explicit manifest without writing or executing",
+    "producers.capture(manifest_ref,provider_root) checks pinned complete closure and captures all bytes",
+    "FixtureContext.preserve_sources(output) writes producer-sources/<root>/<path>, manifest snapshot and original assess-compatible producers.json rows",
+    "FixtureContext.storage_admission(output) returns a read-only fresh-output per-run capacity receipt",
+    "FixtureContext.finalize_assessment(output) requires successful finished context, repeats runtime/seed/source admission and the original original/snapshot provenance oracle after all assessments, and returns pinned source receipt refs without execution"
+  ],
+  "boundaries": [
+    "Only d25-game and the exact existing seven fixture names are admitted",
+    "Final runtime operation ref and current profile/signature authority remain explicit and unchanged",
+    "Three compile units join actual successful argv and depfile source identities; complete ordered -D lists must equal reviewed catalog, with no undefine/response/forwarded override",
+    "All 17 original provider files remain exact; no unconsumed FEX diagnostic readers are required",
+    "Complete source snapshot includes a pinned manifest copy; runtime/source files and snapshots are rechecked at boundaries",
+    "Storage budgets at least842557436 prefix bytes plus positive module growth, producer snapshot bytes and1GiB logs/authority/metadata with6GiB free reserve; no assumed APFS recovery",
+    "No launcher, process supervision, lock, game or signing implementation added",
+    "Final success requires unchanged complete producer rows and unchanged original/snapshot bytes after all fixture and graphics assessments; finalization is single-use and bound to the completed output."
+  ],
+  "files": [
+    {
+      "path": "pear_runtime/fixtures/context.py",
+      "sha256": "061aa6b62bfd8b17cf951ca5b4278cb63895a3cf7f7ff72545d4d186e0c2b1a0",
+      "size_bytes": 19138,
+      "license": "MIT"
+    },
+    {
+      "path": "pear_runtime/fixtures/producers.py",
+      "sha256": "0db06d96878f639f2624c497971d8e2faaeb224b4b3245af68798f3f852c70a0",
+      "size_bytes": 10573,
+      "license": "GPL-3.0-or-later"
+    },
+    {
+      "path": "tests/fixtures/test_context.py",
+      "sha256": "f0de65c5579d6a0208b9a72fcc9df7de86c62d55120281fa6dbaed1f36b557f6",
+      "size_bytes": 14485,
+      "license": "GPL-3.0-or-later"
+    },
+    {
+      "path": "tests/fixtures/test_producers.py",
+      "sha256": "25958d9f5f70b1019ea729493ba43c7f9dd93d2b6ff4d56d0ac1454f233823a8",
+      "size_bytes": 6992,
+      "license": "GPL-3.0-or-later"
+    }
+  ],
+  "verification": {
+    "portable_tests": 29,
+    "context_and_compiled_capability_tests": 18,
+    "producer_tests": 11,
+    "commands": [
+      "PYTHONDONTWRITEBYTECODE=1 python3 -m unittest discover -s tests/fixtures -p test_context.py -v",
+      "PYTHONDONTWRITEBYTECODE=1 python3 -m unittest discover -s tests/fixtures -p test_producers.py -v"
+    ],
+    "actual_component_review": "Selected FEX06 has exactly3 successful source compile commands and matching complete ordered24/25/22 define lists; three exact source identities match depfile evidence. Depfiles and compile logs were hash-checked read-only. No private path or header identity is exported here.",
+    "not_claimed": [
+      "native host or guest execution",
+      "source-owner acceptance",
+      "future private selector/capability correspondence",
+      "game or distribution qualification"
+    ]
+  },
+  "dynamic_closure": {
+    "entry_modules": [
+      "pear_runtime.fixtures.__main__",
+      "pear_runtime.fixtures.driver",
+      "pear_runtime.fixtures.direct",
+      "pear_runtime.fixtures.checks",
+      "pear_runtime.fixtures.context"
+    ],
+    "inputs": [
+      "17 canonical provider files listed by supervision.SOURCE_PATHS",
+      "pear_runtime/assembly/_transport.py",
+      "pear_runtime/fixtures/capabilities/d36.json",
+      "provenance/assembly-import.json",
+      "provenance/fixture-provider-import.json",
+      "provenance/fixture-context-import.json",
+      "provenance/fixture-parent-import.json",
+      "provenance/fixture-direct-import.json",
+      "provenance/fixture-graphics-import.json",
+      "provenance/fixture-assessment-import.json",
+      "provenance/fixture-checks-import.json"
+    ],
+    "additional": "Complete relative/absolute local Python import closure, including package initializers; optional FEX source root only when a local FEX module is consumed. Unknown/missing/extra/duplicate manifest rows are refused."
+  },
+  "reuse_limits": "Public capability catalog and selected actual build_ref are distinct. A future build with different private configuration requires independently reviewed capability correspondence, not automatic reuse of the selected booleans."
+}

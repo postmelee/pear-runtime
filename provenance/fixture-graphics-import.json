@@ -1,0 +1,219 @@
+{
+  "schema_version": 1,
+  "scope": "Task56 Stage4 original rendering fixture oracle extraction; no native execution",
+  "source_repository": "https://github.com/postmelee/pear",
+  "source_checkpoint": "951264bf5be4b9d2afb87320f5fac74778b2dd58",
+  "checkpoint_interpretation": "Tracked files are checked against the checkpoint blob. The shared fixture checker was a working file: its exact content identity is recorded, without claiming it belonged to the checkpoint Git tree.",
+  "license": {
+    "retained_imports": "MIT",
+    "text": "LICENSES/MIT.txt",
+    "new_portable_tests": "GPL-3.0-or-later",
+    "notice_policy": "Existing MIT permissions are retained for all imported bodies and the derived rendering branch."
+  },
+  "files": [
+    {
+      "path": "pear_runtime/fixtures/graphics/render.py",
+      "source": {
+        "path": "tools/dxmt/translated_render_check.py",
+        "sha256": "e73355f03c52bd326a99c91922908e3e52e2fc8e07335d84223cc6ceac2cceb2",
+        "size_bytes": 9347,
+        "checkpoint_contains_exact_bytes": true
+      },
+      "selected_symbols": [
+        {
+          "symbol": "NAMES",
+          "start_line": 12,
+          "end_line": 12,
+          "sha256": "a7dcada9b78b6baabc64f00f5c77f1239cf420aaab6edb339dfc50ae4f7fe303"
+        },
+        {
+          "symbol": "SHADERS",
+          "start_line": 13,
+          "end_line": 13,
+          "sha256": "3d08ac9648e766533305b79b3e1a211b4d3a0b220050b95712c08961f29554fa"
+        },
+        {
+          "symbol": "OPERATIONS",
+          "start_line": 14,
+          "end_line": 18,
+          "sha256": "0193344b86eb424cd139db7ee5d85eb2482e61a9d6a81fdae82cb54e937b2288"
+        },
+        {
+          "symbol": "validation",
+          "start_line": 20,
+          "end_line": 22,
+          "sha256": "36e6016819d7c71a12e07749d72e017af3abfd6040207c5ed23f890cb4043a9e"
+        },
+        {
+          "symbol": "compare",
+          "start_line": 24,
+          "end_line": 46,
+          "sha256": "7bb9a10dd977504ad84bcbd61e19dd3da050e47c4089243529dcbfc3bc57c111"
+        },
+        {
+          "symbol": "terminal",
+          "start_line": 48,
+          "end_line": 75,
+          "sha256": "d1cc5c1fb158c28cb16cc2c240ab5364917079c79fe94f07794d5759b050d2a4"
+        },
+        {
+          "symbol": "pipeline_validation",
+          "start_line": 77,
+          "end_line": 85,
+          "sha256": "21a00975f358d5300245276226221c84f533a8ebae7f86000f2e83eab1a643e1"
+        }
+      ],
+      "transformation": "Exact constants and four function bodies; explicit package imports replace historical tools imports; whole-runtime verify adapter is not imported.",
+      "imported_sha256": "dc0d48d33ba34b957332ff5f345898517228645ec8879d3206d8c446e223def4",
+      "imported_size_bytes": 5784
+    },
+    {
+      "path": "pear_runtime/fixtures/graphics/backend.py",
+      "source": {
+        "path": "tools/dxmt/translated_check.py",
+        "sha256": "f6dc5b0804c7904525fa7cf9a18a56fca7f3fa7d76514b9f4c03743450be725d",
+        "size_bytes": 10058,
+        "checkpoint_contains_exact_bytes": true
+      },
+      "selected_symbols": [
+        {
+          "symbol": "backend",
+          "start_line": 61,
+          "end_line": 81,
+          "sha256": "be19176f2d0e8fe0a4ef4ffc0b6429bff0227cae77e37cade89af9fd37be10aa"
+        }
+      ],
+      "transformation": "Exact backend signature/body except the two signing.PAYLOAD references become PAYLOAD imported from pear_runtime.assembly.helpers. Explicit Path/re/digest/need imports; no assertion change.",
+      "imported_sha256": "e72158f98b5213f69933adc49ebaf738ae199dbb933ce4fb487831dd1410f945",
+      "imported_size_bytes": 2320
+    },
+    {
+      "path": "pear_runtime/fixtures/graphics/__init__.py",
+      "source": {
+        "path": "tools/steam/fixture_checks.py",
+        "sha256": "df832c3fff37030eb89fbf45b1731ab89c8933fdf3f81eb4b8a03861aa801296",
+        "size_bytes": 6346,
+        "checkpoint_contains_exact_bytes": false
+      },
+      "selected_range": {
+        "start_line": 59,
+        "end_line": 79,
+        "sha256": "a026911723bfd2e6b4c913ce3006b55e7bc2c3fe080f2da6feabb5758b2077d9"
+      },
+      "transformation": "Extract the rendering-original branch only. Parent performs original terminal and backend calls and all common fixture checks. Preserve repair marker, validation, five environment assertions, readbacks/pipelines and four compiler module checks. Rebind direct.preparation.signing.PAYLOAD to the canonical imported constant. Return branch fields for the original overall result; add an explicit rendering-original name guard. Presentation remains a separate required adapter, not waived.",
+      "imported_sha256": "2c1a33c3dddf1dd3fa2b91d129f05831ddaf43d0542854c7307aa5d562b8b358",
+      "imported_size_bytes": 2177
+    },
+    {
+      "path": "tests/fixtures/graphics/test_original_rendering.py",
+      "source": {
+        "path": "tests/dxmt/test_translated_results.py",
+        "sha256": "e557e9126724f20bf8d73e3691cf6a76d8edc9585cc12194c24dd575b714dba9",
+        "size_bytes": 8212,
+        "checkpoint_contains_exact_bytes": true
+      },
+      "selected_symbols": [
+        {
+          "symbol": "RenderingTests",
+          "start_line": 26,
+          "end_line": 77,
+          "sha256": "2be68243df64efb84d87b9b4dfdd1720ba3af5a0afc5466bf3a8e2660f649e09"
+        }
+      ],
+      "transformation": "Exact RenderingTests class with seven methods; only tools.dxmt.translated_render_check imports become pear_runtime.fixtures.graphics.render. Other original test classes remain separately mapped pending their control adapters.",
+      "imported_sha256": "03161009f337ccb761bd4e8e8d8c4f4cdff630e6b24fbabd1f1541eb6ed26d3d",
+      "imported_size_bytes": 3738
+    },
+    {
+      "path": "tests/fixtures/graphics/test_graphics_bindings.py",
+      "license": "GPL-3.0-or-later",
+      "origin": "New portable tests for the migrated boundary; synthetic module, terminal and event data only.",
+      "imported_sha256": "4efe3033891262abb6aaa9b0688ac53d7ed65de5bca8e0022c56d618394bc3b2",
+      "imported_size_bytes": 15201,
+      "behavior": "25 portable tests: six terminal completeness/identity controls, eleven backend module/process/image controls and eight rendering branch repair/policy/compiler controls. No host executable is launched."
+    }
+  ],
+  "public_api": {
+    "terminal": "graphics.render.terminal(raw_stdout)",
+    "backend": "graphics.backend.backend(run, runtime, value, record_with_fixture_id, raw, terminal_modules)",
+    "rendering_branch": "graphics.check_rendering(run, runtime, value, record, raw, terminal)",
+    "caller_preconditions": [
+      "Common fixture identity, current authorization, exact logs/events, native architecture, owned process/sentinel and cleanup checks remain mandatory.",
+      "Call render.terminal and backend.backend exactly once before check_rendering; pass their original evidence unchanged.",
+      "Parent result retains full_graphics_qualification=False; separate 39+23 pairing, full CPU/ordering and presentation controls remain required by the retained matrix."
+    ]
+  },
+  "remaining_original_control_ownership": {
+    "native_pairing_v1_39_and_v2_23": "Required fresh runtime integration adapter; original tools/dxmt/run_pairing.py and translated_surface_check.py oracles retained by reference.",
+    "presentation_original_and_visible_18_frames": "Required fresh runtime integration adapters; original translated_present_check.py and visible frame evidence remain separately mapped.",
+    "device_terminal": "Required device/backend control remains separately mapped; no synthetic graphics qualification from a portable test.",
+    "full_cpu19_ordering_native_wine": "Separate CPU/native Wine owners retain original affected checks; the rendering branch does not replace them."
+  },
+  "oracle_verification": [
+    {
+      "symbol": "NAMES",
+      "exact_selected_bytes": true,
+      "sha256": "a7dcada9b78b6baabc64f00f5c77f1239cf420aaab6edb339dfc50ae4f7fe303"
+    },
+    {
+      "symbol": "SHADERS",
+      "exact_selected_bytes": true,
+      "sha256": "3d08ac9648e766533305b79b3e1a211b4d3a0b220050b95712c08961f29554fa"
+    },
+    {
+      "symbol": "OPERATIONS",
+      "exact_selected_bytes": true,
+      "sha256": "0193344b86eb424cd139db7ee5d85eb2482e61a9d6a81fdae82cb54e937b2288"
+    },
+    {
+      "symbol": "validation",
+      "exact_selected_bytes": true,
+      "sha256": "36e6016819d7c71a12e07749d72e017af3abfd6040207c5ed23f890cb4043a9e"
+    },
+    {
+      "symbol": "compare",
+      "exact_selected_bytes": true,
+      "sha256": "7bb9a10dd977504ad84bcbd61e19dd3da050e47c4089243529dcbfc3bc57c111"
+    },
+    {
+      "symbol": "terminal",
+      "exact_selected_bytes": true,
+      "sha256": "d1cc5c1fb158c28cb16cc2c240ab5364917079c79fe94f07794d5759b050d2a4"
+    },
+    {
+      "symbol": "pipeline_validation",
+      "exact_selected_bytes": true,
+      "sha256": "21a00975f358d5300245276226221c84f533a8ebae7f86000f2e83eab1a643e1"
+    },
+    {
+      "symbol": "backend",
+      "only_changes": "two signing.PAYLOAD references rebound to explicit canonical PAYLOAD",
+      "sha256": "951c6593be8c7f78f8eedb2b9b3d02cb6efbd9e1089fca52b7b0ef83de3e3cdd"
+    },
+    {
+      "symbol": "RenderingTests",
+      "only_changes": "seven method-local import paths",
+      "sha256": "9528d2fa482a0634786968fa2d6fe8563e250383f325c4daaa296db7752ed921"
+    },
+    {
+      "assertion": "checkpoint_required_repair_marker",
+      "ast_identical": true
+    },
+    {
+      "assertion": "checkpoint_validation_settings",
+      "ast_identical": true
+    },
+    {
+      "assertion": "checkpoint_compiler_bytes",
+      "ast_identical": true
+    },
+    {
+      "assertion": "checkpoint_compiler_load",
+      "ast_identical": true
+    },
+    {
+      "assertion": "five_validation_environment_values",
+      "ast_identical": true
+    }
+  ]
+}
