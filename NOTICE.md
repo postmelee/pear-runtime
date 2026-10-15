@@ -12,6 +12,8 @@ retains existing MIT/LGPL/GPL notices and permissions.
 | `pear_runtime/errors.py` | GPL-3.0-or-later. The original `Error` and `need` definitions from Pear `tools/wine/common.py` are unchanged. |
 | `pear_runtime/abort_observation.py`, `pear_runtime/abort_header.py`, `tests/shared/test_abort_observation.py` | Original MIT files/functions from Pear; existing MIT terms retained. Collective Pear attribution and import namespace adaptations are recorded. See [MIT text](LICENSES/MIT.txt). |
 | `include/PearAbortObservation.h` | MIT generated output of the MIT header function. Exact selected bytes are retained, including its diagnostic-payload comment. This adjacent notice deliberately leaves the frozen header identity unchanged. It contains no private selector or game bytes. |
+| `pear_runtime/assembly/_transport.py` | MIT from Pear `tools/steam/signing_group.py`, adapted for owned child-process-group cleanup. Existing MIT terms retained; exact origin and lifecycle changes are recorded in [assembly provenance](provenance/assembly-import.json). See [MIT text](LICENSES/MIT.txt). |
+| `pear_runtime/assembly/core.py` | GPL-3.0-or-later adapter preserving the original MIT overlay/signing-projection attribution and permissions. Source-specific inputs and transformations are recorded in [assembly provenance](provenance/assembly-import.json). |
 | Other new original source | GPL-3.0-or-later unless an explicit file notice states otherwise. |
 
 [The path-specific source manifest](provenance/source-import.json) records the

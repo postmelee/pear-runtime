@@ -1,0 +1,3 @@
+# SPDX-FileCopyrightText: 2026 Pear contributors
+# SPDX-License-Identifier: GPL-3.0-or-later
+"""Explicit-input development runtime assembly; host execution requires its own gate."""

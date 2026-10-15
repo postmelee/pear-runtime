@@ -1,0 +1,272 @@
+{
+  "task": 56,
+  "stage": 3,
+  "created_utc": "2026-10-15T16:54:05.376880+00:00",
+  "scope": "Selected explicit-input component reconstruction and isolated development assembly; no guest execution",
+  "components": {
+    "wine": {
+      "repository": "https://github.com/postmelee/pear-wine",
+      "commit": "1b76db6902345388c589ba3909b22badf751dfd5",
+      "upstream": "4e819f054dd2d9ee855ee3f1e30d8c1bb8f80fcf"
+    },
+    "fex": {
+      "repository": "https://github.com/postmelee/pear-fex",
+      "commit": "c62ed75aa6a33809ddb76c7f40aabbe4f4fbdda6",
+      "upstream": "59f85d6b7df4eb053d2cc1b9d33411b4f31bfbaa"
+    },
+    "dxmt": {
+      "repository": "https://github.com/postmelee/pear-dxmt",
+      "commit": "e800e770006fc7c37831ab857000a4781c85f6fd",
+      "upstream": "7c8dee1c2d73415301ceb7d1fa810861cef4cd67"
+    }
+  },
+  "builds": {
+    "fex": {
+      "receipt_identity": {
+        "sha256": "7d6dd8687793cd9f9e8eb46cd0f2f9ecfb3276fbc8645f5eb21d2ef2212b06b3",
+        "size_bytes": 3617500
+      },
+      "commands": 7,
+      "status": "passed",
+      "artifact_identities": {
+        "fex_pe": {
+          "sha256": "830d3c79324c686b0171e0e4f4a729926726c1d0ba6417877a642b5b45399a6b",
+          "size_bytes": 5910528
+        }
+      }
+    },
+    "wine": {
+      "receipt_identity": {
+        "sha256": "fe70874ffb0cd23564e6ecb5928b4cfb3214148f1ca7d37686d6131a60be9880",
+        "size_bytes": 6615478
+      },
+      "commands": 7,
+      "status": "passed",
+      "artifact_identities": {
+        "wine_native": {
+          "sha256": "982c9251af29a2be67641a0dbed507763c355ef77748beaf140f07dc19b89107",
+          "size_bytes": 993320
+        },
+        "wine_pe": {
+          "sha256": "ec23f34b3a3bffcaf42a24a38903865073fd01be4ef71ef5cffa8bdb67c11f6f",
+          "size_bytes": 2818048
+        }
+      }
+    },
+    "graphics": {
+      "receipt_identity": {
+        "sha256": "2dbcafc16a00ec547987a81101bf898e29f0eae30926850fab0b1e4fa2b11b38",
+        "size_bytes": 5968320
+      },
+      "commands": 11,
+      "status": "passed",
+      "artifact_identities": {
+        "win32u": {
+          "sha256": "80001d00caa3471e80e014be7e6ac18fdf1586d4e24085dbe82597b7ddb4c63c",
+          "size_bytes": 2592136
+        },
+        "winemac": {
+          "sha256": "fb05cc7faf26582f703edeeb26a56ef6ce22548568398b171871e6f5dd3291d7",
+          "size_bytes": 874904
+        },
+        "winemetal": {
+          "sha256": "b55b31a583feaa5e5184c10b0682a59f9f18d7a52d39d424059f38814093d770",
+          "size_bytes": 47164192
+        }
+      }
+    }
+  },
+  "lock_identity": {
+    "sha256": "f3a3cba6d2ffc762cad176a51ba6f4a9b3cc199da8708a5e6fdbb3ecf850be22",
+    "size_bytes": 6318
+  },
+  "assembly": {
+    "status": "passed",
+    "runtime_identity": {
+      "sha256": "d2c30942bc1b27067cd7d674971f6cd2e3e2395e55b514c3572af164f1588e2c",
+      "size_bytes": 2455362
+    },
+    "operation_identity": {
+      "sha256": "def3a07563a7974308029d62af9de443384479d4492c73824c74fec721447946",
+      "size_bytes": 9162
+    },
+    "native_images": 41,
+    "native_commands": 209,
+    "declared_replacements": 6,
+    "undeclared_native_code_unchanged": true,
+    "current_authority": "passed",
+    "runtime_execution_performed": false,
+    "game_qualified": false,
+    "whole_worker_seconds": 15.588723291999486,
+    "phases": {
+      "prepare_input_admission": 1.1234920409988263,
+      "locked_input_admission": 1.13498816700303,
+      "copy_parent_bundle": 0.4076627499962342,
+      "replace_declared_products": 0.1452983330018469,
+      "current_authorization": 0.30861900000309106,
+      "sign_and_verify": 8.707964125002036,
+      "final_validation": 2.547699292001198
+    }
+  },
+  "verification": {
+    "build_portable": 71,
+    "assembly_portable": 72,
+    "assembly_host_final": 72,
+    "initial_sandbox_passed": 70,
+    "assembly_host_rechecked": 2,
+    "sandbox_limit": "ps was denied for two synthetic descendant-cleanup checks; those exact tests passed with host ps access.",
+    "notices_checked": 19,
+    "protected": {
+      "protected_identities_checked": 29,
+      "unchanged": true,
+      "mismatches": [],
+      "at_utc": "2026-10-15T16:54:03.294153+00:00"
+    }
+  },
+  "storage": {
+    "candidate": {
+      "files": 3323,
+      "logical_bytes": 1010553101,
+      "displayed_allocated_bytes": 1015934976
+    },
+    "selected_and_failed_component_outputs": {
+      "fex-20261016-01": {
+        "files": 10,
+        "logical_bytes": 2876328,
+        "displayed_allocated_bytes": 2899968
+      },
+      "fex-20261016-02": {
+        "files": 16,
+        "logical_bytes": 7251321,
+        "displayed_allocated_bytes": 7290880
+      },
+      "fex-20261016-03": {
+        "files": 29,
+        "logical_bytes": 15685883,
+        "displayed_allocated_bytes": 15740928
+      },
+      "fex-20261016-04": {
+        "files": 35,
+        "logical_bytes": 78050831,
+        "displayed_allocated_bytes": 78106624
+      },
+      "fex-20261016-05": {
+        "files": 35,
+        "logical_bytes": 78095882,
+        "displayed_allocated_bytes": 78151680
+      },
+      "fex-20261016-06": {
+        "files": 36,
+        "logical_bytes": 78098290,
+        "displayed_allocated_bytes": 78155776
+      },
+      "graphics-rebuild1": {
+        "files": 12,
+        "logical_bytes": 7173465,
+        "displayed_allocated_bytes": 7200768
+      },
+      "graphics-rebuild2": {
+        "files": 14,
+        "logical_bytes": 82210702,
+        "displayed_allocated_bytes": 82243584
+      },
+      "graphics-rebuild3": {
+        "files": 38,
+        "logical_bytes": 164413155,
+        "displayed_allocated_bytes": 164491264
+      },
+      "graphics-rebuild4": {
+        "files": 42,
+        "logical_bytes": 165287615,
+        "displayed_allocated_bytes": 165367808
+      },
+      "graphics-rebuild5": {
+        "files": 46,
+        "logical_bytes": 165894550,
+        "displayed_allocated_bytes": 165986304
+      },
+      "graphics-rebuild6": {
+        "files": 60,
+        "logical_bytes": 172717087,
+        "displayed_allocated_bytes": 172826624
+      },
+      "wine-rebuild1": {
+        "files": 17,
+        "logical_bytes": 12890478,
+        "displayed_allocated_bytes": 12931072
+      },
+      "wine-rebuild2": {
+        "files": 2338,
+        "logical_bytes": 79215963,
+        "displayed_allocated_bytes": 86687744
+      },
+      "wine-rebuild3": {
+        "files": 2353,
+        "logical_bytes": 87139065,
+        "displayed_allocated_bytes": 94633984
+      }
+    },
+    "assembly_additional_peak_budget_bytes": 1626838607,
+    "retained_floor_bytes": 6442450944,
+    "free_bytes_observed": 25235132416,
+    "note": "Logical/stat allocation is not exclusive APFS physical usage. Concurrent activity prevents attributing net free-space changes to this task."
+  },
+  "reuse": {
+    "wine_fex_previous_core": "5f3ff7c8a0214451ec98ea5112f9de8ab0f15b685b1b3c543690d64ea93da8cd",
+    "current_core": "eed2094b12c64205ed740f71c95d0512943819289bc6749fac4a683da3d732f6",
+    "disposition": "Only absolute executable guard/comments differ; all selected prior commands satisfy it. Ten retained producer snapshots and all 25 command logs were independently rechecked."
+  },
+  "evidence_digests": {
+    "fex/stage3/assembly-review.json": {
+      "sha256": "aee21a3e533d32968d772824875e945da5ba85a4448931c61cfd8cbbe99b1b24",
+      "size_bytes": 24112
+    },
+    "runtime-map/assembly-plan2.json": {
+      "sha256": "87b5848d25ca6cb18cecac857c313c6979cc70ab39867b71ce54a6d3cf2608e5",
+      "size_bytes": 5880
+    },
+    "runtime-map/assembly-execution2.json": {
+      "sha256": "c02cb7972b7dd08edcb7a34a0b5cd04ba254de809d54abd2fb3c2707eb6fa4f8",
+      "size_bytes": 592
+    },
+    "runtime-map/assembly-authority-review2.json": {
+      "sha256": "eeeeea8e865c426281a7f1f38964e0d49b9d328174cdb3a93b26f15502599664",
+      "size_bytes": 1609
+    },
+    "stage3-protected-after-assembly2.json": {
+      "sha256": "b469b9f5af217020aa71eb74c447e584c1d3945261858d6349d77caab32dc8b2",
+      "size_bytes": 130
+    },
+    "stage3-final-build-tests.log": {
+      "sha256": "d4c1d6ea55c65bddd969fd65a3186a76ed28cc54e1978ed2bf072388900b9f68",
+      "size_bytes": 9160
+    },
+    "stage3-final-assembly-tests.log": {
+      "sha256": "33cf516bbb5302727f6b515a322366a9dfd965f95224b7bac54b8b9219c572ba",
+      "size_bytes": 13888
+    },
+    "stage3-final-assembly-after-eof.log": {
+      "sha256": "e4549820af725b652c96673069fc9345a9137cdcc7ceb731b38fc99376813e60",
+      "size_bytes": 10306
+    },
+    "stage3-assembly-host-recheck.log": {
+      "sha256": "c4832fbdfef09f6bf7f3093341f3513cecc9a9564a4db3600fb512b2de2eb85e",
+      "size_bytes": 396
+    },
+    "stage3-runtime-notices.json": {
+      "sha256": "b4860a35eeffdda3e332cd803efccafd1cb69d5864eba2def8603ad9512de2b2",
+      "size_bytes": 892
+    },
+    "stage2-wine-remote-verification.json": {
+      "sha256": "b4a5794becda6fe0e10df9c8298075fcbae96997ea1c1ab837fa76399d7a0b69",
+      "size_bytes": 360
+    }
+  },
+  "unperformed": [
+    "Seven D36 host fixtures",
+    "Affected additional controls and recovery exercise",
+    "Pear developer routing",
+    "Final source-owner cutover",
+    "Megabonk/player/distribution qualification"
+  ]
+}

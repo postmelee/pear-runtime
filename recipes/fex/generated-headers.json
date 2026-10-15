@@ -1,0 +1,48 @@
+{
+  "source": "task11:.build/task11/rip-window-build1/pe/arm64ec/build.ninja",
+  "sha256": "a113d70522bcda470a69df0499b81627dc9344f154e84b46bef784608870a000",
+  "method": "Recorded Ninja text inspection; Ninja/generators not executed.",
+  "edges": [
+    {
+      "line": 3345,
+      "text": "build include/FEXCore/IR/IRDefines.inc include/FEXCore/IR/IRDefines_Dispatch.inc | ${cmake_ninja_workdir}include/FEXCore/IR/IRDefines.inc ${cmake_ninja_workdir}include/FEXCore/IR/IRDefines_Dispatch.inc: CUSTOM_COMMAND task11:.build/task11/wake-build1/source/FEXCore/Source/Interface/IR/IR.json task11:.build/task11/wake-build1/source/FEXCore/Scripts/json_ir_generator.py\n  COMMAND = cd \"task11:.build/task11/wake-build1/pe/arm64ec/FEXCore/Source\" && ${historical_python} task11:.build/task11/wake-build1/source/FEXCore/Source/../Scripts/json_ir_generator.py task11:.build/task11/wake-build1/source/FEXCore/Source/Interface/IR/IR.json task11:.build/task11/wake-build1/pe/arm64ec/include/FEXCore/IR/IRDefines.inc task11:.build/task11/wake-build1/pe/arm64ec/include/FEXCore/IR/IRDefines_Dispatch.inc\n  DESC = Generating ../../include/FEXCore/IR/IRDefines.inc, ../../include/FEXCore/IR/IRDefines_Dispatch.inc\n  restat = 1"
+    },
+    {
+      "line": 3360,
+      "text": "build include/FEXCore/Config/ConfigValues.inl include/FEXCore/Config/ConfigOptions.inl generated/FEX.1 | ${cmake_ninja_workdir}include/FEXCore/Config/ConfigValues.inl ${cmake_ninja_workdir}include/FEXCore/Config/ConfigOptions.inl ${cmake_ninja_workdir}generated/FEX.1: CUSTOM_COMMAND generated/Config/Config.json task11:.build/task11/wake-build1/source/FEXCore/Scripts/config_generator.py\n  COMMAND = cd \"task11:.build/task11/wake-build1/pe/arm64ec/FEXCore/Source\" && ${historical_python} task11:.build/task11/wake-build1/source/FEXCore/Source/../Scripts/config_generator.py task11:.build/task11/wake-build1/pe/arm64ec/generated/Config/Config.json task11:.build/task11/wake-build1/pe/arm64ec/include/FEXCore/Config/ConfigValues.inl task11:.build/task11/wake-build1/pe/arm64ec/generated/FEX.1 task11:.build/task11/wake-build1/pe/arm64ec/include/FEXCore/Config/ConfigOptions.inl\n  DESC = Generating ../../include/FEXCore/Config/ConfigValues.inl, ../../include/FEXCore/Config/ConfigOptions.inl, ../../generated/FEX.1\n  restat = 1"
+    }
+  ],
+  "exact_generation_inputs": [
+    {
+      "path": "task11:.build/task11/wake-build1/source/FEXCore/Source/Interface/IR/IR.json",
+      "sha256": "d55d90ebdb7f08a45ff747166e2092a7f56d98e2eabd354e3ad53fc9ac19fea4",
+      "size_bytes": 149540,
+      "classification": "public_generator_or_config_input"
+    },
+    {
+      "path": "task11:.build/task11/wake-build1/source/FEXCore/Scripts/json_ir_generator.py",
+      "sha256": "74ceb46cfecd33b2875119bb9cf885d3afbcd406ba4eb00716e8185bfc8862c7",
+      "size_bytes": 34528,
+      "classification": "public_generator_or_config_input"
+    },
+    {
+      "path": "task11:.build/task11/wake-build1/source/FEXCore/Scripts/config_generator.py",
+      "sha256": "1e9f46fdf4054bdd7f5506298313b43d5b391ca4538c0a3df7defa10a8347807",
+      "size_bytes": 17626,
+      "classification": "public_generator_or_config_input"
+    },
+    {
+      "path": "task11:.build/task11/wake-build1/source/FEXCore/Source/Interface/Config/Config.json.in",
+      "sha256": "9e3f33a5a3284d9d7d3f83854c6119292538b130ca65d1d58b11971300b452a5",
+      "size_bytes": 28365,
+      "classification": "public_generator_or_config_input"
+    },
+    {
+      "path": "task11:.build/task11/wake-build1/pe/arm64ec/generated/Config/Config.json",
+      "sha256": "6a241518dd7807bfe44358c5aacff977f80e23359232f41e06959d2af400fc16",
+      "size_bytes": 28340,
+      "classification": "public_generator_or_config_input"
+    }
+  ],
+  "portable_minimal_choice": "Initially carry four unique generated include files as declared immutable public inputs with these generator/configuration pins. A fresh generator run may replace them only after exact comparison or affected validation; no old build-tree path may be read implicitly."
+}

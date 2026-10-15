@@ -1,0 +1,399 @@
+{
+  "schema_version": 1,
+  "scope": "Task56 Stage3 development assembly/signing/admission source package; fixture runner adoption remains Stage4",
+  "files": [
+    {
+      "path": "pear_runtime/assembly/_common.py",
+      "sha256": "c311a2bda40182af833838d8409aedfa3d46cf9520975c2a5d0437921b17f578",
+      "license": "GPL-3.0-or-later",
+      "source_repository": "https://github.com/postmelee/pear",
+      "source_checkpoint": "951264bf5be4b9d2afb87320f5fac74778b2dd58",
+      "source_path": "tools/wine/common.py",
+      "source_sha256": "5c2789ca3392f70f93c5ae0656e803c0f8a01d4cc1c1d2622e8af0014690e171",
+      "source_size_bytes": 7970,
+      "selected_symbols": [],
+      "transformation": "Exact original definitions/imports/constants; remove REPO and reuse same shared Error/need class; add notices.",
+      "source_state": "exact Git blob",
+      "content_committed_at_checkpoint": true
+    },
+    {
+      "path": "pear_runtime/assembly/_byte_readers.py",
+      "sha256": "e9ac329c515afb03562bfffc0f0120c9ea15665832b085dd144579df66a7a6c0",
+      "license": "GPL-3.0-or-later",
+      "source_repository": "https://github.com/postmelee/pear",
+      "source_checkpoint": "951264bf5be4b9d2afb87320f5fac74778b2dd58",
+      "source_path": "tools/fex/byte_readers.py",
+      "source_sha256": "bbfc08e473bfc91d51cb34a234be706cabe56c36e87acf00b90a587f48604316",
+      "source_size_bytes": 7744,
+      "selected_symbols": [
+        {
+          "symbol": "inspect_macho",
+          "start_line": 16,
+          "end_line": 69,
+          "sha256": "a07bfbd093049c986972df246139de8cad895aa14187b8c0a2d48eaee06fe3b5"
+        },
+        {
+          "symbol": "inspect_closure",
+          "start_line": 71,
+          "end_line": 105,
+          "sha256": "606164a7347be067a511e827b40eb2f733bc0c2067be4092e9029a681f60b10e"
+        }
+      ],
+      "transformation": "Exact two function bodies; explicit standard-library/shared-reader bindings and original architecture constant.",
+      "source_state": "exact Git blob",
+      "content_committed_at_checkpoint": true
+    },
+    {
+      "path": "pear_runtime/assembly/_transport.py",
+      "sha256": "0b7f15b4075117f97e8f28ac3a3cba9ae14fef20eb7b95677ecfcd76ce7020a6",
+      "license": "MIT",
+      "source_repository": "https://github.com/postmelee/pear",
+      "source_checkpoint": "951264bf5be4b9d2afb87320f5fac74778b2dd58",
+      "source_path": "tools/steam/signing_group.py",
+      "source_sha256": "d87afcba38a6452987ddc58c959093516c2c90b2d7d3a1b034b419b666309962",
+      "source_size_bytes": 4338,
+      "selected_symbols": [
+        {
+          "symbol": "run_bounded",
+          "start_line": 14,
+          "end_line": 53,
+          "sha256": "a8c363bb881675312f88e8e4abf67c32662dddab0b09ca2dd13c0ef556364cb5"
+        }
+      ],
+      "transformation": "Adapted original bounded D36 transport: explicit owned child process group, unconditional group cleanup even after leader exit, worker SIGINT/SIGTERM cleanup. Retains worker guard, exact argv, bounds, failure/log evidence; not byte-identical transport.",
+      "content_committed_at_checkpoint": false,
+      "source_state": "not present in checkpoint Git tree",
+      "preserved_behavior": [
+        "outer worker ownership guard",
+        "bounded stdout/stderr and timeout",
+        "failed command evidence and stream bytes",
+        "reap immediate command child"
+      ]
+    },
+    {
+      "path": "pear_runtime/assembly/__init__.py",
+      "sha256": "a139b7754dc92d7dae1473866946c0d5aaf2e154740b8d46333a3237203dd02e",
+      "license": "GPL-3.0-or-later",
+      "transformation": "New package marker.",
+      "origin_source_paths": []
+    },
+    {
+      "path": "pear_runtime/assembly/helpers.py",
+      "sha256": "1c6e5a1332de5fbd6aca0327e7e0ed9d1d687ab29c6f9d305d6c1d8ab5134349",
+      "license": "GPL-3.0-or-later",
+      "transformation": "Original selected() AST reuse; mandatory exact six-file source pack captured before compile; no old repository default. Legacy selected functions and constants are unchanged. Transport binding is the separately documented adaptation.",
+      "origin_source_paths": [
+        "tools/fex/memory_wine_runtime.py",
+        "tools/dxmt/pairing_runtime.py"
+      ]
+    },
+    {
+      "path": "pear_runtime/assembly/core.py",
+      "sha256": "042d60b2be9447a6c7816b1ace158fd24a6c35cb0f9234b689f26f6122328fda",
+      "license": "GPL-3.0-or-later; retains MIT overlay attribution",
+      "transformation": "Source-preserving assembly/signature/projection sequence adapted to explicit parent/build/profile/helper/output bindings and current component artifact roles. Original signature/profile/code-origin oracles unchanged.",
+      "origin_source_paths": [
+        "tools/steam/fex_only_runtime.py",
+        "tools/steam/abort_runtime.py",
+        "tools/steam/slot_lifetime_runtime.py",
+        "tools/steam/early_wait_v1.py",
+        "tools/steam/direct_prepare_v1.py",
+        "tools/fex/integration_run.py"
+      ]
+    },
+    {
+      "path": "tests/assembly/test_assembly.py",
+      "sha256": "f9af5e1fd3fea0a93ab9138879a0a413a11462e671acc0b85a50de02573d8263",
+      "license": "GPL-3.0-or-later",
+      "transformation": "New synthetic input/projection/source-pack/owned transport controls; no Apple signing authority claim.",
+      "origin_source_paths": []
+    },
+    {
+      "path": "tests/assembly/test_original_checks.py",
+      "sha256": "40527c5d03d00a6e1daa563145e298a0b58c5a9713a6ff977e3401f89e36ff7d",
+      "license": "GPL-3.0-or-later",
+      "transformation": "Exact original constants, four fixture helpers, CodeOriginTests and ProfileTests; replace import binding with declared helper pack and bind original DEFAULT_BUNDLE_ID constant for the existing unrelated-App-ID refusal test. All 13 assertions retained.",
+      "origin_source_paths": [
+        "tests/wine/test_signing.py"
+      ],
+      "source_repository": "https://github.com/postmelee/pear",
+      "source_checkpoint": "951264bf5be4b9d2afb87320f5fac74778b2dd58",
+      "source_path": "tests/wine/test_signing.py",
+      "source_sha256": "0b40f76245ffd36e18c40e7b98a0377a9d7852cc891a3788457ee1901c3db8cf",
+      "source_size_bytes": 27697,
+      "content_committed_at_checkpoint": true,
+      "source_state": "exact checkpoint Git blob"
+    },
+    {
+      "path": "pear_runtime/assembly/driver.py",
+      "license": "GPL-3.0-or-later",
+      "transformation": "New explicit-request CLI: read-only plan, fixed current flock, owned worker group, whole-operation timer, bounded logs and fresh operation receipt. No runtime or game launcher.",
+      "origin_source_paths": [],
+      "sha256": "1b4362b2a34219cb387769ef741e6bb7f9e9645315a2d45f3eaf6f4c92b413ce"
+    },
+    {
+      "path": "pear_runtime/assembly/__main__.py",
+      "license": "GPL-3.0-or-later",
+      "transformation": "New package entry point for the assembly CLI.",
+      "origin_source_paths": [],
+      "sha256": "a877f562235b6e82d11accc44f27cb8db1ad5d0847b99d60b1d8229af9de1286"
+    },
+    {
+      "path": "tests/assembly/test_driver.py",
+      "license": "GPL-3.0-or-later",
+      "transformation": "New portable CLI tests with synthetic inputs and owned processes; no Apple signing.",
+      "origin_source_paths": [],
+      "sha256": "fa43c8a01060d209beb4d3e7f379e195a4e71caaf90e48dba9a74b8fc125cb0a"
+    },
+    {
+      "path": "docs/assembly.md",
+      "license": "GPL-3.0-or-later",
+      "transformation": "Approved assembly API/CLI documentation; no private input identities.",
+      "origin_source_paths": [],
+      "sha256": "edcf29988a9dfbbd511f1bd1dc5ab91d668b9f0706956458d958ac9ea00f612c"
+    }
+  ],
+  "helper_sources": [
+    {
+      "path": "tools/dxmt/common.py",
+      "sha256": "3593e8e2a80d535143e2baae7e945ce90918520711993848dc33355d9dac0e75",
+      "size_bytes": 13699,
+      "source_repository": "https://github.com/postmelee/pear",
+      "source_checkpoint": "ea6c018565217b852b8e116d692773214cec1c20",
+      "source_path": "tools/dxmt/common.py",
+      "source_sha256": "3593e8e2a80d535143e2baae7e945ce90918520711993848dc33355d9dac0e75",
+      "source_size_bytes": 13699,
+      "license": "Original Pear GPL-3.0-or-later adoption; preserve file-specific notices",
+      "role": "immutable source-only capture input; never execute original CLI",
+      "source_state": "exact Git blob",
+      "content_committed_at_checkpoint": true
+    },
+    {
+      "path": "tools/dxmt/build.py",
+      "sha256": "283e52d5d2f9a42d403624370537e8bf4ebe1859a75a5436d57a90975e8ef144",
+      "size_bytes": 19962,
+      "source_repository": "https://github.com/postmelee/pear",
+      "source_checkpoint": "ea6c018565217b852b8e116d692773214cec1c20",
+      "source_path": "tools/dxmt/build.py",
+      "source_sha256": "283e52d5d2f9a42d403624370537e8bf4ebe1859a75a5436d57a90975e8ef144",
+      "source_size_bytes": 19962,
+      "license": "Original Pear GPL-3.0-or-later adoption; preserve file-specific notices",
+      "role": "immutable source-only capture input; never execute original CLI",
+      "source_state": "exact Git blob",
+      "content_committed_at_checkpoint": true
+    },
+    {
+      "path": "tools/dxmt/pairing_runtime.py",
+      "sha256": "617b00dbd281271b26bc1d0d9621dcd68246805218b5bf96bdc811947f9811d5",
+      "size_bytes": 43206,
+      "source_repository": "https://github.com/postmelee/pear",
+      "source_checkpoint": "ea6c018565217b852b8e116d692773214cec1c20",
+      "source_path": "tools/dxmt/pairing_runtime.py",
+      "source_sha256": "617b00dbd281271b26bc1d0d9621dcd68246805218b5bf96bdc811947f9811d5",
+      "source_size_bytes": 43206,
+      "license": "Original Pear GPL-3.0-or-later adoption; preserve file-specific notices",
+      "role": "immutable source-only capture input; never execute original CLI",
+      "source_state": "exact Git blob",
+      "content_committed_at_checkpoint": true
+    },
+    {
+      "path": "tools/wine/signing.py",
+      "sha256": "4c643405fab8b42b369a360d8431fe667f0dc60dd24c703074ff09afdcf3b71b",
+      "size_bytes": 38692,
+      "source_repository": "https://github.com/postmelee/pear",
+      "source_checkpoint": "951264bf5be4b9d2afb87320f5fac74778b2dd58",
+      "source_path": "tools/wine/signing.py",
+      "source_sha256": "4c643405fab8b42b369a360d8431fe667f0dc60dd24c703074ff09afdcf3b71b",
+      "source_size_bytes": 38692,
+      "license": "Original Pear GPL-3.0-or-later adoption; preserve file-specific notices",
+      "role": "immutable source-only capture input; never execute original CLI",
+      "source_state": "exact Git blob",
+      "content_committed_at_checkpoint": true
+    },
+    {
+      "path": "host/probe/provisioned_probe.py",
+      "sha256": "47f49422f4d6ccefb2826690a562d4d829c007d2c5a96fc156c86f7d446e2ee3",
+      "size_bytes": 29260,
+      "source_repository": "https://github.com/postmelee/pear",
+      "source_checkpoint": "951264bf5be4b9d2afb87320f5fac74778b2dd58",
+      "source_path": "host/probe/provisioned_probe.py",
+      "source_sha256": "47f49422f4d6ccefb2826690a562d4d829c007d2c5a96fc156c86f7d446e2ee3",
+      "source_size_bytes": 29260,
+      "license": "Original Pear GPL-3.0-or-later adoption; preserve file-specific notices",
+      "role": "immutable source-only capture input; never execute original CLI",
+      "source_state": "exact Git blob",
+      "content_committed_at_checkpoint": true
+    },
+    {
+      "path": "host/probe/hardened_baseline.py",
+      "sha256": "e10c985de82a93b852e8a6204c94f9877628f3cc49760b5c39d771635130947a",
+      "size_bytes": 26320,
+      "source_repository": "https://github.com/postmelee/pear",
+      "source_checkpoint": "951264bf5be4b9d2afb87320f5fac74778b2dd58",
+      "source_path": "host/probe/hardened_baseline.py",
+      "source_sha256": "e10c985de82a93b852e8a6204c94f9877628f3cc49760b5c39d771635130947a",
+      "source_size_bytes": 26320,
+      "license": "Original Pear GPL-3.0-or-later adoption; preserve file-specific notices",
+      "role": "immutable source-only capture input; never execute original CLI",
+      "source_state": "exact Git blob",
+      "content_committed_at_checkpoint": true
+    }
+  ],
+  "original_overlay_sources": [
+    {
+      "source_repository": "https://github.com/postmelee/pear",
+      "source_checkpoint": "951264bf5be4b9d2afb87320f5fac74778b2dd58",
+      "source_path": "tools/steam/fex_only_runtime.py",
+      "source_sha256": "1efac6aa7776ed3422b5e333c50b4596ab6eb404197d79f1530e7651058a1229",
+      "source_size_bytes": 5077,
+      "content_committed_at_checkpoint": false,
+      "source_state": "not present in checkpoint Git tree"
+    },
+    {
+      "source_repository": "https://github.com/postmelee/pear",
+      "source_checkpoint": "951264bf5be4b9d2afb87320f5fac74778b2dd58",
+      "source_path": "tools/steam/abort_runtime.py",
+      "source_sha256": "a7ec8fc47d689834a651c3be1a45dba1465cb2094bbe966669e5f5444ce2c38f",
+      "source_size_bytes": 5135,
+      "content_committed_at_checkpoint": false,
+      "source_state": "not present in checkpoint Git tree"
+    },
+    {
+      "source_repository": "https://github.com/postmelee/pear",
+      "source_checkpoint": "951264bf5be4b9d2afb87320f5fac74778b2dd58",
+      "source_path": "tools/steam/slot_lifetime_runtime.py",
+      "source_sha256": "6190c087ba742d629fb0f67c1254b2dbb4d8d8b2006e35765745dd6b8f453976",
+      "source_size_bytes": 5837,
+      "content_committed_at_checkpoint": false,
+      "source_state": "not present in checkpoint Git tree"
+    },
+    {
+      "source_repository": "https://github.com/postmelee/pear",
+      "source_checkpoint": "951264bf5be4b9d2afb87320f5fac74778b2dd58",
+      "source_path": "tools/steam/early_wait_v1.py",
+      "source_sha256": "6a52a54a9316e9ca81b563c8da852d64ad3dbb82d5c4aebda5261af21156f0f0",
+      "source_size_bytes": 15710,
+      "content_committed_at_checkpoint": false,
+      "source_state": "not present in checkpoint Git tree"
+    },
+    {
+      "source_repository": "https://github.com/postmelee/pear",
+      "source_checkpoint": "951264bf5be4b9d2afb87320f5fac74778b2dd58",
+      "source_path": "tools/fex/memory_wine_runtime.py",
+      "source_sha256": "89e7b67f1cc0549e6f61d5b3b0e877286035dab133b4bce1703cfdeab9dc1a15",
+      "source_size_bytes": 49331,
+      "source_state": "exact Git blob",
+      "content_committed_at_checkpoint": true
+    },
+    {
+      "source_repository": "https://github.com/postmelee/pear",
+      "source_checkpoint": "951264bf5be4b9d2afb87320f5fac74778b2dd58",
+      "source_path": "tools/fex/integration_run.py",
+      "source_sha256": "7214388252229277497da9c9466db8b8df637ada50f284cf04f3a9603272ab84",
+      "source_size_bytes": 11545,
+      "source_state": "exact Git blob",
+      "content_committed_at_checkpoint": true
+    },
+    {
+      "source_repository": "https://github.com/postmelee/pear",
+      "source_checkpoint": "951264bf5be4b9d2afb87320f5fac74778b2dd58",
+      "source_path": "tools/steam/direct_prepare_v1.py",
+      "source_sha256": "e17a1e3c8cd9748a690066cef158979a8536db677493b03049b8616acfd24e9a",
+      "source_size_bytes": 19856,
+      "source_state": "not present in checkpoint Git tree",
+      "content_committed_at_checkpoint": false
+    }
+  ],
+  "privacy": "Helper pack is source-only and outside Git. Profile, certificates, identity outputs and raw signing logs stay in explicitly bound private/owned roots.",
+  "limits": [
+    "Host signing/admission and candidate assembly are unperformed at source import.",
+    "Current authorization must be captured per artifact; historical authorization is not replayed."
+  ],
+  "status": "portable controls passed; actual candidate assembly/signing and artifact authority admission unperformed",
+  "source_pack": {
+    "file_count": 6,
+    "logical_source_bytes": 171139,
+    "required_binding": "helper_root: canonical immutable source-only directory",
+    "manifest_filename": "source-manifest.json",
+    "retention": "Keep while any package consumer uses this exact source pack; copied sources retain original notices. No private signing key or profile is part of the pack."
+  },
+  "binding_api": {
+    "type": "pear_runtime.assembly.core.AssemblyInputs",
+    "fields": [
+      "parent_ref",
+      "builds",
+      "roles",
+      "profile_ref",
+      "helper_root",
+      "output_root",
+      "name",
+      "disk_floor_bytes",
+      "review_refs"
+    ],
+    "reference_shape": [
+      "path",
+      "sha256",
+      "size_bytes"
+    ],
+    "build_request_shape": [
+      "ref",
+      "recipe_sha256",
+      "source_commits"
+    ],
+    "read_only": "inspect_inputs / signing_plan verify input refs, passed recipe/source-pinned receipts, unique artifact owners, whole parent bundle and native closure. They grant no permission.",
+    "execution": "assemble requires an owned worker process group, live interval, static reviewed signing recipe and matching fresh running operation binding {path,operation_id}. It captures current authority before codesign.",
+    "current_admission": "verify_current_authority requires independently reviewed runtime_ref and explicit operation_ref, checks their noncircular UUID/output/hash/completed-operation join, then captures current authority and signatures. Pinned operation bytes are rechecked afterward.",
+    "cli": "python3 -B -m pear_runtime.assembly {inspect,plan,execute} --request <canonical private request JSON>",
+    "cli_build_request_shape": [
+      "ref",
+      "recipe_sha256",
+      "source_commits",
+      "recipe_review"
+    ],
+    "recipe_review": "Pinned public recipe + bindings; file digest for Wine/graphics, explicit independently reviewed expanded digest + exact public/bindings/private-manifest receipt refs for FEX. Receipt never supplies its own expected hash.",
+    "worker": "execute owns a process group and fixed current global flock; bounded request parsing precedes the whole-operation deadline; owned command cleanup may take an additional five-second reap wait.",
+    "component_operation": "Each build.json must join its sibling component operation.json by operation_id/scope/released=true. Its exact ref is a pre/post input and is retained in development_assembly."
+  },
+  "replacement_roles": {
+    "fex_pe": "aarch64-windows/xtajit64.dll (outer PE machine 0x8664; component recipe owns CHPE/ARM64EC checks)",
+    "wine_pe": "aarch64-windows/ntdll.dll (outer machine 0xaa64; component recipe owns ARM64X view and exact-byte checks)",
+    "wine_native": "aarch64-unix/ntdll.so",
+    "winemetal": "aarch64-unix/winemetal.so",
+    "winemac": "aarch64-unix/winemac.so",
+    "win32u": "aarch64-unix/win32u.so"
+  },
+  "assertion_adaptations": [
+    "Replace old candidate-name/selection/phase-overlay identity checks with exact current parent/build/recipe/source/output/profile references. Preserve old metadata only as labelled historical provenance.",
+    "Validate every declared replacement even if deterministic rebuilt bytes are identical. Original changed-file requirement relaxed only for identical declared bytes; complete file-set/type/native-origin/undeclared-change checks remain.",
+    "Generalize native/FEX projection to the declared component roles, retaining signature-only native byte differences and CodeResources-only undeclared data changes.",
+    "Explicit mandatory helper pack replaces graphics_repo and old REPO fallback; selected pure helper bodies retain original validation assertions.",
+    "Owned child-group transport cleanup is a tested lifecycle correction, separate from the unchanged profile/signature/code-origin assertions.",
+    "Capture and recheck exact assembly/core/helper/build/error/provenance source refs before and after operations; phase wall/monotonic times and original failures remain in private receipts. New candidate records explicitly deny runtime qualification and execution authorization.",
+    "CLI execution adds a fresh task-owned operation receipt, static request/source refs, current fixed flock, aggregate worker log bound and whole-operation timer. Original bundle cp uses the existing bounded owned-command transport. Secondary log/reap evidence failures do not mask an existing command failure.",
+    "Inner assembly success is distinct from final worker success. Runtime binds canonical operation path/UUID; final worker receipt binds exact runtime_ref. Current admission requires an explicit reviewed operation_ref and rejects failed, unfinalized, mismatched or changed operations. Component release records are joined by operation_id and rechecked."
+  ],
+  "verification": {
+    "portable_tests": 72,
+    "original_signing_controls": 13,
+    "new_boundary_transport_controls": 36,
+    "command": "PEAR_ASSEMBLY_SOURCE_PACK=<declared source-only pack> PYTHONDONTWRITEBYTECODE=1 python3 -m unittest discover -s tests/assembly -v",
+    "requirements": [
+      "Python 3.11 or newer on a POSIX host",
+      "standard library only",
+      "read-only ps process-state query for descendant cleanup test",
+      "exact external six-file source pack"
+    ],
+    "not_claimed": [
+      "actual candidate build or bundle signing",
+      "host fixture execution",
+      "game or distribution qualification",
+      "availability of private signing material on another host"
+    ],
+    "cli_controls": 23
+  },
+  "early_availability": "A separate local read-only current profile/identity/device check passed; identity, profile bytes, logs and device data remain private. This result is not replayed as current artifact authority.",
+  "storage_estimate": {
+    "method": "Full logical parent bundle copy plus positive replacement growth, one largest native rewrite, all bounded command logs including read overshoot, certificate extraction and signature allowance, code-page allowance and metadata. No APFS sharing assumed. Recompute at admission; retain at least 6 GiB floor. CLI adds the requested aggregate worker log bound and one MiB operation metadata to the candidate estimate; bounded copy logs are included.",
+    "release_conditions": "Parent retains old runtime and all selected inputs. New failed candidates and logs remain until review determines retention; this package performs no deletion."
+  }
+}

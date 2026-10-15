@@ -3,16 +3,22 @@
 Shared runtime contracts, diagnostic interfaces and integration tooling for
 [Pear](https://github.com/postmelee/pear) and future consumers. This repository is
 being established by [Pear Task #56](https://github.com/postmelee/pear/issues/56).
-The current package contains the existing v1/v2 contract schemas and reference
-validators, plus the shared Abort observation schema and canonical header.
+The package contains the existing v1/v2 contracts and shared Abort schema, plus
+explicit-input Wine/FEX/graphics reconstruction and isolated candidate assembly.
 
 ## Status and boundaries
 
-This is the Stage 2 source package. It does not yet build, assemble, sign or launch
-a runtime. Runtime reconstruction, the existing seven-fixture execution adapter,
-new candidate verification and source-owner cutover remain later gates. Imported
-tests exercise contracts and a synthetic diagnostic schema; they establish no
-gameplay, Steamworks, distribution or complete Rosetta-independence claim.
+Stage 3 reconstructed the selected component artifacts and assembled a separate
+signed development candidate. The existing seven-fixture execution adapter,
+affected host verification and final source-owner cutover remain later gates.
+Build, portable-test and signing evidence establishes no gameplay, Steamworks,
+distribution or complete Rosetta-independence claim.
+
+Start with [reconstruction and recovery](docs/development.md), the
+[assembly request and CLI](docs/assembly.md), and the
+[exact selected component/recipe lock](locks/task56-reconstruction-v1.json).
+Required retained compiled/generated inputs and private local configuration are
+explicit prerequisites; cloning these repositories alone does not recover them.
 
 Pear retains its app, manager, game/account policy, Preview selection and recovery
 state. Component implementation belongs to the repositories below. Private
@@ -28,7 +34,8 @@ from the accepted Pear diagnostic checkpoint
 recorded separately in [source-import.json](provenance/source-import.json).
 
 The component repositories currently require collaborator access. These are
-planned pairing inputs, not a completed runtime lock or verified built combination:
+upstream bases; the selected fork commits and reconstructed artifact identities
+are in the lock above:
 
 | Repository | Upstream revision selected by Task #56 |
 |---|---|

@@ -1,0 +1,7 @@
+{
+  "pear_runtime/assembly/_transport.py": {
+    "license": "MIT",
+    "reason": "Retains original Pear tools/steam/signing_group.py MIT terms; exact source identity and adaptations reviewed in provenance/assembly-import.json.",
+    "notice": "LICENSES/MIT.txt"
+  }
+}

@@ -1,0 +1,184 @@
+{
+  "schema_version": 1,
+  "scope": "task56_development_reconstruction",
+  "components": {
+    "wine": {
+      "repository": "https://github.com/postmelee/pear-wine",
+      "commit": "1b76db6902345388c589ba3909b22badf751dfd5",
+      "upstream": "4e819f054dd2d9ee855ee3f1e30d8c1bb8f80fcf"
+    },
+    "fex": {
+      "repository": "https://github.com/postmelee/pear-fex",
+      "commit": "c62ed75aa6a33809ddb76c7f40aabbe4f4fbdda6",
+      "upstream": "59f85d6b7df4eb053d2cc1b9d33411b4f31bfbaa"
+    },
+    "dxmt": {
+      "repository": "https://github.com/postmelee/pear-dxmt",
+      "commit": "e800e770006fc7c37831ab857000a4781c85f6fd",
+      "upstream": "7c8dee1c2d73415301ceb7d1fa810861cef4cd67"
+    }
+  },
+  "recipes": {
+    "fex": {
+      "path": "recipes/fex/selected-v1.json",
+      "sha256": "da647c18f8a59556c952788d1c20b64ef5ba55e3c4ef4970680faee18637d9f8",
+      "size_bytes": 2676299,
+      "source_roots": {
+        "fex": {
+          "kind": "git",
+          "commit": "c62ed75aa6a33809ddb76c7f40aabbe4f4fbdda6"
+        },
+        "wine": {
+          "kind": "git",
+          "commit": "1b76db6902345388c589ba3909b22badf751dfd5"
+        },
+        "fex_cpp_optparse": {
+          "kind": "git",
+          "commit": "9f94388a339fcbb0bc95c17768eb786c85988f6e",
+          "parent": "fex",
+          "submodule_path": "Source/Common/cpp-optparse"
+        },
+        "fex_fmt": {
+          "kind": "git",
+          "commit": "c07e2aa4b130b4fd359a1c6455a5201b17af01fa",
+          "parent": "fex",
+          "submodule_path": "External/fmt"
+        },
+        "fex_range_v3": {
+          "kind": "git",
+          "commit": "ca1388fb9da8e69314dda222dc7b139ca84e092f",
+          "parent": "fex",
+          "submodule_path": "External/range-v3"
+        },
+        "fex_rpmalloc": {
+          "kind": "git",
+          "commit": "09142d726429416bfa7b459151515fe3ab7622dd",
+          "parent": "fex",
+          "submodule_path": "External/rpmalloc"
+        },
+        "fex_unordered_dense": {
+          "kind": "git",
+          "commit": "3234af2c03549bc85656bfd3a86993bf1cd8aef1",
+          "parent": "fex",
+          "submodule_path": "External/unordered_dense"
+        },
+        "fex_xxhash": {
+          "kind": "git",
+          "commit": "e626a72bc2321cd320e953a0ccf1584cad60f363",
+          "parent": "fex",
+          "submodule_path": "External/xxhash"
+        }
+      },
+      "required_roots": {
+        "fex": "git",
+        "wine": "git",
+        "runtime": "input",
+        "inputs": "input",
+        "private": "private",
+        "llvm_mingw": "toolchain",
+        "apple_tools": "host",
+        "system_bin": "host",
+        "fex_cpp_optparse": "git",
+        "fex_fmt": "git",
+        "fex_range_v3": "git",
+        "fex_rpmalloc": "git",
+        "fex_unordered_dense": "git",
+        "fex_xxhash": "git"
+      },
+      "command_module": "pear_runtime.recipes.fex"
+    },
+    "wine": {
+      "path": "recipes/wine/selected-v1.json",
+      "sha256": "b78f540102228540ab0f7a84a7dd039c31a4fa5ad3f788941ecf9f4c7a813bba",
+      "size_bytes": 5718534,
+      "source_roots": {
+        "wine": {
+          "commit": "1b76db6902345388c589ba3909b22badf751dfd5",
+          "kind": "git"
+        }
+      },
+      "required_roots": {
+        "apple_sdk": "sdk",
+        "apple_tools": "toolchain",
+        "common_headers": "input",
+        "host_tools": "host",
+        "inputs": "input",
+        "llvm_mingw": "toolchain",
+        "wine": "git"
+      },
+      "command_module": "pear_runtime.recipes.wine"
+    },
+    "graphics": {
+      "path": "recipes/graphics/selected-v1.json",
+      "sha256": "09fdc6524c7a41fb0b1fc3b888a4f149e95a3165b3e068f9c5d6a4c0abce1406",
+      "size_bytes": 3461849,
+      "source_roots": {
+        "dxmt": {
+          "commit": "e800e770006fc7c37831ab857000a4781c85f6fd",
+          "kind": "git"
+        },
+        "wine": {
+          "commit": "1b76db6902345388c589ba3909b22badf751dfd5",
+          "kind": "git"
+        }
+      },
+      "required_roots": {
+        "apple_sdk": "sdk",
+        "apple_tools": "toolchain",
+        "dxmt": "git",
+        "host_tools": "host",
+        "inputs": "input",
+        "wine": "git"
+      },
+      "command_module": "pear_runtime.recipes.graphics"
+    }
+  },
+  "runtime_builder": {
+    "repository": "https://github.com/postmelee/pear-runtime",
+    "commit_binding": "Use the enclosing versioned runtime checkout; the Pear Stage 3 report records its exact commit without a recursive self-pin."
+  },
+  "artifact_identities_before_signing": {
+    "fex_pe": {
+      "sha256": "830d3c79324c686b0171e0e4f4a729926726c1d0ba6417877a642b5b45399a6b",
+      "size_bytes": 5910528
+    },
+    "wine_native": {
+      "sha256": "982c9251af29a2be67641a0dbed507763c355ef77748beaf140f07dc19b89107",
+      "size_bytes": 993320
+    },
+    "wine_pe": {
+      "sha256": "ec23f34b3a3bffcaf42a24a38903865073fd01be4ef71ef5cffa8bdb67c11f6f",
+      "size_bytes": 2818048
+    },
+    "win32u": {
+      "sha256": "80001d00caa3471e80e014be7e6ac18fdf1586d4e24085dbe82597b7ddb4c63c",
+      "size_bytes": 2592136
+    },
+    "winemac": {
+      "sha256": "fb05cc7faf26582f703edeeb26a56ef6ce22548568398b171871e6f5dd3291d7",
+      "size_bytes": 874904
+    },
+    "winemetal": {
+      "sha256": "b55b31a583feaa5e5184c10b0682a59f9f18d7a52d39d424059f38814093d770",
+      "size_bytes": 47164192
+    }
+  },
+  "assembly_receipt_identity": {
+    "sha256": "d2c30942bc1b27067cd7d674971f6cd2e3e2395e55b514c3572af164f1588e2c",
+    "size_bytes": 2455362
+  },
+  "operation_receipt_identity": {
+    "sha256": "def3a07563a7974308029d62af9de443384479d4492c73824c74fec721447946",
+    "size_bytes": 9162
+  },
+  "private_input_policy": "Private bindings, selector/configuration, signing profile and raw receipts stay outside Git. Their exact refs are required locally; they are not recoverable from this lock.",
+  "reconstruction_boundary": "Selected source units rebuilt from these Git commits; retained objects/archives/generated configuration are explicit immutable inputs. Full clean lower-layer rebuild not performed.",
+  "source_authority": "Final owner cutover pending Task56 Stage6",
+  "verification": {
+    "component_builds": "passed",
+    "assembly": "passed",
+    "host_fixtures": "unperformed",
+    "game_qualification": "unperformed",
+    "distribution_qualification": "unperformed"
+  }
+}

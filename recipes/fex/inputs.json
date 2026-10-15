@@ -1,0 +1,657 @@
+{
+  "schema_version": 1,
+  "id": "fex-d36-v1",
+  "files": [
+    {
+      "path": "link/000-libarm64ecfex.def",
+      "sha256": "263cdaf82e317faaec4b390bbc58eed2079230c0731e8aecb5f8f534f7bf4e84",
+      "size_bytes": 485,
+      "role": "preserved_link_operand",
+      "origin": "task11:.build/task11/rip-window-build1/source/Source/Windows/ARM64EC/libarm64ecfex.def",
+      "consuming_record_sha256": "22b4122333ff9d3777470cea1e0f4bb16aa3d1944403b93f6dddc4c3c733ab47"
+    },
+    {
+      "path": "link/001-JitSymbols.cpp.obj",
+      "sha256": "ec293ea3a6205cbfd4253ab792a503cd5d915e883e4931860623d2c9bdf23cc2",
+      "size_bytes": 211980,
+      "role": "preserved_link_operand",
+      "origin": "task11:.build/task11/rip-window-build1/pe/arm64ec/FEXCore/Source/CMakeFiles/FEXCore_object.dir/Common/JitSymbols.cpp.obj",
+      "consuming_record_sha256": "22b4122333ff9d3777470cea1e0f4bb16aa3d1944403b93f6dddc4c3c733ab47"
+    },
+    {
+      "path": "link/002-Context.cpp.obj",
+      "sha256": "ae346d8f82333b09ac6f75f068fb2bc1a2c6d291a3b6a6540fac30a35cd72bc6",
+      "size_bytes": 622472,
+      "role": "preserved_link_operand",
+      "origin": "task11:.build/task11/rip-window-build1/pe/arm64ec/FEXCore/Source/CMakeFiles/FEXCore_object.dir/Interface/Context/Context.cpp.obj",
+      "consuming_record_sha256": "22b4122333ff9d3777470cea1e0f4bb16aa3d1944403b93f6dddc4c3c733ab47"
+    },
+    {
+      "path": "link/003-control-compile-0.obj",
+      "sha256": "f5c99f4ef2720539b8e8cdca7eb94e5a9df44c717aa0ccf356911e62e09df3bc",
+      "size_bytes": 662429,
+      "role": "preserved_link_operand",
+      "origin": "task11:.build/task11/d25-build3/control-compile-0.obj",
+      "consuming_record_sha256": "22b4122333ff9d3777470cea1e0f4bb16aa3d1944403b93f6dddc4c3c733ab47"
+    },
+    {
+      "path": "link/004-DiskCache.cpp.obj",
+      "sha256": "8fc7858576be7cefada072db220676ff68062f9bf4aa06ea0d73420c0de86ce4",
+      "size_bytes": 1746142,
+      "role": "preserved_link_operand",
+      "origin": "task11:.build/task11/rip-window-build1/pe/arm64ec/FEXCore/Source/CMakeFiles/FEXCore_object.dir/Interface/Core/DiskCache.cpp.obj",
+      "consuming_record_sha256": "22b4122333ff9d3777470cea1e0f4bb16aa3d1944403b93f6dddc4c3c733ab47"
+    },
+    {
+      "path": "link/005-control-compile-1.obj",
+      "sha256": "9e415f070cd12380902080bdee59d4ec6ea93458f3943b6adc5052ea8183bbd4",
+      "size_bytes": 2973434,
+      "role": "preserved_link_operand",
+      "origin": "task11:.build/task11/d25-build3/control-compile-1.obj",
+      "consuming_record_sha256": "22b4122333ff9d3777470cea1e0f4bb16aa3d1944403b93f6dddc4c3c733ab47"
+    },
+    {
+      "path": "link/006-control-compile-3.obj",
+      "sha256": "609dd92dfb685d815d95969b3c1bf342164b3f9c09784e73227882141a503e7b",
+      "size_bytes": 798090,
+      "role": "preserved_link_operand",
+      "origin": "task11:.build/task11/d25-build3/control-compile-3.obj",
+      "consuming_record_sha256": "22b4122333ff9d3777470cea1e0f4bb16aa3d1944403b93f6dddc4c3c733ab47"
+    },
+    {
+      "path": "link/007-Addressing.cpp.obj",
+      "sha256": "8753a77c132ba11e9a3d9cd3ba8c24b3e3172ca557e0d261ca347e2236cdfdf1",
+      "size_bytes": 121371,
+      "role": "preserved_link_operand",
+      "origin": "task11:.build/task11/rip-window-build1/pe/arm64ec/FEXCore/Source/CMakeFiles/FEXCore_object.dir/Interface/Core/Addressing.cpp.obj",
+      "consuming_record_sha256": "22b4122333ff9d3777470cea1e0f4bb16aa3d1944403b93f6dddc4c3c733ab47"
+    },
+    {
+      "path": "link/008-CPUID.cpp.obj",
+      "sha256": "dd16d05968e5a8f0570fc4458379c26b7892ec2c0511d3e2c146736b8969ca20",
+      "size_bytes": 373882,
+      "role": "preserved_link_operand",
+      "origin": "task11:.build/task11/rip-window-build1/pe/arm64ec/FEXCore/Source/CMakeFiles/FEXCore_object.dir/Interface/Core/CPUID.cpp.obj",
+      "consuming_record_sha256": "22b4122333ff9d3777470cea1e0f4bb16aa3d1944403b93f6dddc4c3c733ab47"
+    },
+    {
+      "path": "link/009-control-compile-4.obj",
+      "sha256": "d02bf9fac202a770db28ba519eb115c9fb94e6a0078b20c6e0b4c7d4e87cfacb",
+      "size_bytes": 1072330,
+      "role": "preserved_link_operand",
+      "origin": "task11:.build/task11/d25-build3/control-compile-4.obj",
+      "consuming_record_sha256": "22b4122333ff9d3777470cea1e0f4bb16aa3d1944403b93f6dddc4c3c733ab47"
+    },
+    {
+      "path": "link/010-control-compile-5.obj",
+      "sha256": "a9f35e6d3d15eb94ca78d65db92e215ccc84a784fd40327d471f8714d74918ed",
+      "size_bytes": 230484,
+      "role": "preserved_link_operand",
+      "origin": "task11:.build/task11/d25-build3/control-compile-5.obj",
+      "consuming_record_sha256": "22b4122333ff9d3777470cea1e0f4bb16aa3d1944403b93f6dddc4c3c733ab47"
+    },
+    {
+      "path": "link/011-AVX_128.cpp.obj",
+      "sha256": "7394d92bc9561fd8dfea9309bf3cf114356858054364a2e08ef6a107b5823816",
+      "size_bytes": 2735979,
+      "role": "preserved_link_operand",
+      "origin": "task11:.build/task11/rip-window-build1/pe/arm64ec/FEXCore/Source/CMakeFiles/FEXCore_object.dir/Interface/Core/OpcodeDispatcher/AVX_128.cpp.obj",
+      "consuming_record_sha256": "22b4122333ff9d3777470cea1e0f4bb16aa3d1944403b93f6dddc4c3c733ab47"
+    },
+    {
+      "path": "link/012-Crypto.cpp.obj",
+      "sha256": "9be181527d124c7e75379e5b5bd0341465f39c721a95baec9d5917b48c7af503",
+      "size_bytes": 653707,
+      "role": "preserved_link_operand",
+      "origin": "task11:.build/task11/rip-window-build1/pe/arm64ec/FEXCore/Source/CMakeFiles/FEXCore_object.dir/Interface/Core/OpcodeDispatcher/Crypto.cpp.obj",
+      "consuming_record_sha256": "22b4122333ff9d3777470cea1e0f4bb16aa3d1944403b93f6dddc4c3c733ab47"
+    },
+    {
+      "path": "link/013-Flags.cpp.obj",
+      "sha256": "2ee317e21836ffd8db22330560092750a13c3c5a3c5d73601bb53b1fdabdd797",
+      "size_bytes": 704784,
+      "role": "preserved_link_operand",
+      "origin": "task11:.build/task11/rip-window-build1/pe/arm64ec/FEXCore/Source/CMakeFiles/FEXCore_object.dir/Interface/Core/OpcodeDispatcher/Flags.cpp.obj",
+      "consuming_record_sha256": "22b4122333ff9d3777470cea1e0f4bb16aa3d1944403b93f6dddc4c3c733ab47"
+    },
+    {
+      "path": "link/014-Vector.cpp.obj",
+      "sha256": "52cc070deb853ac84933c7da71c6703e8590b7b440108988338e504651782fb1",
+      "size_bytes": 5095891,
+      "role": "preserved_link_operand",
+      "origin": "task11:.build/task11/rip-window-build1/pe/arm64ec/FEXCore/Source/CMakeFiles/FEXCore_object.dir/Interface/Core/OpcodeDispatcher/Vector.cpp.obj",
+      "consuming_record_sha256": "22b4122333ff9d3777470cea1e0f4bb16aa3d1944403b93f6dddc4c3c733ab47"
+    },
+    {
+      "path": "link/015-X87.cpp.obj",
+      "sha256": "f9923dc5e86d4e96790a86ab5348f65678d5f583219b4b4ae692e5ff9d29abf0",
+      "size_bytes": 1129145,
+      "role": "preserved_link_operand",
+      "origin": "task11:.build/task11/rip-window-build1/pe/arm64ec/FEXCore/Source/CMakeFiles/FEXCore_object.dir/Interface/Core/OpcodeDispatcher/X87.cpp.obj",
+      "consuming_record_sha256": "22b4122333ff9d3777470cea1e0f4bb16aa3d1944403b93f6dddc4c3c733ab47"
+    },
+    {
+      "path": "link/016-X87F64.cpp.obj",
+      "sha256": "541f0a15df3c20b327fff92778c59c62c7ee422e24670c2fda38ff1570db892d",
+      "size_bytes": 747172,
+      "role": "preserved_link_operand",
+      "origin": "task11:.build/task11/rip-window-build1/pe/arm64ec/FEXCore/Source/CMakeFiles/FEXCore_object.dir/Interface/Core/OpcodeDispatcher/X87F64.cpp.obj",
+      "consuming_record_sha256": "22b4122333ff9d3777470cea1e0f4bb16aa3d1944403b93f6dddc4c3c733ab47"
+    },
+    {
+      "path": "link/017-OpcodeDispatcher.cpp.obj",
+      "sha256": "130e138732c6fb9c1d5965d2d447c3943f15f764af6f51394f6ce2559875a33e",
+      "size_bytes": 4473032,
+      "role": "preserved_link_operand",
+      "origin": "task11:.build/task11/rip-window-build1/pe/arm64ec/FEXCore/Source/CMakeFiles/FEXCore_object.dir/Interface/Core/OpcodeDispatcher.cpp.obj",
+      "consuming_record_sha256": "22b4122333ff9d3777470cea1e0f4bb16aa3d1944403b93f6dddc4c3c733ab47"
+    },
+    {
+      "path": "link/018-Arm64Emitter.cpp.obj",
+      "sha256": "1174aba7f3ceb75dcbb18b9499932221792f05176e1c4f4496613b9617878210",
+      "size_bytes": 732472,
+      "role": "preserved_link_operand",
+      "origin": "task11:.build/task11/rip-window-build1/pe/arm64ec/FEXCore/Source/CMakeFiles/FEXCore_object.dir/Interface/Core/ArchHelpers/Arm64Emitter.cpp.obj",
+      "consuming_record_sha256": "22b4122333ff9d3777470cea1e0f4bb16aa3d1944403b93f6dddc4c3c733ab47"
+    },
+    {
+      "path": "link/019-control-compile-6.obj",
+      "sha256": "e49ed84a940e6c8560ba623da627d4193aa86dbc83c5beaddfc011fcd379b224",
+      "size_bytes": 1942400,
+      "role": "preserved_link_operand",
+      "origin": "task11:.build/task11/d25-build3/control-compile-6.obj",
+      "consuming_record_sha256": "22b4122333ff9d3777470cea1e0f4bb16aa3d1944403b93f6dddc4c3c733ab47"
+    },
+    {
+      "path": "link/020-InterpreterFallbacks.cpp.obj",
+      "sha256": "9eeb59288bd1953e57a810e857326418ac04e6b3d49cf110cc77631b876ab871",
+      "size_bytes": 358051,
+      "role": "preserved_link_operand",
+      "origin": "task11:.build/task11/rip-window-build1/pe/arm64ec/FEXCore/Source/CMakeFiles/FEXCore_object.dir/Interface/Core/Interpreter/Fallbacks/InterpreterFallbacks.cpp.obj",
+      "consuming_record_sha256": "22b4122333ff9d3777470cea1e0f4bb16aa3d1944403b93f6dddc4c3c733ab47"
+    },
+    {
+      "path": "link/021-StringCompareFallbacks.cpp.obj",
+      "sha256": "86cc459920c8c59cf601987cb4ecf4ca872cb26659ddb4466a34fda4556192cc",
+      "size_bytes": 65092,
+      "role": "preserved_link_operand",
+      "origin": "task11:.build/task11/rip-window-build1/pe/arm64ec/FEXCore/Source/CMakeFiles/FEXCore_object.dir/Interface/Core/Interpreter/Fallbacks/StringCompareFallbacks.cpp.obj",
+      "consuming_record_sha256": "22b4122333ff9d3777470cea1e0f4bb16aa3d1944403b93f6dddc4c3c733ab47"
+    },
+    {
+      "path": "link/022-variant-jit-JIT.obj",
+      "sha256": "3273794ed5c893073e78ed1e3138d1e04b26a3789c017a9a21255412b87fe3bf",
+      "size_bytes": 2858804,
+      "role": "preserved_link_operand",
+      "origin": "task11:.build/task11/d26-game-build1/variant-jit-JIT.obj",
+      "consuming_record_sha256": "22b4122333ff9d3777470cea1e0f4bb16aa3d1944403b93f6dddc4c3c733ab47"
+    },
+    {
+      "path": "link/023-variant-jit-ALUOps.obj",
+      "sha256": "b48c6f31dc1301cb388781b54543f3d18c9a3eb36a70429b39132cac8242366e",
+      "size_bytes": 1046853,
+      "role": "preserved_link_operand",
+      "origin": "task11:.build/task11/d26-game-build1/variant-jit-ALUOps.obj",
+      "consuming_record_sha256": "22b4122333ff9d3777470cea1e0f4bb16aa3d1944403b93f6dddc4c3c733ab47"
+    },
+    {
+      "path": "link/024-variant-jit-AtomicOps.obj",
+      "sha256": "2e6f863d83fe73634715072a58186b6fd29df834dcb83c17553fdd4cd24f7be1",
+      "size_bytes": 380489,
+      "role": "preserved_link_operand",
+      "origin": "task11:.build/task11/d26-game-build1/variant-jit-AtomicOps.obj",
+      "consuming_record_sha256": "22b4122333ff9d3777470cea1e0f4bb16aa3d1944403b93f6dddc4c3c733ab47"
+    },
+    {
+      "path": "link/025-variant-jit-BranchOps.obj",
+      "sha256": "a9491850078bfc50b4a15b2ab4f02591ce68b32e600c34af119252dc0df0a749",
+      "size_bytes": 631618,
+      "role": "preserved_link_operand",
+      "origin": "task11:.build/task11/d26-game-build1/variant-jit-BranchOps.obj",
+      "consuming_record_sha256": "22b4122333ff9d3777470cea1e0f4bb16aa3d1944403b93f6dddc4c3c733ab47"
+    },
+    {
+      "path": "link/026-variant-jit-ConversionOps.obj",
+      "sha256": "1c82eddac3e6ac466046a9fce5b2fe5407f8763f422c9b7ed545466c27b91422",
+      "size_bytes": 411067,
+      "role": "preserved_link_operand",
+      "origin": "task11:.build/task11/d26-game-build1/variant-jit-ConversionOps.obj",
+      "consuming_record_sha256": "22b4122333ff9d3777470cea1e0f4bb16aa3d1944403b93f6dddc4c3c733ab47"
+    },
+    {
+      "path": "link/027-variant-jit-EncryptionOps.obj",
+      "sha256": "cb83a8230436e1612a903309ee2cc591c9bc43e68b74a51c0dee7950719647ed",
+      "size_bytes": 311460,
+      "role": "preserved_link_operand",
+      "origin": "task11:.build/task11/d26-game-build1/variant-jit-EncryptionOps.obj",
+      "consuming_record_sha256": "22b4122333ff9d3777470cea1e0f4bb16aa3d1944403b93f6dddc4c3c733ab47"
+    },
+    {
+      "path": "link/028-variant-jit-MemoryOps.obj",
+      "sha256": "be03ecad9fdcc174c1c588abed84730eea1acc2802f706a7cf6e11430f1a5fd7",
+      "size_bytes": 1667900,
+      "role": "preserved_link_operand",
+      "origin": "task11:.build/task11/d26-game-build1/variant-jit-MemoryOps.obj",
+      "consuming_record_sha256": "22b4122333ff9d3777470cea1e0f4bb16aa3d1944403b93f6dddc4c3c733ab47"
+    },
+    {
+      "path": "link/029-variant-jit-MiscOps.obj",
+      "sha256": "d543435d76212e87f4259a2113a9a2cfae14344756f6a3bae17cb177218a3d17",
+      "size_bytes": 327157,
+      "role": "preserved_link_operand",
+      "origin": "task11:.build/task11/d26-game-build1/variant-jit-MiscOps.obj",
+      "consuming_record_sha256": "22b4122333ff9d3777470cea1e0f4bb16aa3d1944403b93f6dddc4c3c733ab47"
+    },
+    {
+      "path": "link/030-variant-jit-MoveOps.obj",
+      "sha256": "3c2575049e62953f3131d4d0e5cf1abfcff8b82de4b3d2e7ca557f5ab6a52196",
+      "size_bytes": 94160,
+      "role": "preserved_link_operand",
+      "origin": "task11:.build/task11/d26-game-build1/variant-jit-MoveOps.obj",
+      "consuming_record_sha256": "22b4122333ff9d3777470cea1e0f4bb16aa3d1944403b93f6dddc4c3c733ab47"
+    },
+    {
+      "path": "link/031-variant-jit-VectorOps.obj",
+      "sha256": "272bd4ed4b3325e7d99a3911de1c46f0214300a887d602dca387f9b942f0717b",
+      "size_bytes": 3080744,
+      "role": "preserved_link_operand",
+      "origin": "task11:.build/task11/d26-game-build1/variant-jit-VectorOps.obj",
+      "consuming_record_sha256": "22b4122333ff9d3777470cea1e0f4bb16aa3d1944403b93f6dddc4c3c733ab47"
+    },
+    {
+      "path": "link/032-variant-jit-Arm64Relocations.obj",
+      "sha256": "0fd35a4ecd345625c6bec30b8522dfd5123084923bff28e98709c3488d16fb8c",
+      "size_bytes": 226353,
+      "role": "preserved_link_operand",
+      "origin": "task11:.build/task11/d26-game-build1/variant-jit-Arm64Relocations.obj",
+      "consuming_record_sha256": "22b4122333ff9d3777470cea1e0f4bb16aa3d1944403b93f6dddc4c3c733ab47"
+    },
+    {
+      "path": "link/033-BaseTables.cpp.obj",
+      "sha256": "2a8c36b335ecda36e2c4d46dcc056e533f8d2a0d0c358d6ce9bb040bd2a1bbdb",
+      "size_bytes": 118394,
+      "role": "preserved_link_operand",
+      "origin": "task11:.build/task11/rip-window-build1/pe/arm64ec/FEXCore/Source/CMakeFiles/FEXCore_object.dir/Interface/Core/X86Tables/BaseTables.cpp.obj",
+      "consuming_record_sha256": "22b4122333ff9d3777470cea1e0f4bb16aa3d1944403b93f6dddc4c3c733ab47"
+    },
+    {
+      "path": "link/034-DDDTables.cpp.obj",
+      "sha256": "345dfb3b02cba2f7c1211f3b6df86bd6f0a8bd9554f9b04a6e1cf9d28a79de71",
+      "size_bytes": 87562,
+      "role": "preserved_link_operand",
+      "origin": "task11:.build/task11/rip-window-build1/pe/arm64ec/FEXCore/Source/CMakeFiles/FEXCore_object.dir/Interface/Core/X86Tables/DDDTables.cpp.obj",
+      "consuming_record_sha256": "22b4122333ff9d3777470cea1e0f4bb16aa3d1944403b93f6dddc4c3c733ab47"
+    },
+    {
+      "path": "link/035-H0F38Tables.cpp.obj",
+      "sha256": "23ad7266549dd01568f12d7482038242725f35cd89b29ec260f4343a97eab968",
+      "size_bytes": 203914,
+      "role": "preserved_link_operand",
+      "origin": "task11:.build/task11/rip-window-build1/pe/arm64ec/FEXCore/Source/CMakeFiles/FEXCore_object.dir/Interface/Core/X86Tables/H0F38Tables.cpp.obj",
+      "consuming_record_sha256": "22b4122333ff9d3777470cea1e0f4bb16aa3d1944403b93f6dddc4c3c733ab47"
+    },
+    {
+      "path": "link/036-H0F3ATables.cpp.obj",
+      "sha256": "73aa55a5104b56f1a09e51ca8db9b7504924612e44b6384b2e5155afb414ebc2",
+      "size_bytes": 169680,
+      "role": "preserved_link_operand",
+      "origin": "task11:.build/task11/rip-window-build1/pe/arm64ec/FEXCore/Source/CMakeFiles/FEXCore_object.dir/Interface/Core/X86Tables/H0F3ATables.cpp.obj",
+      "consuming_record_sha256": "22b4122333ff9d3777470cea1e0f4bb16aa3d1944403b93f6dddc4c3c733ab47"
+    },
+    {
+      "path": "link/037-PrimaryGroupTables.cpp.obj",
+      "sha256": "0c90d5ad115e560978fec6e6c626d7b828b189c2ea3fbc3267c2557c65a85d5e",
+      "size_bytes": 103535,
+      "role": "preserved_link_operand",
+      "origin": "task11:.build/task11/rip-window-build1/pe/arm64ec/FEXCore/Source/CMakeFiles/FEXCore_object.dir/Interface/Core/X86Tables/PrimaryGroupTables.cpp.obj",
+      "consuming_record_sha256": "22b4122333ff9d3777470cea1e0f4bb16aa3d1944403b93f6dddc4c3c733ab47"
+    },
+    {
+      "path": "link/038-SecondaryGroupTables.cpp.obj",
+      "sha256": "fd6014df3e48883f9242cba809a91f6787ce3365d921bf855b22564181e3a73a",
+      "size_bytes": 105820,
+      "role": "preserved_link_operand",
+      "origin": "task11:.build/task11/rip-window-build1/pe/arm64ec/FEXCore/Source/CMakeFiles/FEXCore_object.dir/Interface/Core/X86Tables/SecondaryGroupTables.cpp.obj",
+      "consuming_record_sha256": "22b4122333ff9d3777470cea1e0f4bb16aa3d1944403b93f6dddc4c3c733ab47"
+    },
+    {
+      "path": "link/039-SecondaryModRMTables.cpp.obj",
+      "sha256": "72022409416776b525c41d9b3d1eb0ee5307144dc2d66dea3f795c96e5c31d45",
+      "size_bytes": 41327,
+      "role": "preserved_link_operand",
+      "origin": "task11:.build/task11/rip-window-build1/pe/arm64ec/FEXCore/Source/CMakeFiles/FEXCore_object.dir/Interface/Core/X86Tables/SecondaryModRMTables.cpp.obj",
+      "consuming_record_sha256": "22b4122333ff9d3777470cea1e0f4bb16aa3d1944403b93f6dddc4c3c733ab47"
+    },
+    {
+      "path": "link/040-SecondaryTables.cpp.obj",
+      "sha256": "1d6ce54d425ab85e31e922868134caa56f5b8e33fb2eda2273c7a69822840f71",
+      "size_bytes": 305738,
+      "role": "preserved_link_operand",
+      "origin": "task11:.build/task11/rip-window-build1/pe/arm64ec/FEXCore/Source/CMakeFiles/FEXCore_object.dir/Interface/Core/X86Tables/SecondaryTables.cpp.obj",
+      "consuming_record_sha256": "22b4122333ff9d3777470cea1e0f4bb16aa3d1944403b93f6dddc4c3c733ab47"
+    },
+    {
+      "path": "link/041-VEXTables.cpp.obj",
+      "sha256": "f8fc1f9710113853d12bdd0cbde2bf5e9c109aca852e66065a0634d6afb4d1fd",
+      "size_bytes": 1439218,
+      "role": "preserved_link_operand",
+      "origin": "task11:.build/task11/rip-window-build1/pe/arm64ec/FEXCore/Source/CMakeFiles/FEXCore_object.dir/Interface/Core/X86Tables/VEXTables.cpp.obj",
+      "consuming_record_sha256": "22b4122333ff9d3777470cea1e0f4bb16aa3d1944403b93f6dddc4c3c733ab47"
+    },
+    {
+      "path": "link/042-X87Tables.cpp.obj",
+      "sha256": "88ae973bfe8d52d5c6b3f056890b415a757a4586abda294c9cf968efbbc0f4d3",
+      "size_bytes": 488262,
+      "role": "preserved_link_operand",
+      "origin": "task11:.build/task11/rip-window-build1/pe/arm64ec/FEXCore/Source/CMakeFiles/FEXCore_object.dir/Interface/Core/X86Tables/X87Tables.cpp.obj",
+      "consuming_record_sha256": "22b4122333ff9d3777470cea1e0f4bb16aa3d1944403b93f6dddc4c3c733ab47"
+    },
+    {
+      "path": "link/043-GDBJIT.cpp.obj",
+      "sha256": "4a50c6813fdaa134f6220ed931943b39d7baa792b29090f526383aec43554d03",
+      "size_bytes": 47378,
+      "role": "preserved_link_operand",
+      "origin": "task11:.build/task11/rip-window-build1/pe/arm64ec/FEXCore/Source/CMakeFiles/FEXCore_object.dir/Interface/GDBJIT/GDBJIT.cpp.obj",
+      "consuming_record_sha256": "22b4122333ff9d3777470cea1e0f4bb16aa3d1944403b93f6dddc4c3c733ab47"
+    },
+    {
+      "path": "link/044-IRDumper.cpp.obj",
+      "sha256": "920a1f793ea944e68e905fa15cd8fdfb5d9878ed5fc13c2ddd0367d7bd323b9f",
+      "size_bytes": 660839,
+      "role": "preserved_link_operand",
+      "origin": "task11:.build/task11/rip-window-build1/pe/arm64ec/FEXCore/Source/CMakeFiles/FEXCore_object.dir/Interface/IR/IRDumper.cpp.obj",
+      "consuming_record_sha256": "22b4122333ff9d3777470cea1e0f4bb16aa3d1944403b93f6dddc4c3c733ab47"
+    },
+    {
+      "path": "link/045-IREmitter.cpp.obj",
+      "sha256": "b044dca1c0e243bbb6bc5dd79e3d1b9d051ec675879480cc8b9c629144d1a16c",
+      "size_bytes": 178568,
+      "role": "preserved_link_operand",
+      "origin": "task11:.build/task11/rip-window-build1/pe/arm64ec/FEXCore/Source/CMakeFiles/FEXCore_object.dir/Interface/IR/IREmitter.cpp.obj",
+      "consuming_record_sha256": "22b4122333ff9d3777470cea1e0f4bb16aa3d1944403b93f6dddc4c3c733ab47"
+    },
+    {
+      "path": "link/046-PassManager.cpp.obj",
+      "sha256": "51ff50b8286d178d4f0ea096386f68aa49b9c673a40d9f85297e3ee6d96a6181",
+      "size_bytes": 442139,
+      "role": "preserved_link_operand",
+      "origin": "task11:.build/task11/rip-window-build1/pe/arm64ec/FEXCore/Source/CMakeFiles/FEXCore_object.dir/Interface/IR/PassManager.cpp.obj",
+      "consuming_record_sha256": "22b4122333ff9d3777470cea1e0f4bb16aa3d1944403b93f6dddc4c3c733ab47"
+    },
+    {
+      "path": "link/047-IRDumperPass.cpp.obj",
+      "sha256": "92ce6dbba46cb71c6a78ac0c08d46bc7ed4d4867597189e00b6ec66708a1c636",
+      "size_bytes": 342070,
+      "role": "preserved_link_operand",
+      "origin": "task11:.build/task11/rip-window-build1/pe/arm64ec/FEXCore/Source/CMakeFiles/FEXCore_object.dir/Interface/IR/Passes/IRDumperPass.cpp.obj",
+      "consuming_record_sha256": "22b4122333ff9d3777470cea1e0f4bb16aa3d1944403b93f6dddc4c3c733ab47"
+    },
+    {
+      "path": "link/048-IRValidation.cpp.obj",
+      "sha256": "22fdcd0c4638cff4686d2339972507bf400b8e90a3a4f1dcb6ea69633ecf711c",
+      "size_bytes": 649942,
+      "role": "preserved_link_operand",
+      "origin": "task11:.build/task11/rip-window-build1/pe/arm64ec/FEXCore/Source/CMakeFiles/FEXCore_object.dir/Interface/IR/Passes/IRValidation.cpp.obj",
+      "consuming_record_sha256": "22b4122333ff9d3777470cea1e0f4bb16aa3d1944403b93f6dddc4c3c733ab47"
+    },
+    {
+      "path": "link/049-RedundantFlagCalculationElimination.cpp.obj",
+      "sha256": "7077813a1e79a1e1f80504ea3e21be854eacb0f0ba158c5a5cddf3d2f060f4a8",
+      "size_bytes": 441479,
+      "role": "preserved_link_operand",
+      "origin": "task11:.build/task11/rip-window-build1/pe/arm64ec/FEXCore/Source/CMakeFiles/FEXCore_object.dir/Interface/IR/Passes/RedundantFlagCalculationElimination.cpp.obj",
+      "consuming_record_sha256": "22b4122333ff9d3777470cea1e0f4bb16aa3d1944403b93f6dddc4c3c733ab47"
+    },
+    {
+      "path": "link/050-variant-jit-RegisterAllocationPass.obj",
+      "sha256": "32f76d85218990984812fe7b3292a0a7c6b9b1dc4a48bbdf45ebc1d8a135826c",
+      "size_bytes": 472193,
+      "role": "preserved_link_operand",
+      "origin": "task11:.build/task11/d26-game-build1/variant-jit-RegisterAllocationPass.obj",
+      "consuming_record_sha256": "22b4122333ff9d3777470cea1e0f4bb16aa3d1944403b93f6dddc4c3c733ab47"
+    },
+    {
+      "path": "link/051-x87StackOptimizationPass.cpp.obj",
+      "sha256": "40aee0d760ca0d6408d343d7b69f9bde26f91cc02c733af7f2cd37f44e3e8a6b",
+      "size_bytes": 872513,
+      "role": "preserved_link_operand",
+      "origin": "task11:.build/task11/rip-window-build1/pe/arm64ec/FEXCore/Source/CMakeFiles/FEXCore_object.dir/Interface/IR/Passes/x87StackOptimizationPass.cpp.obj",
+      "consuming_record_sha256": "22b4122333ff9d3777470cea1e0f4bb16aa3d1944403b93f6dddc4c3c733ab47"
+    },
+    {
+      "path": "link/052-LongJump.cpp.obj",
+      "sha256": "69bc6c0e1f796235cef2d0509c8fa321b9951c211afcfb45f68f2ba960c1c101",
+      "size_bytes": 25001,
+      "role": "preserved_link_operand",
+      "origin": "task11:.build/task11/rip-window-build1/pe/arm64ec/FEXCore/Source/CMakeFiles/FEXCore_object.dir/Utils/LongJump.cpp.obj",
+      "consuming_record_sha256": "22b4122333ff9d3777470cea1e0f4bb16aa3d1944403b93f6dddc4c3c733ab47"
+    },
+    {
+      "path": "link/053-Telemetry.cpp.obj",
+      "sha256": "4d58fcafc7630e3d862827c596d59baadd5df1ae2ecd6c185fb2b2fbaae218f5",
+      "size_bytes": 27106,
+      "role": "preserved_link_operand",
+      "origin": "task11:.build/task11/rip-window-build1/pe/arm64ec/FEXCore/Source/CMakeFiles/FEXCore_object.dir/Utils/Telemetry.cpp.obj",
+      "consuming_record_sha256": "22b4122333ff9d3777470cea1e0f4bb16aa3d1944403b93f6dddc4c3c733ab47"
+    },
+    {
+      "path": "link/054-Threads.cpp.obj",
+      "sha256": "0ffa4bafe460b343447892589b5afe1e317580de254423f4868ec188ea12aec3",
+      "size_bytes": 49690,
+      "role": "preserved_link_operand",
+      "origin": "task11:.build/task11/rip-window-build1/pe/arm64ec/FEXCore/Source/CMakeFiles/FEXCore_object.dir/Utils/Threads.cpp.obj",
+      "consuming_record_sha256": "22b4122333ff9d3777470cea1e0f4bb16aa3d1944403b93f6dddc4c3c733ab47"
+    },
+    {
+      "path": "link/055-WorkQueueThread.cpp.obj",
+      "sha256": "bcd3ffc2a7d4955ef36d525be1f56bc1d492c98516c683f1ec319882c6060ec7",
+      "size_bytes": 204834,
+      "role": "preserved_link_operand",
+      "origin": "task11:.build/task11/rip-window-build1/pe/arm64ec/FEXCore/Source/CMakeFiles/FEXCore_object.dir/Utils/WorkQueueThread.cpp.obj",
+      "consuming_record_sha256": "22b4122333ff9d3777470cea1e0f4bb16aa3d1944403b93f6dddc4c3c733ab47"
+    },
+    {
+      "path": "link/056-Profiler.cpp.obj",
+      "sha256": "caf3987c53b015adb31e4788fa93a85e20142bbc00ed1748c9e55953f63f881c",
+      "size_bytes": 27205,
+      "role": "preserved_link_operand",
+      "origin": "task11:.build/task11/rip-window-build1/pe/arm64ec/FEXCore/Source/CMakeFiles/FEXCore_object.dir/Utils/Profiler.cpp.obj",
+      "consuming_record_sha256": "22b4122333ff9d3777470cea1e0f4bb16aa3d1944403b93f6dddc4c3c733ab47"
+    },
+    {
+      "path": "link/057-PearFEXRetirement.cpp.obj",
+      "sha256": "ccedb95223ae48f8d5787c43b2d7ed2e4bd65eb6a1ab7864df8b8a5ca255ecde",
+      "size_bytes": 140887,
+      "role": "preserved_link_operand",
+      "origin": "task11:.build/task11/rip-window-build1/pe/arm64ec/FEXCore/Source/CMakeFiles/FEXCore_object.dir/Utils/PearFEXRetirement.cpp.obj",
+      "consuming_record_sha256": "22b4122333ff9d3777470cea1e0f4bb16aa3d1944403b93f6dddc4c3c733ab47"
+    },
+    {
+      "path": "link/058-control-compile-9.obj",
+      "sha256": "d5c381fcbaf49baf3bcd486a635303484449390b3fd5ddac4d3d5090749fcf79",
+      "size_bytes": 648460,
+      "role": "preserved_link_operand",
+      "origin": "task11:.build/task11/d25-build3/control-compile-9.obj",
+      "consuming_record_sha256": "22b4122333ff9d3777470cea1e0f4bb16aa3d1944403b93f6dddc4c3c733ab47"
+    },
+    {
+      "path": "link/059-Arm64.cpp.obj",
+      "sha256": "691fcd3df2b8e1bb9029968305a71ff48f267fdc1d9a15f45f338e58e00c4ea6",
+      "size_bytes": 85367,
+      "role": "preserved_link_operand",
+      "origin": "task11:.build/task11/rip-window-build1/pe/arm64ec/FEXCore/Source/CMakeFiles/FEXCore_object.dir/Utils/ArchHelpers/Arm64.cpp.obj",
+      "consuming_record_sha256": "22b4122333ff9d3777470cea1e0f4bb16aa3d1944403b93f6dddc4c3c733ab47"
+    },
+    {
+      "path": "link/060-Module.S.obj",
+      "sha256": "eff1aeab21ca736369332e07a98fa11926f1875dcef38bca057db0733256ab6d",
+      "size_bytes": 5193,
+      "role": "preserved_link_operand",
+      "origin": "task11:.build/task11/rip-window-build1/pe/arm64ec/Source/Windows/ARM64EC/CMakeFiles/arm64ecfex.dir/Module.S.obj",
+      "consuming_record_sha256": "22b4122333ff9d3777470cea1e0f4bb16aa3d1944403b93f6dddc4c3c733ab47"
+    },
+    {
+      "path": "link/061-libFEXCore_Base.a",
+      "sha256": "3da10cae67abd42f7f8213dd5a042ff2ccacb67b6024ef540745aac25536b17f",
+      "size_bytes": 4195544,
+      "role": "preserved_link_operand",
+      "origin": "task11:.build/task11/rip-window-build1/pe/arm64ec/FEXCore/Source/libFEXCore_Base.a",
+      "consuming_record_sha256": "22b4122333ff9d3777470cea1e0f4bb16aa3d1944403b93f6dddc4c3c733ab47"
+    },
+    {
+      "path": "link/062-libCommon.a",
+      "sha256": "892595d4f5e6fa49e0adb13275d3c6fe905895d7f93730dd5326318f5aca0a49",
+      "size_bytes": 3314058,
+      "role": "preserved_link_operand",
+      "origin": "task11:.build/task11/rip-window-build1/pe/arm64ec/Source/Common/libCommon.a",
+      "consuming_record_sha256": "22b4122333ff9d3777470cea1e0f4bb16aa3d1944403b93f6dddc4c3c733ab47"
+    },
+    {
+      "path": "link/063-libCommonTools.a",
+      "sha256": "e966b202a477808c5d5ccf47e5b17d3187f085d6510d1941791dfd00b93e63aa",
+      "size_bytes": 84396,
+      "role": "preserved_link_operand",
+      "origin": "task11:.build/task11/rip-window-build1/pe/arm64ec/Source/Tools/CommonTools/libCommonTools.a",
+      "consuming_record_sha256": "22b4122333ff9d3777470cea1e0f4bb16aa3d1944403b93f6dddc4c3c733ab47"
+    },
+    {
+      "path": "link/064-libCommonWindowsRuntime.a",
+      "sha256": "ae08a4912b7447e0dc9b7c6d840d3c9b7a8a5e5de8f7f63fb7d7a5222416c896",
+      "size_bytes": 854092,
+      "role": "preserved_link_operand",
+      "origin": "task11:.build/task11/rip-window-build1/pe/arm64ec/Source/Windows/Common/libCommonWindowsRuntime.a",
+      "consuming_record_sha256": "22b4122333ff9d3777470cea1e0f4bb16aa3d1944403b93f6dddc4c3c733ab47"
+    },
+    {
+      "path": "link/065-libntdll_ex.a",
+      "sha256": "e030f0b9a1732493f8cb76137800dad286cd8a5cded551cde9e9817ed0b7f1a1",
+      "size_bytes": 303408,
+      "role": "preserved_link_operand",
+      "origin": "task11:.build/task11/rip-window-build1/pe/arm64ec/Source/Windows/libntdll_ex.a",
+      "consuming_record_sha256": "22b4122333ff9d3777470cea1e0f4bb16aa3d1944403b93f6dddc4c3c733ab47"
+    },
+    {
+      "path": "link/066-libclang_rt.builtins-aarch64.a",
+      "sha256": "5c235a542d3c5a046297c77eaf0af4cf4a7f344ff44efec99cab5496958107e8",
+      "size_bytes": 760676,
+      "role": "preserved_link_operand",
+      "origin": "task1:.build/task4/tools-stage6-mtime/llvm-mingw/lib/clang/23/lib/windows/libclang_rt.builtins-aarch64.a",
+      "consuming_record_sha256": "22b4122333ff9d3777470cea1e0f4bb16aa3d1944403b93f6dddc4c3c733ab47"
+    },
+    {
+      "path": "link/067-libcpp-optparse.a",
+      "sha256": "1063b4bfa1a8ef096361bca64fc657ec6cddb63532547b46d96e825de09331dc",
+      "size_bytes": 1702738,
+      "role": "preserved_link_operand",
+      "origin": "task11:.build/task11/rip-window-build1/pe/arm64ec/Source/Common/cpp-optparse/libcpp-optparse.a",
+      "consuming_record_sha256": "22b4122333ff9d3777470cea1e0f4bb16aa3d1944403b93f6dddc4c3c733ab47"
+    },
+    {
+      "path": "link/068-libtiny-json.a",
+      "sha256": "e20c89ad379826b45a2a83eb55d89e439e018346c06be78849a15587a7f08db0",
+      "size_bytes": 51348,
+      "role": "preserved_link_operand",
+      "origin": "task11:.build/task11/rip-window-build1/pe/arm64ec/External/tiny-json/libtiny-json.a",
+      "consuming_record_sha256": "22b4122333ff9d3777470cea1e0f4bb16aa3d1944403b93f6dddc4c3c733ab47"
+    },
+    {
+      "path": "link/069-libfmt.a",
+      "sha256": "e1794c559c9b7091ba446261e1cf1abe551ddb2a3e1f8368aabef432b2e77fcc",
+      "size_bytes": 1602796,
+      "role": "preserved_link_operand",
+      "origin": "task11:.build/task11/rip-window-build1/pe/arm64ec/External/fmt/libfmt.a",
+      "consuming_record_sha256": "22b4122333ff9d3777470cea1e0f4bb16aa3d1944403b93f6dddc4c3c733ab47"
+    },
+    {
+      "path": "link/070-libxxhash.a",
+      "sha256": "aed50008c255787a4b599f212ad20776214a454ae84169c2a8b8e593ee4d1253",
+      "size_bytes": 575890,
+      "role": "preserved_link_operand",
+      "origin": "task11:.build/task11/rip-window-build1/pe/arm64ec/External/xxhash/cmake_unofficial/libxxhash.a",
+      "consuming_record_sha256": "22b4122333ff9d3777470cea1e0f4bb16aa3d1944403b93f6dddc4c3c733ab47"
+    },
+    {
+      "path": "link/071-libcephes_128bit.a",
+      "sha256": "3de13bfa387fa5925f331d7bc393aaac5ac767ff7162fc951330ab34a78bf5fb",
+      "size_bytes": 122670,
+      "role": "preserved_link_operand",
+      "origin": "task11:.build/task11/rip-window-build1/pe/arm64ec/External/cephes/libcephes_128bit.a",
+      "consuming_record_sha256": "22b4122333ff9d3777470cea1e0f4bb16aa3d1944403b93f6dddc4c3c733ab47"
+    },
+    {
+      "path": "link/072-libsoftfloat_3e.a",
+      "sha256": "cf4696a18e40e828f5f3813c708f884c0c2ea0a45b8bb268fe56d592cf319007",
+      "size_bytes": 612076,
+      "role": "preserved_link_operand",
+      "origin": "task11:.build/task11/rip-window-build1/pe/arm64ec/External/SoftFloat-3e/libsoftfloat_3e.a",
+      "consuming_record_sha256": "22b4122333ff9d3777470cea1e0f4bb16aa3d1944403b93f6dddc4c3c733ab47"
+    },
+    {
+      "path": "link/073-libJemallocLibs.a",
+      "sha256": "ca861aa1fb2db5c61be62a8ada8df3ae970a5cfd360e17a0d361dc17118ed3d2",
+      "size_bytes": 19250,
+      "role": "preserved_link_operand",
+      "origin": "task11:.build/task11/rip-window-build1/pe/arm64ec/FEXCore/Source/libJemallocLibs.a",
+      "consuming_record_sha256": "22b4122333ff9d3777470cea1e0f4bb16aa3d1944403b93f6dddc4c3c733ab47"
+    },
+    {
+      "path": "link/074-librpmalloc.a",
+      "sha256": "2d50ea7e686630407be348f5c4295e0202890f137b08c75090efe61f0f1e5abf",
+      "size_bytes": 105166,
+      "role": "preserved_link_operand",
+      "origin": "task11:.build/task11/rip-window-build1/pe/arm64ec/External/rpmalloc/librpmalloc.a",
+      "consuming_record_sha256": "22b4122333ff9d3777470cea1e0f4bb16aa3d1944403b93f6dddc4c3c733ab47"
+    },
+    {
+      "path": "link/075-variant-phase-copy.obj",
+      "sha256": "02560b10781d25ed359d077d30ea9a27813902bd86cdb173929da751eeaec51b",
+      "size_bytes": 6813,
+      "role": "preserved_link_operand",
+      "origin": "task11:.build/task11/d26-game-build1/variant-phase-copy.obj",
+      "consuming_record_sha256": "22b4122333ff9d3777470cea1e0f4bb16aa3d1944403b93f6dddc4c3c733ab47"
+    },
+    {
+      "path": "templates/libCommonWindows.a",
+      "sha256": "de6bd835fedac9420d89672fffe0f12d7e2446178fda9c74b813722ae27b90b9",
+      "size_bytes": 2989034,
+      "role": "archive_template_replace_only_PearFEXMemory.cpp.obj",
+      "origin": "task11:.build/task11/d35-build1/artifacts/libCommonWindows.a",
+      "consuming_record_sha256": "22b4122333ff9d3777470cea1e0f4bb16aa3d1944403b93f6dddc4c3c733ab47"
+    },
+    {
+      "path": "config/include/FEXCore/Config/ConfigValues.inl",
+      "sha256": "0f3b21d4d9b7a51f3ecc595d0ff4790fee39f2bd4b36a4fdd4b581c0321d1e03",
+      "size_bytes": 5754,
+      "role": "preserved_generated_configuration",
+      "origin": "task11:.build/task11/rip-window-build1/pe/arm64ec/include/FEXCore/Config/ConfigValues.inl",
+      "consuming_record_sha256": "22b4122333ff9d3777470cea1e0f4bb16aa3d1944403b93f6dddc4c3c733ab47"
+    },
+    {
+      "path": "config/include/FEXCore/Config/ConfigOptions.inl",
+      "sha256": "44622ca6e69235032c93d4e021caaa701a40b1b63be7eb69e9db0ff991840936",
+      "size_bytes": 9840,
+      "role": "preserved_generated_configuration",
+      "origin": "task11:.build/task11/rip-window-build1/pe/arm64ec/include/FEXCore/Config/ConfigOptions.inl",
+      "consuming_record_sha256": "22b4122333ff9d3777470cea1e0f4bb16aa3d1944403b93f6dddc4c3c733ab47"
+    },
+    {
+      "path": "config/include/FEXCore/IR/IRDefines.inc",
+      "sha256": "974c3e848de271192f1490a422ffcb1aaa15265a8e448eb3dbb4dbcd79aadf27",
+      "size_bytes": 877947,
+      "role": "preserved_generated_configuration",
+      "origin": "task11:.build/task11/wake-build1/pe/arm64ec/include/FEXCore/IR/IRDefines.inc",
+      "consuming_record_sha256": "22b4122333ff9d3777470cea1e0f4bb16aa3d1944403b93f6dddc4c3c733ab47"
+    },
+    {
+      "path": "config/include/FEXCore/IR/IRDefines_Dispatch.inc",
+      "sha256": "68921516063abba248031b0428a447dc64902416ca7db04646865f659192264a",
+      "size_bytes": 19252,
+      "role": "preserved_generated_configuration",
+      "origin": "task11:.build/task11/wake-build1/pe/arm64ec/include/FEXCore/IR/IRDefines_Dispatch.inc",
+      "consuming_record_sha256": "22b4122333ff9d3777470cea1e0f4bb16aa3d1944403b93f6dddc4c3c733ab47"
+    }
+  ],
+  "logical_bytes": 65084491,
+  "retention": "Immutable selected inputs; retain until accepted replacement and all consumer/recovery release conditions are recorded.",
+  "publication": "Local pack only; retained compiled diagnostic inputs are not release artifacts."
+}
