@@ -14,7 +14,7 @@ refs. The recorded comparison checks all 2,824 bundle entries and 41 Mach-O
 code origins; their permitted differences are signing metadata. This does not
 renew historical fixture operations or grant current execution authority.
 
-All fifteen fresh candidate3 controls passed with independent release evidence:
+In Stage 4, all fifteen fresh candidate3 controls passed with independent release evidence:
 API, ABI, threads, window, three bootstrap controls, the seven D36 cases and
 visible presentation frames. The frame check covers three cycles and eighteen
 visible pixel/color/resize matches and GPU completion/present observations; three
@@ -30,9 +30,19 @@ not summed and are not native or game qualification. The
 [196-method ownership map](provenance/paired-memory-methods.json) has accepted
 per-method dispositions. The recorded Stage 4 component checkpoints are published
 on the private repositories; collaborator access is required. Stage 5 publication
-and final source-owner cutover remain separate gates. Pear
-development selection uses separate Stage 5 source and execution gates. There is no gameplay, Steamworks, ordinary-user distribution, full clean
-restore or complete Rosetta-independence claim.
+and final source-owner cutover remain separate gates.
+
+The committed Stage 5.1 runtime tool checkpoint is
+`6f0202b457f0e585c5c7621a63d203e77d07386d`. Stage 5.2 executed seven fresh
+candidate3 fixture operations through Pear's selector; all passed their original
+oracles and independent release checks. Its game prerequisite packet reuses eight
+Stage 4 candidate3 native/bootstrap/frame operations under their original
+identities, with fresh independent release observations for all fifteen selected
+operations. These eight are not new Stage 5 executions. Exact game-input
+inspection admitted 69 files and a 92-file producer manifest. Game-to-fixture-to-
+game selection recovery changed only metadata; no game was copied or executed.
+There is no gameplay, Steamworks, ordinary-user distribution, full clean restore
+or complete Rosetta-independence claim.
 
 Start with [reconstruction, controls and bounded recovery](docs/development.md), the
 [assembly request and CLI](docs/assembly.md), and the
@@ -69,7 +79,8 @@ component build pins. [Revision roles](docs/development.md#build-pins-and-later-
 separates those identities from the committed Stage 4 tool revision
 `625fd0f97b9955e43f71cb7906ccc41d8f70853b`. Its
 [Stage 4 report](mydocs/working/task_m1_56_stage4.md) is published with that
-private checkpoint; later Stage 5 source and publication remain separate.
+private checkpoint. The Stage 5.1 source is committed at the tool revision above;
+its publication and final source-owner handoff remain separate.
 
 ## Portable verification
 

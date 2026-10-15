@@ -32,7 +32,7 @@ refs. The recorded comparison checks all 2,824 bundle entries and 41 Mach-O
 code origins; their permitted differences are signing metadata. This does not
 renew historical fixture operations or grant current execution authority.
 
-All fifteen fresh candidate3 controls passed with independent release evidence:
+In Stage 4, all fifteen fresh candidate3 controls passed with independent release evidence:
 API, ABI, threads, window, three bootstrap controls, the seven D36 cases and
 visible presentation frames. The frame check covers three cycles and eighteen
 visible pixel/color/resize matches and GPU completion/present observations; three
@@ -48,9 +48,19 @@ not summed and are not native or game qualification. The
 [196-method ownership map](../provenance/paired-memory-methods.json) has accepted
 per-method dispositions. The recorded Stage 4 component checkpoints are published
 on the private repositories; collaborator access is required. Stage 5 publication
-and final source-owner cutover remain separate gates. Pear
-development selection uses separate Stage 5 source and execution gates. There is no gameplay, Steamworks, ordinary-user distribution, full clean
-restore or complete Rosetta-independence claim.
+and final source-owner cutover remain separate gates.
+
+The committed Stage 5.1 runtime tool checkpoint is
+`6f0202b457f0e585c5c7621a63d203e77d07386d`. Stage 5.2 executed seven fresh
+candidate3 fixture operations through Pear's selector; all passed their original
+oracles and independent release checks. Its game prerequisite packet reuses eight
+Stage 4 candidate3 native/bootstrap/frame operations under their original
+identities, with fresh independent release observations for all fifteen selected
+operations. These eight are not new Stage 5 executions. Exact game-input
+inspection admitted 69 files and a 92-file producer manifest. Game-to-fixture-to-
+game selection recovery changed only metadata; no game was copied or executed.
+There is no gameplay, Steamworks, ordinary-user distribution, full clean restore
+or complete Rosetta-independence claim.
 
 ## Selected source and commands
 
@@ -103,8 +113,10 @@ Use a separate development checkout for current admission and fixture tools;
 keep historical build roots clean and pinned. The [Stage 4 report](../mydocs/working/task_m1_56_stage4.md)
 binds the completed candidate3 controls to these published private tool/test
 checkpoints. Stage 5
-lifecycle/selector changes require a later reviewed source checkpoint and affected
-verification; a dirty checkout does not inherit the Stage 4 producer identity.
+lifecycle/selector changes are committed at
+`6f0202b457f0e585c5c7621a63d203e77d07386d`; the fresh seven-case selector
+verification binds that exact tool source. A dirty checkout does not inherit a
+committed producer identity.
 
 Collaborator links to the local committed checkpoints are
 [runtime](https://github.com/postmelee/pear-runtime/tree/625fd0f97b9955e43f71cb7906ccc41d8f70853b),
@@ -116,19 +128,30 @@ historical source acquisition below does not fetch unpublished commits.
 
 ### Keep the selected tool checkout immutable
 
-After the Stage 5.1 source/portable checkpoint, create a separate source-only
-detached checkout at that exact runtime tool commit. The planned task location
-is `.worktrees/runtime-development-v1` under the component workspace. Bind this
-clean checkout in the development lock, fixture/game producer manifests and
-Pear selection; keep later documentation and reports on `runtime-task56`. The
-selector checks clean Git state and committed producer bytes, so later edits
-must not silently change the selected tool root.
+The selected tool root is the clean, detached `.worktrees/runtime-task56`
+checkout at `6f0202b457f0e585c5c7621a63d203e77d07386d` under the component
+workspace. Bind this root in the development lock, fixture/game producer
+manifests and Pear selection. Later documentation and reports belong in the
+separate editable `.worktrees/runtime-development-v1` worktree on `codex/task56`.
+The selector checks clean Git state and committed producer bytes; the selected
+tool root must remain immutable.
 
-The source-worktree plan allows 128 MiB additional space and retains a separate
-6 GiB host reserve. It copies no runtime bundle, input pack, prefix or game.
-Measure free space again before creation. Retain this exact source checkout
-until every selected producer and diagnostic consumer accepts a successor;
-this plan grants no deletion or execution authority.
+Candidate3 also binds the absolute paths of its ten assembly producer files.
+An initial fixture attempt from `runtime-development-v1` had identical source
+bytes but refused with `assembly_builder_changed` during current-authority
+admission, before loader execution. Its failed operation and bounded resource
+observation remain retained. A no-code role swap kept `runtime-task56` at the
+recorded builder paths and moved later editing to `runtime-development-v1`.
+The fresh v5 requests then passed. No authority check or historical receipt was
+relaxed or rewritten. Commit/byte equality alone does not permit relocating a
+retained candidate's builder; a different root needs a separately reviewed new
+assembly and its own records.
+
+The source-only worktree used a 128 MiB allowance plus a separate 6 GiB reserve;
+it copied no runtime bundle, input pack, prefix or game. Measure capacity before
+creating another checkout. Retain both selected source and required inputs until
+every dependent consumer accepts a successor; this grants no deletion or
+execution authority.
 
 ### Acquire clean historical roots
 
@@ -261,9 +284,10 @@ python3 -B -m pear_runtime.assembly execute --request "$ASSEMBLY_REQUEST"
 ```
 
 Use the historical builder revision for the recorded component reconstruction.
-Candidate3 assembly and current fixture/recovery commands use the separately
-captured Stage 4 developer-tool source. Preserve every historical producer record
-and bind the actual source revision used for each new operation.
+Candidate3 assembly uses its separately captured Stage 4 developer-tool source.
+Stage 5.2 fixture commands use the exact Stage 5.1 tool checkpoint; its unchanged
+assembly-producer files must remain at Candidate3's recorded paths. Preserve each
+historical producer record and bind the actual source used for every operation.
 Read [the assembly contract](assembly.md) before constructing the request. Preserve
 both returned `runtime_ref` and final `operation_ref`.
 
@@ -324,10 +348,10 @@ This is the development lock's FEX tool pin, separate from selected artifact-bui
 `a8ba1cbd0148b46817842f3b7307689d4b2acbd7`. The selector verifies clean checkout
 state and consumed files against the independent tool pin before imports.
 
-Task #56 prepares/inspects this route and validates its portable wiring. Its
-Stage 5.2 gate executes the required seven synthetic fixtures through the pinned
-selector. It does not copy or execute the game; game/runtime qualification and
-ordinary-user support remain unperformed. Future game diagnostics require exact
+Task #56 validated the portable wiring and exercised the pinned selector with
+seven fresh passing synthetic fixtures. Its exact game-input inspection and
+metadata selection/reselection also passed. It did not copy or execute the game;
+game/runtime qualification and ordinary-user support remain unperformed. Future game diagnostics require exact
 private inputs, fresh capacity, current authority and an independent release
 check after the owned worker exits, including failure outcomes.
 
@@ -402,8 +426,10 @@ python3 -B -m unittest discover -s tests/recovery -v
 selected by the current fixture provenance, not the older artifact-build checkout.
 The Stage 4 guarded integration receipt records 715 unique test IDs and 701
 method bodies passed. The distinct build/assembly gate records 174 passing tests;
-these overlapping source scopes are not added into a new total. The earlier
-585-ID documentation check was collection-only at its recorded source checkpoint,
+these overlapping source scopes are not added into a new total. The later
+Stage 5.1 runtime gate passed 777 IDs / 763 bodies, including 14 inherited
+executions; this overlaps the Stage 4 collection and adds no native-game claim.
+The earlier 585-ID documentation check was collection-only at its recorded source checkpoint,
 with zero tests executed. This documentation refresh reruns neither suite nor
 collection. Use the actual source-bound receipts and preserve inherited/reused
 method-body counts separately.
@@ -446,7 +472,14 @@ and authorization.
 
 ### Bounded exact-input recovery
 
-The exercised recovery restored byte-identical local binding metadata and the
+Stage 5.2 separately exercised development-selection recovery from the game
+selection to its prior fixture selection and back to the same game selection.
+The selector retained immutable prepared records and transaction history. This
+was metadata rollback/reselection; it restored no payload or private state and
+granted no execution authority. The selected tool root and its absolute builder
+paths remained fixed throughout.
+
+The exercised input recovery restored byte-identical local binding metadata and the
 complete declared `common_headers` root: one 3,634-byte shared diagnostic header.
 Missing or mismatched inputs refused. It did not restore a full object pack,
 toolchain, SDK, runtime bundle, prefix or private execution state.
