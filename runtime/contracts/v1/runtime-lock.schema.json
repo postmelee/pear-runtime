@@ -1,0 +1,223 @@
+{
+  "type": "object",
+  "properties": {
+    "record_kind": {
+      "const": "runtime_lock"
+    },
+    "schema_version": {
+      "const": 1
+    },
+    "record_context": {
+      "enum": [
+        "research",
+        "fixture",
+        "runtime"
+      ]
+    },
+    "record_id": {
+      "type": "string",
+      "pattern": "^[A-Za-z0-9][A-Za-z0-9_.-]{0,95}$",
+      "maxLength": 96
+    },
+    "disclosure": {
+      "$ref": "https://pear.invalid/contracts/v1/common.schema.json#/$defs/disclosure"
+    },
+    "source_inventory_ref": {
+      "anyOf": [
+        {
+          "$ref": "https://pear.invalid/contracts/v1/common.schema.json#/$defs/blob_ref"
+        },
+        {
+          "type": "null"
+        }
+      ]
+    },
+    "compatibility_family": {
+      "type": "object",
+      "properties": {
+        "status": {
+          "enum": [
+            "known",
+            "unknown"
+          ]
+        },
+        "value": {
+          "anyOf": [
+            {
+              "type": "string",
+              "pattern": "^[A-Za-z0-9][A-Za-z0-9_.-]{0,95}$",
+              "maxLength": 96
+            },
+            {
+              "type": "null"
+            }
+          ]
+        },
+        "reason": {
+          "type": "string",
+          "maxLength": 2048
+        }
+      },
+      "required": [
+        "status",
+        "value",
+        "reason"
+      ],
+      "additionalProperties": false
+    },
+    "component_coverage": {
+      "type": "object",
+      "properties": {
+        "status": {
+          "enum": [
+            "known",
+            "unknown"
+          ]
+        },
+        "complete": {
+          "type": "boolean"
+        },
+        "reason": {
+          "type": "string",
+          "maxLength": 2048
+        }
+      },
+      "required": [
+        "status",
+        "complete",
+        "reason"
+      ],
+      "additionalProperties": false
+    },
+    "components": {
+      "type": "array",
+      "items": {
+        "$ref": "https://pear.invalid/contracts/v1/common.schema.json#/$defs/component"
+      },
+      "minItems": 1,
+      "maxItems": 64
+    },
+    "toolchains": {
+      "type": "array",
+      "items": {
+        "type": "object",
+        "properties": {
+          "toolchain_id": {
+            "type": "string",
+            "pattern": "^[A-Za-z0-9][A-Za-z0-9_.-]{0,95}$",
+            "maxLength": 96
+          },
+          "version": {
+            "type": "string",
+            "pattern": "^[A-Za-z0-9][A-Za-z0-9_.-]{0,95}$",
+            "maxLength": 96
+          },
+          "sdk": {
+            "type": "string",
+            "pattern": "^[A-Za-z0-9][A-Za-z0-9_.-]{0,95}$",
+            "maxLength": 96
+          }
+        },
+        "required": [
+          "toolchain_id",
+          "version",
+          "sdk"
+        ],
+        "additionalProperties": false
+      },
+      "minItems": 0,
+      "maxItems": 64
+    },
+    "host_requirements": {
+      "type": "object",
+      "properties": {
+        "status": {
+          "enum": [
+            "known",
+            "unknown"
+          ]
+        },
+        "value": {
+          "anyOf": [
+            {
+              "$ref": "https://pear.invalid/contracts/v1/common.schema.json#/$defs/host"
+            },
+            {
+              "type": "null"
+            }
+          ]
+        },
+        "reason": {
+          "type": "string",
+          "maxLength": 2048
+        }
+      },
+      "required": [
+        "status",
+        "value",
+        "reason"
+      ],
+      "additionalProperties": false
+    },
+    "signing_requirements": {
+      "type": "object",
+      "properties": {
+        "status": {
+          "enum": [
+            "known",
+            "unknown"
+          ]
+        },
+        "value": {
+          "anyOf": [
+            {
+              "enum": [
+                "development",
+                "distribution"
+              ]
+            },
+            {
+              "type": "null"
+            }
+          ]
+        },
+        "reason": {
+          "type": "string",
+          "maxLength": 2048
+        }
+      },
+      "required": [
+        "status",
+        "value",
+        "reason"
+      ],
+      "additionalProperties": false
+    },
+    "evidence": {
+      "type": "array",
+      "items": {
+        "$ref": "https://pear.invalid/contracts/v1/common.schema.json#/$defs/blob_ref"
+      },
+      "minItems": 0,
+      "maxItems": 64
+    }
+  },
+  "required": [
+    "record_kind",
+    "schema_version",
+    "record_context",
+    "record_id",
+    "disclosure",
+    "source_inventory_ref",
+    "compatibility_family",
+    "component_coverage",
+    "components",
+    "toolchains",
+    "host_requirements",
+    "signing_requirements",
+    "evidence"
+  ],
+  "additionalProperties": false,
+  "$schema": "https://json-schema.org/draft/2020-12/schema",
+  "$id": "https://pear.invalid/contracts/v1/runtime-lock.schema.json"
+}

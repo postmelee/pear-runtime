@@ -1,0 +1,103 @@
+{
+  "type": "object",
+  "properties": {
+    "record_kind": {
+      "const": "qualification"
+    },
+    "schema_version": {
+      "const": 2
+    },
+    "record_context": {
+      "enum": [
+        "research",
+        "fixture",
+        "runtime"
+      ]
+    },
+    "record_id": {
+      "type": "string",
+      "pattern": "^[A-Za-z0-9][A-Za-z0-9_.-]{0,95}$",
+      "maxLength": 96
+    },
+    "disclosure": {
+      "$ref": "https://pear.invalid/contracts/v2/common.schema.json#/$defs/disclosure"
+    },
+    "runs": {
+      "type": "array",
+      "items": {
+        "$ref": "https://pear.invalid/contracts/v2/common.schema.json#/$defs/record_ref"
+      },
+      "minItems": 1,
+      "maxItems": 64
+    },
+    "decision": {
+      "enum": [
+        "supported",
+        "failed",
+        "unknown"
+      ]
+    },
+    "reviewer": {
+      "type": "string",
+      "pattern": "^[A-Za-z0-9][A-Za-z0-9_.-]{0,95}$",
+      "maxLength": 96
+    },
+    "required_checks": {
+      "type": "array",
+      "items": {
+        "type": "string",
+        "pattern": "^[A-Za-z0-9][A-Za-z0-9_.-]{0,95}$",
+        "maxLength": 96
+      },
+      "minItems": 1,
+      "maxItems": 64
+    },
+    "configuration": {
+      "$ref": "https://pear.invalid/contracts/v2/common.schema.json#/$defs/configuration"
+    },
+    "scope": {
+      "enum": [
+        "development",
+        "distribution"
+      ]
+    },
+    "reviewed_at": {
+      "type": "string",
+      "pattern": "^\\d{4}-\\d\\d-\\d\\dT\\d\\d:\\d\\d:\\d\\dZ$"
+    },
+    "test_revision": {
+      "type": "string",
+      "pattern": "^[A-Za-z0-9][A-Za-z0-9_.-]{0,95}$",
+      "maxLength": 96
+    },
+    "limitations": {
+      "type": "array",
+      "items": {
+        "type": "string",
+        "pattern": "^[A-Za-z0-9][A-Za-z0-9_.-]{0,95}$",
+        "maxLength": 96
+      },
+      "minItems": 0,
+      "maxItems": 64
+    }
+  },
+  "required": [
+    "record_kind",
+    "schema_version",
+    "record_context",
+    "record_id",
+    "disclosure",
+    "runs",
+    "decision",
+    "reviewer",
+    "required_checks",
+    "configuration",
+    "scope",
+    "reviewed_at",
+    "test_revision",
+    "limitations"
+  ],
+  "additionalProperties": false,
+  "$schema": "https://json-schema.org/draft/2020-12/schema",
+  "$id": "https://pear.invalid/contracts/v2/qualification.schema.json"
+}

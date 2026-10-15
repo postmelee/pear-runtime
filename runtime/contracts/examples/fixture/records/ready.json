@@ -1,0 +1,35 @@
+{
+  "record_kind": "launch",
+  "schema_version": 1,
+  "record_context": "fixture",
+  "record_id": "fixture.ready",
+  "disclosure": {
+    "mode": "full",
+    "withheld": [],
+    "origin_token": null
+  },
+  "variant": "event",
+  "request": {
+    "ref_type": "record",
+    "path": "records/request.json",
+    "record_kind": "launch",
+    "schema_version": 1,
+    "digest": {
+      "algorithm": "sha256",
+      "scope": "exact_utf8_file_bytes",
+      "value": "2061ccbd36854a37fd351c729d827ba0f424a03835fcca433aebd3839a57cf47"
+    }
+  },
+  "run_id": "fixture-run",
+  "producer": "observer",
+  "sequence": 0,
+  "previous": null,
+  "event": "observer_ready",
+  "clock_id": "fixture-clock",
+  "elapsed_ns": 0,
+  "process": null,
+  "status": "passed",
+  "covers": [],
+  "ready_ack": null,
+  "completed_exits": []
+}

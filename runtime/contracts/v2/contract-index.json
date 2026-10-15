@@ -1,0 +1,127 @@
+{
+  "registry_format_version": 1,
+  "contract_set": "pear-runtime",
+  "status": "experimental",
+  "schema_dialect": "https://json-schema.org/draft/2020-12/schema",
+  "schema_implementation": "implemented",
+  "validator_implementation": "bounded_python_oracle",
+  "schema_path_base": "runtime/contracts/v2",
+  "schema_resolution": "registered_local_paths_only",
+  "reference_digest": {
+    "algorithm": "sha256",
+    "scope": "exact_utf8_file_bytes",
+    "self_reference": "forbidden"
+  },
+  "records": [
+    {
+      "record_kind": "runtime_lock",
+      "schema_version": 2,
+      "schema_path": "runtime-lock.schema.json",
+      "status": "implemented",
+      "producers": [
+        "runtime_build_maintainers"
+      ],
+      "consumers": [
+        "build",
+        "packaging",
+        "supervisor"
+      ]
+    },
+    {
+      "record_kind": "runtime_artifact",
+      "schema_version": 2,
+      "schema_path": "runtime-artifact.schema.json",
+      "status": "implemented",
+      "producers": [
+        "build",
+        "packaging"
+      ],
+      "consumers": [
+        "supervisor",
+        "qualification"
+      ]
+    },
+    {
+      "record_kind": "game_profile",
+      "schema_version": 2,
+      "schema_path": "game-profile.schema.json",
+      "status": "implemented",
+      "producers": [
+        "profile_contributors"
+      ],
+      "consumers": [
+        "supervisor",
+        "test_tooling"
+      ]
+    },
+    {
+      "record_kind": "launch",
+      "schema_version": 2,
+      "schema_path": "launch.schema.json",
+      "status": "implemented",
+      "variants": [
+        "request",
+        "event"
+      ],
+      "producers": [
+        "supervisor",
+        "observer"
+      ],
+      "consumers": [
+        "observer",
+        "run_aggregator"
+      ]
+    },
+    {
+      "record_kind": "failure",
+      "schema_version": 2,
+      "schema_path": "failure.schema.json",
+      "status": "implemented",
+      "producers": [
+        "validator",
+        "supervisor",
+        "observer"
+      ],
+      "consumers": [
+        "diagnostics",
+        "run_aggregator"
+      ]
+    },
+    {
+      "record_kind": "run",
+      "schema_version": 2,
+      "schema_path": "run.schema.json",
+      "status": "implemented",
+      "producers": [
+        "supervisor",
+        "run_aggregator"
+      ],
+      "consumers": [
+        "qualification"
+      ]
+    },
+    {
+      "record_kind": "qualification",
+      "schema_version": 2,
+      "schema_path": "qualification.schema.json",
+      "status": "implemented",
+      "producers": [
+        "test_review_workflow"
+      ],
+      "consumers": [
+        "supervisor",
+        "compatibility_presentation"
+      ]
+    }
+  ],
+  "shared_definitions": {
+    "schema_path": "common.schema.json",
+    "status": "implemented"
+  },
+  "limits": {
+    "json_bytes": 262144,
+    "json_total_bytes": 4194304,
+    "blob_bytes": 8589934592,
+    "blob_total_bytes": 68719476736
+  }
+}

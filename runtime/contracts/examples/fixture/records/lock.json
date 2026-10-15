@@ -1,0 +1,146 @@
+{
+  "record_kind": "runtime_lock",
+  "schema_version": 1,
+  "record_context": "fixture",
+  "record_id": "fixture.lock",
+  "disclosure": {
+    "mode": "full",
+    "withheld": [],
+    "origin_token": null
+  },
+  "source_inventory_ref": null,
+  "compatibility_family": {
+    "status": "known",
+    "value": "fixture-family",
+    "reason": "Synthetic only."
+  },
+  "component_coverage": {
+    "status": "known",
+    "complete": true,
+    "reason": "Complete only for this self-owned fixture."
+  },
+  "components": [
+    {
+      "component_id": "fixture-translator",
+      "role": "fixture",
+      "source": {
+        "status": "known",
+        "url": "https://pear.invalid/self-owned-fixture",
+        "immutable_ref": {
+          "kind": "archive",
+          "object_format": null,
+          "value": null
+        },
+        "content": {
+          "ref_type": "blob",
+          "path": "blobs/source.txt",
+          "digest": {
+            "algorithm": "sha256",
+            "scope": "source_archive_bytes",
+            "value": "422b763f208f8db9d6981759ec236bc603ea4708b0075c213a39d0dba7596ea2"
+          }
+        },
+        "reason": "Synthetic bytes."
+      },
+      "dependencies": {
+        "status": "known",
+        "component_ids": [],
+        "reason": "No fixture dependencies."
+      },
+      "patches": {
+        "status": "known",
+        "items": [],
+        "reason": "No fixture patches."
+      },
+      "build_context": {
+        "status": "known",
+        "toolchain_ids": [
+          "fixture-toolchain"
+        ],
+        "targets": [
+          {
+            "role": "host",
+            "format": "fixture",
+            "architecture": "arm64",
+            "triple": "fixture-arm64-apple-macos"
+          }
+        ],
+        "configuration": {
+          "ref_type": "blob",
+          "path": "blobs/build-config.json",
+          "digest": {
+            "algorithm": "sha256",
+            "scope": "build_configuration_bytes",
+            "value": "49ddde4996e00d37e19cb46b0bf46d8c38a2b12e2523e39487a192de13bcf044"
+          }
+        },
+        "reason": "No compilation occurred."
+      },
+      "terms": {
+        "status": "known",
+        "references": [
+          {
+            "ref_type": "blob",
+            "path": "blobs/terms.txt",
+            "digest": {
+              "algorithm": "sha256",
+              "scope": "file_bytes",
+              "value": "3c222f5dd0a1cf735d0d5bbdcfc872fe74f765ddda1356fa35948a55b55ce4b8"
+            }
+          }
+        ],
+        "reason": "Self-owned fixture terms only."
+      },
+      "evidence": [
+        {
+          "ref_type": "blob",
+          "path": "blobs/evidence.json",
+          "digest": {
+            "algorithm": "sha256",
+            "scope": "evidence_json_bytes",
+            "value": "f4430917e18762fd5aa741802174762a940d56cb80351b33b58ece79701fb172"
+          }
+        }
+      ]
+    }
+  ],
+  "toolchains": [
+    {
+      "toolchain_id": "fixture-toolchain",
+      "version": "synthetic-v1",
+      "sdk": "synthetic-sdk"
+    }
+  ],
+  "host_requirements": {
+    "status": "known",
+    "value": {
+      "os": "macos",
+      "architecture": "arm64",
+      "version": [
+        26,
+        0,
+        0
+      ],
+      "capabilities": [
+        "fixture-capability"
+      ]
+    },
+    "reason": "Synthetic requirement."
+  },
+  "signing_requirements": {
+    "status": "known",
+    "value": "development",
+    "reason": "No signing occurred."
+  },
+  "evidence": [
+    {
+      "ref_type": "blob",
+      "path": "blobs/evidence.json",
+      "digest": {
+        "algorithm": "sha256",
+        "scope": "evidence_json_bytes",
+        "value": "f4430917e18762fd5aa741802174762a940d56cb80351b33b58ece79701fb172"
+      }
+    }
+  ]
+}

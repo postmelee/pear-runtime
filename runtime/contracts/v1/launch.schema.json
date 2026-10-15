@@ -1,0 +1,370 @@
+{
+  "$schema": "https://json-schema.org/draft/2020-12/schema",
+  "$id": "https://pear.invalid/contracts/v1/launch.schema.json",
+  "oneOf": [
+    {
+      "type": "object",
+      "properties": {
+        "record_kind": {
+          "const": "launch"
+        },
+        "schema_version": {
+          "const": 1
+        },
+        "record_context": {
+          "enum": [
+            "research",
+            "fixture",
+            "runtime"
+          ]
+        },
+        "record_id": {
+          "type": "string",
+          "pattern": "^[A-Za-z0-9][A-Za-z0-9_.-]{0,95}$",
+          "maxLength": 96
+        },
+        "disclosure": {
+          "$ref": "https://pear.invalid/contracts/v1/common.schema.json#/$defs/disclosure"
+        },
+        "variant": {
+          "const": "request"
+        },
+        "run_id": {
+          "type": "string",
+          "pattern": "^[A-Za-z0-9][A-Za-z0-9_.-]{0,95}$",
+          "maxLength": 96
+        },
+        "purpose": {
+          "enum": [
+            "fixture_launch",
+            "qualification_run",
+            "supported_launch"
+          ]
+        },
+        "lock": {
+          "anyOf": [
+            {
+              "$ref": "https://pear.invalid/contracts/v1/common.schema.json#/$defs/record_ref"
+            },
+            {
+              "type": "null"
+            }
+          ]
+        },
+        "artifact": {
+          "anyOf": [
+            {
+              "$ref": "https://pear.invalid/contracts/v1/common.schema.json#/$defs/record_ref"
+            },
+            {
+              "type": "null"
+            }
+          ]
+        },
+        "profile": {
+          "anyOf": [
+            {
+              "$ref": "https://pear.invalid/contracts/v1/common.schema.json#/$defs/record_ref"
+            },
+            {
+              "type": "null"
+            }
+          ]
+        },
+        "qualification": {
+          "anyOf": [
+            {
+              "$ref": "https://pear.invalid/contracts/v1/common.schema.json#/$defs/record_ref"
+            },
+            {
+              "type": "null"
+            }
+          ]
+        },
+        "roots": {
+          "type": "object",
+          "properties": {
+            "runtime": {
+              "type": "string",
+              "minLength": 1,
+              "maxLength": 512
+            },
+            "prefix": {
+              "type": "string",
+              "minLength": 1,
+              "maxLength": 512
+            },
+            "saves": {
+              "type": "string",
+              "minLength": 1,
+              "maxLength": 512
+            },
+            "cache": {
+              "type": "string",
+              "minLength": 1,
+              "maxLength": 512
+            },
+            "logs": {
+              "type": "string",
+              "minLength": 1,
+              "maxLength": 512
+            }
+          },
+          "required": [
+            "runtime",
+            "prefix",
+            "saves",
+            "cache",
+            "logs"
+          ],
+          "additionalProperties": false
+        },
+        "prefix_family": {
+          "anyOf": [
+            {
+              "type": "string",
+              "pattern": "^[A-Za-z0-9][A-Za-z0-9_.-]{0,95}$",
+              "maxLength": 96
+            },
+            {
+              "type": "null"
+            }
+          ]
+        },
+        "cache_identity": {
+          "type": "object",
+          "properties": {
+            "lock_digest": {
+              "type": "string",
+              "pattern": "^[0-9a-f]{64}$",
+              "maxLength": 64
+            },
+            "artifact_digest": {
+              "type": "string",
+              "pattern": "^[0-9a-f]{64}$",
+              "maxLength": 64
+            },
+            "profile_digest": {
+              "type": "string",
+              "pattern": "^[0-9a-f]{64}$",
+              "maxLength": 64
+            },
+            "cpu_features": {
+              "type": "array",
+              "items": {
+                "type": "string",
+                "pattern": "^[A-Za-z0-9][A-Za-z0-9_.-]{0,95}$",
+                "maxLength": 96
+              },
+              "minItems": 0,
+              "maxItems": 64
+            },
+            "translator_component": {
+              "type": "string",
+              "pattern": "^[A-Za-z0-9][A-Za-z0-9_.-]{0,95}$",
+              "maxLength": 96
+            },
+            "abi": {
+              "type": "string",
+              "pattern": "^[A-Za-z0-9][A-Za-z0-9_.-]{0,95}$",
+              "maxLength": 96
+            }
+          },
+          "required": [
+            "lock_digest",
+            "artifact_digest",
+            "profile_digest",
+            "cpu_features",
+            "translator_component",
+            "abi"
+          ],
+          "additionalProperties": false
+        },
+        "entry_file_id": {
+          "type": "string",
+          "pattern": "^[A-Za-z0-9][A-Za-z0-9_.-]{0,95}$",
+          "maxLength": 96
+        },
+        "observer_required": {
+          "type": "boolean"
+        },
+        "configuration": {
+          "$ref": "https://pear.invalid/contracts/v1/common.schema.json#/$defs/configuration"
+        },
+        "signing_scope": {
+          "enum": [
+            "development",
+            "distribution"
+          ]
+        }
+      },
+      "required": [
+        "record_kind",
+        "schema_version",
+        "record_context",
+        "record_id",
+        "disclosure",
+        "variant",
+        "run_id",
+        "purpose",
+        "lock",
+        "artifact",
+        "profile",
+        "qualification",
+        "roots",
+        "prefix_family",
+        "cache_identity",
+        "entry_file_id",
+        "observer_required",
+        "configuration",
+        "signing_scope"
+      ],
+      "additionalProperties": false
+    },
+    {
+      "type": "object",
+      "properties": {
+        "record_kind": {
+          "const": "launch"
+        },
+        "schema_version": {
+          "const": 1
+        },
+        "record_context": {
+          "enum": [
+            "research",
+            "fixture",
+            "runtime"
+          ]
+        },
+        "record_id": {
+          "type": "string",
+          "pattern": "^[A-Za-z0-9][A-Za-z0-9_.-]{0,95}$",
+          "maxLength": 96
+        },
+        "disclosure": {
+          "$ref": "https://pear.invalid/contracts/v1/common.schema.json#/$defs/disclosure"
+        },
+        "variant": {
+          "const": "event"
+        },
+        "request": {
+          "$ref": "https://pear.invalid/contracts/v1/common.schema.json#/$defs/record_ref"
+        },
+        "run_id": {
+          "type": "string",
+          "pattern": "^[A-Za-z0-9][A-Za-z0-9_.-]{0,95}$",
+          "maxLength": 96
+        },
+        "producer": {
+          "enum": [
+            "supervisor",
+            "observer"
+          ]
+        },
+        "sequence": {
+          "type": "integer",
+          "minimum": 0,
+          "maximum": 9007199254740991
+        },
+        "previous": {
+          "anyOf": [
+            {
+              "$ref": "https://pear.invalid/contracts/v1/common.schema.json#/$defs/record_ref"
+            },
+            {
+              "type": "null"
+            }
+          ]
+        },
+        "event": {
+          "enum": [
+            "observer_ready",
+            "spawned",
+            "exited",
+            "observer_complete",
+            "gap"
+          ]
+        },
+        "clock_id": {
+          "type": "string",
+          "pattern": "^[A-Za-z0-9][A-Za-z0-9_.-]{0,95}$",
+          "maxLength": 96
+        },
+        "elapsed_ns": {
+          "type": "integer",
+          "minimum": 0,
+          "maximum": 9007199254740991
+        },
+        "process": {
+          "anyOf": [
+            {
+              "$ref": "https://pear.invalid/contracts/v1/common.schema.json#/$defs/process_identity"
+            },
+            {
+              "type": "null"
+            }
+          ]
+        },
+        "status": {
+          "enum": [
+            "passed",
+            "failed",
+            "unknown",
+            "unsupported"
+          ]
+        },
+        "covers": {
+          "type": "array",
+          "items": {
+            "type": "string",
+            "pattern": "^[A-Za-z0-9][A-Za-z0-9_.-]{0,95}$",
+            "maxLength": 96
+          },
+          "minItems": 0,
+          "maxItems": 64
+        },
+        "ready_ack": {
+          "anyOf": [
+            {
+              "$ref": "https://pear.invalid/contracts/v1/common.schema.json#/$defs/record_ref"
+            },
+            {
+              "type": "null"
+            }
+          ]
+        },
+        "completed_exits": {
+          "type": "array",
+          "items": {
+            "$ref": "https://pear.invalid/contracts/v1/common.schema.json#/$defs/record_ref"
+          },
+          "minItems": 0,
+          "maxItems": 64
+        }
+      },
+      "required": [
+        "record_kind",
+        "schema_version",
+        "record_context",
+        "record_id",
+        "disclosure",
+        "variant",
+        "request",
+        "run_id",
+        "producer",
+        "sequence",
+        "previous",
+        "event",
+        "clock_id",
+        "elapsed_ns",
+        "process",
+        "status",
+        "covers",
+        "ready_ack",
+        "completed_exits"
+      ],
+      "additionalProperties": false
+    }
+  ]
+}

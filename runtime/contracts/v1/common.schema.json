@@ -1,0 +1,715 @@
+{
+  "$schema": "https://json-schema.org/draft/2020-12/schema",
+  "$id": "https://pear.invalid/contracts/v1/common.schema.json",
+  "$defs": {
+    "id": {
+      "type": "string",
+      "pattern": "^[A-Za-z0-9][A-Za-z0-9_.-]{0,95}$",
+      "maxLength": 96
+    },
+    "record_ref": {
+      "type": "object",
+      "properties": {
+        "ref_type": {
+          "const": "record"
+        },
+        "path": {
+          "type": "string",
+          "minLength": 1,
+          "maxLength": 512
+        },
+        "record_kind": {
+          "enum": [
+            "runtime_lock",
+            "runtime_artifact",
+            "game_profile",
+            "launch",
+            "failure",
+            "run",
+            "qualification"
+          ]
+        },
+        "schema_version": {
+          "const": 1
+        },
+        "digest": {
+          "type": "object",
+          "properties": {
+            "algorithm": {
+              "const": "sha256"
+            },
+            "scope": {
+              "const": "exact_utf8_file_bytes"
+            },
+            "value": {
+              "type": "string",
+              "pattern": "^[0-9a-f]{64}$",
+              "maxLength": 64
+            }
+          },
+          "required": [
+            "algorithm",
+            "scope",
+            "value"
+          ],
+          "additionalProperties": false
+        }
+      },
+      "required": [
+        "ref_type",
+        "path",
+        "record_kind",
+        "schema_version",
+        "digest"
+      ],
+      "additionalProperties": false
+    },
+    "blob_ref": {
+      "type": "object",
+      "properties": {
+        "ref_type": {
+          "const": "blob"
+        },
+        "path": {
+          "type": "string",
+          "minLength": 1,
+          "maxLength": 512
+        },
+        "digest": {
+          "type": "object",
+          "properties": {
+            "algorithm": {
+              "const": "sha256"
+            },
+            "scope": {
+              "enum": [
+                "file_bytes",
+                "source_archive_bytes",
+                "git_tree_listing_bytes",
+                "patch_file_bytes",
+                "evidence_json_bytes",
+                "signature_bytes",
+                "build_configuration_bytes",
+                "source_inventory_json_bytes"
+              ]
+            },
+            "value": {
+              "type": "string",
+              "pattern": "^[0-9a-f]{64}$",
+              "maxLength": 64
+            }
+          },
+          "required": [
+            "algorithm",
+            "scope",
+            "value"
+          ],
+          "additionalProperties": false
+        }
+      },
+      "required": [
+        "ref_type",
+        "path",
+        "digest"
+      ],
+      "additionalProperties": false
+    },
+    "disclosure": {
+      "type": "object",
+      "properties": {
+        "mode": {
+          "enum": [
+            "full",
+            "public_partial"
+          ]
+        },
+        "withheld": {
+          "type": "array",
+          "items": {
+            "enum": [
+              "private_launch",
+              "private_evidence",
+              "private_configuration"
+            ]
+          },
+          "minItems": 0,
+          "maxItems": 64
+        },
+        "origin_token": {
+          "anyOf": [
+            {
+              "type": "string",
+              "pattern": "^[A-Za-z0-9][A-Za-z0-9_.-]{0,95}$",
+              "maxLength": 96
+            },
+            {
+              "type": "null"
+            }
+          ]
+        }
+      },
+      "required": [
+        "mode",
+        "withheld",
+        "origin_token"
+      ],
+      "additionalProperties": false
+    },
+    "target": {
+      "type": "object",
+      "properties": {
+        "role": {
+          "enum": [
+            "host",
+            "guest",
+            "build"
+          ]
+        },
+        "format": {
+          "enum": [
+            "mach_o",
+            "pe",
+            "fixture"
+          ]
+        },
+        "architecture": {
+          "enum": [
+            "arm64",
+            "arm64ec",
+            "x86_64",
+            "i386"
+          ]
+        },
+        "triple": {
+          "anyOf": [
+            {
+              "type": "string",
+              "pattern": "^[A-Za-z0-9][A-Za-z0-9_.-]{0,95}$",
+              "maxLength": 96
+            },
+            {
+              "type": "null"
+            }
+          ]
+        }
+      },
+      "required": [
+        "role",
+        "format",
+        "architecture",
+        "triple"
+      ],
+      "additionalProperties": false
+    },
+    "immutable_ref": {
+      "type": "object",
+      "properties": {
+        "kind": {
+          "enum": [
+            "git_commit",
+            "archive"
+          ]
+        },
+        "object_format": {
+          "anyOf": [
+            {
+              "enum": [
+                "sha1",
+                "sha256"
+              ]
+            },
+            {
+              "type": "null"
+            }
+          ]
+        },
+        "value": {
+          "anyOf": [
+            {
+              "type": "string",
+              "pattern": "^([0-9a-f]{40}|[0-9a-f]{64})$"
+            },
+            {
+              "type": "null"
+            }
+          ]
+        }
+      },
+      "required": [
+        "kind",
+        "object_format",
+        "value"
+      ],
+      "additionalProperties": false
+    },
+    "environment": {
+      "type": "array",
+      "items": {
+        "type": "object",
+        "properties": {
+          "key": {
+            "enum": [
+              "PEAR_FIXTURE_MODE",
+              "PEAR_FIXTURE_VALUE"
+            ]
+          },
+          "value": {
+            "type": "string",
+            "maxLength": 256
+          }
+        },
+        "required": [
+          "key",
+          "value"
+        ],
+        "additionalProperties": false
+      },
+      "minItems": 0,
+      "maxItems": 8
+    },
+    "operation": {
+      "type": "object",
+      "properties": {
+        "operation": {
+          "const": "set_setting"
+        },
+        "root": {
+          "const": "prefix"
+        },
+        "path": {
+          "type": "string",
+          "minLength": 1,
+          "maxLength": 512
+        },
+        "key": {
+          "enum": [
+            "fixture_flag",
+            "dxmt_log_level"
+          ]
+        },
+        "value": {
+          "type": [
+            "string",
+            "boolean",
+            "integer"
+          ],
+          "maxLength": 32,
+          "minimum": 0,
+          "maximum": 5
+        }
+      },
+      "required": [
+        "operation",
+        "root",
+        "path",
+        "key",
+        "value"
+      ],
+      "additionalProperties": false
+    },
+    "host": {
+      "type": "object",
+      "properties": {
+        "os": {
+          "const": "macos"
+        },
+        "architecture": {
+          "enum": [
+            "arm64",
+            "x86_64",
+            "unknown"
+          ]
+        },
+        "version": {
+          "type": "array",
+          "items": {
+            "type": "integer",
+            "minimum": 0,
+            "maximum": 999
+          },
+          "minItems": 3,
+          "maxItems": 3
+        },
+        "capabilities": {
+          "type": "array",
+          "items": {
+            "type": "string",
+            "pattern": "^[A-Za-z0-9][A-Za-z0-9_.-]{0,95}$",
+            "maxLength": 96
+          },
+          "minItems": 0,
+          "maxItems": 64
+        }
+      },
+      "required": [
+        "os",
+        "architecture",
+        "version",
+        "capabilities"
+      ],
+      "additionalProperties": false
+    },
+    "configuration": {
+      "type": "object",
+      "properties": {
+        "host": {
+          "$ref": "https://pear.invalid/contracts/v1/common.schema.json#/$defs/host"
+        },
+        "chip": {
+          "type": "string",
+          "pattern": "^[A-Za-z0-9][A-Za-z0-9_.-]{0,95}$",
+          "maxLength": 96
+        },
+        "game_build": {
+          "anyOf": [
+            {
+              "type": "string",
+              "pattern": "^[A-Za-z0-9][A-Za-z0-9_.-]{0,95}$",
+              "maxLength": 96
+            },
+            {
+              "type": "null"
+            }
+          ]
+        },
+        "steam_build": {
+          "anyOf": [
+            {
+              "type": "string",
+              "pattern": "^[A-Za-z0-9][A-Za-z0-9_.-]{0,95}$",
+              "maxLength": 96
+            },
+            {
+              "type": "null"
+            }
+          ]
+        },
+        "renderer": {
+          "type": "string",
+          "pattern": "^[A-Za-z0-9][A-Za-z0-9_.-]{0,95}$",
+          "maxLength": 96
+        },
+        "translator": {
+          "type": "string",
+          "pattern": "^[A-Za-z0-9][A-Za-z0-9_.-]{0,95}$",
+          "maxLength": 96
+        }
+      },
+      "required": [
+        "host",
+        "chip",
+        "game_build",
+        "steam_build",
+        "renderer",
+        "translator"
+      ],
+      "additionalProperties": false
+    },
+    "check": {
+      "type": "object",
+      "properties": {
+        "check_id": {
+          "type": "string",
+          "pattern": "^[A-Za-z0-9][A-Za-z0-9_.-]{0,95}$",
+          "maxLength": 96
+        },
+        "status": {
+          "enum": [
+            "passed",
+            "failed",
+            "unknown",
+            "unsupported"
+          ]
+        },
+        "evidence": {
+          "type": "array",
+          "items": {
+            "$ref": "https://pear.invalid/contracts/v1/common.schema.json#/$defs/blob_ref"
+          },
+          "minItems": 0,
+          "maxItems": 64
+        }
+      },
+      "required": [
+        "check_id",
+        "status",
+        "evidence"
+      ],
+      "additionalProperties": false
+    },
+    "process_identity": {
+      "type": "object",
+      "properties": {
+        "token": {
+          "type": "string",
+          "pattern": "^[A-Za-z0-9][A-Za-z0-9_.-]{0,95}$",
+          "maxLength": 96
+        },
+        "pid": {
+          "type": "integer",
+          "minimum": 1,
+          "maximum": 2147483647
+        },
+        "generation": {
+          "type": "string",
+          "pattern": "^[A-Za-z0-9][A-Za-z0-9_.-]{0,95}$",
+          "maxLength": 96
+        }
+      },
+      "required": [
+        "token",
+        "pid",
+        "generation"
+      ],
+      "additionalProperties": false
+    },
+    "component": {
+      "type": "object",
+      "properties": {
+        "component_id": {
+          "type": "string",
+          "pattern": "^[A-Za-z0-9][A-Za-z0-9_.-]{0,95}$",
+          "maxLength": 96
+        },
+        "role": {
+          "type": "string",
+          "pattern": "^[A-Za-z0-9][A-Za-z0-9_.-]{0,95}$",
+          "maxLength": 96
+        },
+        "source": {
+          "type": "object",
+          "properties": {
+            "status": {
+              "enum": [
+                "known",
+                "unknown"
+              ]
+            },
+            "url": {
+              "anyOf": [
+                {
+                  "type": "string",
+                  "pattern": "^https://[^\\s]+$",
+                  "maxLength": 2048
+                },
+                {
+                  "type": "null"
+                }
+              ]
+            },
+            "immutable_ref": {
+              "anyOf": [
+                {
+                  "$ref": "https://pear.invalid/contracts/v1/common.schema.json#/$defs/immutable_ref"
+                },
+                {
+                  "type": "null"
+                }
+              ]
+            },
+            "content": {
+              "anyOf": [
+                {
+                  "$ref": "https://pear.invalid/contracts/v1/common.schema.json#/$defs/blob_ref"
+                },
+                {
+                  "type": "null"
+                }
+              ]
+            },
+            "reason": {
+              "type": "string",
+              "maxLength": 2048
+            }
+          },
+          "required": [
+            "status",
+            "url",
+            "immutable_ref",
+            "content",
+            "reason"
+          ],
+          "additionalProperties": false
+        },
+        "dependencies": {
+          "type": "object",
+          "properties": {
+            "status": {
+              "enum": [
+                "known",
+                "unknown"
+              ]
+            },
+            "component_ids": {
+              "type": "array",
+              "items": {
+                "type": "string",
+                "pattern": "^[A-Za-z0-9][A-Za-z0-9_.-]{0,95}$",
+                "maxLength": 96
+              },
+              "minItems": 0,
+              "maxItems": 64
+            },
+            "reason": {
+              "type": "string",
+              "maxLength": 2048
+            }
+          },
+          "required": [
+            "status",
+            "component_ids",
+            "reason"
+          ],
+          "additionalProperties": false
+        },
+        "patches": {
+          "type": "object",
+          "properties": {
+            "status": {
+              "enum": [
+                "known",
+                "unknown"
+              ]
+            },
+            "items": {
+              "type": "array",
+              "items": {
+                "type": "object",
+                "properties": {
+                  "base_ref": {
+                    "$ref": "https://pear.invalid/contracts/v1/common.schema.json#/$defs/immutable_ref"
+                  },
+                  "origin": {
+                    "type": "string",
+                    "pattern": "^https://[^\\s]+$",
+                    "maxLength": 2048
+                  },
+                  "content": {
+                    "$ref": "https://pear.invalid/contracts/v1/common.schema.json#/$defs/blob_ref"
+                  }
+                },
+                "required": [
+                  "base_ref",
+                  "origin",
+                  "content"
+                ],
+                "additionalProperties": false
+              },
+              "minItems": 0,
+              "maxItems": 64
+            },
+            "reason": {
+              "type": "string",
+              "maxLength": 2048
+            }
+          },
+          "required": [
+            "status",
+            "items",
+            "reason"
+          ],
+          "additionalProperties": false
+        },
+        "build_context": {
+          "type": "object",
+          "properties": {
+            "status": {
+              "enum": [
+                "known",
+                "unknown"
+              ]
+            },
+            "toolchain_ids": {
+              "type": "array",
+              "items": {
+                "type": "string",
+                "pattern": "^[A-Za-z0-9][A-Za-z0-9_.-]{0,95}$",
+                "maxLength": 96
+              },
+              "minItems": 0,
+              "maxItems": 64
+            },
+            "targets": {
+              "type": "array",
+              "items": {
+                "$ref": "https://pear.invalid/contracts/v1/common.schema.json#/$defs/target"
+              },
+              "minItems": 0,
+              "maxItems": 64
+            },
+            "configuration": {
+              "anyOf": [
+                {
+                  "$ref": "https://pear.invalid/contracts/v1/common.schema.json#/$defs/blob_ref"
+                },
+                {
+                  "type": "null"
+                }
+              ]
+            },
+            "reason": {
+              "type": "string",
+              "maxLength": 2048
+            }
+          },
+          "required": [
+            "status",
+            "toolchain_ids",
+            "targets",
+            "configuration",
+            "reason"
+          ],
+          "additionalProperties": false
+        },
+        "terms": {
+          "type": "object",
+          "properties": {
+            "status": {
+              "enum": [
+                "known",
+                "unknown"
+              ]
+            },
+            "references": {
+              "type": "array",
+              "items": {
+                "$ref": "https://pear.invalid/contracts/v1/common.schema.json#/$defs/blob_ref"
+              },
+              "minItems": 0,
+              "maxItems": 64
+            },
+            "reason": {
+              "type": "string",
+              "maxLength": 2048
+            }
+          },
+          "required": [
+            "status",
+            "references",
+            "reason"
+          ],
+          "additionalProperties": false
+        },
+        "evidence": {
+          "type": "array",
+          "items": {
+            "$ref": "https://pear.invalid/contracts/v1/common.schema.json#/$defs/blob_ref"
+          },
+          "minItems": 0,
+          "maxItems": 64
+        }
+      },
+      "required": [
+        "component_id",
+        "role",
+        "source",
+        "dependencies",
+        "patches",
+        "build_context",
+        "terms",
+        "evidence"
+      ],
+      "additionalProperties": false
+    }
+  }
+}

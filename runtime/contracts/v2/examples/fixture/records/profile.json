@@ -1,0 +1,53 @@
+{
+  "record_kind": "game_profile",
+  "schema_version": 2,
+  "record_context": "fixture",
+  "record_id": "fixture.profile",
+  "disclosure": {
+    "mode": "full",
+    "withheld": [],
+    "origin_token": null
+  },
+  "store": "fixture",
+  "app_id": 1,
+  "game_build": "fixture-game",
+  "executable": {
+    "path_type": "guest_relative",
+    "path": "game.exe"
+  },
+  "compatibility_family": "fixture-family",
+  "renderer": "fixture-renderer",
+  "arguments": [
+    "value with spaces",
+    "한글"
+  ],
+  "environment": [],
+  "operations": [
+    {
+      "operation": "set_setting",
+      "root": "prefix",
+      "path": "config/options.json",
+      "key": "fixture_flag",
+      "value": true
+    }
+  ],
+  "required_checks": [
+    "fixture-check"
+  ],
+  "required_processes": [
+    "game"
+  ],
+  "save_paths": [
+    {
+      "root": "saves",
+      "path": "game/save.dat"
+    }
+  ],
+  "save_inventory_status": {
+    "status": "known",
+    "reason": "Self-owned fixture inventory only."
+  },
+  "path_observations": [],
+  "provenance": [],
+  "features": []
+}

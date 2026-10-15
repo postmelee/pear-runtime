@@ -1,0 +1,188 @@
+{
+  "record_kind": "run",
+  "schema_version": 2,
+  "record_context": "fixture",
+  "record_id": "fixture.run",
+  "disclosure": {
+    "mode": "full",
+    "withheld": [],
+    "origin_token": null
+  },
+  "request": {
+    "ref_type": "record",
+    "path": "records/request.json",
+    "record_kind": "launch",
+    "schema_version": 2,
+    "digest": {
+      "algorithm": "sha256",
+      "scope": "exact_utf8_file_bytes",
+      "value": "ede243ea0fc2c6cc75356dcf543d4b9491d7da110f9c6de60c907e8f18cc34bd"
+    }
+  },
+  "run_id": "fixture-run",
+  "events": [
+    {
+      "ref_type": "record",
+      "path": "records/ready.json",
+      "record_kind": "launch",
+      "schema_version": 2,
+      "digest": {
+        "algorithm": "sha256",
+        "scope": "exact_utf8_file_bytes",
+        "value": "ce7a228fb98fbbfe24c0a32ac4c250db91e94ef696175927ec04663d3afc4028"
+      }
+    },
+    {
+      "ref_type": "record",
+      "path": "records/spawned.json",
+      "record_kind": "launch",
+      "schema_version": 2,
+      "digest": {
+        "algorithm": "sha256",
+        "scope": "exact_utf8_file_bytes",
+        "value": "7855350efd597f9ae6d71d503f67c777a9148f8c65efe23c95cf229eb39e9a32"
+      }
+    },
+    {
+      "ref_type": "record",
+      "path": "records/exited.json",
+      "record_kind": "launch",
+      "schema_version": 2,
+      "digest": {
+        "algorithm": "sha256",
+        "scope": "exact_utf8_file_bytes",
+        "value": "027d34dd73f6dfb5c1251b28b79508940f01f75274f88e783635c2105e069e79"
+      }
+    },
+    {
+      "ref_type": "record",
+      "path": "records/complete.json",
+      "record_kind": "launch",
+      "schema_version": 2,
+      "digest": {
+        "algorithm": "sha256",
+        "scope": "exact_utf8_file_bytes",
+        "value": "b83e70e3bd41625dc8cb028b8d4e9fc64000cc9ab409b54f27c6ee52466651b4"
+      }
+    }
+  ],
+  "failures": [],
+  "configuration": {
+    "host": {
+      "os": "macos",
+      "architecture": "arm64",
+      "version": [
+        26,
+        0,
+        0
+      ],
+      "capabilities": [
+        "fixture-capability"
+      ]
+    },
+    "chip": "synthetic-arm64",
+    "game_build": "fixture-game",
+    "steam_build": "fixture-steam",
+    "renderer": "fixture-renderer",
+    "translator": "fixture-translator"
+  },
+  "started_at": "2026-10-08T00:00:00Z",
+  "processes": [
+    {
+      "identity": {
+        "token": "fixture-process",
+        "pid": 123,
+        "generation": "fixture-generation"
+      },
+      "purpose": "game",
+      "required": true,
+      "observed": true,
+      "host_architecture": "arm64",
+      "translated": false,
+      "modules": [
+        {
+          "module_id": "fixture-host-module",
+          "kind": "host",
+          "architecture": "arm64",
+          "observed": true,
+          "source": "artifact",
+          "artifact_file_id": "fixture-main",
+          "observed_sha256": "b98ef52f9441b9010093ec631e80834f34e85b21f5a29a069217babecf060680",
+          "evidence": [
+            {
+              "ref_type": "blob",
+              "path": "blobs/evidence.json",
+              "digest": {
+                "algorithm": "sha256",
+                "scope": "evidence_json_bytes",
+                "value": "f4430917e18762fd5aa741802174762a940d56cb80351b33b58ece79701fb172"
+              }
+            }
+          ],
+          "content": {
+            "ref_type": "blob",
+            "path": "blobs/payload.txt",
+            "digest": {
+              "algorithm": "sha256",
+              "scope": "file_bytes",
+              "value": "b98ef52f9441b9010093ec631e80834f34e85b21f5a29a069217babecf060680"
+            }
+          }
+        },
+        {
+          "module_id": "fixture-guest-module",
+          "kind": "guest",
+          "architecture": "x86_64",
+          "observed": true,
+          "source": "game",
+          "artifact_file_id": null,
+          "observed_sha256": "b98ef52f9441b9010093ec631e80834f34e85b21f5a29a069217babecf060680",
+          "evidence": [
+            {
+              "ref_type": "blob",
+              "path": "blobs/evidence.json",
+              "digest": {
+                "algorithm": "sha256",
+                "scope": "evidence_json_bytes",
+                "value": "f4430917e18762fd5aa741802174762a940d56cb80351b33b58ece79701fb172"
+              }
+            }
+          ],
+          "content": null
+        }
+      ]
+    }
+  ],
+  "coverage": {
+    "status": "passed",
+    "required_processes": [
+      "game"
+    ],
+    "missing_processes": [],
+    "missing_modules": [],
+    "dropped_events": 0
+  },
+  "checks": [
+    {
+      "check_id": "fixture-check",
+      "status": "passed",
+      "evidence": [
+        {
+          "ref_type": "blob",
+          "path": "blobs/evidence.json",
+          "digest": {
+            "algorithm": "sha256",
+            "scope": "evidence_json_bytes",
+            "value": "f4430917e18762fd5aa741802174762a940d56cb80351b33b58ece79701fb172"
+          }
+        }
+      ]
+    }
+  ],
+  "exit": {
+    "kind": "exited",
+    "code": 0,
+    "signal": null,
+    "cleanup": "passed"
+  }
+}

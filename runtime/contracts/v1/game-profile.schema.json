@@ -1,0 +1,162 @@
+{
+  "type": "object",
+  "properties": {
+    "record_kind": {
+      "const": "game_profile"
+    },
+    "schema_version": {
+      "const": 1
+    },
+    "record_context": {
+      "enum": [
+        "research",
+        "fixture",
+        "runtime"
+      ]
+    },
+    "record_id": {
+      "type": "string",
+      "pattern": "^[A-Za-z0-9][A-Za-z0-9_.-]{0,95}$",
+      "maxLength": 96
+    },
+    "disclosure": {
+      "$ref": "https://pear.invalid/contracts/v1/common.schema.json#/$defs/disclosure"
+    },
+    "store": {
+      "enum": [
+        "steam",
+        "fixture"
+      ]
+    },
+    "app_id": {
+      "type": "integer",
+      "minimum": 1,
+      "maximum": 2147483647
+    },
+    "game_build": {
+      "anyOf": [
+        {
+          "type": "string",
+          "pattern": "^[A-Za-z0-9][A-Za-z0-9_.-]{0,95}$",
+          "maxLength": 96
+        },
+        {
+          "type": "null"
+        }
+      ]
+    },
+    "executable": {
+      "type": "object",
+      "properties": {
+        "path_type": {
+          "const": "guest_relative"
+        },
+        "path": {
+          "type": "string",
+          "minLength": 1,
+          "maxLength": 512
+        }
+      },
+      "required": [
+        "path_type",
+        "path"
+      ],
+      "additionalProperties": false
+    },
+    "compatibility_family": {
+      "type": "string",
+      "pattern": "^[A-Za-z0-9][A-Za-z0-9_.-]{0,95}$",
+      "maxLength": 96
+    },
+    "renderer": {
+      "type": "string",
+      "pattern": "^[A-Za-z0-9][A-Za-z0-9_.-]{0,95}$",
+      "maxLength": 96
+    },
+    "arguments": {
+      "type": "array",
+      "items": {
+        "type": "string",
+        "maxLength": 256
+      },
+      "minItems": 0,
+      "maxItems": 32
+    },
+    "environment": {
+      "$ref": "https://pear.invalid/contracts/v1/common.schema.json#/$defs/environment"
+    },
+    "operations": {
+      "type": "array",
+      "items": {
+        "$ref": "https://pear.invalid/contracts/v1/common.schema.json#/$defs/operation"
+      },
+      "minItems": 0,
+      "maxItems": 16
+    },
+    "required_checks": {
+      "type": "array",
+      "items": {
+        "type": "string",
+        "pattern": "^[A-Za-z0-9][A-Za-z0-9_.-]{0,95}$",
+        "maxLength": 96
+      },
+      "minItems": 1,
+      "maxItems": 64
+    },
+    "required_processes": {
+      "type": "array",
+      "items": {
+        "type": "string",
+        "pattern": "^[A-Za-z0-9][A-Za-z0-9_.-]{0,95}$",
+        "maxLength": 96
+      },
+      "minItems": 1,
+      "maxItems": 64
+    },
+    "save_paths": {
+      "type": "array",
+      "items": {
+        "type": "object",
+        "properties": {
+          "root": {
+            "const": "saves"
+          },
+          "path": {
+            "type": "string",
+            "minLength": 1,
+            "maxLength": 512
+          }
+        },
+        "required": [
+          "root",
+          "path"
+        ],
+        "additionalProperties": false
+      },
+      "minItems": 0,
+      "maxItems": 16
+    }
+  },
+  "required": [
+    "record_kind",
+    "schema_version",
+    "record_context",
+    "record_id",
+    "disclosure",
+    "store",
+    "app_id",
+    "game_build",
+    "executable",
+    "compatibility_family",
+    "renderer",
+    "arguments",
+    "environment",
+    "operations",
+    "required_checks",
+    "required_processes",
+    "save_paths"
+  ],
+  "additionalProperties": false,
+  "$schema": "https://json-schema.org/draft/2020-12/schema",
+  "$id": "https://pear.invalid/contracts/v1/game-profile.schema.json"
+}

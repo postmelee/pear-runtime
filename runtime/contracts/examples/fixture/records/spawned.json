@@ -1,0 +1,49 @@
+{
+  "record_kind": "launch",
+  "schema_version": 1,
+  "record_context": "fixture",
+  "record_id": "fixture.spawned",
+  "disclosure": {
+    "mode": "full",
+    "withheld": [],
+    "origin_token": null
+  },
+  "variant": "event",
+  "request": {
+    "ref_type": "record",
+    "path": "records/request.json",
+    "record_kind": "launch",
+    "schema_version": 1,
+    "digest": {
+      "algorithm": "sha256",
+      "scope": "exact_utf8_file_bytes",
+      "value": "2061ccbd36854a37fd351c729d827ba0f424a03835fcca433aebd3839a57cf47"
+    }
+  },
+  "run_id": "fixture-run",
+  "producer": "supervisor",
+  "sequence": 0,
+  "previous": null,
+  "event": "spawned",
+  "clock_id": "fixture-clock",
+  "elapsed_ns": 1,
+  "process": {
+    "token": "fixture-process",
+    "pid": 123,
+    "generation": "fixture-generation"
+  },
+  "status": "passed",
+  "covers": [],
+  "ready_ack": {
+    "ref_type": "record",
+    "path": "records/ready.json",
+    "record_kind": "launch",
+    "schema_version": 1,
+    "digest": {
+      "algorithm": "sha256",
+      "scope": "exact_utf8_file_bytes",
+      "value": "657b763ee2b5da476342787e4de5fb0227b7bc1aaceeb202260abd119b73cdbe"
+    }
+  },
+  "completed_exits": []
+}

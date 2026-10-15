@@ -1,0 +1,339 @@
+{
+  "type": "object",
+  "properties": {
+    "record_kind": {
+      "const": "game_profile"
+    },
+    "schema_version": {
+      "const": 2
+    },
+    "record_context": {
+      "enum": [
+        "research",
+        "fixture",
+        "runtime"
+      ]
+    },
+    "record_id": {
+      "type": "string",
+      "pattern": "^[A-Za-z0-9][A-Za-z0-9_.-]{0,95}$",
+      "maxLength": 96
+    },
+    "disclosure": {
+      "$ref": "https://pear.invalid/contracts/v2/common.schema.json#/$defs/disclosure"
+    },
+    "store": {
+      "enum": [
+        "steam",
+        "fixture"
+      ]
+    },
+    "app_id": {
+      "type": "integer",
+      "minimum": 1,
+      "maximum": 2147483647
+    },
+    "game_build": {
+      "anyOf": [
+        {
+          "type": "string",
+          "pattern": "^[A-Za-z0-9][A-Za-z0-9_.-]{0,95}$",
+          "maxLength": 96
+        },
+        {
+          "type": "null"
+        }
+      ]
+    },
+    "executable": {
+      "type": "object",
+      "properties": {
+        "path_type": {
+          "const": "guest_relative"
+        },
+        "path": {
+          "type": "string",
+          "minLength": 1,
+          "maxLength": 512
+        }
+      },
+      "required": [
+        "path_type",
+        "path"
+      ],
+      "additionalProperties": false
+    },
+    "compatibility_family": {
+      "anyOf": [
+        {
+          "type": "string",
+          "pattern": "^[A-Za-z0-9][A-Za-z0-9_.-]{0,95}$",
+          "maxLength": 96
+        },
+        {
+          "type": "null"
+        }
+      ]
+    },
+    "renderer": {
+      "anyOf": [
+        {
+          "type": "string",
+          "pattern": "^[A-Za-z0-9][A-Za-z0-9_.-]{0,95}$",
+          "maxLength": 96
+        },
+        {
+          "type": "null"
+        }
+      ]
+    },
+    "arguments": {
+      "type": "array",
+      "items": {
+        "type": "string",
+        "maxLength": 256
+      },
+      "minItems": 0,
+      "maxItems": 32
+    },
+    "environment": {
+      "$ref": "https://pear.invalid/contracts/v2/common.schema.json#/$defs/environment"
+    },
+    "operations": {
+      "type": "array",
+      "items": {
+        "$ref": "https://pear.invalid/contracts/v2/common.schema.json#/$defs/operation"
+      },
+      "minItems": 0,
+      "maxItems": 16
+    },
+    "required_checks": {
+      "type": "array",
+      "items": {
+        "type": "string",
+        "pattern": "^[A-Za-z0-9][A-Za-z0-9_.-]{0,95}$",
+        "maxLength": 96
+      },
+      "minItems": 1,
+      "maxItems": 64
+    },
+    "required_processes": {
+      "type": "array",
+      "items": {
+        "type": "string",
+        "pattern": "^[A-Za-z0-9][A-Za-z0-9_.-]{0,95}$",
+        "maxLength": 96
+      },
+      "minItems": 1,
+      "maxItems": 64
+    },
+    "save_paths": {
+      "type": "array",
+      "items": {
+        "type": "object",
+        "properties": {
+          "root": {
+            "const": "saves"
+          },
+          "path": {
+            "type": "string",
+            "minLength": 1,
+            "maxLength": 512
+          }
+        },
+        "required": [
+          "root",
+          "path"
+        ],
+        "additionalProperties": false
+      },
+      "minItems": 0,
+      "maxItems": 16
+    },
+    "save_inventory_status": {
+      "type": "object",
+      "properties": {
+        "status": {
+          "enum": [
+            "known",
+            "unknown"
+          ]
+        },
+        "reason": {
+          "type": "string",
+          "minLength": 1,
+          "maxLength": 512
+        }
+      },
+      "required": [
+        "status",
+        "reason"
+      ],
+      "additionalProperties": false
+    },
+    "path_observations": {
+      "type": "array",
+      "items": {
+        "type": "object",
+        "properties": {
+          "kind": {
+            "enum": [
+              "settings",
+              "saves"
+            ]
+          },
+          "status": {
+            "enum": [
+              "observed",
+              "unknown"
+            ]
+          },
+          "path": {
+            "anyOf": [
+              {
+                "type": "object",
+                "properties": {
+                  "path_type": {
+                    "const": "windows_user_relative"
+                  },
+                  "path": {
+                    "type": "string",
+                    "minLength": 1,
+                    "maxLength": 512
+                  }
+                },
+                "required": [
+                  "path_type",
+                  "path"
+                ],
+                "additionalProperties": false
+              },
+              {
+                "type": "null"
+              }
+            ]
+          },
+          "reason": {
+            "type": "string",
+            "minLength": 1,
+            "maxLength": 512
+          },
+          "evidence": {
+            "type": "array",
+            "items": {
+              "$ref": "https://pear.invalid/contracts/v2/common.schema.json#/$defs/blob_ref"
+            },
+            "maxItems": 8
+          }
+        },
+        "required": [
+          "kind",
+          "status",
+          "path",
+          "reason",
+          "evidence"
+        ],
+        "additionalProperties": false
+      },
+      "maxItems": 16
+    },
+    "provenance": {
+      "type": "array",
+      "items": {
+        "type": "object",
+        "properties": {
+          "url": {
+            "type": "string",
+            "pattern": "^https://",
+            "minLength": 9,
+            "maxLength": 512
+          },
+          "review_date": {
+            "type": "string",
+            "pattern": "^[0-9]{4}-[0-9]{2}-[0-9]{2}$"
+          },
+          "scope": {
+            "type": "string",
+            "pattern": "^[A-Za-z0-9][A-Za-z0-9_.-]{0,95}$",
+            "maxLength": 96
+          },
+          "detail": {
+            "type": "string",
+            "minLength": 1,
+            "maxLength": 512
+          }
+        },
+        "required": [
+          "url",
+          "review_date",
+          "scope",
+          "detail"
+        ],
+        "additionalProperties": false
+      },
+      "maxItems": 16
+    },
+    "features": {
+      "type": "array",
+      "items": {
+        "type": "object",
+        "properties": {
+          "feature_id": {
+            "type": "string",
+            "pattern": "^[A-Za-z0-9][A-Za-z0-9_.-]{0,95}$",
+            "maxLength": 96
+          },
+          "status": {
+            "enum": [
+              "passed",
+              "failed",
+              "unknown",
+              "unsupported",
+              "untested"
+            ]
+          },
+          "evidence": {
+            "type": "array",
+            "items": {
+              "$ref": "https://pear.invalid/contracts/v2/common.schema.json#/$defs/blob_ref"
+            },
+            "maxItems": 8
+          }
+        },
+        "required": [
+          "feature_id",
+          "status",
+          "evidence"
+        ],
+        "additionalProperties": false
+      },
+      "maxItems": 32
+    }
+  },
+  "required": [
+    "record_kind",
+    "schema_version",
+    "record_context",
+    "record_id",
+    "disclosure",
+    "store",
+    "app_id",
+    "game_build",
+    "executable",
+    "compatibility_family",
+    "renderer",
+    "arguments",
+    "environment",
+    "operations",
+    "required_checks",
+    "required_processes",
+    "save_paths",
+    "save_inventory_status",
+    "path_observations",
+    "provenance",
+    "features"
+  ],
+  "additionalProperties": false,
+  "$schema": "https://json-schema.org/draft/2020-12/schema",
+  "$id": "https://pear.invalid/contracts/v2/game-profile.schema.json"
+}

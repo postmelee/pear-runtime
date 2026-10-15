@@ -1,0 +1,52 @@
+{
+  "record_kind": "qualification",
+  "schema_version": 2,
+  "record_context": "fixture",
+  "record_id": "fixture.qualification",
+  "disclosure": {
+    "mode": "full",
+    "withheld": [],
+    "origin_token": null
+  },
+  "runs": [
+    {
+      "ref_type": "record",
+      "path": "records/run.json",
+      "record_kind": "run",
+      "schema_version": 2,
+      "digest": {
+        "algorithm": "sha256",
+        "scope": "exact_utf8_file_bytes",
+        "value": "14e7bae63be8555513c583bcbe35055574a3ab5c53a0b63b8809eeb949ee00b9"
+      }
+    }
+  ],
+  "decision": "supported",
+  "reviewer": "fixture-reviewer",
+  "required_checks": [
+    "fixture-check"
+  ],
+  "configuration": {
+    "host": {
+      "os": "macos",
+      "architecture": "arm64",
+      "version": [
+        26,
+        0,
+        0
+      ],
+      "capabilities": [
+        "fixture-capability"
+      ]
+    },
+    "chip": "synthetic-arm64",
+    "game_build": "fixture-game",
+    "steam_build": "fixture-steam",
+    "renderer": "fixture-renderer",
+    "translator": "fixture-translator"
+  },
+  "scope": "development",
+  "reviewed_at": "2026-10-08T00:00:00Z",
+  "test_revision": "fixture-test-v1",
+  "limitations": []
+}

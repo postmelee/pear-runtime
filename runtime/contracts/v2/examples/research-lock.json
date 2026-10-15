@@ -1,0 +1,138 @@
+{
+  "record_kind": "runtime_lock",
+  "schema_version": 2,
+  "record_context": "research",
+  "record_id": "example.research.runtime-lock",
+  "source_inventory_ref": null,
+  "compatibility_family": {
+    "status": "unknown",
+    "value": null,
+    "reason": "No compatible built runtime family has been established for this example."
+  },
+  "component_coverage": {
+    "status": "unknown",
+    "complete": false,
+    "reason": "Wine, FEX and DXMT are intended component labels, not a complete audited dependency inventory."
+  },
+  "components": [
+    {
+      "component_id": "wine",
+      "role": "windows_api_host",
+      "source": {
+        "status": "unknown",
+        "url": null,
+        "immutable_ref": null,
+        "reason": "No actual source input from Issue #1 is selected by this example.",
+        "content": null
+      },
+      "dependencies": {
+        "status": "unknown",
+        "component_ids": [],
+        "reason": "Required dependency identities have not been audited for this example."
+      },
+      "patches": {
+        "status": "unknown",
+        "items": [],
+        "reason": "An empty unknown list does not establish that no macOS patches are required."
+      },
+      "build_context": {
+        "status": "unknown",
+        "toolchain_ids": [],
+        "targets": [],
+        "reason": "No toolchain, host or guest target has been pinned or build-tested here.",
+        "configuration": null
+      },
+      "terms": {
+        "status": "unknown",
+        "references": [],
+        "reason": "Terms and contribution policies need evidence for the actual selected revision."
+      },
+      "evidence": []
+    },
+    {
+      "component_id": "fex",
+      "role": "guest_cpu_translation",
+      "source": {
+        "status": "unknown",
+        "url": null,
+        "immutable_ref": null,
+        "reason": "No actual source input from Issue #1 is selected by this example.",
+        "content": null
+      },
+      "dependencies": {
+        "status": "unknown",
+        "component_ids": [],
+        "reason": "Required dependency identities have not been audited for this example."
+      },
+      "patches": {
+        "status": "unknown",
+        "items": [],
+        "reason": "The Darwin integration gap and patch sequence remain unassessed in this example."
+      },
+      "build_context": {
+        "status": "unknown",
+        "toolchain_ids": [],
+        "targets": [],
+        "reason": "No toolchain, host or guest target has been pinned or build-tested here.",
+        "configuration": null
+      },
+      "terms": {
+        "status": "unknown",
+        "references": [],
+        "reason": "Terms and contribution policies need evidence for the actual selected revision."
+      },
+      "evidence": []
+    },
+    {
+      "component_id": "dxmt",
+      "role": "d3d11_metal_translation",
+      "source": {
+        "status": "unknown",
+        "url": null,
+        "immutable_ref": null,
+        "reason": "No actual source input from Issue #1 is selected by this example.",
+        "content": null
+      },
+      "dependencies": {
+        "status": "unknown",
+        "component_ids": [],
+        "reason": "The paired Wine/Metal/shader dependencies have not been selected in this example."
+      },
+      "patches": {
+        "status": "unknown",
+        "items": [],
+        "reason": "An empty unknown list does not establish a compatible unpatched graphics path."
+      },
+      "build_context": {
+        "status": "unknown",
+        "toolchain_ids": [],
+        "targets": [],
+        "reason": "No toolchain, host or guest target has been pinned or build-tested here.",
+        "configuration": null
+      },
+      "terms": {
+        "status": "unknown",
+        "references": [],
+        "reason": "Terms and contribution policies need evidence for the actual selected revision."
+      },
+      "evidence": []
+    }
+  ],
+  "host_requirements": {
+    "status": "unknown",
+    "value": null,
+    "reason": "Existing host-probe evidence does not supply the requirements of this unbuilt runtime."
+  },
+  "signing_requirements": {
+    "status": "unknown",
+    "value": null,
+    "reason": "No artifact-specific signing or distribution route is established by this example."
+  },
+  "evidence": [],
+  "disclosure": {
+    "mode": "full",
+    "withheld": [],
+    "origin_token": null
+  },
+  "toolchains": []
+}

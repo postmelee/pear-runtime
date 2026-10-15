@@ -1,0 +1,88 @@
+{
+  "record_kind": "launch",
+  "schema_version": 2,
+  "record_context": "fixture",
+  "record_id": "fixture.request",
+  "disclosure": {
+    "mode": "full",
+    "withheld": [],
+    "origin_token": null
+  },
+  "variant": "request",
+  "run_id": "fixture-run",
+  "purpose": "fixture_launch",
+  "lock": {
+    "ref_type": "record",
+    "path": "records/lock.json",
+    "record_kind": "runtime_lock",
+    "schema_version": 2,
+    "digest": {
+      "algorithm": "sha256",
+      "scope": "exact_utf8_file_bytes",
+      "value": "eaf090cf1db32967b6e5a4a55cd00f03777988cd70518d7e743ff7eff2110c95"
+    }
+  },
+  "artifact": {
+    "ref_type": "record",
+    "path": "records/artifact.json",
+    "record_kind": "runtime_artifact",
+    "schema_version": 2,
+    "digest": {
+      "algorithm": "sha256",
+      "scope": "exact_utf8_file_bytes",
+      "value": "7a2ba42e618e673cfb223d0fb2429b82b91ad03e8066e365efe0df5c1cc434aa"
+    }
+  },
+  "profile": {
+    "ref_type": "record",
+    "path": "records/profile.json",
+    "record_kind": "game_profile",
+    "schema_version": 2,
+    "digest": {
+      "algorithm": "sha256",
+      "scope": "exact_utf8_file_bytes",
+      "value": "775e17d0d3d3e72a99b7f88a02620f4924a1740c39efc35c22d0eb2edff68263"
+    }
+  },
+  "qualification": null,
+  "roots": {
+    "runtime": "state/runtime",
+    "prefix": "state/prefix",
+    "saves": "state/saves",
+    "cache": "state/cache",
+    "logs": "state/logs"
+  },
+  "prefix_family": "fixture-family",
+  "cache_identity": {
+    "lock_digest": "eaf090cf1db32967b6e5a4a55cd00f03777988cd70518d7e743ff7eff2110c95",
+    "artifact_digest": "7a2ba42e618e673cfb223d0fb2429b82b91ad03e8066e365efe0df5c1cc434aa",
+    "profile_digest": "775e17d0d3d3e72a99b7f88a02620f4924a1740c39efc35c22d0eb2edff68263",
+    "cpu_features": [
+      "fixture-capability"
+    ],
+    "translator_component": "fixture-translator",
+    "abi": "fixture-abi"
+  },
+  "entry_file_id": "fixture-main",
+  "observer_required": true,
+  "configuration": {
+    "host": {
+      "os": "macos",
+      "architecture": "arm64",
+      "version": [
+        26,
+        0,
+        0
+      ],
+      "capabilities": [
+        "fixture-capability"
+      ]
+    },
+    "chip": "synthetic-arm64",
+    "game_build": "fixture-game",
+    "steam_build": "fixture-steam",
+    "renderer": "fixture-renderer",
+    "translator": "fixture-translator"
+  },
+  "signing_scope": "development"
+}

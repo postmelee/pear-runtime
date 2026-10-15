@@ -1,0 +1,69 @@
+{
+  "record_kind": "runtime_artifact",
+  "schema_version": 2,
+  "record_context": "fixture",
+  "record_id": "fixture.artifact",
+  "disclosure": {
+    "mode": "full",
+    "withheld": [],
+    "origin_token": null
+  },
+  "lock": {
+    "ref_type": "record",
+    "path": "records/lock.json",
+    "record_kind": "runtime_lock",
+    "schema_version": 2,
+    "digest": {
+      "algorithm": "sha256",
+      "scope": "exact_utf8_file_bytes",
+      "value": "eaf090cf1db32967b6e5a4a55cd00f03777988cd70518d7e743ff7eff2110c95"
+    }
+  },
+  "compatibility_family": "fixture-family",
+  "abi": "fixture-abi",
+  "translator_component": "fixture-translator",
+  "files": [
+    {
+      "file_id": "fixture-main",
+      "content": {
+        "ref_type": "blob",
+        "path": "blobs/payload.txt",
+        "digest": {
+          "algorithm": "sha256",
+          "scope": "file_bytes",
+          "value": "b98ef52f9441b9010093ec631e80834f34e85b21f5a29a069217babecf060680"
+        }
+      },
+      "role": "host",
+      "format": "fixture",
+      "architecture": "arm64"
+    }
+  ],
+  "signing": {
+    "status": "passed",
+    "scope": "development",
+    "payload_digests": [
+      "b98ef52f9441b9010093ec631e80834f34e85b21f5a29a069217babecf060680"
+    ],
+    "evidence": {
+      "ref_type": "blob",
+      "path": "blobs/evidence.json",
+      "digest": {
+        "algorithm": "sha256",
+        "scope": "evidence_json_bytes",
+        "value": "f4430917e18762fd5aa741802174762a940d56cb80351b33b58ece79701fb172"
+      }
+    }
+  },
+  "build_evidence": [
+    {
+      "ref_type": "blob",
+      "path": "blobs/evidence.json",
+      "digest": {
+        "algorithm": "sha256",
+        "scope": "evidence_json_bytes",
+        "value": "f4430917e18762fd5aa741802174762a940d56cb80351b33b58ece79701fb172"
+      }
+    }
+  ]
+}

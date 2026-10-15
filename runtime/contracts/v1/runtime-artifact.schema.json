@@ -1,0 +1,167 @@
+{
+  "type": "object",
+  "properties": {
+    "record_kind": {
+      "const": "runtime_artifact"
+    },
+    "schema_version": {
+      "const": 1
+    },
+    "record_context": {
+      "enum": [
+        "research",
+        "fixture",
+        "runtime"
+      ]
+    },
+    "record_id": {
+      "type": "string",
+      "pattern": "^[A-Za-z0-9][A-Za-z0-9_.-]{0,95}$",
+      "maxLength": 96
+    },
+    "disclosure": {
+      "$ref": "https://pear.invalid/contracts/v1/common.schema.json#/$defs/disclosure"
+    },
+    "lock": {
+      "$ref": "https://pear.invalid/contracts/v1/common.schema.json#/$defs/record_ref"
+    },
+    "compatibility_family": {
+      "type": "string",
+      "pattern": "^[A-Za-z0-9][A-Za-z0-9_.-]{0,95}$",
+      "maxLength": 96
+    },
+    "abi": {
+      "type": "string",
+      "pattern": "^[A-Za-z0-9][A-Za-z0-9_.-]{0,95}$",
+      "maxLength": 96
+    },
+    "translator_component": {
+      "type": "string",
+      "pattern": "^[A-Za-z0-9][A-Za-z0-9_.-]{0,95}$",
+      "maxLength": 96
+    },
+    "files": {
+      "type": "array",
+      "items": {
+        "type": "object",
+        "properties": {
+          "file_id": {
+            "type": "string",
+            "pattern": "^[A-Za-z0-9][A-Za-z0-9_.-]{0,95}$",
+            "maxLength": 96
+          },
+          "content": {
+            "$ref": "https://pear.invalid/contracts/v1/common.schema.json#/$defs/blob_ref"
+          },
+          "role": {
+            "enum": [
+              "host",
+              "guest",
+              "data"
+            ]
+          },
+          "format": {
+            "enum": [
+              "mach_o",
+              "pe",
+              "fixture",
+              "data"
+            ]
+          },
+          "architecture": {
+            "enum": [
+              "arm64",
+              "arm64ec",
+              "x86_64",
+              "i386",
+              "unknown",
+              "none"
+            ]
+          }
+        },
+        "required": [
+          "file_id",
+          "content",
+          "role",
+          "format",
+          "architecture"
+        ],
+        "additionalProperties": false
+      },
+      "minItems": 1,
+      "maxItems": 64
+    },
+    "signing": {
+      "type": "object",
+      "properties": {
+        "status": {
+          "enum": [
+            "passed",
+            "failed",
+            "unknown",
+            "unsupported"
+          ]
+        },
+        "scope": {
+          "enum": [
+            "development",
+            "distribution",
+            "unknown"
+          ]
+        },
+        "payload_digests": {
+          "type": "array",
+          "items": {
+            "type": "string",
+            "pattern": "^[0-9a-f]{64}$",
+            "maxLength": 64
+          },
+          "minItems": 0,
+          "maxItems": 64
+        },
+        "evidence": {
+          "anyOf": [
+            {
+              "$ref": "https://pear.invalid/contracts/v1/common.schema.json#/$defs/blob_ref"
+            },
+            {
+              "type": "null"
+            }
+          ]
+        }
+      },
+      "required": [
+        "status",
+        "scope",
+        "payload_digests",
+        "evidence"
+      ],
+      "additionalProperties": false
+    },
+    "build_evidence": {
+      "type": "array",
+      "items": {
+        "$ref": "https://pear.invalid/contracts/v1/common.schema.json#/$defs/blob_ref"
+      },
+      "minItems": 0,
+      "maxItems": 64
+    }
+  },
+  "required": [
+    "record_kind",
+    "schema_version",
+    "record_context",
+    "record_id",
+    "disclosure",
+    "lock",
+    "compatibility_family",
+    "abi",
+    "translator_component",
+    "files",
+    "signing",
+    "build_evidence"
+  ],
+  "additionalProperties": false,
+  "$schema": "https://json-schema.org/draft/2020-12/schema",
+  "$id": "https://pear.invalid/contracts/v1/runtime-artifact.schema.json"
+}

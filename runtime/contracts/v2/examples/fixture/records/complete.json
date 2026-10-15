@@ -1,0 +1,59 @@
+{
+  "record_kind": "launch",
+  "schema_version": 2,
+  "record_context": "fixture",
+  "record_id": "fixture.complete",
+  "disclosure": {
+    "mode": "full",
+    "withheld": [],
+    "origin_token": null
+  },
+  "variant": "event",
+  "request": {
+    "ref_type": "record",
+    "path": "records/request.json",
+    "record_kind": "launch",
+    "schema_version": 2,
+    "digest": {
+      "algorithm": "sha256",
+      "scope": "exact_utf8_file_bytes",
+      "value": "ede243ea0fc2c6cc75356dcf543d4b9491d7da110f9c6de60c907e8f18cc34bd"
+    }
+  },
+  "run_id": "fixture-run",
+  "producer": "observer",
+  "sequence": 1,
+  "previous": {
+    "ref_type": "record",
+    "path": "records/ready.json",
+    "record_kind": "launch",
+    "schema_version": 2,
+    "digest": {
+      "algorithm": "sha256",
+      "scope": "exact_utf8_file_bytes",
+      "value": "ce7a228fb98fbbfe24c0a32ac4c250db91e94ef696175927ec04663d3afc4028"
+    }
+  },
+  "event": "observer_complete",
+  "clock_id": "fixture-clock",
+  "elapsed_ns": 3,
+  "process": null,
+  "status": "passed",
+  "covers": [
+    "fixture-process"
+  ],
+  "ready_ack": null,
+  "completed_exits": [
+    {
+      "ref_type": "record",
+      "path": "records/exited.json",
+      "record_kind": "launch",
+      "schema_version": 2,
+      "digest": {
+        "algorithm": "sha256",
+        "scope": "exact_utf8_file_bytes",
+        "value": "027d34dd73f6dfb5c1251b28b79508940f01f75274f88e783635c2105e069e79"
+      }
+    }
+  ]
+}

@@ -1,0 +1,189 @@
+{
+  "record_kind": "test_dependency_lock",
+  "scope": "CPython 3.14 macOS ARM64 contract reference tests only",
+  "retrieved_at_utc": "2026-09-28T09:02:42.005733+00:00",
+  "installation": "completed_in_task_local_venv",
+  "extras": [],
+  "marker_decisions": [
+    "referencing typing-extensions dependency has python_version < 3.13; inactive on this Python 3.14 lock"
+  ],
+  "authenticity_scope": "Official PyPI HTTPS metadata and wheel digest match; no independent attestation verification claimed.",
+  "packages": [
+    {
+      "name": "jsonschema",
+      "version": "4.26.0",
+      "metadata_url": "https://pypi.org/pypi/jsonschema/4.26.0/json",
+      "requires_python": ">=3.10",
+      "requires_dist": [
+        "attrs>=22.2.0",
+        "jsonschema-specifications>=2023.03.6",
+        "referencing>=0.28.4",
+        "rpds-py>=0.25.0",
+        "fqdn; extra == \"format\"",
+        "idna; extra == \"format\"",
+        "isoduration; extra == \"format\"",
+        "jsonpointer>1.13; extra == \"format\"",
+        "rfc3339-validator; extra == \"format\"",
+        "rfc3987; extra == \"format\"",
+        "uri-template; extra == \"format\"",
+        "webcolors>=1.11; extra == \"format\"",
+        "fqdn; extra == \"format-nongpl\"",
+        "idna; extra == \"format-nongpl\"",
+        "isoduration; extra == \"format-nongpl\"",
+        "jsonpointer>1.13; extra == \"format-nongpl\"",
+        "rfc3339-validator; extra == \"format-nongpl\"",
+        "rfc3986-validator>0.1.0; extra == \"format-nongpl\"",
+        "rfc3987-syntax>=1.1.0; extra == \"format-nongpl\"",
+        "uri-template; extra == \"format-nongpl\"",
+        "webcolors>=24.6.0; extra == \"format-nongpl\""
+      ],
+      "license_expression": "MIT",
+      "project_urls": {
+        "Changelog": "https://github.com/python-jsonschema/jsonschema/blob/main/CHANGELOG.rst",
+        "Documentation": "https://python-jsonschema.readthedocs.io/",
+        "Funding": "https://github.com/sponsors/Julian",
+        "Homepage": "https://github.com/python-jsonschema/jsonschema",
+        "Issues": "https://github.com/python-jsonschema/jsonschema/issues/",
+        "Source": "https://github.com/python-jsonschema/jsonschema",
+        "Tidelift": "https://tidelift.com/subscription/pkg/pypi-jsonschema?utm_source=pypi-jsonschema&utm_medium=referral&utm_campaign=pypi-link"
+      },
+      "wheel": {
+        "filename": "jsonschema-4.26.0-py3-none-any.whl",
+        "url": "https://files.pythonhosted.org/packages/69/90/f63fb5873511e014207a475e2bb4e8b2e570d655b00ac19a9a0ca0a385ee/jsonschema-4.26.0-py3-none-any.whl",
+        "sha256": "d489f15263b8d200f8387e64b4c3a75f06629559fb73deb8fdfb525f2dab50ce",
+        "size_bytes": 90630,
+        "published_sha256_verified": true,
+        "license_files": [
+          "jsonschema-4.26.0.dist-info/licenses/COPYING"
+        ]
+      }
+    },
+    {
+      "name": "attrs",
+      "version": "26.1.0",
+      "metadata_url": "https://pypi.org/pypi/attrs/26.1.0/json",
+      "requires_python": ">=3.9",
+      "requires_dist": [],
+      "license_expression": "MIT",
+      "project_urls": {
+        "Changelog": "https://www.attrs.org/en/stable/changelog.html",
+        "Documentation": "https://www.attrs.org/",
+        "Funding": "https://github.com/sponsors/hynek",
+        "GitHub": "https://github.com/python-attrs/attrs",
+        "Tidelift": "https://tidelift.com/subscription/pkg/pypi-attrs?utm_source=pypi-attrs&utm_medium=pypi"
+      },
+      "wheel": {
+        "filename": "attrs-26.1.0-py3-none-any.whl",
+        "url": "https://files.pythonhosted.org/packages/64/b4/17d4b0b2a2dc85a6df63d1157e028ed19f90d4cd97c36717afef2bc2f395/attrs-26.1.0-py3-none-any.whl",
+        "sha256": "c647aa4a12dfbad9333ca4e71fe62ddc36f4e63b2d260a37a8b83d2f043ac309",
+        "size_bytes": 67548,
+        "published_sha256_verified": true,
+        "license_files": [
+          "attrs-26.1.0.dist-info/licenses/LICENSE"
+        ]
+      }
+    },
+    {
+      "name": "jsonschema-specifications",
+      "version": "2025.9.1",
+      "metadata_url": "https://pypi.org/pypi/jsonschema-specifications/2025.9.1/json",
+      "requires_python": ">=3.9",
+      "requires_dist": [
+        "referencing>=0.31.0"
+      ],
+      "license_expression": "MIT",
+      "project_urls": {
+        "Documentation": "https://jsonschema-specifications.readthedocs.io/",
+        "Funding": "https://github.com/sponsors/Julian",
+        "Homepage": "https://github.com/python-jsonschema/jsonschema-specifications",
+        "Issues": "https://github.com/python-jsonschema/jsonschema-specifications/issues/",
+        "Source": "https://github.com/python-jsonschema/jsonschema-specifications",
+        "Tidelift": "https://tidelift.com/subscription/pkg/pypi-jsonschema-specifications?utm_source=pypi-jsonschema-specifications&utm_medium=referral&utm_campaign=pypi-link"
+      },
+      "wheel": {
+        "filename": "jsonschema_specifications-2025.9.1-py3-none-any.whl",
+        "url": "https://files.pythonhosted.org/packages/41/45/1a4ed80516f02155c51f51e8cedb3c1902296743db0bbc66608a0db2814f/jsonschema_specifications-2025.9.1-py3-none-any.whl",
+        "sha256": "98802fee3a11ee76ecaca44429fda8a41bff98b00a0f2838151b113f210cc6fe",
+        "size_bytes": 18437,
+        "published_sha256_verified": true,
+        "license_files": [
+          "jsonschema_specifications-2025.9.1.dist-info/licenses/COPYING"
+        ]
+      }
+    },
+    {
+      "name": "referencing",
+      "version": "0.37.0",
+      "metadata_url": "https://pypi.org/pypi/referencing/0.37.0/json",
+      "requires_python": ">=3.10",
+      "requires_dist": [
+        "attrs>=22.2.0",
+        "rpds-py>=0.7.0",
+        "typing-extensions>=4.4.0; python_version < \"3.13\""
+      ],
+      "license_expression": "MIT",
+      "project_urls": {
+        "Changelog": "https://referencing.readthedocs.io/en/stable/changes/",
+        "Documentation": "https://referencing.readthedocs.io/",
+        "Funding": "https://github.com/sponsors/Julian",
+        "Homepage": "https://github.com/python-jsonschema/referencing",
+        "Issues": "https://github.com/python-jsonschema/referencing/issues/",
+        "Source": "https://github.com/python-jsonschema/referencing",
+        "Tidelift": "https://tidelift.com/subscription/pkg/pypi-referencing?utm_source=pypi-referencing&utm_medium=referral&utm_campaign=pypi-link"
+      },
+      "wheel": {
+        "filename": "referencing-0.37.0-py3-none-any.whl",
+        "url": "https://files.pythonhosted.org/packages/2c/58/ca301544e1fa93ed4f80d724bf5b194f6e4b945841c5bfd555878eea9fcb/referencing-0.37.0-py3-none-any.whl",
+        "sha256": "381329a9f99628c9069361716891d34ad94af76e461dcb0335825aecc7692231",
+        "size_bytes": 26766,
+        "published_sha256_verified": true,
+        "license_files": [
+          "referencing-0.37.0.dist-info/licenses/COPYING"
+        ]
+      }
+    },
+    {
+      "name": "rpds-py",
+      "version": "2026.6.3",
+      "metadata_url": "https://pypi.org/pypi/rpds-py/2026.6.3/json",
+      "requires_python": ">=3.11",
+      "requires_dist": [],
+      "license_expression": "MIT",
+      "project_urls": {
+        "Documentation": "https://rpds.readthedocs.io/",
+        "Funding": "https://github.com/sponsors/Julian",
+        "Homepage": "https://github.com/crate-py/rpds",
+        "Issues": "https://github.com/crate-py/rpds/issues/",
+        "Source": "https://github.com/crate-py/rpds",
+        "Tidelift": "https://tidelift.com/subscription/pkg/pypi-rpds-py?utm_source=pypi-rpds-py&utm_medium=referral&utm_campaign=pypi-link",
+        "Upstream": "https://github.com/orium/rpds"
+      },
+      "wheel": {
+        "filename": "rpds_py-2026.6.3-cp314-cp314-macosx_11_0_arm64.whl",
+        "url": "https://files.pythonhosted.org/packages/ba/54/f785cc3d3f60839ca57a5af4927a9f347b07b2799c373fc20f7949f87c7e/rpds_py-2026.6.3-cp314-cp314-macosx_11_0_arm64.whl",
+        "sha256": "d7469697dce35be237db177d42e2a2ee26e6dcc5fc052078a6fefabd288c6edd",
+        "size_bytes": 339495,
+        "published_sha256_verified": true,
+        "license_files": [
+          "rpds_py-2026.6.3.dist-info/licenses/LICENSE"
+        ]
+      }
+    }
+  ],
+  "setup_observation": {
+    "python": "3.14.4",
+    "platform": "darwin",
+    "machine": "arm64",
+    "venv_relative_path": ".build/task3/venv",
+    "hash_locked_download": "passed",
+    "offline_hash_locked_install": "passed",
+    "active_packages": {
+      "jsonschema": "4.26.0",
+      "attrs": "26.1.0",
+      "jsonschema-specifications": "2025.9.1",
+      "referencing": "0.37.0",
+      "rpds-py": "2026.6.3"
+    },
+    "native_extension_wheel": "rpds-py CPython 3.14 macOS ARM64; no source-build reproducibility claim"
+  }
+}

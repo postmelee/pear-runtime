@@ -1,0 +1,137 @@
+{
+  "type": "object",
+  "properties": {
+    "record_kind": {
+      "const": "failure"
+    },
+    "schema_version": {
+      "const": 1
+    },
+    "record_context": {
+      "enum": [
+        "research",
+        "fixture",
+        "runtime"
+      ]
+    },
+    "record_id": {
+      "type": "string",
+      "pattern": "^[A-Za-z0-9][A-Za-z0-9_.-]{0,95}$",
+      "maxLength": 96
+    },
+    "disclosure": {
+      "$ref": "https://pear.invalid/contracts/v1/common.schema.json#/$defs/disclosure"
+    },
+    "request": {
+      "anyOf": [
+        {
+          "$ref": "https://pear.invalid/contracts/v1/common.schema.json#/$defs/record_ref"
+        },
+        {
+          "type": "null"
+        }
+      ]
+    },
+    "run_id": {
+      "anyOf": [
+        {
+          "type": "string",
+          "pattern": "^[A-Za-z0-9][A-Za-z0-9_.-]{0,95}$",
+          "maxLength": 96
+        },
+        {
+          "type": "null"
+        }
+      ]
+    },
+    "category": {
+      "enum": [
+        "contract_validation",
+        "source_build",
+        "host_capability",
+        "signing",
+        "supervision",
+        "observation",
+        "cpu_translation",
+        "windows_api",
+        "graphics",
+        "steam_integration",
+        "game_behavior",
+        "unknown"
+      ]
+    },
+    "phase": {
+      "type": "string",
+      "pattern": "^[A-Za-z0-9][A-Za-z0-9_.-]{0,95}$",
+      "maxLength": 96
+    },
+    "reason_code": {
+      "type": "string",
+      "pattern": "^[A-Za-z0-9][A-Za-z0-9_.-]{0,95}$",
+      "maxLength": 96
+    },
+    "component_id": {
+      "anyOf": [
+        {
+          "type": "string",
+          "pattern": "^[A-Za-z0-9][A-Za-z0-9_.-]{0,95}$",
+          "maxLength": 96
+        },
+        {
+          "type": "null"
+        }
+      ]
+    },
+    "process_token": {
+      "anyOf": [
+        {
+          "type": "string",
+          "pattern": "^[A-Za-z0-9][A-Za-z0-9_.-]{0,95}$",
+          "maxLength": 96
+        },
+        {
+          "type": "null"
+        }
+      ]
+    },
+    "error_code": {
+      "anyOf": [
+        {
+          "type": "integer",
+          "minimum": -2147483648,
+          "maximum": 2147483647
+        },
+        {
+          "type": "null"
+        }
+      ]
+    },
+    "evidence": {
+      "type": "array",
+      "items": {
+        "$ref": "https://pear.invalid/contracts/v1/common.schema.json#/$defs/blob_ref"
+      },
+      "minItems": 0,
+      "maxItems": 64
+    }
+  },
+  "required": [
+    "record_kind",
+    "schema_version",
+    "record_context",
+    "record_id",
+    "disclosure",
+    "request",
+    "run_id",
+    "category",
+    "phase",
+    "reason_code",
+    "component_id",
+    "process_token",
+    "error_code",
+    "evidence"
+  ],
+  "additionalProperties": false,
+  "$schema": "https://json-schema.org/draft/2020-12/schema",
+  "$id": "https://pear.invalid/contracts/v1/failure.schema.json"
+}

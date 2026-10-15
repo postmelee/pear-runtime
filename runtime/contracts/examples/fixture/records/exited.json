@@ -1,0 +1,49 @@
+{
+  "record_kind": "launch",
+  "schema_version": 1,
+  "record_context": "fixture",
+  "record_id": "fixture.exited",
+  "disclosure": {
+    "mode": "full",
+    "withheld": [],
+    "origin_token": null
+  },
+  "variant": "event",
+  "request": {
+    "ref_type": "record",
+    "path": "records/request.json",
+    "record_kind": "launch",
+    "schema_version": 1,
+    "digest": {
+      "algorithm": "sha256",
+      "scope": "exact_utf8_file_bytes",
+      "value": "2061ccbd36854a37fd351c729d827ba0f424a03835fcca433aebd3839a57cf47"
+    }
+  },
+  "run_id": "fixture-run",
+  "producer": "supervisor",
+  "sequence": 1,
+  "previous": {
+    "ref_type": "record",
+    "path": "records/spawned.json",
+    "record_kind": "launch",
+    "schema_version": 1,
+    "digest": {
+      "algorithm": "sha256",
+      "scope": "exact_utf8_file_bytes",
+      "value": "605f037815461fa825ada3741ebb4f6de76224cecebf28ccda5e002e4b168f3b"
+    }
+  },
+  "event": "exited",
+  "clock_id": "fixture-clock",
+  "elapsed_ns": 2,
+  "process": {
+    "token": "fixture-process",
+    "pid": 123,
+    "generation": "fixture-generation"
+  },
+  "status": "passed",
+  "covers": [],
+  "ready_ack": null,
+  "completed_exits": []
+}

@@ -1,0 +1,30 @@
+{
+  "record_kind": "failure",
+  "schema_version": 1,
+  "record_context": "fixture",
+  "record_id": "fixture.failure",
+  "disclosure": {
+    "mode": "full",
+    "withheld": [],
+    "origin_token": null
+  },
+  "request": {
+    "ref_type": "record",
+    "path": "records/request.json",
+    "record_kind": "launch",
+    "schema_version": 1,
+    "digest": {
+      "algorithm": "sha256",
+      "scope": "exact_utf8_file_bytes",
+      "value": "2061ccbd36854a37fd351c729d827ba0f424a03835fcca433aebd3839a57cf47"
+    }
+  },
+  "run_id": "fixture-run",
+  "category": "unknown",
+  "phase": "fixture",
+  "reason_code": "synthetic_failure",
+  "component_id": null,
+  "process_token": null,
+  "error_code": null,
+  "evidence": []
+}
