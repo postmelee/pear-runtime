@@ -1,0 +1,1823 @@
+{
+  "schema_version": 1,
+  "scope": "Task #56 Stage 2 source-ownership and fixture-extraction metadata only",
+  "status": "deferred: no standalone fixture execution package or host fixture result is established",
+  "source_authority": "Original Pear source authority remains until explicit Task #56 cutover acceptance. canonical_owner_proposal is a planned destination, not completed transfer.",
+  "common_package_commit": "ba21d20d3ae6013f61be7a3d9ba5197c6485bd8f",
+  "common_package_provenance": "source-import.json",
+  "input_count": 52,
+  "source_state_counts": {
+    "not present in checkpoint Git tree": 26,
+    "exact Git blob": 25,
+    "working-tree bytes differ from commit": 1
+  },
+  "recovery_limit": "For files absent from or differing from the checkpoint Git tree, the content digest identifies retained original-owner bytes. The named commit alone cannot recover them. Admit an immutable source package or exact import before execution; preserve the original source until then.",
+  "inputs": [
+    {
+      "source_repository": "https://github.com/postmelee/pear",
+      "source_checkpoint": "951264bf5be4b9d2afb87320f5fac74778b2dd58",
+      "source_path": "tools/steam/fixture_context.py",
+      "content_sha256": "b0a34ad34133d7faeff12442d741078d5cfe044cd1f921bbf150fa7b1aa22dd2",
+      "size_bytes": 6085,
+      "source_state": "not present in checkpoint Git tree",
+      "content_committed_at_checkpoint": false,
+      "canonical_owner_proposal": "postmelee/pear-runtime",
+      "ownership_scope": "pear-runtime",
+      "destination_proposal": "pear_runtime/fixtures/context.py",
+      "status": "not imported; source-preserving adapter required",
+      "license_markers": [
+        "MIT"
+      ],
+      "license_basis": "Existing explicit file marker",
+      "selected_symbols": [
+        "descriptor",
+        "FixtureContext"
+      ],
+      "notes": [
+        "Exact type is checked by both runner and checker; move together.",
+        "Descriptor and admission must bind new candidate/runtime identities; current code accepts only d25-game.",
+        "Retain single-use begin/finish, seed inventory, before/after hash+alias checks and completed-output binding.",
+        "Current phase_overlay.spec and graphics_repo references are explicit local runtime inputs, not Git payloads."
+      ]
+    },
+    {
+      "source_repository": "https://github.com/postmelee/pear",
+      "source_checkpoint": "951264bf5be4b9d2afb87320f5fac74778b2dd58",
+      "source_path": "tools/steam/fixture_checks.py",
+      "content_sha256": "df832c3fff37030eb89fbf45b1731ab89c8933fdf3f81eb4b8a03861aa801296",
+      "size_bytes": 6346,
+      "source_state": "not present in checkpoint Git tree",
+      "content_committed_at_checkpoint": false,
+      "canonical_owner_proposal": "postmelee/pear-runtime",
+      "ownership_scope": "pear-runtime",
+      "destination_proposal": "pear_runtime/fixtures/checks.py",
+      "status": "not imported; original seven-fixture oracles retained",
+      "license_markers": [
+        "MIT"
+      ],
+      "license_basis": "Existing explicit file marker",
+      "selected_symbols": [
+        "CandidateDescription",
+        "fixture"
+      ],
+      "notes": [
+        "Move image_fixture/image_checks imports behind their non-seven branches or explicit adapter; top-level import currently drags old source/candidate closure.",
+        "Retain event/log equality, original errors, cleanup, live authority, native process/image architecture, exact fixture/hash/exit and all rendering checks."
+      ]
+    },
+    {
+      "source_repository": "https://github.com/postmelee/pear",
+      "source_checkpoint": "951264bf5be4b9d2afb87320f5fac74778b2dd58",
+      "source_path": "tools/steam/direct_v1.py",
+      "content_sha256": "da9554305e99f97821b81cb5ec0e3cb7ee1b6c0738d1846c4ef7d17d42d68635",
+      "size_bytes": 61845,
+      "source_state": "not present in checkpoint Git tree",
+      "content_committed_at_checkpoint": false,
+      "canonical_owner_proposal": "postmelee/pear-runtime",
+      "ownership_scope": "split: generic owned execution and fixture assessment to pear-runtime; game/candidate policy stays Pear",
+      "destination_proposal": "pear_runtime/fixtures/direct.py plus Pear game adapter",
+      "status": "not imported; requires reviewed mechanical boundary adaptation",
+      "license_markers": [
+        "MIT"
+      ],
+      "license_basis": "Existing explicit file marker",
+      "selected_symbols": [
+        "query_policy",
+        "admit_candidate",
+        "selected_fex",
+        "execution_seconds",
+        "options",
+        "trace_environment",
+        "assess_trace",
+        "log_limit",
+        "assess_log_budget",
+        "signal_environment",
+        "assess_signal",
+        "fresh_output",
+        "stage_modules",
+        "preserve_sources",
+        "read_sources",
+        "complete_provenance",
+        "finish_reason",
+        "sample_interval",
+        "SampleWindows",
+        "pump_observations",
+        "attached",
+        "runtime_interval_lock",
+        "run",
+        "thread_identities",
+        "assess"
+      ],
+      "notes": [
+        "Original run() is the execution source; no replacement launcher.",
+        "APISession remains sole owned launcher/observer; preserve server/loader/sentinel lifecycle and cleanup ordering.",
+        "fresh_output, preserve_sources, REPO, graphics_repo, phase_runtime imports, fixture_context exact type and candidate constants need explicit bindings.",
+        "SampleWindows is constructed even for empty samples; retain it or separately prove mechanical no-sampling adapter equivalence.",
+        "preserve_sources currently snapshots every tools/host .py, not a minimal dependency package."
+      ]
+    },
+    {
+      "source_repository": "https://github.com/postmelee/pear",
+      "source_checkpoint": "951264bf5be4b9d2afb87320f5fac74778b2dd58",
+      "source_path": "tools/steam/direct_prepare_v1.py",
+      "content_sha256": "e17a1e3c8cd9748a690066cef158979a8536db677493b03049b8616acfd24e9a",
+      "size_bytes": 19856,
+      "source_state": "not present in checkpoint Git tree",
+      "content_committed_at_checkpoint": false,
+      "canonical_owner_proposal": "postmelee/pear-runtime",
+      "ownership_scope": "pear-runtime selected pure definitions; Pear historical admission remainder",
+      "destination_proposal": "pear_runtime/fixtures/inputs.py",
+      "status": "not imported; selected definitions only",
+      "license_markers": [
+        "MIT"
+      ],
+      "license_basis": "Existing explicit file marker",
+      "selected_symbols": [
+        "Selection",
+        "checked_ref",
+        "closure"
+      ],
+      "notes": [
+        "closure retains signed-bundle inventory and every dependency-closure ARM64 image check.",
+        "Original/optimized PE hashes and paths must become exact recipe inputs; do not read D5 history to choose a new candidate."
+      ]
+    },
+    {
+      "source_repository": "https://github.com/postmelee/pear",
+      "source_checkpoint": "951264bf5be4b9d2afb87320f5fac74778b2dd58",
+      "source_path": "tools/steam/d24_inputs.py",
+      "content_sha256": "df3cb1092da80946b28ee01d042b3b3d3afbb6b3bb25b0a0db879358c28fb938",
+      "size_bytes": 9149,
+      "source_state": "not present in checkpoint Git tree",
+      "content_committed_at_checkpoint": false,
+      "canonical_owner_proposal": "postmelee/pear-runtime",
+      "ownership_scope": "pear-runtime selected immutable reader; Pear owned-game/old selection remainder",
+      "destination_proposal": "pear_runtime/fixtures/inputs.py",
+      "status": "not imported; selected definitions only",
+      "license_markers": [
+        "MIT"
+      ],
+      "license_basis": "Existing explicit file marker",
+      "selected_symbols": [
+        "identity",
+        "regular",
+        "Ledger"
+      ],
+      "notes": [
+        "Retain no-follow descriptor, alias/identity race, size/node limits, full-byte pin and operation-end recheck semantics.",
+        "No load_selection/validate_game/private manifest imported."
+      ]
+    },
+    {
+      "source_repository": "https://github.com/postmelee/pear",
+      "source_checkpoint": "951264bf5be4b9d2afb87320f5fac74778b2dd58",
+      "source_path": "tools/dxmt/translated_inputs.py",
+      "content_sha256": "c60d531232794fc04762023618f41b7aa31f950842be9a015951a2236f499e9e",
+      "size_bytes": 5768,
+      "source_state": "exact Git blob",
+      "content_committed_at_checkpoint": true,
+      "canonical_owner_proposal": "postmelee/pear-runtime",
+      "ownership_scope": "pear-runtime bounded byte helper extraction; Pear historical input discovery remainder",
+      "destination_proposal": "pear_runtime/inputs.py",
+      "status": "not imported; selected definitions only",
+      "license_markers": [
+        "MIT"
+      ],
+      "license_basis": "Existing explicit file marker",
+      "selected_symbols": [
+        "digest",
+        "read",
+        "save",
+        "fact"
+      ],
+      "notes": [
+        "read calls strict bounded Wine decode_json; do not replace it with json.loads.",
+        "Importing the full module drags CPU/build/admission modules; select helper definitions and dependency closure."
+      ],
+      "source_commit_blob_sha256": "c60d531232794fc04762023618f41b7aa31f950842be9a015951a2236f499e9e",
+      "source_commit_blob_sha1": "7335aa6d37f3db55bad6bba8650471e2c24da8ea"
+    },
+    {
+      "source_repository": "https://github.com/postmelee/pear",
+      "source_checkpoint": "951264bf5be4b9d2afb87320f5fac74778b2dd58",
+      "source_path": "tools/wine/common.py",
+      "content_sha256": "5c2789ca3392f70f93c5ae0656e803c0f8a01d4cc1c1d2622e8af0014690e171",
+      "size_bytes": 7970,
+      "source_state": "exact Git blob",
+      "content_committed_at_checkpoint": true,
+      "canonical_owner_proposal": "postmelee/pear-runtime",
+      "ownership_scope": "pear-runtime generic immutable-input/error functions",
+      "destination_proposal": "pear_runtime/inputs.py and errors.py",
+      "status": "Error/need already extracted; larger helper closure not imported",
+      "license_markers": [],
+      "license_basis": "No marker in opening source; current Pear original-code GPL-3.0-or-later adoption with original third-party notices retained; inspect selected symbols before import",
+      "selected_symbols": [
+        "Error",
+        "need",
+        "relative",
+        "_identity",
+        "open_relative",
+        "read_relative",
+        "sha256",
+        "_json_preflight",
+        "_json_children",
+        "decode_json",
+        "load_json",
+        "record",
+        "encoded"
+      ],
+      "notes": [
+        "Current Error/need source pin in runtime provenance uses bcd2780.",
+        "Any larger extraction must include bounded decoder globals and all called helpers, rather than only decode_json."
+      ],
+      "source_commit_blob_sha256": "5c2789ca3392f70f93c5ae0656e803c0f8a01d4cc1c1d2622e8af0014690e171",
+      "source_commit_blob_sha1": "db2b0d07bb5caeed637f909780426f1941c41dfa",
+      "additional_consumers": [
+        {
+          "proposed_owner": "pear-runtime pinned generic supervisor/parser package; component case data separately exported",
+          "suggested_destination": "provenance-bound helper package preserving tools/wine relative paths",
+          "stage2_action": "not imported; existing dynamic WINE_HELPERS consumer",
+          "notes": [
+            "Retain captured full original bytes initially, no reimplemented APISession/observer.",
+            "These files are a named immutable source input or reviewed exact extraction, never an ambient old-worktree fallback."
+          ]
+        }
+      ]
+    },
+    {
+      "source_repository": "https://github.com/postmelee/pear",
+      "source_checkpoint": "951264bf5be4b9d2afb87320f5fac74778b2dd58",
+      "source_path": "tools/fex/integration_run.py",
+      "content_sha256": "7214388252229277497da9c9466db8b8df637ada50f284cf04f3a9603272ab84",
+      "size_bytes": 11545,
+      "source_state": "exact Git blob",
+      "content_committed_at_checkpoint": true,
+      "canonical_owner_proposal": "postmelee/pear-runtime",
+      "ownership_scope": "pear-runtime live admission/prefix functions; legacy run remains frozen",
+      "destination_proposal": "pear_runtime/fixtures/admission.py",
+      "status": "not imported; selected definitions only",
+      "license_markers": [],
+      "license_basis": "No marker in opening source; current Pear original-code GPL-3.0-or-later adoption with original third-party notices retained; inspect selected symbols before import",
+      "selected_symbols": [
+        "prefix_inventory",
+        "admission"
+      ],
+      "notes": [
+        "Real current authorization and signatures are checked before and after execution; saved passing receipt is insufficient.",
+        "Prefix inventory intentionally permits only Wine C:/Z: symlinks."
+      ],
+      "source_commit_blob_sha256": "7214388252229277497da9c9466db8b8df637ada50f284cf04f3a9603272ab84",
+      "source_commit_blob_sha1": "cbe727b7a42c7aeb2e0be1a0ef7d25cf1a4a9b50"
+    },
+    {
+      "source_repository": "https://github.com/postmelee/pear",
+      "source_checkpoint": "951264bf5be4b9d2afb87320f5fac74778b2dd58",
+      "source_path": "tools/fex/memory_wine_run.py",
+      "content_sha256": "999b5600f4d9ba7f1b23122a6dd8e3d3a1df7153b9d2bd19175c6d4030eef30b",
+      "size_bytes": 63668,
+      "source_state": "exact Git blob",
+      "content_committed_at_checkpoint": true,
+      "canonical_owner_proposal": "postmelee/pear-runtime",
+      "ownership_scope": "pear-runtime selected supervisor capture; other memory-owner orchestration separate",
+      "destination_proposal": "pear_runtime/fixtures/supervision.py",
+      "status": "not imported; selected exact functions/globals",
+      "license_markers": [],
+      "license_basis": "No marker in opening source; current Pear original-code GPL-3.0-or-later adoption with original third-party notices retained; inspect selected symbols before import",
+      "selected_symbols": [
+        "fields",
+        "same",
+        "integer",
+        "supervision",
+        "environment",
+        "assessment_packet"
+      ],
+      "notes": [
+        "supervision also requires REUSE_PATH/SHA/FUNCTIONS, WINE_HELPERS, BOUNDS and stable imported helpers.",
+        "Pass explicit newly admitted helper-root binding; the default old REPO must not be a fallback."
+      ],
+      "source_commit_blob_sha256": "999b5600f4d9ba7f1b23122a6dd8e3d3a1df7153b9d2bd19175c6d4030eef30b",
+      "source_commit_blob_sha1": "a0668f268923b8212ca37c965c0af514626e4ead"
+    },
+    {
+      "source_repository": "https://github.com/postmelee/pear",
+      "source_checkpoint": "951264bf5be4b9d2afb87320f5fac74778b2dd58",
+      "source_path": "tools/fex/memory_wine_runtime.py",
+      "content_sha256": "89e7b67f1cc0549e6f61d5b3b0e877286035dab133b4bce1703cfdeab9dc1a15",
+      "size_bytes": 49331,
+      "source_state": "exact Git blob",
+      "content_committed_at_checkpoint": true,
+      "canonical_owner_proposal": "postmelee/pear-runtime",
+      "ownership_scope": "pear-runtime selected signing capture; old materialization remains historical",
+      "destination_proposal": "pear_runtime/fixtures/signing.py",
+      "status": "not imported; selected exact functions/globals",
+      "license_markers": [],
+      "license_basis": "No marker in opening source; current Pear original-code GPL-3.0-or-later adoption with original third-party notices retained; inspect selected symbols before import",
+      "selected_symbols": [
+        "same",
+        "fields",
+        "selected",
+        "signing_helpers"
+      ],
+      "notes": [
+        "Retain REUSE_PINS/REUSE_NAMES and captured unchanged Task7 source functions.",
+        "Provide pure real-directory validation without importing the historical builder.",
+        "BUNDLE/MAIN/PAYLOAD/BUNDLE_ID and signing policy are explicit artifact-specific bindings, not inherited authorization."
+      ],
+      "source_commit_blob_sha256": "89e7b67f1cc0549e6f61d5b3b0e877286035dab133b4bce1703cfdeab9dc1a15",
+      "source_commit_blob_sha1": "d4306c260058fb8614495694f3e41945641502ba"
+    },
+    {
+      "source_repository": "https://github.com/postmelee/pear",
+      "source_checkpoint": "951264bf5be4b9d2afb87320f5fac74778b2dd58",
+      "source_path": "tools/fex/byte_readers.py",
+      "content_sha256": "bbfc08e473bfc91d51cb34a234be706cabe56c36e87acf00b90a587f48604316",
+      "size_bytes": 7744,
+      "source_state": "exact Git blob",
+      "content_committed_at_checkpoint": true,
+      "canonical_owner_proposal": "postmelee/pear-runtime",
+      "ownership_scope": "pear-runtime immutable format/closure reader",
+      "destination_proposal": "pear_runtime/fixtures/byte_readers.py",
+      "status": "not imported; retain exact current reader before any optimization",
+      "license_markers": [],
+      "license_basis": "No marker in opening source; current Pear original-code GPL-3.0-or-later adoption with original third-party notices retained; inspect selected symbols before import",
+      "selected_symbols": [
+        "inspect_macho",
+        "inspect_closure",
+        "archive_members",
+        "coff_machine"
+      ],
+      "notes": [
+        "Use original architecture/closure semantics. Do not replace ARM64EC/CHPE analysis by a single PE machine-field check."
+      ],
+      "source_commit_blob_sha256": "bbfc08e473bfc91d51cb34a234be706cabe56c36e87acf00b90a587f48604316",
+      "source_commit_blob_sha1": "cf80ed617dd295851b41aba30bb714aba73e5b87"
+    },
+    {
+      "source_repository": "https://github.com/postmelee/pear",
+      "source_checkpoint": "951264bf5be4b9d2afb87320f5fac74778b2dd58",
+      "source_path": "tools/steam/wake_assess.py",
+      "content_sha256": "7f9cc5212ba4850cbcfef85d9b27b098b6182e441106feba41f5abe98971433d",
+      "size_bytes": 3686,
+      "source_state": "not present in checkpoint Git tree",
+      "content_committed_at_checkpoint": false,
+      "canonical_owner_proposal": "postmelee/pear-runtime",
+      "ownership_scope": "pear-runtime record/owned-execution assessment",
+      "destination_proposal": "pear_runtime/fixtures/assessment/wake_assess.py",
+      "status": "not imported; preserve full active assessment chain",
+      "license_markers": [
+        "MIT"
+      ],
+      "license_basis": "Existing explicit file marker",
+      "selected_symbols": [
+        "parse",
+        "assess"
+      ],
+      "notes": [
+        "string_assess has optional game-derived conclusions; they must remain false/unperformed for synthetic fixtures, without suppressing original raw errors."
+      ]
+    },
+    {
+      "source_repository": "https://github.com/postmelee/pear",
+      "source_checkpoint": "951264bf5be4b9d2afb87320f5fac74778b2dd58",
+      "source_path": "tools/steam/write_assess.py",
+      "content_sha256": "3fa5f987e53018efbddbc848e3517bf2f4fb460c106ef837b42021805a7dd614",
+      "size_bytes": 3464,
+      "source_state": "not present in checkpoint Git tree",
+      "content_committed_at_checkpoint": false,
+      "canonical_owner_proposal": "postmelee/pear-runtime",
+      "ownership_scope": "pear-runtime record/owned-execution assessment",
+      "destination_proposal": "pear_runtime/fixtures/assessment/write_assess.py",
+      "status": "not imported; preserve full active assessment chain",
+      "license_markers": [
+        "MIT"
+      ],
+      "license_basis": "Existing explicit file marker",
+      "selected_symbols": [
+        "parse",
+        "assess"
+      ],
+      "notes": [
+        "string_assess has optional game-derived conclusions; they must remain false/unperformed for synthetic fixtures, without suppressing original raw errors."
+      ]
+    },
+    {
+      "source_repository": "https://github.com/postmelee/pear",
+      "source_checkpoint": "951264bf5be4b9d2afb87320f5fac74778b2dd58",
+      "source_path": "tools/steam/batch_assess.py",
+      "content_sha256": "2a846e578dbc81f5391e66dda0af135b41d228e0a8924243c4623dff90941071",
+      "size_bytes": 1697,
+      "source_state": "not present in checkpoint Git tree",
+      "content_committed_at_checkpoint": false,
+      "canonical_owner_proposal": "postmelee/pear-runtime",
+      "ownership_scope": "pear-runtime record/owned-execution assessment",
+      "destination_proposal": "pear_runtime/fixtures/assessment/batch_assess.py",
+      "status": "not imported; preserve full active assessment chain",
+      "license_markers": [
+        "MIT"
+      ],
+      "license_basis": "Existing explicit file marker",
+      "selected_symbols": [
+        "parse",
+        "assess"
+      ],
+      "notes": [
+        "string_assess has optional game-derived conclusions; they must remain false/unperformed for synthetic fixtures, without suppressing original raw errors."
+      ]
+    },
+    {
+      "source_repository": "https://github.com/postmelee/pear",
+      "source_checkpoint": "951264bf5be4b9d2afb87320f5fac74778b2dd58",
+      "source_path": "tools/steam/string_assess.py",
+      "content_sha256": "7a5769c3ae8eded0624b875cce202302b459381c2820eb794348b028d8ede7c1",
+      "size_bytes": 3596,
+      "source_state": "not present in checkpoint Git tree",
+      "content_committed_at_checkpoint": false,
+      "canonical_owner_proposal": "postmelee/pear-runtime",
+      "ownership_scope": "pear-runtime record/owned-execution assessment",
+      "destination_proposal": "pear_runtime/fixtures/assessment/string_assess.py",
+      "status": "not imported; preserve full active assessment chain",
+      "license_markers": [
+        "MIT"
+      ],
+      "license_basis": "Existing explicit file marker",
+      "selected_symbols": [
+        "assess"
+      ],
+      "notes": [
+        "string_assess has optional game-derived conclusions; they must remain false/unperformed for synthetic fixtures, without suppressing original raw errors."
+      ]
+    },
+    {
+      "source_repository": "https://github.com/postmelee/pear",
+      "source_checkpoint": "951264bf5be4b9d2afb87320f5fac74778b2dd58",
+      "source_path": "tools/steam/query_observation.py",
+      "content_sha256": "ac9ebe4a1914ae0141ddf19018357e8f3d23b38a25ff76743b27b8ade49b0b8a",
+      "size_bytes": 3528,
+      "source_state": "not present in checkpoint Git tree",
+      "content_committed_at_checkpoint": false,
+      "canonical_owner_proposal": "postmelee/pear",
+      "ownership_scope": "Unresolved symbol split; FEX generic parser and runtime policy wrapper require separate review. No destination authority transferred.",
+      "destination_proposal": "explicit pinned FEX export plus pear_runtime/fixtures/observations adapter",
+      "status": "not imported; no dual editable copy",
+      "license_markers": [
+        "MIT"
+      ],
+      "license_basis": "Existing explicit file marker",
+      "selected_symbols": [
+        "environment",
+        "records",
+        "assess"
+      ],
+      "notes": [
+        "Existing active direct.assess calls must remain; component ownership does not permit removing a failure oracle.",
+        "Only create/attach/binding-census/slot readers have confirmed separate FEX imports in current Stage2; this row is a required future split, not completed work."
+      ]
+    },
+    {
+      "source_repository": "https://github.com/postmelee/pear",
+      "source_checkpoint": "951264bf5be4b9d2afb87320f5fac74778b2dd58",
+      "source_path": "tools/steam/query_context_observation.py",
+      "content_sha256": "75a4ff7a6dd10219dd8e5abdf0e29f4d0a31fe648d4b0c8bd0086de4dc042713",
+      "size_bytes": 2598,
+      "source_state": "not present in checkpoint Git tree",
+      "content_committed_at_checkpoint": false,
+      "canonical_owner_proposal": "postmelee/pear",
+      "ownership_scope": "Unresolved symbol split; FEX generic parser and runtime policy wrapper require separate review. No destination authority transferred.",
+      "destination_proposal": "explicit pinned FEX export plus pear_runtime/fixtures/observations adapter",
+      "status": "not imported; no dual editable copy",
+      "license_markers": [
+        "MIT"
+      ],
+      "license_basis": "Existing explicit file marker",
+      "selected_symbols": [
+        "environment",
+        "records",
+        "assess"
+      ],
+      "notes": [
+        "Existing active direct.assess calls must remain; component ownership does not permit removing a failure oracle.",
+        "Only create/attach/binding-census/slot readers have confirmed separate FEX imports in current Stage2; this row is a required future split, not completed work."
+      ]
+    },
+    {
+      "source_repository": "https://github.com/postmelee/pear",
+      "source_checkpoint": "951264bf5be4b9d2afb87320f5fac74778b2dd58",
+      "source_path": "tools/steam/entry_observation.py",
+      "content_sha256": "e4a5bdf8085293081144baff7eeaab98e384b0a3bdc13007dc6acfb6884a0432",
+      "size_bytes": 3211,
+      "source_state": "not present in checkpoint Git tree",
+      "content_committed_at_checkpoint": false,
+      "canonical_owner_proposal": "postmelee/pear",
+      "ownership_scope": "Unresolved symbol split; FEX generic parser and runtime policy wrapper require separate review. No destination authority transferred.",
+      "destination_proposal": "explicit pinned FEX export plus pear_runtime/fixtures/observations adapter",
+      "status": "not imported; no dual editable copy",
+      "license_markers": [
+        "MIT"
+      ],
+      "license_basis": "Existing explicit file marker",
+      "selected_symbols": [
+        "environment",
+        "settings",
+        "records",
+        "assess",
+        "assess_entry"
+      ],
+      "notes": [
+        "Existing active direct.assess calls must remain; component ownership does not permit removing a failure oracle.",
+        "Only create/attach/binding-census/slot readers have confirmed separate FEX imports in current Stage2; this row is a required future split, not completed work."
+      ]
+    },
+    {
+      "source_repository": "https://github.com/postmelee/pear",
+      "source_checkpoint": "951264bf5be4b9d2afb87320f5fac74778b2dd58",
+      "source_path": "tools/steam/link_observation.py",
+      "content_sha256": "6b726f367654037cde23a0a0eaf86cf1cb0d291a7c326b99ee6094126fe9c43f",
+      "size_bytes": 4379,
+      "source_state": "not present in checkpoint Git tree",
+      "content_committed_at_checkpoint": false,
+      "canonical_owner_proposal": "postmelee/pear",
+      "ownership_scope": "Unresolved symbol split; FEX generic parser and runtime policy wrapper require separate review. No destination authority transferred.",
+      "destination_proposal": "explicit pinned FEX export plus pear_runtime/fixtures/observations adapter",
+      "status": "not imported; no dual editable copy",
+      "license_markers": [
+        "MIT"
+      ],
+      "license_basis": "Existing explicit file marker",
+      "selected_symbols": [
+        "mapped_name",
+        "mapped",
+        "environment",
+        "entry_settings",
+        "settings",
+        "records",
+        "assess",
+        "assess_entry",
+        "assess_link"
+      ],
+      "notes": [
+        "Existing active direct.assess calls must remain; component ownership does not permit removing a failure oracle.",
+        "Only create/attach/binding-census/slot readers have confirmed separate FEX imports in current Stage2; this row is a required future split, not completed work."
+      ]
+    },
+    {
+      "source_repository": "https://github.com/postmelee/pear",
+      "source_checkpoint": "951264bf5be4b9d2afb87320f5fac74778b2dd58",
+      "source_path": "tools/steam/failure_observation.py",
+      "content_sha256": "db09f230746c46026a32facfc0d134b9d0c303ec8b5cd908a3af9a051f324a5b",
+      "size_bytes": 1975,
+      "source_state": "not present in checkpoint Git tree",
+      "content_committed_at_checkpoint": false,
+      "canonical_owner_proposal": "postmelee/pear",
+      "ownership_scope": "Unresolved symbol split; FEX generic parser and runtime policy wrapper require separate review. No destination authority transferred.",
+      "destination_proposal": "explicit pinned FEX export plus pear_runtime/fixtures/observations adapter",
+      "status": "not imported; no dual editable copy",
+      "license_markers": [
+        "MIT"
+      ],
+      "license_basis": "Existing explicit file marker",
+      "selected_symbols": [
+        "records",
+        "assess"
+      ],
+      "notes": [
+        "Existing active direct.assess calls must remain; component ownership does not permit removing a failure oracle.",
+        "Only create/attach/binding-census/slot readers have confirmed separate FEX imports in current Stage2; this row is a required future split, not completed work."
+      ]
+    },
+    {
+      "source_repository": "https://github.com/postmelee/pear",
+      "source_checkpoint": "951264bf5be4b9d2afb87320f5fac74778b2dd58",
+      "source_path": "tools/steam/repair_epoch_observation.py",
+      "content_sha256": "e3c8fd2b4ffaeaaf9e5c87c06a7fea1994de1dad3fffed509f3226c4b9853ce4",
+      "size_bytes": 1665,
+      "source_state": "not present in checkpoint Git tree",
+      "content_committed_at_checkpoint": false,
+      "canonical_owner_proposal": "postmelee/pear",
+      "ownership_scope": "Unresolved symbol split; FEX generic parser and runtime policy wrapper require separate review. No destination authority transferred.",
+      "destination_proposal": "explicit pinned FEX export plus pear_runtime/fixtures/observations adapter",
+      "status": "not imported; no dual editable copy",
+      "license_markers": [
+        "MIT"
+      ],
+      "license_basis": "Existing explicit file marker",
+      "selected_symbols": [
+        "records",
+        "assess"
+      ],
+      "notes": [
+        "Existing active direct.assess calls must remain; component ownership does not permit removing a failure oracle.",
+        "Only create/attach/binding-census/slot readers have confirmed separate FEX imports in current Stage2; this row is a required future split, not completed work."
+      ]
+    },
+    {
+      "source_repository": "https://github.com/postmelee/pear",
+      "source_checkpoint": "951264bf5be4b9d2afb87320f5fac74778b2dd58",
+      "source_path": "tools/steam/mutation_bound_observation.py",
+      "content_sha256": "0b0d55e162db5ddad0d1246ba29a0229eee8cf270cf5164119fe5798864f2240",
+      "size_bytes": 2212,
+      "source_state": "not present in checkpoint Git tree",
+      "content_committed_at_checkpoint": false,
+      "canonical_owner_proposal": "postmelee/pear",
+      "ownership_scope": "Unresolved symbol split; FEX generic parser and runtime policy wrapper require separate review. No destination authority transferred.",
+      "destination_proposal": "explicit pinned FEX export plus pear_runtime/fixtures/observations adapter",
+      "status": "not imported; no dual editable copy",
+      "license_markers": [
+        "MIT"
+      ],
+      "license_basis": "Existing explicit file marker",
+      "selected_symbols": [
+        "records",
+        "assess"
+      ],
+      "notes": [
+        "Existing active direct.assess calls must remain; component ownership does not permit removing a failure oracle.",
+        "Only create/attach/binding-census/slot readers have confirmed separate FEX imports in current Stage2; this row is a required future split, not completed work."
+      ]
+    },
+    {
+      "source_repository": "https://github.com/postmelee/pear",
+      "source_checkpoint": "951264bf5be4b9d2afb87320f5fac74778b2dd58",
+      "source_path": "tools/steam/early_wait_observation.py",
+      "content_sha256": "9f1bdf6156a367968530355de06812c0c95581567ff590466ecfea1790f42d82",
+      "size_bytes": 5749,
+      "source_state": "not present in checkpoint Git tree",
+      "content_committed_at_checkpoint": false,
+      "canonical_owner_proposal": "postmelee/pear",
+      "ownership_scope": "Unresolved symbol split; FEX generic parser and runtime policy wrapper require separate review. No destination authority transferred.",
+      "destination_proposal": "explicit pinned FEX export plus pear_runtime/fixtures/observations adapter",
+      "status": "not imported; no dual editable copy",
+      "license_markers": [
+        "MIT"
+      ],
+      "license_basis": "Existing explicit file marker",
+      "selected_symbols": [
+        "wait_records",
+        "registration_records",
+        "owner_joins",
+        "trigger",
+        "assess_owner",
+        "assess"
+      ],
+      "notes": [
+        "Existing active direct.assess calls must remain; component ownership does not permit removing a failure oracle.",
+        "Only create/attach/binding-census/slot readers have confirmed separate FEX imports in current Stage2; this row is a required future split, not completed work."
+      ]
+    },
+    {
+      "source_repository": "https://github.com/postmelee/pear",
+      "source_checkpoint": "951264bf5be4b9d2afb87320f5fac74778b2dd58",
+      "source_path": "tools/steam/source_owner_observation.py",
+      "content_sha256": "47ac8b2d94c0c657919f6f845f74bb4e35497e24ba128cb84f494201546f3a2d",
+      "size_bytes": 2319,
+      "source_state": "not present in checkpoint Git tree",
+      "content_committed_at_checkpoint": false,
+      "canonical_owner_proposal": "postmelee/pear",
+      "ownership_scope": "Unresolved symbol split; FEX generic parser and runtime policy wrapper require separate review. No destination authority transferred.",
+      "destination_proposal": "explicit pinned FEX export plus pear_runtime/fixtures/observations adapter",
+      "status": "not imported; no dual editable copy",
+      "license_markers": [
+        "MIT"
+      ],
+      "license_basis": "Existing explicit file marker",
+      "selected_symbols": [
+        "records",
+        "assess"
+      ],
+      "notes": [
+        "Existing active direct.assess calls must remain; component ownership does not permit removing a failure oracle.",
+        "Only create/attach/binding-census/slot readers have confirmed separate FEX imports in current Stage2; this row is a required future split, not completed work."
+      ]
+    },
+    {
+      "source_repository": "https://github.com/postmelee/pear",
+      "source_checkpoint": "951264bf5be4b9d2afb87320f5fac74778b2dd58",
+      "source_path": "tools/steam/pending_transition_observation.py",
+      "content_sha256": "3c79d0977b39828698b2f5c07e92e25d9793cfb65f19c29f88a41ff45741ad29",
+      "size_bytes": 2017,
+      "source_state": "not present in checkpoint Git tree",
+      "content_committed_at_checkpoint": false,
+      "canonical_owner_proposal": "postmelee/pear",
+      "ownership_scope": "Unresolved symbol split; FEX generic parser and runtime policy wrapper require separate review. No destination authority transferred.",
+      "destination_proposal": "explicit pinned FEX export plus pear_runtime/fixtures/observations adapter",
+      "status": "not imported; no dual editable copy",
+      "license_markers": [
+        "MIT"
+      ],
+      "license_basis": "Existing explicit file marker",
+      "selected_symbols": [
+        "records",
+        "assess"
+      ],
+      "notes": [
+        "Existing active direct.assess calls must remain; component ownership does not permit removing a failure oracle.",
+        "Only create/attach/binding-census/slot readers have confirmed separate FEX imports in current Stage2; this row is a required future split, not completed work."
+      ]
+    },
+    {
+      "source_repository": "https://github.com/postmelee/pear",
+      "source_checkpoint": "951264bf5be4b9d2afb87320f5fac74778b2dd58",
+      "source_path": "tools/dxmt/translated_render_check.py",
+      "content_sha256": "e73355f03c52bd326a99c91922908e3e52e2fc8e07335d84223cc6ceac2cceb2",
+      "size_bytes": 9347,
+      "source_state": "exact Git blob",
+      "content_committed_at_checkpoint": true,
+      "canonical_owner_proposal": "postmelee/pear-runtime",
+      "ownership_scope": "pear-runtime paired rendering oracle",
+      "destination_proposal": "pear_runtime/fixtures/graphics_oracle.py",
+      "status": "not imported; selected definitions and NAMES/SHADERS/OPERATIONS constants",
+      "license_markers": [
+        "MIT"
+      ],
+      "license_basis": "Existing explicit file marker",
+      "selected_symbols": [
+        "validation",
+        "compare",
+        "terminal",
+        "pipeline_validation"
+      ],
+      "notes": [
+        "No old translated_render_runtime admission import needed for these functions; backend remains exact companion function."
+      ],
+      "source_commit_blob_sha256": "e73355f03c52bd326a99c91922908e3e52e2fc8e07335d84223cc6ceac2cceb2",
+      "source_commit_blob_sha1": "d13bd0ae98de332a862d5e16ca3551e5678c58e3"
+    },
+    {
+      "source_repository": "https://github.com/postmelee/pear",
+      "source_checkpoint": "951264bf5be4b9d2afb87320f5fac74778b2dd58",
+      "source_path": "tools/dxmt/translated_check.py",
+      "content_sha256": "f6dc5b0804c7904525fa7cf9a18a56fca7f3fa7d76514b9f4c03743450be725d",
+      "size_bytes": 10058,
+      "source_state": "exact Git blob",
+      "content_committed_at_checkpoint": true,
+      "canonical_owner_proposal": "postmelee/pear-runtime",
+      "ownership_scope": "pear-runtime paired backend oracle",
+      "destination_proposal": "pear_runtime/fixtures/graphics_backend.py",
+      "status": "not imported; selected definition only",
+      "license_markers": [
+        "MIT"
+      ],
+      "license_basis": "Existing explicit file marker",
+      "selected_symbols": [
+        "backend"
+      ],
+      "notes": [
+        "Retain exact loaded-module bytes and base, Metal validation markers, expected images and FEX completion/error rules."
+      ],
+      "source_commit_blob_sha256": "f6dc5b0804c7904525fa7cf9a18a56fca7f3fa7d76514b9f4c03743450be725d",
+      "source_commit_blob_sha1": "1b725d52be382689cff311ed2221c0aa293546be"
+    },
+    {
+      "source_repository": "https://github.com/postmelee/pear",
+      "source_checkpoint": "951264bf5be4b9d2afb87320f5fac74778b2dd58",
+      "source_path": "tools/dxmt/translated_present_check.py",
+      "content_sha256": "4a5966d03c18987da11fedf3c26d0622762b05657d1c762214d54ea3094cb63d",
+      "size_bytes": 15712,
+      "source_state": "exact Git blob",
+      "content_committed_at_checkpoint": true,
+      "canonical_owner_proposal": "postmelee/pear-runtime",
+      "ownership_scope": "pear-runtime paired presentation oracle",
+      "destination_proposal": "pear_runtime/fixtures/presentation_oracle.py",
+      "status": "not imported; non-seven branch only",
+      "license_markers": [
+        "MIT"
+      ],
+      "license_basis": "Existing explicit file marker",
+      "selected_symbols": [
+        "terminal"
+      ],
+      "notes": [
+        "rendering-original does not call presentation terminal; defer import to that branch while preserving its source/provenance."
+      ],
+      "source_commit_blob_sha256": "4a5966d03c18987da11fedf3c26d0622762b05657d1c762214d54ea3094cb63d",
+      "source_commit_blob_sha1": "f6358b172520fd3492070207aeaf4a4f8f069a2d"
+    },
+    {
+      "source_repository": "https://github.com/postmelee/pear",
+      "source_checkpoint": "951264bf5be4b9d2afb87320f5fac74778b2dd58",
+      "source_path": "tests/steam/test_fixture_context.py",
+      "content_sha256": "38ba072e2069eeb3ee5ab058cd67d330a4916bb6fd347fffd93002062494d0d1",
+      "size_bytes": 4138,
+      "source_state": "not present in checkpoint Git tree",
+      "content_committed_at_checkpoint": false,
+      "canonical_owner_proposal": "postmelee/pear-runtime",
+      "ownership_scope": "pear-runtime fixture package tests; real-game preservation assertion also remains a Pear adapter regression",
+      "destination_proposal": "tests/fixtures/test_fixture_context.py",
+      "status": "not imported; transfer with source-preserving adapter",
+      "license_markers": [
+        "GPL-3.0-or-later"
+      ],
+      "license_basis": "Existing explicit file marker",
+      "selected_symbols": [
+        "ContextTests"
+      ],
+      "notes": [
+        "Retain original negatives. Routing test drives original run through preparation, replacing only host launch boundary; no private game data required."
+      ]
+    },
+    {
+      "source_repository": "https://github.com/postmelee/pear",
+      "source_checkpoint": "951264bf5be4b9d2afb87320f5fac74778b2dd58",
+      "source_path": "tests/steam/test_fixture_checks.py",
+      "content_sha256": "203a163a766fe7d8ee5b140db0fb926016accf69433a15acf3f8e33fa5f0a4d4",
+      "size_bytes": 4500,
+      "source_state": "not present in checkpoint Git tree",
+      "content_committed_at_checkpoint": false,
+      "canonical_owner_proposal": "postmelee/pear-runtime",
+      "ownership_scope": "pear-runtime fixture package tests; real-game preservation assertion also remains a Pear adapter regression",
+      "destination_proposal": "tests/fixtures/test_fixture_checks.py",
+      "status": "not imported; transfer with source-preserving adapter",
+      "license_markers": [
+        "MIT"
+      ],
+      "license_basis": "Existing explicit file marker",
+      "selected_symbols": [
+        "FixtureVerdictTests"
+      ],
+      "notes": [
+        "Retain original negatives. Routing test drives original run through preparation, replacing only host launch boundary; no private game data required."
+      ]
+    },
+    {
+      "source_repository": "https://github.com/postmelee/pear",
+      "source_checkpoint": "951264bf5be4b9d2afb87320f5fac74778b2dd58",
+      "source_path": "tests/steam/test_fixture_routing.py",
+      "content_sha256": "fb2fca8e748262c40e2fbcb4e2d989d2b95d1b32dd90539f62d93c507993ca19",
+      "size_bytes": 3861,
+      "source_state": "not present in checkpoint Git tree",
+      "content_committed_at_checkpoint": false,
+      "canonical_owner_proposal": "postmelee/pear-runtime",
+      "ownership_scope": "pear-runtime fixture package tests; real-game preservation assertion also remains a Pear adapter regression",
+      "destination_proposal": "tests/fixtures/test_fixture_routing.py",
+      "status": "not imported; transfer with source-preserving adapter",
+      "license_markers": [
+        "GPL-3.0-or-later"
+      ],
+      "license_basis": "Existing explicit file marker",
+      "selected_symbols": [
+        "BeforeLaunch",
+        "RoutingTests"
+      ],
+      "notes": [
+        "Retain original negatives. Routing test drives original run through preparation, replacing only host launch boundary; no private game data required."
+      ]
+    },
+    {
+      "source_repository": "https://github.com/postmelee/pear",
+      "source_checkpoint": "951264bf5be4b9d2afb87320f5fac74778b2dd58",
+      "source_path": "tests/steam/test_phase_build.py",
+      "content_sha256": "771195e204ad7444ca1355013309430e985eceaa3325806e1b7201a3a4650c16",
+      "size_bytes": 3972,
+      "source_state": "not present in checkpoint Git tree",
+      "content_committed_at_checkpoint": false,
+      "canonical_owner_proposal": "postmelee/pear",
+      "ownership_scope": "Pear historical coordination tests; successor binding tests owned by pear-runtime",
+      "destination_proposal": "tests/build/ new interface tests, preserving relevant negative semantics",
+      "status": "not imported; historical test is not a portable build test",
+      "license_markers": [
+        "MIT"
+      ],
+      "license_basis": "Existing explicit file marker",
+      "selected_symbols": [
+        "ReleaseTests",
+        "ChainedReleaseTests"
+      ],
+      "notes": [
+        "Existing tests cover task46/47 release/predecessor grants, not compiler, dependency-file, include precedence or linker operand integrity.",
+        "Required successor tests: no missing/mismatched explicit root, no old fallback, alias/race, private selector mismatch, depfile/include shadowing, operand digest/architecture, busy/stale operation release."
+      ]
+    },
+    {
+      "source_repository": "https://github.com/postmelee/pear",
+      "source_checkpoint": "951264bf5be4b9d2afb87320f5fac74778b2dd58",
+      "source_path": "tools/wine/prepare.py",
+      "content_sha256": "d01f104cbf49b373eeec2799d79b975523fba2960d0b92d723e5e37cdc11de50",
+      "size_bytes": 26246,
+      "source_state": "exact Git blob",
+      "content_committed_at_checkpoint": true,
+      "canonical_owner_proposal": "postmelee/pear-runtime",
+      "ownership_scope": "pear-runtime pinned generic supervisor/parser package; component case data separately exported",
+      "destination_proposal": "provenance-bound helper package preserving tools/wine relative paths",
+      "status": "not imported; existing dynamic WINE_HELPERS consumer",
+      "license_markers": [],
+      "license_basis": "No marker in opening source; current Pear original-code GPL-3.0-or-later adoption with original third-party notices retained; inspect selected symbols before import",
+      "selected_symbols": [
+        "_git",
+        "validate_inputs",
+        "_directory",
+        "output_path",
+        "tree_entries",
+        "archive_to_file",
+        "extract_verified",
+        "_digest_value",
+        "_manifest_tree",
+        "_source_entries",
+        "verify_prepared",
+        "prepare",
+        "main"
+      ],
+      "notes": [
+        "Retain captured full original bytes initially, no reimplemented APISession/observer.",
+        "These files are a named immutable source input or reviewed exact extraction, never an ambient old-worktree fallback."
+      ],
+      "source_commit_blob_sha256": "d01f104cbf49b373eeec2799d79b975523fba2960d0b92d723e5e37cdc11de50",
+      "source_commit_blob_sha1": "d5da8a6d138d063cc1090946b62061e96a49c88a"
+    },
+    {
+      "source_repository": "https://github.com/postmelee/pear",
+      "source_checkpoint": "951264bf5be4b9d2afb87320f5fac74778b2dd58",
+      "source_path": "tools/wine/toolchain.py",
+      "content_sha256": "760e701e79337635c6c8ae77fc607d4ee550932cd04c419540e44f5a9e2cb597",
+      "size_bytes": 38707,
+      "source_state": "exact Git blob",
+      "content_committed_at_checkpoint": true,
+      "canonical_owner_proposal": "postmelee/pear-runtime",
+      "ownership_scope": "pear-runtime pinned generic supervisor/parser package; component case data separately exported",
+      "destination_proposal": "provenance-bound helper package preserving tools/wine relative paths",
+      "status": "not imported; existing dynamic WINE_HELPERS consumer",
+      "license_markers": [],
+      "license_basis": "No marker in opening source; current Pear original-code GPL-3.0-or-later adoption with original third-party notices retained; inspect selected symbols before import",
+      "selected_symbols": [
+        "write_new",
+        "task_path",
+        "empty_directory",
+        "inspect_macho",
+        "inspect_closure",
+        "archive_members",
+        "extract_verified",
+        "alias_directory",
+        "verify_extracted",
+        "base_env",
+        "verify_prepared_tools",
+        "run_command",
+        "native_tool",
+        "inspect_sdk",
+        "prepare",
+        "coff_machine",
+        "inspect_host",
+        "check",
+        "main"
+      ],
+      "notes": [
+        "Retain captured full original bytes initially, no reimplemented APISession/observer.",
+        "These files are a named immutable source input or reviewed exact extraction, never an ambient old-worktree fallback."
+      ],
+      "source_commit_blob_sha256": "760e701e79337635c6c8ae77fc607d4ee550932cd04c419540e44f5a9e2cb597",
+      "source_commit_blob_sha1": "54dbfd1049f69481124f7251d5a04fc98ed3028f"
+    },
+    {
+      "source_repository": "https://github.com/postmelee/pear",
+      "source_checkpoint": "951264bf5be4b9d2afb87320f5fac74778b2dd58",
+      "source_path": "tools/wine/modules.py",
+      "content_sha256": "ee109f7934562082a4ed74c7c6f90beec75445adff042e2b8b9e82fef086225c",
+      "size_bytes": 21610,
+      "source_state": "exact Git blob",
+      "content_committed_at_checkpoint": true,
+      "canonical_owner_proposal": "postmelee/pear-runtime",
+      "ownership_scope": "pear-runtime pinned generic supervisor/parser package; component case data separately exported",
+      "destination_proposal": "provenance-bound helper package preserving tools/wine relative paths",
+      "status": "not imported; existing dynamic WINE_HELPERS consumer",
+      "license_markers": [],
+      "license_basis": "No marker in opening source; current Pear original-code GPL-3.0-or-later adoption with original third-party notices retained; inspect selected symbols before import",
+      "selected_symbols": [
+        "PE",
+        "inspect_pe",
+        "require_hybrid",
+        "assess_readobj",
+        "tool_identity",
+        "producers",
+        "run_reader",
+        "validate_inventory",
+        "create_inventory",
+        "main"
+      ],
+      "notes": [
+        "Retain captured full original bytes initially, no reimplemented APISession/observer.",
+        "These files are a named immutable source input or reviewed exact extraction, never an ambient old-worktree fallback."
+      ],
+      "source_commit_blob_sha256": "ee109f7934562082a4ed74c7c6f90beec75445adff042e2b8b9e82fef086225c",
+      "source_commit_blob_sha1": "7d5a8ef53c0a7a7008e923117b5d5056412f582c"
+    },
+    {
+      "source_repository": "https://github.com/postmelee/pear",
+      "source_checkpoint": "951264bf5be4b9d2afb87320f5fac74778b2dd58",
+      "source_path": "tools/wine/abi_review.py",
+      "content_sha256": "fa92d9707b3446f7bc806ec616a9a5637103922841b171b7659af307f6178d46",
+      "size_bytes": 20470,
+      "source_state": "exact Git blob",
+      "content_committed_at_checkpoint": true,
+      "canonical_owner_proposal": "postmelee/pear-runtime",
+      "ownership_scope": "pear-runtime pinned generic supervisor/parser package; component case data separately exported",
+      "destination_proposal": "provenance-bound helper package preserving tools/wine relative paths",
+      "status": "not imported; existing dynamic WINE_HELPERS consumer",
+      "license_markers": [],
+      "license_basis": "No marker in opening source; current Pear original-code GPL-3.0-or-later adoption with original third-party notices retained; inspect selected symbols before import",
+      "selected_symbols": [
+        "parse",
+        "clean",
+        "branch_target",
+        "canonical",
+        "helper_review",
+        "analyze",
+        "macho",
+        "validate_actual",
+        "reproduce_reader",
+        "inspect_build",
+        "main"
+      ],
+      "notes": [
+        "Retain captured full original bytes initially, no reimplemented APISession/observer.",
+        "These files are a named immutable source input or reviewed exact extraction, never an ambient old-worktree fallback."
+      ],
+      "source_commit_blob_sha256": "fa92d9707b3446f7bc806ec616a9a5637103922841b171b7659af307f6178d46",
+      "source_commit_blob_sha1": "8c4d3b1c5bae227d3560fbde66acc70a0c0e1ca7"
+    },
+    {
+      "source_repository": "https://github.com/postmelee/pear",
+      "source_checkpoint": "951264bf5be4b9d2afb87320f5fac74778b2dd58",
+      "source_path": "tools/wine/dynamic_evidence.py",
+      "content_sha256": "d358c8f987297b94ba7938cc277f48b661169edf2d0400a714a914a47e6b1a0e",
+      "size_bytes": 13409,
+      "source_state": "exact Git blob",
+      "content_committed_at_checkpoint": true,
+      "canonical_owner_proposal": "postmelee/pear-runtime",
+      "ownership_scope": "pear-runtime pinned generic supervisor/parser package; component case data separately exported",
+      "destination_proposal": "provenance-bound helper package preserving tools/wine relative paths",
+      "status": "not imported; existing dynamic WINE_HELPERS consumer",
+      "license_markers": [],
+      "license_basis": "No marker in opening source; current Pear original-code GPL-3.0-or-later adoption with original third-party notices retained; inspect selected symbols before import",
+      "selected_symbols": [
+        "integer",
+        "dynamic_rows",
+        "validate_budget",
+        "_process",
+        "assess_events"
+      ],
+      "notes": [
+        "Retain captured full original bytes initially, no reimplemented APISession/observer.",
+        "These files are a named immutable source input or reviewed exact extraction, never an ambient old-worktree fallback."
+      ],
+      "source_commit_blob_sha256": "d358c8f987297b94ba7938cc277f48b661169edf2d0400a714a914a47e6b1a0e",
+      "source_commit_blob_sha1": "d8b70a0599eee8a320170604780f6933b8346965"
+    },
+    {
+      "source_repository": "https://github.com/postmelee/pear",
+      "source_checkpoint": "951264bf5be4b9d2afb87320f5fac74778b2dd58",
+      "source_path": "tools/wine/exception_evidence.py",
+      "content_sha256": "db90c78f51f16d8747d751391b7cb8588ed9bda2dd0c4f3d57e6936cc2c99ded",
+      "size_bytes": 26135,
+      "source_state": "exact Git blob",
+      "content_committed_at_checkpoint": true,
+      "canonical_owner_proposal": "postmelee/pear-runtime",
+      "ownership_scope": "pear-runtime pinned generic supervisor/parser package; component case data separately exported",
+      "destination_proposal": "provenance-bound helper package preserving tools/wine relative paths",
+      "status": "not imported; existing dynamic WINE_HELPERS consumer",
+      "license_markers": [],
+      "license_basis": "No marker in opening source; current Pear original-code GPL-3.0-or-later adoption with original third-party notices retained; inspect selected symbols before import",
+      "selected_symbols": [
+        "validate_native_scope",
+        "native_parts",
+        "bind_native_anchors",
+        "expected_results",
+        "validate_row",
+        "decode_stdout_row",
+        "group_rows",
+        "fixture_rows",
+        "fixture_facts",
+        "address",
+        "bind_image",
+        "check_exception",
+        "assess"
+      ],
+      "notes": [
+        "Retain captured full original bytes initially, no reimplemented APISession/observer.",
+        "These files are a named immutable source input or reviewed exact extraction, never an ambient old-worktree fallback."
+      ],
+      "source_commit_blob_sha256": "db90c78f51f16d8747d751391b7cb8588ed9bda2dd0c4f3d57e6936cc2c99ded",
+      "source_commit_blob_sha1": "0c2b79a40f98a044738bac8588f227e07139d5a1"
+    },
+    {
+      "source_repository": "https://github.com/postmelee/pear",
+      "source_checkpoint": "951264bf5be4b9d2afb87320f5fac74778b2dd58",
+      "source_path": "tools/wine/run_fixtures.py",
+      "content_sha256": "e6d79880e6fb46a20ed23f3966d3fa4139e2c78181a4ccf5e05f86e2ab87f688",
+      "size_bytes": 57987,
+      "source_state": "exact Git blob",
+      "content_committed_at_checkpoint": true,
+      "canonical_owner_proposal": "postmelee/pear-runtime",
+      "ownership_scope": "pear-runtime pinned generic supervisor/parser package; component case data separately exported",
+      "destination_proposal": "provenance-bound helper package preserving tools/wine relative paths",
+      "status": "not imported; existing dynamic WINE_HELPERS consumer",
+      "license_markers": [],
+      "license_basis": "No marker in opening source; current Pear original-code GPL-3.0-or-later adoption with original third-party notices retained; inspect selected symbols before import",
+      "selected_symbols": [
+        "create_output",
+        "write_new",
+        "environment",
+        "BSDInfo",
+        "DarwinObserver",
+        "Child",
+        "Session",
+        "event_identity",
+        "native_snapshot",
+        "validate_events",
+        "prefix_identity",
+        "parse_lines",
+        "validate_helper",
+        "validate_cases",
+        "bound_macho_uuid",
+        "system_image_origin",
+        "validate_native_images",
+        "assess_case_record",
+        "run_case",
+        "run",
+        "write_case_assessment",
+        "producer_hashes",
+        "verify_case_logs",
+        "_validate_runs",
+        "validate_runs",
+        "main"
+      ],
+      "notes": [
+        "Retain captured full original bytes initially, no reimplemented APISession/observer.",
+        "These files are a named immutable source input or reviewed exact extraction, never an ambient old-worktree fallback."
+      ],
+      "source_commit_blob_sha256": "e6d79880e6fb46a20ed23f3966d3fa4139e2c78181a4ccf5e05f86e2ab87f688",
+      "source_commit_blob_sha1": "ecc9dea135fd406ddcb2bac92725e2c5fa597eed"
+    },
+    {
+      "source_repository": "https://github.com/postmelee/pear",
+      "source_checkpoint": "951264bf5be4b9d2afb87320f5fac74778b2dd58",
+      "source_path": "tools/wine/api_runner.py",
+      "content_sha256": "ae59778c676b4d1e0d4a569809f149833e23814723357a379e9bf52138879a3d",
+      "size_bytes": 87961,
+      "source_state": "exact Git blob",
+      "content_committed_at_checkpoint": true,
+      "canonical_owner_proposal": "postmelee/pear-runtime",
+      "ownership_scope": "pear-runtime pinned generic supervisor/parser package; component case data separately exported",
+      "destination_proposal": "provenance-bound helper package preserving tools/wine relative paths",
+      "status": "not imported; existing dynamic WINE_HELPERS consumer",
+      "license_markers": [],
+      "license_basis": "No marker in opening source; current Pear original-code GPL-3.0-or-later adoption with original third-party notices retained; inspect selected symbols before import",
+      "selected_symbols": [
+        "cases_path",
+        "case_json_limits",
+        "event_limit",
+        "decode_case",
+        "validate_environment_policy",
+        "cleanup_allowance_ms",
+        "validate_duration",
+        "fixture_loader_environment",
+        "graphical_session",
+        "expected_fixture_rows",
+        "lifetime_events",
+        "relocation_events",
+        "relocation_image",
+        "relocation_file",
+        "assess_relocation_events",
+        "validate_cases",
+        "producers",
+        "snapshot_producers",
+        "validate_registration",
+        "APIObserver",
+        "APISession",
+        "expected_api_rows",
+        "fixture_observations",
+        "fixture_output",
+        "image_inventories",
+        "assess_native_events",
+        "assess_arena_events",
+        "assess_descendant_exits",
+        "assess_case",
+        "run_case",
+        "target_controls",
+        "validate_suite_authorization",
+        "run",
+        "verify_logs",
+        "validate_runs"
+      ],
+      "notes": [
+        "Retain captured full original bytes initially, no reimplemented APISession/observer.",
+        "These files are a named immutable source input or reviewed exact extraction, never an ambient old-worktree fallback."
+      ],
+      "source_commit_blob_sha256": "ae59778c676b4d1e0d4a569809f149833e23814723357a379e9bf52138879a3d",
+      "source_commit_blob_sha1": "e1b99a6ce97032b771f5f4ece73487026e2a7558"
+    },
+    {
+      "source_repository": "https://github.com/postmelee/pear",
+      "source_checkpoint": "951264bf5be4b9d2afb87320f5fac74778b2dd58",
+      "source_path": "tools/wine/signing.py",
+      "content_sha256": "4c643405fab8b42b369a360d8431fe667f0dc60dd24c703074ff09afdcf3b71b",
+      "size_bytes": 38692,
+      "source_state": "exact Git blob",
+      "content_committed_at_checkpoint": true,
+      "canonical_owner_proposal": "postmelee/pear-runtime",
+      "ownership_scope": "pear-runtime selected signing reader",
+      "destination_proposal": "provenance-bound helper package preserving tools/wine/signing.py",
+      "status": "not imported; dynamic pure function source only",
+      "license_markers": [],
+      "license_basis": "No marker in opening source; current Pear original-code GPL-3.0-or-later adoption with original third-party notices retained; inspect selected symbols before import",
+      "selected_symbols": [
+        "_relative_target",
+        "inventory",
+        "profile_authorization",
+        "loader_claims",
+        "signature_check",
+        "_code_parts",
+        "verify_code_origin"
+      ],
+      "notes": [],
+      "source_commit_blob_sha256": "4c643405fab8b42b369a360d8431fe667f0dc60dd24c703074ff09afdcf3b71b",
+      "source_commit_blob_sha1": "3ce2b9465fc306d9d4f14844815707278e93547a"
+    },
+    {
+      "source_repository": "https://github.com/postmelee/pear",
+      "source_checkpoint": "951264bf5be4b9d2afb87320f5fac74778b2dd58",
+      "source_path": "host/probe/provisioned_probe.py",
+      "content_sha256": "47f49422f4d6ccefb2826690a562d4d829c007d2c5a96fc156c86f7d446e2ee3",
+      "size_bytes": 29260,
+      "source_state": "exact Git blob",
+      "content_committed_at_checkpoint": true,
+      "canonical_owner_proposal": "postmelee/pear",
+      "ownership_scope": "Pear host-authorization policy origin; runtime consumes explicit pinned policy/functions",
+      "destination_proposal": "explicit policy source binding, not generic authorization grant",
+      "status": "not imported; dynamic capture input",
+      "license_markers": [],
+      "license_basis": "No marker in opening source; current Pear original-code GPL-3.0-or-later adoption with original third-party notices retained; inspect selected symbols before import",
+      "selected_symbols": [
+        "validate_profile",
+        "check_signature",
+        "assess_result",
+        "assess_abi_result",
+        "sanitized_result",
+        "_parse_arguments",
+        "_provisioning_udid",
+        "_verify",
+        "_variant",
+        "main"
+      ],
+      "notes": [
+        "legacy() reads actual APP_ID/TEAM_ID/CROSS_KEYS/ALLOW_JIT and validate_profile; retain identity without publishing signing material or changing protections."
+      ],
+      "source_commit_blob_sha256": "47f49422f4d6ccefb2826690a562d4d829c007d2c5a96fc156c86f7d446e2ee3",
+      "source_commit_blob_sha1": "5643b4a806ff3fcf22a8c4478f4a670088e39e56"
+    },
+    {
+      "source_repository": "https://github.com/postmelee/pear",
+      "source_checkpoint": "951264bf5be4b9d2afb87320f5fac74778b2dd58",
+      "source_path": "host/probe/hardened_baseline.py",
+      "content_sha256": "e10c985de82a93b852e8a6204c94f9877628f3cc49760b5c39d771635130947a",
+      "size_bytes": 26320,
+      "source_state": "exact Git blob",
+      "content_committed_at_checkpoint": true,
+      "canonical_owner_proposal": "postmelee/pear",
+      "ownership_scope": "Pear host-authorization policy origin; runtime consumes explicit pinned policy/functions",
+      "destination_proposal": "explicit policy source binding, not generic authorization grant",
+      "status": "not imported; dynamic capture input",
+      "license_markers": [],
+      "license_basis": "No marker in opening source; current Pear original-code GPL-3.0-or-later adoption with original third-party notices retained; inspect selected symbols before import",
+      "selected_symbols": [
+        "ControlError",
+        "select_identity",
+        "check_signature",
+        "_observed",
+        "_integer",
+        "_step",
+        "_allocation",
+        "assess_result",
+        "paired_positive_matches",
+        "sanitized_result",
+        "_hash",
+        "_command",
+        "_verify",
+        "_json_object",
+        "_control",
+        "main"
+      ],
+      "notes": [
+        "legacy() reads actual APP_ID/TEAM_ID/CROSS_KEYS/ALLOW_JIT and validate_profile; retain identity without publishing signing material or changing protections."
+      ],
+      "source_commit_blob_sha256": "e10c985de82a93b852e8a6204c94f9877628f3cc49760b5c39d771635130947a",
+      "source_commit_blob_sha1": "2fb66f59433fba37e849cb6285323e77fb84816a"
+    },
+    {
+      "source_repository": "https://github.com/postmelee/pear",
+      "source_checkpoint": "ea6c018565217b852b8e116d692773214cec1c20",
+      "source_path": "tools/dxmt/run_pairing.py",
+      "content_sha256": "038adc9355892d853dce2886f06dbeab3c073e14d343bf10aa4effc968ee6402",
+      "size_bytes": 36958,
+      "source_state": "exact Git blob",
+      "content_committed_at_checkpoint": true,
+      "canonical_owner_proposal": "postmelee/pear-runtime",
+      "ownership_scope": "pear-runtime exact selected historical helper-function package",
+      "destination_proposal": "provenance-bound Task7 helper package preserving relative paths",
+      "status": "not imported; exact REUSE pins required",
+      "license_markers": [],
+      "license_basis": "No marker in opening source; current Pear original-code GPL-3.0-or-later adoption with original third-party notices retained; inspect selected symbols before import",
+      "selected_symbols": [
+        "local",
+        "producers",
+        "wine_helpers",
+        "integer",
+        "native_rows",
+        "pe_rows",
+        "environment",
+        "assessment_packet",
+        "verify_logs",
+        "launch_recipes",
+        "validate_launches",
+        "passive_dynamic_observations",
+        "assess_case",
+        "failure_detail",
+        "finish_capture",
+        "cleanup_session",
+        "run_case",
+        "runtime_values",
+        "run",
+        "verify_run",
+        "main"
+      ],
+      "notes": [
+        "Source functions are AST-captured by existing code without executing old CLI entrypoints. Full source byte pins stay intact."
+      ],
+      "source_commit_blob_sha256": "038adc9355892d853dce2886f06dbeab3c073e14d343bf10aa4effc968ee6402",
+      "source_commit_blob_sha1": "5274ed50571ca95fd1846ef21f8d281efefef3ac"
+    },
+    {
+      "source_repository": "https://github.com/postmelee/pear",
+      "source_checkpoint": "ea6c018565217b852b8e116d692773214cec1c20",
+      "source_path": "tools/dxmt/pairing_runtime.py",
+      "content_sha256": "617b00dbd281271b26bc1d0d9621dcd68246805218b5bf96bdc811947f9811d5",
+      "size_bytes": 43206,
+      "source_state": "exact Git blob",
+      "content_committed_at_checkpoint": true,
+      "canonical_owner_proposal": "postmelee/pear-runtime",
+      "ownership_scope": "pear-runtime exact selected historical helper-function package",
+      "destination_proposal": "provenance-bound Task7 helper package preserving relative paths",
+      "status": "not imported; exact REUSE pins required",
+      "license_markers": [],
+      "license_basis": "No marker in opening source; current Pear original-code GPL-3.0-or-later adoption with original third-party notices retained; inspect selected symbols before import",
+      "selected_symbols": [
+        "same",
+        "native_error",
+        "failure_fields",
+        "wrapped_error",
+        "certificate_prefix",
+        "signer_leaf",
+        "select_functions",
+        "source_constant",
+        "legacy",
+        "producers",
+        "pe_machine",
+        "cms_plist",
+        "native",
+        "verify_commands",
+        "profile_recipe",
+        "profile_from_logs",
+        "capture_authorization",
+        "verify_authorization",
+        "prerequisite",
+        "source_ledger",
+        "origin_file",
+        "materialize",
+        "entrypoints",
+        "inventory_images",
+        "signature_recipe",
+        "signature_from_logs",
+        "signing_recipe",
+        "signatures_from_logs",
+        "prepare",
+        "verify_structural",
+        "admission_recipe",
+        "verify_runtime",
+        "main"
+      ],
+      "notes": [
+        "Source functions are AST-captured by existing code without executing old CLI entrypoints. Full source byte pins stay intact."
+      ],
+      "source_commit_blob_sha256": "617b00dbd281271b26bc1d0d9621dcd68246805218b5bf96bdc811947f9811d5",
+      "source_commit_blob_sha1": "d20d341bcc4e88a2770103b2c40b8b62e4b79ae1"
+    },
+    {
+      "source_repository": "https://github.com/postmelee/pear",
+      "source_checkpoint": "ea6c018565217b852b8e116d692773214cec1c20",
+      "source_path": "tools/dxmt/common.py",
+      "content_sha256": "3593e8e2a80d535143e2baae7e945ce90918520711993848dc33355d9dac0e75",
+      "size_bytes": 13699,
+      "source_state": "exact Git blob",
+      "content_committed_at_checkpoint": true,
+      "canonical_owner_proposal": "postmelee/pear-runtime",
+      "ownership_scope": "pear-runtime exact selected historical helper-function package",
+      "destination_proposal": "provenance-bound Task7 helper package preserving relative paths",
+      "status": "not imported; exact REUSE pins required",
+      "license_markers": [],
+      "license_basis": "No marker in opening source; current Pear original-code GPL-3.0-or-later adoption with original third-party notices retained; inspect selected symbols before import",
+      "selected_symbols": [
+        "digest",
+        "hex_digest",
+        "fields",
+        "real_directory",
+        "output_directory",
+        "owned_directory",
+        "write_new",
+        "producer_hashes",
+        "clean_env",
+        "run_bounded",
+        "validate_bare_repo",
+        "git",
+        "source_tree_name",
+        "tree_entries",
+        "resolve_contained",
+        "macho_slices",
+        "validate_ec_archive_index",
+        "archive_machines"
+      ],
+      "notes": [
+        "Source functions are AST-captured by existing code without executing old CLI entrypoints. Full source byte pins stay intact."
+      ],
+      "source_commit_blob_sha256": "3593e8e2a80d535143e2baae7e945ce90918520711993848dc33355d9dac0e75",
+      "source_commit_blob_sha1": "46d1b6331f77ed459a00ede4f49721f335acedde"
+    },
+    {
+      "source_repository": "https://github.com/postmelee/pear",
+      "source_checkpoint": "ea6c018565217b852b8e116d692773214cec1c20",
+      "source_path": "tools/dxmt/build.py",
+      "content_sha256": "283e52d5d2f9a42d403624370537e8bf4ebe1859a75a5436d57a90975e8ef144",
+      "size_bytes": 19962,
+      "source_state": "exact Git blob",
+      "content_committed_at_checkpoint": true,
+      "canonical_owner_proposal": "postmelee/pear-runtime",
+      "ownership_scope": "pear-runtime exact selected historical helper-function package",
+      "destination_proposal": "provenance-bound Task7 helper package preserving relative paths",
+      "status": "not imported; exact REUSE pins required",
+      "license_markers": [],
+      "license_basis": "No marker in opening source; current Pear original-code GPL-3.0-or-later adoption with original third-party notices retained; inspect selected symbols before import",
+      "selected_symbols": [
+        "inspector",
+        "producers",
+        "reference",
+        "input_values",
+        "selector",
+        "role_layout",
+        "write_bytes",
+        "copy_layout",
+        "check_layout",
+        "cross_file",
+        "version_adapter",
+        "notice_bytes",
+        "generated_bytes",
+        "generated_facts",
+        "environment",
+        "recipe",
+        "prerequisite_values",
+        "construct",
+        "verify_build",
+        "main"
+      ],
+      "notes": [
+        "Source functions are AST-captured by existing code without executing old CLI entrypoints. Full source byte pins stay intact."
+      ],
+      "source_commit_blob_sha256": "283e52d5d2f9a42d403624370537e8bf4ebe1859a75a5436d57a90975e8ef144",
+      "source_commit_blob_sha1": "ad658365d0654f6586dd005e45e6e3b5e3221bf4"
+    },
+    {
+      "source_repository": "https://github.com/postmelee/pear",
+      "source_checkpoint": "951264bf5be4b9d2afb87320f5fac74778b2dd58",
+      "source_path": "tools/steam/inputs.py",
+      "content_sha256": "86b2331580c3a1fd89ec91f7677cb23ce7dd1fd87f039dbe84036bfa5846b110",
+      "size_bytes": 14571,
+      "source_state": "working-tree bytes differ from commit",
+      "content_committed_at_checkpoint": false,
+      "canonical_owner_proposal": "postmelee/pear",
+      "ownership_scope": "Pear game selection/private execution policy",
+      "destination_proposal": "remain in Pear; runtime receives explicit narrow input/interval callback",
+      "status": "do not copy wholesale",
+      "license_markers": [],
+      "license_basis": "No marker in opening source; current Pear original-code GPL-3.0-or-later adoption with original third-party notices retained; inspect selected symbols before import",
+      "selected_symbols": [
+        "digest",
+        "identity",
+        "real_directory",
+        "fresh",
+        "save",
+        "official_url",
+        "download",
+        "pe_reader",
+        "Header",
+        "inspect_bytes",
+        "inventory_file",
+        "inventory_tree",
+        "acquire",
+        "inspect_record",
+        "inspect",
+        "main"
+      ],
+      "notes": [
+        "No owned-game snapshots, hardcoded historical current selections, account policy or private phase payloads in generic runtime package."
+      ],
+      "source_commit_blob_sha256": "bcb89d319cae44a0ddb4efde15714f68c8f9e3af76315c6352797d48821d128c",
+      "source_commit_blob_sha1": "fe1ed5aba1786f497c9598f088601867b1ad0470"
+    },
+    {
+      "source_repository": "https://github.com/postmelee/pear",
+      "source_checkpoint": "951264bf5be4b9d2afb87320f5fac74778b2dd58",
+      "source_path": "tools/steam/phase_inputs.py",
+      "content_sha256": "5d8e91609fda6d8086fdddc3387a438361311fec85089f5914c0e58a18a449e1",
+      "size_bytes": 2189,
+      "source_state": "not present in checkpoint Git tree",
+      "content_committed_at_checkpoint": false,
+      "canonical_owner_proposal": "postmelee/pear",
+      "ownership_scope": "Pear game selection/private execution policy",
+      "destination_proposal": "remain in Pear; runtime receives explicit narrow input/interval callback",
+      "status": "do not copy wholesale",
+      "license_markers": [
+        "MIT"
+      ],
+      "license_basis": "Existing explicit file marker",
+      "selected_symbols": [
+        "inspect",
+        "baseline"
+      ],
+      "notes": [
+        "No owned-game snapshots, hardcoded historical current selections, account policy or private phase payloads in generic runtime package."
+      ]
+    },
+    {
+      "source_repository": "https://github.com/postmelee/pear",
+      "source_checkpoint": "951264bf5be4b9d2afb87320f5fac74778b2dd58",
+      "source_path": "tools/steam/phase_runtime.py",
+      "content_sha256": "a002dadadf16246472c2ba29c13a26293fd8a624f80719d7fee1c4658649d567",
+      "size_bytes": 5758,
+      "source_state": "not present in checkpoint Git tree",
+      "content_committed_at_checkpoint": false,
+      "canonical_owner_proposal": "postmelee/pear",
+      "ownership_scope": "Pear game selection/private execution policy",
+      "destination_proposal": "remain in Pear; runtime receives explicit narrow input/interval callback",
+      "status": "do not copy wholesale",
+      "license_markers": [
+        "MIT"
+      ],
+      "license_basis": "Existing explicit file marker",
+      "selected_symbols": [
+        "read_selection",
+        "check_build",
+        "interval",
+        "prepare",
+        "admit_candidate",
+        "selected_fex",
+        "fixture"
+      ],
+      "notes": [
+        "No owned-game snapshots, hardcoded historical current selections, account policy or private phase payloads in generic runtime package."
+      ]
+    },
+    {
+      "source_repository": "https://github.com/postmelee/pear",
+      "source_checkpoint": "951264bf5be4b9d2afb87320f5fac74778b2dd58",
+      "source_path": "tools/wine/image_initialization_trace_run.py",
+      "content_sha256": "2cba1f5d6c7ccdaadd0fb80e56318adb0f0ab828b15e71dd1c24a72d649ca34a",
+      "size_bytes": 11194,
+      "source_state": "exact Git blob",
+      "content_committed_at_checkpoint": true,
+      "canonical_owner_proposal": "postmelee/pear",
+      "ownership_scope": "Pear game selection/private execution policy",
+      "destination_proposal": "remain in Pear; runtime receives explicit narrow input/interval callback",
+      "status": "do not copy wholesale",
+      "license_markers": [
+        "MIT"
+      ],
+      "license_basis": "Existing explicit file marker",
+      "selected_symbols": [
+        "game_copy",
+        "run"
+      ],
+      "notes": [
+        "No owned-game snapshots, hardcoded historical current selections, account policy or private phase payloads in generic runtime package."
+      ],
+      "source_commit_blob_sha256": "2cba1f5d6c7ccdaadd0fb80e56318adb0f0ab828b15e71dd1c24a72d649ca34a",
+      "source_commit_blob_sha1": "e40324611a69ffb2502a7575ce9aa3c6288193b4"
+    },
+    {
+      "source_repository": "https://github.com/postmelee/pear",
+      "source_checkpoint": "951264bf5be4b9d2afb87320f5fac74778b2dd58",
+      "source_path": "tools/steam/slot_lifetime_runtime_interval.py",
+      "content_sha256": "648d81e868f7f4ca27dd7aebda7d9edf5834fab646002a2e38b6a4717988a2cd",
+      "size_bytes": 3800,
+      "source_state": "not present in checkpoint Git tree",
+      "content_committed_at_checkpoint": false,
+      "canonical_owner_proposal": "postmelee/pear",
+      "ownership_scope": "Pear game selection/private execution policy",
+      "destination_proposal": "remain in Pear; runtime receives explicit narrow input/interval callback",
+      "status": "do not copy wholesale",
+      "license_markers": [
+        "MIT"
+      ],
+      "license_basis": "Existing explicit file marker",
+      "selected_symbols": [
+        "release_read",
+        "check",
+        "interval"
+      ],
+      "notes": [
+        "No owned-game snapshots, hardcoded historical current selections, account policy or private phase payloads in generic runtime package."
+      ]
+    }
+  ],
+  "required_binding_changes": [
+    {
+      "id": "owned_output_and_live_interval",
+      "sources": [
+        "tools/steam/direct_v1.py",
+        "tools/steam/fixture_context.py"
+      ],
+      "symbols": [
+        "fresh_output",
+        "run",
+        "FixtureContext"
+      ],
+      "required_change": "Bind a fresh task-owned output root and its volume, plus the current execution interval; remove original-worktree output and implicit default root assumptions.",
+      "retained_assertions": [
+        "fresh output and canonical parent",
+        "no alias/symlink substitution",
+        "measured free-space guard on output volume",
+        "live operation ownership and release; no saved pass as authority"
+      ]
+    },
+    {
+      "id": "exact_seed_and_selected_modules",
+      "sources": [
+        "tools/steam/direct_v1.py",
+        "tools/steam/direct_prepare_v1.py"
+      ],
+      "symbols": [
+        "stage_modules"
+      ],
+      "required_change": "Bind synthetic seed preimages and newly built selected ntdll/FEX hashes explicitly instead of selecting the PE from historical ORIGINAL/OPTIMIZED constants.",
+      "retained_assertions": [
+        "exact preimage and selected digest",
+        "module destination remains inside owned prefix",
+        "copy bytes equal selected source",
+        "complete before/after prefix inventory differs only at permitted module paths"
+      ]
+    },
+    {
+      "id": "runtime_view_and_authorization",
+      "sources": [
+        "tools/steam/fixture_context.py",
+        "tools/steam/direct_prepare_v1.py",
+        "tools/fex/integration_run.py",
+        "tools/fex/memory_wine_runtime.py"
+      ],
+      "symbols": [
+        "FixtureContext",
+        "closure",
+        "prefix_inventory",
+        "admission",
+        "signing_helpers"
+      ],
+      "required_change": "Bind named pinned helper/policy roots, canonical candidate view, runtime receipt and immutable fixture inputs; remove graphics_repo/default REPO as ambient fallback.",
+      "retained_assertions": [
+        "runtime and fixture content identities",
+        "bundle inventory and dependency/image ARM64 closure",
+        "canonical paths/aliases",
+        "synthetic seed inventory and wine.inf update timestamp",
+        "actual current profile/signature/authorization before and after execution"
+      ]
+    },
+    {
+      "id": "fixture_configuration_without_game_selection",
+      "sources": [
+        "tools/steam/direct_v1.py",
+        "tools/steam/phase_runtime.py"
+      ],
+      "symbols": [
+        "run"
+      ],
+      "required_change": "Keep phase_runtime import and owned-game selection behind the historical/game path; the fixture path receives an explicitly identified generic configuration and cannot read private selection payloads.",
+      "retained_assertions": [
+        "seven-name scope",
+        "inputs is None and no play adapter on fixture route",
+        "selected diagnostic configuration matches exact runtime",
+        "real-game route still requires owned-game inputs",
+        "compatibility candidate label never substitutes for artifact identity or admission"
+      ]
+    },
+    {
+      "id": "complete_declared_producer_manifest",
+      "sources": [
+        "tools/steam/direct_v1.py",
+        "tools/fex/memory_wine_run.py",
+        "tools/fex/memory_wine_runtime.py"
+      ],
+      "symbols": [
+        "preserve_sources",
+        "read_sources",
+        "complete_provenance",
+        "supervision",
+        "signing_helpers"
+      ],
+      "required_change": "Replace whole tools/host discovery with a complete explicit source manifest including dynamically captured helpers and policy sources; retain local immutable snapshots.",
+      "retained_assertions": [
+        "every executed/captured source pinned",
+        "snapshot bytes equal admitted source bytes",
+        "bounded manifest decoding",
+        "original and snapshot rechecked at operation end",
+        "no hidden old source lookup; raw personal-path sources remain outside Git"
+      ]
+    },
+    {
+      "id": "one_context_type_and_original_oracles",
+      "sources": [
+        "tools/steam/fixture_context.py",
+        "tools/steam/fixture_checks.py",
+        "tools/steam/direct_v1.py",
+        "tools/wine/api_runner.py"
+      ],
+      "symbols": [
+        "FixtureContext",
+        "CandidateDescription",
+        "fixture",
+        "run",
+        "assess",
+        "APISession",
+        "APIObserver"
+      ],
+      "required_change": "Move the single context/description definitions with both consumers and preserve original owned execution/assessment. Mechanically defer non-seven image/presentation imports; do not replace the launcher.",
+      "retained_assertions": [
+        "exact context type and single-use begin/finish binding",
+        "completed output and runtime identity",
+        "original errors, stream bounds and event/log correspondence",
+        "native process/image architecture and exit 42",
+        "owned cleanup and sentinel survival",
+        "rendering readback/module/Metal pipeline oracles",
+        "SampleWindows behavior retained until separately proven removable"
+      ]
+    }
+  ],
+  "helper_groups": [
+    {
+      "id": "task7_captured_function_sources",
+      "count": 4,
+      "source_paths": [
+        "tools/dxmt/run_pairing.py",
+        "tools/dxmt/pairing_runtime.py",
+        "tools/dxmt/common.py",
+        "tools/dxmt/build.py"
+      ],
+      "mechanism": "Existing REUSE_PINS/REUSE_SHA and AST function capture; exact source bytes are retained without executing old CLI entrypoints."
+    },
+    {
+      "id": "wine_supervisor_module_sources",
+      "count": 9,
+      "source_paths": [
+        "tools/wine/common.py",
+        "tools/wine/prepare.py",
+        "tools/wine/toolchain.py",
+        "tools/wine/modules.py",
+        "tools/wine/abi_review.py",
+        "tools/wine/dynamic_evidence.py",
+        "tools/wine/exception_evidence.py",
+        "tools/wine/run_fixtures.py",
+        "tools/wine/api_runner.py"
+      ],
+      "mechanism": "Existing WINE_HELPERS capture with temporary module aliases restored on exit; APISession remains the owned launcher."
+    },
+    {
+      "id": "additional_signing_policy_sources",
+      "count": 3,
+      "source_paths": [
+        "tools/wine/signing.py",
+        "host/probe/provisioned_probe.py",
+        "host/probe/hardened_baseline.py"
+      ],
+      "mechanism": "Existing legacy() captures signing functions, validate_profile and authorization constants. This source input grants no execution authority."
+    }
+  ],
+  "seven_fixture_ids": [
+    "tls-thread",
+    "seh-unwind",
+    "suspend-context",
+    "code-invalidation",
+    "guest-fault-guard",
+    "configured-memory",
+    "rendering-original"
+  ],
+  "confirmed_fex_parser_authority": {
+    "repository": "https://github.com/postmelee/pear-fex",
+    "imported_at_commit": "a46bb2586dbaaf312657376f77d5653dfd61bad4",
+    "modules": [
+      "Pear.Diagnostics.thread_create_observation",
+      "Pear.Diagnostics.attach_observation",
+      "Pear.Diagnostics.binding_census_observation",
+      "Pear.Diagnostics.slot_lifetime_observation"
+    ],
+    "constraint": "Consume a pinned FEX package; do not duplicate these four implementations. No other mixed parser/policy source is claimed transferred."
+  },
+  "deferred_gates": [
+    "Implement and test the six explicit bindings without weakening original assertions.",
+    "Complete source/data/implicit dependency closure, including dynamic helpers, before calling the package standalone.",
+    "Run original fixture-context/checker/routing negatives against the actual extracted package.",
+    "Run the seven original host fixture oracles against the newly reconstructed, authorized candidate.",
+    "Accept exact source-owner cutover separately from runtime activation."
+  ],
+  "privacy_scope": "Only repository-relative source paths, source-code identities and synthetic fixture names are recorded. Personal/local fixture paths and private payload identities are excluded."
+}
