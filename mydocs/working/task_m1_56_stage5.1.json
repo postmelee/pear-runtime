@@ -1,0 +1,323 @@
+{
+  "component_stage4_commits": {
+    "dxmt": "e800e770006fc7c37831ab857000a4781c85f6fd",
+    "fex": "a8ba1cbd0148b46817842f3b7307689d4b2acbd7",
+    "runtime": "625fd0f97b9955e43f71cb7906ccc41d8f70853b",
+    "wine": "d31a50d7385b3385ab278e0fe7687b9d1267de94"
+  },
+  "evidence": {
+    "additional_storage_review": {
+      "name": "summary.json",
+      "sha256": "6ee1de395f713c6b3fbf9062e5757b4881531c75cc4b33bbb35e33e86c4933f2",
+      "size_bytes": 5537
+    },
+    "contracts": {
+      "name": "receipt.json",
+      "sha256": "2d5c424c5d9fcdc840408664f8c8524cbace5b423a3d8f2d53673fd1c452f60b",
+      "size_bytes": 30442
+    },
+    "direct_description_only": {
+      "name": "direct-docstring-correction.json",
+      "sha256": "a4d55e6dfdaef817c8d158fd9e200268e78b5161cfeff4378fe35a3b5d75b787",
+      "size_bytes": 905
+    },
+    "docs": {
+      "name": "validation.json",
+      "sha256": "51e72c381a71746e5d6c9741f44a9cb666c310d10aad96aa961da60bbf5c9004",
+      "size_bytes": 53967
+    },
+    "final_independent_review": {
+      "name": "final-review.json",
+      "sha256": "5c6e589e90a17fe64cbe58aedd70cd8d0ffaeeb8b8a37ca2adaf633c6ba812cf",
+      "size_bytes": 4716
+    },
+    "final_independent_review_v2": {
+      "name": "final-review-v2.json",
+      "sha256": "b8b048d22e0d7e320de58cf679e5cb75b2ac1f3c9e38cb052e93d90b99cbcb83",
+      "size_bytes": 4604
+    },
+    "integration_independent": {
+      "name": "receipt.json",
+      "sha256": "e1c176aea71558676a58413ca05f104a9204304e6d6b23a99a213337c6d9d102",
+      "size_bytes": 110181
+    },
+    "manager_retained_runner_review": {
+      "name": "manager-retained-runner-review.json",
+      "sha256": "5036e2bbbd0a96443739665b44998e4303b2d1ec74cd162b5a18404678524325",
+      "size_bytes": 71488
+    },
+    "manager_source_review": {
+      "name": "manager-review.json",
+      "sha256": "34fcb5c0ed53f04af770065066e91ac5c6b3d89240cb8c3eb058cb936e35f590",
+      "size_bytes": 61871
+    },
+    "notice_review": {
+      "name": "stage5_1-source-notice-review-v2.json",
+      "sha256": "849a57be97de03022c263aafa00eaa77c4af6aab79371e54926e2b0a603e6864",
+      "size_bytes": 365
+    },
+    "owner11_bounded_acceptance": {
+      "name": "owner11-stage4-acceptance-thread.json",
+      "sha256": "fdcd671d995de1f14307ef143b1b6504327d82b3ec557c6bcdb1cef9d0821ce4",
+      "size_bytes": 77941
+    },
+    "pear_game": {
+      "name": "final-verification.json",
+      "sha256": "948b87b3d604b9f44893fd42652c840b53cd89ab33c0fa14e01a74dbedb8c885",
+      "size_bytes": 19213
+    },
+    "private_stage4_publication": {
+      "name": "stage4-private-publication.json",
+      "sha256": "745264df8c73af5148d24aaafc43e04f81062de2d9ed29d4902ae72d8221b668",
+      "size_bytes": 1327
+    },
+    "protected": {
+      "name": "stage5_1-protected-before-execution.json",
+      "sha256": "23190834bfa5307d2f54ae2a3866944b828da060deb5458a31deb17f5a978b7a",
+      "size_bytes": 694
+    },
+    "release_adaptation_independent": {
+      "name": "receipt.json",
+      "sha256": "b34ae9fb148d60145b1afe1111225b2b524add4b75052a4c592c7d840cdd1fd9",
+      "size_bytes": 4118
+    },
+    "release_original_correspondence": {
+      "name": "release-controls-correspondence-v2.json",
+      "sha256": "96261631df46b985f6ce753676e8992b4a48834de121d6bc2244ac4929fd6cdb",
+      "size_bytes": 1757
+    },
+    "runtime_frozen_source": {
+      "name": "final-freeze-v2.json",
+      "sha256": "6256f7f2aa6e0910830e203df1ac31c55d553bb5a8d96a1e3ed8245752f043e2",
+      "size_bytes": 15362
+    },
+    "runtime_portable": {
+      "name": "result.json",
+      "sha256": "d56b6101aa707aea9beffae55648d8b4c574386d3fadfeba02ca2dbd8f7a8443",
+      "size_bytes": 420764
+    },
+    "runtime_portable_invocation": {
+      "name": "stage5-full-portable-v2-invocation.json",
+      "sha256": "576b0f543cffba0899c814c9c60e36547754532b83aed37bf607101231031533",
+      "size_bytes": 2080
+    },
+    "selector_independent": {
+      "name": "receipt.json",
+      "sha256": "434a2a04d71d6ade7a13645999c53ec99abd5ed1ac042a49bb2fb03268ea8f8e",
+      "size_bytes": 84093
+    },
+    "source_checkout_plan": {
+      "name": "stage5-pinned-source-worktree-plan.json",
+      "sha256": "3bf73f4b7b93b6cfad30ba3dabdffb6a29c872ced7d5b31b170bc2448beec9ef",
+      "size_bytes": 717
+    },
+    "source_closures_independent": {
+      "name": "receipt.json",
+      "sha256": "2a8f1d409d9c8c5bd1082bb9bde68196fa9a8d658ad80a67ac75f96981ff1063",
+      "size_bytes": 40183
+    }
+  },
+  "limits": {
+    "actual_development_selection_performed": false,
+    "additional_deletion": false,
+    "fresh_seven_via_selector_performed": false,
+    "game_copied": false,
+    "game_executed": false,
+    "game_qualified": false,
+    "manager_fresh_build": false,
+    "public_publication_authorized": false,
+    "source_cutover_complete": false,
+    "stage5_complete": false
+  },
+  "owner": "runtime",
+  "protected": {
+    "differences": 0,
+    "frozen_source_paths": 307,
+    "original_selected_sha256_paths": 29
+  },
+  "runtime_source_checkpoint": null,
+  "schema_version": 1,
+  "scope": "task56_stage5_1_source_and_portable_checkpoint",
+  "selected_fex_tool_commit": "9c9b602c07b57a08500862abfdf62e1bac351640",
+  "source_base": "625fd0f97b9955e43f71cb7906ccc41d8f70853b",
+  "source_closures": {
+    "fixture_runtime_files": 72,
+    "game_fex_files": 5,
+    "game_pear_files": 14,
+    "game_runtime_files": 73
+  },
+  "source_files": [
+    {
+      "mode": 420,
+      "path": ".github/source-notice-exceptions.json",
+      "sha256": "0c024576168d4e514eb4a0f2d8f51f03eab71839c99b2148230283d31cd5745a",
+      "size_bytes": 26347
+    },
+    {
+      "mode": 420,
+      "path": "NOTICE.md",
+      "sha256": "452aefff23b9cbd56d063af73b7ac6d0c3a9b3639f636c53e5041c44a32b4c87",
+      "size_bytes": 4815
+    },
+    {
+      "mode": 420,
+      "path": "README.md",
+      "sha256": "9807aefefc1aeb8f5a181589ee98c2f98bcb14f3d7cf04690a69dc428a56ee57",
+      "size_bytes": 6233
+    },
+    {
+      "mode": 420,
+      "path": "docs/assembly.md",
+      "sha256": "b29e4957719b4adc0ce67ac2b72af49de1068229a0796c40688cce155e932b56",
+      "size_bytes": 11803
+    },
+    {
+      "mode": 420,
+      "path": "docs/development.md",
+      "sha256": "9db97b992a78d5d4b9b8eff801a0a4bbb633881efc2418da9b6ca55bac314ce7",
+      "size_bytes": 30105
+    },
+    {
+      "mode": 420,
+      "path": "pear_runtime/fixtures/context.py",
+      "sha256": "3a9c3d08bed8984ac78a87d50295ea61cc768eb726687929198ce19c5e623fe1",
+      "size_bytes": 24832
+    },
+    {
+      "mode": 420,
+      "path": "pear_runtime/fixtures/direct.py",
+      "sha256": "0e5badf44ae6022b5bcfeb88cb2d6ab468eb0f4c036a34cee9a9716dde28a562",
+      "size_bytes": 54066
+    },
+    {
+      "mode": 420,
+      "path": "pear_runtime/fixtures/game_observations.py",
+      "sha256": "d55c114d22ba299cb1b5a4ab041c9057f950dfc54d1ddb46e87ce4fc8a77f042",
+      "size_bytes": 2474
+    },
+    {
+      "mode": 420,
+      "path": "pear_runtime/fixtures/game_operation.py",
+      "sha256": "5defc2ab0a40cf0e288ca24778cdbf7868715945ab6510c31df07497d65e30ed",
+      "size_bytes": 24696
+    },
+    {
+      "mode": 420,
+      "path": "pear_runtime/fixtures/game_prerequisites.py",
+      "sha256": "fa40a6145eac4ccc729a2002c007b63aaf5d7ca68a1f55bdfe43afee80d930f4",
+      "size_bytes": 12910
+    },
+    {
+      "mode": 420,
+      "path": "pear_runtime/fixtures/game_release.py",
+      "sha256": "aba5118994022108620c656e92b66244f09522cab9b81120cc8109499f501c77",
+      "size_bytes": 13174
+    },
+    {
+      "mode": 420,
+      "path": "pear_runtime/fixtures/game_types.py",
+      "sha256": "f81869e72ba266c348d318a5642fd337506d6839e22c39faa18c0e5a8b70f181",
+      "size_bytes": 1792
+    },
+    {
+      "mode": 420,
+      "path": "pear_runtime/fixtures/producers.py",
+      "sha256": "8787318c151223e66e5adb10f5ff261ca29bd2adf95b2fcd09c25ae99c52e705",
+      "size_bytes": 14490
+    },
+    {
+      "mode": 420,
+      "path": "pear_runtime/fixtures/release.py",
+      "sha256": "1b8dcd722a80ce05131388b5689cf4927bdf98a32e8a0765522693e90ab42dab",
+      "size_bytes": 13375
+    },
+    {
+      "mode": 420,
+      "path": "pear_runtime/fixtures/release_controls.py",
+      "sha256": "43e1659b60581a6310edcbe7c3fa6d1f476f038b19859aa4d6cbb9aff1712691",
+      "size_bytes": 16205
+    },
+    {
+      "mode": 420,
+      "path": "pear_runtime/fixtures/supervision.py",
+      "sha256": "195b805d7094bd9639b6740fc60a663c74f71607584528ab9a2089cf8e5d19d5",
+      "size_bytes": 12319
+    },
+    {
+      "mode": 420,
+      "path": "provenance/fixture-controls-release-import.json",
+      "sha256": "d8dfef7668b3cc831b331c7dea53d70ad1912ed514d18dc0825bf8da302fd1a8",
+      "size_bytes": 3144
+    },
+    {
+      "mode": 420,
+      "path": "provenance/fixture-game-seam.json",
+      "sha256": "ce564e350ee5ec0720be65bb5c882b3d4b8bf5a2e200f20daafd5a8ad784c739",
+      "size_bytes": 22754
+    },
+    {
+      "mode": 420,
+      "path": "tests/fixtures/test_game_candidate.py",
+      "sha256": "f8f557daee40dd949c16eb2cf7e4f379c3e4bb72753d60d13b5534e496083252",
+      "size_bytes": 5054
+    },
+    {
+      "mode": 420,
+      "path": "tests/fixtures/test_game_direct.py",
+      "sha256": "fe174689ffc8e672b81ce3df131a281c61ae263a226da5b62a96196313d82c36",
+      "size_bytes": 8081
+    },
+    {
+      "mode": 420,
+      "path": "tests/fixtures/test_game_observations.py",
+      "sha256": "9d287c8e0678ea3d224f3b3b1815bac72837422719d754aed359843dbdb7b9ac",
+      "size_bytes": 6525
+    },
+    {
+      "mode": 420,
+      "path": "tests/fixtures/test_game_operation.py",
+      "sha256": "8d8fff89b852cb71f0a25509672f3e66a034d3ec976fd6a47b35562cb0be8267",
+      "size_bytes": 14978
+    },
+    {
+      "mode": 420,
+      "path": "tests/fixtures/test_game_prerequisites.py",
+      "sha256": "8817e61534998251dc9dfbbed81ac108057b6d9324b9acbe545176f7d60e49b5",
+      "size_bytes": 11399
+    },
+    {
+      "mode": 420,
+      "path": "tests/fixtures/test_game_release.py",
+      "sha256": "6ce6683df23875a094c5145efacab271097086710fdd5f6ecfbee88163f59d1c",
+      "size_bytes": 11483
+    },
+    {
+      "mode": 420,
+      "path": "tests/fixtures/test_game_release_binding.py",
+      "sha256": "c78009cfe3f4dcd4d411aac2144b113289f7a547cac83de48551be35f4e7f6cb",
+      "size_bytes": 6367
+    },
+    {
+      "mode": 420,
+      "path": "tests/fixtures/test_game_seam.py",
+      "sha256": "d6c9f1d8ad818e2e47d4a29be018aafe22ea16a47c44c3546d3bea82e8145c6b",
+      "size_bytes": 10334
+    }
+  ],
+  "stage": "5.1",
+  "verification": {
+    "contracts": 154,
+    "counts_are_additive": false,
+    "independent_integration_unique_bodies": 177,
+    "independent_integration_unique_ids": 192,
+    "independent_release_adaptation_tests": 7,
+    "independent_release_verdict_vectors": 72,
+    "pear_game_unique_bodies": 115,
+    "pear_game_unique_ids": 130,
+    "runtime_inherited_executions": 14,
+    "runtime_unique_method_bodies": 763,
+    "runtime_unique_test_ids": 777,
+    "selector_independent_probes": 4,
+    "selector_repository_tests": 38
+  }
+}

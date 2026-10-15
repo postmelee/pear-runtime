@@ -8,6 +8,7 @@ cleanup; this module imports source without constructing a host session.
 from __future__ import annotations
 
 import ast
+import builtins
 from contextlib import contextmanager
 import hashlib
 import importlib.util
@@ -18,7 +19,7 @@ import signal
 import sys
 import threading
 import time
-from types import SimpleNamespace
+from types import SimpleNamespace, ModuleType
 
 from pear_runtime.assembly._common import (decode_json, encoded, read_relative,
                                           relative)
@@ -114,6 +115,36 @@ def _recheck(root, refs, proof):
     need(current == refs and current_proof == proof, 'fixture_provider_changed')
 
 
+def _companion_namespace(root,captured):
+    """Bind original script imports to captured bytes without global aliases."""
+    common=ModuleType('pear_companion_common')
+    common.__file__=str(root/'tools/wine/common.py')
+    exec(compile(captured['tools/wine/common.py'],common.__file__,'exec',dont_inherit=True),common.__dict__)
+    module=ModuleType('pear_companion_run_fixtures')
+    module.__file__=str(root/'tools/wine/run_fixtures.py')
+    def original_import(name,globals=None,locals=None,fromlist=(),level=0):
+        if name=='common' and level==0:return common
+        return builtins.__import__(name,globals,locals,fromlist,level)
+    module.__dict__['__builtins__']={**vars(builtins),'__import__':original_import}
+    exec(compile(captured['tools/wine/run_fixtures.py'],module.__file__,'exec',dont_inherit=True),module.__dict__)
+    return module
+
+
+@contextmanager
+def companion_provider(provider_root,*,provider_ref,source_refs):
+    """Child witness binding; importing original observers launches nothing."""
+    root,captured,refs,proof=_capture(provider_root)
+    need(proof==provider_ref and refs==source_refs,'game_companion_provider_binding')
+    try:
+        yield _companion_namespace(root,captured)
+    except BaseException as primary:
+        try:_recheck(root,refs,proof)
+        except BaseException as secondary:
+            primary.add_note('Companion provider recheck also failed: '+getattr(secondary,'code',type(secondary).__name__))
+        raise
+    else:_recheck(root,refs,proof)
+
+
 @contextmanager
 def supervision(root):
     """Yield the original (life, helpers) from one fully captured provider.
@@ -167,7 +198,16 @@ def supervision(root):
         namespace['local'] = captured_local
         with namespace['wine_helpers'](root, {name: ref['sha256'] for name, ref in refs.items()}) as helpers:
             helpers.base.STREAM_LIMIT = STREAM_LIMIT
-            life = SimpleNamespace(**namespace, source_refs=refs, provenance_ref=proof)
+            active=True
+            def companion_factory():
+                need(active,'game_companion_provider_inactive')
+                return _companion_namespace(root,captured)
+            # The frontend records these exact refs in its child witness config.
+            companion_factory.provider_root=root
+            companion_factory.provider_ref=proof
+            companion_factory.source_refs=refs
+            life = SimpleNamespace(**namespace, source_refs=refs, provenance_ref=proof,
+                                   companion_factory=companion_factory)
             try:
                 yield life, helpers
             except BaseException as primary:
@@ -178,6 +218,8 @@ def supervision(root):
                 raise
             else:
                 _recheck(root, refs, proof)
+            finally:
+                active=False
     finally:
         for name, (present, value) in previous.items():
             if present:

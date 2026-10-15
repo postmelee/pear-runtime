@@ -266,6 +266,19 @@ class FixtureContext:
         now=time.monotonic();self.timings.append(dict(name=name,seconds=now-self._clock,
             wall_utc=build.point()['wall_utc'],monotonic_seconds=now));self._clock=now
 
+    def inspect(self,output):
+        """Read full immutable inputs without activation, copying or authority."""
+        need(not self._active and not self._completed,'fixture_inspect_state')
+        output=self.fresh_output(output)
+        runtime,value=self._admit()
+        storage=self.storage_admission(output)
+        self._producers.recheck();core.checked_ref(self.ref)
+        return dict(status='input_admitted',context_ref=self.ref,
+            runtime_ref=self.value['runtime_ref'],assembly_operation_ref=self.value['operation_ref'],
+            producer_manifest_ref=self.value['producer_manifest_ref'],
+            source_refs=list(self._producers.refs.values()),output=str(output),storage=storage,
+            current_authority_assessed=False,runtime_execution_performed=False,game_qualified=False)
+
     def fresh_output(self,path):
         path=Path(path)
         need(path.is_absolute() and path.parent==Path(self.value['output_root']) and

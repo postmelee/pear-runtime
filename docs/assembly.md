@@ -94,6 +94,27 @@ profile/device/identity checks must resolve that same identity and regenerate
 exactly that list before `codesign`. An early availability receipt is not an
 artifact grant. No approval callback or saved lock-release marker is accepted.
 
+## Subsequent controls and bounded recovery
+
+The [developer guide](development.md#assembly-and-fixture-interfaces) describes
+separate seven-fixture, graphics, native Wine and CPU contexts. Assembly success
+is not a passing fixture result or current launch grant. Candidate3 retains the
+same component artifacts with separately recorded signing and admission sources.
+Its four native v5 controls, three bootstrap controls, fresh seven-case batch
+and visible-frame observation passed, with independent release evidence.
+Bounded candidate2 evidence reuse retains original operation identities and does
+not fabricate a new candidate3 observation.
+
+[Bounded input recovery](development.md#bounded-exact-input-recovery) can copy
+complete small admitted input roots and original binding metadata to fresh task
+output. For historical build review, copied binding JSON must retain its exact
+original root values. A separate relocated binding must not be inserted into an
+old build review as if the artifact had been built at its new paths.
+
+The assembly request and local diagnostic receipts are development records with
+their own explicit scopes. They are not the product `runtime_artifact` contract
+and do not satisfy the Rust manager's supported-runtime admission.
+
 ## Commands and outputs
 
 From this repository root, using Python 3.11 or newer:

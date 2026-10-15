@@ -148,6 +148,44 @@ def inputs(request_ref):
                 groups=groups,operations=statuses)
 
 
+
+def checker_binding(provenance,current):
+    """Admit the exact original checker or its explicitly reviewed extraction."""
+    need(type(provenance) is dict and type(provenance.get('schema_version')) is int and
+         provenance['schema_version']==1,'release_checker_provenance')
+    origin=provenance.get('origin')
+    def identity(value):
+        return (type(value) is dict and set(value)=={'path','sha256','size_bytes'} and
+                value['path']=='pear_runtime/fixtures/release.py' and
+                type(value['sha256']) is str and len(value['sha256'])==64 and
+                all(c in '0123456789abcdef' for c in value['sha256']) and
+                type(value['size_bytes']) is int and value['size_bytes']>0)
+    need(identity(origin),'release_checker_origin')
+    def matches(value):return value['sha256']==current['sha256'] and value['size_bytes']==current['size_bytes']
+    adaptation=provenance.get('stage5_current_checker_adaptation')
+    if adaptation is None:
+        need(matches(origin),'release_original_checker_changed')
+        return dict(mode='exact_original',origin=origin,current_checker=current)
+    need(type(adaptation) is dict and set(adaptation)=={'schema_version','scope','previous_origin','current_checker','proof'} and
+         type(adaptation['schema_version']) is int and adaptation['schema_version']==1 and
+         adaptation['scope']=='release_resource_oracle_extraction' and adaptation['previous_origin']==origin,
+         'release_checker_adaptation')
+    selected=adaptation['current_checker'];proof=adaptation['proof']
+    need(identity(selected) and matches(selected),'release_current_checker_changed')
+    need(type(proof) is dict and set(proof)=={'previous_runtime_commit','unchanged_definitions',
+         'original_resource_ast_sha256','current_resource_ast_sha256','resource_body_equal',
+         'legacy_lock_behavior_preserved'} and
+         type(proof['previous_runtime_commit']) is str and len(proof['previous_runtime_commit'])==40 and
+         all(c in '0123456789abcdef' for c in proof['previous_runtime_commit']) and
+         proof['unchanged_definitions']==['identity','inputs','DarwinProbe','handles','lock_probe','inspect','main'] and
+         type(proof['original_resource_ast_sha256']) is str and len(proof['original_resource_ast_sha256'])==64 and
+         all(c in '0123456789abcdef' for c in proof['original_resource_ast_sha256']) and
+         proof['original_resource_ast_sha256']==proof['current_resource_ast_sha256'] and
+         proof['resource_body_equal'] is True and proof['legacy_lock_behavior_preserved'] is True,
+         'release_checker_adaptation_proof')
+    return dict(mode='reviewed_resource_oracle_extraction',origin=origin,current_checker=current,proof=proof)
+
+
 def inspect(request_ref):
     record=dict(schema_version=1,scope='development_control_independent_release',request_ref=request_ref,
                 status='unknown',resource_release_passed=False,game_qualified=False,
@@ -158,9 +196,7 @@ def inspect(request_ref):
           build.fact(root/'provenance/fixture-release-import.json')]
     record['checker_refs']=refs
     try:
-        origin=core.read_ref(refs[2])['origin']
-        need(origin['sha256']==refs[1]['sha256'] and origin['size_bytes']==refs[1]['size_bytes'],
-             'release_original_checker_changed')
+        record['checker_binding']=checker_binding(core.read_ref(refs[2]),refs[1])
         plan=inputs(request_ref);record.update(operations=plan['operations'],checked_identities=plan['identities'],
              worker_pids=plan['workers'],checked_group_ids=sorted(plan['groups']),handle_roots=[str(p) for p in plan['roots']])
         probe=release.DarwinProbe();observed=probe.observe(plan)

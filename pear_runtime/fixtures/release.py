@@ -156,7 +156,8 @@ def lock_probe():
     return {'available':True,'immediately_released':True}
 
 
-def verdict(plan,observed,handle_result,lock):
+def resource_verdict(plan,observed,handle_result):
+    """Original resource oracle, independent of how coordination is owned."""
     survivors=[];reused=[];unknown=[];group_survivors=[]
     for expected in plan['identities']:
         actual=observed['processes'].get(expected['pid'])
@@ -172,11 +173,18 @@ def verdict(plan,observed,handle_result,lock):
         owned=[r for r in rows if (r['pid'],r['start_sec'],r['start_usec']) in known]
         group_survivors.extend(owned)
         if len(owned)!=len(rows):unknown.append(dict(reason='group_members_without_original_identity',group=pid,members=rows))
-    failed=bool(survivors or group_survivors or handle_result['handles'] or not lock['available'])
+    failed=bool(survivors or group_survivors or handle_result['handles'])
     status='failed' if failed else 'unknown' if unknown else 'passed'
     return dict(status=status,resource_release_passed=status=='passed',original_identities_present=survivors,
                 original_group_members_present=group_survivors,reused_pids=reused,uncertain_observations=unknown,
-                handles=handle_result['handles'],lock=lock)
+                handles=handle_result['handles'])
+
+
+def verdict(plan,observed,handle_result,lock):
+    result=resource_verdict(plan,observed,handle_result)
+    if not lock['available']:
+        result.update(status='failed',resource_release_passed=False)
+    return dict(result,lock=lock)
 
 
 def inspect(request_ref):

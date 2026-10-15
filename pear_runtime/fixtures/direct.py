@@ -3,7 +3,8 @@
 """Selected direct fixture policy and unchanged owned Wine session lifecycle.
 
 Historical pure policy functions remain for their original portable tests.
-Execution admits only the explicit new development fixture context.
+The fixture wrapper requires its explicit FixtureContext; the separate game path
+requires the admitted GameContext and its current runtime-owned GameOperation.
 """
 from pathlib import Path
 from types import SimpleNamespace
@@ -396,8 +397,13 @@ def assess(root):
 
 def stage_modules(prefix,runtime,candidate,*,fixture_context):
     need(type(fixture_context) is FixtureContext and candidate.name=='d25-game','direct_stage_candidate')
+    return _stage_module_bindings(prefix,runtime,fixture_context.value['modules'])
+
+
+def _stage_module_bindings(prefix,runtime,modules):
+    need(type(modules) is dict and set(modules)=={'ntdll.dll','xtajit64.dll'},'direct_stage_modules')
     before=prefix_inventory(prefix);records={}
-    for name,row in fixture_context.value['modules'].items():
+    for name,row in modules.items():
         target=prefix/'drive_c/windows/system32'/name
         source=runtime/preparation.PE.replace('ntdll.dll',name)
         need(not target.is_symlink() and target.resolve().is_relative_to(prefix.resolve()),'direct_prefix_alias')
@@ -413,6 +419,153 @@ def stage_modules(prefix,runtime,candidate,*,fixture_context):
         fex=records['xtajit64.dll']['after'],fex_source=records['xtajit64.dll']['source'],
         only_permitted_changes=sorted(allowed)))
     return records
+
+
+def _execute_owned(*,reuse,selected_limit,work,runtime,value,selected_trace,selected_env,
+                   selected_signal,selected_query,selected_entry,selected_link,abort_env,
+                   fixture,result,seconds,output,prefix,samples,candidate,target,selected,
+                   play_adapter_factory,game_context=None,prepared=None,game_operation=None):
+    """One original APISession lifecycle, with the fixed prepared-game binding."""
+    with supervisor.supervision(reuse) as (life,helpers):
+        # Only this private helper namespace changes; shared supervisor defaults stay intact.
+        helpers.base.STREAM_LIMIT = selected_limit
+        nonce = uuid.uuid4().hex; packet = supervisor.assessment_packet(value)
+        session = helpers.api.APISession(work,runtime,packet,nonce,suite='api-abi',case_id='first-dispatch')
+        env = supervisor.environment(work/'work',prefix,nonce,str(work/'home'))
+        env.update(WINEDEBUG=selected_trace,PEAR_METAL_PIPELINE_OBSERVE='1',PEAR_IMAGE_ADMISSION_DIAGNOSTIC='1')
+        env.update(METAL_ENV); env.update(selected_env); env.update(selected_signal); env.update(selected_query); env.update(selected_entry); env.update(selected_link); env.update(abort_env)
+        if fixture in ('rendering-original','presentation-original'):
+            # Reuse the graphics fixture's bounded trace policy; +file traces
+            # every byte of its readback output and exhausts the log budget.
+            env.update(MTL_SHADER_VALIDATION_DEFAULT_STATE='all',MTL_SHADER_VALIDATION_ENABLE_ERROR_REPORTING='1',MTL_SHADER_VALIDATION_DUMP_PIPELINES='1',MTL_SHADER_VALIDATION_GLOBAL_MEMORY='1',MTL_SHADER_VALIDATION_TEXTURE_USAGE='1')
+        if fixture == 'presentation-original':
+            env['PEAR_PRESENT_OBSERVE'] = '1'
+        paths = {k:runtime/v for k,v in value['entrypoints'].items()}
+        read_fd = control = None; error = None; outcome = 'not_started'; refusal = None
+        interrupted = None
+        started = time.monotonic(); deadline = started + seconds
+        remaining = lambda cap:max(0,min(cap,deadline-time.monotonic()))
+        launches = []
+        def launch(role,args,environment,**kwargs):
+            child = session.launch(role,args,environment,**kwargs)
+            launches.append(dict(role=role,argv=args,environment=environment,pid=child.pid)); return child
+        sampler = SampleWindows(session,output,deadline,env,launch,samples,sample_interval(candidate,samples))
+        attach_time = None
+        play_adapter = None
+        print(f'starting owned direct diagnostic ({seconds} second bound)',flush=True)
+        try:
+            if play_adapter_factory is not None:
+                if game_operation is not None:
+                    play_adapter_factory=game_operation.bind_factory(play_adapter_factory,life.companion_factory)
+                play_adapter=play_adapter_factory(session=session,output=output,candidate=candidate,selection=selected,sampler=sampler,deadline=deadline,launch=launch,environment=env)
+                if game_operation is not None:game_operation.validate_adapter(play_adapter,life.companion_factory)
+            graphical = helpers.api.graphical_session()
+            need(graphical == {'status':0,'available':True}, 'translated_graphical_session')
+            result['graphical_session'] = graphical
+            read_fd,control = os.pipe()
+            sentinel = launch('sentinel',[str(paths['sentinel']),str(read_fd)],env,pass_fds=(read_fd,))
+            os.close(read_fd); read_fd = None
+            need(session.wait_for(lambda:b'\n' in session.streams[('sentinel','stdout')]['data'],remaining(5)), 'integration_sentinel_start')
+            helpers.base.validate_helper(helpers.base.parse_lines(session,'sentinel')[0],'pear_sentinel_ready',sentinel)
+            server = launch('server',[str(paths['server']),'-f','-p'],env,event_pipe=True)
+            need(session.wait_for(lambda:any(r.get('event') == 'server_ready' for r in session.events['server']) or server.exited,remaining(30)) and not server.exited, 'integration_server_start')
+            loader_env = {**env,'PEAR_STAGE3_CONTROL':session.endpoint,'PEAR_WINE_ABI_FIXTURE':'1',
+                'PEAR_BOOTSTRAP_SERVER_PID':str(server.pid),'WINEDLLOVERRIDES':'d3d11,dxgi,d3d10core,winemetal=b;mscoree='}
+            arguments=[]
+            if fixture is None:
+                from .game_types import validate_prepared
+                need(game_operation is not None and game_context is not None and prepared is not None,
+                     'direct_game_preparation_required')
+                game_operation.assert_current(output,game_operation.operation_id)
+                game_context.recheck_prepared(output)
+                executable,current_target=validate_prepared(prepared,game_context.value,output)
+                need(current_target==target,'direct_game_target_changed')
+                arguments=['-force-d3d11','-screen-fullscreen','0','-screen-width','960',
+                           '-screen-height','540','-logFile',str(output/'Player.log')]
+            else:
+                declared=value['fixtures'][fixture];executable=runtime/declared['path']
+                need(fact(executable)['sha256']==declared['sha256'],'direct_fixture_bytes')
+                result['diagnostic_fixture']=dict(name=fixture,artifact=fact(executable),expected_exit=FIXTURES[fixture])
+            session.output = work/'work'
+            try:
+                loader = launch('loader',[str(paths['bootstrap_helper']),'--exec-4k',str(paths['loader']),str(executable),*arguments],loader_env,allowed_paths=[paths['bootstrap_helper'],paths['loader']])
+            finally:
+                session.output = work
+            handoff=None
+            if play_adapter is not None:
+                play_adapter.started(loader);handoff=play_adapter
+            def finished():
+                nonlocal refusal, attach_time
+                data = bytes(session.streams.get(('loader','stderr'),{}).get('data',b''))
+                refusal = finish_reason(data,loader.pid,target)
+                if refusal is not None and 'refusal_received_ns' not in result:
+                    result['refusal_received_ns'] = time.monotonic_ns()
+                if attach_time is None and attached(data):
+                    attach_time = time.monotonic();result['gameassembly_attach_received_ns'] = time.monotonic_ns()
+                terminal=loader.exited or refusal is not None or session.failure is not None
+                pump_observations(play_adapter,handoff,sampler,loader,attach_time,data,
+                    {loader.pid}|{row['identity']['pid'] for row in session.observer.registrations.values()},terminal)
+                # Adapter probes may consume EXIT after the earlier pump snapshot.
+                data=bytes(session.streams.get(('loader','stderr'),{}).get('data',b''))
+                refusal=refusal or finish_reason(data,loader.pid,target)
+                terminal=terminal or loader.exited or refusal is not None or session.failure is not None
+                if refusal is not None and 'refusal_received_ns' not in result:
+                    result['refusal_received_ns']=time.monotonic_ns()
+                return terminal or bool(handoff and handoff.done)
+            completed = session.wait_for(finished,remaining(seconds))
+            while not completed and ((play_adapter is not None and play_adapter.continue_supervision) or (play_adapter is None and handoff is not None and handoff.held)):
+                completed=session.wait_for(finished,5)
+            if play_adapter is not None:
+                result['play_handoff']=play_adapter.snapshot()
+            elif handoff is not None and handoff.held:
+                result['menu_handoff']=dict(confirmation=handoff.confirmation,user_test_finished=handoff.done,supervisor_retained=True)
+                result['applied']['post_menu_supervised_wait']=True
+            outcome = ('image_refused' if refusal.startswith('PEAR_IMAGE_ADMISSION') else 'owner_refused') if refusal else 'exited' if completed else 'timeout'
+        except BaseException as exc:
+            error = dict(type=type(exc).__name__,code=getattr(exc,'code',str(exc)),at_ns=time.monotonic_ns(),phase='owned-run'); outcome = 'error'
+            if isinstance(exc,(KeyboardInterrupt,SystemExit)) or getattr(exc,'code',None)=='assembly_worker_timeout':
+                interrupted=exc
+        finally:
+            if play_adapter is not None:
+                try:
+                    play_adapter.close()
+                    result['play_handoff']=play_adapter.snapshot()
+                    result['play_companions']=fact(output/'play/companion-result.json')
+                except BaseException as exc:result['play_cleanup_error']=getattr(exc,'code',type(exc).__name__)
+            try:
+                sampler.cancel()
+            except BaseException as exc:
+                result['sampler_cleanup_error'] = getattr(exc,'code',type(exc).__name__)
+            if game_operation is not None:
+                try:
+                    from .game_release import capture_companions
+                    if play_adapter is not None:
+                        result['companion_processes_ref']=capture_companions(play_adapter,output)
+                    else:
+                        result['companion_processes_ref']=fact(output/'play/owned-companion-processes.json')
+                except BaseException as exc:
+                    result['companion_evidence_error']=getattr(exc,'code',type(exc).__name__)
+            before,cleanup,sentinel_cleanup,logs,survived,cleanup_errors = life.cleanup_session(session,control,read_fd,work)
+        if play_adapter is not None and 'loader' in locals():
+            result['post_cleanup_terminal_evidence']=dict(at_ns=time.monotonic_ns(),
+                scope='Final drain only; does not establish pre-error observation order',
+                refusal=finish_reason(bytes(session.streams.get(('loader','stderr'),{}).get('data',b'')),loader.pid,target),
+                loader_exit=loader.exit_code,registered_exit=session.observer.registrations.get(loader.pid))
+        result.update(outcome=outcome,error=error,stream_error=session.failure,events=session.events,logs=logs,
+            cleanup=cleanup,sentinel_cleanup=sentinel_cleanup,sentinel_survived=survived,cleanup_errors=cleanup_errors,
+            pre_cleanup=before,elapsed_ms=round((time.monotonic()-started)*1000),launches=launches,
+            registrations=list(session.observer.registrations.values()),signal_observations=session.observer.signal_observations,
+            processes={role:dict(identity=child.identity,exit_code=child.exit_code,reaped=child.reaped,allowed_paths=sorted(child.allowed_paths)) for role,child in session.children.items()},
+            observed_owner_refusal=refusal)
+        result['applied']['launches'] = launches
+        result['observed'] = dict(stream_limit_bytes=helpers.base.STREAM_LIMIT,outcome=outcome,owner_refusal=refusal,samples=sampler.rows,menu='unconfirmed',steamworks='unperformed',
+            loader_trace_environment=next((r['environment']['WINEDEBUG'] for r in launches if r['role'] == 'loader'),None),
+            loader_signal_environment=next(({k:r['environment'][k] for k in (SIGNAL_KEY,) if k in r['environment']} for r in launches if r['role'] == 'loader'),None))
+        result['observed']['loader_link_environment'] = next(({k:r['environment'][k] for k in (link.KEY,) if k in r['environment']} for r in launches if r['role']=='loader'),None)
+        result['observed']['loader_entry_environment'] = next(({k:r['environment'][k] for k in (entry.KEY,) if k in r['environment']} for r in launches if r['role']=='loader'),None)
+        result['observed']['loader_query_environment'] = next(({k:r['environment'][k] for k in (query.KEY,) if k in r['environment']} for r in launches if r['role']=='loader'),None)
+        save(output/'case.json',result)
+        if interrupted is not None:raise interrupted
 
 
 def run(inputs, candidate, output, observations='off', samples=(), fixture=None, trace='historical', signal_resume='historical', query_observation='historical', entry_observation='historical', link_observation='historical', budget='standard120', abort_observation='off', log_budget='standard2', play_adapter_factory=None, fixture_context=None):
@@ -504,121 +657,12 @@ def run(inputs, candidate, output, observations='off', samples=(), fixture=None,
         if candidate.name in ('d23-16384','d23-65536','d24-131072','d25-fixture','d25-game'):
             print('current authorization',flush=True); admission(runtime,value,output/'before',reuse)
         if fixture_context is not None:fixture_context.mark('live_gate_and_authority_before')
-        with supervisor.supervision(reuse) as (life,helpers):
-            # Only this private helper namespace changes; shared supervisor defaults stay intact.
-            helpers.base.STREAM_LIMIT = selected_limit
-            nonce = uuid.uuid4().hex; packet = supervisor.assessment_packet(value)
-            session = helpers.api.APISession(work,runtime,packet,nonce,suite='api-abi',case_id='first-dispatch')
-            env = supervisor.environment(work/'work',prefix,nonce,str(work/'home'))
-            env.update(WINEDEBUG=selected_trace,PEAR_METAL_PIPELINE_OBSERVE='1',PEAR_IMAGE_ADMISSION_DIAGNOSTIC='1')
-            env.update(METAL_ENV); env.update(selected_env); env.update(selected_signal); env.update(selected_query); env.update(selected_entry); env.update(selected_link); env.update(abort_env)
-            if fixture in ('rendering-original','presentation-original'):
-                # Reuse the graphics fixture's bounded trace policy; +file traces
-                # every byte of its readback output and exhausts the log budget.
-                env.update(MTL_SHADER_VALIDATION_DEFAULT_STATE='all',MTL_SHADER_VALIDATION_ENABLE_ERROR_REPORTING='1',MTL_SHADER_VALIDATION_DUMP_PIPELINES='1',MTL_SHADER_VALIDATION_GLOBAL_MEMORY='1',MTL_SHADER_VALIDATION_TEXTURE_USAGE='1')
-            if fixture == 'presentation-original':
-                env['PEAR_PRESENT_OBSERVE'] = '1'
-            paths = {k:runtime/v for k,v in value['entrypoints'].items()}
-            read_fd = control = None; error = None; outcome = 'not_started'; refusal = None
-            interrupted = None
-            started = time.monotonic(); deadline = started + seconds
-            remaining = lambda cap:max(0,min(cap,deadline-time.monotonic()))
-            launches = []
-            def launch(role,args,environment,**kwargs):
-                child = session.launch(role,args,environment,**kwargs)
-                launches.append(dict(role=role,argv=args,environment=environment,pid=child.pid)); return child
-            sampler = SampleWindows(session,output,deadline,env,launch,samples,sample_interval(candidate,samples))
-            attach_time = None
-            play_adapter = None
-            print(f'starting owned direct diagnostic ({seconds} second bound)',flush=True)
-            try:
-                if play_adapter_factory is not None:
-                    play_adapter=play_adapter_factory(session=session,output=output,candidate=candidate,selection=selected,sampler=sampler,deadline=deadline,launch=launch,environment=env)
-                graphical = helpers.api.graphical_session()
-                need(graphical == {'status':0,'available':True}, 'translated_graphical_session')
-                result['graphical_session'] = graphical
-                read_fd,control = os.pipe()
-                sentinel = launch('sentinel',[str(paths['sentinel']),str(read_fd)],env,pass_fds=(read_fd,))
-                os.close(read_fd); read_fd = None
-                need(session.wait_for(lambda:b'\n' in session.streams[('sentinel','stdout')]['data'],remaining(5)), 'integration_sentinel_start')
-                helpers.base.validate_helper(helpers.base.parse_lines(session,'sentinel')[0],'pear_sentinel_ready',sentinel)
-                server = launch('server',[str(paths['server']),'-f','-p'],env,event_pipe=True)
-                need(session.wait_for(lambda:any(r.get('event') == 'server_ready' for r in session.events['server']) or server.exited,remaining(30)) and not server.exited, 'integration_server_start')
-                loader_env = {**env,'PEAR_STAGE3_CONTROL':session.endpoint,'PEAR_WINE_ABI_FIXTURE':'1',
-                    'PEAR_BOOTSTRAP_SERVER_PID':str(server.pid),'WINEDLLOVERRIDES':'d3d11,dxgi,d3d10core,winemetal=b;mscoree='}
-                arguments=[]
-                declared=value['fixtures'][fixture];executable=runtime/declared['path']
-                need(fact(executable)['sha256']==declared['sha256'],'direct_fixture_bytes')
-                result['diagnostic_fixture']=dict(name=fixture,artifact=fact(executable),expected_exit=FIXTURES[fixture])
-                session.output = work/'work'
-                try:
-                    loader = launch('loader',[str(paths['bootstrap_helper']),'--exec-4k',str(paths['loader']),str(executable),*arguments],loader_env,allowed_paths=[paths['bootstrap_helper'],paths['loader']])
-                finally:
-                    session.output = work
-                handoff=None
-                def finished():
-                    nonlocal refusal, attach_time
-                    data = bytes(session.streams.get(('loader','stderr'),{}).get('data',b''))
-                    refusal = finish_reason(data,loader.pid,target)
-                    if refusal is not None and 'refusal_received_ns' not in result:
-                        result['refusal_received_ns'] = time.monotonic_ns()
-                    if attach_time is None and attached(data):
-                        attach_time = time.monotonic();result['gameassembly_attach_received_ns'] = time.monotonic_ns()
-                    terminal=loader.exited or refusal is not None or session.failure is not None
-                    pump_observations(play_adapter,handoff,sampler,loader,attach_time,data,
-                        {loader.pid}|{row['identity']['pid'] for row in session.observer.registrations.values()},terminal)
-                    # Adapter probes may consume EXIT after the earlier pump snapshot.
-                    data=bytes(session.streams.get(('loader','stderr'),{}).get('data',b''))
-                    refusal=refusal or finish_reason(data,loader.pid,target)
-                    terminal=terminal or loader.exited or refusal is not None or session.failure is not None
-                    if refusal is not None and 'refusal_received_ns' not in result:
-                        result['refusal_received_ns']=time.monotonic_ns()
-                    return terminal or bool(handoff and handoff.done)
-                completed = session.wait_for(finished,remaining(seconds))
-                while not completed and ((play_adapter is not None and play_adapter.continue_supervision) or (play_adapter is None and handoff is not None and handoff.held)):
-                    completed=session.wait_for(finished,5)
-                if play_adapter is not None:
-                    result['play_handoff']=play_adapter.snapshot()
-                elif handoff is not None and handoff.held:
-                    result['menu_handoff']=dict(confirmation=handoff.confirmation,user_test_finished=handoff.done,supervisor_retained=True)
-                    result['applied']['post_menu_supervised_wait']=True
-                outcome = ('image_refused' if refusal.startswith('PEAR_IMAGE_ADMISSION') else 'owner_refused') if refusal else 'exited' if completed else 'timeout'
-            except BaseException as exc:
-                error = dict(type=type(exc).__name__,code=getattr(exc,'code',str(exc)),at_ns=time.monotonic_ns(),phase='owned-run'); outcome = 'error'
-                if isinstance(exc,(KeyboardInterrupt,SystemExit)) or getattr(exc,'code',None)=='assembly_worker_timeout':
-                    interrupted=exc
-            finally:
-                if play_adapter is not None:
-                    try:
-                        play_adapter.close()
-                        result['play_handoff']=play_adapter.snapshot()
-                        result['play_companions']=fact(output/'play/companion-result.json')
-                    except BaseException as exc:result['play_cleanup_error']=getattr(exc,'code',type(exc).__name__)
-                try:
-                    sampler.cancel()
-                except BaseException as exc:
-                    result['sampler_cleanup_error'] = getattr(exc,'code',type(exc).__name__)
-                before,cleanup,sentinel_cleanup,logs,survived,cleanup_errors = life.cleanup_session(session,control,read_fd,work)
-            if play_adapter is not None and 'loader' in locals():
-                result['post_cleanup_terminal_evidence']=dict(at_ns=time.monotonic_ns(),
-                    scope='Final drain only; does not establish pre-error observation order',
-                    refusal=finish_reason(bytes(session.streams.get(('loader','stderr'),{}).get('data',b'')),loader.pid,target),
-                    loader_exit=loader.exit_code,registered_exit=session.observer.registrations.get(loader.pid))
-            result.update(outcome=outcome,error=error,stream_error=session.failure,events=session.events,logs=logs,
-                cleanup=cleanup,sentinel_cleanup=sentinel_cleanup,sentinel_survived=survived,cleanup_errors=cleanup_errors,
-                pre_cleanup=before,elapsed_ms=round((time.monotonic()-started)*1000),launches=launches,
-                registrations=list(session.observer.registrations.values()),signal_observations=session.observer.signal_observations,
-                processes={role:dict(identity=child.identity,exit_code=child.exit_code,reaped=child.reaped,allowed_paths=sorted(child.allowed_paths)) for role,child in session.children.items()},
-                observed_owner_refusal=refusal)
-            result['applied']['launches'] = launches
-            result['observed'] = dict(stream_limit_bytes=helpers.base.STREAM_LIMIT,outcome=outcome,owner_refusal=refusal,samples=sampler.rows,menu='unconfirmed',steamworks='unperformed',
-                loader_trace_environment=next((r['environment']['WINEDEBUG'] for r in launches if r['role'] == 'loader'),None),
-                loader_signal_environment=next(({k:r['environment'][k] for k in (SIGNAL_KEY,) if k in r['environment']} for r in launches if r['role'] == 'loader'),None))
-            result['observed']['loader_link_environment'] = next(({k:r['environment'][k] for k in (link.KEY,) if k in r['environment']} for r in launches if r['role']=='loader'),None)
-            result['observed']['loader_entry_environment'] = next(({k:r['environment'][k] for k in (entry.KEY,) if k in r['environment']} for r in launches if r['role']=='loader'),None)
-            result['observed']['loader_query_environment'] = next(({k:r['environment'][k] for k in (query.KEY,) if k in r['environment']} for r in launches if r['role']=='loader'),None)
-            save(output/'case.json',result)
-            if interrupted is not None:raise interrupted
+        _execute_owned(reuse=reuse,selected_limit=selected_limit,work=work,runtime=runtime,value=value,
+            selected_trace=selected_trace,selected_env=selected_env,selected_signal=selected_signal,
+            selected_query=selected_query,selected_entry=selected_entry,selected_link=selected_link,
+            abort_env=abort_env,fixture=fixture,result=result,seconds=seconds,output=output,prefix=prefix,
+            samples=samples,candidate=candidate,target=target,selected=selected,
+            play_adapter_factory=play_adapter_factory)
         if fixture_context is not None:fixture_context.mark('owned_execution_and_cleanup')
         print('execution ended; verifying unchanged authorization',flush=True)
         admission(runtime,value,output/'after',reuse); result['authorization_before_after_passed'] = True
@@ -633,3 +677,88 @@ def run(inputs, candidate, output, observations='off', samples=(), fixture=None,
     if fixture_context is not None:fixture_context.mark('provenance_and_assessment')
     print(json.dumps(assessment,sort_keys=True))
     return assessment
+
+
+def run_game(context,output,*,play_factory):
+    """Fixed owned-game seam; the seven-fixture entrypoint remains separate."""
+    from .game_operation import GameOperation,capture_context
+    from .game_types import validate_prepared
+    capture_context(context)
+    owner=context.operation
+    need(type(owner) is GameOperation and owner.context is context,'direct_game_operation')
+    owner.assert_current(output,owner.operation_id)
+    candidate=context.candidate;output=context.fresh_output(output)
+    runtime,value=owner.runtime,owner.runtime_value
+    need(runtime is not None and value is not None,'direct_game_begin_required')
+    context.mark('runtime_admission')
+    selected=context.selected
+    need(selected.get('attach_observer') is True and selected.get('abort_observer') is True and
+         play_factory is not None,'direct_play_adapter_required')
+    observations='on';samples=();fixture=None;trace='menu';signal_resume='off'
+    query_observation='off';entry_observation='on';link_observation='off'
+    budget='d25-game300';abort_observation='on';log_budget='menu64'
+    selected_env=options(candidate,observations,samples)
+    seconds=execution_seconds(candidate,fixture,samples,budget)
+    selected_trace=trace_environment(candidate.name,fixture,trace)
+    selected_limit=log_limit(candidate.name,fixture,trace,log_budget)
+    selected_signal=signal_environment(candidate.name,signal_resume)
+    selected_query=query_policy(candidate.name).environment(candidate.name,query_observation)
+    selected_entry=link.entry_settings(candidate.name,entry_observation)
+    selected_link=link.settings(candidate.name,link_observation)
+    abort_env={'PEAR_FEX_ABORT_OBSERVE':'1'}
+    storage=context.storage_admission(output);owner.assert_current(output,owner.operation_id)
+    output.mkdir(mode=0o700);producers=context.preserve_sources(output)
+    save(output/'storage-admission.json',storage);context.baseline(output/'baseline.log')
+    prepared=context.prepare_game(output);executable,target=validate_prepared(prepared,context.value,output)
+    sources=prepared.source_files;seed=context.seed;reuse=context.provider_root
+    work=output/'run';work.mkdir();prefix=work/'prefix';template=seed/'run/prefix'
+    inventory=prefix_inventory(template);inf=runtime/signing.PAYLOAD/'share/wine/wine.inf'
+    need((template/'.update-timestamp').read_text().strip()==str(int(inf.stat().st_mtime)),'game_prefix_update')
+    owner.assert_current(output,owner.operation_id)
+    subprocess.run(['/bin/cp','-cRp',str(template),str(prefix)],check=True,timeout=30)
+    need(prefix_inventory(prefix)==inventory,'game_prefix_clone')
+    modules=_stage_module_bindings(prefix,runtime,context.value['modules'])
+    for p in (work/'work',work/'work/tmp',work/'home'):p.mkdir(mode=0o700)
+    result=dict(schema_version=1,scope='development_direct_game_v1',kind='game_startup_observation',
+        producer_ref=fact(Path(__file__)),producers_ref=fact(output/'producers.json'),
+        inputs_ref=context.ref,game_context_ref=context.ref,runtime_ref=fact(runtime/'runtime.json'),
+        execution_operation=dict(path=str(owner.operation_output/'operation.json'),operation_id=owner.operation_id),
+        target_identity=target,diagnostic_only=True,game_qualified=False,guest_execution_qualified=False,
+        runtime_sha256=fact(runtime/'runtime.json')['sha256'],source_files=sources,snapshot_ref=prepared.snapshot_ref,
+        prefix_origin=dict(seed_ref=fact(seed/'case.json'),inventory=inventory,prepared_nsi_ref=None),
+        steam_account_flow='unperformed; normal game Steam checks retained',
+        requested=dict(candidate=candidate.name,observations=selected_env,samples=[],fixture=None,trace=trace,
+            signal_resume=signal_resume,query_observation=query_observation,entry_observation=entry_observation,
+            link_observation=link_observation,budget=budget,abort_observation=abort_observation,log_budget=log_budget),
+        applied=dict(candidate=candidate.name,deadline_seconds=seconds,stream_limit_bytes=selected_limit,
+            modules=modules,native_owner=fact(runtime/preparation.NATIVE),observation_environment=selected_env,
+            trace_environment=selected_trace,signal_environment=selected_signal,query_environment=selected_query,
+            entry_environment=selected_entry,link_environment=selected_link),observed={})
+    context.mark('prefix_and_case_preparation')
+    with owner.execution_interval(output):
+        print('current authorization',flush=True);owner.current_authority(runtime,value,output/'before',reuse)
+        context.mark('live_gate_and_authority_before')
+        _execute_owned(reuse=reuse,selected_limit=selected_limit,work=work,runtime=runtime,value=value,
+            selected_trace=selected_trace,selected_env=selected_env,selected_signal=selected_signal,
+            selected_query=selected_query,selected_entry=selected_entry,selected_link=selected_link,
+            abort_env=abort_env,fixture=None,result=result,seconds=seconds,output=output,prefix=prefix,
+            samples=samples,candidate=candidate,target=target,selected=selected,play_adapter_factory=play_factory,
+            game_context=context,prepared=prepared,game_operation=owner)
+        context.mark('owned_execution_and_cleanup')
+        print('execution ended; verifying unchanged authorization',flush=True)
+        owner.current_authority(runtime,value,output/'after',reuse);result['authorization_before_after_passed']=True
+        context.mark('authority_after')
+    result['original_files_unchanged']=all(fact(row['path'])==row for row in sources)
+    need(result['original_files_unchanged'],'direct_game_original_changed')
+    result['runtime_unchanged']=fact(runtime/'runtime.json')['sha256']==result['runtime_sha256']
+    context.finish();context.mark('runtime_final')
+    complete_provenance(producers);result['producer_dependencies_unchanged']=True
+    save(output/'case.json',result)
+    assessment=assess(output)
+    need('fixture_passed' not in assessment,'direct_game_fixture_claim')
+    assessment.update(scope='owned game development observation',game_context_ref=context.ref,
+        runtime_ref=context.value['runtime_ref'],assembly_operation_ref=context.value['operation_ref'],
+        execution_operation=result['execution_operation'],case_ref=fact(output/'case.json'),game_qualified=False,
+        guest_execution_qualified=False)
+    save(output/'assessment.json',assessment);context.mark('provenance_and_assessment')
+    print(json.dumps(assessment,sort_keys=True));return assessment

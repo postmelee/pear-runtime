@@ -37,8 +37,15 @@ TOTAL_LIMIT = 32 * 1024**2
 MAX_FILES = 512
 
 
-def _root_map(roots):
-    need(type(roots) is dict and 'runtime' in roots and set(roots) <= {'runtime', 'fex'},
+GAME_SCOPE = 'game_producer_sources'
+GAME_ENTRY_MODULES = ('pear_runtime.fixtures.game_operation', 'pear_runtime.fixtures.game_observations', 'pear_runtime.fixtures.direct',
+    'tools.development.runtime_candidate', 'tools.development.game.context',
+    'tools.development.game.feedback', 'tools.development.game.witness')
+
+
+def _root_map(roots, *, game=False):
+    need(type(roots) is dict and 'runtime' in roots and set(roots) <= ({'runtime','fex','pear'} if game else {'runtime','fex'}) and
+         (not game or 'pear' in roots),
          'fixture_producer_roots')
     result = {}
     for key, value in roots.items():
@@ -51,6 +58,9 @@ def _root_map(roots):
     if 'fex' in result:
         need(not result['fex'].is_relative_to(result['runtime']) and
              not result['runtime'].is_relative_to(result['fex']), 'fixture_producer_root_overlap')
+    if 'pear' in result:
+        need(all(not result['pear'].is_relative_to(root) and not root.is_relative_to(result['pear'])
+                 for name,root in result.items() if name!='pear'),'fixture_producer_root_overlap')
     return result
 
 
@@ -67,11 +77,22 @@ def _fex_module(module):
             module.startswith('Pear.Tools.CPU.'))
 
 
+def _pear_module(module):
+    return (module in ('tools','tools.development','tools.development.game',
+                       'tools.development.runtime_candidate') or
+            module.startswith('tools.development.game.'))
+
+
 def _module_location(module, roots, *, optional=False):
     if module == 'pear_runtime' or module.startswith('pear_runtime.'):
         owner = 'runtime'
     elif _fex_module(module):
         need('fex' in roots, 'fixture_producer_fex_root_required'); owner = 'fex'
+    elif _pear_module(module) and 'pear' in roots:
+        owner = 'pear'
+    elif module=='tools' or module.startswith('tools.'):
+        need('pear' not in roots,'game_producer_module_scope')
+        return None
     else:
         return None
     name = module.replace('.', '/')
@@ -79,32 +100,39 @@ def _module_location(module, roots, *, optional=False):
     need(len(candidates) <= 1, 'fixture_producer_ambiguous_module')
     if candidates: return owner, candidates[0]
     if owner == 'fex' and module in ('Pear', 'Pear.Diagnostics', 'Pear.Tools', 'Pear.Tools.CPU'): return None
+    if owner=='pear' and module in ('tools','tools.development','tools.development.game'):return None
     need(optional, 'fixture_producer_module_missing')
     return None
 
 
 SCOPES = frozenset(('fixture_producer_sources', 'fixture_controls_producer_sources',
-                    'fixture_native_producer_sources', 'fixture_cpu_producer_sources'))
+                    'fixture_native_producer_sources', 'fixture_cpu_producer_sources',GAME_SCOPE))
 
 
 def closure_options(entry_modules, dynamic_paths, scope='fixture_producer_sources'):
     """Code-owned closure entrypoints; descriptors cannot choose their own code."""
     need(type(entry_modules) is tuple and 0 < len(entry_modules) <= 32 and
          len(set(entry_modules)) == len(entry_modules) and
-         all(type(name) is str and name.startswith('pear_runtime.') and
+         all(type(name) is str and (name.startswith('pear_runtime.') or scope==GAME_SCOPE and _pear_module(name)) and
              all(part.isidentifier() for part in name.split('.')) for name in entry_modules),
          'fixture_producer_entrypoints')
     need(type(dynamic_paths) is tuple and len(dynamic_paths) <= 128 and
          len(set(dynamic_paths)) == len(dynamic_paths) and
          all(type(path) is str for path in dynamic_paths), 'fixture_producer_dynamic_paths')
-    for path in dynamic_paths: relative(path)
+    for path in dynamic_paths:
+        if scope==GAME_SCOPE and path.startswith('pear:'):
+            need(path=='pear:tools/development/game/import-provenance.json','game_producer_dynamic_scope')
+            relative(path[5:])
+        else:relative(path)
+    if scope==GAME_SCOPE:need(entry_modules==GAME_ENTRY_MODULES,'game_producer_entrypoints')
     need(type(scope) is str and scope in SCOPES, 'fixture_producer_scope')
 
 
-def required_sources(roots, *, entry_modules=ENTRY_MODULES, dynamic_paths=DYNAMIC_PATHS):
+def required_sources(roots, *, entry_modules=ENTRY_MODULES, dynamic_paths=DYNAMIC_PATHS,
+                     scope='fixture_producer_sources'):
     """Read the exact current local closure without importing source or writing."""
-    closure_options(entry_modules, dynamic_paths)
-    roots = _root_map(roots); refs, raw_files, visited = {}, {}, set()
+    closure_options(entry_modules, dynamic_paths, scope)
+    roots = _root_map(roots,game=scope==GAME_SCOPE); refs, raw_files, visited = {}, {}, set()
     pending = list(entry_modules)
     while pending:
         module = pending.pop()
@@ -127,15 +155,17 @@ def required_sources(roots, *, entry_modules=ENTRY_MODULES, dynamic_paths=DYNAMI
                 base = importlib.util.resolve_name('.' * node.level + (node.module or ''), package) if node.level else node.module
                 if not base: continue
                 if _module_location(base, roots) is not None: pending.append(base)
-                if base == 'pear_runtime' or base.startswith('pear_runtime.') or _fex_module(base):
+                if base == 'pear_runtime' or base.startswith('pear_runtime.') or _fex_module(base) or 'pear' in roots and _pear_module(base):
                     for alias in node.names:
                         need(alias.name != '*', 'fixture_producer_star_import')
                         child = base + '.' + alias.name
                         if _module_location(child, roots, optional=True) is not None: pending.append(child)
     dynamic = (*dynamic_paths, *(PROVIDER_PREFIX + p for p in supervision.SOURCE_PATHS))
     for path in dynamic:
-        location = ('runtime', path)
-        raw_files[location], refs[location] = _read(roots['runtime'], path)
+        owner='pear' if scope==GAME_SCOPE and path.startswith('pear:') else 'runtime'
+        if owner=='pear':path=path[5:]
+        location = (owner, path)
+        raw_files[location], refs[location] = _read(roots[owner], path)
     need(set(roots) == {owner for owner, _ in refs}, 'fixture_producer_unused_root')
     need(len(refs) <= MAX_FILES and sum(len(v) for v in raw_files.values()) <= TOTAL_LIMIT,
          'fixture_producer_budget')
@@ -146,7 +176,7 @@ def manifest_for_roots(roots, *, entry_modules=ENTRY_MODULES, dynamic_paths=DYNA
                        scope='fixture_producer_sources'):
     """Prepare a reviewable manifest; the caller must pin it before admission."""
     closure_options(entry_modules, dynamic_paths, scope)
-    admitted, refs, _ = required_sources(roots, entry_modules=entry_modules, dynamic_paths=dynamic_paths)
+    admitted, refs, _ = required_sources(roots, entry_modules=entry_modules, dynamic_paths=dynamic_paths,scope=scope)
     return {'schema_version': 1, 'scope': scope,
             'roots': {k: str(v) for k, v in admitted.items()},
             'files': [dict(root=k[0], path=k[1], sha256=v['sha256'], size_bytes=v['size_bytes'])
@@ -156,7 +186,7 @@ def manifest_for_roots(roots, *, entry_modules=ENTRY_MODULES, dynamic_paths=DYNA
 def _loaded_sources(refs):
     allowed = {row['path'] for row in refs.values()}
     for name, module in tuple(sys.modules.items()):
-        if name == 'pear_runtime' or name.startswith('pear_runtime.') or _fex_module(name):
+        if name == 'pear_runtime' or name.startswith('pear_runtime.') or _fex_module(name) or any(k[0]=='pear' for k in refs) and _pear_module(name):
             path = getattr(module, '__file__', None)
             if path is not None:
                 need(str(Path(path).resolve(strict=True)) in allowed, 'fixture_producer_loaded_source')
@@ -214,7 +244,7 @@ def capture(manifest_ref, provider_root, *, entry_modules=ENTRY_MODULES, dynamic
          type(value['schema_version']) is int and value['schema_version'] == 1 and
          value['scope'] == scope and type(value['files']) is list and
          0 < len(value['files']) <= MAX_FILES, 'fixture_producer_manifest')
-    roots, refs, raw_files = required_sources(value['roots'], entry_modules=entry_modules, dynamic_paths=dynamic_paths)
+    roots, refs, raw_files = required_sources(value['roots'], entry_modules=entry_modules, dynamic_paths=dynamic_paths,scope=scope)
     need(Path(provider_root) == roots['runtime'] / PROVIDER_PREFIX, 'fixture_producer_provider_binding')
     expected = {}
     for row in value['files']:

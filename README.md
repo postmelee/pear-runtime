@@ -8,13 +8,33 @@ explicit-input Wine/FEX/graphics reconstruction and isolated candidate assembly.
 
 ## Status and boundaries
 
-Stage 3 reconstructed the selected component artifacts and assembled a separate
-signed development candidate. The existing seven-fixture execution adapter,
-affected host verification and final source-owner cutover remain later gates.
-Build, portable-test and signing evidence establishes no gameplay, Steamworks,
-distribution or complete Rosetta-independence claim.
+Stage 3 reconstructed the selected component artifacts. Candidate3 is a later
+signed development assembly using the same component build records and artifact
+refs. The recorded comparison checks all 2,824 bundle entries and 41 Mach-O
+code origins; their permitted differences are signing metadata. This does not
+renew historical fixture operations or grant current execution authority.
 
-Start with [reconstruction and recovery](docs/development.md), the
+All fifteen fresh candidate3 controls passed with independent release evidence:
+API, ABI, threads, window, three bootstrap controls, the seven D36 cases and
+visible presentation frames. The frame check covers three cycles and eighteen
+visible pixel/color/resize matches and GPU completion/present observations; three
+presented timestamps were positive and fifteen remained zero. The accepted reuse plan retains candidate2 CPU-specific, ordering,
+device, pairing and original-presentation evidence only within their unchanged
+input/source/payload scope. The AVX case remains explicitly unsupported with
+exit 77. Candidate2's unlocked eighteen-frame observation passed; earlier capture
+and native-window failures remain retained, not relabeled as passes.
+
+The Stage 4 portable evidence records 715 unique test IDs / 701 method bodies passed
+and a separate 174-test build/assembly gate. These overlapping evidence scopes are
+not summed and are not native or game qualification. The
+[196-method ownership map](provenance/paired-memory-methods.json) has accepted
+per-method dispositions. The recorded Stage 4 component checkpoints are published
+on the private repositories; collaborator access is required. Stage 5 publication
+and final source-owner cutover remain separate gates. Pear
+development selection uses separate Stage 5 source and execution gates. There is no gameplay, Steamworks, ordinary-user distribution, full clean
+restore or complete Rosetta-independence claim.
+
+Start with [reconstruction, controls and bounded recovery](docs/development.md), the
 [assembly request and CLI](docs/assembly.md), and the
 [exact selected component/recipe lock](locks/task56-reconstruction-v1.json).
 Required retained compiled/generated inputs and private local configuration are
@@ -42,6 +62,14 @@ are in the lock above:
 | [pear-wine](https://github.com/postmelee/pear-wine) | `4e819f054dd2d9ee855ee3f1e30d8c1bb8f80fcf` |
 | [pear-fex](https://github.com/postmelee/pear-fex) | `59f85d6b7df4eb053d2cc1b9d33411b4f31bfbaa` |
 | [pear-dxmt](https://github.com/postmelee/pear-dxmt) | `7c8dee1c2d73415301ceb7d1fa810861cef4cd67` |
+
+The historical builder is `c8887f9edaba57dffe7772cc26fd19aa9571d451`; the completed seven-fixture source
+checkpoint is `c13c7030ec3b780df12373cb9e0460bbcb5b0652`. Later test/tool work does not change the selected
+component build pins. [Revision roles](docs/development.md#build-pins-and-later-development-revisions)
+separates those identities from the committed Stage 4 tool revision
+`625fd0f97b9955e43f71cb7906ccc41d8f70853b`. Its
+[Stage 4 report](mydocs/working/task_m1_56_stage4.md) is published with that
+private checkpoint; later Stage 5 source and publication remain separate.
 
 ## Portable verification
 

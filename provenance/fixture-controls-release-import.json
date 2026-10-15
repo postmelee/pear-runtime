@@ -21,5 +21,45 @@
   "new_file_identity": {
     "sha256": "ab1572b4b662f68a8074893eec499a7e050fcdf99f43beccb8fb89613749bd55",
     "size_bytes": 13565
+  },
+  "stage5_current_checker_adaptation": {
+    "schema_version": 1,
+    "scope": "release_resource_oracle_extraction",
+    "previous_origin": {
+      "path": "pear_runtime/fixtures/release.py",
+      "sha256": "62e63b909e5859fda22715e82dc588d8afe563bde58dd4cbd51056813e841033",
+      "size_bytes": 13089
+    },
+    "current_checker": {
+      "path": "pear_runtime/fixtures/release.py",
+      "sha256": "1b8dcd722a80ce05131388b5689cf4927bdf98a32e8a0765522693e90ab42dab",
+      "size_bytes": 13375
+    },
+    "proof": {
+      "previous_runtime_commit": "625fd0f97b9955e43f71cb7906ccc41d8f70853b",
+      "unchanged_definitions": [
+        "identity",
+        "inputs",
+        "DarwinProbe",
+        "handles",
+        "lock_probe",
+        "inspect",
+        "main"
+      ],
+      "original_resource_ast_sha256": "9ea1e3112c7f2a09d4d565362c352d673b1c891ac51af12a00cc1207a71d17f2",
+      "current_resource_ast_sha256": "9ea1e3112c7f2a09d4d565362c352d673b1c891ac51af12a00cc1207a71d17f2",
+      "resource_body_equal": true,
+      "legacy_lock_behavior_preserved": true
+    }
+  },
+  "stage5_control_checker_adaptation": {
+    "current_file_identity": {
+      "path": "pear_runtime/fixtures/release_controls.py",
+      "sha256": "43e1659b60581a6310edcbe7c3fa6d1f476f038b19859aa4d6cbb9aff1712691",
+      "size_bytes": 16205
+    },
+    "change": "Replace only the original-file equality gate with an explicit closed adaptation binding before any probe; all operation/case schema checks, resource queries, verdict and final source rechecks remain unchanged.",
+    "historical_fields_retained": true,
+    "proof": "See provenance/fixture-game-seam.json for the later Stage5 source correspondence. The original origin and new_file_identity above remain historical, not current pins."
   }
 }

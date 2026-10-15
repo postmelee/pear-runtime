@@ -134,6 +134,11 @@
     "notice": "NOTICE.md",
     "reason": "Reviewed original Pear fixture/control import; existing file-specific terms retained. Exact origins and namespace/notice adaptations are recorded in provenance/fixture-*-import.json."
   },
+  "pear_runtime/fixtures/game_observations.py": {
+    "license": "MIT",
+    "notice": "LICENSES/MIT.txt",
+    "reason": "Retains original D36 game_owner.py copyright and MIT terms for the post-run canonical FEX observation seam. Original identities and exact adaptations are recorded in provenance/fixture-game-seam.json."
+  },
   "pear_runtime/fixtures/graphics/__init__.py": {
     "license": "MIT",
     "notice": "NOTICE.md",

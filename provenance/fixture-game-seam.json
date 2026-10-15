@@ -1,0 +1,436 @@
+{
+  "body_correspondence": {
+    "fixture_run_outside_extracted_block_equal": true,
+    "game_qualified": false,
+    "module_staging_body_equal_after_explicit_modules_parameter": true,
+    "normalization_limits": [
+      "AST comparison excludes source locations only.",
+      "Fixture projection removes only the named game_operation branches, takes the fixture else branch, and removes the newly restored started(loader) callback block.",
+      "Module staging comparison substitutes the explicit modules parameter and excludes its new exact two-name guard.",
+      "Resource oracle comparison removes only the final lock-availability term/returned lock field; legacy verdict wrapper retains that behavior."
+    ],
+    "old_runtime_checkpoint": "625fd0f97b9955e43f71cb7906ccc41d8f70853b",
+    "original_owned_top_level_statements": 40,
+    "original_three_parser_assignment_asts_equal": true,
+    "parser_assignment_ast_sha256": [
+      "1a36daebe2ab6135aade0dc835ffdec40b3f8a118a87a39f8bbc67129a93e2ba",
+      "3d1cb5e07c903c1185d496989d171ec9d237aa6a2e3400fe5c456d8da0f9b167",
+      "9c0444106bad4f5c8a5be864711ec2ae1d74d5a9bb655c7d00b7f5998de954dd"
+    ],
+    "release_resource_body_equal_after_lock_term_separation": true,
+    "runtime_execution_performed": false,
+    "schema_version": 1,
+    "shared_owned_block_fixture_projection_equal": true,
+    "unchanged_direct_definitions": [
+      "query_policy",
+      "execution_seconds",
+      "options",
+      "trace_environment",
+      "assess_trace",
+      "log_limit",
+      "assess_log_budget",
+      "signal_environment",
+      "assess_signal",
+      "read_sources",
+      "complete_provenance",
+      "finish_reason",
+      "sample_interval",
+      "SampleWindows",
+      "pump_observations",
+      "attached",
+      "thread_identities",
+      "assess"
+    ],
+    "unchanged_release_definitions": [
+      "identity",
+      "inputs",
+      "DarwinProbe",
+      "handles",
+      "lock_probe",
+      "inspect",
+      "main"
+    ]
+  },
+  "current_files": [
+    {
+      "kind": "canonical_runtime_source",
+      "license": "MIT",
+      "path": "pear_runtime/fixtures/context.py",
+      "sha256": "3a9c3d08bed8984ac78a87d50295ea61cc768eb726687929198ce19c5e623fe1",
+      "size_bytes": 24832
+    },
+    {
+      "kind": "canonical_runtime_source",
+      "license": "MIT",
+      "path": "pear_runtime/fixtures/direct.py",
+      "sha256": "0e5badf44ae6022b5bcfeb88cb2d6ab468eb0f4c036a34cee9a9716dde28a562",
+      "size_bytes": 54066
+    },
+    {
+      "kind": "canonical_runtime_source",
+      "license": "MIT",
+      "path": "pear_runtime/fixtures/game_observations.py",
+      "sha256": "d55c114d22ba299cb1b5a4ab041c9057f950dfc54d1ddb46e87ce4fc8a77f042",
+      "size_bytes": 2474
+    },
+    {
+      "kind": "canonical_runtime_source",
+      "license": "GPL-3.0-or-later",
+      "path": "pear_runtime/fixtures/game_operation.py",
+      "sha256": "5defc2ab0a40cf0e288ca24778cdbf7868715945ab6510c31df07497d65e30ed",
+      "size_bytes": 24696
+    },
+    {
+      "kind": "canonical_runtime_source",
+      "license": "GPL-3.0-or-later",
+      "path": "pear_runtime/fixtures/game_prerequisites.py",
+      "sha256": "fa40a6145eac4ccc729a2002c007b63aaf5d7ca68a1f55bdfe43afee80d930f4",
+      "size_bytes": 12910
+    },
+    {
+      "kind": "canonical_runtime_source",
+      "license": "GPL-3.0-or-later",
+      "path": "pear_runtime/fixtures/game_release.py",
+      "sha256": "aba5118994022108620c656e92b66244f09522cab9b81120cc8109499f501c77",
+      "size_bytes": 13174
+    },
+    {
+      "kind": "canonical_runtime_source",
+      "license": "GPL-3.0-or-later",
+      "path": "pear_runtime/fixtures/game_types.py",
+      "sha256": "f81869e72ba266c348d318a5642fd337506d6839e22c39faa18c0e5a8b70f181",
+      "size_bytes": 1792
+    },
+    {
+      "kind": "canonical_runtime_source",
+      "license": "GPL-3.0-or-later",
+      "path": "pear_runtime/fixtures/producers.py",
+      "sha256": "8787318c151223e66e5adb10f5ff261ca29bd2adf95b2fcd09c25ae99c52e705",
+      "size_bytes": 14490
+    },
+    {
+      "kind": "canonical_runtime_source",
+      "license": "GPL-3.0-or-later",
+      "path": "pear_runtime/fixtures/release.py",
+      "sha256": "1b8dcd722a80ce05131388b5689cf4927bdf98a32e8a0765522693e90ab42dab",
+      "size_bytes": 13375
+    },
+    {
+      "kind": "canonical_runtime_source",
+      "license": "GPL-3.0-or-later",
+      "path": "pear_runtime/fixtures/release_controls.py",
+      "sha256": "43e1659b60581a6310edcbe7c3fa6d1f476f038b19859aa4d6cbb9aff1712691",
+      "size_bytes": 16205
+    },
+    {
+      "kind": "canonical_runtime_source",
+      "license": "GPL-3.0-or-later",
+      "path": "pear_runtime/fixtures/supervision.py",
+      "sha256": "195b805d7094bd9639b6740fc60a663c74f71607584528ab9a2089cf8e5d19d5",
+      "size_bytes": 12319
+    },
+    {
+      "kind": "portable_test",
+      "license": "GPL-3.0-or-later",
+      "path": "tests/fixtures/test_game_candidate.py",
+      "sha256": "f8f557daee40dd949c16eb2cf7e4f379c3e4bb72753d60d13b5534e496083252",
+      "size_bytes": 5054
+    },
+    {
+      "kind": "portable_test",
+      "license": "GPL-3.0-or-later",
+      "path": "tests/fixtures/test_game_direct.py",
+      "sha256": "fe174689ffc8e672b81ce3df131a281c61ae263a226da5b62a96196313d82c36",
+      "size_bytes": 8081
+    },
+    {
+      "kind": "portable_test",
+      "license": "GPL-3.0-or-later",
+      "path": "tests/fixtures/test_game_observations.py",
+      "sha256": "9d287c8e0678ea3d224f3b3b1815bac72837422719d754aed359843dbdb7b9ac",
+      "size_bytes": 6525
+    },
+    {
+      "kind": "portable_test",
+      "license": "GPL-3.0-or-later",
+      "path": "tests/fixtures/test_game_operation.py",
+      "sha256": "8d8fff89b852cb71f0a25509672f3e66a034d3ec976fd6a47b35562cb0be8267",
+      "size_bytes": 14978
+    },
+    {
+      "kind": "portable_test",
+      "license": "GPL-3.0-or-later",
+      "path": "tests/fixtures/test_game_prerequisites.py",
+      "sha256": "8817e61534998251dc9dfbbed81ac108057b6d9324b9acbe545176f7d60e49b5",
+      "size_bytes": 11399
+    },
+    {
+      "kind": "portable_test",
+      "license": "GPL-3.0-or-later",
+      "path": "tests/fixtures/test_game_release.py",
+      "sha256": "6ce6683df23875a094c5145efacab271097086710fdd5f6ecfbee88163f59d1c",
+      "size_bytes": 11483
+    },
+    {
+      "kind": "portable_test",
+      "license": "GPL-3.0-or-later",
+      "path": "tests/fixtures/test_game_release_binding.py",
+      "sha256": "c78009cfe3f4dcd4d411aac2144b113289f7a547cac83de48551be35f4e7f6cb",
+      "size_bytes": 6367
+    },
+    {
+      "kind": "portable_test",
+      "license": "GPL-3.0-or-later",
+      "path": "tests/fixtures/test_game_seam.py",
+      "sha256": "d6c9f1d8ad818e2e47d4a29be018aafe22ea16a47c44c3546d3bea82e8145c6b",
+      "size_bytes": 10334
+    }
+  ],
+  "current_release_binding_correction": {
+    "checker_refs_count": 4,
+    "correspondence": {
+      "path": "Task56 retained evidence: fex/stage5-implementation/release-controls-correspondence-v2.json",
+      "sha256": "96261631df46b985f6ce753676e8992b4a48834de121d6bc2244ac4929fd6cdb",
+      "size_bytes": 1757
+    },
+    "metadata": {
+      "path": "provenance/fixture-controls-release-import.json",
+      "sha256": "d8dfef7668b3cc831b331c7dea53d70ad1912ed514d18dc0825bf8da302fd1a8",
+      "size_bytes": 3144
+    },
+    "previous_stage5_provenance": {
+      "path": "Task56 retained evidence: fex/stage5-implementation/fixture-game-seam.v1.json",
+      "sha256": "e1d69405e48e213b4ac3c8098bbf74354cb5e5f382d66b4dd6a378d503b7bd3a",
+      "size_bytes": 19752
+    },
+    "problem": "The old control release origin hash refused the reviewed release.py resource-oracle extraction before any host probe.",
+    "required_future_action": "Use the committed current checker for all fresh native/frames/fixture releases. The same four checker_refs already include the adaptation metadata, so no extra hidden proof input is added.",
+    "resolution": "The original origin, new_file_identity and all original proof fields remain unchanged. A closed current-checker adaptation binds the exact reviewed current release.py and resource-body/legacy-lock proof. release_controls validates it before any probe, then retains all original operation schema, resource and final-source checks."
+  },
+  "game_qualified": false,
+  "historical_checkpoint": "625fd0f97b9955e43f71cb7906ccc41d8f70853b",
+  "limitations": [
+    "Future game inputs, ownership checks, selected outputs and grants remain private and outside Git.",
+    "The 5400-second outer deadline includes admission/copy/prefix/manual/cleanup work; the live grant never extends it.",
+    "The independent release observes only the recorded original child identities/groups and exact owned output handles; missing identity or uncertain observations remain unknown.",
+    "Portable success does not establish a user-operable window, manual response, full CPU/game qualification, Steamworks support or distribution readiness."
+  ],
+  "original_sources": [
+    {
+      "commit": "625fd0f97b9955e43f71cb7906ccc41d8f70853b",
+      "path": "pear_runtime/fixtures/context.py",
+      "repository": "pear-runtime",
+      "sha256": "866db9f37ac64805a79334b2ecb61f3ecd559d103abfce1cf9e33f1a6a3fd6a5",
+      "size_bytes": 24018,
+      "source_state": "exact committed pre-adaptation bytes"
+    },
+    {
+      "commit": "625fd0f97b9955e43f71cb7906ccc41d8f70853b",
+      "path": "pear_runtime/fixtures/direct.py",
+      "repository": "pear-runtime",
+      "sha256": "979d1ce8398b54e97e3712c7f6c298e312da9f8405f70330c1ffdf6d5fdcd4b8",
+      "size_bytes": 44984,
+      "source_state": "exact committed pre-adaptation bytes"
+    },
+    {
+      "commit": "625fd0f97b9955e43f71cb7906ccc41d8f70853b",
+      "path": "pear_runtime/fixtures/producers.py",
+      "repository": "pear-runtime",
+      "sha256": "1ffa254beddc0da7f7882277bf94c623444a0dc51fbd9027c08c38e1d0ba72c9",
+      "size_bytes": 12612,
+      "source_state": "exact committed pre-adaptation bytes"
+    },
+    {
+      "commit": "625fd0f97b9955e43f71cb7906ccc41d8f70853b",
+      "path": "pear_runtime/fixtures/release.py",
+      "repository": "pear-runtime",
+      "sha256": "62e63b909e5859fda22715e82dc588d8afe563bde58dd4cbd51056813e841033",
+      "size_bytes": 13089,
+      "source_state": "exact committed pre-adaptation bytes"
+    },
+    {
+      "commit": "625fd0f97b9955e43f71cb7906ccc41d8f70853b",
+      "path": "pear_runtime/fixtures/supervision.py",
+      "repository": "pear-runtime",
+      "sha256": "6d16847b1745e37447c3fbd4e7435d39a6cd32c6f0d29137fb5fc8540485fbc3",
+      "size_bytes": 10244,
+      "source_state": "exact committed pre-adaptation bytes"
+    },
+    {
+      "content_committed_at_checkpoint": false,
+      "license": "MIT",
+      "path": ".build/task11/d36-runtime-preparation/game_owner.py",
+      "repository": "Pear",
+      "sha256": "ce24fed5c3837a2869382fb1d1a9fc5d27f2a49e22ece5e00d7c05c4e631e09f",
+      "size_bytes": 3697,
+      "source_state": "owner-accepted retained working-tree capture; commit alone does not reconstruct these bytes"
+    },
+    {
+      "content_committed_at_checkpoint": false,
+      "license": "MIT",
+      "path": "tools/steam/direct_v1.py",
+      "repository": "Pear",
+      "sha256": "da9554305e99f97821b81cb5ec0e3cb7ee1b6c0738d1846c4ef7d17d42d68635",
+      "size_bytes": 61845,
+      "source_state": "owner-accepted retained working-tree capture; commit alone does not reconstruct these bytes"
+    },
+    {
+      "commit": "625fd0f97b9955e43f71cb7906ccc41d8f70853b",
+      "path": "pear_runtime/fixtures/release_controls.py",
+      "repository": "pear-runtime",
+      "sha256": "ab1572b4b662f68a8074893eec499a7e050fcdf99f43beccb8fb89613749bd55",
+      "size_bytes": 13565,
+      "source_state": "exact committed pre-adaptation bytes"
+    }
+  ],
+  "post_test_description_correction": {
+    "after": {
+      "path": "pear_runtime/fixtures/direct.py",
+      "sha256": "0e5badf44ae6022b5bcfeb88cb2d6ab468eb0f4c036a34cee9a9716dde28a562",
+      "size_bytes": 54066
+    },
+    "before": {
+      "path": "pear_runtime/fixtures/direct.py",
+      "sha256": "b0a09ee04fb3cdd37091dda9678513245ca0c51ee3d436c1de670927736bec20",
+      "size_bytes": 53974
+    },
+    "difference": "Only the module docstring changed; all imports, constants, functions, classes, tests and oracles are unchanged.",
+    "game_qualified": false,
+    "module_ast_equal_excluding_docstring": true,
+    "prior_guarded_receipt_sha256": "196b94374c0e15d7849b6f9b290d90f43f207a9e0aa7f6c7d16bc9b0c3cfca23",
+    "runtime_execution_performed": false,
+    "schema_version": 1,
+    "scope": "Stage5 direct module-description correction"
+  },
+  "prepared_game_contract": {
+    "before_loader": "The live GameContext rechecks all original and copied files, encoded prepared values, tree, executable and target before the fixed loader.",
+    "frozen_dataclass": "Shallow freezing is not admission; all contained refs/values are rechecked.",
+    "source_files": "Exact original ordered list of 69 flat full facts, equal to [row.ref for row in descriptor.game_files]. Descriptor rows retain relative path + ref; they are not returned as source_files."
+  },
+  "preservation": {
+    "affected_current_sources": [
+      "pear_runtime/fixtures/context.py",
+      "pear_runtime/fixtures/direct.py",
+      "pear_runtime/fixtures/producers.py",
+      "pear_runtime/fixtures/release.py",
+      "pear_runtime/fixtures/supervision.py",
+      "pear_runtime/fixtures/release_controls.py"
+    ],
+    "assembly_driver": "Unchanged; the game uses the existing lease/deadline and a private lexical live guard.",
+    "historical_evidence": "Stage4 maps, paired196 source proofs, release snapshots and original controls remain bound to their recorded sources. This is a later adaptation record, not a silent repin.",
+    "original_provider": "All 17 retained provider source files remain exact. Original Session/DarwinObserver code is captured, not duplicated.",
+    "required_revalidation": "Fresh seven synthetic operations and release after the Stage5 source checkpoint; retained native/frames/CPU evidence needs its separate bounded reuse review."
+  },
+  "public_runtime_api": {
+    "game": "game_operation.execute(request_path, *, context, play_factory); internal direct.run_game requires the exact live GameOperation",
+    "inspection": "FixtureContext.inspect(output); game_operation.review(request_path, context)",
+    "release": "python -m pear_runtime.fixtures.game_release --request <closed request JSON> --output <fresh receipt JSON>"
+  },
+  "retention": {
+    "release": "No artifact deletion or old environment mutation is authorized by this metadata.",
+    "required": "Retain original captured source, Stage4 control/release provenance, immutable candidate/input packs, new operation outputs and companion evidence until exact downstream review/release conditions are satisfied."
+  },
+  "runtime_execution_performed": false,
+  "schema_version": 1,
+  "scope": "Stage5 development game seam adaptation",
+  "source_cutover": false,
+  "source_graph": {
+    "fex": "Five exact canonical Diagnostics files at the reviewed CPU/source commit root are inputs; artifact compilation and later developer-test export commits remain distinct.",
+    "fixture": "Default fixture closure remains runtime-only and refuses a Pear root or game entrypoints.",
+    "game": "Code-owned seven entry modules include the exact outer Pear selector, game policy family and game-only FEX observations; explicit roots and loaded-origin checks are mandatory.",
+    "witness": "Private config binds captured original provider source/provenance refs; child creates a private original companion namespace without old tools.wine imports or global source aliases."
+  },
+  "verification": {
+    "body_receipt": {
+      "path": "Task56 retained evidence: fex/stage5-implementation/body-correspondence.json",
+      "sha256": "d26a1c4b33d9fc924c114c1436a0b731505301b1513772cdfdd1800d1263a9d9",
+      "size_bytes": 2159
+    },
+    "claim_scope": "Portable synthetic/source checks only. No game, native runtime, signing, capture or compiler execution.",
+    "distinct_method_bodies": 157,
+    "errors": 0,
+    "failures": 0,
+    "guard": "No process launch, native library load or network access after stdlib ctypes self-handle initialization; no blocked attempts. Test-only FEX module imports are restored after each test.",
+    "guarded_receipt": {
+      "path": "Task56 retained evidence: fex/stage5-implementation/guarded-tests.json",
+      "sha256": "196b94374c0e15d7849b6f9b290d90f43f207a9e0aa7f6c7d16bc9b0c3cfca23",
+      "size_bytes": 22165
+    },
+    "portable_test_ids": 157,
+    "skips": 0,
+    "source_unchanged": "During the guarded run. The later module-docstring-only correction is separately bound below; all executable ASTs remain equal."
+  },
+  "verification_v2": {
+    "blocked_attempts": [],
+    "claim_scope": "Portable synthetic host-probe mocks and source/identity checks only; actual independent resource observations remain unperformed by this correction.",
+    "distinct_method_bodies": 189,
+    "errors": 0,
+    "failures": 0,
+    "guarded_receipt": {
+      "path": "Task56 retained evidence: fex/stage5-implementation/guarded-tests-v2.json",
+      "sha256": "93f94b33be30cc4dae010caf6bcf231bba5fedfe15ec71028f24f2898eb398e3",
+      "size_bytes": 27628
+    },
+    "portable_test_ids": 201,
+    "skips": 0,
+    "source_unchanged_during_tests": true
+  },
+  "whole_selected_game_owner": [
+    {
+      "current_disposition": "Explicit runtime/Pear/FEX producer roots and exact loaded-origin checks; canonical fixed selector, GameContext and FeedbackManualAdapter symbols. Historical sys.path and task-specific roots are not executed.",
+      "original_step": "Imports and fixed historical roots"
+    },
+    {
+      "current_disposition": "GameContext.fresh_output plus exclusive new game-operation directory, current request identity, one original global lease and private active operation. Existing outputs are refused.",
+      "original_step": "Single-use output and driver directories"
+    },
+    {
+      "current_disposition": "Static exact 15-control/three-release joins are prerequisites only. Fresh predecessor identity/group/handle observations occur under the actual lease; current runtime authority before and after remains required. GameOperation check/grant uses the same live operation, output, caller, phase and outer deadline.",
+      "original_step": "Historical game gate and activation/grant"
+    },
+    {
+      "current_disposition": "New operation record binds current request/producer/context/worker; original Pear manual policy forbids key/click automation. Task11 task number, coordination assignment and old human-reported symptom are historical annotations, not copied as observations of a future run.",
+      "original_step": "Started record and manual-only policy"
+    },
+    {
+      "current_disposition": "direct.run_game retains d25-game; observations on; no samples/fixture; menu trace; signal/query/link off; entry on; d25-game300; abort on; menu64; exact admitted FeedbackManualAdapter. Immutable input descriptor supplies the current runtime in place of the old runtime12 path.",
+      "original_step": "Fixed selected direct.run invocation"
+    },
+    {
+      "current_disposition": "One extracted direct._execute_owned retains all original fixture-projected statements. Game branch restores the original fixed executable arguments and started(loader) before the first poll. Full ordered flat69 input facts and all copied files are rechecked immediately before the fixed loader. Original cleanup and interruption propagation remain.",
+      "original_step": "Original owned lifecycle and game callback"
+    },
+    {
+      "current_disposition": "GameOperation.execute retains the first owned-run error, executes observations in finally, writes released failure evidence and reraises it. Observation/final receipt errors add notes instead of replacing the primary failure.",
+      "original_step": "Primary BaseException retention"
+    },
+    {
+      "current_disposition": "The original two partly overlapping owner timers are represented by one continuous outer game_worker_before_final_receipt wall/monotonic span, direct owned elapsed_ms and context phase times. Original manual adapter timing remains in its receipts. These are explicit new timing fields; no observed user-operable endpoint or manual response is claimed by portable tests.",
+      "original_step": "Continuous owner elapsed/feedback clocks"
+    },
+    {
+      "current_disposition": "game_observations.observe binds the exact case fact, owner_outcome, owner_error and play_handoff even on failed owned runs; unavailable case/log stays unavailable.",
+      "original_step": "Final case/outcome/error/handoff link"
+    },
+    {
+      "current_disposition": "Original attach, binding-census and slot-lifetime assignment ASTs and order are exact. The owned PID union uses the same case processes and registrations. The sole canonical Pear.Diagnostics readers supply implementations; one original BaseException handler prevents later oracles after an earlier parser error.",
+      "original_step": "Three selected FEX finally observations"
+    },
+    {
+      "current_disposition": "game_observations preserves the assessment ref and existing handoff-request, handoff-ack, companion-result and hud-result refs. Companion birth/group/exit evidence is additive in game_release.capture_companions, not inferred from log names.",
+      "original_step": "Final assessment and four play records"
+    },
+    {
+      "current_disposition": "The two old Task11 destinations are replaced by the new operation/case/assessment/fex-observations files. Old task/runtime/prefix/coordination files are never written. The selector returns the current operation/ref summary.",
+      "original_step": "Original task-local result and coordination publications"
+    },
+    {
+      "current_disposition": "A successful diagnostic still requires a separate game_release request/CLI. It checks main, witness, HUD and capture identities/groups and owned handles with original release probes/oracles; unknown/missing identities cannot pass. Historical resource observations are not live execution grants.",
+      "original_step": "Pending independent release"
+    },
+    {
+      "current_disposition": "A nonzero guest exit or owned image refusal may be a complete diagnostic observation, while original authority, host bootstrap, immutable inputs, complete streams and cleanup must pass. All game/guest/Steam qualification claims remain false or unperformed. Parser incompleteness now refuses an operation pass, an explicit stricter completion gate rather than a new parser oracle.",
+      "original_step": "Qualification boundary"
+    }
+  ]
+}
