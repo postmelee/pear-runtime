@@ -55,5 +55,15 @@
   "runtime_activation": false,
   "game_executed": false,
   "additional_deletion": false,
-  "publication": "Private final branch refs are verified after the bundled commits and recorded in the Pear final handoff. No public Pear publication is performed."
+  "publication": "Private final branch refs are verified after the bundled commits and recorded in the Pear final handoff. No public Pear publication is performed.",
+  "publication_link_verification": {
+    "pear_commit": "2bfcc9dff80212ba40b841a2fe6c32033ca0e801",
+    "receipt_sha256": "9ddabfc0c4dc99601b9a448617a399450532257e8a6c8398df3fbcd60285aa80",
+    "receipt_size_bytes": 1021,
+    "changed_document_files": [
+      "mydocs/working/task_m1_56_stage6.md",
+      "docs/development.md"
+    ],
+    "source_changed": false
+  }
 }

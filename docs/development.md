@@ -337,7 +337,7 @@ as a fresh native run.
 
 ## Pear-owned game policy and selection
 
-Pear owns its [development selection and game-policy guide](https://github.com/postmelee/pear/blob/codex/task56/docs/development/rosetta-free.md#select-an-isolated-development-candidate).
+Pear owns its [development selection and game-policy guide](https://github.com/postmelee/pear/blob/2bfcc9dff80212ba40b841a2fe6c32033ca0e801/docs/development/rosetta-free.md#select-an-isolated-development-candidate).
 That Pear revision is publication-pending; the local Task #56 checkout contains
 the draft until its separate public publication decision. The guide supplies the
 closed local selection shape and fixed commands. The runtime owns the single
@@ -380,7 +380,7 @@ source-to-PE binding and natural-call cause are unresolved. WGI work belongs in
 `Source/Windows/Common/PearFEXMemory.cpp`. WGI needs a new explicit recipe/input
 closure; the selected Wine recipe does not compile it.
 
-Use the existing [Pear game request and independent-release interface](https://github.com/postmelee/pear/blob/codex/task56/docs/development/rosetta-free.md#finish-a-future-game-diagnostic-with-independent-release).
+Use the existing [Pear game request and independent-release interface](https://github.com/postmelee/pear/blob/2bfcc9dff80212ba40b841a2fe6c32033ca0e801/docs/development/rosetta-free.md#finish-a-future-game-diagnostic-with-independent-release).
 The reviewed future request uses `manual_feedback_v1`, a 5,400-second whole bound
 and an 8 MiB worker-log limit. Its metadata-only plan needs 2,440,580,183 additional
 bytes plus 6,442,450,944 bytes of reserve, without assuming APFS savings. Before
@@ -563,3 +563,5 @@ graphics pack is larger again. Those exact packs remain required. A full clean
 restore or a new implementation build needs its own complete input and capacity
 plan. The original build receipts, artifact lock and new developer-tool revision
 remain separate evidence. No recovery command here grants execution permission.
+
+The linked Pear documents are pinned to the accepted Stage 5.2 checkpoint. Their public reachability awaits authorized publication of Pear ancestry; the local reviewed checkout contains those exact files.
