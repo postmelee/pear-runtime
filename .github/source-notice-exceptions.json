@@ -1,232 +1,377 @@
 {
   "pear_runtime/assembly/_transport.py": {
     "license": "MIT",
-    "reason": "Retains original Pear tools/steam/signing_group.py MIT terms; exact source identity and adaptations reviewed in provenance/assembly-import.json.",
-    "notice": "LICENSES/MIT.txt"
+    "notice": "LICENSES/MIT.txt",
+    "reason": "Retains original Pear tools/steam/signing_group.py MIT terms; exact source identity and adaptations reviewed in provenance/assembly-import.json."
   },
   "pear_runtime/fixtures/assessment/batch.py": {
     "license": "MIT",
-    "reason": "Reviewed original Pear fixture/control import; existing file-specific terms retained. Exact origins and namespace/notice adaptations are recorded in provenance/fixture-*-import.json.",
-    "notice": "NOTICE.md"
+    "notice": "NOTICE.md",
+    "reason": "Reviewed original Pear fixture/control import; existing file-specific terms retained. Exact origins and namespace/notice adaptations are recorded in provenance/fixture-*-import.json."
   },
   "pear_runtime/fixtures/assessment/early_wait.py": {
     "license": "MIT",
-    "reason": "Reviewed original Pear fixture/control import; existing file-specific terms retained. Exact origins and namespace/notice adaptations are recorded in provenance/fixture-*-import.json.",
-    "notice": "NOTICE.md"
+    "notice": "NOTICE.md",
+    "reason": "Reviewed original Pear fixture/control import; existing file-specific terms retained. Exact origins and namespace/notice adaptations are recorded in provenance/fixture-*-import.json."
   },
   "pear_runtime/fixtures/assessment/entry.py": {
     "license": "MIT",
-    "reason": "Reviewed original Pear fixture/control import; existing file-specific terms retained. Exact origins and namespace/notice adaptations are recorded in provenance/fixture-*-import.json.",
-    "notice": "NOTICE.md"
+    "notice": "NOTICE.md",
+    "reason": "Reviewed original Pear fixture/control import; existing file-specific terms retained. Exact origins and namespace/notice adaptations are recorded in provenance/fixture-*-import.json."
   },
   "pear_runtime/fixtures/assessment/failure.py": {
     "license": "MIT",
-    "reason": "Reviewed original Pear fixture/control import; existing file-specific terms retained. Exact origins and namespace/notice adaptations are recorded in provenance/fixture-*-import.json.",
-    "notice": "NOTICE.md"
+    "notice": "NOTICE.md",
+    "reason": "Reviewed original Pear fixture/control import; existing file-specific terms retained. Exact origins and namespace/notice adaptations are recorded in provenance/fixture-*-import.json."
   },
   "pear_runtime/fixtures/assessment/link.py": {
     "license": "MIT",
-    "reason": "Reviewed original Pear fixture/control import; existing file-specific terms retained. Exact origins and namespace/notice adaptations are recorded in provenance/fixture-*-import.json.",
-    "notice": "NOTICE.md"
+    "notice": "NOTICE.md",
+    "reason": "Reviewed original Pear fixture/control import; existing file-specific terms retained. Exact origins and namespace/notice adaptations are recorded in provenance/fixture-*-import.json."
   },
   "pear_runtime/fixtures/assessment/mutation_bound.py": {
     "license": "MIT",
-    "reason": "Reviewed original Pear fixture/control import; existing file-specific terms retained. Exact origins and namespace/notice adaptations are recorded in provenance/fixture-*-import.json.",
-    "notice": "NOTICE.md"
+    "notice": "NOTICE.md",
+    "reason": "Reviewed original Pear fixture/control import; existing file-specific terms retained. Exact origins and namespace/notice adaptations are recorded in provenance/fixture-*-import.json."
   },
   "pear_runtime/fixtures/assessment/pending_transition.py": {
     "license": "MIT",
-    "reason": "Reviewed original Pear fixture/control import; existing file-specific terms retained. Exact origins and namespace/notice adaptations are recorded in provenance/fixture-*-import.json.",
-    "notice": "NOTICE.md"
+    "notice": "NOTICE.md",
+    "reason": "Reviewed original Pear fixture/control import; existing file-specific terms retained. Exact origins and namespace/notice adaptations are recorded in provenance/fixture-*-import.json."
   },
   "pear_runtime/fixtures/assessment/query.py": {
     "license": "MIT",
-    "reason": "Reviewed original Pear fixture/control import; existing file-specific terms retained. Exact origins and namespace/notice adaptations are recorded in provenance/fixture-*-import.json.",
-    "notice": "NOTICE.md"
+    "notice": "NOTICE.md",
+    "reason": "Reviewed original Pear fixture/control import; existing file-specific terms retained. Exact origins and namespace/notice adaptations are recorded in provenance/fixture-*-import.json."
   },
   "pear_runtime/fixtures/assessment/query_context.py": {
     "license": "MIT",
-    "reason": "Reviewed original Pear fixture/control import; existing file-specific terms retained. Exact origins and namespace/notice adaptations are recorded in provenance/fixture-*-import.json.",
-    "notice": "NOTICE.md"
+    "notice": "NOTICE.md",
+    "reason": "Reviewed original Pear fixture/control import; existing file-specific terms retained. Exact origins and namespace/notice adaptations are recorded in provenance/fixture-*-import.json."
   },
   "pear_runtime/fixtures/assessment/repair_epoch.py": {
     "license": "MIT",
-    "reason": "Reviewed original Pear fixture/control import; existing file-specific terms retained. Exact origins and namespace/notice adaptations are recorded in provenance/fixture-*-import.json.",
-    "notice": "NOTICE.md"
+    "notice": "NOTICE.md",
+    "reason": "Reviewed original Pear fixture/control import; existing file-specific terms retained. Exact origins and namespace/notice adaptations are recorded in provenance/fixture-*-import.json."
   },
   "pear_runtime/fixtures/assessment/source_owner.py": {
     "license": "MIT",
-    "reason": "Reviewed original Pear fixture/control import; existing file-specific terms retained. Exact origins and namespace/notice adaptations are recorded in provenance/fixture-*-import.json.",
-    "notice": "NOTICE.md"
+    "notice": "NOTICE.md",
+    "reason": "Reviewed original Pear fixture/control import; existing file-specific terms retained. Exact origins and namespace/notice adaptations are recorded in provenance/fixture-*-import.json."
   },
   "pear_runtime/fixtures/assessment/string.py": {
     "license": "MIT",
-    "reason": "Reviewed original Pear fixture/control import; existing file-specific terms retained. Exact origins and namespace/notice adaptations are recorded in provenance/fixture-*-import.json.",
-    "notice": "NOTICE.md"
+    "notice": "NOTICE.md",
+    "reason": "Reviewed original Pear fixture/control import; existing file-specific terms retained. Exact origins and namespace/notice adaptations are recorded in provenance/fixture-*-import.json."
   },
   "pear_runtime/fixtures/assessment/wake.py": {
     "license": "MIT",
-    "reason": "Reviewed original Pear fixture/control import; existing file-specific terms retained. Exact origins and namespace/notice adaptations are recorded in provenance/fixture-*-import.json.",
-    "notice": "NOTICE.md"
+    "notice": "NOTICE.md",
+    "reason": "Reviewed original Pear fixture/control import; existing file-specific terms retained. Exact origins and namespace/notice adaptations are recorded in provenance/fixture-*-import.json."
   },
   "pear_runtime/fixtures/assessment/write.py": {
     "license": "MIT",
-    "reason": "Reviewed original Pear fixture/control import; existing file-specific terms retained. Exact origins and namespace/notice adaptations are recorded in provenance/fixture-*-import.json.",
-    "notice": "NOTICE.md"
+    "notice": "NOTICE.md",
+    "reason": "Reviewed original Pear fixture/control import; existing file-specific terms retained. Exact origins and namespace/notice adaptations are recorded in provenance/fixture-*-import.json."
   },
   "pear_runtime/fixtures/checks.py": {
     "license": "MIT",
-    "reason": "Reviewed original Pear fixture/control import; existing file-specific terms retained. Exact origins and namespace/notice adaptations are recorded in provenance/fixture-*-import.json.",
-    "notice": "NOTICE.md"
+    "notice": "NOTICE.md",
+    "reason": "Reviewed original Pear fixture/control import; existing file-specific terms retained. Exact origins and namespace/notice adaptations are recorded in provenance/fixture-*-import.json."
   },
   "pear_runtime/fixtures/context.py": {
     "license": "MIT",
-    "reason": "Reviewed original Pear fixture/control import; existing file-specific terms retained. Exact origins and namespace/notice adaptations are recorded in provenance/fixture-*-import.json.",
-    "notice": "NOTICE.md"
+    "notice": "NOTICE.md",
+    "reason": "Reviewed original Pear fixture/control import; existing file-specific terms retained. Exact origins and namespace/notice adaptations are recorded in provenance/fixture-*-import.json."
+  },
+  "pear_runtime/fixtures/controls/capture.py": {
+    "license": "MIT",
+    "notice": "NOTICE.md",
+    "reason": "Exact MIT Capture/FrameCapture class imports from tools/dxmt/translated_present_capture.py; source identities and notice-only additions are recorded in provenance/fixture-controls-execution-import.json. Adjacent NOTICE.md and LICENSES/MIT.txt retain the reviewed terms."
+  },
+  "pear_runtime/fixtures/controls/context.py": {
+    "license": "MIT",
+    "notice": "NOTICE.md",
+    "reason": "Retains the original MIT fixture-context admission model and shared-reader terms; the separate controls binding adaptations are recorded in provenance/fixture-controls-execution-import.json and provenance/fixture-context-import.json. Adjacent NOTICE.md and LICENSES/MIT.txt retain the reviewed terms."
   },
   "pear_runtime/fixtures/controls/corpus.py": {
     "license": "MIT",
-    "reason": "Reviewed original Pear fixture/control import; existing file-specific terms retained. Exact origins and namespace/notice adaptations are recorded in provenance/fixture-*-import.json.",
-    "notice": "NOTICE.md"
+    "notice": "NOTICE.md",
+    "reason": "Reviewed original Pear fixture/control import; existing file-specific terms retained. Exact origins and namespace/notice adaptations are recorded in provenance/fixture-*-import.json."
+  },
+  "pear_runtime/fixtures/controls/cpu_context.py": {
+    "license": "GPL-3.0-or-later AND MIT",
+    "notice": "NOTICE.md",
+    "reason": "Retains original MIT CPU/ordering/context assessment definitions with new GPL explicit-input execution glue; exact source, origin and adaptations are recorded in provenance/fixture-cpu-import.json. Adjacent NOTICE.md and LICENSES/MIT.txt retain the reviewed terms."
+  },
+  "pear_runtime/fixtures/controls/cpu_evidence.py": {
+    "license": "GPL-3.0-or-later AND MIT",
+    "notice": "NOTICE.md",
+    "reason": "Retains original MIT CPU/ordering/context assessment definitions with new GPL explicit-input execution glue; exact source, origin and adaptations are recorded in provenance/fixture-cpu-import.json. Adjacent NOTICE.md and LICENSES/MIT.txt retain the reviewed terms."
+  },
+  "pear_runtime/fixtures/controls/cpu_execution.py": {
+    "license": "GPL-3.0-or-later AND MIT",
+    "notice": "NOTICE.md",
+    "reason": "Retains original MIT CPU/ordering/context assessment definitions with new GPL explicit-input execution glue; exact source, origin and adaptations are recorded in provenance/fixture-cpu-import.json. Adjacent NOTICE.md and LICENSES/MIT.txt retain the reviewed terms."
+  },
+  "pear_runtime/fixtures/controls/execution.py": {
+    "license": "GPL-3.0-or-later AND MIT",
+    "notice": "NOTICE.md",
+    "reason": "New GPL admission/operation glue retains original MIT translated-check/pairing/run functions; exact symbol origins and namespace/diagnostic adaptations are recorded in provenance/fixture-controls-execution-import.json. Adjacent NOTICE.md and LICENSES/MIT.txt retain the reviewed terms."
   },
   "pear_runtime/fixtures/controls/pairing.py": {
     "license": "GPL-3.0-or-later AND MIT",
-    "reason": "Reviewed original Pear fixture/control import; existing file-specific terms retained. Exact origins and namespace/notice adaptations are recorded in provenance/fixture-*-import.json.",
-    "notice": "NOTICE.md"
+    "notice": "NOTICE.md",
+    "reason": "Reviewed original Pear fixture/control import; existing file-specific terms retained. Exact origins and namespace/notice adaptations are recorded in provenance/fixture-*-import.json."
   },
   "pear_runtime/fixtures/controls/presentation.py": {
     "license": "MIT",
-    "reason": "Reviewed original Pear fixture/control import; existing file-specific terms retained. Exact origins and namespace/notice adaptations are recorded in provenance/fixture-*-import.json.",
-    "notice": "NOTICE.md"
+    "notice": "NOTICE.md",
+    "reason": "Reviewed original Pear fixture/control import; existing file-specific terms retained. Exact origins and namespace/notice adaptations are recorded in provenance/fixture-*-import.json."
   },
   "pear_runtime/fixtures/direct.py": {
     "license": "MIT",
-    "reason": "Reviewed original Pear fixture/control import; existing file-specific terms retained. Exact origins and namespace/notice adaptations are recorded in provenance/fixture-*-import.json.",
-    "notice": "NOTICE.md"
+    "notice": "NOTICE.md",
+    "reason": "Reviewed original Pear fixture/control import; existing file-specific terms retained. Exact origins and namespace/notice adaptations are recorded in provenance/fixture-*-import.json."
   },
   "pear_runtime/fixtures/graphics/__init__.py": {
     "license": "MIT",
-    "reason": "Reviewed original Pear fixture/control import; existing file-specific terms retained. Exact origins and namespace/notice adaptations are recorded in provenance/fixture-*-import.json.",
-    "notice": "NOTICE.md"
+    "notice": "NOTICE.md",
+    "reason": "Reviewed original Pear fixture/control import; existing file-specific terms retained. Exact origins and namespace/notice adaptations are recorded in provenance/fixture-*-import.json."
   },
   "pear_runtime/fixtures/graphics/backend.py": {
     "license": "MIT",
-    "reason": "Reviewed original Pear fixture/control import; existing file-specific terms retained. Exact origins and namespace/notice adaptations are recorded in provenance/fixture-*-import.json.",
-    "notice": "NOTICE.md"
+    "notice": "NOTICE.md",
+    "reason": "Reviewed original Pear fixture/control import; existing file-specific terms retained. Exact origins and namespace/notice adaptations are recorded in provenance/fixture-*-import.json."
   },
   "pear_runtime/fixtures/graphics/render.py": {
     "license": "MIT",
-    "reason": "Reviewed original Pear fixture/control import; existing file-specific terms retained. Exact origins and namespace/notice adaptations are recorded in provenance/fixture-*-import.json.",
-    "notice": "NOTICE.md"
+    "notice": "NOTICE.md",
+    "reason": "Reviewed original Pear fixture/control import; existing file-specific terms retained. Exact origins and namespace/notice adaptations are recorded in provenance/fixture-*-import.json."
   },
   "pear_runtime/fixtures/inputs.py": {
     "license": "MIT",
-    "reason": "Reviewed original Pear fixture/control import; existing file-specific terms retained. Exact origins and namespace/notice adaptations are recorded in provenance/fixture-*-import.json.",
-    "notice": "NOTICE.md"
+    "notice": "NOTICE.md",
+    "reason": "Reviewed original Pear fixture/control import; existing file-specific terms retained. Exact origins and namespace/notice adaptations are recorded in provenance/fixture-*-import.json."
   },
   "pear_runtime/fixtures/types.py": {
     "license": "MIT",
-    "reason": "Reviewed original Pear fixture/control import; existing file-specific terms retained. Exact origins and namespace/notice adaptations are recorded in provenance/fixture-*-import.json.",
-    "notice": "NOTICE.md"
+    "notice": "NOTICE.md",
+    "reason": "Reviewed original Pear fixture/control import; existing file-specific terms retained. Exact origins and namespace/notice adaptations are recorded in provenance/fixture-*-import.json."
+  },
+  "tests/cpu/abi.c": {
+    "license": "MIT",
+    "notice": "NOTICE.md",
+    "reason": "Exact MIT source from Pear 951264bf5be4b9d2afb87320f5fac74778b2dd58 at tests/cpu/abi.c; provenance/cpu-source-import.json preserves its original identity and terms. The legacy missing leading copyright holder/year remains an explicit manual-review finding; frozen source bytes are not rewritten. Adjacent NOTICE.md and LICENSES/MIT.txt retain the reviewed terms."
+  },
+  "tests/cpu/cpu_legacy/correction.py": {
+    "license": "MIT",
+    "notice": "LICENSES/MIT.txt",
+    "reason": "Retain existing MIT terms; exact current bytes and original import/adaptation are recorded in provenance/cpu-test-reconciliation.json. This changes expected license metadata only and does not waive missing legacy leading headers or invent attribution."
+  },
+  "tests/cpu/cpu_legacy/qualification.py": {
+    "license": "MIT",
+    "notice": "LICENSES/MIT.txt",
+    "reason": "Retain existing MIT terms; exact current bytes and original import/adaptation are recorded in provenance/cpu-test-reconciliation.json. This changes expected license metadata only and does not waive missing legacy leading headers or invent attribution."
+  },
+  "tests/cpu/ordering.asm": {
+    "license": "MIT",
+    "notice": "NOTICE.md",
+    "reason": "Exact MIT source from Pear 951264bf5be4b9d2afb87320f5fac74778b2dd58 at tests/cpu/ordering.asm; provenance/cpu-source-import.json preserves its original identity and terms. The legacy missing leading copyright holder/year remains an explicit manual-review finding; frozen source bytes are not rewritten. Adjacent NOTICE.md and LICENSES/MIT.txt retain the reviewed terms."
+  },
+  "tests/cpu/ordering.c": {
+    "license": "MIT",
+    "notice": "NOTICE.md",
+    "reason": "Exact MIT source from Pear 951264bf5be4b9d2afb87320f5fac74778b2dd58 at tests/cpu/ordering.c; provenance/cpu-source-import.json preserves its original identity and terms. The legacy missing leading copyright holder/year remains an explicit manual-review finding; frozen source bytes are not rewritten. Adjacent NOTICE.md and LICENSES/MIT.txt retain the reviewed terms."
+  },
+  "tests/cpu/seh.c": {
+    "license": "MIT",
+    "notice": "NOTICE.md",
+    "reason": "Exact MIT source from Pear 951264bf5be4b9d2afb87320f5fac74778b2dd58 at tests/cpu/seh.c; provenance/cpu-source-import.json preserves its original identity and terms. The legacy missing leading copyright holder/year remains an explicit manual-review finding; frozen source bytes are not rewritten. Adjacent NOTICE.md and LICENSES/MIT.txt retain the reviewed terms."
+  },
+  "tests/cpu/test_correction_evidence.py": {
+    "license": "MIT",
+    "notice": "LICENSES/MIT.txt",
+    "reason": "Retain existing MIT terms; exact current bytes and original import/adaptation are recorded in provenance/cpu-test-reconciliation.json. This changes expected license metadata only and does not waive missing legacy leading headers or invent attribution."
+  },
+  "tests/cpu/test_qualification.py": {
+    "license": "MIT",
+    "notice": "LICENSES/MIT.txt",
+    "reason": "Retain existing MIT terms; exact current bytes and original import/adaptation are recorded in provenance/cpu-test-reconciliation.json. This changes expected license metadata only and does not waive missing legacy leading headers or invent attribution."
+  },
+  "tests/fex/ec_concurrent_lifetime.h": {
+    "license": "MIT",
+    "notice": "tests/fex/NOTICE.md",
+    "reason": "Retain existing MIT terms; exact current bytes and original import/adaptation are recorded in provenance/memory-fixture-source-import.json. This changes expected license metadata only and does not waive missing legacy leading headers or invent attribution."
+  },
+  "tests/fex/ec_memory_lifecycle.h": {
+    "license": "MIT",
+    "notice": "tests/fex/NOTICE.md",
+    "reason": "Retain existing MIT terms; exact current bytes and original import/adaptation are recorded in provenance/memory-fixture-source-import.json. This changes expected license metadata only and does not waive missing legacy leading headers or invent attribution."
+  },
+  "tests/fex/guest_api.c": {
+    "license": "MIT",
+    "notice": "NOTICE.md",
+    "reason": "Exact MIT source from Pear 951264bf5be4b9d2afb87320f5fac74778b2dd58 at tests/fex/guest_api.c; provenance/cpu-source-import.json preserves its original identity and terms. The legacy missing leading copyright holder/year remains an explicit manual-review finding; frozen source bytes are not rewritten. Adjacent NOTICE.md and LICENSES/MIT.txt retain the reviewed terms."
+  },
+  "tests/fex/guest_context.c": {
+    "license": "MIT",
+    "notice": "NOTICE.md",
+    "reason": "Exact MIT source from Pear 951264bf5be4b9d2afb87320f5fac74778b2dd58 at tests/fex/guest_context.c; provenance/cpu-source-import.json preserves its original identity and terms. The legacy missing leading copyright holder/year remains an explicit manual-review finding; frozen source bytes are not rewritten. Adjacent NOTICE.md and LICENSES/MIT.txt retain the reviewed terms."
+  },
+  "tests/fex/guest_exception.c": {
+    "license": "MIT",
+    "notice": "NOTICE.md",
+    "reason": "Exact MIT source from Pear 951264bf5be4b9d2afb87320f5fac74778b2dd58 at tests/fex/guest_exception.c; provenance/cpu-source-import.json preserves its original identity and terms. The legacy missing leading copyright holder/year remains an explicit manual-review finding; frozen source bytes are not rewritten. Adjacent NOTICE.md and LICENSES/MIT.txt retain the reviewed terms."
+  },
+  "tests/fex/guest_invalidation.c": {
+    "license": "MIT",
+    "notice": "NOTICE.md",
+    "reason": "Exact MIT source from Pear 951264bf5be4b9d2afb87320f5fac74778b2dd58 at tests/fex/guest_invalidation.c; provenance/cpu-source-import.json preserves its original identity and terms. The legacy missing leading copyright holder/year remains an explicit manual-review finding; frozen source bytes are not rewritten. Adjacent NOTICE.md and LICENSES/MIT.txt retain the reviewed terms."
+  },
+  "tests/fex/guest_thread.c": {
+    "license": "MIT",
+    "notice": "NOTICE.md",
+    "reason": "Exact MIT source from Pear 951264bf5be4b9d2afb87320f5fac74778b2dd58 at tests/fex/guest_thread.c; provenance/cpu-source-import.json preserves its original identity and terms. The legacy missing leading copyright holder/year remains an explicit manual-review finding; frozen source bytes are not rewritten. Adjacent NOTICE.md and LICENSES/MIT.txt retain the reviewed terms."
+  },
+  "tests/fex/memory/bitmap_selection_probe.c": {
+    "license": "MIT",
+    "notice": "tests/fex/NOTICE.md",
+    "reason": "Retain existing MIT terms; exact current bytes and original import/adaptation are recorded in provenance/memory-fixture-source-import.json. This changes expected license metadata only and does not waive missing legacy leading headers or invent attribution."
+  },
+  "tests/fex/memory/metadata_budget.cpp": {
+    "license": "MIT",
+    "notice": "tests/fex/NOTICE.md",
+    "reason": "Retain existing MIT terms; exact current bytes and original import/adaptation are recorded in provenance/memory-fixture-source-import.json. This changes expected license metadata only and does not waive missing legacy leading headers or invent attribution."
+  },
+  "tests/fex/memory/metadata_observation.c": {
+    "license": "MIT",
+    "notice": "tests/fex/NOTICE.md",
+    "reason": "Retain existing MIT terms; exact current bytes and original import/adaptation are recorded in provenance/memory-fixture-source-import.json. This changes expected license metadata only and does not waive missing legacy leading headers or invent attribution."
+  },
+  "tests/fex/memory/metadata_probe.c": {
+    "license": "MIT",
+    "notice": "tests/fex/NOTICE.md",
+    "reason": "Retain existing MIT terms; exact current bytes and original import/adaptation are recorded in provenance/memory-fixture-source-import.json. This changes expected license metadata only and does not waive missing legacy leading headers or invent attribution."
+  },
+  "tests/fex/memory/view_capacity.c": {
+    "license": "MIT",
+    "notice": "tests/fex/NOTICE.md",
+    "reason": "Retain existing MIT terms; exact current bytes and original import/adaptation are recorded in provenance/memory-fixture-source-import.json. This changes expected license metadata only and does not waive missing legacy leading headers or invent attribution."
+  },
+  "tests/fex/memory/virtual_free_provider.c": {
+    "license": "MIT",
+    "notice": "tests/fex/NOTICE.md",
+    "reason": "Retain existing MIT terms; exact current bytes and original import/adaptation are recorded in provenance/memory-fixture-source-import.json. This changes expected license metadata only and does not waive missing legacy leading headers or invent attribution."
   },
   "tests/fixtures/assessment/test_batch.py": {
     "license": "MIT",
-    "reason": "Reviewed original Pear fixture/control import; existing file-specific terms retained. Exact origins and namespace/notice adaptations are recorded in provenance/fixture-*-import.json.",
-    "notice": "NOTICE.md"
+    "notice": "NOTICE.md",
+    "reason": "Reviewed original Pear fixture/control import; existing file-specific terms retained. Exact origins and namespace/notice adaptations are recorded in provenance/fixture-*-import.json."
   },
   "tests/fixtures/assessment/test_early_wait.py": {
     "license": "MIT",
-    "reason": "Reviewed original Pear fixture/control import; existing file-specific terms retained. Exact origins and namespace/notice adaptations are recorded in provenance/fixture-*-import.json.",
-    "notice": "NOTICE.md"
+    "notice": "NOTICE.md",
+    "reason": "Reviewed original Pear fixture/control import; existing file-specific terms retained. Exact origins and namespace/notice adaptations are recorded in provenance/fixture-*-import.json."
   },
   "tests/fixtures/assessment/test_entry_v1.py": {
     "license": "MIT",
-    "reason": "Reviewed original Pear fixture/control import; existing file-specific terms retained. Exact origins and namespace/notice adaptations are recorded in provenance/fixture-*-import.json.",
-    "notice": "NOTICE.md"
+    "notice": "NOTICE.md",
+    "reason": "Reviewed original Pear fixture/control import; existing file-specific terms retained. Exact origins and namespace/notice adaptations are recorded in provenance/fixture-*-import.json."
   },
   "tests/fixtures/assessment/test_failure_v1.py": {
     "license": "MIT",
-    "reason": "Reviewed original Pear fixture/control import; existing file-specific terms retained. Exact origins and namespace/notice adaptations are recorded in provenance/fixture-*-import.json.",
-    "notice": "NOTICE.md"
+    "notice": "NOTICE.md",
+    "reason": "Reviewed original Pear fixture/control import; existing file-specific terms retained. Exact origins and namespace/notice adaptations are recorded in provenance/fixture-*-import.json."
   },
   "tests/fixtures/assessment/test_link_v1.py": {
     "license": "MIT",
-    "reason": "Reviewed original Pear fixture/control import; existing file-specific terms retained. Exact origins and namespace/notice adaptations are recorded in provenance/fixture-*-import.json.",
-    "notice": "NOTICE.md"
+    "notice": "NOTICE.md",
+    "reason": "Reviewed original Pear fixture/control import; existing file-specific terms retained. Exact origins and namespace/notice adaptations are recorded in provenance/fixture-*-import.json."
   },
   "tests/fixtures/assessment/test_mutation_bound.py": {
     "license": "MIT",
-    "reason": "Reviewed original Pear fixture/control import; existing file-specific terms retained. Exact origins and namespace/notice adaptations are recorded in provenance/fixture-*-import.json.",
-    "notice": "NOTICE.md"
+    "notice": "NOTICE.md",
+    "reason": "Reviewed original Pear fixture/control import; existing file-specific terms retained. Exact origins and namespace/notice adaptations are recorded in provenance/fixture-*-import.json."
   },
   "tests/fixtures/assessment/test_pending_transition.py": {
     "license": "MIT",
-    "reason": "Reviewed original Pear fixture/control import; existing file-specific terms retained. Exact origins and namespace/notice adaptations are recorded in provenance/fixture-*-import.json.",
-    "notice": "NOTICE.md"
+    "notice": "NOTICE.md",
+    "reason": "Reviewed original Pear fixture/control import; existing file-specific terms retained. Exact origins and namespace/notice adaptations are recorded in provenance/fixture-*-import.json."
   },
   "tests/fixtures/assessment/test_query_context_v1.py": {
     "license": "MIT",
-    "reason": "Reviewed original Pear fixture/control import; existing file-specific terms retained. Exact origins and namespace/notice adaptations are recorded in provenance/fixture-*-import.json.",
-    "notice": "NOTICE.md"
+    "notice": "NOTICE.md",
+    "reason": "Reviewed original Pear fixture/control import; existing file-specific terms retained. Exact origins and namespace/notice adaptations are recorded in provenance/fixture-*-import.json."
   },
   "tests/fixtures/assessment/test_query_v1.py": {
     "license": "MIT",
-    "reason": "Reviewed original Pear fixture/control import; existing file-specific terms retained. Exact origins and namespace/notice adaptations are recorded in provenance/fixture-*-import.json.",
-    "notice": "NOTICE.md"
+    "notice": "NOTICE.md",
+    "reason": "Reviewed original Pear fixture/control import; existing file-specific terms retained. Exact origins and namespace/notice adaptations are recorded in provenance/fixture-*-import.json."
   },
   "tests/fixtures/assessment/test_repair_epoch_v1.py": {
     "license": "MIT",
-    "reason": "Reviewed original Pear fixture/control import; existing file-specific terms retained. Exact origins and namespace/notice adaptations are recorded in provenance/fixture-*-import.json.",
-    "notice": "NOTICE.md"
+    "notice": "NOTICE.md",
+    "reason": "Reviewed original Pear fixture/control import; existing file-specific terms retained. Exact origins and namespace/notice adaptations are recorded in provenance/fixture-*-import.json."
   },
   "tests/fixtures/assessment/test_source_owner.py": {
     "license": "MIT",
-    "reason": "Reviewed original Pear fixture/control import; existing file-specific terms retained. Exact origins and namespace/notice adaptations are recorded in provenance/fixture-*-import.json.",
-    "notice": "NOTICE.md"
+    "notice": "NOTICE.md",
+    "reason": "Reviewed original Pear fixture/control import; existing file-specific terms retained. Exact origins and namespace/notice adaptations are recorded in provenance/fixture-*-import.json."
   },
   "tests/fixtures/assessment/test_string_checks.py": {
     "license": "MIT",
-    "reason": "Reviewed original Pear fixture/control import; existing file-specific terms retained. Exact origins and namespace/notice adaptations are recorded in provenance/fixture-*-import.json.",
-    "notice": "NOTICE.md"
+    "notice": "NOTICE.md",
+    "reason": "Reviewed original Pear fixture/control import; existing file-specific terms retained. Exact origins and namespace/notice adaptations are recorded in provenance/fixture-*-import.json."
   },
   "tests/fixtures/assessment/test_wake.py": {
     "license": "MIT",
-    "reason": "Reviewed original Pear fixture/control import; existing file-specific terms retained. Exact origins and namespace/notice adaptations are recorded in provenance/fixture-*-import.json.",
-    "notice": "NOTICE.md"
+    "notice": "NOTICE.md",
+    "reason": "Reviewed original Pear fixture/control import; existing file-specific terms retained. Exact origins and namespace/notice adaptations are recorded in provenance/fixture-*-import.json."
   },
   "tests/fixtures/assessment/test_write.py": {
     "license": "MIT",
-    "reason": "Reviewed original Pear fixture/control import; existing file-specific terms retained. Exact origins and namespace/notice adaptations are recorded in provenance/fixture-*-import.json.",
-    "notice": "NOTICE.md"
+    "notice": "NOTICE.md",
+    "reason": "Reviewed original Pear fixture/control import; existing file-specific terms retained. Exact origins and namespace/notice adaptations are recorded in provenance/fixture-*-import.json."
   },
   "tests/fixtures/controls/test_corpus_results.py": {
     "license": "MIT",
-    "reason": "Reviewed original Pear fixture/control import; existing file-specific terms retained. Exact origins and namespace/notice adaptations are recorded in provenance/fixture-*-import.json.",
-    "notice": "NOTICE.md"
+    "notice": "NOTICE.md",
+    "reason": "Reviewed original Pear fixture/control import; existing file-specific terms retained. Exact origins and namespace/notice adaptations are recorded in provenance/fixture-*-import.json."
+  },
+  "tests/fixtures/controls/test_cpu_execution_successors.py": {
+    "license": "MIT",
+    "notice": "LICENSES/MIT.txt",
+    "reason": "Retain existing MIT terms; exact current bytes and original import/adaptation are recorded in provenance/cpu-test-reconciliation.json. This changes expected license metadata only and does not waive missing legacy leading headers or invent attribution."
+  },
+  "tests/fixtures/controls/test_execution.py": {
+    "license": "GPL-3.0-or-later AND MIT",
+    "notice": "NOTICE.md",
+    "reason": "Portable controls tests retain original MIT-protocol test material alongside new GPL admission/failure controls; the imported source/protocol scope is recorded in provenance/fixture-controls-execution-import.json. Adjacent NOTICE.md and LICENSES/MIT.txt retain the reviewed terms."
   },
   "tests/fixtures/controls/test_ordering_results.py": {
     "license": "MIT",
-    "reason": "Reviewed original Pear fixture/control import; existing file-specific terms retained. Exact origins and namespace/notice adaptations are recorded in provenance/fixture-*-import.json.",
-    "notice": "NOTICE.md"
+    "notice": "NOTICE.md",
+    "reason": "Reviewed original Pear fixture/control import; existing file-specific terms retained. Exact origins and namespace/notice adaptations are recorded in provenance/fixture-*-import.json."
   },
   "tests/fixtures/controls/test_present_frames.py": {
     "license": "MIT",
-    "reason": "Reviewed original Pear fixture/control import; existing file-specific terms retained. Exact origins and namespace/notice adaptations are recorded in provenance/fixture-*-import.json.",
-    "notice": "NOTICE.md"
+    "notice": "NOTICE.md",
+    "reason": "Reviewed original Pear fixture/control import; existing file-specific terms retained. Exact origins and namespace/notice adaptations are recorded in provenance/fixture-*-import.json."
   },
   "tests/fixtures/controls/test_presentation_native.py": {
     "license": "MIT",
-    "reason": "Reviewed original Pear fixture/control import; existing file-specific terms retained. Exact origins and namespace/notice adaptations are recorded in provenance/fixture-*-import.json.",
-    "notice": "NOTICE.md"
+    "notice": "NOTICE.md",
+    "reason": "Reviewed original Pear fixture/control import; existing file-specific terms retained. Exact origins and namespace/notice adaptations are recorded in provenance/fixture-*-import.json."
   },
   "tests/fixtures/controls/test_surface_controls.py": {
     "license": "MIT",
-    "reason": "Reviewed original Pear fixture/control import; existing file-specific terms retained. Exact origins and namespace/notice adaptations are recorded in provenance/fixture-*-import.json.",
-    "notice": "NOTICE.md"
+    "notice": "NOTICE.md",
+    "reason": "Reviewed original Pear fixture/control import; existing file-specific terms retained. Exact origins and namespace/notice adaptations are recorded in provenance/fixture-*-import.json."
   },
   "tests/fixtures/graphics/test_original_rendering.py": {
     "license": "MIT",
-    "reason": "Reviewed original Pear fixture/control import; existing file-specific terms retained. Exact origins and namespace/notice adaptations are recorded in provenance/fixture-*-import.json.",
-    "notice": "NOTICE.md"
+    "notice": "NOTICE.md",
+    "reason": "Reviewed original Pear fixture/control import; existing file-specific terms retained. Exact origins and namespace/notice adaptations are recorded in provenance/fixture-*-import.json."
   }
 }

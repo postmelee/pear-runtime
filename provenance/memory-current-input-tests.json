@@ -1,0 +1,721 @@
+{
+  "schema_version": 1,
+  "scope": "historical_memory_methods_to_current_input_tests",
+  "original_plan_sha256": "dd6c15aa9ab760dc00a2feda609425ec6a062b576e676c1a7774e3eaebf094d4",
+  "distinct_test_bodies": 17,
+  "passing_refusal_or_positive_bodies": 17,
+  "characterization_bodies": 0,
+  "rows": [
+    {
+      "index": 1,
+      "original_id": "tests/fex/test_memory_check.py::BuildEnvelope.test_scope_and_boolean_versions_fail_before_any_byte_or_tool_read",
+      "original_sha256": "0b7f60494f2aee5ae440d08f62373c4ef810c5489a9507023fe3b311af51f988",
+      "current_contracts": [
+        {
+          "path": "pear_runtime/assembly/core.py",
+          "symbol": "_build_artifacts",
+          "line_start": 130,
+          "line_end": 162,
+          "sha256": "55675805f86085777e33930dce1a8703efebd5215de00d70d7d9b4c7dcb1bbce",
+          "reviewed_prior_sha256": "042d60b2be9447a6c7816b1ace158fd24a6c35cb0f9234b689f26f6122328fda"
+        }
+      ],
+      "proposed_destination": "tests/wine_integration/test_memory_current_inputs.py",
+      "status": "current_contract_test_adopted_not_original_body",
+      "legacy_method_executed": false,
+      "destination": {
+        "path": "tests/wine_integration/test_memory_current_inputs.py",
+        "symbol": "CurrentInputCases.test_scope_schema_and_claim_refusals_precede_artifact_reads",
+        "lines": [
+          39,
+          44
+        ]
+      }
+    },
+    {
+      "index": 2,
+      "original_id": "tests/fex/test_memory_fex_pair.py::SourceBounds.test_copy_refuses_existing_destination",
+      "original_sha256": "4ba5794fa301b5f06f22e816a6902c7c3bb0655a00a32df65209296b7421bdd0",
+      "current_contracts": [
+        {
+          "path": "pear_runtime/build.py",
+          "symbol": "Context.copy_input",
+          "line_start": 311,
+          "line_end": 320,
+          "sha256": "eed2094b12c64205ed740f71c95d0512943819289bc6749fac4a683da3d732f6",
+          "reviewed_prior_sha256": "eed2094b12c64205ed740f71c95d0512943819289bc6749fac4a683da3d732f6"
+        }
+      ],
+      "proposed_destination": "tests/wine_integration/test_memory_current_inputs.py",
+      "status": "current_contract_test_adopted_not_original_body",
+      "legacy_method_executed": false,
+      "destination": {
+        "path": "tests/wine_integration/test_memory_current_inputs.py",
+        "symbol": "CurrentInputCases.test_copy_existing_leaf_refused_without_overwrite",
+        "lines": [
+          50,
+          54
+        ]
+      }
+    },
+    {
+      "index": 3,
+      "original_id": "tests/fex/test_memory_fex_pair.py::SourceBounds.test_source_file_size_refused",
+      "original_sha256": "54157ae5821ab7423e250119d7a37f351ba1821f6b34fe2aa8382a14c07136d9",
+      "current_contracts": [
+        {
+          "path": "pear_runtime/fixtures/producers.py",
+          "symbol": "required_sources",
+          "line_start": 104,
+          "line_end": 142,
+          "sha256": "1ffa254beddc0da7f7882277bf94c623444a0dc51fbd9027c08c38e1d0ba72c9",
+          "reviewed_prior_sha256": "1ffa254beddc0da7f7882277bf94c623444a0dc51fbd9027c08c38e1d0ba72c9"
+        },
+        {
+          "path": "pear_runtime/fixtures/producers.py",
+          "symbol": "_read",
+          "line_start": 57,
+          "line_end": 61,
+          "sha256": "1ffa254beddc0da7f7882277bf94c623444a0dc51fbd9027c08c38e1d0ba72c9",
+          "reviewed_prior_sha256": "1ffa254beddc0da7f7882277bf94c623444a0dc51fbd9027c08c38e1d0ba72c9"
+        }
+      ],
+      "proposed_destination": "tests/wine_integration/test_memory_current_inputs.py",
+      "status": "current_contract_test_adopted_not_original_body",
+      "legacy_method_executed": false,
+      "destination": {
+        "path": "tests/wine_integration/test_memory_current_inputs.py",
+        "symbol": "CurrentInputCases.test_per_file_source_limit_refused",
+        "lines": [
+          108,
+          110
+        ]
+      }
+    },
+    {
+      "index": 4,
+      "original_id": "tests/fex/test_memory_fex_pair.py::SourceBounds.test_source_file_count_refused",
+      "original_sha256": "62f21a74ad43f3504020ea49f1ce999b675ecc11017bddcea53fc23ce565bb6c",
+      "current_contracts": [
+        {
+          "path": "pear_runtime/fixtures/producers.py",
+          "symbol": "required_sources",
+          "line_start": 104,
+          "line_end": 142,
+          "sha256": "1ffa254beddc0da7f7882277bf94c623444a0dc51fbd9027c08c38e1d0ba72c9",
+          "reviewed_prior_sha256": "1ffa254beddc0da7f7882277bf94c623444a0dc51fbd9027c08c38e1d0ba72c9"
+        },
+        {
+          "path": "pear_runtime/fixtures/producers.py",
+          "symbol": "_read",
+          "line_start": 57,
+          "line_end": 61,
+          "sha256": "1ffa254beddc0da7f7882277bf94c623444a0dc51fbd9027c08c38e1d0ba72c9",
+          "reviewed_prior_sha256": "1ffa254beddc0da7f7882277bf94c623444a0dc51fbd9027c08c38e1d0ba72c9"
+        }
+      ],
+      "proposed_destination": "tests/wine_integration/test_memory_current_inputs.py",
+      "status": "current_contract_test_adopted_not_original_body",
+      "legacy_method_executed": false,
+      "destination": {
+        "path": "tests/wine_integration/test_memory_current_inputs.py",
+        "symbol": "CurrentInputCases.test_source_count_limit_refused",
+        "lines": [
+          111,
+          113
+        ]
+      }
+    },
+    {
+      "index": 5,
+      "original_id": "tests/fex/test_memory_fex_pair.py::SnapshotControls.test_copy_name_mismatch",
+      "original_sha256": "f2b9804c659c5113ecaa50d1a6d173823f4847e072b915abf7e11677b0850086",
+      "current_contracts": [],
+      "proposed_destination": "tests/wine_integration/test_memory_current_inputs.py",
+      "status": "current_contract_test_adopted_not_original_body",
+      "legacy_method_executed": false,
+      "destination": {
+        "path": "tests/wine_integration/test_memory_current_inputs.py",
+        "symbol": "CurrentInputCases.test_snapshot_name_substitution_refused",
+        "lines": [
+          122,
+          128
+        ]
+      }
+    },
+    {
+      "index": 6,
+      "original_id": "tests/fex/test_memory_fex_pair.py::OutputControls.test_output_symlink",
+      "original_sha256": "1aff8b9857e4ac62bfb8ba956cdb4356a509b2fd155b2c8f20b716c02849d1d0",
+      "current_contracts": [
+        {
+          "path": "pear_runtime/build.py",
+          "symbol": "Context.record_output",
+          "line_start": 322,
+          "line_end": 327,
+          "sha256": "eed2094b12c64205ed740f71c95d0512943819289bc6749fac4a683da3d732f6",
+          "reviewed_prior_sha256": "eed2094b12c64205ed740f71c95d0512943819289bc6749fac4a683da3d732f6"
+        }
+      ],
+      "proposed_destination": "tests/wine_integration/test_memory_current_inputs.py",
+      "status": "current_contract_test_adopted_not_original_body",
+      "legacy_method_executed": false,
+      "destination": {
+        "path": "tests/wine_integration/test_memory_current_inputs.py",
+        "symbol": "CurrentInputCases.test_output_symlink_refused_before_fact_and_regular_control",
+        "lines": [
+          55,
+          60
+        ]
+      }
+    },
+    {
+      "index": 7,
+      "original_id": "tests/fex/test_memory_fex_pair.py::ByteAlgorithms.test_metadata_only_archive",
+      "original_sha256": "23079db5b67cdc43a906dc7295e8efcc829d1ed15bdd6e14d4df1d53ee3b5264",
+      "current_contracts": [
+        {
+          "path": "pear_runtime/recipes/fex.py",
+          "symbol": "archive_members",
+          "line_start": 31,
+          "line_end": 81,
+          "sha256": "254377d7a9ba69ebccdaafc2997671079dd3b7889e413c877b81c70d27fb4a8e",
+          "reviewed_prior_sha256": "254377d7a9ba69ebccdaafc2997671079dd3b7889e413c877b81c70d27fb4a8e"
+        }
+      ],
+      "proposed_destination": "tests/wine_integration/test_memory_current_inputs.py",
+      "status": "current_contract_test_adopted_not_original_body",
+      "legacy_method_executed": false,
+      "destination": {
+        "path": "tests/wine_integration/test_memory_current_inputs.py",
+        "symbol": "CurrentInputCases.test_metadata_only_and_empty_archive_refused",
+        "lines": [
+          68,
+          71
+        ]
+      }
+    },
+    {
+      "index": 8,
+      "original_id": "tests/fex/test_memory_fex_pair.py::AdmissionAndFailures.test_each_runtime_claim_refused",
+      "original_sha256": "ab1346621941290e325a7205154865dfbda4e0d1ba84a4f965429568240934c1",
+      "current_contracts": [
+        {
+          "path": "pear_runtime/build.py",
+          "symbol": "Context.finish",
+          "line_start": 430,
+          "line_end": 456,
+          "sha256": "eed2094b12c64205ed740f71c95d0512943819289bc6749fac4a683da3d732f6",
+          "reviewed_prior_sha256": "eed2094b12c64205ed740f71c95d0512943819289bc6749fac4a683da3d732f6"
+        }
+      ],
+      "proposed_destination": "tests/wine_integration/test_memory_current_inputs.py",
+      "status": "current_contract_test_adopted_not_original_body",
+      "legacy_method_executed": false,
+      "destination": {
+        "path": "tests/wine_integration/test_memory_current_inputs.py",
+        "symbol": "CurrentInputCases.test_finish_runtime_claim_override_cannot_succeed",
+        "lines": [
+          61,
+          67
+        ]
+      }
+    },
+    {
+      "index": 9,
+      "original_id": "tests/fex/test_memory_fex_pair.py::AdmissionAndFailures.test_native_errno_retained",
+      "original_sha256": "f9b3d2653068302f8e68a4b7a396c91509178d8af30c8b54a00b18f73778fc45",
+      "current_contracts": [
+        {
+          "path": "pear_runtime/assembly/core.py",
+          "symbol": "failure_details",
+          "line_start": 56,
+          "line_end": 62,
+          "sha256": "55675805f86085777e33930dce1a8703efebd5215de00d70d7d9b4c7dcb1bbce",
+          "reviewed_prior_sha256": "042d60b2be9447a6c7816b1ace158fd24a6c35cb0f9234b689f26f6122328fda"
+        }
+      ],
+      "proposed_destination": "tests/wine_integration/test_memory_current_inputs.py",
+      "status": "current_contract_test_adopted_not_original_body",
+      "legacy_method_executed": false,
+      "destination": {
+        "path": "tests/wine_integration/test_memory_current_inputs.py",
+        "symbol": "CurrentInputCases.test_native_errno_preserved",
+        "lines": [
+          72,
+          73
+        ]
+      }
+    },
+    {
+      "index": 10,
+      "original_id": "tests/fex/test_memory_fex_pair.py::AdmissionAndFailures.test_unknown_error_does_not_invent_native_error",
+      "original_sha256": "711e67b6985a54a2a0a752e9dfbea0eb93ca78b3fc19d73c6bff9b3f21488ca2",
+      "current_contracts": [
+        {
+          "path": "pear_runtime/assembly/core.py",
+          "symbol": "failure_details",
+          "line_start": 56,
+          "line_end": 62,
+          "sha256": "55675805f86085777e33930dce1a8703efebd5215de00d70d7d9b4c7dcb1bbce",
+          "reviewed_prior_sha256": "042d60b2be9447a6c7816b1ace158fd24a6c35cb0f9234b689f26f6122328fda"
+        }
+      ],
+      "proposed_destination": "tests/wine_integration/test_memory_current_inputs.py",
+      "status": "current_contract_test_adopted_not_original_body",
+      "legacy_method_executed": false,
+      "destination": {
+        "path": "tests/wine_integration/test_memory_current_inputs.py",
+        "symbol": "CurrentInputCases.test_non_os_failure_does_not_invent_errno",
+        "lines": [
+          74,
+          76
+        ]
+      }
+    },
+    {
+      "index": 11,
+      "original_id": "tests/fex/test_memory_fex_pair.py::ExactCommandControls.test_boolean_exit_refused",
+      "original_sha256": "a235f5d93fac888d4fd01a2ed9a46cbaff4de8f2dbca2151bd8739952bf43ec3",
+      "current_contracts": [
+        {
+          "path": "pear_runtime/assembly/core.py",
+          "symbol": "_build_artifacts",
+          "line_start": 130,
+          "line_end": 162,
+          "sha256": "55675805f86085777e33930dce1a8703efebd5215de00d70d7d9b4c7dcb1bbce",
+          "reviewed_prior_sha256": "042d60b2be9447a6c7816b1ace158fd24a6c35cb0f9234b689f26f6122328fda"
+        }
+      ],
+      "proposed_destination": "tests/wine_integration/test_memory_current_inputs.py",
+      "status": "current_contract_test_adopted_not_original_body",
+      "legacy_method_executed": false,
+      "destination": {
+        "path": "tests/wine_integration/test_memory_current_inputs.py",
+        "symbol": "CurrentInputCases.test_boolean_missing_failed_exit_and_error_refused",
+        "lines": [
+          45,
+          49
+        ]
+      }
+    },
+    {
+      "index": 12,
+      "original_id": "tests/fex/test_memory_fex_pair.py::ExactCommandControls.test_extra_argument_refused",
+      "original_sha256": "28246ae565c7b3550a94cb341910d4d0be2208b24976b9cdec1809b139c45395",
+      "current_contracts": [
+        {
+          "path": "pear_runtime/assembly/core.py",
+          "symbol": "checked_ref",
+          "line_start": 65,
+          "line_end": 77,
+          "sha256": "55675805f86085777e33930dce1a8703efebd5215de00d70d7d9b4c7dcb1bbce",
+          "reviewed_prior_sha256": "042d60b2be9447a6c7816b1ace158fd24a6c35cb0f9234b689f26f6122328fda"
+        }
+      ],
+      "proposed_destination": "tests/wine_integration/test_memory_current_inputs.py",
+      "status": "current_contract_test_adopted_not_original_body",
+      "legacy_method_executed": false,
+      "destination": {
+        "path": "tests/wine_integration/test_memory_current_inputs.py",
+        "symbol": "CurrentInputCases.test_bound_command_receipt_tamper_is_refused",
+        "lines": [
+          77,
+          84
+        ]
+      }
+    },
+    {
+      "index": 13,
+      "original_id": "tests/fex/test_memory_fex_pair.py::ExactCommandControls.test_environment_override_refused",
+      "original_sha256": "52955934dfe17491c47de524032f700ede2836111b0ba1865448e77a16ad5597",
+      "current_contracts": [
+        {
+          "path": "pear_runtime/assembly/core.py",
+          "symbol": "checked_ref",
+          "line_start": 65,
+          "line_end": 77,
+          "sha256": "55675805f86085777e33930dce1a8703efebd5215de00d70d7d9b4c7dcb1bbce",
+          "reviewed_prior_sha256": "042d60b2be9447a6c7816b1ace158fd24a6c35cb0f9234b689f26f6122328fda"
+        }
+      ],
+      "proposed_destination": "tests/wine_integration/test_memory_current_inputs.py",
+      "status": "current_contract_test_adopted_not_original_body",
+      "legacy_method_executed": false,
+      "destination": {
+        "path": "tests/wine_integration/test_memory_current_inputs.py",
+        "symbol": "CurrentInputCases.test_bound_command_receipt_tamper_is_refused",
+        "lines": [
+          77,
+          84
+        ]
+      }
+    },
+    {
+      "index": 14,
+      "original_id": "tests/fex/test_memory_fex_pair.py::ExactCommandControls.test_original_command_receipt_altered_refused",
+      "original_sha256": "7ad59f01d970820cf32b8355df15a5b1dec112415268fffc3bf2490c5c543d5b",
+      "current_contracts": [
+        {
+          "path": "pear_runtime/assembly/core.py",
+          "symbol": "checked_ref",
+          "line_start": 65,
+          "line_end": 77,
+          "sha256": "55675805f86085777e33930dce1a8703efebd5215de00d70d7d9b4c7dcb1bbce",
+          "reviewed_prior_sha256": "042d60b2be9447a6c7816b1ace158fd24a6c35cb0f9234b689f26f6122328fda"
+        }
+      ],
+      "proposed_destination": "tests/wine_integration/test_memory_current_inputs.py",
+      "status": "current_contract_test_adopted_not_original_body",
+      "legacy_method_executed": false,
+      "destination": {
+        "path": "tests/wine_integration/test_memory_current_inputs.py",
+        "symbol": "CurrentInputCases.test_bound_command_receipt_tamper_is_refused",
+        "lines": [
+          77,
+          84
+        ]
+      }
+    },
+    {
+      "index": 15,
+      "original_id": "tests/fex/test_memory_fex_pair.py::ExactCommandControls.test_failure_fields_not_positive",
+      "original_sha256": "d19863eeb593e2ea64cd38013c8244ae04e4a224dd47c28862fa3a76eacbbad7",
+      "current_contracts": [
+        {
+          "path": "pear_runtime/assembly/core.py",
+          "symbol": "_build_artifacts",
+          "line_start": 130,
+          "line_end": 162,
+          "sha256": "55675805f86085777e33930dce1a8703efebd5215de00d70d7d9b4c7dcb1bbce",
+          "reviewed_prior_sha256": "042d60b2be9447a6c7816b1ace158fd24a6c35cb0f9234b689f26f6122328fda"
+        }
+      ],
+      "proposed_destination": "tests/wine_integration/test_memory_current_inputs.py",
+      "status": "current_contract_test_adopted_not_original_body",
+      "legacy_method_executed": false,
+      "destination": {
+        "path": "tests/wine_integration/test_memory_current_inputs.py",
+        "symbol": "CurrentInputCases.test_boolean_missing_failed_exit_and_error_refused",
+        "lines": [
+          45,
+          49
+        ]
+      }
+    },
+    {
+      "index": 16,
+      "original_id": "tests/fex/test_memory_fex_pair.py::ReviewTwoControls.test_actual_selected_dependency_and_wire",
+      "original_sha256": "010b83f8dee375ecd65af5241a89491cc38fa5249531b40dd881a417988acab0",
+      "current_contracts": [
+        {
+          "path": "pear_runtime/recipes/fex.py",
+          "symbol": "reconstruct",
+          "line_start": 314,
+          "line_end": 432,
+          "sha256": "254377d7a9ba69ebccdaafc2997671079dd3b7889e413c877b81c70d27fb4a8e",
+          "reviewed_prior_sha256": "254377d7a9ba69ebccdaafc2997671079dd3b7889e413c877b81c70d27fb4a8e"
+        }
+      ],
+      "proposed_destination": "tests/wine_integration/test_memory_current_inputs.py",
+      "status": "pending_canonical_required_header_usage_assertion",
+      "legacy_method_executed": false,
+      "destination": null
+    },
+    {
+      "index": 17,
+      "original_id": "tests/fex/test_memory_fex_pair.py::PortabilityAndHelperControls.test_pinned_python_text_read_without_execution",
+      "original_sha256": "300d3de369d7a4fa3e3e4194cf18f168e98f64a9e3ec179b79040bf3e2ae49f7",
+      "current_contracts": [
+        {
+          "path": "pear_runtime/fixtures/producers.py",
+          "symbol": "required_sources",
+          "line_start": 104,
+          "line_end": 142,
+          "sha256": "1ffa254beddc0da7f7882277bf94c623444a0dc51fbd9027c08c38e1d0ba72c9",
+          "reviewed_prior_sha256": "1ffa254beddc0da7f7882277bf94c623444a0dc51fbd9027c08c38e1d0ba72c9"
+        },
+        {
+          "path": "pear_runtime/assembly/core.py",
+          "symbol": "checked_ref",
+          "line_start": 65,
+          "line_end": 77,
+          "sha256": "55675805f86085777e33930dce1a8703efebd5215de00d70d7d9b4c7dcb1bbce",
+          "reviewed_prior_sha256": "042d60b2be9447a6c7816b1ace158fd24a6c35cb0f9234b689f26f6122328fda"
+        }
+      ],
+      "proposed_destination": "tests/wine_integration/test_memory_current_inputs.py",
+      "status": "current_contract_test_adopted_not_original_body",
+      "legacy_method_executed": false,
+      "destination": {
+        "path": "tests/wine_integration/test_memory_current_inputs.py",
+        "symbol": "CurrentInputCases.test_source_text_is_data_not_executed",
+        "lines": [
+          105,
+          107
+        ]
+      }
+    },
+    {
+      "index": 18,
+      "original_id": "tests/fex/test_memory_fex_pair.py::PortabilityAndHelperControls.test_raw_noncanonical_components_not_normalized",
+      "original_sha256": "15acab82ba2b70aad94461831b2d26d98183e4a2906ac69ff872ab3849604e2b",
+      "current_contracts": [
+        {
+          "path": "pear_runtime/assembly/core.py",
+          "symbol": "checked_ref",
+          "line_start": 65,
+          "line_end": 77,
+          "sha256": "55675805f86085777e33930dce1a8703efebd5215de00d70d7d9b4c7dcb1bbce",
+          "reviewed_prior_sha256": "042d60b2be9447a6c7816b1ace158fd24a6c35cb0f9234b689f26f6122328fda"
+        }
+      ],
+      "proposed_destination": "tests/wine_integration/test_memory_current_inputs.py",
+      "status": "current_contract_test_adopted_not_original_body",
+      "legacy_method_executed": false,
+      "destination": {
+        "path": "tests/wine_integration/test_memory_current_inputs.py",
+        "symbol": "CurrentInputCases.test_raw_reference_lexical_spelling_and_symlink_refused",
+        "lines": [
+          90,
+          95
+        ]
+      }
+    },
+    {
+      "index": 19,
+      "original_id": "tests/fex/test_memory_fex_pair.py::PortabilityAndHelperControls.test_finite_snapshot_set_consumes_required_helper_input",
+      "original_sha256": "67eb96f87c315269056c894b866ea324ab1c8fc676f2918d82678449d0578644",
+      "current_contracts": [],
+      "proposed_destination": "tests/wine_integration/test_memory_current_inputs.py",
+      "status": "current_contract_test_adopted_not_original_body",
+      "legacy_method_executed": false,
+      "destination": {
+        "path": "tests/wine_integration/test_memory_current_inputs.py",
+        "symbol": "CurrentInputCases.test_source_count_limit_refused",
+        "lines": [
+          111,
+          113
+        ]
+      }
+    },
+    {
+      "index": 20,
+      "original_id": "tests/fex/test_memory_fex_pair.py::CanonicalGraphControls.test_root_relative_data_read_without_code_execution",
+      "original_sha256": "328aa22a4fe32c93b1bbcf89b616b7952785f645d691c1d3e1b9f32d175754f9",
+      "current_contracts": [
+        {
+          "path": "pear_runtime/fixtures/producers.py",
+          "symbol": "required_sources",
+          "line_start": 104,
+          "line_end": 142,
+          "sha256": "1ffa254beddc0da7f7882277bf94c623444a0dc51fbd9027c08c38e1d0ba72c9",
+          "reviewed_prior_sha256": "1ffa254beddc0da7f7882277bf94c623444a0dc51fbd9027c08c38e1d0ba72c9"
+        },
+        {
+          "path": "pear_runtime/recipes/fex.py",
+          "symbol": "bind_token",
+          "line_start": 213,
+          "line_end": 238,
+          "sha256": "254377d7a9ba69ebccdaafc2997671079dd3b7889e413c877b81c70d27fb4a8e",
+          "reviewed_prior_sha256": "254377d7a9ba69ebccdaafc2997671079dd3b7889e413c877b81c70d27fb4a8e"
+        }
+      ],
+      "proposed_destination": "tests/wine_integration/test_memory_current_inputs.py",
+      "status": "current_contract_test_adopted_not_original_body",
+      "legacy_method_executed": false,
+      "destination": {
+        "path": "tests/wine_integration/test_memory_current_inputs.py",
+        "symbol": "CurrentInputCases.test_source_text_is_data_not_executed",
+        "lines": [
+          105,
+          107
+        ]
+      }
+    },
+    {
+      "index": 21,
+      "original_id": "tests/fex/test_memory_fex_pair.py::CanonicalGraphControls.test_closed_reference_fields",
+      "original_sha256": "7af26a20d3941741927ff535de0080990353b18f45be27c57d4440c792d7addb",
+      "current_contracts": [
+        {
+          "path": "pear_runtime/assembly/core.py",
+          "symbol": "checked_ref",
+          "line_start": 65,
+          "line_end": 77,
+          "sha256": "55675805f86085777e33930dce1a8703efebd5215de00d70d7d9b4c7dcb1bbce",
+          "reviewed_prior_sha256": "042d60b2be9447a6c7816b1ace158fd24a6c35cb0f9234b689f26f6122328fda"
+        }
+      ],
+      "proposed_destination": "tests/wine_integration/test_memory_current_inputs.py",
+      "status": "current_contract_test_adopted_not_original_body",
+      "legacy_method_executed": false,
+      "destination": {
+        "path": "tests/wine_integration/test_memory_current_inputs.py",
+        "symbol": "CurrentInputCases.test_reference_fields_refused_before_any_fact",
+        "lines": [
+          85,
+          89
+        ]
+      }
+    },
+    {
+      "index": 22,
+      "original_id": "tests/fex/test_memory_fex_pair.py::CanonicalGraphControls.test_abi_one_wire_series_refused",
+      "original_sha256": "53bf8a186555eb957616d76324e0d515babfa1cc3ff2b3029d8c68ee7ffb0a99",
+      "current_contracts": [
+        {
+          "path": "pear_runtime/recipes/fex.py",
+          "symbol": "reconstruct",
+          "line_start": 314,
+          "line_end": 432,
+          "sha256": "254377d7a9ba69ebccdaafc2997671079dd3b7889e413c877b81c70d27fb4a8e",
+          "reviewed_prior_sha256": "254377d7a9ba69ebccdaafc2997671079dd3b7889e413c877b81c70d27fb4a8e"
+        }
+      ],
+      "proposed_destination": "tests/wine_integration/test_memory_current_inputs.py",
+      "status": "current_contract_test_adopted_not_original_body",
+      "legacy_method_executed": false,
+      "destination": {
+        "path": "tests/wine_integration/test_memory_current_inputs.py",
+        "symbol": "CurrentInputCases.test_wrong_wire_digest_refused_before_output_or_compile",
+        "lines": [
+          117,
+          121
+        ]
+      }
+    },
+    {
+      "index": 23,
+      "original_id": "tests/fex/test_memory_fex_pair.py::CurrentProjectionControlControls.test_changed_successful_clock_record_refused_after_binding",
+      "original_sha256": "4278d9be3804635d80fcda80d5be48a6cf5b98ce3592fcb518885c1c0c3aebde",
+      "current_contracts": [
+        {
+          "path": "pear_runtime/assembly/core.py",
+          "symbol": "checked_ref",
+          "line_start": 65,
+          "line_end": 77,
+          "sha256": "55675805f86085777e33930dce1a8703efebd5215de00d70d7d9b4c7dcb1bbce",
+          "reviewed_prior_sha256": "042d60b2be9447a6c7816b1ace158fd24a6c35cb0f9234b689f26f6122328fda"
+        }
+      ],
+      "proposed_destination": "tests/wine_integration/test_memory_current_inputs.py",
+      "status": "current_contract_test_adopted_not_original_body",
+      "legacy_method_executed": false,
+      "destination": {
+        "path": "tests/wine_integration/test_memory_current_inputs.py",
+        "symbol": "CurrentInputCases.test_bound_command_receipt_tamper_is_refused",
+        "lines": [
+          77,
+          84
+        ]
+      }
+    },
+    {
+      "index": 24,
+      "original_id": "tests/fex/test_memory_fex_pair.py::CurrentProjectionControlControls.test_wrong_schema_scope_or_kind_refused",
+      "original_sha256": "45a923e9fac96089f4c87a2d5753ad9df4302d3804187085dbbb02144703640c",
+      "current_contracts": [
+        {
+          "path": "pear_runtime/assembly/core.py",
+          "symbol": "_build_artifacts",
+          "line_start": 130,
+          "line_end": 162,
+          "sha256": "55675805f86085777e33930dce1a8703efebd5215de00d70d7d9b4c7dcb1bbce",
+          "reviewed_prior_sha256": "042d60b2be9447a6c7816b1ace158fd24a6c35cb0f9234b689f26f6122328fda"
+        }
+      ],
+      "proposed_destination": "tests/wine_integration/test_memory_current_inputs.py",
+      "status": "current_contract_test_adopted_not_original_body",
+      "legacy_method_executed": false,
+      "destination": {
+        "path": "tests/wine_integration/test_memory_current_inputs.py",
+        "symbol": "CurrentInputCases.test_scope_schema_and_claim_refusals_precede_artifact_reads",
+        "lines": [
+          39,
+          44
+        ]
+      }
+    },
+    {
+      "index": 25,
+      "original_id": "tests/fex/test_memory_fex_pair.py::CurrentProjectionControlControls.test_command_failed_or_unperformed_refused",
+      "original_sha256": "c2aeafd15cbbb05957a5df09218a8ec17b8af690bea7e2a8245583d94aa6a708",
+      "current_contracts": [
+        {
+          "path": "pear_runtime/assembly/core.py",
+          "symbol": "_build_artifacts",
+          "line_start": 130,
+          "line_end": 162,
+          "sha256": "55675805f86085777e33930dce1a8703efebd5215de00d70d7d9b4c7dcb1bbce",
+          "reviewed_prior_sha256": "042d60b2be9447a6c7816b1ace158fd24a6c35cb0f9234b689f26f6122328fda"
+        }
+      ],
+      "proposed_destination": "tests/wine_integration/test_memory_current_inputs.py",
+      "status": "current_contract_test_adopted_not_original_body",
+      "legacy_method_executed": false,
+      "destination": {
+        "path": "tests/wine_integration/test_memory_current_inputs.py",
+        "symbol": "CurrentInputCases.test_boolean_missing_failed_exit_and_error_refused",
+        "lines": [
+          45,
+          49
+        ]
+      }
+    },
+    {
+      "index": 26,
+      "original_id": "tests/fex/test_memory_fex_pair.py::CurrentProjectionControlControls.test_original_command_path_is_required",
+      "original_sha256": "e623d542b39671a8e27b084d3130f023f7b777164d9900cb1b6c46c0d2a56313",
+      "current_contracts": [
+        {
+          "path": "pear_runtime/assembly/core.py",
+          "symbol": "checked_ref",
+          "line_start": 65,
+          "line_end": 77,
+          "sha256": "55675805f86085777e33930dce1a8703efebd5215de00d70d7d9b4c7dcb1bbce",
+          "reviewed_prior_sha256": "042d60b2be9447a6c7816b1ace158fd24a6c35cb0f9234b689f26f6122328fda"
+        }
+      ],
+      "proposed_destination": "tests/wine_integration/test_memory_current_inputs.py",
+      "status": "current_contract_test_adopted_not_original_body",
+      "legacy_method_executed": false,
+      "destination": {
+        "path": "tests/wine_integration/test_memory_current_inputs.py",
+        "symbol": "CurrentInputCases.test_bound_command_receipt_tamper_is_refused",
+        "lines": [
+          77,
+          84
+        ]
+      }
+    }
+  ],
+  "license": "GPL-3.0-or-later",
+  "source_repository": "https://github.com/postmelee/pear",
+  "source_checkpoint": "951264bf5be4b9d2afb87320f5fac74778b2dd58",
+  "files": [
+    {
+      "path": "tests/wine_integration/test_memory_current_inputs.py",
+      "sha256": "79cb0f5f3fb9cf30062877934ff6af0ae32272054c6cd9185ee01a8010e77dda",
+      "size_bytes": 10714
+    }
+  ],
+  "limitations": [
+    "No historical collector/build method equivalence or native execution claim.",
+    "Required canonical wire/shared/private header usage remains pending; its acceptance characterization was not imported.",
+    "Original ABI2 protocol remains separate from current ABI3 source-owner contracts."
+  ],
+  "test_namespace": "Canonical tests.fixtures and tests.build imports; test-only isolated ctypes import stub in final-assessment snapshot refusal.",
+  "additional_diagnostic_test": {
+    "original_id": "tests/fex/test_memory_fex_pair.py::AdmissionAndFailures.test_attached_errno_retained",
+    "current_helper": "pear_runtime.assembly.helpers.signing_helpers: wrapped_error",
+    "current_core": "pear_runtime.assembly.core.failure_details",
+    "destination": {
+      "path": "tests/wine_integration/test_memory_current_inputs.py",
+      "symbol": "CurrentInputCases.test_original_wrapped_native_error_is_preserved_without_native_call"
+    },
+    "status": "current_provider_and_core_contract_not_original_body",
+    "scope": "Synthetic original-wrapper data only; no native command or new errno inference"
+  },
+  "additional_diagnostic_test_bodies": 1
+}

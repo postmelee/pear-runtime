@@ -2,16 +2,19 @@
 # SPDX-License-Identifier: MIT
 """Original CPU19 result tests; source generation tests remain with their owner."""
 import copy
+import importlib.util
 import unittest
 import tempfile
 import struct
 from pathlib import Path
 from pear_runtime.fixtures.controls.corpus import (
-    assess_records, canonical, digest, decode, admit_build, effective_case, rules, manifest)
+    assess_records, canonical, digest, decode, admit_build, effective_case, rules, manifest, bind_provider, _provider_pin)
 
 
 class HarnessTests(unittest.TestCase):
     def setUp(self):
+        spec=importlib.util.find_spec('Pear.Tools.CPU.adapt')
+        self.provider=bind_provider(Path(spec.origin).parents[3],_provider_pin()['commit'])
         self.manifest=manifest()
         self.hash=digest(canonical(self.manifest))
         ids=[c['id'] for c in self.manifest['cases']]+[c['id'] for c in self.manifest['boundaries'] if c['stage']==2]
@@ -19,7 +22,7 @@ class HarnessTests(unittest.TestCase):
                         cases=[dict(id=i,sha256='a'*64) for i in ids])
         rows=[]
         for c in self.manifest['cases']:
-            c=effective_case(c)
+            c=effective_case(c,provider=self.provider)
             rows.append(dict(id=c['id'],binary_sha256='a'*64,exit_code=42,outcome='exited',events=[
                 dict(event='begin',id=c['id'],manifest=self.hash,cpuid_ecx='0x0000000018000000',
                      cpuid_edx='0x0000000004000000',xcr0='0x0000000000000006',avx=True),
@@ -34,7 +37,7 @@ class HarnessTests(unittest.TestCase):
                       build_sha256=digest(canonical(self.build)),host=dict(native_machine=0x8664,process_machine=0,pointer_bits=64),cases=rows)
 
     def assess(self):
-        return assess_records(self.manifest,canonical(self.build),self.run,'native')
+        return assess_records(self.manifest,canonical(self.build),self.run,'native',provider=self.provider)
 
     def rejected(self,reason):
         with self.assertRaisesRegex(ValueError,reason):self.assess()
@@ -46,13 +49,13 @@ class HarnessTests(unittest.TestCase):
             for row in self.build['cases']:
                 row.update(path=row['id']+'.exe',sha256=digest(pe));(root/row['path']).write_bytes(pe)
             raw=canonical(self.manifest).replace(b'\n',b'\r\n')
-            self.assertEqual(len(admit_build(self.manifest,raw,self.build,root)),19)
+            self.assertEqual(len(admit_build(self.manifest,raw,self.build,root,provider=self.provider)),19)
             changed=copy.deepcopy(self.manifest);changed['version']=999
-            with self.assertRaisesRegex(ValueError,'build_manifest'):admit_build(changed,canonical(changed),self.build,root)
+            with self.assertRaisesRegex(ValueError,'build_manifest'):admit_build(changed,canonical(changed),self.build,root,provider=self.provider)
 
     def test_declared_adaptation_preserves_original_outputs_and_boundary(self):
         case=next(c for c in self.manifest['cases'] if c['id']=='absolute-displacement')
-        actual=effective_case(case)
+        actual=effective_case(case,provider=self.provider)
         self.assertEqual(actual['contract']['expectations'][:-1],case['contract']['expectations'])
         self.assertEqual(actual['contract']['expectations'][-1],dict(register='R8',lane=0,value='0x000000007ffffff8'))
         self.assertEqual(actual['contract']['regions'],[dict(address=0x1000f000,size=4096)])

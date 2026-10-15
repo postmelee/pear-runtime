@@ -1,0 +1,24 @@
+{
+  "schema_version": 1,
+  "scope": "Historical CPU import provenance license-label erratum",
+  "affected_manifest": {
+    "path": "provenance/fixture-cpu-import.json",
+    "sha256": "1661a225145f9b52aa73957385bc5977cf3d89804ae829570874987ded0e909a",
+    "size_bytes": 8399
+  },
+  "entry": {
+    "path": "pear_runtime/fixtures/controls/cpu_driver.py",
+    "sha256": "2d34589fd2a58bd7c83429a45fdad0ff5d08664d11311a7b0524239654e84643",
+    "size_bytes": 9865,
+    "recorded_license_label": "GPL-3.0-or-later AND MIT",
+    "authoritative_source_spdx": "GPL-3.0-or-later",
+    "corrected_license_label": "GPL-3.0-or-later"
+  },
+  "frozen_execution_closure": {
+    "producer_manifest_sha256": "b07b529b16f1853d06653f21c0b88ac05e2fd8812f70b7881f47b75a3f87f72c",
+    "producer_file_count": 69,
+    "this_erratum_is_an_execution_input": false,
+    "historical_manifest_preserved": true
+  },
+  "effect": "This separately reviewed label correction records the existing source notice. It changes no source bytes, licenses, runtime artifacts, executed oracles, historical receipt identities or qualification claims. It performs no execution and does not relicense any file."
+}

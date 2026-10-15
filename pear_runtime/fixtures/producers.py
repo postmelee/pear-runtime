@@ -61,10 +61,16 @@ def _read(root, path):
     return raw, {'path': str(target), 'sha256': hashlib.sha256(raw).hexdigest(), 'size_bytes': len(raw)}
 
 
+def _fex_module(module):
+    return (module in ('Pear', 'Pear.Tools') or module == 'Pear.Diagnostics' or
+            module.startswith('Pear.Diagnostics.') or module == 'Pear.Tools.CPU' or
+            module.startswith('Pear.Tools.CPU.'))
+
+
 def _module_location(module, roots, *, optional=False):
     if module == 'pear_runtime' or module.startswith('pear_runtime.'):
         owner = 'runtime'
-    elif module == 'Pear' or module.startswith('Pear.Diagnostics'):
+    elif _fex_module(module):
         need('fex' in roots, 'fixture_producer_fex_root_required'); owner = 'fex'
     else:
         return None
@@ -72,15 +78,34 @@ def _module_location(module, roots, *, optional=False):
     candidates = [p for p in (name + '.py', name + '/__init__.py') if (roots[owner] / p).is_file()]
     need(len(candidates) <= 1, 'fixture_producer_ambiguous_module')
     if candidates: return owner, candidates[0]
-    if owner == 'fex' and module in ('Pear', 'Pear.Diagnostics'): return None
+    if owner == 'fex' and module in ('Pear', 'Pear.Diagnostics', 'Pear.Tools', 'Pear.Tools.CPU'): return None
     need(optional, 'fixture_producer_module_missing')
     return None
 
 
-def required_sources(roots):
+SCOPES = frozenset(('fixture_producer_sources', 'fixture_controls_producer_sources',
+                    'fixture_native_producer_sources', 'fixture_cpu_producer_sources'))
+
+
+def closure_options(entry_modules, dynamic_paths, scope='fixture_producer_sources'):
+    """Code-owned closure entrypoints; descriptors cannot choose their own code."""
+    need(type(entry_modules) is tuple and 0 < len(entry_modules) <= 32 and
+         len(set(entry_modules)) == len(entry_modules) and
+         all(type(name) is str and name.startswith('pear_runtime.') and
+             all(part.isidentifier() for part in name.split('.')) for name in entry_modules),
+         'fixture_producer_entrypoints')
+    need(type(dynamic_paths) is tuple and len(dynamic_paths) <= 128 and
+         len(set(dynamic_paths)) == len(dynamic_paths) and
+         all(type(path) is str for path in dynamic_paths), 'fixture_producer_dynamic_paths')
+    for path in dynamic_paths: relative(path)
+    need(type(scope) is str and scope in SCOPES, 'fixture_producer_scope')
+
+
+def required_sources(roots, *, entry_modules=ENTRY_MODULES, dynamic_paths=DYNAMIC_PATHS):
     """Read the exact current local closure without importing source or writing."""
+    closure_options(entry_modules, dynamic_paths)
     roots = _root_map(roots); refs, raw_files, visited = {}, {}, set()
-    pending = list(ENTRY_MODULES)
+    pending = list(entry_modules)
     while pending:
         module = pending.pop()
         if module in visited: continue
@@ -102,12 +127,12 @@ def required_sources(roots):
                 base = importlib.util.resolve_name('.' * node.level + (node.module or ''), package) if node.level else node.module
                 if not base: continue
                 if _module_location(base, roots) is not None: pending.append(base)
-                if base == 'pear_runtime' or base.startswith('pear_runtime.') or base == 'Pear' or base.startswith('Pear.Diagnostics'):
+                if base == 'pear_runtime' or base.startswith('pear_runtime.') or _fex_module(base):
                     for alias in node.names:
                         need(alias.name != '*', 'fixture_producer_star_import')
                         child = base + '.' + alias.name
                         if _module_location(child, roots, optional=True) is not None: pending.append(child)
-    dynamic = (*DYNAMIC_PATHS, *(PROVIDER_PREFIX + p for p in supervision.SOURCE_PATHS))
+    dynamic = (*dynamic_paths, *(PROVIDER_PREFIX + p for p in supervision.SOURCE_PATHS))
     for path in dynamic:
         location = ('runtime', path)
         raw_files[location], refs[location] = _read(roots['runtime'], path)
@@ -117,10 +142,12 @@ def required_sources(roots):
     return roots, refs, raw_files
 
 
-def manifest_for_roots(roots):
+def manifest_for_roots(roots, *, entry_modules=ENTRY_MODULES, dynamic_paths=DYNAMIC_PATHS,
+                       scope='fixture_producer_sources'):
     """Prepare a reviewable manifest; the caller must pin it before admission."""
-    admitted, refs, _ = required_sources(roots)
-    return {'schema_version': 1, 'scope': 'fixture_producer_sources',
+    closure_options(entry_modules, dynamic_paths, scope)
+    admitted, refs, _ = required_sources(roots, entry_modules=entry_modules, dynamic_paths=dynamic_paths)
+    return {'schema_version': 1, 'scope': scope,
             'roots': {k: str(v) for k, v in admitted.items()},
             'files': [dict(root=k[0], path=k[1], sha256=v['sha256'], size_bytes=v['size_bytes'])
                       for k, v in sorted(refs.items())]}
@@ -129,7 +156,7 @@ def manifest_for_roots(roots):
 def _loaded_sources(refs):
     allowed = {row['path'] for row in refs.values()}
     for name, module in tuple(sys.modules.items()):
-        if name == 'pear_runtime' or name.startswith('pear_runtime.') or name.startswith('Pear.Diagnostics'):
+        if name == 'pear_runtime' or name.startswith('pear_runtime.') or _fex_module(name):
             path = getattr(module, '__file__', None)
             if path is not None:
                 need(str(Path(path).resolve(strict=True)) in allowed, 'fixture_producer_loaded_source')
@@ -142,13 +169,17 @@ class CapturedSources:
     refs: dict
     raw_files: dict
     manifest_bytes: bytes
+    entry_modules: tuple = ENTRY_MODULES
+    dynamic_paths: tuple = DYNAMIC_PATHS
+    scope: str = 'fixture_producer_sources'
 
     @property
     def logical_bytes(self):
         return sum(len(v) for v in self.raw_files.values()) + len(self.manifest_bytes)
 
     def recheck(self):
-        current = capture(self.manifest_ref, self.roots['runtime'] / PROVIDER_PREFIX)
+        current = capture(self.manifest_ref, self.roots['runtime'] / PROVIDER_PREFIX,
+                          entry_modules=self.entry_modules, dynamic_paths=self.dynamic_paths, scope=self.scope)
         need(current.refs == self.refs and current.manifest_bytes == self.manifest_bytes,
              'direct_producer_changed_during_run')
 
@@ -175,13 +206,15 @@ class CapturedSources:
         return rows
 
 
-def capture(manifest_ref, provider_root):
+def capture(manifest_ref, provider_root, *, entry_modules=ENTRY_MODULES, dynamic_paths=DYNAMIC_PATHS,
+            scope='fixture_producer_sources'):
+    closure_options(entry_modules, dynamic_paths, scope)
     value = core.read_ref(manifest_ref)
     need(type(value) is dict and set(value) == {'schema_version', 'scope', 'roots', 'files'} and
          type(value['schema_version']) is int and value['schema_version'] == 1 and
-         value['scope'] == 'fixture_producer_sources' and type(value['files']) is list and
+         value['scope'] == scope and type(value['files']) is list and
          0 < len(value['files']) <= MAX_FILES, 'fixture_producer_manifest')
-    roots, refs, raw_files = required_sources(value['roots'])
+    roots, refs, raw_files = required_sources(value['roots'], entry_modules=entry_modules, dynamic_paths=dynamic_paths)
     need(Path(provider_root) == roots['runtime'] / PROVIDER_PREFIX, 'fixture_producer_provider_binding')
     expected = {}
     for row in value['files']:
@@ -201,4 +234,5 @@ def capture(manifest_ref, provider_root):
     manifest_bytes = read_relative(manifest_path.parent, manifest_path.name, FILE_LIMIT)
     need(hashlib.sha256(manifest_bytes).hexdigest() == manifest_ref['sha256'] and
          len(manifest_bytes) == manifest_ref['size_bytes'], 'fixture_producer_manifest_changed')
-    return CapturedSources(dict(manifest_ref), roots, refs, raw_files, manifest_bytes)
+    return CapturedSources(dict(manifest_ref), roots, refs, raw_files, manifest_bytes,
+                           entry_modules, dynamic_paths, scope)

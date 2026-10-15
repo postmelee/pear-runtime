@@ -1,0 +1,3832 @@
+{
+  "schema_version": 1,
+  "scope": "wine_integration_test_source_import",
+  "original_repository": "https://github.com/postmelee/pear",
+  "original_checkpoint": "951264bf5be4b9d2afb87320f5fac74778b2dd58",
+  "license": "GPL-3.0-or-later",
+  "license_basis": "Original Pear source without separate inline license retains repository GPL-3.0-or-later adoption; copyright/SPDX notice-only additions recorded. No proprietary payload or executable upstream runtime is imported.",
+  "authority": "Test-owned pure readers are single runtime ownership; no executable legacy builder, materializer, signing flow or launcher is duplicated. Existing runtime modules remain sole production authority.",
+  "runtime_execution_performed": false,
+  "game_qualified": false,
+  "imports": [
+    {
+      "source": "tools/fex/memory_wine_bitmap.py",
+      "sha256": "0ff8b9d725ae7f53f91e42cf6b7820c056d53ab85eea2dce2ee68a236c1c81c0",
+      "size_bytes": 19865,
+      "destination": "tests/wine_integration/oracles/bitmap.py",
+      "imported_sha256": "ade8c806f8f51b3b1e17344ae5512e219dade99efb40b809531f831708af2034",
+      "transformation": "Copyright/SPDX notice addition; all original module bytes unchanged."
+    },
+    {
+      "source": "tools/fex/memory_resume_checks.py",
+      "sha256": "a7d5b1b7b68c290eb367e832baf881b3f2d2d19b0ba41c50687b86918370fad7",
+      "size_bytes": 10482,
+      "destination": "tests/wine_integration/oracles/resume.py",
+      "imported_sha256": "d7d6509c21c2dc4573ec87122dbdd1ad3c00acb20aff755412ee267ef4f3520e",
+      "transformation": "Copyright/SPDX notice addition; all original module bytes unchanged."
+    },
+    {
+      "source": "tests/fex/test_memory_wine_bitmap.py",
+      "sha256": "36a5b0ea3d0e29a59212e4154d153773b3e7d7ace113ae3d4d7d9d1056c7c4d4",
+      "size_bytes": 21569,
+      "destination": "tests/wine_integration/test_memory_wine_bitmap.py",
+      "imported_sha256": "5b0b74689e20444361e0969d1fea8a2e0ed5b480d93e50997667640636b01e49",
+      "transformation": "Copyright/SPDX notice addition; from tools.fex import memory_wine_bitmap as policy -> from tests.wine_integration.oracles import bitmap as policy"
+    },
+    {
+      "source": "tests/fex/test_memory_wine_bitmap_prefix.py",
+      "sha256": "4e05d73848a6d027fa68e105f15e396a7a91df929415fea83116769396a2397b",
+      "size_bytes": 6584,
+      "destination": "tests/wine_integration/test_memory_wine_bitmap_prefix.py",
+      "imported_sha256": "ab4249f94cfa7e6b7d1fd83cd64e8dec88050c26d851aa30be367463bcc49592",
+      "transformation": "Copyright/SPDX notice addition; from tools.fex import memory_wine_bitmap as policy -> from tests.wine_integration.oracles import bitmap as policy; from tests.fex import test_memory_wine_bitmap as rows -> from tests.wine_integration import test_memory_wine_bitmap as rows"
+    },
+    {
+      "source": "tests/fex/test_memory_atomic_resume.py",
+      "sha256": "879ddb2d4a67b1a7b0b12abdd5283dcac9a2d56f34d963727fde737ef87cc50b",
+      "size_bytes": 15494,
+      "destination": "tests/wine_integration/oracles/synthetic_atomic.py",
+      "imported_sha256": "a604e162a8a4c62ddd8134f4350299dc413f19883d714b7c5171527016a0f8e9",
+      "selected_units": [
+        {
+          "symbol": "IDENTITY",
+          "line_start": 6,
+          "line_end": 7,
+          "original_sha256": "cd733459b9676971612560383855dcf63492583e455bb33eb4eb817847e1b269",
+          "imported_sha256": "cd733459b9676971612560383855dcf63492583e455bb33eb4eb817847e1b269"
+        },
+        {
+          "symbol": "FACTS",
+          "line_start": 8,
+          "line_end": 9,
+          "original_sha256": "aabdaa441291d6d6796259df953b0296de78064d2ca2940bb278665d1100d689",
+          "imported_sha256": "aabdaa441291d6d6796259df953b0296de78064d2ca2940bb278665d1100d689"
+        },
+        {
+          "symbol": "source_rows",
+          "line_start": 17,
+          "line_end": 57,
+          "original_sha256": "f9ec67459157ec80ded55d2127c07bba621d21e22483deaf89d4cfa354ff8d40",
+          "imported_sha256": "f9ec67459157ec80ded55d2127c07bba621d21e22483deaf89d4cfa354ff8d40"
+        }
+      ],
+      "transformation": "Exact selected function/class/constant bytes; explicit canonical shared imports and test-owned namespaces. ()"
+    },
+    {
+      "source": "tests/fex/test_memory_check.py",
+      "sha256": "538ff17d89ae23fed36678d4a4816684c1d2a48f2eb01a7644135b43d5ff42c2",
+      "size_bytes": 15596,
+      "destination": "tests/wine_integration/oracles/synthetic_memory.py",
+      "imported_sha256": "38591dc0be12d32b03c5952c229e6eda293cf24c3a051ce0264c03c9fdf7b61a",
+      "selected_units": [
+        {
+          "symbol": "NONCE",
+          "line_start": 14,
+          "line_end": 14,
+          "original_sha256": "a30ce6ab1be73f36d3a63ccb92ed7b2b0c3c4410c73a267d2302155cd5cd9d10",
+          "imported_sha256": "a30ce6ab1be73f36d3a63ccb92ed7b2b0c3c4410c73a267d2302155cd5cd9d10"
+        },
+        {
+          "symbol": "CHILD",
+          "line_start": 15,
+          "line_end": 15,
+          "original_sha256": "e7f55e3b40a6054865ee623aa126b3065c27fec20370ea770dcf93c51297ae46",
+          "imported_sha256": "e7f55e3b40a6054865ee623aa126b3065c27fec20370ea770dcf93c51297ae46"
+        },
+        {
+          "symbol": "ready",
+          "line_start": 18,
+          "line_end": 25,
+          "original_sha256": "31a6d25979b872d6cb43f3b490797e43924ec57e022d6b761649ee2e614c4505",
+          "imported_sha256": "31a6d25979b872d6cb43f3b490797e43924ec57e022d6b761649ee2e614c4505"
+        },
+        {
+          "symbol": "helper",
+          "line_start": 28,
+          "line_end": 31,
+          "original_sha256": "9770ecfdfdaa9b59b46fb95f2684199d0973cb44b0641c8a082636f5cb2709ff",
+          "imported_sha256": "9770ecfdfdaa9b59b46fb95f2684199d0973cb44b0641c8a082636f5cb2709ff"
+        },
+        {
+          "symbol": "owner_row",
+          "line_start": 34,
+          "line_end": 41,
+          "original_sha256": "9230cfce0af25c45ad2b2c860ca63e116816f9f2d65bb406977c87153a316c61",
+          "imported_sha256": "9230cfce0af25c45ad2b2c860ca63e116816f9f2d65bb406977c87153a316c61"
+        },
+        {
+          "symbol": "atomic_rows",
+          "line_start": 44,
+          "line_end": 47,
+          "original_sha256": "1570d7dfadd0ac42c7451ec8ab8bb7aedcc8546eb2e709f043e11fde61322f51",
+          "imported_sha256": "c46e17d958b850b31e0f2a2ae23d4a51d3a2bdacbafae675f9a4f0c66fc26df1"
+        },
+        {
+          "symbol": "native_rows",
+          "line_start": 50,
+          "line_end": 92,
+          "original_sha256": "13727eaa9c5455c972c4f6a7675ade67c29fc578193ba9473b308597896a9d36",
+          "imported_sha256": "13727eaa9c5455c972c4f6a7675ade67c29fc578193ba9473b308597896a9d36"
+        }
+      ],
+      "transformation": "Exact selected function/class/constant bytes; explicit canonical shared imports and test-owned namespaces. [('from tests.fex.test_memory_atomic_resume import source_rows', 'from .synthetic_atomic import source_rows')]"
+    },
+    {
+      "source": "tools/fex/memory_wine_build.py",
+      "sha256": "885123f6fae78f96def76ab3066a90911e1e768df16a8164150657ce013bee92",
+      "size_bytes": 46024,
+      "destination": "tests/wine_integration/oracles/pe.py",
+      "imported_sha256": "3eefd74e2ae80fae68fcb8416917bd2c2b735fa6411daa30edb7570a242ba484",
+      "selected_units": [
+        {
+          "symbol": "pe_facts",
+          "line_start": 526,
+          "line_end": 589,
+          "original_sha256": "7f806a918a37325f39017f344fea9665a74f9f199b039ea06b7cea8db2b48f5d",
+          "imported_sha256": "7f806a918a37325f39017f344fea9665a74f9f199b039ea06b7cea8db2b48f5d"
+        }
+      ],
+      "transformation": "Exact selected function/class/constant bytes; explicit canonical shared imports and test-owned namespaces. ()"
+    },
+    {
+      "source": "tools/fex/memory_wine_run.py",
+      "sha256": "999b5600f4d9ba7f1b23122a6dd8e3d3a1df7153b9d2bd19175c6d4030eef30b",
+      "size_bytes": 63668,
+      "destination": "tests/wine_integration/oracles/memory.py",
+      "imported_sha256": "af8d1e8d52ab25a04c0703a08160319bd576f57a286511d1c2c75f7a57f84323",
+      "selected_units": [
+        {
+          "symbol": "fields",
+          "line_start": 59,
+          "line_end": 63,
+          "original_sha256": "b79b7b58e3d51ea576863cb88c05e22798d3fa80ad2d3090a388fb1dcf83047c",
+          "imported_sha256": "b79b7b58e3d51ea576863cb88c05e22798d3fa80ad2d3090a388fb1dcf83047c"
+        },
+        {
+          "symbol": "same",
+          "line_start": 66,
+          "line_end": 67,
+          "original_sha256": "c169f4a36a9a050f8ebfddb49a1a77ab974f692feae0abbe6aa5649b64dce05c",
+          "imported_sha256": "c169f4a36a9a050f8ebfddb49a1a77ab974f692feae0abbe6aa5649b64dce05c"
+        },
+        {
+          "symbol": "integer",
+          "line_start": 70,
+          "line_end": 71,
+          "original_sha256": "a41609fa3b1789997a17e8541a7654940db9beb35b65aa3a6d0438e2d679f8e8",
+          "imported_sha256": "a41609fa3b1789997a17e8541a7654940db9beb35b65aa3a6d0438e2d679f8e8"
+        },
+        {
+          "symbol": "json_lines",
+          "line_start": 154,
+          "line_end": 159,
+          "original_sha256": "43ad06d6eb9b941c9ff17c3257b103d51e4ae1e45b653a58248ae1867550c110",
+          "imported_sha256": "43ad06d6eb9b941c9ff17c3257b103d51e4ae1e45b653a58248ae1867550c110"
+        },
+        {
+          "symbol": "suite_contract",
+          "line_start": 162,
+          "line_end": 202,
+          "original_sha256": "d442b104a582daae3e7e7d9516c09aaf9b942e9ac7b646e0ccfa944e9c67ab84",
+          "imported_sha256": "d442b104a582daae3e7e7d9516c09aaf9b942e9ac7b646e0ccfa944e9c67ab84"
+        },
+        {
+          "symbol": "bootstrap_observation",
+          "line_start": 205,
+          "line_end": 211,
+          "original_sha256": "1cb05eee78318f313d3ecd142d93b1f3f18e9c56173f362d31f5f65c46b596fd",
+          "imported_sha256": "1cb05eee78318f313d3ecd142d93b1f3f18e9c56173f362d31f5f65c46b596fd"
+        },
+        {
+          "symbol": "owner_output",
+          "line_start": 214,
+          "line_end": 275,
+          "original_sha256": "b7931aa3e1e6cce6428af42c9665b4c76c64d03bbf3c568bde77684da52688cd",
+          "imported_sha256": "b7931aa3e1e6cce6428af42c9665b4c76c64d03bbf3c568bde77684da52688cd"
+        },
+        {
+          "symbol": "bitmap_output",
+          "line_start": 278,
+          "line_end": 294,
+          "original_sha256": "0e37969eda58d1f636dfc2cd7e10909500ce436eb8ac273dc6ff1595d882418e",
+          "imported_sha256": "0e37969eda58d1f636dfc2cd7e10909500ce436eb8ac273dc6ff1595d882418e"
+        },
+        {
+          "symbol": "apiset_defaults",
+          "line_start": 297,
+          "line_end": 352,
+          "original_sha256": "ce9e34d3bc347fbc0cf53179025feeff2f7a1eaa2ca695e17815a8100d3cf895",
+          "imported_sha256": "ce9e34d3bc347fbc0cf53179025feeff2f7a1eaa2ca695e17815a8100d3cf895"
+        },
+        {
+          "symbol": "BaselinePEMetadata",
+          "line_start": 355,
+          "line_end": 410,
+          "original_sha256": "b244d46c590d056164a1dc33d555626de7f09f6df33a3f888326594e46d224bf",
+          "imported_sha256": "b244d46c590d056164a1dc33d555626de7f09f6df33a3f888326594e46d224bf"
+        },
+        {
+          "symbol": "ucrt_delay_table",
+          "line_start": 413,
+          "line_end": 454,
+          "original_sha256": "ebdf3174a57d5fd81afbde385e30b288d1ff0762b6daf9c5469afe7f9f05118e",
+          "imported_sha256": "ebdf3174a57d5fd81afbde385e30b288d1ff0762b6daf9c5469afe7f9f05118e"
+        },
+        {
+          "symbol": "ucrt_delay_closure",
+          "line_start": 457,
+          "line_end": 498,
+          "original_sha256": "3b7d7b3c2cd797c541ee95863e2192b4e1ba2b72ab6d5f038600e9cc3f4d61c0",
+          "imported_sha256": "3b7d7b3c2cd797c541ee95863e2192b4e1ba2b72ab6d5f038600e9cc3f4d61c0"
+        },
+        {
+          "symbol": "crt_closure",
+          "line_start": 502,
+          "line_end": 559,
+          "original_sha256": "2c09257101b1d07eafc43f5faf4c967c4e0cdae3cc6b39f7f1be3782a53ffdfc",
+          "imported_sha256": "2c09257101b1d07eafc43f5faf4c967c4e0cdae3cc6b39f7f1be3782a53ffdfc"
+        },
+        {
+          "symbol": "failure_detail",
+          "line_start": 659,
+          "line_end": 665,
+          "original_sha256": "9e196151f42390a171b7707b722499f18d812344195bc8b273d1b35ca1ceefef",
+          "imported_sha256": "9e196151f42390a171b7707b722499f18d812344195bc8b273d1b35ca1ceefef"
+        },
+        {
+          "symbol": "source_failures",
+          "line_start": 668,
+          "line_end": 701,
+          "original_sha256": "c43cbd4d0bd4dac35bd3f45c6e2d45d6d4106fcb78290589ac2a9be028a20431",
+          "imported_sha256": "c43cbd4d0bd4dac35bd3f45c6e2d45d6d4106fcb78290589ac2a9be028a20431"
+        },
+        {
+          "symbol": "require_no_source_failure",
+          "line_start": 704,
+          "line_end": 717,
+          "original_sha256": "701088a0d58cc82d13af872467019837cb129cb35d113a9bcc375eb786728a09",
+          "imported_sha256": "701088a0d58cc82d13af872467019837cb129cb35d113a9bcc375eb786728a09"
+        }
+      ],
+      "transformation": "Exact selected function/class/constant bytes; explicit canonical shared imports and test-owned namespaces. ()"
+    },
+    {
+      "source": "tests/fex/test_stage3_memory_wine_run.py",
+      "sha256": "110476562ec5ac81e9576ddf8092bb5ee28cddf0294ed587e027862e2d887447",
+      "size_bytes": 40048,
+      "destination": "tests/wine_integration/test_stage3_memory_wine_run.py",
+      "imported_sha256": "710310cf391c160bbbe88f79dd6f49412e500b6f401c7d24788acc43846530b2",
+      "selected_units": [
+        {
+          "symbol": "wine_rows",
+          "line_start": 27,
+          "line_end": 45,
+          "original_sha256": "2489d5331e5b5b5a63ad93532610827e7d3f3112d60e73d937f868c691d0defb",
+          "imported_sha256": "2489d5331e5b5b5a63ad93532610827e7d3f3112d60e73d937f868c691d0defb"
+        },
+        {
+          "symbol": "line",
+          "line_start": 48,
+          "line_end": 48,
+          "original_sha256": "5d92f33423682a8b3376df4b7bc6ec2d276a9a21c2963bf2892335c00c3f4491",
+          "imported_sha256": "5d92f33423682a8b3376df4b7bc6ec2d276a9a21c2963bf2892335c00c3f4491"
+        },
+        {
+          "symbol": "transcript",
+          "line_start": 51,
+          "line_end": 51,
+          "original_sha256": "0f79e9ff6437fba2511a206450abf65c453f1b4badb2ef6cfe1b6ba6ad53c553",
+          "imported_sha256": "0f79e9ff6437fba2511a206450abf65c453f1b4badb2ef6cfe1b6ba6ad53c553"
+        },
+        {
+          "symbol": "bitmap_row",
+          "line_start": 54,
+          "line_end": 56,
+          "original_sha256": "4a1d65ec5c6b143e4e164b4a581449cbbb9c8e60561e11b68b36ddce5feae988",
+          "imported_sha256": "4a1d65ec5c6b143e4e164b4a581449cbbb9c8e60561e11b68b36ddce5feae988"
+        },
+        {
+          "symbol": "bitmap_log",
+          "line_start": 59,
+          "line_end": 65,
+          "original_sha256": "bdb549db83ecbea0ecdd78802ffc66bd0d84421e60a084450d3b0db88a137de4",
+          "imported_sha256": "bdb549db83ecbea0ecdd78802ffc66bd0d84421e60a084450d3b0db88a137de4"
+        },
+        {
+          "symbol": "pe",
+          "line_start": 68,
+          "line_end": 75,
+          "original_sha256": "177bc873ba4ba99ffd4d422d064d03397f56389789f0faf2a6675c878a8c1666",
+          "imported_sha256": "177bc873ba4ba99ffd4d422d064d03397f56389789f0faf2a6675c878a8c1666"
+        },
+        {
+          "symbol": "apiset_blob",
+          "line_start": 78,
+          "line_end": 89,
+          "original_sha256": "b75860921abb01422b3030401f50dc890c22e8bd2901fcaee667f6608ed8ab99",
+          "imported_sha256": "b75860921abb01422b3030401f50dc890c22e8bd2901fcaee667f6608ed8ab99"
+        },
+        {
+          "symbol": "WineMemoryOutputControls.test_synthetic_wine_scope_has_distinct_readiness_and_view_observations",
+          "line_start": 98,
+          "line_end": 103,
+          "original_sha256": "8166820d723cd991808fb1dd46722f92758bf9baee3cabc0c7559fc2083261dc",
+          "imported_sha256": "8166820d723cd991808fb1dd46722f92758bf9baee3cabc0c7559fc2083261dc"
+        },
+        {
+          "symbol": "WineMemoryOutputControls.test_missing_reordered_extra_or_boolean_readiness_is_refused",
+          "line_start": 105,
+          "line_end": 110,
+          "original_sha256": "66c179693a9942ff4a66e6ad2962ad39a2506d015932ae61686c026008c2c424",
+          "imported_sha256": "66c179693a9942ff4a66e6ad2962ad39a2506d015932ae61686c026008c2c424"
+        },
+        {
+          "symbol": "WineMemoryOutputControls.test_call_gaps_wrong_scope_opcode_status_capability_and_refusal_facts_are_refused",
+          "line_start": 112,
+          "line_end": 118,
+          "original_sha256": "f3baf63818b257b4fec04926752c4c7e663e828725ec063c8ba41c507b4294ef",
+          "imported_sha256": "f3baf63818b257b4fec04926752c4c7e663e828725ec063c8ba41c507b4294ef"
+        },
+        {
+          "symbol": "WineMemoryOutputControls.test_missing_control_truncation_wrong_terminal_and_unqualified_scope_never_pass",
+          "line_start": 120,
+          "line_end": 127,
+          "original_sha256": "5216fc6505682ccd8cf52ba8ea6d9d4d8aa8ae14c34038a101169d004eb8f8fe",
+          "imported_sha256": "5216fc6505682ccd8cf52ba8ea6d9d4d8aa8ae14c34038a101169d004eb8f8fe"
+        },
+        {
+          "symbol": "WineMemoryOutputControls.test_wrong_native_identity_and_translated_helper_refused_before_suite",
+          "line_start": 129,
+          "line_end": 132,
+          "original_sha256": "595e7eabb7a117d8e51495ec83d9a851e31dce73e5177b0e3461ffe4ce632879",
+          "imported_sha256": "595e7eabb7a117d8e51495ec83d9a851e31dce73e5177b0e3461ffe4ce632879"
+        },
+        {
+          "symbol": "WineMemoryOutputControls.test_bootstrap_snapshot_is_distinct_from_actual_wine_admission",
+          "line_start": 134,
+          "line_end": 139,
+          "original_sha256": "23f7121f0559928cd24580285a50e596e6a1b657b22248d6294ff2b2f1d75409",
+          "imported_sha256": "23f7121f0559928cd24580285a50e596e6a1b657b22248d6294ff2b2f1d75409"
+        },
+        {
+          "symbol": "WineBitmapControls.test_each_actual_field_count_and_diagnostics_bytes_are_kept_separate",
+          "line_start": 168,
+          "line_end": 172,
+          "original_sha256": "dafac89e848f7780bd2c817da3665335348333467c7bd57bc5bfce7bbbdc2be9",
+          "imported_sha256": "dafac89e848f7780bd2c817da3665335348333467c7bd57bc5bfce7bbbdc2be9"
+        },
+        {
+          "symbol": "WineBitmapControls.test_missing_extra_unrecognized_rollback_or_fake_success_cannot_pass",
+          "line_start": 174,
+          "line_end": 182,
+          "original_sha256": "cc5ce2407f8354e63721813e9b67e85eed38884495df8cb4809eebd797f07cad",
+          "imported_sha256": "cc5ce2407f8354e63721813e9b67e85eed38884495df8cb4809eebd797f07cad"
+        },
+        {
+          "symbol": "WineBitmapControls.test_source_native_error_and_restoration_failure_retained_without_success",
+          "line_start": 184,
+          "line_end": 191,
+          "original_sha256": "752d1ee6a4a1a8a10cdf66cfbab83f0c39ad64548c12367e692d7cdb46e21cf4",
+          "imported_sha256": "752d1ee6a4a1a8a10cdf66cfbab83f0c39ad64548c12367e692d7cdb46e21cf4"
+        },
+        {
+          "symbol": "WineBitmapControls.test_failure_parse_error_never_invents_native_errno",
+          "line_start": 193,
+          "line_end": 196,
+          "original_sha256": "d66b6ef14c7398fb618a02bff4f8c1ea9dc0c1707c58591c63fe08bfa70efb46",
+          "imported_sha256": "d66b6ef14c7398fb618a02bff4f8c1ea9dc0c1707c58591c63fe08bfa70efb46"
+        },
+        {
+          "symbol": "WineBitmapControls.test_diagnostic_refusal_keeps_original_primary_and_completed_count_unqualified",
+          "line_start": 198,
+          "line_end": 209,
+          "original_sha256": "e8be65bec5b475ead8ced7ce29e763ccb5c956d5cad54cfe757bae9e2278d686",
+          "imported_sha256": "e8be65bec5b475ead8ced7ce29e763ccb5c956d5cad54cfe757bae9e2278d686"
+        },
+        {
+          "symbol": "WineBitmapControls.test_completed_source_requires_diagnostic_pair_without_accepting_warning_allowance",
+          "line_start": 211,
+          "line_end": 220,
+          "original_sha256": "41982ad26fb35b2ec07b553ad0dfc3cb9e16d93b6d208fe6e18699d9b00ed3f3",
+          "imported_sha256": "41982ad26fb35b2ec07b553ad0dfc3cb9e16d93b6d208fe6e18699d9b00ed3f3"
+        },
+        {
+          "symbol": "WineBitmapControls.test_malformed_stdout_cannot_suppress_original_stderr_native_failure",
+          "line_start": 223,
+          "line_end": 230,
+          "original_sha256": "c9dbc4fd5fce8eab976e32c906104e84845ec73644f7b91d88ed26ccfd25832a",
+          "imported_sha256": "c9dbc4fd5fce8eab976e32c906104e84845ec73644f7b91d88ed26ccfd25832a"
+        },
+        {
+          "symbol": "WineCRTControls.test_actual_v6_default_and_hash_index_are_read_from_metadata_bytes",
+          "line_start": 234,
+          "line_end": 238,
+          "original_sha256": "9922a8ca0ead15ca9bf7ecd6a3677c3b0b01aed11068a95d66d666a37a8a9492",
+          "imported_sha256": "9922a8ca0ead15ca9bf7ecd6a3677c3b0b01aed11068a95d66d666a37a8a9492"
+        },
+        {
+          "symbol": "WineCRTControls.test_bad_machine_namespace_hash_target_range_and_duplicate_default_refused",
+          "line_start": 240,
+          "line_end": 247,
+          "original_sha256": "4913308a4d38a1a3d18ca779716176b2e262b1987feabd364061a38e82ae58ea",
+          "imported_sha256": "4913308a4d38a1a3d18ca779716176b2e262b1987feabd364061a38e82ae58ea"
+        },
+        {
+          "symbol": "WineCRTControls.test_provider_missing_and_api_set_default_cannot_be_inferred_from_name",
+          "line_start": 249,
+          "line_end": 251,
+          "original_sha256": "b074cca91e56fded049f0d1e463b3532d6da9935a5fd522005a7121503dbddda",
+          "imported_sha256": "b074cca91e56fded049f0d1e463b3532d6da9935a5fd522005a7121503dbddda"
+        },
+        {
+          "symbol": "WineCRTProviderControls.test_synthetic_real_pe_namespace_bytes_and_matching_source_bind_ucrt_provider",
+          "line_start": 276,
+          "line_end": 282,
+          "original_sha256": "b85ee50069d8d51274df4e88b99ba3cdb525262e2dbf3a90e914f67f38d3fdf0",
+          "imported_sha256": "b85ee50069d8d51274df4e88b99ba3cdb525262e2dbf3a90e914f67f38d3fdf0"
+        },
+        {
+          "symbol": "WineCRTProviderControls.test_wrong_default_source_byte_or_foreign_fixture_selection_is_refused",
+          "line_start": 284,
+          "line_end": 296,
+          "original_sha256": "1eb6b203ee012d9431a4b707449efd844194dabd6a4f9c73718d840b4efbde78",
+          "imported_sha256": "1eb6b203ee012d9431a4b707449efd844194dabd6a4f9c73718d840b4efbde78"
+        },
+        {
+          "symbol": "delay_metadata",
+          "line_start": 299,
+          "line_end": 336,
+          "original_sha256": "c0b46340288a6547dcdf27f9c7c515a3e5ed2fae84f1a33482d0c4d00fad42dd",
+          "imported_sha256": "c0b46340288a6547dcdf27f9c7c515a3e5ed2fae84f1a33482d0c4d00fad42dd"
+        },
+        {
+          "symbol": "WineUCRTDelayMetadataControls.test_two_dll_three_named_rva_descriptors_require_individual_terminators",
+          "line_start": 340,
+          "line_end": 347,
+          "original_sha256": "95ae3bc0e81480b07ae236523545d2c11a8463913630a005af1b1b1c779e6bc2",
+          "imported_sha256": "95ae3bc0e81480b07ae236523545d2c11a8463913630a005af1b1b1c779e6bc2"
+        },
+        {
+          "symbol": "WineUCRTDelayMetadataControls.test_foreign_descriptor_mode_bound_unload_timestamp_and_size_refused",
+          "line_start": 349,
+          "line_end": 354,
+          "original_sha256": "f6cc3d6b4502c802842d9f11760e59f031d6408718dfcc8f3ecf618dd9913944",
+          "imported_sha256": "f6cc3d6b4502c802842d9f11760e59f031d6408718dfcc8f3ecf618dd9913944"
+        },
+        {
+          "symbol": "WineUCRTDelayMetadataControls.test_int_ordinal_hint_wrong_name_and_terminator_refused",
+          "line_start": 356,
+          "line_end": 363,
+          "original_sha256": "3986f1bb74f3773b8edc47283be01ceb1943a9244773ab50e2c985ce49e5c948",
+          "imported_sha256": "3986f1bb74f3773b8edc47283be01ceb1943a9244773ab50e2c985ce49e5c948"
+        },
+        {
+          "symbol": "WineUCRTDelayMetadataControls.test_iat_not_image_va_not_executable_outside_image_and_unaligned_refused",
+          "line_start": 365,
+          "line_end": 370,
+          "original_sha256": "5741f312bf0c514a24ba88d0b3f53a7273cd47328d86a556e69131d1619a66ec",
+          "imported_sha256": "5741f312bf0c514a24ba88d0b3f53a7273cd47328d86a556e69131d1619a66ec"
+        },
+        {
+          "symbol": "WineUCRTDelayMetadataControls.test_mutable_handle_table_alias_extra_descriptor_and_unbounded_string_refused",
+          "line_start": 372,
+          "line_end": 378,
+          "original_sha256": "e452e9245df9497c9a45f3a6e8843f4e5af6ce790995a05a752140f12a2e4087",
+          "imported_sha256": "e452e9245df9497c9a45f3a6e8843f4e5af6ce790995a05a752140f12a2e4087"
+        },
+        {
+          "symbol": "WineUCRTDelayMetadataControls.test_selected_export_forwarder_and_direct_targets_have_separate_facts",
+          "line_start": 380,
+          "line_end": 385,
+          "original_sha256": "a8ba800057440eae8f96b27c7f0324a3035007dfc539bf0cabd2e0eefa46679f",
+          "imported_sha256": "a8ba800057440eae8f96b27c7f0324a3035007dfc539bf0cabd2e0eefa46679f"
+        },
+        {
+          "symbol": "WineUCRTDelayMetadataControls.test_missing_duplicate_bad_ordinal_zero_target_and_nonexecute_exports_refused",
+          "line_start": 387,
+          "line_end": 394,
+          "original_sha256": "abb1866a0a4cda3e79b53aa915aab135539a8c64b3de0518a410079352474be5",
+          "imported_sha256": "abb1866a0a4cda3e79b53aa915aab135539a8c64b3de0518a410079352474be5"
+        },
+        {
+          "symbol": "WineUCRTDelayClosureControls.test_exact_source_routes_and_current_provider_bytes_bound_without_execution_claim",
+          "line_start": 425,
+          "line_end": 432,
+          "original_sha256": "86c8643614391f867dd2f343bbff178e1044216c5ed2d97051a8fc5d889c05d2",
+          "imported_sha256": "86c8643614391f867dd2f343bbff178e1044216c5ed2d97051a8fc5d889c05d2"
+        },
+        {
+          "symbol": "WineUCRTDelayClosureControls.test_missing_changed_foreign_and_unselected_provider_cannot_pass",
+          "line_start": 434,
+          "line_end": 443,
+          "original_sha256": "cbd5a13c9b5d5190f5768b2c81ab52a1769cb15e8e9f0111a84373145840a42a",
+          "imported_sha256": "cbd5a13c9b5d5190f5768b2c81ab52a1769cb15e8e9f0111a84373145840a42a"
+        },
+        {
+          "symbol": "WineUCRTDelayClosureControls.test_missing_changed_conflicting_source_contract_cannot_pass",
+          "line_start": 445,
+          "line_end": 454,
+          "original_sha256": "f36e36a58a034942f2017a0ccfacca4412d58ffb9bf790cef3ef9c9778791caf",
+          "imported_sha256": "f36e36a58a034942f2017a0ccfacca4412d58ffb9bf790cef3ef9c9778791caf"
+        },
+        {
+          "symbol": "WineUCRTDelayClosureControls.test_changed_forwarder_missing_direct_export_and_unrelated_delay_remain_separate",
+          "line_start": 456,
+          "line_end": 469,
+          "original_sha256": "ba9a6b422124c320e98f493fdbed031339b9129646cda67c545da4ff3933a2c7",
+          "imported_sha256": "ba9a6b422124c320e98f493fdbed031339b9129646cda67c545da4ff3933a2c7"
+        },
+        {
+          "symbol": "WineRunRecordControls.test_inherited_home_is_not_repurposed_and_injections_not_in_environment",
+          "line_start": 473,
+          "line_end": 478,
+          "original_sha256": "8015bd7f121c16839d5f48c1744d565d3792a47bc3c0ac112ebeb851a2a27eeb",
+          "imported_sha256": "8015bd7f121c16839d5f48c1744d565d3792a47bc3c0ac112ebeb851a2a27eeb"
+        },
+        {
+          "symbol": "WineRunRecordControls.test_exact_nonce_control_endpoint_no_hostpid_or_graphics_environment",
+          "line_start": 480,
+          "line_end": 488,
+          "original_sha256": "463d150dbab9fd9f516562048dbe0c789802c81411901c1f321237855512bf9a",
+          "imported_sha256": "463d150dbab9fd9f516562048dbe0c789802c81411901c1f321237855512bf9a"
+        },
+        {
+          "symbol": "WineRunRecordControls.test_changed_unclosed_or_partial_log_cannot_pass",
+          "line_start": 490,
+          "line_end": 508,
+          "original_sha256": "543a33dbbf9cb817cbcd5daf8c2478112ea66e1d1345dfd043d2b256ece52c71",
+          "imported_sha256": "543a33dbbf9cb817cbcd5daf8c2478112ea66e1d1345dfd043d2b256ece52c71"
+        },
+        {
+          "symbol": "WineRunRecordControls.test_genuine_error_detail_does_not_invent_exit_or_replace_original_domain",
+          "line_start": 588,
+          "line_end": 591,
+          "original_sha256": "b0bbe24102b039e2eecd63b8140dd3303cd223d2704bbd9c724f7e0c9c330949",
+          "imported_sha256": "b0bbe24102b039e2eecd63b8140dd3303cd223d2704bbd9c724f7e0c9c330949"
+        }
+      ],
+      "selected_cases": [
+        "WineMemoryOutputControls.test_synthetic_wine_scope_has_distinct_readiness_and_view_observations",
+        "WineMemoryOutputControls.test_missing_reordered_extra_or_boolean_readiness_is_refused",
+        "WineMemoryOutputControls.test_call_gaps_wrong_scope_opcode_status_capability_and_refusal_facts_are_refused",
+        "WineMemoryOutputControls.test_missing_control_truncation_wrong_terminal_and_unqualified_scope_never_pass",
+        "WineMemoryOutputControls.test_wrong_native_identity_and_translated_helper_refused_before_suite",
+        "WineMemoryOutputControls.test_bootstrap_snapshot_is_distinct_from_actual_wine_admission",
+        "WineBitmapControls.test_each_actual_field_count_and_diagnostics_bytes_are_kept_separate",
+        "WineBitmapControls.test_missing_extra_unrecognized_rollback_or_fake_success_cannot_pass",
+        "WineBitmapControls.test_source_native_error_and_restoration_failure_retained_without_success",
+        "WineBitmapControls.test_failure_parse_error_never_invents_native_errno",
+        "WineBitmapControls.test_diagnostic_refusal_keeps_original_primary_and_completed_count_unqualified",
+        "WineBitmapControls.test_completed_source_requires_diagnostic_pair_without_accepting_warning_allowance",
+        "WineBitmapControls.test_malformed_stdout_cannot_suppress_original_stderr_native_failure",
+        "WineCRTControls.test_actual_v6_default_and_hash_index_are_read_from_metadata_bytes",
+        "WineCRTControls.test_bad_machine_namespace_hash_target_range_and_duplicate_default_refused",
+        "WineCRTControls.test_provider_missing_and_api_set_default_cannot_be_inferred_from_name",
+        "WineCRTProviderControls.test_synthetic_real_pe_namespace_bytes_and_matching_source_bind_ucrt_provider",
+        "WineCRTProviderControls.test_wrong_default_source_byte_or_foreign_fixture_selection_is_refused",
+        "WineUCRTDelayMetadataControls.test_two_dll_three_named_rva_descriptors_require_individual_terminators",
+        "WineUCRTDelayMetadataControls.test_foreign_descriptor_mode_bound_unload_timestamp_and_size_refused",
+        "WineUCRTDelayMetadataControls.test_int_ordinal_hint_wrong_name_and_terminator_refused",
+        "WineUCRTDelayMetadataControls.test_iat_not_image_va_not_executable_outside_image_and_unaligned_refused",
+        "WineUCRTDelayMetadataControls.test_mutable_handle_table_alias_extra_descriptor_and_unbounded_string_refused",
+        "WineUCRTDelayMetadataControls.test_selected_export_forwarder_and_direct_targets_have_separate_facts",
+        "WineUCRTDelayMetadataControls.test_missing_duplicate_bad_ordinal_zero_target_and_nonexecute_exports_refused",
+        "WineUCRTDelayClosureControls.test_exact_source_routes_and_current_provider_bytes_bound_without_execution_claim",
+        "WineUCRTDelayClosureControls.test_missing_changed_foreign_and_unselected_provider_cannot_pass",
+        "WineUCRTDelayClosureControls.test_missing_changed_conflicting_source_contract_cannot_pass",
+        "WineUCRTDelayClosureControls.test_changed_forwarder_missing_direct_export_and_unrelated_delay_remain_separate",
+        "WineRunRecordControls.test_inherited_home_is_not_repurposed_and_injections_not_in_environment",
+        "WineRunRecordControls.test_exact_nonce_control_endpoint_no_hostpid_or_graphics_environment",
+        "WineRunRecordControls.test_changed_unclosed_or_partial_log_cannot_pass",
+        "WineRunRecordControls.test_genuine_error_detail_does_not_invent_exit_or_replace_original_domain"
+      ],
+      "omitted_legacy_execution_cases": [
+        "test_failed_actual_admission_is_written_without_launch_or_guessed_exit",
+        "test_failed_root_refused_before_runtime_admission_or_observer",
+        "test_failure_record_write_cannot_replace_actual_primary_error",
+        "test_post_cleanup_case_write_keeps_primary_spawn_error_and_actual_storage_error",
+        "test_private_helpers_restore_imports_stream_limit_and_never_create_native_observer",
+        "test_real_original_spawn_error_code_and_genuine_errno_both_survive_private_capture",
+        "test_source_observation_write_failure_keeps_actual_error_fields_and_no_fake_primary",
+        "test_wrapped_admission_error_keeps_existing_native_error_without_launch"
+      ],
+      "transformation": "Original selected portable test bodies; import namespace only. Bind the current canonical provider package explicitly; missing providers fail rather than skip or fall back to old worktrees. Eight executable-orchestration cases are mapped separately to current canonical tests, never counted as imported runs."
+    },
+    {
+      "source": "tests/fex/test_stage3_memory_wine_build.py",
+      "sha256": "2b6195d2541e6de38e30222738044ce1eaa416aba1a45cc368ab62511225baff",
+      "size_bytes": 17512,
+      "destination": "tests/wine_integration/test_stage3_memory_wine_build.py",
+      "imported_sha256": "eda65d6473e75845dd2287425853c4836282c1caf895db6e2bd25476890ca91e",
+      "selected_units": [
+        {
+          "symbol": "WineMemoryOwnedOutputTests.synthetic_dll",
+          "line_start": 248,
+          "line_end": 263,
+          "original_sha256": "549489f310ff7ebbd533be62bd6dc87006090502e6459969d354f1e9272d73ce",
+          "imported_sha256": "549489f310ff7ebbd533be62bd6dc87006090502e6459969d354f1e9272d73ce"
+        },
+        {
+          "symbol": "WineMemoryOwnedOutputTests.test_private_export_requires_actual_named_executable_target",
+          "line_start": 265,
+          "line_end": 272,
+          "original_sha256": "d906bd49d9a183a5c440b65b00ab637aec9d907e260adc0cb321eb272c61c77e",
+          "imported_sha256": "d906bd49d9a183a5c440b65b00ab637aec9d907e260adc0cb321eb272c61c77e"
+        },
+        {
+          "symbol": "WineMemoryOwnedOutputTests.test_delay_import_or_wrong_outer_machine_refused",
+          "line_start": 274,
+          "line_end": 278,
+          "original_sha256": "ad9b22aadec19798cea80d02fdeecf402ac0f3c764f5ed9901071a760ca9410b",
+          "imported_sha256": "ad9b22aadec19798cea80d02fdeecf402ac0f3c764f5ed9901071a760ca9410b"
+        },
+        {
+          "symbol": "WineMemoryOwnedOutputTests.test_invalid_or_non_arm64_pe_refused",
+          "line_start": 280,
+          "line_end": 282,
+          "original_sha256": "36e53cf6a1a9c2fc2ea58958d1bde0348bfe755d730925274075749c317d7a11",
+          "imported_sha256": "36e53cf6a1a9c2fc2ea58958d1bde0348bfe755d730925274075749c317d7a11"
+        }
+      ],
+      "selected_cases": [
+        "WineMemoryOwnedOutputTests.test_private_export_requires_actual_named_executable_target",
+        "WineMemoryOwnedOutputTests.test_delay_import_or_wrong_outer_machine_refused",
+        "WineMemoryOwnedOutputTests.test_invalid_or_non_arm64_pe_refused"
+      ],
+      "transformation": "Exact original synthetic PE fixture helper and three test bodies; canonical runtime Error and test-owned pure PE reader replace the legacy builder import. No compiler or replay prerequisite."
+    }
+  ],
+  "test_ownership": {
+    "original_declared_method_count": 127,
+    "counts": {
+      "current_contract_counterpart": 17,
+      "exact_test_import": 73,
+      "retired_implementation_specific": 37
+    },
+    "new_discovered_execution_count_expected": 75,
+    "inherited_execution_note": "WineUCRTDelayClosureControls inherits two original WineCRTProviderControls methods; 73 declared imported methods therefore discover 75 executions. No 127-run claim is made.",
+    "scope": "Pure original tests are retained; removed orchestration APIs have precise current counterparts or explicitly retired implementation-specific contracts. A counterpart link is not proof of full old behavior equivalence or a native result.",
+    "case_map": [
+      {
+        "original": {
+          "path": "tests/fex/test_memory_wine_bitmap.py",
+          "symbol": "DiagnosticControls.test_unperformed_fields_do_not_infer_restoration_or_execution",
+          "line_start": 67,
+          "line_end": 74,
+          "sha256": "d3c24d747c4a03fb9c8955d5d6f0f3dbbe2566e4aa2ce4e5bd1dc583f3f29e27"
+        },
+        "disposition": "exact_test_import",
+        "canonical_tests": [
+          {
+            "path": "tests/wine_integration/test_memory_wine_bitmap.py",
+            "symbol": "DiagnosticControls.test_unperformed_fields_do_not_infer_restoration_or_execution",
+            "line_start": 69,
+            "line_end": 76,
+            "sha256": "d3c24d747c4a03fb9c8955d5d6f0f3dbbe2566e4aa2ce4e5bd1dc583f3f29e27"
+          }
+        ],
+        "claim": "Original test method bytes preserved; imports/provider selection are the recorded module adaptations. Synthetic portability only."
+      },
+      {
+        "original": {
+          "path": "tests/fex/test_memory_wine_bitmap.py",
+          "symbol": "DiagnosticControls.test_logical_failed_page_preserves_zero_native_error",
+          "line_start": 76,
+          "line_end": 87,
+          "sha256": "239ec66dfc9f24a30f62148a0ec413e72b1addf54a848917cc300e37f670c486"
+        },
+        "disposition": "exact_test_import",
+        "canonical_tests": [
+          {
+            "path": "tests/wine_integration/test_memory_wine_bitmap.py",
+            "symbol": "DiagnosticControls.test_logical_failed_page_preserves_zero_native_error",
+            "line_start": 78,
+            "line_end": 89,
+            "sha256": "239ec66dfc9f24a30f62148a0ec413e72b1addf54a848917cc300e37f670c486"
+          }
+        ],
+        "claim": "Original test method bytes preserved; imports/provider selection are the recorded module adaptations. Synthetic portability only."
+      },
+      {
+        "original": {
+          "path": "tests/fex/test_memory_wine_bitmap.py",
+          "symbol": "DiagnosticControls.test_real_native_error_stays_distinct_from_predicate_failure",
+          "line_start": 89,
+          "line_end": 94,
+          "sha256": "c52a7f7678b825e5ce0a6c47baaa239f0dbd8852c8f1647a39f9e2fb0e99d6f4"
+        },
+        "disposition": "exact_test_import",
+        "canonical_tests": [
+          {
+            "path": "tests/wine_integration/test_memory_wine_bitmap.py",
+            "symbol": "DiagnosticControls.test_real_native_error_stays_distinct_from_predicate_failure",
+            "line_start": 91,
+            "line_end": 96,
+            "sha256": "c52a7f7678b825e5ce0a6c47baaa239f0dbd8852c8f1647a39f9e2fb0e99d6f4"
+          }
+        ],
+        "claim": "Original test method bytes preserved; imports/provider selection are the recorded module adaptations. Synthetic portability only."
+      },
+      {
+        "original": {
+          "path": "tests/fex/test_memory_wine_bitmap.py",
+          "symbol": "DiagnosticControls.test_partial_reserved_release_refuses_without_fabricated_syscall",
+          "line_start": 96,
+          "line_end": 102,
+          "sha256": "81c4594d3b80ad19d966de31a7e902c3a855d562b6dd9c103c535e32eae80cb4"
+        },
+        "disposition": "exact_test_import",
+        "canonical_tests": [
+          {
+            "path": "tests/wine_integration/test_memory_wine_bitmap.py",
+            "symbol": "DiagnosticControls.test_partial_reserved_release_refuses_without_fabricated_syscall",
+            "line_start": 98,
+            "line_end": 104,
+            "sha256": "81c4594d3b80ad19d966de31a7e902c3a855d562b6dd9c103c535e32eae80cb4"
+          }
+        ],
+        "claim": "Original test method bytes preserved; imports/provider selection are the recorded module adaptations. Synthetic portability only."
+      },
+      {
+        "original": {
+          "path": "tests/fex/test_memory_wine_bitmap.py",
+          "symbol": "DiagnosticControls.test_successful_hole_observation_can_return_kern_invalid_address",
+          "line_start": 104,
+          "line_end": 111,
+          "sha256": "5191e6d710fd63a931e329a57bcdd8aaa1700a115372fcee956c9c7b24f98203"
+        },
+        "disposition": "exact_test_import",
+        "canonical_tests": [
+          {
+            "path": "tests/wine_integration/test_memory_wine_bitmap.py",
+            "symbol": "DiagnosticControls.test_successful_hole_observation_can_return_kern_invalid_address",
+            "line_start": 106,
+            "line_end": 113,
+            "sha256": "5191e6d710fd63a931e329a57bcdd8aaa1700a115372fcee956c9c7b24f98203"
+          }
+        ],
+        "claim": "Original test method bytes preserved; imports/provider selection are the recorded module adaptations. Synthetic portability only."
+      },
+      {
+        "original": {
+          "path": "tests/fex/test_memory_wine_bitmap.py",
+          "symbol": "DiagnosticControls.test_wrong_scope_flags_unknown_keys_boolean_integers_and_mask_refused",
+          "line_start": 113,
+          "line_end": 118,
+          "sha256": "ad674f6a12be48c203403f15cf7a0d3ca3e7441a48b41a6eb34767437604aae3"
+        },
+        "disposition": "exact_test_import",
+        "canonical_tests": [
+          {
+            "path": "tests/wine_integration/test_memory_wine_bitmap.py",
+            "symbol": "DiagnosticControls.test_wrong_scope_flags_unknown_keys_boolean_integers_and_mask_refused",
+            "line_start": 115,
+            "line_end": 120,
+            "sha256": "ad674f6a12be48c203403f15cf7a0d3ca3e7441a48b41a6eb34767437604aae3"
+          }
+        ],
+        "claim": "Original test method bytes preserved; imports/provider selection are the recorded module adaptations. Synthetic portability only."
+      },
+      {
+        "original": {
+          "path": "tests/fex/test_memory_wine_bitmap.py",
+          "symbol": "DiagnosticControls.test_missing_duplicate_truncated_extra_lines_nonascii_and_overbound_refused",
+          "line_start": 120,
+          "line_end": 126,
+          "sha256": "0be7f0ca6ae7d3c0ee42c34b15155d232ded99d0e11f766b551067f478f9a1b8"
+        },
+        "disposition": "exact_test_import",
+        "canonical_tests": [
+          {
+            "path": "tests/wine_integration/test_memory_wine_bitmap.py",
+            "symbol": "DiagnosticControls.test_missing_duplicate_truncated_extra_lines_nonascii_and_overbound_refused",
+            "line_start": 122,
+            "line_end": 128,
+            "sha256": "0be7f0ca6ae7d3c0ee42c34b15155d232ded99d0e11f766b551067f478f9a1b8"
+          }
+        ],
+        "claim": "Original test method bytes preserved; imports/provider selection are the recorded module adaptations. Synthetic portability only."
+      },
+      {
+        "original": {
+          "path": "tests/fex/test_memory_wine_bitmap.py",
+          "symbol": "DiagnosticControls.test_first_page_capacity_identity_missing_observation_refused",
+          "line_start": 128,
+          "line_end": 132,
+          "sha256": "9a4a6e8c384f1e23820dc34d6afd2136c727488201f32539535d00f886aee126"
+        },
+        "disposition": "exact_test_import",
+        "canonical_tests": [
+          {
+            "path": "tests/wine_integration/test_memory_wine_bitmap.py",
+            "symbol": "DiagnosticControls.test_first_page_capacity_identity_missing_observation_refused",
+            "line_start": 130,
+            "line_end": 134,
+            "sha256": "9a4a6e8c384f1e23820dc34d6afd2136c727488201f32539535d00f886aee126"
+          }
+        ],
+        "claim": "Original test method bytes preserved; imports/provider selection are the recorded module adaptations. Synthetic portability only."
+      },
+      {
+        "original": {
+          "path": "tests/fex/test_memory_wine_bitmap.py",
+          "symbol": "DiagnosticControls.test_unknown_vm_never_fabricates_protection_or_port_release",
+          "line_start": 134,
+          "line_end": 138,
+          "sha256": "d8f09194c10a9d0f212de4ba7545b70032718a59e7686b18b07e486708383f44"
+        },
+        "disposition": "exact_test_import",
+        "canonical_tests": [
+          {
+            "path": "tests/wine_integration/test_memory_wine_bitmap.py",
+            "symbol": "DiagnosticControls.test_unknown_vm_never_fabricates_protection_or_port_release",
+            "line_start": 136,
+            "line_end": 140,
+            "sha256": "d8f09194c10a9d0f212de4ba7545b70032718a59e7686b18b07e486708383f44"
+          }
+        ],
+        "claim": "Original test method bytes preserved; imports/provider selection are the recorded module adaptations. Synthetic portability only."
+      },
+      {
+        "original": {
+          "path": "tests/fex/test_memory_wine_bitmap.py",
+          "symbol": "DiagnosticControls.test_failed_original_identity_is_not_reset_by_parser",
+          "line_start": 140,
+          "line_end": 145,
+          "sha256": "ee368943923b735a2f39eceba0ea7d30a3244298cfc11f965879d12eb7ef8323"
+        },
+        "disposition": "exact_test_import",
+        "canonical_tests": [
+          {
+            "path": "tests/wine_integration/test_memory_wine_bitmap.py",
+            "symbol": "DiagnosticControls.test_failed_original_identity_is_not_reset_by_parser",
+            "line_start": 142,
+            "line_end": 147,
+            "sha256": "ee368943923b735a2f39eceba0ea7d30a3244298cfc11f965879d12eb7ef8323"
+          }
+        ],
+        "claim": "Original test method bytes preserved; imports/provider selection are the recorded module adaptations. Synthetic portability only."
+      },
+      {
+        "original": {
+          "path": "tests/fex/test_memory_wine_bitmap.py",
+          "symbol": "DiagnosticControls.test_native_protection_flags_and_error_type_are_strict",
+          "line_start": 147,
+          "line_end": 150,
+          "sha256": "245d0060f58f3318147c75d8269a3975e56acc34738e2dd947d79c7ba0bf7aa5"
+        },
+        "disposition": "exact_test_import",
+        "canonical_tests": [
+          {
+            "path": "tests/wine_integration/test_memory_wine_bitmap.py",
+            "symbol": "DiagnosticControls.test_native_protection_flags_and_error_type_are_strict",
+            "line_start": 149,
+            "line_end": 152,
+            "sha256": "245d0060f58f3318147c75d8269a3975e56acc34738e2dd947d79c7ba0bf7aa5"
+          }
+        ],
+        "claim": "Original test method bytes preserved; imports/provider selection are the recorded module adaptations. Synthetic portability only."
+      },
+      {
+        "original": {
+          "path": "tests/fex/test_memory_wine_bitmap.py",
+          "symbol": "DiagnosticControls.test_stream_pairs_each_diagnostic_without_promoting_failed_primary",
+          "line_start": 152,
+          "line_end": 162,
+          "sha256": "f23f907ce71c792e970fba917e854727a388735b6a0947b7cd2ebe507f4749c3"
+        },
+        "disposition": "exact_test_import",
+        "canonical_tests": [
+          {
+            "path": "tests/wine_integration/test_memory_wine_bitmap.py",
+            "symbol": "DiagnosticControls.test_stream_pairs_each_diagnostic_without_promoting_failed_primary",
+            "line_start": 154,
+            "line_end": 164,
+            "sha256": "f23f907ce71c792e970fba917e854727a388735b6a0947b7cd2ebe507f4749c3"
+          }
+        ],
+        "claim": "Original test method bytes preserved; imports/provider selection are the recorded module adaptations. Synthetic portability only."
+      },
+      {
+        "original": {
+          "path": "tests/fex/test_memory_wine_bitmap.py",
+          "symbol": "DiagnosticControls.test_stream_missing_duplicate_orphan_reordered_and_interleaved_refused",
+          "line_start": 164,
+          "line_end": 169,
+          "sha256": "0554fa1bae4195eb463df66a003fdc6084f52641fb0310b8a2a0858d61c108a4"
+        },
+        "disposition": "exact_test_import",
+        "canonical_tests": [
+          {
+            "path": "tests/wine_integration/test_memory_wine_bitmap.py",
+            "symbol": "DiagnosticControls.test_stream_missing_duplicate_orphan_reordered_and_interleaved_refused",
+            "line_start": 166,
+            "line_end": 171,
+            "sha256": "0554fa1bae4195eb463df66a003fdc6084f52641fb0310b8a2a0858d61c108a4"
+          }
+        ],
+        "claim": "Original test method bytes preserved; imports/provider selection are the recorded module adaptations. Synthetic portability only."
+      },
+      {
+        "original": {
+          "path": "tests/fex/test_memory_wine_bitmap.py",
+          "symbol": "DiagnosticControls.test_stream_unknown_bitmap_like_lines_remain_refused",
+          "line_start": 171,
+          "line_end": 176,
+          "sha256": "f57de2a14b49702a2d9d9d6fa8615edd3b4e0bab0dd51f33f3bffb4807daf430"
+        },
+        "disposition": "exact_test_import",
+        "canonical_tests": [
+          {
+            "path": "tests/wine_integration/test_memory_wine_bitmap.py",
+            "symbol": "DiagnosticControls.test_stream_unknown_bitmap_like_lines_remain_refused",
+            "line_start": 173,
+            "line_end": 178,
+            "sha256": "f57de2a14b49702a2d9d9d6fa8615edd3b4e0bab0dd51f33f3bffb4807daf430"
+          }
+        ],
+        "claim": "Original test method bytes preserved; imports/provider selection are the recorded module adaptations. Synthetic portability only."
+      },
+      {
+        "original": {
+          "path": "tests/fex/test_memory_wine_bitmap.py",
+          "symbol": "DiagnosticControls.test_stream_count_bound_primary_types_and_error_pairing_are_closed",
+          "line_start": 178,
+          "line_end": 188,
+          "sha256": "2deeb5c20648df0dc77298cf0e12ab62885c414da204d18f723cd10e6597d70b"
+        },
+        "disposition": "exact_test_import",
+        "canonical_tests": [
+          {
+            "path": "tests/wine_integration/test_memory_wine_bitmap.py",
+            "symbol": "DiagnosticControls.test_stream_count_bound_primary_types_and_error_pairing_are_closed",
+            "line_start": 180,
+            "line_end": 190,
+            "sha256": "2deeb5c20648df0dc77298cf0e12ab62885c414da204d18f723cd10e6597d70b"
+          }
+        ],
+        "claim": "Original test method bytes preserved; imports/provider selection are the recorded module adaptations. Synthetic portability only."
+      },
+      {
+        "original": {
+          "path": "tests/fex/test_memory_wine_bitmap.py",
+          "symbol": "DiagnosticControls.test_stream_diagnostic_and_primary_duplicate_json_keys_are_refused",
+          "line_start": 190,
+          "line_end": 194,
+          "sha256": "20a913b9fac5a6c31ff854581df19fa7cac3a4e4a099c9d4905bc4e280304872"
+        },
+        "disposition": "exact_test_import",
+        "canonical_tests": [
+          {
+            "path": "tests/wine_integration/test_memory_wine_bitmap.py",
+            "symbol": "DiagnosticControls.test_stream_diagnostic_and_primary_duplicate_json_keys_are_refused",
+            "line_start": 192,
+            "line_end": 196,
+            "sha256": "20a913b9fac5a6c31ff854581df19fa7cac3a4e4a099c9d4905bc4e280304872"
+          }
+        ],
+        "claim": "Original test method bytes preserved; imports/provider selection are the recorded module adaptations. Synthetic portability only."
+      },
+      {
+        "original": {
+          "path": "tests/fex/test_memory_wine_bitmap.py",
+          "symbol": "DiagnosticControls.test_four_reviewed_source_impossible_positive_pairs_are_refused",
+          "line_start": 196,
+          "line_end": 207,
+          "sha256": "a5ce7462ebd34a70257c27a920b65c39c45027fca68d1ddc081b4bbfeea12693"
+        },
+        "disposition": "exact_test_import",
+        "canonical_tests": [
+          {
+            "path": "tests/wine_integration/test_memory_wine_bitmap.py",
+            "symbol": "DiagnosticControls.test_four_reviewed_source_impossible_positive_pairs_are_refused",
+            "line_start": 198,
+            "line_end": 209,
+            "sha256": "a5ce7462ebd34a70257c27a920b65c39c45027fca68d1ddc081b4bbfeea12693"
+          }
+        ],
+        "claim": "Original test method bytes preserved; imports/provider selection are the recorded module adaptations. Synthetic portability only."
+      },
+      {
+        "original": {
+          "path": "tests/fex/test_memory_wine_bitmap.py",
+          "symbol": "DiagnosticControls.test_failed_release_requires_exact_branch_mask_and_retained_identity",
+          "line_start": 209,
+          "line_end": 220,
+          "sha256": "4cce9cb004014f4d09d74eb76f6fbbabcad135c655605d6382c4a2b247b58532"
+        },
+        "disposition": "exact_test_import",
+        "canonical_tests": [
+          {
+            "path": "tests/wine_integration/test_memory_wine_bitmap.py",
+            "symbol": "DiagnosticControls.test_failed_release_requires_exact_branch_mask_and_retained_identity",
+            "line_start": 211,
+            "line_end": 222,
+            "sha256": "4cce9cb004014f4d09d74eb76f6fbbabcad135c655605d6382c4a2b247b58532"
+          }
+        ],
+        "claim": "Original test method bytes preserved; imports/provider selection are the recorded module adaptations. Synthetic portability only."
+      },
+      {
+        "original": {
+          "path": "tests/fex/test_memory_wine_bitmap.py",
+          "symbol": "DiagnosticControls.test_first_failed_page_requires_actual_failure_presence_and_matching_bits",
+          "line_start": 222,
+          "line_end": 236,
+          "sha256": "ca3968985d1cc60363cb3c88ae24e11cc825875c6eefd4ffc67bb486c809d576"
+        },
+        "disposition": "exact_test_import",
+        "canonical_tests": [
+          {
+            "path": "tests/wine_integration/test_memory_wine_bitmap.py",
+            "symbol": "DiagnosticControls.test_first_failed_page_requires_actual_failure_presence_and_matching_bits",
+            "line_start": 224,
+            "line_end": 238,
+            "sha256": "ca3968985d1cc60363cb3c88ae24e11cc825875c6eefd4ffc67bb486c809d576"
+          }
+        ],
+        "claim": "Original test method bytes preserved; imports/provider selection are the recorded module adaptations. Synthetic portability only."
+      },
+      {
+        "original": {
+          "path": "tests/fex/test_memory_wine_bitmap.py",
+          "symbol": "DiagnosticControls.test_global_later_failure_bits_do_not_overwrite_first_snapshot_or_primary_error",
+          "line_start": 238,
+          "line_end": 251,
+          "sha256": "721117e88b8fa08f7686132de7e8523b76ab34ec610cb56f165a8253e63094ce"
+        },
+        "disposition": "exact_test_import",
+        "canonical_tests": [
+          {
+            "path": "tests/wine_integration/test_memory_wine_bitmap.py",
+            "symbol": "DiagnosticControls.test_global_later_failure_bits_do_not_overwrite_first_snapshot_or_primary_error",
+            "line_start": 240,
+            "line_end": 253,
+            "sha256": "721117e88b8fa08f7686132de7e8523b76ab34ec610cb56f165a8253e63094ce"
+          }
+        ],
+        "claim": "Original test method bytes preserved; imports/provider selection are the recorded module adaptations. Synthetic portability only."
+      },
+      {
+        "original": {
+          "path": "tests/fex/test_memory_wine_bitmap.py",
+          "symbol": "DiagnosticControls.test_created_bitmap_complement_and_unperformed_source_paths_are_closed",
+          "line_start": 253,
+          "line_end": 264,
+          "sha256": "e565a2a8b161441a1b14d89971429adbde2033a996e47735ede84908145dcb48"
+        },
+        "disposition": "exact_test_import",
+        "canonical_tests": [
+          {
+            "path": "tests/wine_integration/test_memory_wine_bitmap.py",
+            "symbol": "DiagnosticControls.test_created_bitmap_complement_and_unperformed_source_paths_are_closed",
+            "line_start": 255,
+            "line_end": 266,
+            "sha256": "e565a2a8b161441a1b14d89971429adbde2033a996e47735ede84908145dcb48"
+          }
+        ],
+        "claim": "Original test method bytes preserved; imports/provider selection are the recorded module adaptations. Synthetic portability only."
+      },
+      {
+        "original": {
+          "path": "tests/fex/test_memory_wine_bitmap.py",
+          "symbol": "DiagnosticControls.test_native_observer_branch_and_unmarked_logical_failure_are_closed",
+          "line_start": 266,
+          "line_end": 275,
+          "sha256": "80a181d5de8827a2462fad23708d73d5c14f8c6cb403fd457c5c5e7a51ecc762"
+        },
+        "disposition": "exact_test_import",
+        "canonical_tests": [
+          {
+            "path": "tests/wine_integration/test_memory_wine_bitmap.py",
+            "symbol": "DiagnosticControls.test_native_observer_branch_and_unmarked_logical_failure_are_closed",
+            "line_start": 268,
+            "line_end": 277,
+            "sha256": "80a181d5de8827a2462fad23708d73d5c14f8c6cb403fd457c5c5e7a51ecc762"
+          }
+        ],
+        "claim": "Original test method bytes preserved; imports/provider selection are the recorded module adaptations. Synthetic portability only."
+      },
+      {
+        "original": {
+          "path": "tests/fex/test_memory_wine_bitmap.py",
+          "symbol": "DiagnosticControls.test_primary_prior_error_can_survive_successful_restoration",
+          "line_start": 277,
+          "line_end": 284,
+          "sha256": "3bd80f806c11fed27ae266bc0a1973512510edf983fa0e27bffdaadf52255089"
+        },
+        "disposition": "exact_test_import",
+        "canonical_tests": [
+          {
+            "path": "tests/wine_integration/test_memory_wine_bitmap.py",
+            "symbol": "DiagnosticControls.test_primary_prior_error_can_survive_successful_restoration",
+            "line_start": 279,
+            "line_end": 286,
+            "sha256": "3bd80f806c11fed27ae266bc0a1973512510edf983fa0e27bffdaadf52255089"
+          }
+        ],
+        "claim": "Original test method bytes preserved; imports/provider selection are the recorded module adaptations. Synthetic portability only."
+      },
+      {
+        "original": {
+          "path": "tests/fex/test_memory_wine_bitmap.py",
+          "symbol": "DiagnosticControls.test_selected_get_unix_prot_mapping_is_exact_and_not_force_exec_relabeling",
+          "line_start": 286,
+          "line_end": 295,
+          "sha256": "3eb1bdaa2ca5533bada44d006e906b9a14b84485e8979731d2b0ec2d906d57c9"
+        },
+        "disposition": "exact_test_import",
+        "canonical_tests": [
+          {
+            "path": "tests/wine_integration/test_memory_wine_bitmap.py",
+            "symbol": "DiagnosticControls.test_selected_get_unix_prot_mapping_is_exact_and_not_force_exec_relabeling",
+            "line_start": 288,
+            "line_end": 297,
+            "sha256": "3eb1bdaa2ca5533bada44d006e906b9a14b84485e8979731d2b0ec2d906d57c9"
+          }
+        ],
+        "claim": "Original test method bytes preserved; imports/provider selection are the recorded module adaptations. Synthetic portability only."
+      },
+      {
+        "original": {
+          "path": "tests/fex/test_memory_wine_bitmap.py",
+          "symbol": "DiagnosticControls.test_release_observer_failure_requires_exact_mask_and_retains_prior_primary_error",
+          "line_start": 297,
+          "line_end": 309,
+          "sha256": "b411e7ec2aea9279c4d24350fc78edd3c96d26c3072f35a1157ea119d59ad68a"
+        },
+        "disposition": "exact_test_import",
+        "canonical_tests": [
+          {
+            "path": "tests/wine_integration/test_memory_wine_bitmap.py",
+            "symbol": "DiagnosticControls.test_release_observer_failure_requires_exact_mask_and_retains_prior_primary_error",
+            "line_start": 299,
+            "line_end": 311,
+            "sha256": "b411e7ec2aea9279c4d24350fc78edd3c96d26c3072f35a1157ea119d59ad68a"
+          }
+        ],
+        "claim": "Original test method bytes preserved; imports/provider selection are the recorded module adaptations. Synthetic portability only."
+      },
+      {
+        "original": {
+          "path": "tests/fex/test_memory_wine_bitmap.py",
+          "symbol": "DiagnosticControls.test_cleanup_native_port_error_requires_failure_mask_without_latest_code_override",
+          "line_start": 311,
+          "line_end": 319,
+          "sha256": "57c56a1014f0bf7edff94177d3349cccedf9189b4e68c6f7997678efc576c169"
+        },
+        "disposition": "exact_test_import",
+        "canonical_tests": [
+          {
+            "path": "tests/wine_integration/test_memory_wine_bitmap.py",
+            "symbol": "DiagnosticControls.test_cleanup_native_port_error_requires_failure_mask_without_latest_code_override",
+            "line_start": 313,
+            "line_end": 321,
+            "sha256": "57c56a1014f0bf7edff94177d3349cccedf9189b4e68c6f7997678efc576c169"
+          }
+        ],
+        "claim": "Original test method bytes preserved; imports/provider selection are the recorded module adaptations. Synthetic portability only."
+      },
+      {
+        "original": {
+          "path": "tests/fex/test_memory_wine_bitmap.py",
+          "symbol": "DiagnosticControls.test_source_realistic_positive_completed_pairs_are_separate_from_partial_failure",
+          "line_start": 321,
+          "line_end": 336,
+          "sha256": "236d9f7005c89eaff90d4bb59849755c99e82e6adc660100b184c4436771d135"
+        },
+        "disposition": "exact_test_import",
+        "canonical_tests": [
+          {
+            "path": "tests/wine_integration/test_memory_wine_bitmap.py",
+            "symbol": "DiagnosticControls.test_source_realistic_positive_completed_pairs_are_separate_from_partial_failure",
+            "line_start": 323,
+            "line_end": 338,
+            "sha256": "236d9f7005c89eaff90d4bb59849755c99e82e6adc660100b184c4436771d135"
+          }
+        ],
+        "claim": "Original test method bytes preserved; imports/provider selection are the recorded module adaptations. Synthetic portability only."
+      },
+      {
+        "original": {
+          "path": "tests/fex/test_memory_wine_bitmap.py",
+          "symbol": "DiagnosticControls.test_partial_failed_prefix_preserves_required_count_and_original_error",
+          "line_start": 338,
+          "line_end": 349,
+          "sha256": "4ae4c1372059176ff2a2d20609432c14b4b3ed644f1a7a92c6f81d17b728218b"
+        },
+        "disposition": "exact_test_import",
+        "canonical_tests": [
+          {
+            "path": "tests/wine_integration/test_memory_wine_bitmap.py",
+            "symbol": "DiagnosticControls.test_partial_failed_prefix_preserves_required_count_and_original_error",
+            "line_start": 340,
+            "line_end": 351,
+            "sha256": "4ae4c1372059176ff2a2d20609432c14b4b3ed644f1a7a92c6f81d17b728218b"
+          }
+        ],
+        "claim": "Original test method bytes preserved; imports/provider selection are the recorded module adaptations. Synthetic portability only."
+      },
+      {
+        "original": {
+          "path": "tests/fex/test_memory_wine_bitmap.py",
+          "symbol": "DiagnosticControls.test_partial_prefix_does_not_recover_malformed_rows_or_infer_unobserved_execution",
+          "line_start": 351,
+          "line_end": 362,
+          "sha256": "94fef33e8839ee61e740df5bf015d1a95c16096f0a7e3f5b76960e440a8e3705"
+        },
+        "disposition": "exact_test_import",
+        "canonical_tests": [
+          {
+            "path": "tests/wine_integration/test_memory_wine_bitmap.py",
+            "symbol": "DiagnosticControls.test_partial_prefix_does_not_recover_malformed_rows_or_infer_unobserved_execution",
+            "line_start": 353,
+            "line_end": 364,
+            "sha256": "94fef33e8839ee61e740df5bf015d1a95c16096f0a7e3f5b76960e440a8e3705"
+          }
+        ],
+        "claim": "Original test method bytes preserved; imports/provider selection are the recorded module adaptations. Synthetic portability only."
+      },
+      {
+        "original": {
+          "path": "tests/fex/test_memory_wine_bitmap_prefix.py",
+          "symbol": "FailedPrefixControls.test_positive_existing_and_created_pairs_keep_exact_raw_spans",
+          "line_start": 31,
+          "line_end": 42,
+          "sha256": "f48868f93b96a012b1e1dfd3ceeded5ba04bb65463a9329b581646702461c311"
+        },
+        "disposition": "exact_test_import",
+        "canonical_tests": [
+          {
+            "path": "tests/wine_integration/test_memory_wine_bitmap_prefix.py",
+            "symbol": "FailedPrefixControls.test_positive_existing_and_created_pairs_keep_exact_raw_spans",
+            "line_start": 33,
+            "line_end": 44,
+            "sha256": "f48868f93b96a012b1e1dfd3ceeded5ba04bb65463a9329b581646702461c311"
+          }
+        ],
+        "claim": "Original test method bytes preserved; imports/provider selection are the recorded module adaptations. Synthetic portability only."
+      },
+      {
+        "original": {
+          "path": "tests/fex/test_memory_wine_bitmap_prefix.py",
+          "symbol": "FailedPrefixControls.test_orphan_retains_prior_complete_pair_and_reports_eof_offset",
+          "line_start": 44,
+          "line_end": 51,
+          "sha256": "4685d325221d025dbd1c9064e5becd59e4d048c3e2d2ceb0d9b1def1b464c343"
+        },
+        "disposition": "exact_test_import",
+        "canonical_tests": [
+          {
+            "path": "tests/wine_integration/test_memory_wine_bitmap_prefix.py",
+            "symbol": "FailedPrefixControls.test_orphan_retains_prior_complete_pair_and_reports_eof_offset",
+            "line_start": 46,
+            "line_end": 53,
+            "sha256": "4685d325221d025dbd1c9064e5becd59e4d048c3e2d2ceb0d9b1def1b464c343"
+          }
+        ],
+        "claim": "Original test method bytes preserved; imports/provider selection are the recorded module adaptations. Synthetic portability only."
+      },
+      {
+        "original": {
+          "path": "tests/fex/test_memory_wine_bitmap_prefix.py",
+          "symbol": "FailedPrefixControls.test_malformed_later_diagnostic_retains_first_pair",
+          "line_start": 53,
+          "line_end": 63,
+          "sha256": "92630a9a7a210682b5ed34408cd023f39e6c27e9a0961c7d0d53f8418e7e4b76"
+        },
+        "disposition": "exact_test_import",
+        "canonical_tests": [
+          {
+            "path": "tests/wine_integration/test_memory_wine_bitmap_prefix.py",
+            "symbol": "FailedPrefixControls.test_malformed_later_diagnostic_retains_first_pair",
+            "line_start": 55,
+            "line_end": 65,
+            "sha256": "92630a9a7a210682b5ed34408cd023f39e6c27e9a0961c7d0d53f8418e7e4b76"
+          }
+        ],
+        "claim": "Original test method bytes preserved; imports/provider selection are the recorded module adaptations. Synthetic portability only."
+      },
+      {
+        "original": {
+          "path": "tests/fex/test_memory_wine_bitmap_prefix.py",
+          "symbol": "FailedPrefixControls.test_unpaired_or_interleaved_output_never_becomes_a_pair",
+          "line_start": 65,
+          "line_end": 77,
+          "sha256": "48951c136455ecbc3617c89cfdabb313e3af3a782bb3244f8e2421fca8173c9c"
+        },
+        "disposition": "exact_test_import",
+        "canonical_tests": [
+          {
+            "path": "tests/wine_integration/test_memory_wine_bitmap_prefix.py",
+            "symbol": "FailedPrefixControls.test_unpaired_or_interleaved_output_never_becomes_a_pair",
+            "line_start": 67,
+            "line_end": 79,
+            "sha256": "48951c136455ecbc3617c89cfdabb313e3af3a782bb3244f8e2421fca8173c9c"
+          }
+        ],
+        "claim": "Original test method bytes preserved; imports/provider selection are the recorded module adaptations. Synthetic portability only."
+      },
+      {
+        "original": {
+          "path": "tests/fex/test_memory_wine_bitmap_prefix.py",
+          "symbol": "FailedPrefixControls.test_original_failed_primary_survives_later_parser_refusal",
+          "line_start": 79,
+          "line_end": 89,
+          "sha256": "0dbaeb4cff977ee19950980a96de8fe97cbf057cee58f9f5a522efd3337d077e"
+        },
+        "disposition": "exact_test_import",
+        "canonical_tests": [
+          {
+            "path": "tests/wine_integration/test_memory_wine_bitmap_prefix.py",
+            "symbol": "FailedPrefixControls.test_original_failed_primary_survives_later_parser_refusal",
+            "line_start": 81,
+            "line_end": 91,
+            "sha256": "0dbaeb4cff977ee19950980a96de8fe97cbf057cee58f9f5a522efd3337d077e"
+          }
+        ],
+        "claim": "Original test method bytes preserved; imports/provider selection are the recorded module adaptations. Synthetic portability only."
+      },
+      {
+        "original": {
+          "path": "tests/fex/test_memory_wine_bitmap_prefix.py",
+          "symbol": "FailedPrefixControls.test_zero_observations_never_infer_an_invocation_or_native_error",
+          "line_start": 91,
+          "line_end": 102,
+          "sha256": "970479e865fddc5875be12b30c9a63086e0cc8e50ef7c4a2c32e0f77ebbee941"
+        },
+        "disposition": "exact_test_import",
+        "canonical_tests": [
+          {
+            "path": "tests/wine_integration/test_memory_wine_bitmap_prefix.py",
+            "symbol": "FailedPrefixControls.test_zero_observations_never_infer_an_invocation_or_native_error",
+            "line_start": 93,
+            "line_end": 104,
+            "sha256": "970479e865fddc5875be12b30c9a63086e0cc8e50ef7c4a2c32e0f77ebbee941"
+          }
+        ],
+        "claim": "Original test method bytes preserved; imports/provider selection are the recorded module adaptations. Synthetic portability only."
+      },
+      {
+        "original": {
+          "path": "tests/fex/test_memory_wine_bitmap_prefix.py",
+          "symbol": "FailedPrefixControls.test_even_full_observed_prefix_never_substitutes_for_completed_count",
+          "line_start": 104,
+          "line_end": 114,
+          "sha256": "6a8f1ca08ffc0a5976321af717312fbe86fed6464c1ef8112d26d6b0b9e0dda8"
+        },
+        "disposition": "exact_test_import",
+        "canonical_tests": [
+          {
+            "path": "tests/wine_integration/test_memory_wine_bitmap_prefix.py",
+            "symbol": "FailedPrefixControls.test_even_full_observed_prefix_never_substitutes_for_completed_count",
+            "line_start": 106,
+            "line_end": 116,
+            "sha256": "6a8f1ca08ffc0a5976321af717312fbe86fed6464c1ef8112d26d6b0b9e0dda8"
+          }
+        ],
+        "claim": "Original test method bytes preserved; imports/provider selection are the recorded module adaptations. Synthetic portability only."
+      },
+      {
+        "original": {
+          "path": "tests/fex/test_memory_wine_bitmap_prefix.py",
+          "symbol": "FailedPrefixControls.test_capacity_refusal_keeps_first_128_exact_pairs_without_count_wrap",
+          "line_start": 116,
+          "line_end": 124,
+          "sha256": "d0e1a82ebcde140c4eea37f0c12231408786b1214823f9ac16a2a4b550b4eaea"
+        },
+        "disposition": "exact_test_import",
+        "canonical_tests": [
+          {
+            "path": "tests/wine_integration/test_memory_wine_bitmap_prefix.py",
+            "symbol": "FailedPrefixControls.test_capacity_refusal_keeps_first_128_exact_pairs_without_count_wrap",
+            "line_start": 118,
+            "line_end": 126,
+            "sha256": "d0e1a82ebcde140c4eea37f0c12231408786b1214823f9ac16a2a4b550b4eaea"
+          }
+        ],
+        "claim": "Original test method bytes preserved; imports/provider selection are the recorded module adaptations. Synthetic portability only."
+      },
+      {
+        "original": {
+          "path": "tests/fex/test_stage3_memory_wine_build.py",
+          "symbol": "WineMemorySourceTests.test_closed_ordered_patch_identity",
+          "line_start": 15,
+          "line_end": 28,
+          "sha256": "1bf911c3711c755f974059ffbe25201c76a2703f369d3f6da2edd808ecb59f80"
+        },
+        "disposition": "retired_implementation_specific",
+        "canonical_tests": [
+          {
+            "path": "tests/build/test_build.py",
+            "symbol": "BuildTests.test_git_source_identity_and_dirty_source_refusal",
+            "line_start": 269,
+            "line_end": 286,
+            "sha256": "3f9cbe0ae93432bbdaec8808dd4cfb0b0a948e30a6a9eaf2b1c4141c2e76fb98"
+          },
+          {
+            "path": "tests/assembly/test_assembly.py",
+            "symbol": "InputTests.test_stale_recipe_or_source_pin_fails",
+            "line_start": 93,
+            "line_end": 98,
+            "sha256": "2d3f3959fd77481f53c53da86ae3b84fb7636617c57300f855038ca5b4315c7c"
+          }
+        ],
+        "full_legacy_behavior_equivalence_claimed": false,
+        "migration_judgment": "The candidate is built from exact committed fork files plus a versioned recipe; historical patch-series execution is retired. The new tests bind Git and recipe identity, not the old patch-list schema or order parser."
+      },
+      {
+        "original": {
+          "path": "tests/fex/test_stage3_memory_wine_build.py",
+          "symbol": "WineMemorySourceTests.test_copy_refuses_changed_source_and_link_escape",
+          "line_start": 30,
+          "line_end": 44,
+          "sha256": "151ff8772007945d6b8dc472597b04ea59913f688b11c42788c48365a1d863b6"
+        },
+        "disposition": "current_contract_counterpart",
+        "canonical_tests": [
+          {
+            "path": "tests/build/test_build.py",
+            "symbol": "BuildTests.test_tampered_input_refuses_before_output",
+            "line_start": 92,
+            "line_end": 97,
+            "sha256": "835eaf8ee489a9874ac66da378ee78b54de864ec6073e060c6190555cc1b547d"
+          },
+          {
+            "path": "tests/build/test_build.py",
+            "symbol": "BuildTests.test_declared_link_requires_exact_target_and_admitted_bytes",
+            "line_start": 130,
+            "line_end": 146,
+            "sha256": "8c9189f3f2526ca87160c70c3ced4efd230d9af521037d0a63486b1a8f73b78c"
+          }
+        ],
+        "full_legacy_behavior_equivalence_claimed": false,
+        "migration_judgment": "Current explicit input admission rejects changed bytes and escaping symlink targets; the old copy_inventory implementation is not imported."
+      },
+      {
+        "original": {
+          "path": "tests/fex/test_stage3_memory_wine_build.py",
+          "symbol": "WineMemorySourceTests.test_legacy_error_code_crosses_namespace_without_class_leak",
+          "line_start": 46,
+          "line_end": 52,
+          "sha256": "40950dc3dfe2e9911d4030263198f67b4cad9a1c2c5a5fa656b52224aeb5b8ce"
+        },
+        "disposition": "retired_implementation_specific",
+        "canonical_tests": [
+          {
+            "path": "tests/fixtures/test_supervision.py",
+            "symbol": "SupervisorTests.test_primary_failure_survives_provider_recheck_failure",
+            "line_start": 169,
+            "line_end": 175,
+            "sha256": "048329e1587d73d2f43e612e85fa05d535ab32b483fe7c12dee886c6dbf97bf1"
+          },
+          {
+            "path": "tests/assembly/test_assembly.py",
+            "symbol": "InputTests.test_current_authority_failure_retains_original_error_and_false_control",
+            "line_start": 242,
+            "line_end": 252,
+            "sha256": "5c8287a1340628cd54b8fe9d069968e84d53b01551d01e590039c12b170b92b9"
+          }
+        ],
+        "full_legacy_behavior_equivalence_claimed": false,
+        "migration_judgment": "Current modules use canonical Error and an explicitly loaded provider package. The old wine_readers namespace translation assertion is retired; original failure preservation is checked at current boundaries."
+      },
+      {
+        "original": {
+          "path": "tests/fex/test_stage3_memory_wine_build.py",
+          "symbol": "WineMemorySourceTests.test_inventory_rejects_duplicate_paths_and_boolean_sizes",
+          "line_start": 54,
+          "line_end": 57,
+          "sha256": "a6a4bdc8b06fe92f0ac2b757b66474f2ca06a2f5eba2f36bab14ab1799572a3c"
+        },
+        "disposition": "retired_implementation_specific",
+        "canonical_tests": [
+          {
+            "path": "tests/build/test_build.py",
+            "symbol": "BuildTests.test_duplicate_json_key_refuses",
+            "line_start": 303,
+            "line_end": 307,
+            "sha256": "fc79069fe0464abeb08168f5d9a66493d055b782a0a5444a4215413d53568a82"
+          },
+          {
+            "path": "tests/fixtures/test_driver.py",
+            "symbol": "RequestPolicy.test_unknown_missing_fields_and_boolean_schema_refused",
+            "line_start": 52,
+            "line_end": 62,
+            "sha256": "49ffe642946abd94929cccc5caa1e799aa34de412fc6fcb5f2cf5e550de7c119"
+          },
+          {
+            "path": "tests/assembly/test_assembly.py",
+            "symbol": "InputTests.test_regular_file_and_actual_size_checked_before_hash",
+            "line_start": 177,
+            "line_end": 182,
+            "sha256": "d98dcd32c821ad81bf31f742dc26e0ab150be15b064a9f6060379045e81ed9b8"
+          }
+        ],
+        "full_legacy_behavior_equivalence_claimed": false,
+        "migration_judgment": "Current closed request and regular-file admission have separate tests. These do not claim exact coverage of every old pin_rows list mutation; the historical inventory schema is no longer a production input."
+      },
+      {
+        "original": {
+          "path": "tests/fex/test_stage3_memory_wine_build.py",
+          "symbol": "WineMemoryHistoricalLogTests.test_exact_original_log_alias_admitted_by_rooted_bytes",
+          "line_start": 79,
+          "line_end": 83,
+          "sha256": "60f79b93c944ba2a80a2d47a8b4a03554602c789e89ef29e609755510411627a"
+        },
+        "disposition": "retired_implementation_specific",
+        "canonical_tests": [
+          {
+            "path": "tests/build/test_build.py",
+            "symbol": "BuildTests.test_declared_link_requires_exact_target_and_admitted_bytes",
+            "line_start": 130,
+            "line_end": 146,
+            "sha256": "8c9189f3f2526ca87160c70c3ced4efd230d9af521037d0a63486b1a8f73b78c"
+          },
+          {
+            "path": "tests/assembly/test_assembly.py",
+            "symbol": "InputTests.test_log_changed_after_build_is_rejected",
+            "line_start": 108,
+            "line_end": 110,
+            "sha256": "2a0aa14211b2a92f60671e06da8a1fa18454d6c5d9fa99819b5a420cd652e463"
+          }
+        ],
+        "full_legacy_behavior_equivalence_claimed": false,
+        "migration_judgment": "Bison build-log replay is not required by the selected immutable toolchain recipe. Declared tool symlinks and current command logs are independently admitted; the historical workspace-log alias is not reproduced."
+      },
+      {
+        "original": {
+          "path": "tests/fex/test_stage3_memory_wine_build.py",
+          "symbol": "WineMemoryHistoricalLogTests.test_redirected_or_changed_log_refused",
+          "line_start": 85,
+          "line_end": 100,
+          "sha256": "bb83b020ef19c902fc80a5e12693ea1502bb795ada30842848ffab9d822b8856"
+        },
+        "disposition": "retired_implementation_specific",
+        "canonical_tests": [
+          {
+            "path": "tests/build/test_build.py",
+            "symbol": "BuildTests.test_changed_command_log_refuses_success",
+            "line_start": 231,
+            "line_end": 237,
+            "sha256": "928d927384db146095370afe731337902181c6528b4c87e0845b75e34d3b24f9"
+          },
+          {
+            "path": "tests/assembly/test_assembly.py",
+            "symbol": "InputTests.test_log_changed_after_build_is_rejected",
+            "line_start": 108,
+            "line_end": 110,
+            "sha256": "2a0aa14211b2a92f60671e06da8a1fa18454d6c5d9fa99819b5a420cd652e463"
+          },
+          {
+            "path": "tests/assembly/test_assembly.py",
+            "symbol": "InputTests.test_failed_command_cannot_be_masked_by_passed_status",
+            "line_start": 89,
+            "line_end": 91,
+            "sha256": "30ea29431b83cc073809eed0278a7baaa06761cc7b163c44a7901164812bd455"
+          }
+        ],
+        "full_legacy_behavior_equivalence_claimed": false,
+        "migration_judgment": "Current command and receipt log identities remain mandatory. The old Bison command-list/cwd schema is not an active input."
+      },
+      {
+        "original": {
+          "path": "tests/fex/test_stage3_memory_wine_build.py",
+          "symbol": "WineMemoryHistoricalLogTests.test_retargeted_owned_workspace_alias_refused",
+          "line_start": 102,
+          "line_end": 107,
+          "sha256": "9748eebea97514b329b89f8cb54629ff09a00383543f12497dfe9def0d13423d"
+        },
+        "disposition": "current_contract_counterpart",
+        "canonical_tests": [
+          {
+            "path": "tests/build/test_build.py",
+            "symbol": "BuildTests.test_symlink_root_refuses",
+            "line_start": 124,
+            "line_end": 128,
+            "sha256": "8a3c49de55eb752cca27cb1842e235a58fb8fceb7eee3e8a3aa1b7342442e534"
+          },
+          {
+            "path": "tests/build/test_build.py",
+            "symbol": "BuildTests.test_declared_link_requires_exact_target_and_admitted_bytes",
+            "line_start": 130,
+            "line_end": 146,
+            "sha256": "8c9189f3f2526ca87160c70c3ced4efd230d9af521037d0a63486b1a8f73b78c"
+          }
+        ],
+        "full_legacy_behavior_equivalence_claimed": false,
+        "migration_judgment": "Named root aliases are refused and declared input symlink targets are pinned. Historical Bison workspace aliases are not admitted."
+      },
+      {
+        "original": {
+          "path": "tests/fex/test_stage3_memory_wine_build.py",
+          "symbol": "WineMemoryHistoricalLogTests.test_log_leaf_alias_refused_even_with_matching_bytes",
+          "line_start": 109,
+          "line_end": 114,
+          "sha256": "8d8f85d0926e61349e3b38245009df5cba222340d85df8d5422a835ff20d6e78"
+        },
+        "disposition": "retired_implementation_specific",
+        "canonical_tests": [
+          {
+            "path": "tests/assembly/test_assembly.py",
+            "symbol": "InputTests.test_profile_alias_and_changed_profile_fail",
+            "line_start": 121,
+            "line_end": 126,
+            "sha256": "35cb644864f65fc1a84a17d1b5b567cdb238a733bb9bbc1ee49db3261781d710"
+          },
+          {
+            "path": "tests/fixtures/test_supervision.py",
+            "symbol": "SupervisorTests.test_file_and_root_aliases_rejected",
+            "line_start": 63,
+            "line_end": 69,
+            "sha256": "af8051408218081bf2f1a12cda8927cc2ed4f904e83c02986f75423b34368cea"
+          }
+        ],
+        "full_legacy_behavior_equivalence_claimed": false,
+        "migration_judgment": "Current reference and provider alias refusal are tested. The exact Bison log-leaf branch is retired, so these tests are related boundary controls rather than a byte-for-byte replay."
+      },
+      {
+        "original": {
+          "path": "tests/fex/test_stage3_memory_wine_build.py",
+          "symbol": "WineMemoryRecipeTests.test_target_only_source_snapshot_and_space_safe_argv",
+          "line_start": 127,
+          "line_end": 142,
+          "sha256": "8166d7015ab58aeb96df988eaeec2d1e10d16a1062e990006b0df8c972cf4fab"
+        },
+        "disposition": "retired_implementation_specific",
+        "canonical_tests": [
+          {
+            "path": "tests/build/test_wine_recipe.py",
+            "symbol": "WineRecipeTests.test_explicit_roots_preserve_spaces",
+            "line_start": 152,
+            "line_end": 161,
+            "sha256": "2842e34b389550eea77066c76f37a17c550632695626482fcf56f755b843889d"
+          },
+          {
+            "path": "tests/build/test_wine_recipe.py",
+            "symbol": "WineRecipeTests.test_attempt_snapshot_preserves_inputs_and_rejects_replacement",
+            "line_start": 64,
+            "line_end": 86,
+            "sha256": "a2787c3d13a619b0547840daa10c9611a907cc3cf0055a1cbcace068ddd626bd"
+          },
+          {
+            "path": "tests/build/test_build.py",
+            "symbol": "BuildTests.test_environment_does_not_inherit_cache_settings",
+            "line_start": 214,
+            "line_end": 219,
+            "sha256": "c9bf92db8f88a39b4ecc0cb91ed02a8566c12790e1055046a90f9c3f7efcd8c2"
+          }
+        ],
+        "full_legacy_behavior_equivalence_claimed": false,
+        "migration_judgment": "The selected recipe compiles declared units and relinks from pinned operands; it does not run the old configure/make/fixture-builder sequence. Space-safe explicit roots, source snapshots and clean environment remain current controls."
+      },
+      {
+        "original": {
+          "path": "tests/fex/test_stage3_memory_wine_build.py",
+          "symbol": "WineMemoryRecipeTests.test_parallelism_and_wrong_sdk_rejected",
+          "line_start": 144,
+          "line_end": 151,
+          "sha256": "e843959a9f6b23f3794b89510fcf5a0650fc6257ac1290fc837429a959cda91e"
+        },
+        "disposition": "retired_implementation_specific",
+        "canonical_tests": [
+          {
+            "path": "tests/build/test_build.py",
+            "symbol": "BuildTests.test_missing_binding_refuses",
+            "line_start": 99,
+            "line_end": 101,
+            "sha256": "a8c1a69ad4bea35586c3c2aabb86dce801eb79f83492b757721c42dcb597593c"
+          },
+          {
+            "path": "tests/build/test_build.py",
+            "symbol": "BuildTests.test_reserved_root_metadata_refuses_before_execution",
+            "line_start": 103,
+            "line_end": 107,
+            "sha256": "4d8bb223562702824fb07cbe0f1c4d90ae676c61e19eba0f640d695a4eb51dc6"
+          },
+          {
+            "path": "tests/assembly/test_assembly.py",
+            "symbol": "InputTests.test_stale_recipe_or_source_pin_fails",
+            "line_start": 93,
+            "line_end": 98,
+            "sha256": "2d3f3959fd77481f53c53da86ae3b84fb7636617c57300f855038ca5b4315c7c"
+          }
+        ],
+        "full_legacy_behavior_equivalence_claimed": false,
+        "migration_judgment": "The current recipe fixes serial command execution and pinned toolchain/SDK input rows. The old jobs={1,2} and deployment-target config API is not exposed; these tests are not an equivalent old SDK parser replay."
+      },
+      {
+        "original": {
+          "path": "tests/fex/test_stage3_memory_wine_build.py",
+          "symbol": "WineMemoryRecipeTests.test_exact_selected_make_recipe",
+          "line_start": 153,
+          "line_end": 157,
+          "sha256": "5869d60b38a91e8a76e4ada10a81717fc965ab9c656563a6d7f6fca760ead813"
+        },
+        "disposition": "retired_implementation_specific",
+        "canonical_tests": [
+          {
+            "path": "tests/build/test_wine_recipe.py",
+            "symbol": "WineRecipeTests.test_attempt_snapshot_preserves_inputs_and_rejects_replacement",
+            "line_start": 64,
+            "line_end": 86,
+            "sha256": "a2787c3d13a619b0547840daa10c9611a907cc3cf0055a1cbcace068ddd626bd"
+          },
+          {
+            "path": "tests/build/test_build.py",
+            "symbol": "BuildTests.test_unrecorded_generated_command_operand_refuses",
+            "line_start": 205,
+            "line_end": 212,
+            "sha256": "23e46fb1fa32c7ba1fd41c6ae714a0695c227b9b7996c50a879fc3febc5f59ce"
+          }
+        ],
+        "full_legacy_behavior_equivalence_claimed": false,
+        "migration_judgment": "Current recipe argv and input manifests replace on-demand extraction of a Makefile rule. The old make-rule text parser is retired."
+      },
+      {
+        "original": {
+          "path": "tests/fex/test_stage3_memory_wine_build.py",
+          "symbol": "WineMemoryConfigurationOwnerTests.test_reuses_real_owner_path_variant_and_keyword_contract",
+          "line_start": 161,
+          "line_end": 192,
+          "sha256": "0e37df081e60953cb2c6e28a302b2f103a16f5c6c36d4f87b66def2d1f016271"
+        },
+        "disposition": "retired_implementation_specific",
+        "canonical_tests": [
+          {
+            "path": "tests/build/test_wine_recipe.py",
+            "symbol": "WineRecipeTests.test_explicit_roots_preserve_spaces",
+            "line_start": 152,
+            "line_end": 161,
+            "sha256": "2842e34b389550eea77066c76f37a17c550632695626482fcf56f755b843889d"
+          },
+          {
+            "path": "tests/build/test_wine_recipe.py",
+            "symbol": "WineRecipeTests.test_different_historical_header_must_be_absent",
+            "line_start": 163,
+            "line_end": 170,
+            "sha256": "75ae19de39c6cfe4981dcd5bd251e820b9bbc2bef2f6818768d93ade448480e4"
+          },
+          {
+            "path": "tests/assembly/test_assembly.py",
+            "symbol": "InputTests.test_stale_recipe_or_source_pin_fails",
+            "line_start": 93,
+            "line_end": 98,
+            "sha256": "2d3f3959fd77481f53c53da86ae3b84fb7636617c57300f855038ca5b4315c7c"
+          }
+        ],
+        "full_legacy_behavior_equivalence_claimed": false,
+        "migration_judgment": "Per-artifact source views and exact configured object inputs replace legacy observed_config reconstruction. Its private parser and finite-fixture macro assertions are not claimed by current recipe tests."
+      },
+      {
+        "original": {
+          "path": "tests/fex/test_stage3_memory_wine_build.py",
+          "symbol": "WineMemoryFailureTests.test_spawn_errno_and_empty_actual_logs_preserved",
+          "line_start": 196,
+          "line_end": 209,
+          "sha256": "a64b994646d7752b56d52632956ec63bcfb2044eba60dad472e9a783dd6345dc"
+        },
+        "disposition": "retired_implementation_specific",
+        "canonical_tests": [
+          {
+            "path": "tests/assembly/test_driver.py",
+            "symbol": "RequestTests.test_failed_execution_retains_original_error",
+            "line_start": 185,
+            "line_end": 189,
+            "sha256": "7e3005a95ad697578659a47ceb8c28b45719f46b0c69e513091362580cfb2f7a"
+          },
+          {
+            "path": "tests/build/test_build.py",
+            "symbol": "BuildTests.test_nonzero_records_original_failure_and_releases_lock",
+            "line_start": 164,
+            "line_end": 174,
+            "sha256": "79a206cf8c85fcfc5c49e00c60c06af3d32c59c361e887c9226226e2b86f6800"
+          }
+        ],
+        "full_legacy_behavior_equivalence_claimed": false,
+        "migration_judgment": "Current assembly failure preserves an actual OSError errno and build nonzero completion preserves actual logs/exit. These do not exercise the old builder Popen-failure row or establish its exact empty-log format; that format is retired."
+      },
+      {
+        "original": {
+          "path": "tests/fex/test_stage3_memory_wine_build.py",
+          "symbol": "WineMemoryFailureTests.test_log_failure_does_not_replace_spawn_errno",
+          "line_start": 211,
+          "line_end": 220,
+          "sha256": "112fa5e90c071f1645dd9afdb11ea0d2c0fbe959b0dad88eae0ae07238ab6bec"
+        },
+        "disposition": "retired_implementation_specific",
+        "canonical_tests": [
+          {
+            "path": "tests/assembly/test_assembly.py",
+            "symbol": "TransportTests.test_log_evidence_failure_does_not_mask_command_timeout",
+            "line_start": 385,
+            "line_end": 392,
+            "sha256": "11df40813c6a2ddf7353a64256af6eb22da5f944c68ecf060f6b43be0882848d"
+          },
+          {
+            "path": "tests/fixtures/test_driver.py",
+            "symbol": "OperationLifecycle.test_log_evidence_error_does_not_replace_primary_execution_failure",
+            "line_start": 326,
+            "line_end": 335,
+            "sha256": "a37ee9f06250fb3d4af291330047bd33cdd9649d2da7af91b3d4945aa1ed8387"
+          }
+        ],
+        "full_legacy_behavior_equivalence_claimed": false,
+        "migration_judgment": "Current command/fixture boundaries preserve a primary failure when log evidence also fails. The old builder-specific spawn errno plus sha256-error combination is not replayed."
+      },
+      {
+        "original": {
+          "path": "tests/fex/test_stage3_memory_wine_build.py",
+          "symbol": "WineMemoryFailureTests.test_budget_refuses_growth_boolean_and_free_floor",
+          "line_start": 222,
+          "line_end": 228,
+          "sha256": "627b78bcbd01ca2bb251681dafecbaf7860d68c073515ff3fe8b452c13b937aa"
+        },
+        "disposition": "retired_implementation_specific",
+        "canonical_tests": [
+          {
+            "path": "tests/build/test_build.py",
+            "symbol": "BuildTests.test_storage_refusal_creates_no_output",
+            "line_start": 157,
+            "line_end": 162,
+            "sha256": "e397de5cbd44ab9a56aa90869e4d90a5b433e4863ca04b5f7e0d4b5443ef4dd4"
+          },
+          {
+            "path": "tests/fixtures/test_context.py",
+            "symbol": "ContextTests.test_storage_requires_full_logical_peak_plus_reserve",
+            "line_start": 128,
+            "line_end": 136,
+            "sha256": "e7ee01c2ec02f8b9bb6244d8665c5d5f8d81db1c0331c07ed5e7c9f4e4fc9dd8"
+          },
+          {
+            "path": "tests/fixtures/controls/test_execution.py",
+            "symbol": "Admission.test_storage_keeps_six_gib_reserve_and_full_seed_budget",
+            "line_start": 120,
+            "line_end": 134,
+            "sha256": "7b7204cc022c0cd31ba0c2d19aaa858b9504441e3f6733d5bb25608ebfc4922a"
+          }
+        ],
+        "full_legacy_behavior_equivalence_claimed": false,
+        "migration_judgment": "Current storage gates enforce selected logical peak and six GiB reserve. The old incremental budget function and its exact boolean-growth assertion are not a production API."
+      },
+      {
+        "original": {
+          "path": "tests/fex/test_stage3_memory_wine_build.py",
+          "symbol": "WineMemoryOwnedOutputTests.test_macho_parser_uses_owned_fd_and_refuses_directory_alias",
+          "line_start": 232,
+          "line_end": 240,
+          "sha256": "81521f1d1c6a88e2ac8f5f469ffc671429b5ffaeabf97abd008beb7fb9546669"
+        },
+        "disposition": "retired_implementation_specific",
+        "canonical_tests": [
+          {
+            "path": "tests/fixtures/test_supervision.py",
+            "symbol": "SupervisorTests.test_file_and_root_aliases_rejected",
+            "line_start": 63,
+            "line_end": 69,
+            "sha256": "af8051408218081bf2f1a12cda8927cc2ed4f904e83c02986f75423b34368cea"
+          },
+          {
+            "path": "tests/build/test_wine_recipe.py",
+            "symbol": "WineRecipeTests.test_native_wrong_architecture_is_refused",
+            "line_start": 139,
+            "line_end": 141,
+            "sha256": "55aec64fc3431ac29bdfc1ddedd5652e6c133ab71242e3d2337f05e813e25f2f"
+          },
+          {
+            "path": "tests/assembly/test_assembly.py",
+            "symbol": "InputTests.test_native_closure_cannot_omit_image_or_escape_bundle",
+            "line_start": 138,
+            "line_end": 143,
+            "sha256": "05e7982046ebc85577f1374794e7aac03547285173763d27e7060d8dbc0101f5"
+          }
+        ],
+        "full_legacy_behavior_equivalence_claimed": false,
+        "migration_judgment": "Current source/ref alias and native architecture/closure tests cover active admission. They do not replay the removed inspect_rooted_macho file-descriptor wrapper."
+      },
+      {
+        "original": {
+          "path": "tests/fex/test_stage3_memory_wine_build.py",
+          "symbol": "WineMemoryOwnedOutputTests.test_native_leaf_alias_refused",
+          "line_start": 242,
+          "line_end": 246,
+          "sha256": "7d3efa50a42c39daaa1b06e48b84e07d84548a0ef64f7732ed6e424d3d0eb84f"
+        },
+        "disposition": "retired_implementation_specific",
+        "canonical_tests": [
+          {
+            "path": "tests/fixtures/test_supervision.py",
+            "symbol": "SupervisorTests.test_file_and_root_aliases_rejected",
+            "line_start": 63,
+            "line_end": 69,
+            "sha256": "af8051408218081bf2f1a12cda8927cc2ed4f904e83c02986f75423b34368cea"
+          },
+          {
+            "path": "tests/build/test_build.py",
+            "symbol": "BuildTests.test_symlink_root_refuses",
+            "line_start": 124,
+            "line_end": 128,
+            "sha256": "8a3c49de55eb752cca27cb1842e235a58fb8fceb7eee3e8a3aa1b7342442e534"
+          }
+        ],
+        "full_legacy_behavior_equivalence_claimed": false,
+        "migration_judgment": "Alias refusal remains current; the old native output reader is retired and is not duplicated."
+      },
+      {
+        "original": {
+          "path": "tests/fex/test_stage3_memory_wine_build.py",
+          "symbol": "WineMemoryOwnedOutputTests.test_private_export_requires_actual_named_executable_target",
+          "line_start": 265,
+          "line_end": 272,
+          "sha256": "d906bd49d9a183a5c440b65b00ab637aec9d907e260adc0cb321eb272c61c77e"
+        },
+        "disposition": "exact_test_import",
+        "canonical_tests": [
+          {
+            "path": "tests/wine_integration/test_stage3_memory_wine_build.py",
+            "symbol": "WineMemoryOwnedOutputTests.test_private_export_requires_actual_named_executable_target",
+            "line_start": 28,
+            "line_end": 35,
+            "sha256": "d906bd49d9a183a5c440b65b00ab637aec9d907e260adc0cb321eb272c61c77e"
+          }
+        ],
+        "claim": "Original test method bytes preserved; imports/provider selection are the recorded module adaptations. Synthetic portability only."
+      },
+      {
+        "original": {
+          "path": "tests/fex/test_stage3_memory_wine_build.py",
+          "symbol": "WineMemoryOwnedOutputTests.test_delay_import_or_wrong_outer_machine_refused",
+          "line_start": 274,
+          "line_end": 278,
+          "sha256": "ad9b22aadec19798cea80d02fdeecf402ac0f3c764f5ed9901071a760ca9410b"
+        },
+        "disposition": "exact_test_import",
+        "canonical_tests": [
+          {
+            "path": "tests/wine_integration/test_stage3_memory_wine_build.py",
+            "symbol": "WineMemoryOwnedOutputTests.test_delay_import_or_wrong_outer_machine_refused",
+            "line_start": 37,
+            "line_end": 41,
+            "sha256": "ad9b22aadec19798cea80d02fdeecf402ac0f3c764f5ed9901071a760ca9410b"
+          }
+        ],
+        "claim": "Original test method bytes preserved; imports/provider selection are the recorded module adaptations. Synthetic portability only."
+      },
+      {
+        "original": {
+          "path": "tests/fex/test_stage3_memory_wine_build.py",
+          "symbol": "WineMemoryOwnedOutputTests.test_invalid_or_non_arm64_pe_refused",
+          "line_start": 280,
+          "line_end": 282,
+          "sha256": "36e53cf6a1a9c2fc2ea58958d1bde0348bfe755d730925274075749c317d7a11"
+        },
+        "disposition": "exact_test_import",
+        "canonical_tests": [
+          {
+            "path": "tests/wine_integration/test_stage3_memory_wine_build.py",
+            "symbol": "WineMemoryOwnedOutputTests.test_invalid_or_non_arm64_pe_refused",
+            "line_start": 43,
+            "line_end": 45,
+            "sha256": "36e53cf6a1a9c2fc2ea58958d1bde0348bfe755d730925274075749c317d7a11"
+          }
+        ],
+        "claim": "Original test method bytes preserved; imports/provider selection are the recorded module adaptations. Synthetic portability only."
+      },
+      {
+        "original": {
+          "path": "tests/fex/test_stage3_memory_wine_build.py",
+          "symbol": "WineMemoryOwnedOutputTests.test_failed_replay_refuses_before_positive_receipt_read",
+          "line_start": 284,
+          "line_end": 289,
+          "sha256": "8c2dff76307570c9ea97c832c3c78034d172501e8fb3b5d5d9e7be2ff1225277"
+        },
+        "disposition": "current_contract_counterpart",
+        "canonical_tests": [
+          {
+            "path": "tests/assembly/test_assembly.py",
+            "symbol": "InputTests.test_failed_receipt_cannot_be_admitted",
+            "line_start": 85,
+            "line_end": 87,
+            "sha256": "20c3d62d183a3cb1bbf35b8b7f8dfdb9cd218cc2c59f5ac89930a82e641c4823"
+          },
+          {
+            "path": "tests/assembly/test_assembly.py",
+            "symbol": "InputTests.test_failed_command_cannot_be_masked_by_passed_status",
+            "line_start": 89,
+            "line_end": 91,
+            "sha256": "30ea29431b83cc073809eed0278a7baaa06761cc7b163c44a7901164812bd455"
+          }
+        ],
+        "full_legacy_behavior_equivalence_claimed": false,
+        "migration_judgment": "Current assembly rejects failed component receipts and failed commands before runtime assembly. Old failure.json directory replay is no longer an input format."
+      },
+      {
+        "original": {
+          "path": "tests/fex/test_stage3_memory_wine_run.py",
+          "symbol": "WineMemoryOutputControls.test_synthetic_wine_scope_has_distinct_readiness_and_view_observations",
+          "line_start": 98,
+          "line_end": 103,
+          "sha256": "8166820d723cd991808fb1dd46722f92758bf9baee3cabc0c7559fc2083261dc"
+        },
+        "disposition": "exact_test_import",
+        "canonical_tests": [
+          {
+            "path": "tests/wine_integration/test_stage3_memory_wine_run.py",
+            "symbol": "WineMemoryOutputControls.test_synthetic_wine_scope_has_distinct_readiness_and_view_observations",
+            "line_start": 96,
+            "line_end": 101,
+            "sha256": "8166820d723cd991808fb1dd46722f92758bf9baee3cabc0c7559fc2083261dc"
+          }
+        ],
+        "claim": "Original test method bytes preserved; imports/provider selection are the recorded module adaptations. Synthetic portability only."
+      },
+      {
+        "original": {
+          "path": "tests/fex/test_stage3_memory_wine_run.py",
+          "symbol": "WineMemoryOutputControls.test_missing_reordered_extra_or_boolean_readiness_is_refused",
+          "line_start": 105,
+          "line_end": 110,
+          "sha256": "66c179693a9942ff4a66e6ad2962ad39a2506d015932ae61686c026008c2c424"
+        },
+        "disposition": "exact_test_import",
+        "canonical_tests": [
+          {
+            "path": "tests/wine_integration/test_stage3_memory_wine_run.py",
+            "symbol": "WineMemoryOutputControls.test_missing_reordered_extra_or_boolean_readiness_is_refused",
+            "line_start": 103,
+            "line_end": 108,
+            "sha256": "66c179693a9942ff4a66e6ad2962ad39a2506d015932ae61686c026008c2c424"
+          }
+        ],
+        "claim": "Original test method bytes preserved; imports/provider selection are the recorded module adaptations. Synthetic portability only."
+      },
+      {
+        "original": {
+          "path": "tests/fex/test_stage3_memory_wine_run.py",
+          "symbol": "WineMemoryOutputControls.test_call_gaps_wrong_scope_opcode_status_capability_and_refusal_facts_are_refused",
+          "line_start": 112,
+          "line_end": 118,
+          "sha256": "f3baf63818b257b4fec04926752c4c7e663e828725ec063c8ba41c507b4294ef"
+        },
+        "disposition": "exact_test_import",
+        "canonical_tests": [
+          {
+            "path": "tests/wine_integration/test_stage3_memory_wine_run.py",
+            "symbol": "WineMemoryOutputControls.test_call_gaps_wrong_scope_opcode_status_capability_and_refusal_facts_are_refused",
+            "line_start": 110,
+            "line_end": 116,
+            "sha256": "f3baf63818b257b4fec04926752c4c7e663e828725ec063c8ba41c507b4294ef"
+          }
+        ],
+        "claim": "Original test method bytes preserved; imports/provider selection are the recorded module adaptations. Synthetic portability only."
+      },
+      {
+        "original": {
+          "path": "tests/fex/test_stage3_memory_wine_run.py",
+          "symbol": "WineMemoryOutputControls.test_missing_control_truncation_wrong_terminal_and_unqualified_scope_never_pass",
+          "line_start": 120,
+          "line_end": 127,
+          "sha256": "5216fc6505682ccd8cf52ba8ea6d9d4d8aa8ae14c34038a101169d004eb8f8fe"
+        },
+        "disposition": "exact_test_import",
+        "canonical_tests": [
+          {
+            "path": "tests/wine_integration/test_stage3_memory_wine_run.py",
+            "symbol": "WineMemoryOutputControls.test_missing_control_truncation_wrong_terminal_and_unqualified_scope_never_pass",
+            "line_start": 118,
+            "line_end": 125,
+            "sha256": "5216fc6505682ccd8cf52ba8ea6d9d4d8aa8ae14c34038a101169d004eb8f8fe"
+          }
+        ],
+        "claim": "Original test method bytes preserved; imports/provider selection are the recorded module adaptations. Synthetic portability only."
+      },
+      {
+        "original": {
+          "path": "tests/fex/test_stage3_memory_wine_run.py",
+          "symbol": "WineMemoryOutputControls.test_wrong_native_identity_and_translated_helper_refused_before_suite",
+          "line_start": 129,
+          "line_end": 132,
+          "sha256": "595e7eabb7a117d8e51495ec83d9a851e31dce73e5177b0e3461ffe4ce632879"
+        },
+        "disposition": "exact_test_import",
+        "canonical_tests": [
+          {
+            "path": "tests/wine_integration/test_stage3_memory_wine_run.py",
+            "symbol": "WineMemoryOutputControls.test_wrong_native_identity_and_translated_helper_refused_before_suite",
+            "line_start": 127,
+            "line_end": 130,
+            "sha256": "595e7eabb7a117d8e51495ec83d9a851e31dce73e5177b0e3461ffe4ce632879"
+          }
+        ],
+        "claim": "Original test method bytes preserved; imports/provider selection are the recorded module adaptations. Synthetic portability only."
+      },
+      {
+        "original": {
+          "path": "tests/fex/test_stage3_memory_wine_run.py",
+          "symbol": "WineMemoryOutputControls.test_bootstrap_snapshot_is_distinct_from_actual_wine_admission",
+          "line_start": 134,
+          "line_end": 139,
+          "sha256": "23f7121f0559928cd24580285a50e596e6a1b657b22248d6294ff2b2f1d75409"
+        },
+        "disposition": "exact_test_import",
+        "canonical_tests": [
+          {
+            "path": "tests/wine_integration/test_stage3_memory_wine_run.py",
+            "symbol": "WineMemoryOutputControls.test_bootstrap_snapshot_is_distinct_from_actual_wine_admission",
+            "line_start": 132,
+            "line_end": 137,
+            "sha256": "23f7121f0559928cd24580285a50e596e6a1b657b22248d6294ff2b2f1d75409"
+          }
+        ],
+        "claim": "Original test method bytes preserved; imports/provider selection are the recorded module adaptations. Synthetic portability only."
+      },
+      {
+        "original": {
+          "path": "tests/fex/test_stage3_memory_wine_run.py",
+          "symbol": "WineMemoryOutputControls.test_real_original_spawn_error_code_and_genuine_errno_both_survive_private_capture",
+          "line_start": 141,
+          "line_end": 157,
+          "sha256": "76d982f4712318ca86617798aecadc8d1242d426ca9e40b3a00e4c718d2b2dd5"
+        },
+        "disposition": "retired_implementation_specific",
+        "canonical_tests": [
+          {
+            "path": "tests/fixtures/test_driver.py",
+            "symbol": "OperationLifecycle.test_execution_error_and_failed_cleanup_are_not_rewritten_as_success",
+            "line_start": 268,
+            "line_end": 276,
+            "sha256": "45f3b56da97b299fa2bfe9901fd2d129a0af0df615f99c01dca93563e2a9b26c"
+          },
+          {
+            "path": "tests/fixtures/test_supervision.py",
+            "symbol": "SupervisorTests.test_original_classes_and_loaded_method_code_are_unchanged",
+            "line_start": 86,
+            "line_end": 104,
+            "sha256": "3e49afccbc647af24a28de55a1b117e10fed79f06bd0a3dc446d100e3263dcee"
+          }
+        ],
+        "full_legacy_behavior_equivalence_claimed": false,
+        "migration_judgment": "Current execution retains primary errors and reuses the original session class. The historical install_spawn_capture monkeypatch and its exact errno-list shape are not duplicated; no direct spawn-capture parity is claimed."
+      },
+      {
+        "original": {
+          "path": "tests/fex/test_stage3_memory_wine_run.py",
+          "symbol": "WineMemoryOutputControls.test_private_helpers_restore_imports_stream_limit_and_never_create_native_observer",
+          "line_start": 159,
+          "line_end": 164,
+          "sha256": "927f66ff716b4c160f95ea2012c859088b421db17b28f3421084bbce485aa494"
+        },
+        "disposition": "current_contract_counterpart",
+        "canonical_tests": [
+          {
+            "path": "tests/fixtures/test_supervision.py",
+            "symbol": "SupervisorTests.test_aliases_and_path_restored_on_success_and_body_failure",
+            "line_start": 131,
+            "line_end": 157,
+            "sha256": "c5105038c81458b0583caec651406f8de45677f9de53adb41d9986eeb3f3bcf3"
+          },
+          {
+            "path": "tests/fixtures/test_supervision.py",
+            "symbol": "SupervisorTests.test_import_constructs_no_host_session_and_runs_no_command",
+            "line_start": 183,
+            "line_end": 192,
+            "sha256": "30db1b909f4572918daa05925d0de87cb997847c03581fabbc39d009a586fb3f"
+          },
+          {
+            "path": "tests/fixtures/test_supervision.py",
+            "symbol": "SupervisorTests.test_original_classes_and_loaded_method_code_are_unchanged",
+            "line_start": 86,
+            "line_end": 104,
+            "sha256": "3e49afccbc647af24a28de55a1b117e10fed79f06bd0a3dc446d100e3263dcee"
+          }
+        ],
+        "full_legacy_behavior_equivalence_claimed": false,
+        "migration_judgment": "Current source-only provider loading restores imports and never constructs a native session; original class bytes remain pinned."
+      },
+      {
+        "original": {
+          "path": "tests/fex/test_stage3_memory_wine_run.py",
+          "symbol": "WineBitmapControls.test_each_actual_field_count_and_diagnostics_bytes_are_kept_separate",
+          "line_start": 168,
+          "line_end": 172,
+          "sha256": "dafac89e848f7780bd2c817da3665335348333467c7bd57bc5bfce7bbbdc2be9"
+        },
+        "disposition": "exact_test_import",
+        "canonical_tests": [
+          {
+            "path": "tests/wine_integration/test_stage3_memory_wine_run.py",
+            "symbol": "WineBitmapControls.test_each_actual_field_count_and_diagnostics_bytes_are_kept_separate",
+            "line_start": 143,
+            "line_end": 147,
+            "sha256": "dafac89e848f7780bd2c817da3665335348333467c7bd57bc5bfce7bbbdc2be9"
+          }
+        ],
+        "claim": "Original test method bytes preserved; imports/provider selection are the recorded module adaptations. Synthetic portability only."
+      },
+      {
+        "original": {
+          "path": "tests/fex/test_stage3_memory_wine_run.py",
+          "symbol": "WineBitmapControls.test_missing_extra_unrecognized_rollback_or_fake_success_cannot_pass",
+          "line_start": 174,
+          "line_end": 182,
+          "sha256": "cc5ce2407f8354e63721813e9b67e85eed38884495df8cb4809eebd797f07cad"
+        },
+        "disposition": "exact_test_import",
+        "canonical_tests": [
+          {
+            "path": "tests/wine_integration/test_stage3_memory_wine_run.py",
+            "symbol": "WineBitmapControls.test_missing_extra_unrecognized_rollback_or_fake_success_cannot_pass",
+            "line_start": 149,
+            "line_end": 157,
+            "sha256": "cc5ce2407f8354e63721813e9b67e85eed38884495df8cb4809eebd797f07cad"
+          }
+        ],
+        "claim": "Original test method bytes preserved; imports/provider selection are the recorded module adaptations. Synthetic portability only."
+      },
+      {
+        "original": {
+          "path": "tests/fex/test_stage3_memory_wine_run.py",
+          "symbol": "WineBitmapControls.test_source_native_error_and_restoration_failure_retained_without_success",
+          "line_start": 184,
+          "line_end": 191,
+          "sha256": "752d1ee6a4a1a8a10cdf66cfbab83f0c39ad64548c12367e692d7cdb46e21cf4"
+        },
+        "disposition": "exact_test_import",
+        "canonical_tests": [
+          {
+            "path": "tests/wine_integration/test_stage3_memory_wine_run.py",
+            "symbol": "WineBitmapControls.test_source_native_error_and_restoration_failure_retained_without_success",
+            "line_start": 159,
+            "line_end": 166,
+            "sha256": "752d1ee6a4a1a8a10cdf66cfbab83f0c39ad64548c12367e692d7cdb46e21cf4"
+          }
+        ],
+        "claim": "Original test method bytes preserved; imports/provider selection are the recorded module adaptations. Synthetic portability only."
+      },
+      {
+        "original": {
+          "path": "tests/fex/test_stage3_memory_wine_run.py",
+          "symbol": "WineBitmapControls.test_failure_parse_error_never_invents_native_errno",
+          "line_start": 193,
+          "line_end": 196,
+          "sha256": "d66b6ef14c7398fb618a02bff4f8c1ea9dc0c1707c58591c63fe08bfa70efb46"
+        },
+        "disposition": "exact_test_import",
+        "canonical_tests": [
+          {
+            "path": "tests/wine_integration/test_stage3_memory_wine_run.py",
+            "symbol": "WineBitmapControls.test_failure_parse_error_never_invents_native_errno",
+            "line_start": 168,
+            "line_end": 171,
+            "sha256": "d66b6ef14c7398fb618a02bff4f8c1ea9dc0c1707c58591c63fe08bfa70efb46"
+          }
+        ],
+        "claim": "Original test method bytes preserved; imports/provider selection are the recorded module adaptations. Synthetic portability only."
+      },
+      {
+        "original": {
+          "path": "tests/fex/test_stage3_memory_wine_run.py",
+          "symbol": "WineBitmapControls.test_diagnostic_refusal_keeps_original_primary_and_completed_count_unqualified",
+          "line_start": 198,
+          "line_end": 209,
+          "sha256": "e8be65bec5b475ead8ced7ce29e763ccb5c956d5cad54cfe757bae9e2278d686"
+        },
+        "disposition": "exact_test_import",
+        "canonical_tests": [
+          {
+            "path": "tests/wine_integration/test_stage3_memory_wine_run.py",
+            "symbol": "WineBitmapControls.test_diagnostic_refusal_keeps_original_primary_and_completed_count_unqualified",
+            "line_start": 173,
+            "line_end": 184,
+            "sha256": "e8be65bec5b475ead8ced7ce29e763ccb5c956d5cad54cfe757bae9e2278d686"
+          }
+        ],
+        "claim": "Original test method bytes preserved; imports/provider selection are the recorded module adaptations. Synthetic portability only."
+      },
+      {
+        "original": {
+          "path": "tests/fex/test_stage3_memory_wine_run.py",
+          "symbol": "WineBitmapControls.test_completed_source_requires_diagnostic_pair_without_accepting_warning_allowance",
+          "line_start": 211,
+          "line_end": 220,
+          "sha256": "41982ad26fb35b2ec07b553ad0dfc3cb9e16d93b6d208fe6e18699d9b00ed3f3"
+        },
+        "disposition": "exact_test_import",
+        "canonical_tests": [
+          {
+            "path": "tests/wine_integration/test_stage3_memory_wine_run.py",
+            "symbol": "WineBitmapControls.test_completed_source_requires_diagnostic_pair_without_accepting_warning_allowance",
+            "line_start": 186,
+            "line_end": 195,
+            "sha256": "41982ad26fb35b2ec07b553ad0dfc3cb9e16d93b6d208fe6e18699d9b00ed3f3"
+          }
+        ],
+        "claim": "Original test method bytes preserved; imports/provider selection are the recorded module adaptations. Synthetic portability only."
+      },
+      {
+        "original": {
+          "path": "tests/fex/test_stage3_memory_wine_run.py",
+          "symbol": "WineBitmapControls.test_malformed_stdout_cannot_suppress_original_stderr_native_failure",
+          "line_start": 223,
+          "line_end": 230,
+          "sha256": "c9dbc4fd5fce8eab976e32c906104e84845ec73644f7b91d88ed26ccfd25832a"
+        },
+        "disposition": "exact_test_import",
+        "canonical_tests": [
+          {
+            "path": "tests/wine_integration/test_stage3_memory_wine_run.py",
+            "symbol": "WineBitmapControls.test_malformed_stdout_cannot_suppress_original_stderr_native_failure",
+            "line_start": 198,
+            "line_end": 205,
+            "sha256": "c9dbc4fd5fce8eab976e32c906104e84845ec73644f7b91d88ed26ccfd25832a"
+          }
+        ],
+        "claim": "Original test method bytes preserved; imports/provider selection are the recorded module adaptations. Synthetic portability only."
+      },
+      {
+        "original": {
+          "path": "tests/fex/test_stage3_memory_wine_run.py",
+          "symbol": "WineCRTControls.test_actual_v6_default_and_hash_index_are_read_from_metadata_bytes",
+          "line_start": 234,
+          "line_end": 238,
+          "sha256": "9922a8ca0ead15ca9bf7ecd6a3677c3b0b01aed11068a95d66d666a37a8a9492"
+        },
+        "disposition": "exact_test_import",
+        "canonical_tests": [
+          {
+            "path": "tests/wine_integration/test_stage3_memory_wine_run.py",
+            "symbol": "WineCRTControls.test_actual_v6_default_and_hash_index_are_read_from_metadata_bytes",
+            "line_start": 209,
+            "line_end": 213,
+            "sha256": "9922a8ca0ead15ca9bf7ecd6a3677c3b0b01aed11068a95d66d666a37a8a9492"
+          }
+        ],
+        "claim": "Original test method bytes preserved; imports/provider selection are the recorded module adaptations. Synthetic portability only."
+      },
+      {
+        "original": {
+          "path": "tests/fex/test_stage3_memory_wine_run.py",
+          "symbol": "WineCRTControls.test_bad_machine_namespace_hash_target_range_and_duplicate_default_refused",
+          "line_start": 240,
+          "line_end": 247,
+          "sha256": "4913308a4d38a1a3d18ca779716176b2e262b1987feabd364061a38e82ae58ea"
+        },
+        "disposition": "exact_test_import",
+        "canonical_tests": [
+          {
+            "path": "tests/wine_integration/test_stage3_memory_wine_run.py",
+            "symbol": "WineCRTControls.test_bad_machine_namespace_hash_target_range_and_duplicate_default_refused",
+            "line_start": 215,
+            "line_end": 222,
+            "sha256": "4913308a4d38a1a3d18ca779716176b2e262b1987feabd364061a38e82ae58ea"
+          }
+        ],
+        "claim": "Original test method bytes preserved; imports/provider selection are the recorded module adaptations. Synthetic portability only."
+      },
+      {
+        "original": {
+          "path": "tests/fex/test_stage3_memory_wine_run.py",
+          "symbol": "WineCRTControls.test_provider_missing_and_api_set_default_cannot_be_inferred_from_name",
+          "line_start": 249,
+          "line_end": 251,
+          "sha256": "b074cca91e56fded049f0d1e463b3532d6da9935a5fd522005a7121503dbddda"
+        },
+        "disposition": "exact_test_import",
+        "canonical_tests": [
+          {
+            "path": "tests/wine_integration/test_stage3_memory_wine_run.py",
+            "symbol": "WineCRTControls.test_provider_missing_and_api_set_default_cannot_be_inferred_from_name",
+            "line_start": 224,
+            "line_end": 226,
+            "sha256": "b074cca91e56fded049f0d1e463b3532d6da9935a5fd522005a7121503dbddda"
+          }
+        ],
+        "claim": "Original test method bytes preserved; imports/provider selection are the recorded module adaptations. Synthetic portability only."
+      },
+      {
+        "original": {
+          "path": "tests/fex/test_stage3_memory_wine_run.py",
+          "symbol": "WineCRTProviderControls.test_synthetic_real_pe_namespace_bytes_and_matching_source_bind_ucrt_provider",
+          "line_start": 276,
+          "line_end": 282,
+          "sha256": "b85ee50069d8d51274df4e88b99ba3cdb525262e2dbf3a90e914f67f38d3fdf0"
+        },
+        "disposition": "exact_test_import",
+        "canonical_tests": [
+          {
+            "path": "tests/wine_integration/test_stage3_memory_wine_run.py",
+            "symbol": "WineCRTProviderControls.test_synthetic_real_pe_namespace_bytes_and_matching_source_bind_ucrt_provider",
+            "line_start": 251,
+            "line_end": 257,
+            "sha256": "b85ee50069d8d51274df4e88b99ba3cdb525262e2dbf3a90e914f67f38d3fdf0"
+          }
+        ],
+        "claim": "Original test method bytes preserved; imports/provider selection are the recorded module adaptations. Synthetic portability only."
+      },
+      {
+        "original": {
+          "path": "tests/fex/test_stage3_memory_wine_run.py",
+          "symbol": "WineCRTProviderControls.test_wrong_default_source_byte_or_foreign_fixture_selection_is_refused",
+          "line_start": 284,
+          "line_end": 296,
+          "sha256": "1eb6b203ee012d9431a4b707449efd844194dabd6a4f9c73718d840b4efbde78"
+        },
+        "disposition": "exact_test_import",
+        "canonical_tests": [
+          {
+            "path": "tests/wine_integration/test_stage3_memory_wine_run.py",
+            "symbol": "WineCRTProviderControls.test_wrong_default_source_byte_or_foreign_fixture_selection_is_refused",
+            "line_start": 259,
+            "line_end": 271,
+            "sha256": "1eb6b203ee012d9431a4b707449efd844194dabd6a4f9c73718d840b4efbde78"
+          }
+        ],
+        "claim": "Original test method bytes preserved; imports/provider selection are the recorded module adaptations. Synthetic portability only."
+      },
+      {
+        "original": {
+          "path": "tests/fex/test_stage3_memory_wine_run.py",
+          "symbol": "WineUCRTDelayMetadataControls.test_two_dll_three_named_rva_descriptors_require_individual_terminators",
+          "line_start": 340,
+          "line_end": 347,
+          "sha256": "95ae3bc0e81480b07ae236523545d2c11a8463913630a005af1b1b1c779e6bc2"
+        },
+        "disposition": "exact_test_import",
+        "canonical_tests": [
+          {
+            "path": "tests/wine_integration/test_stage3_memory_wine_run.py",
+            "symbol": "WineUCRTDelayMetadataControls.test_two_dll_three_named_rva_descriptors_require_individual_terminators",
+            "line_start": 315,
+            "line_end": 322,
+            "sha256": "95ae3bc0e81480b07ae236523545d2c11a8463913630a005af1b1b1c779e6bc2"
+          }
+        ],
+        "claim": "Original test method bytes preserved; imports/provider selection are the recorded module adaptations. Synthetic portability only."
+      },
+      {
+        "original": {
+          "path": "tests/fex/test_stage3_memory_wine_run.py",
+          "symbol": "WineUCRTDelayMetadataControls.test_foreign_descriptor_mode_bound_unload_timestamp_and_size_refused",
+          "line_start": 349,
+          "line_end": 354,
+          "sha256": "f6cc3d6b4502c802842d9f11760e59f031d6408718dfcc8f3ecf618dd9913944"
+        },
+        "disposition": "exact_test_import",
+        "canonical_tests": [
+          {
+            "path": "tests/wine_integration/test_stage3_memory_wine_run.py",
+            "symbol": "WineUCRTDelayMetadataControls.test_foreign_descriptor_mode_bound_unload_timestamp_and_size_refused",
+            "line_start": 324,
+            "line_end": 329,
+            "sha256": "f6cc3d6b4502c802842d9f11760e59f031d6408718dfcc8f3ecf618dd9913944"
+          }
+        ],
+        "claim": "Original test method bytes preserved; imports/provider selection are the recorded module adaptations. Synthetic portability only."
+      },
+      {
+        "original": {
+          "path": "tests/fex/test_stage3_memory_wine_run.py",
+          "symbol": "WineUCRTDelayMetadataControls.test_int_ordinal_hint_wrong_name_and_terminator_refused",
+          "line_start": 356,
+          "line_end": 363,
+          "sha256": "3986f1bb74f3773b8edc47283be01ceb1943a9244773ab50e2c985ce49e5c948"
+        },
+        "disposition": "exact_test_import",
+        "canonical_tests": [
+          {
+            "path": "tests/wine_integration/test_stage3_memory_wine_run.py",
+            "symbol": "WineUCRTDelayMetadataControls.test_int_ordinal_hint_wrong_name_and_terminator_refused",
+            "line_start": 331,
+            "line_end": 338,
+            "sha256": "3986f1bb74f3773b8edc47283be01ceb1943a9244773ab50e2c985ce49e5c948"
+          }
+        ],
+        "claim": "Original test method bytes preserved; imports/provider selection are the recorded module adaptations. Synthetic portability only."
+      },
+      {
+        "original": {
+          "path": "tests/fex/test_stage3_memory_wine_run.py",
+          "symbol": "WineUCRTDelayMetadataControls.test_iat_not_image_va_not_executable_outside_image_and_unaligned_refused",
+          "line_start": 365,
+          "line_end": 370,
+          "sha256": "5741f312bf0c514a24ba88d0b3f53a7273cd47328d86a556e69131d1619a66ec"
+        },
+        "disposition": "exact_test_import",
+        "canonical_tests": [
+          {
+            "path": "tests/wine_integration/test_stage3_memory_wine_run.py",
+            "symbol": "WineUCRTDelayMetadataControls.test_iat_not_image_va_not_executable_outside_image_and_unaligned_refused",
+            "line_start": 340,
+            "line_end": 345,
+            "sha256": "5741f312bf0c514a24ba88d0b3f53a7273cd47328d86a556e69131d1619a66ec"
+          }
+        ],
+        "claim": "Original test method bytes preserved; imports/provider selection are the recorded module adaptations. Synthetic portability only."
+      },
+      {
+        "original": {
+          "path": "tests/fex/test_stage3_memory_wine_run.py",
+          "symbol": "WineUCRTDelayMetadataControls.test_mutable_handle_table_alias_extra_descriptor_and_unbounded_string_refused",
+          "line_start": 372,
+          "line_end": 378,
+          "sha256": "e452e9245df9497c9a45f3a6e8843f4e5af6ce790995a05a752140f12a2e4087"
+        },
+        "disposition": "exact_test_import",
+        "canonical_tests": [
+          {
+            "path": "tests/wine_integration/test_stage3_memory_wine_run.py",
+            "symbol": "WineUCRTDelayMetadataControls.test_mutable_handle_table_alias_extra_descriptor_and_unbounded_string_refused",
+            "line_start": 347,
+            "line_end": 353,
+            "sha256": "e452e9245df9497c9a45f3a6e8843f4e5af6ce790995a05a752140f12a2e4087"
+          }
+        ],
+        "claim": "Original test method bytes preserved; imports/provider selection are the recorded module adaptations. Synthetic portability only."
+      },
+      {
+        "original": {
+          "path": "tests/fex/test_stage3_memory_wine_run.py",
+          "symbol": "WineUCRTDelayMetadataControls.test_selected_export_forwarder_and_direct_targets_have_separate_facts",
+          "line_start": 380,
+          "line_end": 385,
+          "sha256": "a8ba800057440eae8f96b27c7f0324a3035007dfc539bf0cabd2e0eefa46679f"
+        },
+        "disposition": "exact_test_import",
+        "canonical_tests": [
+          {
+            "path": "tests/wine_integration/test_stage3_memory_wine_run.py",
+            "symbol": "WineUCRTDelayMetadataControls.test_selected_export_forwarder_and_direct_targets_have_separate_facts",
+            "line_start": 355,
+            "line_end": 360,
+            "sha256": "a8ba800057440eae8f96b27c7f0324a3035007dfc539bf0cabd2e0eefa46679f"
+          }
+        ],
+        "claim": "Original test method bytes preserved; imports/provider selection are the recorded module adaptations. Synthetic portability only."
+      },
+      {
+        "original": {
+          "path": "tests/fex/test_stage3_memory_wine_run.py",
+          "symbol": "WineUCRTDelayMetadataControls.test_missing_duplicate_bad_ordinal_zero_target_and_nonexecute_exports_refused",
+          "line_start": 387,
+          "line_end": 394,
+          "sha256": "abb1866a0a4cda3e79b53aa915aab135539a8c64b3de0518a410079352474be5"
+        },
+        "disposition": "exact_test_import",
+        "canonical_tests": [
+          {
+            "path": "tests/wine_integration/test_stage3_memory_wine_run.py",
+            "symbol": "WineUCRTDelayMetadataControls.test_missing_duplicate_bad_ordinal_zero_target_and_nonexecute_exports_refused",
+            "line_start": 362,
+            "line_end": 369,
+            "sha256": "abb1866a0a4cda3e79b53aa915aab135539a8c64b3de0518a410079352474be5"
+          }
+        ],
+        "claim": "Original test method bytes preserved; imports/provider selection are the recorded module adaptations. Synthetic portability only."
+      },
+      {
+        "original": {
+          "path": "tests/fex/test_stage3_memory_wine_run.py",
+          "symbol": "WineUCRTDelayClosureControls.test_exact_source_routes_and_current_provider_bytes_bound_without_execution_claim",
+          "line_start": 425,
+          "line_end": 432,
+          "sha256": "86c8643614391f867dd2f343bbff178e1044216c5ed2d97051a8fc5d889c05d2"
+        },
+        "disposition": "exact_test_import",
+        "canonical_tests": [
+          {
+            "path": "tests/wine_integration/test_stage3_memory_wine_run.py",
+            "symbol": "WineUCRTDelayClosureControls.test_exact_source_routes_and_current_provider_bytes_bound_without_execution_claim",
+            "line_start": 400,
+            "line_end": 407,
+            "sha256": "86c8643614391f867dd2f343bbff178e1044216c5ed2d97051a8fc5d889c05d2"
+          }
+        ],
+        "claim": "Original test method bytes preserved; imports/provider selection are the recorded module adaptations. Synthetic portability only."
+      },
+      {
+        "original": {
+          "path": "tests/fex/test_stage3_memory_wine_run.py",
+          "symbol": "WineUCRTDelayClosureControls.test_missing_changed_foreign_and_unselected_provider_cannot_pass",
+          "line_start": 434,
+          "line_end": 443,
+          "sha256": "cbd5a13c9b5d5190f5768b2c81ab52a1769cb15e8e9f0111a84373145840a42a"
+        },
+        "disposition": "exact_test_import",
+        "canonical_tests": [
+          {
+            "path": "tests/wine_integration/test_stage3_memory_wine_run.py",
+            "symbol": "WineUCRTDelayClosureControls.test_missing_changed_foreign_and_unselected_provider_cannot_pass",
+            "line_start": 409,
+            "line_end": 418,
+            "sha256": "cbd5a13c9b5d5190f5768b2c81ab52a1769cb15e8e9f0111a84373145840a42a"
+          }
+        ],
+        "claim": "Original test method bytes preserved; imports/provider selection are the recorded module adaptations. Synthetic portability only."
+      },
+      {
+        "original": {
+          "path": "tests/fex/test_stage3_memory_wine_run.py",
+          "symbol": "WineUCRTDelayClosureControls.test_missing_changed_conflicting_source_contract_cannot_pass",
+          "line_start": 445,
+          "line_end": 454,
+          "sha256": "f36e36a58a034942f2017a0ccfacca4412d58ffb9bf790cef3ef9c9778791caf"
+        },
+        "disposition": "exact_test_import",
+        "canonical_tests": [
+          {
+            "path": "tests/wine_integration/test_stage3_memory_wine_run.py",
+            "symbol": "WineUCRTDelayClosureControls.test_missing_changed_conflicting_source_contract_cannot_pass",
+            "line_start": 420,
+            "line_end": 429,
+            "sha256": "f36e36a58a034942f2017a0ccfacca4412d58ffb9bf790cef3ef9c9778791caf"
+          }
+        ],
+        "claim": "Original test method bytes preserved; imports/provider selection are the recorded module adaptations. Synthetic portability only."
+      },
+      {
+        "original": {
+          "path": "tests/fex/test_stage3_memory_wine_run.py",
+          "symbol": "WineUCRTDelayClosureControls.test_changed_forwarder_missing_direct_export_and_unrelated_delay_remain_separate",
+          "line_start": 456,
+          "line_end": 469,
+          "sha256": "ba9a6b422124c320e98f493fdbed031339b9129646cda67c545da4ff3933a2c7"
+        },
+        "disposition": "exact_test_import",
+        "canonical_tests": [
+          {
+            "path": "tests/wine_integration/test_stage3_memory_wine_run.py",
+            "symbol": "WineUCRTDelayClosureControls.test_changed_forwarder_missing_direct_export_and_unrelated_delay_remain_separate",
+            "line_start": 431,
+            "line_end": 444,
+            "sha256": "ba9a6b422124c320e98f493fdbed031339b9129646cda67c545da4ff3933a2c7"
+          }
+        ],
+        "claim": "Original test method bytes preserved; imports/provider selection are the recorded module adaptations. Synthetic portability only."
+      },
+      {
+        "original": {
+          "path": "tests/fex/test_stage3_memory_wine_run.py",
+          "symbol": "WineRunRecordControls.test_inherited_home_is_not_repurposed_and_injections_not_in_environment",
+          "line_start": 473,
+          "line_end": 478,
+          "sha256": "8015bd7f121c16839d5f48c1744d565d3792a47bc3c0ac112ebeb851a2a27eeb"
+        },
+        "disposition": "exact_test_import",
+        "canonical_tests": [
+          {
+            "path": "tests/wine_integration/test_stage3_memory_wine_run.py",
+            "symbol": "WineRunRecordControls.test_inherited_home_is_not_repurposed_and_injections_not_in_environment",
+            "line_start": 448,
+            "line_end": 453,
+            "sha256": "8015bd7f121c16839d5f48c1744d565d3792a47bc3c0ac112ebeb851a2a27eeb"
+          }
+        ],
+        "claim": "Original test method bytes preserved; imports/provider selection are the recorded module adaptations. Synthetic portability only."
+      },
+      {
+        "original": {
+          "path": "tests/fex/test_stage3_memory_wine_run.py",
+          "symbol": "WineRunRecordControls.test_exact_nonce_control_endpoint_no_hostpid_or_graphics_environment",
+          "line_start": 480,
+          "line_end": 488,
+          "sha256": "463d150dbab9fd9f516562048dbe0c789802c81411901c1f321237855512bf9a"
+        },
+        "disposition": "exact_test_import",
+        "canonical_tests": [
+          {
+            "path": "tests/wine_integration/test_stage3_memory_wine_run.py",
+            "symbol": "WineRunRecordControls.test_exact_nonce_control_endpoint_no_hostpid_or_graphics_environment",
+            "line_start": 455,
+            "line_end": 463,
+            "sha256": "463d150dbab9fd9f516562048dbe0c789802c81411901c1f321237855512bf9a"
+          }
+        ],
+        "claim": "Original test method bytes preserved; imports/provider selection are the recorded module adaptations. Synthetic portability only."
+      },
+      {
+        "original": {
+          "path": "tests/fex/test_stage3_memory_wine_run.py",
+          "symbol": "WineRunRecordControls.test_changed_unclosed_or_partial_log_cannot_pass",
+          "line_start": 490,
+          "line_end": 508,
+          "sha256": "543a33dbbf9cb817cbcd5daf8c2478112ea66e1d1345dfd043d2b256ece52c71"
+        },
+        "disposition": "exact_test_import",
+        "canonical_tests": [
+          {
+            "path": "tests/wine_integration/test_stage3_memory_wine_run.py",
+            "symbol": "WineRunRecordControls.test_changed_unclosed_or_partial_log_cannot_pass",
+            "line_start": 465,
+            "line_end": 483,
+            "sha256": "543a33dbbf9cb817cbcd5daf8c2478112ea66e1d1345dfd043d2b256ece52c71"
+          }
+        ],
+        "claim": "Original test method bytes preserved; imports/provider selection are the recorded module adaptations. Synthetic portability only."
+      },
+      {
+        "original": {
+          "path": "tests/fex/test_stage3_memory_wine_run.py",
+          "symbol": "WineRunRecordControls.test_failed_root_refused_before_runtime_admission_or_observer",
+          "line_start": 510,
+          "line_end": 517,
+          "sha256": "4aa8a6ab7b39f1065dbd0ca6f66c17f3bcf9cb69ac56c29194bd89e0ea6f3115"
+        },
+        "disposition": "current_contract_counterpart",
+        "canonical_tests": [
+          {
+            "path": "tests/fixtures/controls/test_execution.py",
+            "symbol": "Admission.test_fresh_output_rejects_existing_nested_and_alias_paths",
+            "line_start": 100,
+            "line_end": 108,
+            "sha256": "4dd1e3cbf84bba39af7f6e463f5f17f28d591511734dc75f9a8dbcf52b506cf6"
+          },
+          {
+            "path": "tests/fixtures/controls/test_execution.py",
+            "symbol": "RunFailures.test_before_authority_refusal_prevents_any_session",
+            "line_start": 392,
+            "line_end": 399,
+            "sha256": "2490886400a12fd6ad4199956641820db413bdd4f0f7faae50cd9b44c824353d"
+          },
+          {
+            "path": "tests/fixtures/test_driver.py",
+            "symbol": "RequestPolicy.test_descriptor_failure_is_preserved_and_cannot_start_execution",
+            "line_start": 100,
+            "line_end": 104,
+            "sha256": "6f8fe41054fc8f7c6e1d370b4f0b103701adad7084122205cd1979f2c4120bac"
+          }
+        ],
+        "full_legacy_behavior_equivalence_claimed": false,
+        "migration_judgment": "Current runners require fresh output and successful context/authority admission before any session. The legacy verify_run directory schema is retired."
+      },
+      {
+        "original": {
+          "path": "tests/fex/test_stage3_memory_wine_run.py",
+          "symbol": "WineRunRecordControls.test_failed_actual_admission_is_written_without_launch_or_guessed_exit",
+          "line_start": 519,
+          "line_end": 532,
+          "sha256": "7cd55558c8c57be70586c68801bac43d08f089d781258d12529be49f3d14ab44"
+        },
+        "disposition": "current_contract_counterpart",
+        "canonical_tests": [
+          {
+            "path": "tests/fixtures/controls/test_execution.py",
+            "symbol": "RunFailures.test_before_authority_refusal_prevents_any_session",
+            "line_start": 392,
+            "line_end": 399,
+            "sha256": "2490886400a12fd6ad4199956641820db413bdd4f0f7faae50cd9b44c824353d"
+          },
+          {
+            "path": "tests/fixtures/test_admission.py",
+            "symbol": "AdmissionTests.test_current_failure_object_is_preserved",
+            "line_start": 49,
+            "line_end": 53,
+            "sha256": "33ba709e82db4b500c678eb9ce3c2895a59853192b70c004e4830e308e9f74ed"
+          },
+          {
+            "path": "tests/assembly/test_assembly.py",
+            "symbol": "InputTests.test_current_authority_failure_retains_original_error_and_false_control",
+            "line_start": 242,
+            "line_end": 252,
+            "sha256": "5c8287a1340628cd54b8fe9d069968e84d53b01551d01e590039c12b170b92b9"
+          }
+        ],
+        "full_legacy_behavior_equivalence_claimed": false,
+        "migration_judgment": "Current authority failure is retained and prevents native session construction; no guessed exit is used to establish success."
+      },
+      {
+        "original": {
+          "path": "tests/fex/test_stage3_memory_wine_run.py",
+          "symbol": "WineRunRecordControls.test_wrapped_admission_error_keeps_existing_native_error_without_launch",
+          "line_start": 534,
+          "line_end": 551,
+          "sha256": "eac6ce6ce4283ea5f114d72e9d92b27f9648594f9c6a69f684b9a8a8b0a1c7f8"
+        },
+        "disposition": "current_contract_counterpart",
+        "canonical_tests": [
+          {
+            "path": "tests/fixtures/test_admission.py",
+            "symbol": "AdmissionTests.test_current_failure_object_is_preserved",
+            "line_start": 49,
+            "line_end": 53,
+            "sha256": "33ba709e82db4b500c678eb9ce3c2895a59853192b70c004e4830e308e9f74ed"
+          },
+          {
+            "path": "tests/fixtures/controls/test_execution.py",
+            "symbol": "RunFailures.test_before_authority_refusal_prevents_any_session",
+            "line_start": 392,
+            "line_end": 399,
+            "sha256": "2490886400a12fd6ad4199956641820db413bdd4f0f7faae50cd9b44c824353d"
+          },
+          {
+            "path": "tests/fixtures/controls/test_execution.py",
+            "symbol": "RunFailures.test_primary_launch_error_survives_after_authority_failure",
+            "line_start": 375,
+            "line_end": 390,
+            "sha256": "6e57ad109a53f061bbfc856df6112fbbd0b5ccfebe3027ec4369cdf7aae8dd4c"
+          }
+        ],
+        "full_legacy_behavior_equivalence_claimed": false,
+        "migration_judgment": "Current boundary propagates the original failure object and prevents launch; legacy wrapper-specific record layout is not claimed."
+      },
+      {
+        "original": {
+          "path": "tests/fex/test_stage3_memory_wine_run.py",
+          "symbol": "WineRunRecordControls.test_failure_record_write_cannot_replace_actual_primary_error",
+          "line_start": 553,
+          "line_end": 564,
+          "sha256": "530eaf12096d1d57055849d1fd79264859bf8cfceaeda72fc3b9185728ef9166"
+        },
+        "disposition": "current_contract_counterpart",
+        "canonical_tests": [
+          {
+            "path": "tests/fixtures/test_driver.py",
+            "symbol": "OperationLifecycle.test_final_receipt_write_failure_cannot_replace_primary_error",
+            "line_start": 360,
+            "line_end": 370,
+            "sha256": "9b3b9cc6310f93ad1b77c3fd4878d1442b0ea25acac8f2f42d3bb7f0068f6bdb"
+          }
+        ],
+        "full_legacy_behavior_equivalence_claimed": false,
+        "migration_judgment": "Current final receipt failure retains the original primary operation error."
+      },
+      {
+        "original": {
+          "path": "tests/fex/test_stage3_memory_wine_run.py",
+          "symbol": "WineRunRecordControls.test_post_cleanup_case_write_keeps_primary_spawn_error_and_actual_storage_error",
+          "line_start": 566,
+          "line_end": 574,
+          "sha256": "426ca32b11537e3b799123bb150fe16f0249b6d4e135d3666b543609a1b3ae90"
+        },
+        "disposition": "retired_implementation_specific",
+        "canonical_tests": [
+          {
+            "path": "tests/fixtures/test_driver.py",
+            "symbol": "OperationLifecycle.test_log_evidence_error_does_not_replace_primary_execution_failure",
+            "line_start": 326,
+            "line_end": 335,
+            "sha256": "a37ee9f06250fb3d4af291330047bd33cdd9649d2da7af91b3d4945aa1ed8387"
+          },
+          {
+            "path": "tests/fixtures/test_driver.py",
+            "symbol": "OperationLifecycle.test_final_receipt_write_failure_cannot_replace_primary_error",
+            "line_start": 360,
+            "line_end": 370,
+            "sha256": "9b3b9cc6310f93ad1b77c3fd4878d1442b0ea25acac8f2f42d3bb7f0068f6bdb"
+          }
+        ],
+        "full_legacy_behavior_equivalence_claimed": false,
+        "migration_judgment": "Current evidence/final-receipt errors preserve the primary execution failure. The old write_case_record-specific nested fields are not the current schema."
+      },
+      {
+        "original": {
+          "path": "tests/fex/test_stage3_memory_wine_run.py",
+          "symbol": "WineRunRecordControls.test_source_observation_write_failure_keeps_actual_error_fields_and_no_fake_primary",
+          "line_start": 576,
+          "line_end": 586,
+          "sha256": "942f2ff01fd273589b2076377f06431ac1bcf05b8f63b40b0021a05688d9a5b7"
+        },
+        "disposition": "retired_implementation_specific",
+        "canonical_tests": [
+          {
+            "path": "tests/fixtures/test_driver.py",
+            "symbol": "OperationLifecycle.test_log_evidence_failure_after_run_is_retained_as_failed_operation",
+            "line_start": 337,
+            "line_end": 349,
+            "sha256": "01f65ec9d3e303610b4d6b447d741c3595c06c0927d6b47af3c74d9ab535c075"
+          },
+          {
+            "path": "tests/fixtures/test_driver.py",
+            "symbol": "OperationLifecycle.test_case_load_failure_after_run_records_unknown_and_releases_operation",
+            "line_start": 351,
+            "line_end": 358,
+            "sha256": "3ea69c0747d530f018b200365ea0905ac0966924dcfaae2c522c090097927b89"
+          }
+        ],
+        "full_legacy_behavior_equivalence_claimed": false,
+        "migration_judgment": "Current post-run evidence failure is failed/unknown and releases the operation. The old observed_source_failures payload serialization is not claimed by these counterpart tests."
+      },
+      {
+        "original": {
+          "path": "tests/fex/test_stage3_memory_wine_run.py",
+          "symbol": "WineRunRecordControls.test_genuine_error_detail_does_not_invent_exit_or_replace_original_domain",
+          "line_start": 588,
+          "line_end": 591,
+          "sha256": "b0bbe24102b039e2eecd63b8140dd3303cd223d2704bbd9c724f7e0c9c330949"
+        },
+        "disposition": "exact_test_import",
+        "canonical_tests": [
+          {
+            "path": "tests/wine_integration/test_stage3_memory_wine_run.py",
+            "symbol": "WineRunRecordControls.test_genuine_error_detail_does_not_invent_exit_or_replace_original_domain",
+            "line_start": 491,
+            "line_end": 494,
+            "sha256": "b0bbe24102b039e2eecd63b8140dd3303cd223d2704bbd9c724f7e0c9c330949"
+          }
+        ],
+        "claim": "Original test method bytes preserved; imports/provider selection are the recorded module adaptations. Synthetic portability only."
+      },
+      {
+        "original": {
+          "path": "tests/fex/test_memory_wine_runtime.py",
+          "symbol": "RuntimeControls.test_only_two_ntdll_overlay_files_and_two_original_fixtures_have_new_origins",
+          "line_start": 109,
+          "line_end": 116,
+          "sha256": "1525d9faa6b5dac0262f2ae261150e7ce5a3ec0ddcb7deecd5f4c279ea7f3fb7"
+        },
+        "disposition": "retired_implementation_specific",
+        "canonical_tests": [
+          {
+            "path": "tests/assembly/test_assembly.py",
+            "symbol": "InputTests.test_role_has_single_build_owner",
+            "line_start": 112,
+            "line_end": 114,
+            "sha256": "4f8ff2b8cf9e06589b646fc4cdc8315f60f3eb01bd192ff4a4b84786f321968d"
+          },
+          {
+            "path": "tests/assembly/test_assembly.py",
+            "symbol": "InputTests.test_unknown_or_duplicate_role_is_rejected",
+            "line_start": 116,
+            "line_end": 119,
+            "sha256": "e562819c1b9e2846d7433244bb757b63f2206abf5588eb2f173305b219cc7da4"
+          },
+          {
+            "path": "tests/assembly/test_assembly.py",
+            "symbol": "InputTests.test_identical_declared_replacements_still_verify_origin",
+            "line_start": 159,
+            "line_end": 163,
+            "sha256": "dc10a37c80b0b02d9d84c4a88a731b1844f0a98ada4b0152d7e11f63bed5d6d0"
+          }
+        ],
+        "full_legacy_behavior_equivalence_claimed": false,
+        "migration_judgment": "The current candidate has six explicitly owned replacement roles, with fixture bytes inherited from its exact parent. The old two-ntdll/two-fixture overlay count is intentionally not a current layout claim."
+      },
+      {
+        "original": {
+          "path": "tests/fex/test_memory_wine_runtime.py",
+          "symbol": "RuntimeControls.test_changed_unselected_baseline_data_mode_alias_or_missing_install_file_is_refused",
+          "line_start": 118,
+          "line_end": 130,
+          "sha256": "a4f79dbf6dbc6b28673613b9e7a92a85e8272783bb6f75c3ded22b0220fffe5e"
+        },
+        "disposition": "current_contract_counterpart",
+        "canonical_tests": [
+          {
+            "path": "tests/assembly/test_assembly.py",
+            "symbol": "InputTests.test_changed_parent_inventory_is_rejected",
+            "line_start": 134,
+            "line_end": 136,
+            "sha256": "6dcb1f9b25c32f4c59ad882a4faaa04e556753e0b7bfe7bac12ddfde3f799f5b"
+          },
+          {
+            "path": "tests/assembly/test_assembly.py",
+            "symbol": "InputTests.test_projection_refuses_undeclared_data_change",
+            "line_start": 165,
+            "line_end": 168,
+            "sha256": "81631cad2c3c3fa2f42f72fe64faa7a319525d4134d30ec006fa8cc28a572fc4"
+          }
+        ],
+        "full_legacy_behavior_equivalence_claimed": false,
+        "migration_judgment": "Current assembly admits a complete exact parent bundle inventory and rejects undeclared projection changes; legacy install roots are not consulted."
+      },
+      {
+        "original": {
+          "path": "tests/fex/test_memory_wine_runtime.py",
+          "symbol": "RuntimeControls.test_fixture_path_collision_unlisted_role_and_changed_origin_cannot_be_admitted",
+          "line_start": 132,
+          "line_end": 144,
+          "sha256": "e42fa12bf9d2a83c49311f56c1746c71e2d98594ef488d120fd090b33a55f4ef"
+        },
+        "disposition": "current_contract_counterpart",
+        "canonical_tests": [
+          {
+            "path": "tests/assembly/test_assembly.py",
+            "symbol": "InputTests.test_role_has_single_build_owner",
+            "line_start": 112,
+            "line_end": 114,
+            "sha256": "4f8ff2b8cf9e06589b646fc4cdc8315f60f3eb01bd192ff4a4b84786f321968d"
+          },
+          {
+            "path": "tests/assembly/test_assembly.py",
+            "symbol": "InputTests.test_unknown_or_duplicate_role_is_rejected",
+            "line_start": 116,
+            "line_end": 119,
+            "sha256": "e562819c1b9e2846d7433244bb757b63f2206abf5588eb2f173305b219cc7da4"
+          },
+          {
+            "path": "tests/assembly/test_assembly.py",
+            "symbol": "InputTests.test_artifact_changed_after_build_is_rejected",
+            "line_start": 104,
+            "line_end": 106,
+            "sha256": "995c379f3d9312735d7d932a70b03a53d41fa63be8becc80f5a8fc902e186116"
+          }
+        ],
+        "full_legacy_behavior_equivalence_claimed": false,
+        "migration_judgment": "Current named role ownership and exact artifact identities replace the legacy fixture-origin dispatch."
+      },
+      {
+        "original": {
+          "path": "tests/fex/test_memory_wine_runtime.py",
+          "symbol": "RuntimeControls.test_materialized_full_tree_preserves_data_modes_aliases_and_unique_new_ntdll",
+          "line_start": 146,
+          "line_end": 161,
+          "sha256": "c52667cb830170c58420c9beedd3f57ccb8c63648cfefd9ff88848ac91b63f3f"
+        },
+        "disposition": "retired_implementation_specific",
+        "canonical_tests": [
+          {
+            "path": "tests/assembly/test_assembly.py",
+            "symbol": "InputTests.test_identical_declared_replacements_still_verify_origin",
+            "line_start": 159,
+            "line_end": 163,
+            "sha256": "dc10a37c80b0b02d9d84c4a88a731b1844f0a98ada4b0152d7e11f63bed5d6d0"
+          },
+          {
+            "path": "tests/assembly/test_assembly.py",
+            "symbol": "InputTests.test_projection_refuses_undeclared_data_change",
+            "line_start": 165,
+            "line_end": 168,
+            "sha256": "81631cad2c3c3fa2f42f72fe64faa7a319525d4134d30ec006fa8cc28a572fc4"
+          },
+          {
+            "path": "tests/fixtures/test_admission.py",
+            "symbol": "AdmissionTests.test_prefix_inventory_preserves_exact_bytes_modes_and_two_wine_links",
+            "line_start": 86,
+            "line_end": 95,
+            "sha256": "c89aaa340059bb2e3938b07605195c73c0794b9eab591e4c8b9333431a06370e"
+          }
+        ],
+        "full_legacy_behavior_equivalence_claimed": false,
+        "migration_judgment": "Current bundle projection and synthetic prefix inventory cover declared replacements and unchanged data/links. The removed legacy materializer is not invoked and its exact ledger shape is not claimed."
+      },
+      {
+        "original": {
+          "path": "tests/fex/test_memory_wine_runtime.py",
+          "symbol": "RuntimeControls.test_current_payload_extra_file_or_changed_data_or_nonarm64_fixture_is_refused",
+          "line_start": 163,
+          "line_end": 178,
+          "sha256": "0f458eb04493bc5a3dd1142479c13fd7ef746e544ae538cb17e9462de6003470"
+        },
+        "disposition": "current_contract_counterpart",
+        "canonical_tests": [
+          {
+            "path": "tests/assembly/test_assembly.py",
+            "symbol": "InputTests.test_projection_refuses_undeclared_data_change",
+            "line_start": 165,
+            "line_end": 168,
+            "sha256": "81631cad2c3c3fa2f42f72fe64faa7a319525d4134d30ec006fa8cc28a572fc4"
+          },
+          {
+            "path": "tests/assembly/test_assembly.py",
+            "symbol": "InputTests.test_wrong_outer_pe_machine_is_rejected",
+            "line_start": 145,
+            "line_end": 148,
+            "sha256": "c098a73f760ce0c1df54cdc599e2615d6e12c5892a355b16320116773b3ad432"
+          },
+          {
+            "path": "tests/assembly/test_assembly.py",
+            "symbol": "InputTests.test_changed_parent_inventory_is_rejected",
+            "line_start": 134,
+            "line_end": 136,
+            "sha256": "6dcb1f9b25c32f4c59ad882a4faaa04e556753e0b7bfe7bac12ddfde3f799f5b"
+          }
+        ],
+        "full_legacy_behavior_equivalence_claimed": false,
+        "migration_judgment": "Current assembly rejects unexpected parent/projection bytes and wrong declared PE role architecture."
+      },
+      {
+        "original": {
+          "path": "tests/fex/test_memory_wine_runtime.py",
+          "symbol": "RuntimeControls.test_genuine_source_declared_winmd_is_preserved_without_loaded_pe_admission",
+          "line_start": 180,
+          "line_end": 202,
+          "sha256": "854f184eb00ae3126750bf61663e5b8872db7ad4646d54c24b432a96af6f5501"
+        },
+        "disposition": "retired_implementation_specific",
+        "canonical_tests": [
+          {
+            "path": "tests/assembly/test_assembly.py",
+            "symbol": "InputTests.test_changed_parent_inventory_is_rejected",
+            "line_start": 134,
+            "line_end": 136,
+            "sha256": "6dcb1f9b25c32f4c59ad882a4faaa04e556753e0b7bfe7bac12ddfde3f799f5b"
+          },
+          {
+            "path": "tests/assembly/test_assembly.py",
+            "symbol": "InputTests.test_projection_refuses_undeclared_data_change",
+            "line_start": 165,
+            "line_end": 168,
+            "sha256": "81631cad2c3c3fa2f42f72fe64faa7a319525d4134d30ec006fa8cc28a572fc4"
+          }
+        ],
+        "full_legacy_behavior_equivalence_claimed": false,
+        "migration_judgment": "WinMD remains inherited exact parent data; this stage does not reconstruct or reclassify it. New metadata classification is outside this recipe and requires a separate reader/test decision; the old classifier is not silently treated as rerun."
+      },
+      {
+        "original": {
+          "path": "tests/fex/test_memory_wine_runtime.py",
+          "symbol": "RuntimeControls.test_arbitrary_pe_cannot_be_reclassified_as_nonexecuting_winmd",
+          "line_start": 204,
+          "line_end": 212,
+          "sha256": "9aba30f6110fc6aad164be0ab7c9bc9fe8aee4dd665fd63e3d37dd73a78d6782"
+        },
+        "disposition": "retired_implementation_specific",
+        "canonical_tests": [
+          {
+            "path": "tests/assembly/test_assembly.py",
+            "symbol": "InputTests.test_unknown_or_duplicate_role_is_rejected",
+            "line_start": 116,
+            "line_end": 119,
+            "sha256": "e562819c1b9e2846d7433244bb757b63f2206abf5588eb2f173305b219cc7da4"
+          },
+          {
+            "path": "tests/assembly/test_assembly.py",
+            "symbol": "InputTests.test_projection_refuses_undeclared_data_change",
+            "line_start": 165,
+            "line_end": 168,
+            "sha256": "81631cad2c3c3fa2f42f72fe64faa7a319525d4134d30ec006fa8cc28a572fc4"
+          }
+        ],
+        "full_legacy_behavior_equivalence_claimed": false,
+        "migration_judgment": "Current fixed-role replacement accepts no WinMD reclassification request. The legacy arbitrary metadata classifier is retired, with no general classifier-equivalence claim."
+      },
+      {
+        "original": {
+          "path": "tests/fex/test_memory_wine_runtime.py",
+          "symbol": "RuntimeControls.test_only_retained_exact_source_negative_pe_fixtures_are_preserved_as_refused",
+          "line_start": 214,
+          "line_end": 242,
+          "sha256": "d8c25ba3720735310480b2edb6eb799bad27f8eefb8d3169b40b75c90d47e505"
+        },
+        "disposition": "retired_implementation_specific",
+        "canonical_tests": [
+          {
+            "path": "tests/assembly/test_assembly.py",
+            "symbol": "InputTests.test_changed_parent_inventory_is_rejected",
+            "line_start": 134,
+            "line_end": 136,
+            "sha256": "6dcb1f9b25c32f4c59ad882a4faaa04e556753e0b7bfe7bac12ddfde3f799f5b"
+          },
+          {
+            "path": "tests/fixtures/test_driver.py",
+            "symbol": "RequestPolicy.test_fixture_and_output_names_cannot_escape_declared_scope",
+            "line_start": 64,
+            "line_end": 71,
+            "sha256": "eb1785dbf61563798db0ab627979ff983d9fe4df1e9da9957abe4973e319f922"
+          },
+          {
+            "path": "tests/fixtures/controls/test_execution.py",
+            "symbol": "PrefixAndProtocol.test_no_implicit_or_historical_case_selection",
+            "line_start": 213,
+            "line_end": 215,
+            "sha256": "12d4915c098eae19e08ca9ed87cdd2a11033a1454fcd4ff28076f3c04e837c20"
+          }
+        ],
+        "full_legacy_behavior_equivalence_claimed": false,
+        "migration_judgment": "Negative architecture fixtures remain exact inherited bytes and are absent from the selected executable cases. A new negative-PE execution/classification path would require explicit selection and tests; no legacy load-admission replay is claimed."
+      },
+      {
+        "original": {
+          "path": "tests/fex/test_memory_wine_runtime.py",
+          "symbol": "RuntimeControls.test_negative_pe_original_source_contract_must_explicitly_refuse_execution",
+          "line_start": 244,
+          "line_end": 255,
+          "sha256": "01e61f3f28e6ac1ff94011cf270874ddaccfdd46f0730c80d9c544459f759020"
+        },
+        "disposition": "retired_implementation_specific",
+        "canonical_tests": [
+          {
+            "path": "tests/fixtures/test_driver.py",
+            "symbol": "RequestPolicy.test_fixture_and_output_names_cannot_escape_declared_scope",
+            "line_start": 64,
+            "line_end": 71,
+            "sha256": "eb1785dbf61563798db0ab627979ff983d9fe4df1e9da9957abe4973e319f922"
+          },
+          {
+            "path": "tests/fixtures/controls/test_execution.py",
+            "symbol": "PrefixAndProtocol.test_no_implicit_or_historical_case_selection",
+            "line_start": 213,
+            "line_end": 215,
+            "sha256": "12d4915c098eae19e08ca9ed87cdd2a11033a1454fcd4ff28076f3c04e837c20"
+          }
+        ],
+        "full_legacy_behavior_equivalence_claimed": false,
+        "migration_judgment": "Case selection is closed; current development runners do not infer permission from the old API_GUESTS table. The historical table type/parser assertion is retired."
+      },
+      {
+        "original": {
+          "path": "tests/fex/test_memory_wine_runtime.py",
+          "symbol": "RuntimeControls.test_mock_clone_full_copy_ledger_independence_and_private_writes_are_verified",
+          "line_start": 271,
+          "line_end": 289,
+          "sha256": "a297519bd7104f51541b323abeb67cc5bffde647ac5e84989a232df51596d4b7"
+        },
+        "disposition": "retired_implementation_specific",
+        "canonical_tests": [
+          {
+            "path": "tests/assembly/test_assembly.py",
+            "symbol": "InputTests.test_projection_refuses_undeclared_data_change",
+            "line_start": 165,
+            "line_end": 168,
+            "sha256": "81631cad2c3c3fa2f42f72fe64faa7a319525d4134d30ec006fa8cc28a572fc4"
+          },
+          {
+            "path": "tests/fixtures/test_admission.py",
+            "symbol": "AdmissionTests.test_prefix_inventory_preserves_exact_bytes_modes_and_two_wine_links",
+            "line_start": 86,
+            "line_end": 95,
+            "sha256": "c89aaa340059bb2e3938b07605195c73c0794b9eab591e4c8b9333431a06370e"
+          }
+        ],
+        "full_legacy_behavior_equivalence_claimed": false,
+        "migration_judgment": "The legacy fclonefileat materializer and clone-count ledger are not used by current assembly. Current projection/prefix identity tests are related retention controls, not clone independence or physical sharing qualification."
+      },
+      {
+        "original": {
+          "path": "tests/fex/test_memory_wine_runtime.py",
+          "symbol": "RuntimeControls.test_only_documented_unsupported_and_cross_device_clone_errno_fall_back",
+          "line_start": 291,
+          "line_end": 309,
+          "sha256": "5f92d3caec65ace4efc4ed4535b772dd9ba1a7695c03eef6a6745531b3937d35"
+        },
+        "disposition": "retired_implementation_specific",
+        "canonical_tests": [
+          {
+            "path": "tests/assembly/test_driver.py",
+            "symbol": "RequestTests.test_failed_execution_retains_original_error",
+            "line_start": 185,
+            "line_end": 189,
+            "sha256": "7e3005a95ad697578659a47ceb8c28b45719f46b0c69e513091362580cfb2f7a"
+          },
+          {
+            "path": "tests/assembly/test_assembly.py",
+            "symbol": "InputTests.test_output_overlap_and_existing_output_fail",
+            "line_start": 128,
+            "line_end": 132,
+            "sha256": "189a966888e5e9d50bf08b21b55e7920a1f78b4bd0997b9e427f74b3dd8f9da1"
+          }
+        ],
+        "full_legacy_behavior_equivalence_claimed": false,
+        "migration_judgment": "Current assembly uses its admitted copy operation and has no legacy fclonefileat errno-fallback API. No claim is made that these tests reproduce the old fallback allowlist."
+      },
+      {
+        "original": {
+          "path": "tests/fex/test_memory_wine_runtime.py",
+          "symbol": "RuntimeControls.test_existing_or_partial_clone_output_is_never_replaced_on_fallback",
+          "line_start": 311,
+          "line_end": 324,
+          "sha256": "03f46349531a29fdb43035a542400beeeee4557f95105fd4bd6ee20f4c8d4f88"
+        },
+        "disposition": "retired_implementation_specific",
+        "canonical_tests": [
+          {
+            "path": "tests/assembly/test_assembly.py",
+            "symbol": "InputTests.test_output_overlap_and_existing_output_fail",
+            "line_start": 128,
+            "line_end": 132,
+            "sha256": "189a966888e5e9d50bf08b21b55e7920a1f78b4bd0997b9e427f74b3dd8f9da1"
+          },
+          {
+            "path": "tests/fixtures/controls/test_execution.py",
+            "symbol": "Admission.test_fresh_output_rejects_existing_nested_and_alias_paths",
+            "line_start": 100,
+            "line_end": 108,
+            "sha256": "4dd1e3cbf84bba39af7f6e463f5f17f28d591511734dc75f9a8dbcf52b506cf6"
+          }
+        ],
+        "full_legacy_behavior_equivalence_claimed": false,
+        "migration_judgment": "Current operations require a fresh owned output. The legacy partial fclonefileat fallback path is not reachable and is not duplicated."
+      },
+      {
+        "original": {
+          "path": "tests/fex/test_memory_wine_runtime.py",
+          "symbol": "RuntimeControls.test_mock_hard_link_and_source_or_destination_alias_are_refused_before_chmod",
+          "line_start": 326,
+          "line_end": 341,
+          "sha256": "1aadc5483f509673ebe5e9bc01e56e0931af137c8004b2953b2eb2b229906519"
+        },
+        "disposition": "retired_implementation_specific",
+        "canonical_tests": [
+          {
+            "path": "tests/assembly/test_assembly.py",
+            "symbol": "InputTests.test_output_overlap_and_existing_output_fail",
+            "line_start": 128,
+            "line_end": 132,
+            "sha256": "189a966888e5e9d50bf08b21b55e7920a1f78b4bd0997b9e427f74b3dd8f9da1"
+          },
+          {
+            "path": "tests/fixtures/controls/test_execution.py",
+            "symbol": "Admission.test_fresh_output_rejects_existing_nested_and_alias_paths",
+            "line_start": 100,
+            "line_end": 108,
+            "sha256": "4dd1e3cbf84bba39af7f6e463f5f17f28d591511734dc75f9a8dbcf52b506cf6"
+          },
+          {
+            "path": "tests/fixtures/test_supervision.py",
+            "symbol": "SupervisorTests.test_file_and_root_aliases_rejected",
+            "line_start": 63,
+            "line_end": 69,
+            "sha256": "af8051408218081bf2f1a12cda8927cc2ed4f904e83c02986f75423b34368cea"
+          }
+        ],
+        "full_legacy_behavior_equivalence_claimed": false,
+        "migration_judgment": "Current root/ref alias and overlap gates remain tested. There is no custom fclonefileat hook in this candidate recipe, so the old mocked hard-link/chmod assertion is not claimed."
+      },
+      {
+        "original": {
+          "path": "tests/fex/test_memory_wine_runtime.py",
+          "symbol": "RuntimeControls.test_clone_post_bytes_and_source_mutation_cannot_produce_copy_success",
+          "line_start": 343,
+          "line_end": 355,
+          "sha256": "713a582126516a659ae96adb653f0527a807932154f86bf27376187be53d3e81"
+        },
+        "disposition": "retired_implementation_specific",
+        "canonical_tests": [
+          {
+            "path": "tests/assembly/test_assembly.py",
+            "symbol": "InputTests.test_projection_refuses_undeclared_data_change",
+            "line_start": 165,
+            "line_end": 168,
+            "sha256": "81631cad2c3c3fa2f42f72fe64faa7a319525d4134d30ec006fa8cc28a572fc4"
+          },
+          {
+            "path": "tests/assembly/test_driver.py",
+            "symbol": "RequestTests.test_mutating_review_input_during_execution_is_not_success",
+            "line_start": 222,
+            "line_end": 228,
+            "sha256": "c3a32fe523ccb439c14f0efaa65d060bc09b56fab15d46980702c88c214de05d"
+          },
+          {
+            "path": "tests/fixtures/controls/test_execution.py",
+            "symbol": "PrefixAndProtocol.test_changed_seed_is_rejected_before_copy",
+            "line_start": 187,
+            "line_end": 193,
+            "sha256": "004064200fac3e7ece94aa928dae9baa5061d06448b0112eaf77e60f78690edd"
+          }
+        ],
+        "full_legacy_behavior_equivalence_claimed": false,
+        "migration_judgment": "Current assembly and prefix paths recheck source/projection identities. The removed clone implementation is not exercised."
+      },
+      {
+        "original": {
+          "path": "tests/fex/test_memory_wine_runtime.py",
+          "symbol": "RuntimeControls.test_public_clone_uses_exact_installed_api_flags_and_preserves_errno",
+          "line_start": 357,
+          "line_end": 370,
+          "sha256": "41d880e083ded53fa7e575d2781683b8df036bf838d95902f4ddeac8309dc489"
+        },
+        "disposition": "retired_implementation_specific",
+        "canonical_tests": [
+          {
+            "path": "tests/assembly/test_driver.py",
+            "symbol": "RequestTests.test_failed_execution_retains_original_error",
+            "line_start": 185,
+            "line_end": 189,
+            "sha256": "7e3005a95ad697578659a47ceb8c28b45719f46b0c69e513091362580cfb2f7a"
+          }
+        ],
+        "full_legacy_behavior_equivalence_claimed": false,
+        "migration_judgment": "The current assembly does not call this custom ctypes fclonefileat wrapper. Its installed-library/flag invocation is retired; the named current test covers only error retention, not clone API parity."
+      },
+      {
+        "original": {
+          "path": "tests/fex/test_memory_wine_runtime.py",
+          "symbol": "RuntimeControls.test_fixed_reviewed_ast_reuse_changes_no_import_cache_or_native_calls",
+          "line_start": 372,
+          "line_end": 386,
+          "sha256": "dee9e886cd89c7661e9ad1d8add94128efda100f1768edf0a666933ceb27fdb4"
+        },
+        "disposition": "current_contract_counterpart",
+        "canonical_tests": [
+          {
+            "path": "tests/fixtures/test_supervision.py",
+            "symbol": "SupervisorTests.test_aliases_and_path_restored_on_success_and_body_failure",
+            "line_start": 131,
+            "line_end": 157,
+            "sha256": "c5105038c81458b0583caec651406f8de45677f9de53adb41d9986eeb3f3bcf3"
+          },
+          {
+            "path": "tests/fixtures/test_supervision.py",
+            "symbol": "SupervisorTests.test_changed_file_is_rejected_before_any_exec",
+            "line_start": 56,
+            "line_end": 61,
+            "sha256": "d19f9eec471c7ff18fc7ee193ed8d8529ce08ce964a63a85441267130b5d24b2"
+          },
+          {
+            "path": "tests/fixtures/test_supervision.py",
+            "symbol": "SupervisorTests.test_import_constructs_no_host_session_and_runs_no_command",
+            "line_start": 183,
+            "line_end": 192,
+            "sha256": "30db1b909f4572918daa05925d0de87cb997847c03581fabbc39d009a586fb3f"
+          }
+        ],
+        "full_legacy_behavior_equivalence_claimed": false,
+        "migration_judgment": "The single canonical source provider is exact, import-scoped and source-only; old signing helper source-root fallbacks are not used."
+      },
+      {
+        "original": {
+          "path": "tests/fex/test_memory_wine_runtime.py",
+          "symbol": "RuntimeControls.test_every_selected_helper_and_nested_body_has_closed_real_globals",
+          "line_start": 388,
+          "line_end": 423,
+          "sha256": "9d2d25d5486e7905933757fa9dced4c44ac15b54b6791ac981ccb737ec704760"
+        },
+        "disposition": "retired_implementation_specific",
+        "canonical_tests": [
+          {
+            "path": "tests/fixtures/test_supervision.py",
+            "symbol": "SupervisorTests.test_original_classes_and_loaded_method_code_are_unchanged",
+            "line_start": 86,
+            "line_end": 104,
+            "sha256": "3e49afccbc647af24a28de55a1b117e10fed79f06bd0a3dc446d100e3263dcee"
+          },
+          {
+            "path": "tests/fixtures/test_supervision.py",
+            "symbol": "SupervisorTests.test_prepare_changes_only_reviewed_top_level_seam",
+            "line_start": 106,
+            "line_end": 114,
+            "sha256": "9f25e0e90a06b71ab94a817a7c00fdbbd9deba2bf92f67742f83bac01e628337"
+          },
+          {
+            "path": "tests/fixtures/test_supervision.py",
+            "symbol": "SupervisorTests.test_import_constructs_no_host_session_and_runs_no_command",
+            "line_start": 183,
+            "line_end": 192,
+            "sha256": "30db1b909f4572918daa05925d0de87cb997847c03581fabbc39d009a586fb3f"
+          }
+        ],
+        "full_legacy_behavior_equivalence_claimed": false,
+        "migration_judgment": "Current provider loading and reviewed seam tests exercise the active namespace. These do not reproduce the historical exhaustive nested LOAD_GLOBAL scan; no blanket closure-equivalence claim is made."
+      },
+      {
+        "original": {
+          "path": "tests/fex/test_memory_wine_runtime.py",
+          "symbol": "RuntimeControls.test_only_wine_main_requests_profile_cross_and_jit_claims_all_ordinary_images_zero",
+          "line_start": 425,
+          "line_end": 440,
+          "sha256": "c797f6b8d71f21cf8c8d1c34e8b731a904385be9c9246a6d84a6c8cba285de88"
+        },
+        "disposition": "current_contract_counterpart",
+        "canonical_tests": [
+          {
+            "path": "tests/assembly/test_original_checks.py",
+            "symbol": "ProfileTests.test_exact_wine_profile_has_no_probe_jit_or_debug_claims",
+            "line_start": 110,
+            "line_end": 116,
+            "sha256": "1765ae180953765016a59d4ade327b376b2bd83dfbfd95dc6b9873ad847aece4"
+          },
+          {
+            "path": "tests/assembly/test_original_checks.py",
+            "symbol": "ProfileTests.test_server_and_libraries_require_zero_entitlements",
+            "line_start": 177,
+            "line_end": 183,
+            "sha256": "fdba11ae4fa35ba5049671e977fe5367bb5ed8bd7c1a0a5652d43641d3821f21"
+          },
+          {
+            "path": "tests/assembly/test_original_checks.py",
+            "symbol": "ProfileTests.test_loader_public_claim_does_not_mutate_or_broaden_private_authorization",
+            "line_start": 139,
+            "line_end": 154,
+            "sha256": "da50f52f94cde799678c2f679e6c45ca547019343f62491f93ed6dd437812e0b"
+          }
+        ],
+        "full_legacy_behavior_equivalence_claimed": false,
+        "migration_judgment": "Original canonical signing/profile validators remain current authority; tests preserve loader-only claims and ordinary-image zero entitlement boundaries."
+      },
+      {
+        "original": {
+          "path": "tests/fex/test_memory_wine_runtime.py",
+          "symbol": "RuntimeControls.test_missing_or_changed_capture_and_source_snapshot_is_refused",
+          "line_start": 442,
+          "line_end": 452,
+          "sha256": "65f3446ba45ffa596e27ec6a3c6bb7ed638837b4e1464d108fa641c29c9326d2"
+        },
+        "disposition": "current_contract_counterpart",
+        "canonical_tests": [
+          {
+            "path": "tests/assembly/test_assembly.py",
+            "symbol": "SourceTests.test_source_pack_pins_complete_captured_bytes",
+            "line_start": 329,
+            "line_end": 333,
+            "sha256": "1f7a8986250ca7b30a01ca38abd723e193df042de176892ece3ddf44430b3316"
+          },
+          {
+            "path": "tests/assembly/test_assembly.py",
+            "symbol": "SourceTests.test_mutation_symlink_or_missing_source_is_rejected",
+            "line_start": 335,
+            "line_end": 346,
+            "sha256": "1db1172a00fb6c6ad79d0cda828a6bd29ed43d4530c81ba6d5eba5b1a132ff35"
+          },
+          {
+            "path": "tests/fixtures/test_context.py",
+            "symbol": "ContextTests.test_final_assessment_refuses_source_or_snapshot_drift",
+            "line_start": 176,
+            "line_end": 186,
+            "sha256": "205e9da8ea29e2ed14b00c567bbba8aa46fa58611a040c1156fe044fd28ebbca"
+          }
+        ],
+        "full_legacy_behavior_equivalence_claimed": false,
+        "migration_judgment": "Current source packs and operation snapshots are exact and rechecked; old producer directory naming is not a prerequisite."
+      },
+      {
+        "original": {
+          "path": "tests/fex/test_memory_wine_runtime.py",
+          "symbol": "RuntimeControls.test_constructor_preflight_failure_records_original_errno_and_no_sign_or_init",
+          "line_start": 454,
+          "line_end": 466,
+          "sha256": "be4799d29242902d47086aeb8be6f00ced75bd23c2a8e41b924a6942d18429ae"
+        },
+        "disposition": "retired_implementation_specific",
+        "canonical_tests": [
+          {
+            "path": "tests/assembly/test_driver.py",
+            "symbol": "RequestTests.test_failed_execution_retains_original_error",
+            "line_start": 185,
+            "line_end": 189,
+            "sha256": "7e3005a95ad697578659a47ceb8c28b45719f46b0c69e513091362580cfb2f7a"
+          },
+          {
+            "path": "tests/assembly/test_driver.py",
+            "symbol": "RequestTests.test_capacity_refusal_occurs_before_operation_output",
+            "line_start": 216,
+            "line_end": 220,
+            "sha256": "7f4285fe8b9c8fe9ae37d18cc5edaeb39df2e3493186bd04b7cd9e5559df15fe"
+          },
+          {
+            "path": "tests/assembly/test_assembly.py",
+            "symbol": "InputTests.test_static_sign_recipe_mismatch_records_failure_before_codesign",
+            "line_start": 191,
+            "line_end": 210,
+            "sha256": "71dab982772bcd66033575ef9ff3d160a91188cec7e9c376b479a8854d400ab7"
+          }
+        ],
+        "full_legacy_behavior_equivalence_claimed": false,
+        "migration_judgment": "Current driver retains the primary errno and fails before signing when admission/recipe checks fail. The old prepare phase names and failure record schema are retired."
+      },
+      {
+        "original": {
+          "path": "tests/fex/test_memory_wine_runtime.py",
+          "symbol": "RuntimeControls.test_reused_native_start_failure_has_unknown_exit_and_preserved_original_errno",
+          "line_start": 468,
+          "line_end": 478,
+          "sha256": "1f0755be9272c37f4dfd66851756156770673663b3d02673c8fa6e7457d19ef8"
+        },
+        "disposition": "retired_implementation_specific",
+        "canonical_tests": [
+          {
+            "path": "tests/assembly/test_driver.py",
+            "symbol": "RequestTests.test_failed_execution_retains_original_error",
+            "line_start": 185,
+            "line_end": 189,
+            "sha256": "7e3005a95ad697578659a47ceb8c28b45719f46b0c69e513091362580cfb2f7a"
+          },
+          {
+            "path": "tests/fixtures/test_driver.py",
+            "symbol": "OperationLifecycle.test_execution_error_and_failed_cleanup_are_not_rewritten_as_success",
+            "line_start": 268,
+            "line_end": 276,
+            "sha256": "45f3b56da97b299fa2bfe9901fd2d129a0af0df615f99c01dca93563e2a9b26c"
+          }
+        ],
+        "full_legacy_behavior_equivalence_claimed": false,
+        "migration_judgment": "Current operation failures retain original errors and cannot become success. These are not a direct replay of the old native() subprocess-start row format."
+      },
+      {
+        "original": {
+          "path": "tests/fex/test_memory_wine_runtime.py",
+          "symbol": "ByteReceiptControls.test_same_bytes_are_exact_and_json_type_distinctions_remain_strict",
+          "line_start": 483,
+          "line_end": 492,
+          "sha256": "6ffb225c9b95b7fb1c542b1f3f8b85072228cfef49d39f96dbffabac0d59fce1"
+        },
+        "disposition": "retired_implementation_specific",
+        "canonical_tests": [
+          {
+            "path": "tests/assembly/test_original_checks.py",
+            "symbol": "ProfileTests.test_hardened_real_signature_and_exact_claim_types_required",
+            "line_start": 190,
+            "line_end": 198,
+            "sha256": "634f0c034d8f562a68061b65ad2be0a9bebc701dc86e110a65ce7cb880c68d09"
+          },
+          {
+            "path": "tests/fixtures/test_driver.py",
+            "symbol": "RequestPolicy.test_unknown_missing_fields_and_boolean_schema_refused",
+            "line_start": 52,
+            "line_end": 62,
+            "sha256": "49ffe642946abd94929cccc5caa1e799aa34de412fc6fcb5f2cf5e550de7c119"
+          },
+          {
+            "path": "tests/assembly/test_assembly.py",
+            "symbol": "InputTests.test_profile_alias_and_changed_profile_fail",
+            "line_start": 121,
+            "line_end": 126,
+            "sha256": "35cb644864f65fc1a84a17d1b5b567cdb238a733bb9bbc1ee49db3261781d710"
+          }
+        ],
+        "full_legacy_behavior_equivalence_claimed": false,
+        "migration_judgment": "Current claim/request types and profile identity are strict at their active boundaries; the legacy generic same(bytes, JSON) helper API is retired, without complete helper-level parity."
+      },
+      {
+        "original": {
+          "path": "tests/fex/test_memory_wine_runtime.py",
+          "symbol": "ByteReceiptControls.test_actual_structural_embedded_profile_statements_compare_current_bytes_and_mode",
+          "line_start": 494,
+          "line_end": 522,
+          "sha256": "21c86bc2c23b4795ca8bb317a6500d4d2ab189b803c0f437c71294235e7d8403"
+        },
+        "disposition": "retired_implementation_specific",
+        "canonical_tests": [
+          {
+            "path": "tests/assembly/test_assembly.py",
+            "symbol": "InputTests.test_profile_alias_and_changed_profile_fail",
+            "line_start": 121,
+            "line_end": 126,
+            "sha256": "35cb644864f65fc1a84a17d1b5b567cdb238a733bb9bbc1ee49db3261781d710"
+          },
+          {
+            "path": "tests/assembly/test_assembly.py",
+            "symbol": "InputTests.test_projection_refuses_undeclared_data_change",
+            "line_start": 165,
+            "line_end": 168,
+            "sha256": "81631cad2c3c3fa2f42f72fe64faa7a319525d4134d30ec006fa8cc28a572fc4"
+          },
+          {
+            "path": "tests/assembly/test_original_checks.py",
+            "symbol": "ProfileTests.test_hardened_real_signature_and_exact_claim_types_required",
+            "line_start": 190,
+            "line_end": 198,
+            "sha256": "634f0c034d8f562a68061b65ad2be0a9bebc701dc86e110a65ce7cb880c68d09"
+          }
+        ],
+        "full_legacy_behavior_equivalence_claimed": false,
+        "migration_judgment": "Current assembly binds exact profile bytes and bundle projection plus current signature claims. The old AST-extracted two-statement structural test is not duplicated; these counterparts are scope-specific, not its exact mode test replay."
+      },
+      {
+        "original": {
+          "path": "tests/fex/test_memory_wine_runtime.py",
+          "symbol": "AdmissionReceiptControls.test_explicit_receipt_replay_does_not_run_apple_tools",
+          "line_start": 550,
+          "line_end": 557,
+          "sha256": "48a0a8ae105760b96b61608f03d79621104eb06b63252dc2740daa8eff402911"
+        },
+        "disposition": "retired_implementation_specific",
+        "canonical_tests": [
+          {
+            "path": "tests/fixtures/test_admission.py",
+            "symbol": "AdmissionTests.test_old_runtime_pass_flag_is_not_current_authority",
+            "line_start": 81,
+            "line_end": 84,
+            "sha256": "c655329db10e740810c558d3431c191d8fa83866ca15f599f0a4cdc785fa374a"
+          },
+          {
+            "path": "tests/fixtures/test_driver.py",
+            "symbol": "RequestPolicy.test_read_only_inspection_never_enters_lease_authority_or_native_run",
+            "line_start": 106,
+            "line_end": 127,
+            "sha256": "685137597423ea110a555a844a33319496bc97af1bd72bce5c32df5bb5d17296"
+          }
+        ],
+        "full_legacy_behavior_equivalence_claimed": false,
+        "migration_judgment": "Read-only inspection is distinct from live authority. Current execution deliberately requires a fresh current-authority join and never treats the old saved admission receipt as permission."
+      },
+      {
+        "original": {
+          "path": "tests/fex/test_memory_wine_runtime.py",
+          "symbol": "AdmissionReceiptControls.test_failed_changed_runtime_profile_scope_or_checks_refuses_receipt",
+          "line_start": 559,
+          "line_end": 575,
+          "sha256": "cffc8ef98cdfe45aa2b2c0cfc1b6a25948b55d4ac4ba28480c93799327b89aa0"
+        },
+        "disposition": "current_contract_counterpart",
+        "canonical_tests": [
+          {
+            "path": "tests/fixtures/test_admission.py",
+            "symbol": "AdmissionTests.test_failed_running_unreleased_or_mismatched_operation_refused",
+            "line_start": 65,
+            "line_end": 74,
+            "sha256": "d9fd7c7a9f1fc4a07740f26c2aed9001a17ec3c88c9edabaa00200a704420a87"
+          },
+          {
+            "path": "tests/fixtures/test_admission.py",
+            "symbol": "AdmissionTests.test_changed_operation_cannot_be_rehashed_into_reviewed_ref",
+            "line_start": 76,
+            "line_end": 79,
+            "sha256": "5d5c973b9359478842ded94fd511dd9cc433d31f6b927a2aa193836ac6c7a9ce"
+          },
+          {
+            "path": "tests/assembly/test_assembly.py",
+            "symbol": "InputTests.test_current_authority_rejects_historical_record",
+            "line_start": 237,
+            "line_end": 240,
+            "sha256": "07ab68c26db532e2193abdefaa4d76b9807efd411dc397be12beb86c5a1e7c08"
+          }
+        ],
+        "full_legacy_behavior_equivalence_claimed": false,
+        "migration_judgment": "Current exact runtime/operation identity and live authority replace legacy receipt-only approval."
+      },
+      {
+        "original": {
+          "path": "tests/fex/test_memory_wine_runtime.py",
+          "symbol": "AdmissionReceiptControls.test_cli_program_dependency_failure_is_truthful_and_does_not_fabricate_native_error",
+          "line_start": 577,
+          "line_end": 587,
+          "sha256": "d4bec72bb95451221b392b43390963de2050b28e765db39ff59182fadc97c79d"
+        },
+        "disposition": "retired_implementation_specific",
+        "canonical_tests": [
+          {
+            "path": "tests/assembly/test_driver.py",
+            "symbol": "RequestTests.test_failed_execution_retains_original_error",
+            "line_start": 185,
+            "line_end": 189,
+            "sha256": "7e3005a95ad697578659a47ceb8c28b45719f46b0c69e513091362580cfb2f7a"
+          },
+          {
+            "path": "tests/fixtures/test_driver.py",
+            "symbol": "OperationLifecycle.test_unreadable_case_is_unknown_and_does_not_replace_primary_error",
+            "line_start": 285,
+            "line_end": 290,
+            "sha256": "ab6ac29b1e60fc8d5d1ef023ab8d60caeb751f486bce06af7093d4d8f7210ad3"
+          }
+        ],
+        "full_legacy_behavior_equivalence_claimed": false,
+        "migration_judgment": "Current drivers record actual failure types without manufacturing success. The old CLI JSON NameError/native_error key shape is retired, and these tests are not an exact serialization parity claim."
+      },
+      {
+        "original": {
+          "path": "tests/fex/test_memory_wine_runtime.py",
+          "symbol": "AdmissionReceiptControls.test_fresh_admission_returns_exact_handle_and_wrapper_preserves_runtime_only",
+          "line_start": 589,
+          "line_end": 592,
+          "sha256": "5c15aaa7ed63c8db70920477afefb24c9dc9b8c6891c0ecf742c47dee359e643"
+        },
+        "disposition": "current_contract_counterpart",
+        "canonical_tests": [
+          {
+            "path": "tests/fixtures/test_admission.py",
+            "symbol": "AdmissionTests.test_exact_refs_forwarded_and_result_unchanged",
+            "line_start": 43,
+            "line_end": 47,
+            "sha256": "fdbc800a51ba0219d068bb3e0913e7e84739f40d1c61677015df8c6326f7d389"
+          },
+          {
+            "path": "tests/fixtures/test_admission.py",
+            "symbol": "AdmissionTests.test_successful_join_reaches_fresh_authority_instead_of_saved_pass",
+            "line_start": 55,
+            "line_end": 57,
+            "sha256": "430aabbbc154620fbeba3aeb926bc3a9950aca282ac8cbe26b21891ec3b0c2bb"
+          }
+        ],
+        "full_legacy_behavior_equivalence_claimed": false,
+        "migration_judgment": "The current admission API forwards exact refs and reaches fresh authority; no legacy wrapper is retained."
+      },
+      {
+        "original": {
+          "path": "tests/fex/test_memory_wine_runtime.py",
+          "symbol": "AdmissionReceiptControls.test_raw_log_recipe_replay_and_current_profile_and_signature_are_mandatory",
+          "line_start": 594,
+          "line_end": 633,
+          "sha256": "56709c86ef6d71e2616a8931f6fa0073986e709bf79e88138cb5f49430ff3ec8"
+        },
+        "disposition": "current_contract_counterpart",
+        "canonical_tests": [
+          {
+            "path": "tests/assembly/test_assembly.py",
+            "symbol": "InputTests.test_log_changed_after_build_is_rejected",
+            "line_start": 108,
+            "line_end": 110,
+            "sha256": "2a0aa14211b2a92f60671e06da8a1fa18454d6c5d9fa99819b5a420cd652e463"
+          },
+          {
+            "path": "tests/assembly/test_assembly.py",
+            "symbol": "InputTests.test_static_sign_recipe_mismatch_records_failure_before_codesign",
+            "line_start": 191,
+            "line_end": 210,
+            "sha256": "71dab982772bcd66033575ef9ff3d160a91188cec7e9c376b479a8854d400ab7"
+          },
+          {
+            "path": "tests/assembly/test_original_checks.py",
+            "symbol": "ProfileTests.test_expired_wrong_device_certificate_or_ambiguous_grant_fails",
+            "line_start": 126,
+            "line_end": 137,
+            "sha256": "ba170f836a012c496e9623323232cce91cbfd1ca4e0e9890427d7a6e82b53371"
+          },
+          {
+            "path": "tests/fixtures/test_admission.py",
+            "symbol": "AdmissionTests.test_successful_join_reaches_fresh_authority_instead_of_saved_pass",
+            "line_start": 55,
+            "line_end": 57,
+            "sha256": "430aabbbc154620fbeba3aeb926bc3a9950aca282ac8cbe26b21891ec3b0c2bb"
+          }
+        ],
+        "full_legacy_behavior_equivalence_claimed": false,
+        "migration_judgment": "Current recipe/log identity and original profile validation remain mandatory. Historical admission logs cannot substitute for current authority; no old receipt prerequisite is imported."
+      }
+    ]
+  },
+  "future_boundaries": {
+    "canonical_test_oracles": "tests/wine_integration/oracles is the sole runtime test-owned authority for these retained pure helpers. FEX owner confirmed no duplicate adoption.",
+    "production": "Production use of these readers requires a separate reviewed API move from this test package, with consumers and provenance updated. Do not create a second editable implementation.",
+    "excluded": "No legacy builder, materializer, signing CLI, native launch loop, old-worktree lookup, or historical receipt replay is imported.",
+    "fixed_recipe_limit": "The current candidate inherits exact unselected parent bytes. Changes to WinMD classification, negative-architecture fixture selection, clone strategy, or general source/config reconstruction need their own current controls; historical tests are not silently waived for such future expansion."
+  }
+}

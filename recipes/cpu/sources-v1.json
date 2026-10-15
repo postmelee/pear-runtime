@@ -1,0 +1,846 @@
+{
+  "command_scope": "Recorded recipe correspondence only; this source generator does not execute the compiler templates.",
+  "cpu_compile_commands": [
+    {
+      "argv_template": [
+        "${nasm}",
+        "-v"
+      ],
+      "index": 0
+    },
+    {
+      "argv_template": [
+        "${clang}",
+        "--version"
+      ],
+      "index": 1
+    },
+    {
+      "argv_template": [
+        "${nasm}",
+        "-f",
+        "win64",
+        "${output}/sources/zero-extension/case.asm",
+        "-o",
+        "${output}/zero-extension.obj"
+      ],
+      "index": 2
+    },
+    {
+      "argv_template": [
+        "${clang}",
+        "--target=x86_64-w64-windows-gnu",
+        "-O2",
+        "-ffreestanding",
+        "-fno-builtin",
+        "-fno-stack-protector",
+        "-fms-extensions",
+        "-std=c11",
+        "-nostdlib",
+        "-Wl,--entry,pear_first_dispatch",
+        "-Wl,--subsystem,console",
+        "-Wl,--no-insert-timestamp",
+        "${fex}/Pear/Tests/CPU/runner.c",
+        "-I",
+        "${output}/sources/zero-extension",
+        "${output}/zero-extension.obj",
+        "-lkernel32",
+        "-lntdll",
+        "-o",
+        "${output}/zero-extension.exe"
+      ],
+      "index": 3
+    },
+    {
+      "argv_template": [
+        "${nasm}",
+        "-f",
+        "win64",
+        "${output}/sources/carry-widths/case.asm",
+        "-o",
+        "${output}/carry-widths.obj"
+      ],
+      "index": 4
+    },
+    {
+      "argv_template": [
+        "${clang}",
+        "--target=x86_64-w64-windows-gnu",
+        "-O2",
+        "-ffreestanding",
+        "-fno-builtin",
+        "-fno-stack-protector",
+        "-fms-extensions",
+        "-std=c11",
+        "-nostdlib",
+        "-Wl,--entry,pear_first_dispatch",
+        "-Wl,--subsystem,console",
+        "-Wl,--no-insert-timestamp",
+        "${fex}/Pear/Tests/CPU/runner.c",
+        "-I",
+        "${output}/sources/carry-widths",
+        "${output}/carry-widths.obj",
+        "-lkernel32",
+        "-lntdll",
+        "-o",
+        "${output}/carry-widths.exe"
+      ],
+      "index": 5
+    },
+    {
+      "argv_template": [
+        "${nasm}",
+        "-f",
+        "win64",
+        "${output}/sources/xor-flags/case.asm",
+        "-o",
+        "${output}/xor-flags.obj"
+      ],
+      "index": 6
+    },
+    {
+      "argv_template": [
+        "${clang}",
+        "--target=x86_64-w64-windows-gnu",
+        "-O2",
+        "-ffreestanding",
+        "-fno-builtin",
+        "-fno-stack-protector",
+        "-fms-extensions",
+        "-std=c11",
+        "-nostdlib",
+        "-Wl,--entry,pear_first_dispatch",
+        "-Wl,--subsystem,console",
+        "-Wl,--no-insert-timestamp",
+        "${fex}/Pear/Tests/CPU/runner.c",
+        "-I",
+        "${output}/sources/xor-flags",
+        "${output}/xor-flags.obj",
+        "-lkernel32",
+        "-lntdll",
+        "-o",
+        "${output}/xor-flags.exe"
+      ],
+      "index": 7
+    },
+    {
+      "argv_template": [
+        "${nasm}",
+        "-f",
+        "win64",
+        "${output}/sources/zero-shift-flags/case.asm",
+        "-o",
+        "${output}/zero-shift-flags.obj"
+      ],
+      "index": 8
+    },
+    {
+      "argv_template": [
+        "${clang}",
+        "--target=x86_64-w64-windows-gnu",
+        "-O2",
+        "-ffreestanding",
+        "-fno-builtin",
+        "-fno-stack-protector",
+        "-fms-extensions",
+        "-std=c11",
+        "-nostdlib",
+        "-Wl,--entry,pear_first_dispatch",
+        "-Wl,--subsystem,console",
+        "-Wl,--no-insert-timestamp",
+        "${fex}/Pear/Tests/CPU/runner.c",
+        "-I",
+        "${output}/sources/zero-shift-flags",
+        "${output}/zero-shift-flags.obj",
+        "-lkernel32",
+        "-lntdll",
+        "-o",
+        "${output}/zero-shift-flags.exe"
+      ],
+      "index": 9
+    },
+    {
+      "argv_template": [
+        "${nasm}",
+        "-f",
+        "win64",
+        "${output}/sources/cmpxchg-eax/case.asm",
+        "-o",
+        "${output}/cmpxchg-eax.obj"
+      ],
+      "index": 10
+    },
+    {
+      "argv_template": [
+        "${clang}",
+        "--target=x86_64-w64-windows-gnu",
+        "-O2",
+        "-ffreestanding",
+        "-fno-builtin",
+        "-fno-stack-protector",
+        "-fms-extensions",
+        "-std=c11",
+        "-nostdlib",
+        "-Wl,--entry,pear_first_dispatch",
+        "-Wl,--subsystem,console",
+        "-Wl,--no-insert-timestamp",
+        "${fex}/Pear/Tests/CPU/runner.c",
+        "-I",
+        "${output}/sources/cmpxchg-eax",
+        "${output}/cmpxchg-eax.obj",
+        "-lkernel32",
+        "-lntdll",
+        "-o",
+        "${output}/cmpxchg-eax.exe"
+      ],
+      "index": 11
+    },
+    {
+      "argv_template": [
+        "${nasm}",
+        "-f",
+        "win64",
+        "${output}/sources/xadd-widths/case.asm",
+        "-o",
+        "${output}/xadd-widths.obj"
+      ],
+      "index": 12
+    },
+    {
+      "argv_template": [
+        "${clang}",
+        "--target=x86_64-w64-windows-gnu",
+        "-O2",
+        "-ffreestanding",
+        "-fno-builtin",
+        "-fno-stack-protector",
+        "-fms-extensions",
+        "-std=c11",
+        "-nostdlib",
+        "-Wl,--entry,pear_first_dispatch",
+        "-Wl,--subsystem,console",
+        "-Wl,--no-insert-timestamp",
+        "${fex}/Pear/Tests/CPU/runner.c",
+        "-I",
+        "${output}/sources/xadd-widths",
+        "${output}/xadd-widths.obj",
+        "-lkernel32",
+        "-lntdll",
+        "-o",
+        "${output}/xadd-widths.exe"
+      ],
+      "index": 13
+    },
+    {
+      "argv_template": [
+        "${nasm}",
+        "-f",
+        "win64",
+        "${output}/sources/packed-float-add/case.asm",
+        "-o",
+        "${output}/packed-float-add.obj"
+      ],
+      "index": 14
+    },
+    {
+      "argv_template": [
+        "${clang}",
+        "--target=x86_64-w64-windows-gnu",
+        "-O2",
+        "-ffreestanding",
+        "-fno-builtin",
+        "-fno-stack-protector",
+        "-fms-extensions",
+        "-std=c11",
+        "-nostdlib",
+        "-Wl,--entry,pear_first_dispatch",
+        "-Wl,--subsystem,console",
+        "-Wl,--no-insert-timestamp",
+        "${fex}/Pear/Tests/CPU/runner.c",
+        "-I",
+        "${output}/sources/packed-float-add",
+        "${output}/packed-float-add.obj",
+        "-lkernel32",
+        "-lntdll",
+        "-o",
+        "${output}/packed-float-add.exe"
+      ],
+      "index": 15
+    },
+    {
+      "argv_template": [
+        "${nasm}",
+        "-f",
+        "win64",
+        "${output}/sources/scalar-double-add/case.asm",
+        "-o",
+        "${output}/scalar-double-add.obj"
+      ],
+      "index": 16
+    },
+    {
+      "argv_template": [
+        "${clang}",
+        "--target=x86_64-w64-windows-gnu",
+        "-O2",
+        "-ffreestanding",
+        "-fno-builtin",
+        "-fno-stack-protector",
+        "-fms-extensions",
+        "-std=c11",
+        "-nostdlib",
+        "-Wl,--entry,pear_first_dispatch",
+        "-Wl,--subsystem,console",
+        "-Wl,--no-insert-timestamp",
+        "${fex}/Pear/Tests/CPU/runner.c",
+        "-I",
+        "${output}/sources/scalar-double-add",
+        "${output}/scalar-double-add.obj",
+        "-lkernel32",
+        "-lntdll",
+        "-o",
+        "${output}/scalar-double-add.exe"
+      ],
+      "index": 17
+    },
+    {
+      "argv_template": [
+        "${nasm}",
+        "-f",
+        "win64",
+        "${output}/sources/float-to-integer/case.asm",
+        "-o",
+        "${output}/float-to-integer.obj"
+      ],
+      "index": 18
+    },
+    {
+      "argv_template": [
+        "${clang}",
+        "--target=x86_64-w64-windows-gnu",
+        "-O2",
+        "-ffreestanding",
+        "-fno-builtin",
+        "-fno-stack-protector",
+        "-fms-extensions",
+        "-std=c11",
+        "-nostdlib",
+        "-Wl,--entry,pear_first_dispatch",
+        "-Wl,--subsystem,console",
+        "-Wl,--no-insert-timestamp",
+        "${fex}/Pear/Tests/CPU/runner.c",
+        "-I",
+        "${output}/sources/float-to-integer",
+        "${output}/float-to-integer.obj",
+        "-lkernel32",
+        "-lntdll",
+        "-o",
+        "${output}/float-to-integer.exe"
+      ],
+      "index": 19
+    },
+    {
+      "argv_template": [
+        "${nasm}",
+        "-f",
+        "win64",
+        "${output}/sources/configured-memory/case.asm",
+        "-o",
+        "${output}/configured-memory.obj"
+      ],
+      "index": 20
+    },
+    {
+      "argv_template": [
+        "${clang}",
+        "--target=x86_64-w64-windows-gnu",
+        "-O2",
+        "-ffreestanding",
+        "-fno-builtin",
+        "-fno-stack-protector",
+        "-fms-extensions",
+        "-std=c11",
+        "-nostdlib",
+        "-Wl,--entry,pear_first_dispatch",
+        "-Wl,--subsystem,console",
+        "-Wl,--no-insert-timestamp",
+        "${fex}/Pear/Tests/CPU/runner.c",
+        "-I",
+        "${output}/sources/configured-memory",
+        "${output}/configured-memory.obj",
+        "-lkernel32",
+        "-lntdll",
+        "-o",
+        "${output}/configured-memory.exe"
+      ],
+      "index": 21
+    },
+    {
+      "argv_template": [
+        "${nasm}",
+        "-f",
+        "win64",
+        "${output}/sources/absolute-displacement/case.asm",
+        "-o",
+        "${output}/absolute-displacement.obj"
+      ],
+      "index": 22
+    },
+    {
+      "argv_template": [
+        "${clang}",
+        "--target=x86_64-w64-windows-gnu",
+        "-O2",
+        "-ffreestanding",
+        "-fno-builtin",
+        "-fno-stack-protector",
+        "-fms-extensions",
+        "-std=c11",
+        "-nostdlib",
+        "-Wl,--entry,pear_first_dispatch",
+        "-Wl,--subsystem,console",
+        "-Wl,--no-insert-timestamp",
+        "${fex}/Pear/Tests/CPU/runner.c",
+        "-I",
+        "${output}/sources/absolute-displacement",
+        "${output}/absolute-displacement.obj",
+        "-lkernel32",
+        "-lntdll",
+        "-o",
+        "${output}/absolute-displacement.exe"
+      ],
+      "index": 23
+    },
+    {
+      "argv_template": [
+        "${nasm}",
+        "-f",
+        "win64",
+        "${output}/sources/avx-lane-preservation/case.asm",
+        "-o",
+        "${output}/avx-lane-preservation.obj"
+      ],
+      "index": 24
+    },
+    {
+      "argv_template": [
+        "${clang}",
+        "--target=x86_64-w64-windows-gnu",
+        "-O2",
+        "-ffreestanding",
+        "-fno-builtin",
+        "-fno-stack-protector",
+        "-fms-extensions",
+        "-std=c11",
+        "-nostdlib",
+        "-Wl,--entry,pear_first_dispatch",
+        "-Wl,--subsystem,console",
+        "-Wl,--no-insert-timestamp",
+        "${fex}/Pear/Tests/CPU/runner.c",
+        "-I",
+        "${output}/sources/avx-lane-preservation",
+        "${output}/avx-lane-preservation.obj",
+        "-lkernel32",
+        "-lntdll",
+        "-o",
+        "${output}/avx-lane-preservation.exe"
+      ],
+      "index": 25
+    },
+    {
+      "argv_template": [
+        "${clang}",
+        "--target=x86_64-w64-windows-gnu",
+        "-O2",
+        "-ffreestanding",
+        "-fno-builtin",
+        "-fno-stack-protector",
+        "-fms-extensions",
+        "-std=c11",
+        "-nostdlib",
+        "-Wl,--entry,pear_first_dispatch",
+        "-Wl,--subsystem,console",
+        "-Wl,--no-insert-timestamp",
+        "${runtime}/tests/fex/guest_api.c",
+        "-lkernel32",
+        "-lntdll",
+        "-o",
+        "${output}/api-callback.exe"
+      ],
+      "index": 26
+    },
+    {
+      "argv_template": [
+        "${clang}",
+        "--target=x86_64-w64-windows-gnu",
+        "-O2",
+        "-ffreestanding",
+        "-fno-builtin",
+        "-fno-stack-protector",
+        "-fms-extensions",
+        "-std=c11",
+        "-nostdlib",
+        "-Wl,--entry,pear_first_dispatch",
+        "-Wl,--subsystem,console",
+        "-Wl,--no-insert-timestamp",
+        "${runtime}/tests/fex/guest_thread.c",
+        "-lkernel32",
+        "-lntdll",
+        "-o",
+        "${output}/tls-thread.exe"
+      ],
+      "index": 27
+    },
+    {
+      "argv_template": [
+        "${clang}",
+        "--target=x86_64-w64-windows-gnu",
+        "-O2",
+        "-ffreestanding",
+        "-fno-builtin",
+        "-fno-stack-protector",
+        "-fms-extensions",
+        "-std=c11",
+        "-nostdlib",
+        "-Wl,--entry,pear_first_dispatch",
+        "-Wl,--subsystem,console",
+        "-Wl,--no-insert-timestamp",
+        "${runtime}/tests/fex/guest_exception.c",
+        "-lkernel32",
+        "-lntdll",
+        "-o",
+        "${output}/guest-fault-guard.exe"
+      ],
+      "index": 28
+    },
+    {
+      "argv_template": [
+        "${clang}",
+        "--target=x86_64-w64-windows-gnu",
+        "-O2",
+        "-ffreestanding",
+        "-fno-builtin",
+        "-fno-stack-protector",
+        "-fms-extensions",
+        "-std=c11",
+        "-nostdlib",
+        "-Wl,--entry,pear_first_dispatch",
+        "-Wl,--subsystem,console",
+        "-Wl,--no-insert-timestamp",
+        "${runtime}/tests/fex/guest_invalidation.c",
+        "-lkernel32",
+        "-lntdll",
+        "-o",
+        "${output}/code-invalidation.exe"
+      ],
+      "index": 29
+    },
+    {
+      "argv_template": [
+        "${clang}",
+        "--target=x86_64-w64-windows-gnu",
+        "-O2",
+        "-ffreestanding",
+        "-fno-builtin",
+        "-fno-stack-protector",
+        "-fms-extensions",
+        "-std=c11",
+        "-nostdlib",
+        "-Wl,--entry,pear_first_dispatch",
+        "-Wl,--subsystem,console",
+        "-Wl,--no-insert-timestamp",
+        "${runtime}/tests/fex/guest_context.c",
+        "-lkernel32",
+        "-lntdll",
+        "-o",
+        "${output}/suspend-context.exe"
+      ],
+      "index": 30
+    },
+    {
+      "argv_template": [
+        "${nasm}",
+        "-f",
+        "win64",
+        "${output}/sources/abi.asm",
+        "-o",
+        "${output}/abi-state.obj"
+      ],
+      "index": 31
+    },
+    {
+      "argv_template": [
+        "${clang}",
+        "--target=x86_64-w64-windows-gnu",
+        "-O2",
+        "-ffreestanding",
+        "-fno-builtin",
+        "-fno-stack-protector",
+        "-fms-extensions",
+        "-std=c11",
+        "-nostdlib",
+        "-Wl,--entry,pear_first_dispatch",
+        "-Wl,--subsystem,console",
+        "-Wl,--no-insert-timestamp",
+        "${runtime}/tests/cpu/abi.c",
+        "${output}/abi-state.obj",
+        "-lkernel32",
+        "-lntdll",
+        "-o",
+        "${output}/abi-state.exe"
+      ],
+      "index": 32
+    },
+    {
+      "argv_template": [
+        "${nasm}",
+        "-f",
+        "win64",
+        "${output}/sources/seh.asm",
+        "-o",
+        "${output}/seh-unwind.obj"
+      ],
+      "index": 33
+    },
+    {
+      "argv_template": [
+        "${clang}",
+        "--target=x86_64-w64-windows-gnu",
+        "-O2",
+        "-ffreestanding",
+        "-fno-builtin",
+        "-fno-stack-protector",
+        "-fms-extensions",
+        "-std=c11",
+        "-nostdlib",
+        "-Wl,--entry,pear_first_dispatch",
+        "-Wl,--subsystem,console",
+        "-Wl,--no-insert-timestamp",
+        "${runtime}/tests/cpu/seh.c",
+        "${output}/seh-unwind.obj",
+        "-lkernel32",
+        "-lntdll",
+        "-o",
+        "${output}/seh-unwind.exe"
+      ],
+      "index": 34
+    }
+  ],
+  "future_edits": "New source/config variants update this versioned recipe and corresponding reference requirements in a reviewed commit. These historical hashes are not hardwired into generator code.",
+  "historical_builds": {
+    "cpu": {
+      "manifest_sha256": "c6ad9b39b475d1dbd7f0fbe377c50022a11d32d7b08e967e684b2250d1d593f9",
+      "sha256": "77a734c951322789ef364de84b830ed803798e93f8da65311a1bbe9bb13293f3"
+    },
+    "ordering": {
+      "sha256": "ec5a0852b361b6bc5fb5e4d4b890c1224889fb43c26bf3eb3357a2d39981d3e0"
+    }
+  },
+  "inputs": [
+    {
+      "path": "Pear/Tests/CPU/corpus.json",
+      "root": "fex",
+      "sha256": "c6ad9b39b475d1dbd7f0fbe377c50022a11d32d7b08e967e684b2250d1d593f9",
+      "size_bytes": 34111
+    },
+    {
+      "path": "Pear/Tests/CPU/sources.json",
+      "root": "fex",
+      "sha256": "69727b6125bbea096c1d635e7b2cdb5e4c794c2df9fa1964568763645e190839",
+      "size_bytes": 4638
+    },
+    {
+      "path": "Pear/Tests/CPU/adaptations.json",
+      "root": "fex",
+      "sha256": "17bf454588ee9544cad95d8b78fd8d65ac5bc96579eae88d1d191b03695167ed",
+      "size_bytes": 698
+    },
+    {
+      "path": "Pear/Tests/CPU/runner.c",
+      "root": "fex",
+      "sha256": "d4e4c3b6710f7e5d09f352be20e57d55bb47e02f758ee34eb28468b78103f1ef",
+      "size_bytes": 2541
+    },
+    {
+      "path": "tests/fex/guest_api.c",
+      "root": "runtime",
+      "sha256": "d7d822004ec64cbd1fca703b1195abd40a55ac1d3825743178b7d7f1ed8a81ed",
+      "size_bytes": 3387
+    },
+    {
+      "path": "tests/fex/guest_thread.c",
+      "root": "runtime",
+      "sha256": "82d3df3728da1b156b0b0c1ce01cdecb841e16358c1414937ffb6744309eef2f",
+      "size_bytes": 1457
+    },
+    {
+      "path": "tests/fex/guest_exception.c",
+      "root": "runtime",
+      "sha256": "5cd3d261ca38786c60e445eef07661a718f4a0c7b2b1e42a5f26bb1bbeae7e7a",
+      "size_bytes": 2192
+    },
+    {
+      "path": "tests/fex/guest_context.c",
+      "root": "runtime",
+      "sha256": "a7a47ea0fb4290297911c75df3f2e62566df7a2c41614cc8bafa33cb43b1f58f",
+      "size_bytes": 1371
+    },
+    {
+      "path": "tests/fex/guest_invalidation.c",
+      "root": "runtime",
+      "sha256": "2a61be720bf218f9bc4f2b684a7594eac849d3597b112fd5b46f44a198bf445f",
+      "size_bytes": 2047
+    },
+    {
+      "path": "tests/cpu/abi.c",
+      "root": "runtime",
+      "sha256": "8f745bce9240eb5e4fb64c641f12eebde16caae1f352e4c43a064273cea4c384",
+      "size_bytes": 2388
+    },
+    {
+      "path": "tests/cpu/seh.c",
+      "root": "runtime",
+      "sha256": "df38f07c5b81b0b06f9f66d63cd934aa73cb295574ec6e87b1dc315cbcf1a1d6",
+      "size_bytes": 1718
+    },
+    {
+      "path": "tests/cpu/ordering.c",
+      "root": "runtime",
+      "sha256": "2bde8b2f86558e644c483a419da9c1a4c48c7c2f8cf39c267520a2d404c6f662",
+      "size_bytes": 6110
+    },
+    {
+      "path": "tests/cpu/ordering.asm",
+      "root": "runtime",
+      "sha256": "1297602b4fb41c90764265842ffcff3404a9943ccb2dd96ae90eda711efad404",
+      "size_bytes": 607
+    },
+    {
+      "path": "Pear/Tools/CPU/corpus.py",
+      "root": "fex",
+      "sha256": "f45e771a1c8ca8b4f515074b728ad6aedf1f4c745639fc83413f181f74689e50",
+      "size_bytes": 12797
+    },
+    {
+      "path": "Pear/Tools/CPU/generate.py",
+      "root": "fex",
+      "sha256": "c69cad8091ba13800fc4f0bec6a95070ad51137c055125413d1ad41e03c6e462",
+      "size_bytes": 8055
+    },
+    {
+      "path": "Pear/Tools/CPU/adapt.py",
+      "root": "fex",
+      "sha256": "e874f4749497b74081b64a856ae98288d037f47d58412b09503b95a97b513cdd",
+      "size_bytes": 2195
+    },
+    {
+      "path": "Pear/Tests/CPU/LICENSES/FEX-MIT.txt",
+      "root": "fex",
+      "sha256": "f34a779f56b36d22b20e1b990d23e583a6a7ca071331925fa46156441c77a1ee",
+      "size_bytes": 1094
+    },
+    {
+      "path": "Pear/Tests/CPU/LICENSES/Madeira-GPL-3.0.txt",
+      "root": "fex",
+      "sha256": "e6037104443f9a7829b2aa7c5370d0789a7bda3ca65a0b904cdc0c2e285d9195",
+      "size_bytes": 35150
+    },
+    {
+      "path": "Pear/Tests/CPU/LICENSES/Madeira-EXCEPTION.md",
+      "root": "fex",
+      "sha256": "534f059c2e9fe5de1acde82b920651b77ea3b4253f86837a3d6a81f54a5bdbbc",
+      "size_bytes": 3840
+    },
+    {
+      "path": "pear_runtime/recipes/cpu_sources.py",
+      "root": "runtime",
+      "sha256": "95f9ca8d6e862aaad0421904303031cbdeab914ea1e373cc82167ae3dc9775e8",
+      "size_bytes": 6972
+    },
+    {
+      "path": "pear_runtime/assembly/_common.py",
+      "root": "runtime",
+      "sha256": "c311a2bda40182af833838d8409aedfa3d46cf9520975c2a5d0437921b17f578",
+      "size_bytes": 7639
+    },
+    {
+      "path": "pear_runtime/errors.py",
+      "root": "runtime",
+      "sha256": "0ed4c834e5fad698c25e83c1b80fd4601e37c3c2ffa36e340dedde7d36e418fa",
+      "size_bytes": 427
+    }
+  ],
+  "missing_build_evidence": [
+    "Hosted NASM/LLVM installation and host tools/environment are not staged.",
+    "Original compiler depfiles and implicit header/link trace were not recorded.",
+    "A compiler successor requires explicit tool/header/library admission and output comparison; changed PE bytes need renewed native Windows reference."
+  ],
+  "ordering_budget": {
+    "iterations": 2048,
+    "rounds": 4
+  },
+  "ordering_compile_commands": [
+    {
+      "argv_template": [
+        "${nasm}",
+        "-v"
+      ],
+      "index": 0
+    },
+    {
+      "argv_template": [
+        "${clang}",
+        "--version"
+      ],
+      "index": 1
+    },
+    {
+      "argv_template": [
+        "${nasm}",
+        "-f",
+        "win64",
+        "${runtime}/tests/cpu/ordering.asm",
+        "-o",
+        "${output}/ordering.obj"
+      ],
+      "index": 2
+    },
+    {
+      "argv_template": [
+        "${clang}",
+        "--target=x86_64-w64-windows-gnu",
+        "-O2",
+        "-ffreestanding",
+        "-fno-builtin",
+        "-fno-stack-protector",
+        "-fms-extensions",
+        "-std=c11",
+        "-nostdlib",
+        "-Wl,--entry,pear_first_dispatch",
+        "-Wl,--subsystem,console",
+        "-Wl,--no-insert-timestamp",
+        "-DPEAR_ITERATIONS=2048",
+        "-DPEAR_ROUNDS=4",
+        "${runtime}/tests/cpu/ordering.c",
+        "${output}/ordering.obj",
+        "-lkernel32",
+        "-lntdll",
+        "-o",
+        "${output}/ordering.exe"
+      ],
+      "index": 3
+    }
+  ],
+  "retained_tool_identities": {
+    "clang": {
+      "sha256": "bab7f174d7e136ae093ad232d5a894ee00f0a8f9051bcff4eb6a70c132898248",
+      "version": "clang version 23.1.1 (https://github.com/llvm/llvm-project.git 6dfe1677ab8dffbc6ec13d53a1e0215d75147689)\nTarget: x86_64-unknown-linux-gnu\nThread model: posix\nInstalledDir: /home/runner/work/_temp/pear-cpu-tools/llvm-mingw-20260908-ucrt-ubuntu-22.04-x86_64/bin"
+    },
+    "nasm": {
+      "sha256": "d6aa4ac62debe087effc8c43c0ed92aa6be236890e5b7221d46e004fa2abf23e",
+      "version": "NASM version 3.02 compiled on Oct  8 2026"
+    }
+  },
+  "schema_version": 1,
+  "scope": "cpu_fixture_source_recipe"
+}

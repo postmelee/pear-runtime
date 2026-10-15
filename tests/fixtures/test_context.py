@@ -16,6 +16,7 @@ from pear_runtime import build
 from pear_runtime.errors import Error
 from pear_runtime.fixtures import context
 from pear_runtime.fixtures.types import Selection
+from tests.fixtures.header_fixture import SelectedFixture
 
 REPO=Path(__file__).resolve().parents[2]
 
@@ -23,16 +24,8 @@ REPO=Path(__file__).resolve().parents[2]
 class CompiledTests(unittest.TestCase):
     def setUp(self):
         t=tempfile.TemporaryDirectory();self.addCleanup(t.cleanup);self.root=Path(t.name).resolve()
-        self.catalog=json.loads((REPO/'pear_runtime/fixtures/capabilities/d36.json').read_text())
-        self.built={'roots':{'fex':{'path':str(self.root)}},'commands':[],'dependencies':[]}
-        for index,unit in enumerate(self.catalog['compile_units']):
-            source=self.root/unit['path'];source.parent.mkdir(parents=True,exist_ok=True);source.write_bytes(b'synthetic source')
-            ref=build.fact(source);unit.update(sha256=ref['sha256'],size_bytes=ref['size_bytes'])
-            dep=self.root/f'{index}.d';dep.write_bytes(b'synthetic depfile')
-            log=self.root/f'{index}.log';log.write_bytes(b'synthetic compile observation')
-            self.built['commands'].append({'id':f'unit{index}','argv':['/synthetic/compiler',*unit['required_defines'],'-c',str(source),'-MF',str(dep)],
-                'exit_code':0,'error':None,'logs':{'stdout':build.fact(log),'stderr':build.fact(log)}})
-            self.built['dependencies'].append({'depfile':build.fact(dep),'files':[ref]})
+        self.fixture=SelectedFixture(self.root,json.loads((REPO/'pear_runtime/fixtures/capabilities/d36.json').read_text()))
+        self.catalog=self.fixture.catalog;self.built=self.fixture.built
 
     def test_three_actual_compile_commands_and_depfile_sources_admitted(self):
         with patch('subprocess.run',side_effect=AssertionError('no native execution')):

@@ -1,0 +1,464 @@
+{
+  "schema_version": 1,
+  "scope": "portable_cpu_historical_contract_reconciliation",
+  "source_repository": "https://github.com/postmelee/pear",
+  "source_checkpoint": "951264bf5be4b9d2afb87320f5fac74778b2dd58",
+  "files": [
+    {
+      "path": "tests/cpu/cpu_legacy/__init__.py",
+      "sha256": "7c57e6f641715615f1aea7fb4bbcf5fcbe0894f76e570ae796ea4571483d7af9",
+      "size_bytes": 160,
+      "mode": "100644"
+    },
+    {
+      "path": "tests/cpu/cpu_legacy/qualification.py",
+      "sha256": "0622dfbf4de983d32316a836c65daab76ecc6a9578d1715a957d5d2efe2e9903",
+      "size_bytes": 2109,
+      "mode": "100644"
+    },
+    {
+      "path": "tests/cpu/cpu_legacy/correction.py",
+      "sha256": "909c8258f86c89bf066ceedd1045c594b2285c9cef53e3a7fdd0dd26d44fd2c5",
+      "size_bytes": 3457,
+      "mode": "100644"
+    },
+    {
+      "path": "tests/cpu/test_qualification.py",
+      "sha256": "deedcdc5906e719d26f8ed2e4ea6c6c278424d4c603b7a81e05fb3fea51d7ad0",
+      "size_bytes": 2788,
+      "mode": "100644"
+    },
+    {
+      "path": "tests/cpu/test_correction_evidence.py",
+      "sha256": "ad5210decacbfc81fd34bc1c26d74b36f0ca7387693a45fcfbdeb40ac682e557",
+      "size_bytes": 3260,
+      "mode": "100644"
+    },
+    {
+      "path": "tests/fixtures/controls/test_cpu_execution_successors.py",
+      "sha256": "c7fdea9cb3ee1bb9382913bcfe47796379530d33a418c5bece03b4f85ae7daf2",
+      "size_bytes": 2195,
+      "mode": "100644"
+    }
+  ],
+  "oracle_imports": [
+    {
+      "destination": "tests/cpu/cpu_legacy/__init__.py",
+      "role": "Test-only package; no production entrypoint"
+    },
+    {
+      "destination": "tests/cpu/cpu_legacy/qualification.py",
+      "origin": {
+        "repository": "https://github.com/postmelee/pear",
+        "checkpoint": "951264bf5be4b9d2afb87320f5fac74778b2dd58",
+        "path": "tools/cpu/qualify.py",
+        "sha256": "0ba02adf596b57326896448942265b05e09f67c6f210770a560e62a8cabda342",
+        "size_bytes": 6936
+      },
+      "selected": [
+        {
+          "symbol": "CONFIGURATION",
+          "start_line": 15,
+          "end_line": 17,
+          "sha256": "706cf45433b82817c2499bc049e928997a510fd10123cef844df8092d18e34c9"
+        },
+        {
+          "symbol": "same_configuration",
+          "start_line": 19,
+          "end_line": 24,
+          "sha256": "cbbaa39a13b2c139842714ee85b120a4bab4237e0f1774a1cd1a03fbd1f8456b"
+        },
+        {
+          "symbol": "normalized_inventory",
+          "start_line": 26,
+          "end_line": 41,
+          "sha256": "3eab39d6ef2c29679fe609f72ca3e4f10fa3afff751acfd269a4165d6a9c67ae"
+        }
+      ],
+      "terms": "MIT",
+      "namespace": "require from canonical controls.corpus; signing.BUNDLE from canonical assembly.helpers; exclude bind_candidates/qualify and all CLI"
+    },
+    {
+      "destination": "tests/cpu/cpu_legacy/correction.py",
+      "origin": {
+        "repository": "https://github.com/postmelee/pear",
+        "checkpoint": "951264bf5be4b9d2afb87320f5fac74778b2dd58",
+        "path": "tools/cpu/fex_build.py",
+        "sha256": "1f09869cc15226340fc7609e012113dbbc3e00bfd2ad423d02ca1ef78e9f08af",
+        "size_bytes": 9205
+      },
+      "selected": [
+        {
+          "symbol": "PATCH",
+          "start_line": 11,
+          "end_line": 11,
+          "sha256": "dc52fc045e44e656d63194e84399e519948dfa1cb887fdc850ac728fabcd80a3"
+        },
+        {
+          "symbol": "inventory",
+          "start_line": 14,
+          "end_line": 19,
+          "sha256": "799d7999b18237075ec34304c28a10dd6a7239a8559aa295063c4555459dfc80"
+        },
+        {
+          "symbol": "admit_correction",
+          "start_line": 90,
+          "end_line": 118,
+          "sha256": "6ba11caad6995d4b461cd0ab004ce69db94391b92b09949743a2b5fe1ccfbf69"
+        }
+      ],
+      "terms": "MIT",
+      "namespace": "Path/os stdlib; read/digest from canonical controls.corpus, encoded/need from existing runtime helpers; REPO=None is test-only explicitly patched root, never an inferred checkout; exclude build/CLI/subprocess"
+    }
+  ],
+  "methods": [
+    {
+      "origin": {
+        "repository": "https://github.com/postmelee/pear",
+        "checkpoint": "951264bf5be4b9d2afb87320f5fac74778b2dd58",
+        "path": "tests/cpu/test_qualification.py",
+        "sha256": "b1dfcf06c95e608057f7b6d3df9f8bdcefd21b76736f7be624373f9fb5b91e2c",
+        "size_bytes": 2722
+      },
+      "symbol": "QualificationTests.test_same_component_contract_is_admitted",
+      "lines": [
+        16,
+        16
+      ],
+      "method_sha256": "9db7d2bb43a3c014af08c97eb27db7011574a4089225d57f6ca91652320950e6",
+      "destination": "tests/cpu/test_qualification.py",
+      "disposition": "original_test_method_exact_test_only",
+      "destination_symbol": "QualificationTests.test_same_component_contract_is_admitted",
+      "destination_lines": [
+        17,
+        17
+      ],
+      "destination_method_sha256": "9db7d2bb43a3c014af08c97eb27db7011574a4089225d57f6ca91652320950e6"
+    },
+    {
+      "origin": {
+        "repository": "https://github.com/postmelee/pear",
+        "checkpoint": "951264bf5be4b9d2afb87320f5fac74778b2dd58",
+        "path": "tests/cpu/test_qualification.py",
+        "sha256": "b1dfcf06c95e608057f7b6d3df9f8bdcefd21b76736f7be624373f9fb5b91e2c",
+        "size_bytes": 2722
+      },
+      "symbol": "QualificationTests.test_different_translator_or_memory_policy_is_rejected",
+      "lines": [
+        17,
+        20
+      ],
+      "method_sha256": "58e6de9fc84e8e02d22acc5f5d07fbd9760fc302adaa08d63d7392ace7f10f93",
+      "destination": "tests/cpu/test_qualification.py",
+      "disposition": "original_test_method_exact_test_only",
+      "destination_symbol": "QualificationTests.test_different_translator_or_memory_policy_is_rejected",
+      "destination_lines": [
+        18,
+        21
+      ],
+      "destination_method_sha256": "58e6de9fc84e8e02d22acc5f5d07fbd9760fc302adaa08d63d7392ace7f10f93"
+    },
+    {
+      "origin": {
+        "repository": "https://github.com/postmelee/pear",
+        "checkpoint": "951264bf5be4b9d2afb87320f5fac74778b2dd58",
+        "path": "tests/cpu/test_qualification.py",
+        "sha256": "b1dfcf06c95e608057f7b6d3df9f8bdcefd21b76736f7be624373f9fb5b91e2c",
+        "size_bytes": 2722
+      },
+      "symbol": "QualificationTests.test_signature_bytes_only_can_differ_after_code_origin_check",
+      "lines": [
+        21,
+        24
+      ],
+      "method_sha256": "465a10829530f71488216cb4cc52d1446315812d296359f4a2c907e152e4b10a",
+      "destination": "tests/cpu/test_qualification.py",
+      "disposition": "original_test_method_exact_test_only",
+      "destination_symbol": "QualificationTests.test_signature_bytes_only_can_differ_after_code_origin_check",
+      "destination_lines": [
+        22,
+        25
+      ],
+      "destination_method_sha256": "465a10829530f71488216cb4cc52d1446315812d296359f4a2c907e152e4b10a"
+    },
+    {
+      "origin": {
+        "repository": "https://github.com/postmelee/pear",
+        "checkpoint": "951264bf5be4b9d2afb87320f5fac74778b2dd58",
+        "path": "tests/cpu/test_qualification.py",
+        "sha256": "b1dfcf06c95e608057f7b6d3df9f8bdcefd21b76736f7be624373f9fb5b91e2c",
+        "size_bytes": 2722
+      },
+      "symbol": "QualificationTests.test_modified_pe_runtime_component_is_not_hidden",
+      "lines": [
+        25,
+        27
+      ],
+      "method_sha256": "7a01255a9035cbd9d8b562326fba067cdb56f7763cfff53730719733be7f2a9b",
+      "destination": "tests/cpu/test_qualification.py",
+      "disposition": "original_test_method_exact_test_only",
+      "destination_symbol": "QualificationTests.test_modified_pe_runtime_component_is_not_hidden",
+      "destination_lines": [
+        26,
+        28
+      ],
+      "destination_method_sha256": "7a01255a9035cbd9d8b562326fba067cdb56f7763cfff53730719733be7f2a9b"
+    },
+    {
+      "origin": {
+        "repository": "https://github.com/postmelee/pear",
+        "checkpoint": "951264bf5be4b9d2afb87320f5fac74778b2dd58",
+        "path": "tests/cpu/test_qualification.py",
+        "sha256": "b1dfcf06c95e608057f7b6d3df9f8bdcefd21b76736f7be624373f9fb5b91e2c",
+        "size_bytes": 2722
+      },
+      "symbol": "QualificationTests.test_undeclared_extra_fixture_is_not_ignored",
+      "lines": [
+        28,
+        31
+      ],
+      "method_sha256": "b41650e246d60c2fc386eb2a0517eb91fa3c51bd07f5be814979c0e56c789d72",
+      "destination": "tests/cpu/test_qualification.py",
+      "disposition": "original_test_method_exact_test_only",
+      "destination_symbol": "QualificationTests.test_undeclared_extra_fixture_is_not_ignored",
+      "destination_lines": [
+        29,
+        32
+      ],
+      "destination_method_sha256": "b41650e246d60c2fc386eb2a0517eb91fa3c51bd07f5be814979c0e56c789d72"
+    },
+    {
+      "origin": {
+        "repository": "https://github.com/postmelee/pear",
+        "checkpoint": "951264bf5be4b9d2afb87320f5fac74778b2dd58",
+        "path": "tests/cpu/test_qualification.py",
+        "sha256": "b1dfcf06c95e608057f7b6d3df9f8bdcefd21b76736f7be624373f9fb5b91e2c",
+        "size_bytes": 2722
+      },
+      "symbol": "QualificationTests.test_fixture_cannot_hide_a_runtime_library",
+      "lines": [
+        32,
+        34
+      ],
+      "method_sha256": "06e082bdafb6f13bca43bf02853274abcb1a42a2f50f593b7a38e133ac70e58c",
+      "destination": "tests/cpu/test_qualification.py",
+      "disposition": "original_test_method_exact_test_only",
+      "destination_symbol": "QualificationTests.test_fixture_cannot_hide_a_runtime_library",
+      "destination_lines": [
+        33,
+        35
+      ],
+      "destination_method_sha256": "06e082bdafb6f13bca43bf02853274abcb1a42a2f50f593b7a38e133ac70e58c"
+    },
+    {
+      "origin": {
+        "repository": "https://github.com/postmelee/pear",
+        "checkpoint": "951264bf5be4b9d2afb87320f5fac74778b2dd58",
+        "path": "tests/cpu/test_correction_evidence.py",
+        "sha256": "cc863ad570ee36c21c1a0936bed49eab4c2a4fe64f22228c6a03fc20046c8d3a",
+        "size_bytes": 3153
+      },
+      "symbol": "CorrectionEvidenceTests.test_complete_exact_correction_is_admitted",
+      "lines": [
+        38,
+        39
+      ],
+      "method_sha256": "2a7abb0f239ef1db5c89bbb3773dab40b58370a3f820cb0c26eb90bb79cad9e3",
+      "destination": "tests/cpu/test_correction_evidence.py",
+      "disposition": "original_test_method_exact_test_only",
+      "destination_symbol": "CorrectionEvidenceTests.test_complete_exact_correction_is_admitted",
+      "destination_lines": [
+        39,
+        40
+      ],
+      "destination_method_sha256": "2a7abb0f239ef1db5c89bbb3773dab40b58370a3f820cb0c26eb90bb79cad9e3"
+    },
+    {
+      "origin": {
+        "repository": "https://github.com/postmelee/pear",
+        "checkpoint": "951264bf5be4b9d2afb87320f5fac74778b2dd58",
+        "path": "tests/cpu/test_correction_evidence.py",
+        "sha256": "cc863ad570ee36c21c1a0936bed49eab4c2a4fe64f22228c6a03fc20046c8d3a",
+        "size_bytes": 3153
+      },
+      "symbol": "CorrectionEvidenceTests.test_successful_noop_patch_is_rejected_even_with_consistent_inventory",
+      "lines": [
+        41,
+        43
+      ],
+      "method_sha256": "e3046d71d67b53f78b4307d841bbcf21aadf62b8dc5f79586f1aa3fd94ba30ce",
+      "destination": "tests/cpu/test_correction_evidence.py",
+      "disposition": "original_test_method_exact_test_only",
+      "destination_symbol": "CorrectionEvidenceTests.test_successful_noop_patch_is_rejected_even_with_consistent_inventory",
+      "destination_lines": [
+        42,
+        44
+      ],
+      "destination_method_sha256": "e3046d71d67b53f78b4307d841bbcf21aadf62b8dc5f79586f1aa3fd94ba30ce"
+    },
+    {
+      "origin": {
+        "repository": "https://github.com/postmelee/pear",
+        "checkpoint": "951264bf5be4b9d2afb87320f5fac74778b2dd58",
+        "path": "tests/cpu/test_correction_evidence.py",
+        "sha256": "cc863ad570ee36c21c1a0936bed49eab4c2a4fe64f22228c6a03fc20046c8d3a",
+        "size_bytes": 3153
+      },
+      "symbol": "CorrectionEvidenceTests.test_failed_command_or_missing_strip_cannot_pass",
+      "lines": [
+        45,
+        49
+      ],
+      "method_sha256": "3614a8419518672efc05336341c170b7fa0cf3450f547cb43ca86ae55ced44cf",
+      "destination": "tests/cpu/test_correction_evidence.py",
+      "disposition": "original_test_method_exact_test_only",
+      "destination_symbol": "CorrectionEvidenceTests.test_failed_command_or_missing_strip_cannot_pass",
+      "destination_lines": [
+        46,
+        50
+      ],
+      "destination_method_sha256": "3614a8419518672efc05336341c170b7fa0cf3450f547cb43ca86ae55ced44cf"
+    },
+    {
+      "origin": {
+        "repository": "https://github.com/postmelee/pear",
+        "checkpoint": "951264bf5be4b9d2afb87320f5fac74778b2dd58",
+        "path": "tests/cpu/test_correction_evidence.py",
+        "sha256": "cc863ad570ee36c21c1a0936bed49eab4c2a4fe64f22228c6a03fc20046c8d3a",
+        "size_bytes": 3153
+      },
+      "symbol": "CorrectionEvidenceTests.test_different_binary_cannot_reuse_correction_receipt",
+      "lines": [
+        51,
+        53
+      ],
+      "method_sha256": "86859e53d15e4a5c03f593cde46b9c26a74c20c68a833d09da6662f941f4e2fa",
+      "destination": "tests/cpu/test_correction_evidence.py",
+      "disposition": "original_test_method_exact_test_only",
+      "destination_symbol": "CorrectionEvidenceTests.test_different_binary_cannot_reuse_correction_receipt",
+      "destination_lines": [
+        52,
+        54
+      ],
+      "destination_method_sha256": "86859e53d15e4a5c03f593cde46b9c26a74c20c68a833d09da6662f941f4e2fa"
+    },
+    {
+      "origin": {
+        "repository": "https://github.com/postmelee/pear",
+        "checkpoint": "951264bf5be4b9d2afb87320f5fac74778b2dd58",
+        "path": "tests/cpu/test_execution_evidence.py",
+        "sha256": "7e2e8868b917ed03154516c4b0c1d7f1a5592eeb35912cec37d04ba4c87bff96",
+        "size_bytes": 3721
+      },
+      "symbol": "ExecutionEvidenceTests.test_admits_only_complete_observation_shape",
+      "lines": [
+        41,
+        44
+      ],
+      "method_sha256": "133c7545485bb95c2fb11ddea9fc8ae60db36ad48b35284f9e3539e9777f9113",
+      "destination": "tests/fixtures/controls/test_cpu_execution_successors.py",
+      "disposition": "current_D36_contract_counterpart",
+      "adaptation": "Use current CPUObservationTests synthetic setup and observed_row triple result; preserve exit42 and late_load_coverage_complete=False assertions.",
+      "destination_symbol": "ExecutionEvidenceTests.test_admits_only_complete_observation_shape",
+      "destination_lines": [
+        23,
+        26
+      ],
+      "destination_method_sha256": "4828a86da8309eab6f2154dd4d65cffcfd836e4243497b004cd9ae65b0a7a68c"
+    },
+    {
+      "origin": {
+        "repository": "https://github.com/postmelee/pear",
+        "checkpoint": "951264bf5be4b9d2afb87320f5fac74778b2dd58",
+        "path": "tests/cpu/test_execution_evidence.py",
+        "sha256": "7e2e8868b917ed03154516c4b0c1d7f1a5592eeb35912cec37d04ba4c87bff96",
+        "size_bytes": 3721
+      },
+      "symbol": "ExecutionEvidenceTests.test_cleanup_and_sentinel_failures_cannot_pass",
+      "lines": [
+        46,
+        50
+      ],
+      "method_sha256": "cc8a9461418b7fbb29f32194da8deea2a4071bc3c66bf609eb62a16977fdb545",
+      "destination": "tests/fixtures/controls/test_cpu_execution_successors.py",
+      "disposition": "current_D36_contract_counterpart",
+      "adaptation": "Assert current observed_row refuses cleanup.complete=False and sentinel_survived=False independently; both are currently enforced but not both directly exercised by current CPUObservationTests.",
+      "destination_symbol": "ExecutionEvidenceTests.test_cleanup_and_sentinel_failures_cannot_pass",
+      "destination_lines": [
+        28,
+        35
+      ],
+      "destination_method_sha256": "d86d80e34cc3127a7bc37ce103fb3dd1e72d4f5751f3595fda0c3372032dce7d"
+    },
+    {
+      "origin": {
+        "repository": "https://github.com/postmelee/pear",
+        "checkpoint": "951264bf5be4b9d2afb87320f5fac74778b2dd58",
+        "path": "tests/cpu/test_execution_evidence.py",
+        "sha256": "7e2e8868b917ed03154516c4b0c1d7f1a5592eeb35912cec37d04ba4c87bff96",
+        "size_bytes": 3721
+      },
+      "symbol": "ExecutionEvidenceTests.test_rosetta_or_foreign_image_cannot_pass",
+      "lines": [
+        52,
+        57
+      ],
+      "method_sha256": "51bbfe3bd4d1296593b7af860b54adfb754ce283d2ec002f2870c583b565091c",
+      "destination": "tests/fixtures/controls/test_cpu_execution_successors.py",
+      "disposition": "current_D36_contract_counterpart",
+      "adaptation": "Set translation_value=1 then non-arm64 image; regenerate matching synthetic log facts so log-integrity rejection cannot mask the target host/image oracle.",
+      "destination_symbol": "ExecutionEvidenceTests.test_rosetta_or_foreign_image_cannot_pass",
+      "destination_lines": [
+        37,
+        46
+      ],
+      "destination_method_sha256": "dbb8b0576828a4fcacc7c1bd3bf68cd045fde2cc824e7f072ab29ad60d856375"
+    },
+    {
+      "origin": {
+        "repository": "https://github.com/postmelee/pear",
+        "checkpoint": "951264bf5be4b9d2afb87320f5fac74778b2dd58",
+        "path": "tests/cpu/test_execution_evidence.py",
+        "sha256": "7e2e8868b917ed03154516c4b0c1d7f1a5592eeb35912cec37d04ba4c87bff96",
+        "size_bytes": 3721
+      },
+      "symbol": "ExecutionEvidenceTests.test_other_binary_cannot_stand_in_for_requested_case",
+      "lines": [
+        59,
+        61
+      ],
+      "method_sha256": "9d598017851a03a755ca04e1ba7208f772945cebb7425d468446bf3bdde30267",
+      "destination": "tests/fixtures/controls/test_cpu_execution_successors.py",
+      "disposition": "current_D36_contract_counterpart",
+      "adaptation": "Preserve wrong loader fixture operand refusal through current cpu_different_fixture_launched.",
+      "destination_symbol": "ExecutionEvidenceTests.test_other_binary_cannot_stand_in_for_requested_case",
+      "destination_lines": [
+        48,
+        51
+      ],
+      "destination_method_sha256": "e6a84781479feee7b77aae496b5ca1b93be4629fde8bb211987f270fda6a830e"
+    }
+  ],
+  "license": "Original MIT definitions and tests retain MIT; new test-only package marker is GPL-3.0-or-later.",
+  "method_counts": {
+    "exact_historical": 10,
+    "current_contract_counterpart": 4
+  },
+  "test_only": true,
+  "native_execution": false,
+  "cpu_qualified": false,
+  "game_qualified": false,
+  "dispositions": [
+    "CONFIGURATION/same_configuration/normalized_inventory are historical test-only normalization checks, not production qualification.",
+    "inventory/admit_correction read synthetic temporary records; no patch application, compiler or collector is imported.",
+    "Current D36 execution tests use existing observed_row and synthetic fixture; logs are refreshed before targeted host/image mutations.",
+    "Excluded original qualify/bind_candidates/build/native collectors remain unadopted as production APIs under selected retained-input limits."
+  ],
+  "namespace_bindings": {
+    "qualification": "canonical corpus.require and assembly.helpers.BUNDLE",
+    "correction": "canonical corpus.read/digest, assembly._common.encoded, errors.need; REPO=None explicitly patched per temporary test",
+    "execution": "test_cpu_evidence module alias and fixture composition avoid duplicate TestCase discovery"
+  },
+  "frozen_sources_modified": false,
+  "package_import_binding": "Canonical tests.cpu.cpu_legacy and tests.fixtures.controls module imports support both directory discovery and qualified aggregate loading; original test method bytes are unchanged."
+}

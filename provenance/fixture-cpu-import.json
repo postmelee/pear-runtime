@@ -1,0 +1,174 @@
+{
+  "adaptations": [
+    "Original cpu_corpus_observation and non-diagnostic runtime scopes are not rewritten. New development_cpu_observation and explicit frozen runtime_fixture_observation adapters record diagnostic-only scope and exact D36 configuration.",
+    "The D36 runtime assembly receipt and compiled capability binding replace historical correction/build-root inference. Every CPU/ordering runtime PE is independently joined to the retained immutable build pack.",
+    "Owned synthetic seed clone + two exact module substitutions preserve the first-seven configuration; no original prefix or old worktree is edited. The original cold-prefix route is not claimed.",
+    "Fixed reviewed observer-on/abort-on/entry-on and query/link/signal-off environment,120-second owned session and2MiB stream bound are explicit. Full CPU guest stdout remains limited to1MiB.",
+    "Original seven reusable producer snapshots are checked against their frozen c13c703 Git bytes; current source edits cannot silently replace those producers. Fresh CPU operations require the current complete captured closure."
+  ],
+  "api": {
+    "compare": "python -m pear_runtime.fixtures.controls.cpu_driver compare --request INDEX --output NEW_COMPARISON_JSON",
+    "execute": "python -m pear_runtime.fixtures.controls.cpu_driver execute --request REQUEST",
+    "inspect": "python -m pear_runtime.fixtures.controls.cpu_driver inspect --request REQUEST"
+  },
+  "build_limit": "Source generator reproduces all50 retained source artifacts, but original hosted compiler headers/implicit-library closure was not fully captured; no fresh PE build is claimed.",
+  "canonical_cpu_source": {
+    "commit": "9c9b602c07b57a08500862abfdf62e1bac351640",
+    "provenance": "Pear/Provenance/cpu-source-import.json",
+    "repository": "pear-fex"
+  },
+  "canonical_single_provider": {
+    "binding": "controls.corpus.bind_provider explicitly checks root, checkout commit, exact source bytes and snapshots before import; no sys.path insertion",
+    "derived_snapshot": "provenance/fixture-controls-import.json",
+    "function": "effective_case",
+    "module": "Pear.Tools.CPU.adapt"
+  },
+  "claim_limits": {
+    "complete_late_load_coverage": false,
+    "cpu_qualified": false,
+    "distribution_qualified": false,
+    "fresh_pe_compilation": false,
+    "game_qualified": false,
+    "native_execution_during_port": false
+  },
+  "origins": [
+    {
+      "checkpoint": "951264bf5be4b9d2afb87320f5fac74778b2dd58",
+      "license": "MIT",
+      "path": "tools/cpu/compare.py",
+      "repository": "https://github.com/postmelee/pear",
+      "selected_symbols": [
+        {
+          "end_line": 52,
+          "name": "observe_pear",
+          "sha256": "f7b524f1425f3686966ba3a52c9629cb62254de848c57ccd044a7928d9d407ec",
+          "start_line": 16
+        },
+        {
+          "end_line": 101,
+          "name": "compare",
+          "sha256": "3d942af6f5e302b719dc5b714d0b4914259ff43dc1009c9342e04ac2d9857278",
+          "start_line": 55
+        }
+      ],
+      "sha256": "2989c8b72d988d8f5998679658099a4189ca212fe7ce488d0640c82a3cbb9c05",
+      "size_bytes": 8010
+    },
+    {
+      "checkpoint": "951264bf5be4b9d2afb87320f5fac74778b2dd58",
+      "license": "MIT",
+      "path": "tools/cpu/pear_run.py",
+      "repository": "https://github.com/postmelee/pear",
+      "selected_symbols": [
+        {
+          "end_line": 92,
+          "name": "run",
+          "sha256": "609a02fd72fe1896d04209504524637755005dabc9bc7bf7b29571c330169206",
+          "start_line": 18
+        }
+      ],
+      "sha256": "5e82e0139ad6f58f5ec5bca7298fea2a6a0537a095ac6a13d088bc9bf564a150",
+      "size_bytes": 7509
+    },
+    {
+      "checkpoint": "951264bf5be4b9d2afb87320f5fac74778b2dd58",
+      "license": "MIT",
+      "path": "tools/cpu/ordering.py",
+      "repository": "https://github.com/postmelee/pear",
+      "selected_symbols": [
+        {
+          "end_line": 164,
+          "name": "observe",
+          "sha256": "b8b74b0e05bbcfc48799c07085bc18a0ff77d750f98d0f5f529a60d436e584f0",
+          "start_line": 146
+        },
+        {
+          "end_line": 197,
+          "name": "compare",
+          "sha256": "23549e5496039d2932c9b11e738c6c6d190fc7e6cbaa5d78cb94beb6fbe17cda",
+          "start_line": 166
+        }
+      ],
+      "sha256": "015ca52073a404faa9ed9a9b247c6abada89df48ef647d2128d729ed585446ee",
+      "size_bytes": 13863
+    }
+  ],
+  "portability": "Supply canonical absolute component/input/output roots in external descriptors and PYTHONPATH explicitly. A changed provider uses a reviewed new source pin and regenerated derived snapshots.",
+  "required_oracles": [
+    "All 19 original ordered IDs, exact build/PE identities and native Windows x64 reference records/logs.",
+    "Original scalar/vector/masked/ABI results; exposed AVX values match native, unexposed AVX requires exact exit77 unavailable event and remains unsupported_not_exposed.",
+    "Ordering2048 iterations x4 rounds x4 modes:32768 pairs,8 workers,all9 per-thread policies,8 checked worker retirements; original forbidden-outcome assertions retained.",
+    "Original observed ARM64/no-Rosetta process/image, bootstrap process identity, exact loader PE argv, all log/event bytes, cleanup/sentinel and current authority before/after.",
+    "Actual released single-lease worker operation/request/result, complete producer and explicit canonical contract input snapshots, final input validation after assessment."
+  ],
+  "retention": "Keep immutable pack, Windows reference logs, producer snapshots, all failed case evidence and exact selected runtime receipts until an explicit owner release decision; no deletion follows from a passing comparison.",
+  "same_repository_reuse": [
+    {
+      "checkpoint": "c13c7030ec3b780df12373cb9e0460bbcb5b0652",
+      "path": "pear_runtime/fixtures/driver.py",
+      "role": "Single lease/deadline/worker/interrupt handler and failure-evidence finalizer; CPU names, fixed request table, run/result binding replace seven-fixture selection."
+    },
+    {
+      "checkpoint": "c13c7030ec3b780df12373cb9e0460bbcb5b0652",
+      "path": "pear_runtime/fixtures/context.py",
+      "role": "Explicit descriptor/runtime/capability/source/seed admission and final snapshot validation adapted to CPU pack; common producers/admission/supervision retained directly."
+    }
+  ],
+  "schema_version": 1,
+  "scope": "Explicit D36 diagnostic CPU19 and finite ordering execution/replay adapters",
+  "seven_reuse_checkpoint_pins": {
+    "runtime": "c13c7030ec3b780df12373cb9e0460bbcb5b0652"
+  },
+  "source_files": [
+    {
+      "license": "GPL-3.0-or-later AND MIT",
+      "path": "pear_runtime/fixtures/controls/cpu_context.py",
+      "sha256": "bb0708c94f0f8b920544cd9ba5beea8ef49f85f6e72f0f418cc064c21f7685f4",
+      "size_bytes": 13619
+    },
+    {
+      "license": "GPL-3.0-or-later AND MIT",
+      "path": "pear_runtime/fixtures/controls/cpu_execution.py",
+      "sha256": "b5fd0549abe98688953229cbef57d76716132ab2dfe762284a3203358c057209",
+      "size_bytes": 15691
+    },
+    {
+      "license": "GPL-3.0-or-later AND MIT",
+      "path": "pear_runtime/fixtures/controls/cpu_driver.py",
+      "sha256": "2d34589fd2a58bd7c83429a45fdad0ff5d08664d11311a7b0524239654e84643",
+      "size_bytes": 9865
+    },
+    {
+      "license": "GPL-3.0-or-later AND MIT",
+      "path": "pear_runtime/fixtures/controls/cpu_evidence.py",
+      "sha256": "549cf4ce068d6f3452b9690ccf30a11e1f713d578c9b6abf6a41c5b13ac05bf5",
+      "size_bytes": 27087
+    }
+  ],
+  "test_files": [
+    {
+      "license": "GPL-3.0-or-later",
+      "path": "tests/fixtures/controls/test_cpu_provider.py",
+      "sha256": "a43fa7fe1257816365f34a03c78524092211a63700e8334c46f454d22055b4b9",
+      "size_bytes": 2789
+    },
+    {
+      "license": "GPL-3.0-or-later",
+      "path": "tests/fixtures/controls/test_cpu_evidence.py",
+      "sha256": "8d649f90f766670b323cd68767557067fa104c15fc4737a51d1f7874f16aef26",
+      "size_bytes": 8553
+    },
+    {
+      "license": "GPL-3.0-or-later",
+      "path": "tests/fixtures/controls/test_cpu_execution.py",
+      "sha256": "35f2dd6fc2db9117ebd58517476809ce2126644e6c6b555353545859a5cd0f68",
+      "size_bytes": 7979
+    },
+    {
+      "license": "GPL-3.0-or-later",
+      "path": "tests/fixtures/controls/test_cpu_driver.py",
+      "sha256": "cc17766661772d3df54d285f81b2187ed2c02f8d6835884d2bb4351460cc6891",
+      "size_bytes": 8628
+    }
+  ]
+}

@@ -56,6 +56,7 @@ def phase(phases, name):
 def failure_details(error):
     value = dict(type=type(error).__name__, code=getattr(error, 'code', str(error)))
     if isinstance(error, OSError): value['errno'] = error.errno
+    if getattr(error, 'native_error', None) is not None: value['native_error'] = error.native_error
     if getattr(error, 'bound_outcome', None) is not None: value['bound_outcome'] = error.bound_outcome
     if getattr(error, 'evidence_errors', None): value['evidence_errors'] = error.evidence_errors
     return value
@@ -135,6 +136,8 @@ def _build_artifacts(request):
          value.get('scope') == 'development_component_build' and value.get('status') == 'passed' and
          value.get('runtime_eligible') is False and value.get('game_qualified') is False,
          'assembly_build_scope')
+    need(value.get('failure') is None and value.get('failure_code') is None,
+         'assembly_build_failure')
     need(type(request['recipe_sha256']) is str and re.fullmatch('[0-9a-f]{64}', request['recipe_sha256'])
          and value.get('recipe_sha256') == request['recipe_sha256'], 'assembly_build_recipe')
     commits = {name: row['commit'] for name, row in value['roots'].items() if row['kind'] == 'git'}

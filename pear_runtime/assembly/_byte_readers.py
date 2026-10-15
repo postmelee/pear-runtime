@@ -1,8 +1,9 @@
 # SPDX-FileCopyrightText: 2026 Pear contributors
 # SPDX-License-Identifier: GPL-3.0-or-later
-"""Exact ARM64 Mach-O and bundled dependency readers from Pear."""
+"""Original ARM64 Mach-O reader with selected-profile dependency path admission."""
 from pathlib import Path
 import struct
+import unicodedata
 from ._common import need, sha256
 MACH_ARM64 = 0x100000C
 
@@ -62,8 +63,82 @@ def inspect_macho(path):
             "filetype": filetype, "dependencies": dependencies, "rpaths": rpaths}
 
 
+def _raw_path_parts(value, *, rpath=False):
+    """Admit raw components before normalization or system classification."""
+    need(type(value) is str and value and "\\" not in value and
+         not any(unicodedata.category(c) == "Cc" for c in value) and
+         not value.startswith("//"), "macho_raw_path")
+    # One trailing separator and bounded anchored parents preserve selected Wine.
+    text = value[:-1] if rpath and value.endswith("/") else value
+    absolute = text.startswith("/")
+    parts = text[1:].split("/") if absolute else text.split("/")
+    need(parts and all(p not in ("", ".") for p in parts), "macho_raw_components")
+    anchors = ("@loader_path", "@executable_path")
+    tokens = (*anchors, "@rpath")
+    if absolute:
+        need(".." not in parts and not any(token in p for p in parts for token in tokens),
+             "macho_absolute_components")
+    else:
+        need(parts[0] in (anchors if rpath else tokens), "macho_leading_anchor")
+        need(not any(token in p for p in parts[1:] for token in tokens), "macho_mid_token")
+        if not rpath:
+            need(".." not in parts, "macho_load_components")
+    return absolute, parts
+
+
+def _anchor_base(token, current, executable):
+    return current.parent if token == "@loader_path" else executable.parent
+
+
+def _bounded_native_path(path, bundle, *, directory=False):
+    # Existing in-bundle aliases are bound separately by the complete inventory.
+    # Broken aliases are failures, including when another rpath has a valid file.
+    path = Path(path)
+    need(path.exists(), "macho_path_missing")
+    target = path.resolve(strict=True)
+    need(target.is_relative_to(bundle), "macho_path_outside_bundle")
+    need(target.is_dir() if directory else target.is_file(), "macho_path_kind")
+    return target
+
+
+def _admit_rpath(value, current, executable, bundle):
+    absolute, parts = _raw_path_parts(value, rpath=True)
+    candidate = (Path(value[:-1] if value.endswith("/") else value) if absolute else
+                 _anchor_base(parts[0], current, executable).joinpath(*parts[1:]))
+    # The selected profile requires existing directories, even for unused paths.
+    return _bounded_native_path(candidate, bundle, directory=True)
+
+
+def _admit_load(value, current, executable, bundle, paths):
+    absolute, parts = _raw_path_parts(value)
+    if absolute and value.startswith(("/usr/lib/", "/System/Library/")):
+        return {"name": value, "kind": "macos_system_dependency"}, None
+    if absolute:
+        candidates = [Path(value)]
+    elif parts[0] == "@rpath":
+        need(len(parts) > 1, "macho_load_suffix")
+        candidates = [p.joinpath(*parts[1:]) for p in paths]
+    else:
+        need(len(parts) > 1, "macho_load_suffix")
+        candidates = [_anchor_base(parts[0], current, executable).joinpath(*parts[1:])]
+    hits = set()
+    for candidate in candidates:
+        # A missing leaf must not hide a broken/external intermediate alias.
+        need(candidate.resolve().is_relative_to(bundle), "macho_path_outside_bundle")
+        for component in (candidate, *candidate.parents):
+            if component.is_symlink():
+                need(component.exists(), "macho_path_missing")
+                need(component.resolve(strict=True).is_relative_to(bundle),
+                     "macho_path_outside_bundle")
+        if candidate.exists():
+            hits.add(_bounded_native_path(candidate, bundle))
+    need(len(hits) == 1, "unresolved_or_ambiguous_dependency")
+    target = hits.pop()
+    return {"name": value, "kind": "bundled", "path": str(target)}, target
+
+
 def inspect_closure(path, root):
-    """Resolve bundled libraries; OS shared-cache dependencies are explicit inputs."""
+    """Resolve admitted bundled paths; canonical OS names remain external."""
     root, executable = Path(root).resolve(), Path(path).resolve()
     need(executable.is_relative_to(root), "tool_outside_bundle")
     found, pending = {}, [(executable, [])]
@@ -73,27 +148,14 @@ def inspect_closure(path, root):
             continue
         need(current.is_relative_to(root), "dependency_outside_bundle")
         info = inspect_macho(current)
-        expanded = []
-        for item in info["rpaths"]:
-            expanded.append(item.replace("@loader_path", str(current.parent)).replace(
-                "@executable_path", str(executable.parent)))
+        expanded = [_admit_rpath(item, current, executable, root) for item in info["rpaths"]]
         paths = expanded + inherited_rpaths
         resolved = []
         for dep in info["dependencies"]:
-            if dep.startswith(("/usr/lib/", "/System/Library/")):
-                resolved.append({"name": dep, "kind": "macos_system_dependency"})
-                continue
-            name = dep.replace("@loader_path", str(current.parent)).replace(
-                "@executable_path", str(executable.parent))
-            candidates = [Path(name)]
-            if name.startswith("@rpath/"):
-                candidates = [Path(base) / name[7:] for base in paths]
-            hits = {p.resolve() for p in candidates if p.is_file()}
-            need(len(hits) == 1, "unresolved_or_ambiguous_dependency")
-            target = hits.pop()
-            need(target.is_relative_to(root), "dependency_outside_bundle")
-            resolved.append({"name": dep, "kind": "bundled", "path": str(target)})
-            pending.append((target, paths))
+            row, target = _admit_load(dep, current, executable, root, paths)
+            resolved.append(row)
+            if target is not None:
+                pending.append((target, paths))
         found[str(current)] = {"path": str(current), "sha256": sha256(current),
                                **info, "resolved_dependencies": resolved}
     return list(found.values())

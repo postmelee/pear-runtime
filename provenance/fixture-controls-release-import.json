@@ -1,0 +1,25 @@
+{
+  "schema_version": 1,
+  "scope": "Native, graphics and CPU operation/case schema admission for independent release only",
+  "origin": {
+    "path": "pear_runtime/fixtures/release.py",
+    "sha256": "62e63b909e5859fda22715e82dc588d8afe563bde58dd4cbd51056813e841033",
+    "size_bytes": 13089
+  },
+  "reused_without_changes": [
+    "identity",
+    "DarwinProbe",
+    "handles",
+    "lock_probe",
+    "verdict"
+  ],
+  "new_file": "pear_runtime/fixtures/release_controls.py",
+  "claim": "No qualification or operation status upgrade; preserve failed attempts and fail unknown when evidence or host inspection is unavailable. No runtime launch, signal, cleanup or deletion.",
+  "license": "GPL-3.0-or-later",
+  "cpu_extension": "Bind exact CPU request/descriptor/candidate/pack/case refs and selected fixture digest; preserve unsupported or failed operation status without qualification upgrade.",
+  "schema_admission": "Require exact integer schema_version 1 for operation, plan, request and every new native/graphics/CPU control record. CPU descriptor and candidate base also require exact integer version 1; absent, other and boolean versions are rejected. Original translated-graphics case format remains explicitly versionless.",
+  "new_file_identity": {
+    "sha256": "ab1572b4b662f68a8074893eec499a7e050fcdf99f43beccb8fb89613749bd55",
+    "size_bytes": 13565
+  }
+}

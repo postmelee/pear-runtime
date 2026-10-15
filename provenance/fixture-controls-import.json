@@ -100,8 +100,8 @@
     {
       "path": "pear_runtime/fixtures/controls/corpus.py",
       "license": "MIT",
-      "imported_sha256": "1ed903da5a66e25cd36d62f29d4d935cc415f8a2d7d1d420d902c370cb0a5253",
-      "imported_size_bytes": 14904,
+      "imported_sha256": "73d0e39633dd04287e415f002d7485818cddc4c7de6c000919017cfc0e3d316b",
+      "imported_size_bytes": 17489,
       "sources": [
         {
           "source": {
@@ -278,7 +278,8 @@
           ]
         }
       ],
-      "transformation": "All eleven results functions, effective_case and three ordering functions are byte-exact. rules/manifest read the canonical imported contract data instead of old roots. Pure comparison wrappers retain original reference-log/case/feature/ordering assertions and add explicit candidate-row identity/budget admission; original runtime/signing/runner checks remain separately mandatory, never replaced by a saved pass flag. No build/native/run/cleanup function is imported."
+      "transformation": "All eleven results functions, effective_case and three ordering functions are byte-exact. rules/manifest read the canonical imported contract data instead of old roots. Pure comparison wrappers retain original reference-log/case/feature/ordering assertions and add explicit candidate-row identity/budget admission; original runtime/signing/runner checks remain separately mandatory, never replaced by a saved pass flag. No build/native/run/cleanup function is imported.",
+      "cpu_provider_adaptation": "Explicit required provider parameter is threaded through original result assertions; only the duplicate effective_case implementation is replaced by the canonical FEX import. Existing assertions and outcomes are unchanged."
     },
     {
       "path": "pear_runtime/fixtures/controls/presentation.py",
@@ -507,8 +508,8 @@
     {
       "path": "tests/fixtures/controls/test_corpus_results.py",
       "license": "MIT",
-      "imported_sha256": "9681e5ae035b22274c609d83f5e684051999f32476699c463dafe611f5937abd",
-      "imported_size_bytes": 6119,
+      "imported_sha256": "28c924697c4d6c6a33781e73878c224038a1f470c2bfbc4f26401c4f0e939477",
+      "imported_size_bytes": 6440,
       "sources": [
         {
           "source": {
@@ -619,15 +620,17 @@
           "end_line": 111,
           "sha256": "976dfc49cce742db394ec4c56649b5b08b7ea5cf97ccb7ecfcfcb081140f075e"
         }
-      ]
+      ],
+      "cpu_provider_adaptation": "Explicit required provider parameter is threaded through original result assertions; only the duplicate effective_case implementation is replaced by the canonical FEX import. Existing assertions and outcomes are unchanged."
     },
     {
       "path": "tests/fixtures/controls/test_control_adapters.py",
       "license": "GPL-3.0-or-later",
       "sources": [],
-      "imported_sha256": "204bb81225e07930e329879173aaf927b389e20c52ab7638201387556319d321",
-      "imported_size_bytes": 11336,
-      "transformation": "New 18 synthetic tests for full19 completeness, native reference log/architecture and binary identity, explicit AVX unsupported status, fixed32768-pair/8-worker/8-retirement ordering, original candidate-admission refusal and presentation producer/terminal boundaries. No guest, native or capture execution."
+      "imported_sha256": "61194437696c6db7ed60661170b7640f1d13cba733c266ffd1b40cdcc394d86d",
+      "imported_size_bytes": 11474,
+      "transformation": "New 18 synthetic tests for full19 completeness, native reference log/architecture and binary identity, explicit AVX unsupported status, fixed32768-pair/8-worker/8-retirement ordering, original candidate-admission refusal and presentation producer/terminal boundaries. No guest, native or capture execution.",
+      "cpu_provider_adaptation": "Explicit required provider parameter is threaded through original result assertions; only the duplicate effective_case implementation is replaced by the canonical FEX import. Existing assertions and outcomes are unchanged."
     }
   ],
   "contracts": {
@@ -1765,7 +1768,13 @@
         },
         "version": 1
       },
-      "canonical_sha256": "c6ad9b39b475d1dbd7f0fbe377c50022a11d32d7b08e967e684b2250d1d593f9"
+      "canonical_sha256": "c6ad9b39b475d1dbd7f0fbe377c50022a11d32d7b08e967e684b2250d1d593f9",
+      "canonical_owner": {
+        "repository": "pear-fex",
+        "commit": "9c9b602c07b57a08500862abfdf62e1bac351640",
+        "path": "Pear/Tests/CPU/corpus.json"
+      },
+      "editable_authority": false
     },
     "cpu_adaptations": {
       "source": {
@@ -1791,7 +1800,13 @@
         "scope": "windows_pe_fixture_adaptation",
         "version": 1
       },
-      "canonical_sha256": "17bf454588ee9544cad95d8b78fd8d65ac5bc96579eae88d1d191b03695167ed"
+      "canonical_sha256": "17bf454588ee9544cad95d8b78fd8d65ac5bc96579eae88d1d191b03695167ed",
+      "canonical_owner": {
+        "repository": "pear-fex",
+        "commit": "9c9b602c07b57a08500862abfdf62e1bac351640",
+        "path": "Pear/Tests/CPU/adaptations.json"
+      },
+      "editable_authority": false
     },
     "ordering_budget": {
       "source": {
@@ -1933,15 +1948,15 @@
       "source": "tools/cpu/results.py",
       "destination": "pear_runtime/fixtures/controls/corpus.py",
       "symbol": "admit_build",
-      "transformation": "exact",
-      "imported_sha256": "c335a9d98ab70439d2071314cae25067ab3fe048e68d3a726df10036d74ce1b3"
+      "transformation": "Explicit provider parameter and forwarding; original assertions retained",
+      "imported_sha256": "41d44fa4edfec12f32b8c66542472f5085f587197b78e265b7ae1d84b15cbb93"
     },
     {
       "source": "tools/cpu/results.py",
       "destination": "pear_runtime/fixtures/controls/corpus.py",
       "symbol": "case_result",
-      "transformation": "exact",
-      "imported_sha256": "fe66cf44582b7a0c901fa10eec25aac651042274d0f2e00ce3c3ab1c3796cf55"
+      "transformation": "Explicit provider parameter and forwarding; original assertions retained",
+      "imported_sha256": "0447db37ae233637a02ee75777f64d7f5d60ce794c5ee3127ded207b20266656"
     },
     {
       "source": "tools/cpu/results.py",
@@ -1954,15 +1969,15 @@
       "source": "tools/cpu/results.py",
       "destination": "pear_runtime/fixtures/controls/corpus.py",
       "symbol": "assess_records",
-      "transformation": "exact",
-      "imported_sha256": "f1a405ab8a3a137610b29be96f3725e35da6bbbc09f10017d8c54a27b531b0da"
+      "transformation": "Explicit provider parameter and forwarding; original assertions retained",
+      "imported_sha256": "082c8ef0278baf2d7576a1d0fc085228cd7583a3eb13d83be0b6edc64cc4dcc8"
     },
     {
       "source": "tools/cpu/adapt.py",
       "destination": "pear_runtime/fixtures/controls/corpus.py",
       "symbol": "effective_case",
-      "transformation": "exact",
-      "imported_sha256": "418e028b0be13bd2065b8611d8ebaf306bd1a594ec46cdf132fdea854a37d766"
+      "transformation": "Canonical FEX provider delegation",
+      "imported_sha256": "5a50f6355c0876d22dbb7a6e9993493581f32589492f8ebcbfb0ec6006f50d1a"
     },
     {
       "source": "tools/cpu/ordering.py",
@@ -2025,5 +2040,37 @@
     "corpus.compare_result_rows": "Explicit already-admitted candidate rows and immutable native-reference logs. Preserves original mathematical/feature/full-case assertions. Returns execution_admission_performed=False; parent must supply actual live/current run binding.",
     "corpus.compare_ordering_records": "Explicit build/reference bytes, candidate events/exit/stderr. Exact selected2048iterations*4rounds*4modes=32768pairs,8workers,8retirements. No thread launch or current authorization.",
     "presentation.visible_and_visible_frames": "Required explicit path of the admitted capture producer replaces only the historical source root. Image content, native-window identity and capture-command assertions remain unchanged; no capture is performed."
+  },
+  "canonical_cpu_provider": {
+    "repository": "pear-fex",
+    "commit": "9c9b602c07b57a08500862abfdf62e1bac351640",
+    "module_path": "Pear/Tools/CPU/adapt.py",
+    "files": [
+      {
+        "path": "Pear/Tools/CPU/adapt.py",
+        "sha256": "e874f4749497b74081b64a856ae98288d037f47d58412b09503b95a97b513cdd",
+        "size_bytes": 2195
+      },
+      {
+        "path": "Pear/Tests/CPU/corpus.json",
+        "sha256": "c6ad9b39b475d1dbd7f0fbe377c50022a11d32d7b08e967e684b2250d1d593f9",
+        "size_bytes": 34111
+      },
+      {
+        "path": "Pear/Tests/CPU/adaptations.json",
+        "sha256": "17bf454588ee9544cad95d8b78fd8d65ac5bc96579eae88d1d191b03695167ed",
+        "size_bytes": 698
+      },
+      {
+        "path": "Pear/Tests/CPU/sources.json",
+        "sha256": "69727b6125bbea096c1d635e7b2cdb5e4c794c2df9fa1964568763645e190839",
+        "size_bytes": 4638
+      }
+    ],
+    "contracts": {
+      "cpu_manifest": "Pear/Tests/CPU/corpus.json",
+      "cpu_adaptations": "Pear/Tests/CPU/adaptations.json"
+    },
+    "admission": "Explicit canonical root and matching checkout commit before loading the sole FEX effective_case provider. Pure result comparisons do not perform execution admission."
   }
 }

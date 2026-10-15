@@ -106,5 +106,391 @@
     ],
     "additional": "Complete relative/absolute local Python import closure, including package initializers; optional FEX source root only when a local FEX module is consumed. Unknown/missing/extra/duplicate manifest rows are refused."
   },
-  "reuse_limits": "Public capability catalog and selected actual build_ref are distinct. A future build with different private configuration requires independently reviewed capability correspondence, not automatic reuse of the selected booleans."
+  "reuse_limits": "Public capability catalog and selected actual build_ref are distinct. A future build with different private configuration requires independently reviewed capability correspondence, not automatic reuse of the selected booleans.",
+  "required_header_use_extension": {
+    "schema_version": 1,
+    "scope": "selected_fex_header_use_v1",
+    "status": "105 guarded portable tests passed; separate mandatory retained-receipt header check passed without compile or native execution",
+    "source_version_boundary": "All earlier status, file identities and verification fields remain historical. This extension identifies the current header-check additions and affected context/builder/test bytes.",
+    "ownership": {
+      "neutral_helper": "pear_runtime/header_use.py",
+      "builder": "pear_runtime/recipes/fex.py",
+      "retained_checker": "pear_runtime/fixtures/context.py",
+      "policy": "Wire and common Abort in all three selected units; external private phase input in Module only"
+    },
+    "reuse_decision": "Reuse existing stable build.fact/load, Make depfile parser, Error handling and fixture reference admission. Add one neutral ownership/use helper; do not import a fixture into a component builder or duplicate the retained source reader.",
+    "bindings": [
+      "Exact public recipe digest and source-unit identities remain pinned by the catalog.",
+      "Independent assembly request joins the exact build ref, public recipe, bindings, private manifest, expanded local digest and source commits.",
+      "Build output parent is bound to the admitted build receipt. Original explicit roots remain distinct from newer development HEADs.",
+      "Every required header must have the exact independently derived path/hash/size both in dependency refs and actual checked depfile tokens.",
+      "Canonical owner/export/private paths, private-root-outside-Git, no public private-input identity, and pre/post file checks are mandatory.",
+      "The two-argument compiled_capabilities API has no optional legacy bypass."
+    ],
+    "files": [
+      {
+        "path": "pear_runtime/fixtures/context.py",
+        "sha256": "866db9f37ac64805a79334b2ecb61f3ecd559d103abfce1cf9e33f1a6a3fd6a5",
+        "size_bytes": 24018,
+        "license": "MIT"
+      },
+      {
+        "path": "pear_runtime/header_use.py",
+        "sha256": "cb38d30a9305a471be2a11a867eb9e92631c53f38541c277319c3e266878eb06",
+        "size_bytes": 10165,
+        "license": "GPL-3.0-or-later"
+      },
+      {
+        "path": "pear_runtime/recipes/fex.py",
+        "sha256": "1be4a1b5591af5697f450247e96b768303ae53c6973238c2556ecca3bfcac5bc",
+        "size_bytes": 24672,
+        "license": "GPL-3.0-or-later"
+      },
+      {
+        "path": "tests/build/test_header_use.py",
+        "sha256": "0c6aeacc9cc42a7900da89dd92bb61d0984199426d253c1f2b8828b4065fb6e9",
+        "size_bytes": 11769,
+        "license": "GPL-3.0-or-later"
+      },
+      {
+        "path": "tests/fixtures/header_fixture.py",
+        "sha256": "0370e6ecdaf142508b2af4a8b1fb55822f5733179cf0d7a47956894e94d7d9a1",
+        "size_bytes": 7156,
+        "license": "GPL-3.0-or-later"
+      },
+      {
+        "path": "tests/fixtures/test_context.py",
+        "sha256": "422c24dfb8386495d4b0cbd47acd458cf202b8de2ccb6cd5a9cea637ae268321",
+        "size_bytes": 13739,
+        "license": "GPL-3.0-or-later"
+      },
+      {
+        "path": "tests/fixtures/test_header_binding.py",
+        "sha256": "af4f73961add84f11d4e413640e04e9fe10b2822d3e34d22d0c6bb4ece6ed897",
+        "size_bytes": 12746,
+        "license": "GPL-3.0-or-later"
+      }
+    ],
+    "source_capture": {
+      "builder_manual_sources": "header_use.py is included in the FEX before/after producer identities and pre-child snapshots.",
+      "fixture_static_graph": "The helper is reached by context.py through the existing static import traversal.",
+      "provenance_dynamic_input": "provenance/fixture-context-import.json",
+      "shared_producers_implementation_changed": false
+    },
+    "original_methods": [
+      {
+        "original_id": "tests/fex/test_memory_fex_pair.py::ReviewTwoControls.test_closed_header_search_order",
+        "origin": {
+          "repository": "https://github.com/postmelee/pear",
+          "checkpoint": "951264bf5be4b9d2afb87320f5fac74778b2dd58",
+          "path": "tests/fex/test_memory_fex_pair.py",
+          "symbol": "ReviewTwoControls.test_closed_header_search_order",
+          "file_sha256": "492c50a35a5fa12ee387f2b551e37ec8ab4a4de1bbbf0f8295daab5934ae1be4",
+          "unit_sha256": "31890b10ed7634aa33a370fdf9b217c6a21b04f0e56ca210da453cf3d8508589",
+          "ast_sha256": "1d331c3db62c3a55174e79867c8dfc3fcd4856503a1136eb19159dd999f8a3fc"
+        },
+        "status": "current_contract_successor_not_original_body",
+        "legacy_method_executed": false,
+        "whole_original_method_equivalence": false,
+        "successors": [
+          {
+            "path": "tests/build/test_header_use.py",
+            "symbol": "HeaderUseTests.test_context_admitted_same_name_shadow_is_not_the_wire_export",
+            "line_start": 167,
+            "line_end": 181,
+            "unit_sha256": "34a24da1e5c43937cc2a7f1a436e0b971963e4c77c3c3dbaadb94e865bb941f8",
+            "ast_sha256": "43e3e7d8cbd8334d837cadce40331c2bc3e1933588cc31fbcc1ff9acef1fe4a1"
+          },
+          {
+            "path": "tests/fixtures/test_header_binding.py",
+            "symbol": "CapabilityAuthorityTests.test_external_review_refs_cannot_be_replaced_by_build_self_declarations",
+            "line_start": 173,
+            "line_end": 184,
+            "unit_sha256": "dfb82348bb248e7673cd83959c7ee5283c22bde3bef3f8d58a775c14f43214a8",
+            "ast_sha256": "80a02289bdc2dda9bcc48575d0c92294dd1522010adeb850c7b271f72a753f79"
+          }
+        ],
+        "boundary": "Exact selected-v1 owner/export/private identities and actual depfile tokens. The old global include-order parser and blanket alternate-include-option ban are not reintroduced."
+      },
+      {
+        "original_id": "tests/fex/test_memory_fex_pair.py::ReviewTwoControls.test_actual_selected_dependency_and_wire",
+        "origin": {
+          "repository": "https://github.com/postmelee/pear",
+          "checkpoint": "951264bf5be4b9d2afb87320f5fac74778b2dd58",
+          "path": "tests/fex/test_memory_fex_pair.py",
+          "symbol": "ReviewTwoControls.test_actual_selected_dependency_and_wire",
+          "file_sha256": "492c50a35a5fa12ee387f2b551e37ec8ab4a4de1bbbf0f8295daab5934ae1be4",
+          "unit_sha256": "010b83f8dee375ecd65af5241a89491cc38fa5249531b40dd881a417988acab0",
+          "ast_sha256": "3d312f66ed98d2db18d0d6cfa4882bad5eda5503de1d7f8b16d92323797526ed"
+        },
+        "status": "current_contract_successor_not_original_body",
+        "legacy_method_executed": false,
+        "whole_original_method_equivalence": false,
+        "successors": [
+          {
+            "path": "tests/build/test_header_use.py",
+            "symbol": "HeaderUseTests.test_each_required_header_omission_refused",
+            "line_start": 57,
+            "line_end": 60,
+            "unit_sha256": "98f12b9363113804061809eb041ccda08842288cfa9e3a338a2157c81ff2ad0b",
+            "ast_sha256": "c2d0b2507cf8c6a057f7476c91cfa9fb1bdd9ec86b973292dc7e4f4b9e30436a"
+          },
+          {
+            "path": "tests/fixtures/test_header_binding.py",
+            "symbol": "RetainedHeaderTests.test_forged_recorded_canonical_headers_do_not_replace_actual_tokens",
+            "line_start": 37,
+            "line_end": 51,
+            "unit_sha256": "0f994906841497e795241b17fe435a55d830a7fa9d001bc5dffcb5b3582cde52",
+            "ast_sha256": "e37869dc381057f757546d93fb1fedac5713f8af63fa6502e47a539f6642502c"
+          }
+        ],
+        "boundary": "Exact selected-v1 owner/export/private identities and actual depfile tokens. The old global include-order parser and blanket alternate-include-option ban are not reintroduced."
+      },
+      {
+        "original_id": "tests/fex/test_memory_fex_pair.py::ReviewTwoControls.test_foreign_or_shadow_wire_dependency_refused",
+        "origin": {
+          "repository": "https://github.com/postmelee/pear",
+          "checkpoint": "951264bf5be4b9d2afb87320f5fac74778b2dd58",
+          "path": "tests/fex/test_memory_fex_pair.py",
+          "symbol": "ReviewTwoControls.test_foreign_or_shadow_wire_dependency_refused",
+          "file_sha256": "492c50a35a5fa12ee387f2b551e37ec8ab4a4de1bbbf0f8295daab5934ae1be4",
+          "unit_sha256": "2c8c9652be37e574e05cbf711edc67360e618b6b5d122d9595c242ede3195587",
+          "ast_sha256": "3ee341d53293a48898857ce9803711b0f7cad781c16bf779d23ed5b5cb59cc87"
+        },
+        "status": "current_contract_successor_not_original_body",
+        "legacy_method_executed": false,
+        "whole_original_method_equivalence": false,
+        "successors": [
+          {
+            "path": "tests/build/test_header_use.py",
+            "symbol": "HeaderUseTests.test_independently_readable_registered_shadow_cannot_replace_true_header",
+            "line_start": 73,
+            "line_end": 82,
+            "unit_sha256": "a18bc0e74ba45f13089c19d0e19c3dd3977a17590c8aa7a98fcebed69fa82c5f",
+            "ast_sha256": "4e89ae17066e6e7f7aaf5ff9e62e2e75ca2d611154e3ea54c6ef8438248ff9a0"
+          },
+          {
+            "path": "tests/fixtures/test_header_binding.py",
+            "symbol": "RetainedHeaderTests.test_recorded_and_actual_shadow_agreement_is_still_refused",
+            "line_start": 53,
+            "line_end": 62,
+            "unit_sha256": "eb25f2e79b33424900f010cc1926d410799eef13162ef32b038426710cfcc4a4",
+            "ast_sha256": "0d05fa2469a89793c6c7d14cd6095639d6fe6073442131011242a4e65550492f"
+          }
+        ],
+        "boundary": "Exact selected-v1 owner/export/private identities and actual depfile tokens. The old global include-order parser and blanket alternate-include-option ban are not reintroduced."
+      }
+    ],
+    "verification": {
+      "portable_test_ids": 105,
+      "unique_method_bodies": 105,
+      "new_header_test_bodies": 34,
+      "affected_existing_test_bodies": 71,
+      "failures": 0,
+      "errors": 0,
+      "skips": 0,
+      "forbidden_process_native_network_attempts": 0,
+      "source_files": [
+        {
+          "path": "pear_runtime/__init__.py",
+          "sha256": "4ba9de68008a942f73deb92b7b2fc9073daa00fc6c29684ac93797cdd8751127",
+          "size_bytes": 160
+        },
+        {
+          "path": "pear_runtime/assembly/__init__.py",
+          "sha256": "a139b7754dc92d7dae1473866946c0d5aaf2e154740b8d46333a3237203dd02e",
+          "size_bytes": 182
+        },
+        {
+          "path": "pear_runtime/assembly/_byte_readers.py",
+          "sha256": "bb9a2d2b6a71e344c91aa696a422a80213287289170b763e7a6e9f05e12c641e",
+          "size_bytes": 7762
+        },
+        {
+          "path": "pear_runtime/assembly/_common.py",
+          "sha256": "c311a2bda40182af833838d8409aedfa3d46cf9520975c2a5d0437921b17f578",
+          "size_bytes": 7639
+        },
+        {
+          "path": "pear_runtime/assembly/core.py",
+          "sha256": "55675805f86085777e33930dce1a8703efebd5215de00d70d7d9b4c7dcb1bbce",
+          "size_bytes": 29477
+        },
+        {
+          "path": "pear_runtime/assembly/helpers.py",
+          "sha256": "1c6e5a1332de5fbd6aca0327e7e0ed9d1d687ab29c6f9d305d6c1d8ab5134349",
+          "size_bytes": 6558
+        },
+        {
+          "path": "pear_runtime/build.py",
+          "sha256": "eed2094b12c64205ed740f71c95d0512943819289bc6749fac4a683da3d732f6",
+          "size_bytes": 22151
+        },
+        {
+          "path": "pear_runtime/errors.py",
+          "sha256": "0ed4c834e5fad698c25e83c1b80fd4601e37c3c2ffa36e340dedde7d36e418fa",
+          "size_bytes": 427
+        },
+        {
+          "path": "pear_runtime/fixtures/__init__.py",
+          "sha256": "3001914638d0600d44c6296f87a098ac2b45dd4f9c29399a9274df376ad7375a",
+          "size_bytes": 175
+        },
+        {
+          "path": "pear_runtime/fixtures/admission.py",
+          "sha256": "c10a530dea1dca0c7b3f75596b40db050991ac40b72b6d12cf8d523c30082fc3",
+          "size_bytes": 1815
+        },
+        {
+          "path": "pear_runtime/fixtures/assessment/__init__.py",
+          "sha256": "1bc691471e6bfd6054b23bcc1af39f81dd4fddecec4730e2721e025b55aa5416",
+          "size_bytes": 243
+        },
+        {
+          "path": "pear_runtime/fixtures/assessment/batch.py",
+          "sha256": "59e3d5d4b9f0e2e4fc77187fe0aa39a6eacaa892d4aaa8c6dd9de28afc993030",
+          "size_bytes": 1760
+        },
+        {
+          "path": "pear_runtime/fixtures/assessment/entry.py",
+          "sha256": "12a000a428e183971c643f819600973da5fe943be6d9b51eb43abf77110a428f",
+          "size_bytes": 3269
+        },
+        {
+          "path": "pear_runtime/fixtures/assessment/link.py",
+          "sha256": "133c7b28414a7a2306a524ad5d1f3ae796db4995f14384c7e90e3f1d2012ce2b",
+          "size_bytes": 4437
+        },
+        {
+          "path": "pear_runtime/fixtures/assessment/query.py",
+          "sha256": "a682d1bd2f26264d3bcbe83f8e6c341f52bb32b93b1dd18c191c4310cec27e61",
+          "size_bytes": 3577
+        },
+        {
+          "path": "pear_runtime/fixtures/assessment/query_context.py",
+          "sha256": "6ded8463bb4900c01fc63aab4bc82267592cf4ed679ef1c780aeb40347242a9b",
+          "size_bytes": 2656
+        },
+        {
+          "path": "pear_runtime/fixtures/assessment/string.py",
+          "sha256": "0487513d38f7e827022b3ddadc89606cf70434ab8cc3a308914b4669bde2c36a",
+          "size_bytes": 3736
+        },
+        {
+          "path": "pear_runtime/fixtures/assessment/wake.py",
+          "sha256": "1e76977884ff23a7b029c238f3ca371964989ae1a2474ef35e1d0153bf6c8f00",
+          "size_bytes": 3749
+        },
+        {
+          "path": "pear_runtime/fixtures/assessment/write.py",
+          "sha256": "ca9e61a060c02660943a70257863d3de89c4bd2a402b20c2d4628c43639c77d6",
+          "size_bytes": 3527
+        },
+        {
+          "path": "pear_runtime/fixtures/context.py",
+          "sha256": "866db9f37ac64805a79334b2ecb61f3ecd559d103abfce1cf9e33f1a6a3fd6a5",
+          "size_bytes": 24018
+        },
+        {
+          "path": "pear_runtime/fixtures/direct.py",
+          "sha256": "979d1ce8398b54e97e3712c7f6c298e312da9f8405f70330c1ffdf6d5fdcd4b8",
+          "size_bytes": 44984
+        },
+        {
+          "path": "pear_runtime/fixtures/inputs.py",
+          "sha256": "ee176a0c97482e563c78576d25d42b6294f4bc98bb3878978cfc363c1163e197",
+          "size_bytes": 1223
+        },
+        {
+          "path": "pear_runtime/fixtures/producers.py",
+          "sha256": "1ffa254beddc0da7f7882277bf94c623444a0dc51fbd9027c08c38e1d0ba72c9",
+          "size_bytes": 12612
+        },
+        {
+          "path": "pear_runtime/fixtures/supervision.py",
+          "sha256": "6d16847b1745e37447c3fbd4e7435d39a6cd32c6f0d29137fb5fc8540485fbc3",
+          "size_bytes": 10244
+        },
+        {
+          "path": "pear_runtime/fixtures/types.py",
+          "sha256": "e2b995f72ad4afa7981c1293c9ffd6efb35e89c05f123c7d80499a6cac906622",
+          "size_bytes": 379
+        },
+        {
+          "path": "pear_runtime/header_use.py",
+          "sha256": "cb38d30a9305a471be2a11a867eb9e92631c53f38541c277319c3e266878eb06",
+          "size_bytes": 10165
+        },
+        {
+          "path": "pear_runtime/recipes/fex.py",
+          "sha256": "1be4a1b5591af5697f450247e96b768303ae53c6973238c2556ecca3bfcac5bc",
+          "size_bytes": 24672
+        },
+        {
+          "path": "tests/build/test_fex.py",
+          "sha256": "d2a74a6e974f8953ebf6916b4bc713234fe96139b0e99b2fffeb1c49fc4b44d9",
+          "size_bytes": 16187
+        },
+        {
+          "path": "tests/build/test_header_use.py",
+          "sha256": "0c6aeacc9cc42a7900da89dd92bb61d0984199426d253c1f2b8828b4065fb6e9",
+          "size_bytes": 11769
+        },
+        {
+          "path": "tests/fixtures/header_fixture.py",
+          "sha256": "0370e6ecdaf142508b2af4a8b1fb55822f5733179cf0d7a47956894e94d7d9a1",
+          "size_bytes": 7156
+        },
+        {
+          "path": "tests/fixtures/test_context.py",
+          "sha256": "422c24dfb8386495d4b0cbd47acd458cf202b8de2ccb6cd5a9cea637ae268321",
+          "size_bytes": 13739
+        },
+        {
+          "path": "tests/fixtures/test_header_binding.py",
+          "sha256": "af4f73961add84f11d4e413640e04e9fe10b2822d3e34d22d0c6bb4ece6ed897",
+          "size_bytes": 12746
+        },
+        {
+          "path": "tests/fixtures/test_producers.py",
+          "sha256": "02ee135b06548e5a8e5c5bca0a7c4fa67d4e0a7989621feeaa1d47d08c2b4f38",
+          "size_bytes": 9726
+        },
+        {
+          "path": "tests/wine_integration/__init__.py",
+          "sha256": "6d36a3ff0893e178ac1d6b1e052e1039d220c83a15b9f022829824a3f70ee1ad",
+          "size_bytes": 162
+        },
+        {
+          "path": "tests/wine_integration/test_memory_current_inputs.py",
+          "sha256": "79cb0f5f3fb9cf30062877934ff6af0ae32272054c6cd9185ee01a8010e77dda",
+          "size_bytes": 10714
+        },
+        {
+          "path": "tests/wine_integration/test_memory_remaining_inputs.py",
+          "sha256": "896d4b8492fba0d301eba3739b9286dd984967fa0cbc804068a69de638abaa6f",
+          "size_bytes": 3674
+        }
+      ],
+      "modules": [
+        "tests.build.test_header_use",
+        "tests.fixtures.test_header_binding",
+        "tests.fixtures.test_context",
+        "tests.build.test_fex",
+        "tests.wine_integration.test_memory_current_inputs",
+        "tests.wine_integration.test_memory_remaining_inputs",
+        "tests.fixtures.test_producers"
+      ],
+      "tests_scope": "Current synthetic positive/refusal and affected existing portable tests only. No original legacy method execution is claimed.",
+      "retained_scope": "The complete mandatory capability binding passed all seven required uses from the selected retained build. A scratch-only binding preserved the exact original build/assembly/config refs and rebound identical catalog bytes to the new checker root. Original descriptor, candidate, builder snapshots and receipts were unchanged.",
+      "private_receipt_location": "External task evidence only; no local path, private header digest or private manifest identity is included in this source record."
+    },
+    "limits": [
+      "No compile, link, assembly, signing, fixture process or game execution.",
+      "The retained supplemental proof is not a new producer receipt or execution grant and does not authenticate every unrelated historical dependency row.",
+      "Future selected source/configuration/topology changes require reviewed recipe/catalog/policy updates and affected verification.",
+      "Private Git-location policy is checked during initial metadata expansion and derivation; final recheck repeats canonical file identities, not a new Git-marker search. Normal later context admission repeats the full policy.",
+      "A new fixture producer manifest is required for the changed source/provenance closure. Frozen primary manifests remain separate."
+    ]
+  }
 }

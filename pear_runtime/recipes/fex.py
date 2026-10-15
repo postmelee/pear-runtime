@@ -19,7 +19,7 @@ import shutil
 import struct
 import sys
 
-from .. import build
+from .. import build, header_use
 from ..build import Context, fact, load, relative
 from ..errors import Error, need
 
@@ -299,6 +299,7 @@ def link_trace(ctx, command, recipe):
 
 def builder_sources():
     return [fact(Path(__file__).resolve()), fact(Path(build.__file__).resolve()),
+            fact(Path(header_use.__file__).resolve()),
             fact(Path(sys.modules[Error.__module__].__file__).resolve())]
 
 
@@ -358,6 +359,9 @@ def reconstruct(recipe_path, bindings_path, private_manifest, output, *, lock_pa
             for row in recipe['source_exports']:
                 ctx.input(row['root'], row['path'], row['sha256'])
                 ctx.copy_input(row['root'], row['path'], row['output'])
+            headers = header_use.derive_fex_headers(recipe, bindings, load(private_manifest),
+                                                    output_root=ctx.output)
+            extra['header_use'] = []
             compile_arguments = {command['id']: [bind_token(ctx, value) for value in command['argv']]
                                  for command in recipe['commands'][:3]}
             env = dict(PATH=os.pathsep.join(str(ctx.root(k) / 'bin') if k == 'llvm_mingw'
@@ -377,7 +381,10 @@ def reconstruct(recipe_path, bindings_path, private_manifest, output, *, lock_pa
                 ctx.record_output(unit['object'])
                 ctx.record_output(unit['depfile'])
                 coff_machine(ctx.path(unit['object']))
-                ctx.audit_depfile(ctx.path(unit['depfile']), cwd=ctx.output)
+                files = ctx.audit_depfile(ctx.path(unit['depfile']), cwd=ctx.output)
+                paths = header_use.depfile_paths(ctx.outputs[unit['depfile']])
+                extra['header_use'].append(header_use.require_fex_header_use(
+                    headers, unit['id'], files, depfile_paths=paths, cwd=ctx.output))
             archive = recipe['archive']
             original = ctx.input('inputs', archive['template'])
             before = archive_members(original)
@@ -419,6 +426,7 @@ def reconstruct(recipe_path, bindings_path, private_manifest, output, *, lock_pa
                                strip_text_unchanged=True)
             extra.update(artifacts=dict(fex_pe=ctx.outputs['deployment.dll'], fex_debug=ctx.outputs['debug.dll']),
                          pe=dict(debug=debug_info, deployment=deployment_info))
+            header_use.recheck_fex_headers(headers)
             extra['builder_sources']['after'] = builder_sources()
             need(extra['builder_sources']['before'] == extra['builder_sources']['after'], 'fex_builder_changed')
             need(fact(recipe_path) == public_recipe and fact(private_manifest) == local_private

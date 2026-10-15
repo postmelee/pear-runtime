@@ -18,7 +18,7 @@
     },
     {
       "path": "pear_runtime/assembly/_byte_readers.py",
-      "sha256": "e9ac329c515afb03562bfffc0f0120c9ea15665832b085dd144579df66a7a6c0",
+      "sha256": "bb9a2d2b6a71e344c91aa696a422a80213287289170b763e7a6e9f05e12c641e",
       "license": "GPL-3.0-or-later",
       "source_repository": "https://github.com/postmelee/pear",
       "source_checkpoint": "951264bf5be4b9d2afb87320f5fac74778b2dd58",
@@ -39,9 +39,11 @@
           "sha256": "606164a7347be067a511e827b40eb2f733bc0c2067be4092e9029a681f60b10e"
         }
       ],
-      "transformation": "Exact two function bodies; explicit standard-library/shared-reader bindings and original architecture constant.",
+      "transformation": "Original inspect_macho function bytes unchanged. Adapt inspect_closure with raw load/rpath admission before normalization; preserve traversal, recorded raw strings and bundled/system result shape. Canonical OS names only; selected trailing-slash and bounded-parent rpaths and in-bundle inventory-bound aliases are explicit compatibility rules; every own rpath must resolve to an existing in-bundle directory. Reject broken or outside aliases even with another valid rpath.",
       "source_state": "exact Git blob",
-      "content_committed_at_checkpoint": true
+      "content_committed_at_checkpoint": true,
+      "prior_adapted_sha256": "e9ac329c515afb03562bfffc0f0120c9ea15665832b085dd144579df66a7a6c0",
+      "adaptation_status": "reviewed selected-profile boundary correction; does not claim unchanged old raw-rpath oracle"
     },
     {
       "path": "pear_runtime/assembly/_transport.py",
@@ -89,7 +91,7 @@
     },
     {
       "path": "pear_runtime/assembly/core.py",
-      "sha256": "042d60b2be9447a6c7816b1ace158fd24a6c35cb0f9234b689f26f6122328fda",
+      "sha256": "55675805f86085777e33930dce1a8703efebd5215de00d70d7d9b4c7dcb1bbce",
       "license": "GPL-3.0-or-later; retains MIT overlay attribution",
       "transformation": "Source-preserving assembly/signature/projection sequence adapted to explicit parent/build/profile/helper/output bindings and current component artifact roles. Original signature/profile/code-origin oracles unchanged.",
       "origin_source_paths": [
@@ -99,7 +101,9 @@
         "tools/steam/early_wait_v1.py",
         "tools/steam/direct_prepare_v1.py",
         "tools/fex/integration_run.py"
-      ]
+      ],
+      "diagnostic_adaptation": "Preserve non-None native_error attached by original scoped helper wrappers alongside original errno/bound_outcome/evidence_errors; never invent a native fact.",
+      "positive_receipt_adaptation": "Refuse non-null current failure/failure_code markers in a passed component receipt, preserving absent/null semantics and exact output/operation binding."
     },
     {
       "path": "tests/assembly/test_assembly.py",
@@ -151,6 +155,72 @@
       "transformation": "Approved assembly API/CLI documentation; no private input identities.",
       "origin_source_paths": [],
       "sha256": "edcf29988a9dfbbd511f1bd1dc5ab91d668b9f0706956458d958ac9ea00f612c"
+    },
+    {
+      "path": "tests/assembly/test_raw_paths.py",
+      "sha256": "8b8737e485185b70b2357a2504e72e5b0766b2e096bd97c528bcec87e34a8876",
+      "license": "GPL-3.0-or-later",
+      "transformation": "New synthetic raw-path refusal and selected-compatible positive tests, including unused/inherited paths and alias alternatives; no private candidate fixture path.",
+      "origin_source_paths": [
+        "tests/fex/test_memory_fex_pair.py"
+      ],
+      "original_regression_correspondence": [
+        {
+          "original_id": "tests/fex/test_memory_fex_pair.py::ReviewTwoControls.test_each_noncanonical_rpath_refused_before_normalization",
+          "current_methods": [
+            "PolicyCases.test_malformed_unused_rpaths_refused",
+            "PolicyCases.test_parent_compatibility_is_bounded_not_blanket_dotdot_ban"
+          ],
+          "status": "current_selected_profile_adaptation_not_exact_original_body",
+          "source_checkpoint": "951264bf5be4b9d2afb87320f5fac74778b2dd58",
+          "policy_delta": "Selected trailing slash, bounded parents and in-bundle aliases are allowed explicitly; malformed raw paths and external/broken aliases are refused."
+        },
+        {
+          "original_id": "tests/fex/test_memory_fex_pair.py::ReviewTwoControls.test_canonical_loader_rpath_resolves_actual_owned_bytes",
+          "current_methods": [
+            "PolicyCases.test_selected_trailing_and_bounded_parent_rpaths_allowed"
+          ],
+          "status": "current_selected_profile_adaptation_not_exact_original_body",
+          "source_checkpoint": "951264bf5be4b9d2afb87320f5fac74778b2dd58",
+          "policy_delta": "Selected trailing slash, bounded parents and in-bundle aliases are allowed explicitly; malformed raw paths and external/broken aliases are refused."
+        },
+        {
+          "original_id": "tests/fex/test_memory_fex_pair.py::ReviewTwoControls.test_noncanonical_unused_rpath_also_refused",
+          "current_methods": [
+            "PolicyCases.test_malformed_unused_rpaths_refused"
+          ],
+          "status": "current_selected_profile_adaptation_not_exact_original_body",
+          "source_checkpoint": "951264bf5be4b9d2afb87320f5fac74778b2dd58",
+          "policy_delta": "Selected trailing slash, bounded parents and in-bundle aliases are allowed explicitly; malformed raw paths and external/broken aliases are refused."
+        },
+        {
+          "original_id": "tests/fex/test_memory_fex_pair.py::ReviewTwoControls.test_inherited_rpath_never_skips_raw_component_admission",
+          "current_methods": [
+            "PolicyCases.test_inherited_rpaths_do_not_skip_own_raw_validation"
+          ],
+          "status": "current_selected_profile_adaptation_not_exact_original_body",
+          "source_checkpoint": "951264bf5be4b9d2afb87320f5fac74778b2dd58",
+          "policy_delta": "Selected trailing slash, bounded parents and in-bundle aliases are allowed explicitly; malformed raw paths and external/broken aliases are refused."
+        },
+        {
+          "original_id": "tests/fex/test_memory_fex_pair.py::ReviewTwoControls.test_each_noncanonical_system_dependency_refused",
+          "current_methods": [
+            "PolicyCases.test_noncanonical_system_paths_refused"
+          ],
+          "status": "current_selected_profile_adaptation_not_exact_original_body",
+          "source_checkpoint": "951264bf5be4b9d2afb87320f5fac74778b2dd58",
+          "policy_delta": "Selected trailing slash, bounded parents and in-bundle aliases are allowed explicitly; malformed raw paths and external/broken aliases are refused."
+        },
+        {
+          "original_id": "tests/fex/test_memory_fex_pair.py::ReviewTwoControls.test_canonical_system_dependency_is_external_input",
+          "current_methods": [
+            "PolicyCases.test_canonical_system_paths_external"
+          ],
+          "status": "current_selected_profile_adaptation_not_exact_original_body",
+          "source_checkpoint": "951264bf5be4b9d2afb87320f5fac74778b2dd58",
+          "policy_delta": "Selected trailing slash, bounded parents and in-bundle aliases are allowed explicitly; malformed raw paths and external/broken aliases are refused."
+        }
+      ]
     }
   ],
   "helper_sources": [

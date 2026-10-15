@@ -1,0 +1,314 @@
+{
+  "schema_version": 1,
+  "scope": "runtime_historical_memory_fixture_source_export",
+  "source_repository": "https://github.com/postmelee/pear",
+  "source_checkpoint": "951264bf5be4b9d2afb87320f5fac74778b2dd58",
+  "files": [
+    {
+      "origin": {
+        "repository": "https://github.com/postmelee/pear",
+        "checkpoint": "951264bf5be4b9d2afb87320f5fac74778b2dd58",
+        "path": "tests/fex/ec_memory_lifecycle.h",
+        "sha256": "c71a5128f1e360d448df66864d1222496a810875a625126c82ffb045a5601d27",
+        "size_bytes": 7231
+      },
+      "destination": "tests/fex/ec_memory_lifecycle.h",
+      "mode": "100644",
+      "transformation": "none; exact byte copy",
+      "terms": "MIT",
+      "build_performed": false,
+      "execution_performed": false
+    },
+    {
+      "origin": {
+        "repository": "https://github.com/postmelee/pear",
+        "checkpoint": "951264bf5be4b9d2afb87320f5fac74778b2dd58",
+        "path": "tests/fex/ec_concurrent_lifetime.h",
+        "sha256": "e5f53abed4eec357b3d1b0985303f8b9941aef5fe8805f175b57a3ca0efc6b71",
+        "size_bytes": 4754
+      },
+      "destination": "tests/fex/ec_concurrent_lifetime.h",
+      "mode": "100644",
+      "transformation": "none; exact byte copy",
+      "terms": "MIT",
+      "build_performed": false,
+      "execution_performed": false
+    },
+    {
+      "origin": {
+        "repository": "https://github.com/postmelee/pear",
+        "checkpoint": "951264bf5be4b9d2afb87320f5fac74778b2dd58",
+        "path": "tests/fex/memory/bitmap_selection_probe.c",
+        "sha256": "38f8530837ecfa2b1270bff3c6ab8febe75965899de496fdc1e214dd0d3da97d",
+        "size_bytes": 3646
+      },
+      "destination": "tests/fex/memory/bitmap_selection_probe.c",
+      "mode": "100644",
+      "transformation": "none; exact byte copy",
+      "terms": "MIT",
+      "build_performed": false,
+      "execution_performed": false
+    },
+    {
+      "origin": {
+        "repository": "https://github.com/postmelee/pear",
+        "checkpoint": "951264bf5be4b9d2afb87320f5fac74778b2dd58",
+        "path": "tests/fex/memory/fixture_suite.c",
+        "sha256": "846279777765506f70e83b7e1edc029d06804fc509b2883a370f59cf1cc263d6",
+        "size_bytes": 32780
+      },
+      "destination": "tests/fex/memory/fixture_suite.c",
+      "mode": "100644",
+      "transformation": "none; exact byte copy",
+      "terms": "GPL-3.0-or-later (existing Pear default; exact legacy file, adjacent attribution)",
+      "build_performed": false,
+      "execution_performed": false
+    },
+    {
+      "origin": {
+        "repository": "https://github.com/postmelee/pear",
+        "checkpoint": "951264bf5be4b9d2afb87320f5fac74778b2dd58",
+        "path": "tests/fex/memory/fixture_suite.h",
+        "sha256": "b884f768bcc8af7f94b2356960a76279cc761c69c969baed0dd4b06291db344b",
+        "size_bytes": 874
+      },
+      "destination": "tests/fex/memory/fixture_suite.h",
+      "mode": "100644",
+      "transformation": "none; exact byte copy",
+      "terms": "GPL-3.0-or-later (existing Pear default; exact legacy file, adjacent attribution)",
+      "build_performed": false,
+      "execution_performed": false
+    },
+    {
+      "origin": {
+        "repository": "https://github.com/postmelee/pear",
+        "checkpoint": "951264bf5be4b9d2afb87320f5fac74778b2dd58",
+        "path": "tests/fex/memory/metadata_budget.cpp",
+        "sha256": "f266db335251b0bb91b4677962da1627017396935aa99cc442e29cf7c206c40e",
+        "size_bytes": 1851
+      },
+      "destination": "tests/fex/memory/metadata_budget.cpp",
+      "mode": "100644",
+      "transformation": "none; exact byte copy",
+      "terms": "MIT",
+      "build_performed": false,
+      "execution_performed": false
+    },
+    {
+      "origin": {
+        "repository": "https://github.com/postmelee/pear",
+        "checkpoint": "951264bf5be4b9d2afb87320f5fac74778b2dd58",
+        "path": "tests/fex/memory/metadata_observation.c",
+        "sha256": "b30311e24f2d4ebbb17199c56376c9480dcd67fd6c115aea46fd40b0a6de7117",
+        "size_bytes": 4530
+      },
+      "destination": "tests/fex/memory/metadata_observation.c",
+      "mode": "100644",
+      "transformation": "none; exact byte copy",
+      "terms": "MIT",
+      "build_performed": false,
+      "execution_performed": false
+    },
+    {
+      "origin": {
+        "repository": "https://github.com/postmelee/pear",
+        "checkpoint": "951264bf5be4b9d2afb87320f5fac74778b2dd58",
+        "path": "tests/fex/memory/metadata_probe.c",
+        "sha256": "d7cbf5cfec2712640b579364d20bb54391ad98a818d93e74fbafa56728c325c2",
+        "size_bytes": 3305
+      },
+      "destination": "tests/fex/memory/metadata_probe.c",
+      "mode": "100644",
+      "transformation": "none; exact byte copy",
+      "terms": "MIT",
+      "build_performed": false,
+      "execution_performed": false
+    },
+    {
+      "origin": {
+        "repository": "https://github.com/postmelee/pear",
+        "checkpoint": "951264bf5be4b9d2afb87320f5fac74778b2dd58",
+        "path": "tests/fex/memory/native_cooperative.c",
+        "sha256": "2b51d0f38cb58ca2caf9f462101fc1e2b9511293ce2276d61a5524127066bfe4",
+        "size_bytes": 18876
+      },
+      "destination": "tests/fex/memory/native_cooperative.c",
+      "mode": "100644",
+      "transformation": "none; exact byte copy",
+      "terms": "GPL-3.0-or-later (existing Pear default; exact legacy file, adjacent attribution)",
+      "build_performed": false,
+      "execution_performed": false
+    },
+    {
+      "origin": {
+        "repository": "https://github.com/postmelee/pear",
+        "checkpoint": "951264bf5be4b9d2afb87320f5fac74778b2dd58",
+        "path": "tests/fex/memory/native_owner.c",
+        "sha256": "9650cd2a1c1a48319cb03c03db2557c1e4addca7edff01f0b91765c61aa1fab9",
+        "size_bytes": 9167
+      },
+      "destination": "tests/fex/memory/native_owner.c",
+      "mode": "100644",
+      "transformation": "none; exact byte copy",
+      "terms": "GPL-3.0-or-later (existing Pear default; exact legacy file, adjacent attribution)",
+      "build_performed": false,
+      "execution_performed": false
+    },
+    {
+      "origin": {
+        "repository": "https://github.com/postmelee/pear",
+        "checkpoint": "951264bf5be4b9d2afb87320f5fac74778b2dd58",
+        "path": "tests/fex/memory/owner_launch.c",
+        "sha256": "dc9ca145c945f7eb232a7e8b0e47abb11faeb886699bdf57c6022590c0b56874",
+        "size_bytes": 5668
+      },
+      "destination": "tests/fex/memory/owner_launch.c",
+      "mode": "100644",
+      "transformation": "none; exact byte copy",
+      "terms": "GPL-3.0-or-later (existing Pear default; exact legacy file, adjacent attribution)",
+      "build_performed": false,
+      "execution_performed": false
+    },
+    {
+      "origin": {
+        "repository": "https://github.com/postmelee/pear",
+        "checkpoint": "951264bf5be4b9d2afb87320f5fac74778b2dd58",
+        "path": "tests/fex/memory/protocol.py",
+        "sha256": "a56f018d6d017a150e2ada1b2172be792f54b26d0ba23abe803f7b4c92e0d91b",
+        "size_bytes": 5518
+      },
+      "destination": "tests/fex/memory/protocol.py",
+      "mode": "100644",
+      "transformation": "none; exact byte copy",
+      "terms": "GPL-3.0-or-later (existing Pear default; exact legacy file, adjacent attribution)",
+      "build_performed": false,
+      "execution_performed": false
+    },
+    {
+      "origin": {
+        "repository": "https://github.com/postmelee/pear",
+        "checkpoint": "951264bf5be4b9d2afb87320f5fac74778b2dd58",
+        "path": "tests/fex/memory/view_capacity.c",
+        "sha256": "81e71789c1de997881ec81246ca6c778833a0ea13ec8137dae70fa4a5412d712",
+        "size_bytes": 1638
+      },
+      "destination": "tests/fex/memory/view_capacity.c",
+      "mode": "100644",
+      "transformation": "none; exact byte copy",
+      "terms": "MIT",
+      "build_performed": false,
+      "execution_performed": false
+    },
+    {
+      "origin": {
+        "repository": "https://github.com/postmelee/pear",
+        "checkpoint": "951264bf5be4b9d2afb87320f5fac74778b2dd58",
+        "path": "tests/fex/memory/virtual_free_provider.c",
+        "sha256": "dccc6f8f56f2a8c3338524992b1fd110f37f4ccb4839dfac3f8cd89015046b1e",
+        "size_bytes": 2488
+      },
+      "destination": "tests/fex/memory/virtual_free_provider.c",
+      "mode": "100644",
+      "transformation": "none; exact byte copy",
+      "terms": "MIT",
+      "build_performed": false,
+      "execution_performed": false
+    },
+    {
+      "origin": {
+        "repository": "https://github.com/postmelee/pear",
+        "checkpoint": "951264bf5be4b9d2afb87320f5fac74778b2dd58",
+        "path": "tests/fex/memory/wine_debug_quiet.c",
+        "sha256": "0ca488b2ad2fe639cc49ddbfda0988c1f229c7c9e073d8a3570d214d76b53c43",
+        "size_bytes": 659
+      },
+      "destination": "tests/fex/memory/wine_debug_quiet.c",
+      "mode": "100644",
+      "transformation": "none; exact byte copy",
+      "terms": "GPL-3.0-or-later (existing Pear default; exact legacy file, adjacent attribution)",
+      "build_performed": false,
+      "execution_performed": false
+    },
+    {
+      "origin": {
+        "repository": "https://github.com/postmelee/pear",
+        "checkpoint": "951264bf5be4b9d2afb87320f5fac74778b2dd58",
+        "path": "tests/fex/memory/wine_owner.c",
+        "sha256": "596e8a83e7f61ca4f795e3be02d32c827f7079ff204629058bf0a76f9a30637f",
+        "size_bytes": 6885
+      },
+      "destination": "tests/fex/memory/wine_owner.c",
+      "mode": "100644",
+      "transformation": "none; exact byte copy",
+      "terms": "GPL-3.0-or-later (existing Pear default; exact legacy file, adjacent attribution)",
+      "build_performed": false,
+      "execution_performed": false
+    }
+  ],
+  "compiler_execution": false,
+  "native_execution": false,
+  "game_qualified": false,
+  "claims": [
+    "Exact editable source export only.",
+    "Historical protocol reader remains ABI2; selected Wine owner is ABI3.",
+    "Required generated probe includes are not missing selected-candidate operands."
+  ],
+  "canonical_headers": {
+    "wire": {
+      "repository": "pear-wine",
+      "path": "include/wine/pear_fex_memory.h",
+      "sha256": "a089b475fe6d6f2401977319eb4f0702e85c0753063f5748093131088f9f8b55"
+    },
+    "private": {
+      "repository": "pear-wine",
+      "path": "dlls/ntdll/unix/pear_fex_memory_private.h",
+      "sha256": "6deec3f8deecfffe6d39f418fead96706483abaafda60d37405b262fa102e1c3"
+    }
+  },
+  "generation_required": [
+    {
+      "consumer": "tests/fex/memory/metadata_budget.cpp",
+      "include": "selected_metadata_budget.inc",
+      "owner": "pear-fex",
+      "source": "Source/Windows/Common/PearFEXMemory.cpp",
+      "symbol": "AssessMetadataBudget",
+      "source_sha256": "380ca354c1d424fb8f94278f834e81e339a8008a5d1c43b89e16d3376edf3f7f"
+    },
+    {
+      "consumer": "tests/fex/memory/view_capacity.c",
+      "include": "selected_view_counter.inc",
+      "owner": "pear-wine",
+      "source": "dlls/ntdll/unix/virtual.c",
+      "symbol": "pear_fex_available_views",
+      "source_sha256": "f73cad94b62aea7511eed8bf2f95e9dc5b1e5665497baa4251370d9399f6e793"
+    }
+  ],
+  "build_limits": [
+    "No probe compilation/link/sign/run performed.",
+    "EC headers need actual registered FEX source-lifetime integration and original checkpoint namespace.",
+    "Native owner/cooperative probes need exact Wine owner/arena/generated config and Apple compiler/SDK inputs.",
+    "Wine PE probes need independently admitted target/CRT/import/entrypoint closure.",
+    "native_cooperative.c textually includes native_owner.c and fixture_suite.c; do not link duplicate bodies."
+  ],
+  "historical_recipe_sources": [
+    {
+      "path": "tools/fex/memory_build.py",
+      "sha256": "00f76ecdb948e8e8628cc198cdf9abd5bb3ec717d3de6ee1c6d1c1c2609a7632",
+      "checkpoint": "951264bf5be4b9d2afb87320f5fac74778b2dd58",
+      "role": "provenance only; no executable import"
+    },
+    {
+      "path": "tools/fex/memory_wine_build.py",
+      "sha256": "885123f6fae78f96def76ab3066a90911e1e768df16a8164150657ce013bee92",
+      "checkpoint": "951264bf5be4b9d2afb87320f5fac74778b2dd58",
+      "role": "provenance only; no executable import"
+    },
+    {
+      "path": "tools/fex/integration_fixture.py",
+      "sha256": "d75d307f957184f496a1edca1ebf32bb1bea1be00e95db9e3d3e13d2a13621b5",
+      "checkpoint": "951264bf5be4b9d2afb87320f5fac74778b2dd58",
+      "role": "provenance only; no executable import"
+    }
+  ],
+  "retention": "No original source, artifact or failure evidence is released; source-owner cutover remains separate."
+}

@@ -1,0 +1,1528 @@
+{
+  "candidate3": {
+    "sha256": "b9bee774f596c4f7bf908dc30ef1c11745797af2837ee4b42016bdf152086fc7",
+    "size_bytes": 2455486
+  },
+  "candidate3_assembly_operation": {
+    "sha256": "0de34ec5eb5afcf7d088f3032995ccf4d6a69a73b6225d47e27bad1947fc6b59",
+    "size_bytes": 9289
+  },
+  "cleanup": {
+    "approved_removed_files": 2326,
+    "logical_removed_bytes": 405492390,
+    "measured_free_delta_bytes": 409788416,
+    "protected_files": 271,
+    "reported_allocated_upper_bound_bytes": 412934144,
+    "retained_duplicates": 2314
+  },
+  "component_commit_binding_status": "pending_bundled_component_commits",
+  "component_commits": null,
+  "component_source_inventory": {
+    "changed_paths_before_reports": 123,
+    "checkpoint": "c13c7030ec3b780df12373cb9e0460bbcb5b0652",
+    "files": [
+      {
+        "kind": "file",
+        "mode": 420,
+        "path": ".github/source-notice-exceptions.json",
+        "sha256": "d42ad64e12142bc0959afb0bbb01178f7f290278a1168ccf49ba99afe75e93b3",
+        "size_bytes": 26019,
+        "untracked": false
+      },
+      {
+        "kind": "file",
+        "mode": 420,
+        "path": "pear_runtime/assembly/_byte_readers.py",
+        "sha256": "bb9a2d2b6a71e344c91aa696a422a80213287289170b763e7a6e9f05e12c641e",
+        "size_bytes": 7762,
+        "untracked": false
+      },
+      {
+        "kind": "file",
+        "mode": 420,
+        "path": "pear_runtime/assembly/core.py",
+        "sha256": "55675805f86085777e33930dce1a8703efebd5215de00d70d7d9b4c7dcb1bbce",
+        "size_bytes": 29477,
+        "untracked": false
+      },
+      {
+        "kind": "file",
+        "mode": 420,
+        "path": "pear_runtime/fixtures/context.py",
+        "sha256": "866db9f37ac64805a79334b2ecb61f3ecd559d103abfce1cf9e33f1a6a3fd6a5",
+        "size_bytes": 24018,
+        "untracked": false
+      },
+      {
+        "kind": "file",
+        "mode": 420,
+        "path": "pear_runtime/fixtures/controls/capture.py",
+        "sha256": "90a708f75c9b14677806e6e3457c95c3d5dfa653b7a241f6e58708c8a4e35a65",
+        "size_bytes": 3748,
+        "untracked": true
+      },
+      {
+        "kind": "file",
+        "mode": 420,
+        "path": "pear_runtime/fixtures/controls/capture_diagnostics.py",
+        "sha256": "0001e2fc09c6593b81d1b8b6b548a89fcf328661ab4b3b45287cfa34d0eb4a55",
+        "size_bytes": 12448,
+        "untracked": true
+      },
+      {
+        "kind": "file",
+        "mode": 420,
+        "path": "pear_runtime/fixtures/controls/context.py",
+        "sha256": "83a3afbb2f60553ddd8d75175216d539d92fef52dc57392cf33f79d518578cfc",
+        "size_bytes": 22155,
+        "untracked": true
+      },
+      {
+        "kind": "file",
+        "mode": 420,
+        "path": "pear_runtime/fixtures/controls/corpus.py",
+        "sha256": "73d0e39633dd04287e415f002d7485818cddc4c7de6c000919017cfc0e3d316b",
+        "size_bytes": 17489,
+        "untracked": false
+      },
+      {
+        "kind": "file",
+        "mode": 420,
+        "path": "pear_runtime/fixtures/controls/cpu_context.py",
+        "sha256": "bb0708c94f0f8b920544cd9ba5beea8ef49f85f6e72f0f418cc064c21f7685f4",
+        "size_bytes": 13619,
+        "untracked": true
+      },
+      {
+        "kind": "file",
+        "mode": 420,
+        "path": "pear_runtime/fixtures/controls/cpu_driver.py",
+        "sha256": "2d34589fd2a58bd7c83429a45fdad0ff5d08664d11311a7b0524239654e84643",
+        "size_bytes": 9865,
+        "untracked": true
+      },
+      {
+        "kind": "file",
+        "mode": 420,
+        "path": "pear_runtime/fixtures/controls/cpu_evidence.py",
+        "sha256": "549cf4ce068d6f3452b9690ccf30a11e1f713d578c9b6abf6a41c5b13ac05bf5",
+        "size_bytes": 27087,
+        "untracked": true
+      },
+      {
+        "kind": "file",
+        "mode": 420,
+        "path": "pear_runtime/fixtures/controls/cpu_execution.py",
+        "sha256": "b5fd0549abe98688953229cbef57d76716132ab2dfe762284a3203358c057209",
+        "size_bytes": 15691,
+        "untracked": true
+      },
+      {
+        "kind": "file",
+        "mode": 420,
+        "path": "pear_runtime/fixtures/controls/execution.py",
+        "sha256": "5a16e158308b338f6e98d2807c60e16ee7cf09bde718940e3de554bf362bec8b",
+        "size_bytes": 47426,
+        "untracked": true
+      },
+      {
+        "kind": "file",
+        "mode": 420,
+        "path": "pear_runtime/fixtures/native/NOTICE.md",
+        "sha256": "2ae57db4e93693f2e8a0192787f6ea91ca684e738b6a36ce10f2e9474f32bc06",
+        "size_bytes": 420,
+        "untracked": true
+      },
+      {
+        "kind": "file",
+        "mode": 420,
+        "path": "pear_runtime/fixtures/native/__init__.py",
+        "sha256": "5f8bdb841a188e9cc529bab30c5dc62ab1c63bda31e4e96329105c8d02619b38",
+        "size_bytes": 161,
+        "untracked": true
+      },
+      {
+        "kind": "file",
+        "mode": 420,
+        "path": "pear_runtime/fixtures/native/__main__.py",
+        "sha256": "3347e07df5a5e663525102706125dc50604ab20a00d343cd55de6849232ec71c",
+        "size_bytes": 175,
+        "untracked": true
+      },
+      {
+        "kind": "file",
+        "mode": 420,
+        "path": "pear_runtime/fixtures/native/api_variant.py",
+        "sha256": "2b88cbcd907f3dff449e008b7747e6f04647df78af217ef1007ba314c954c5ba",
+        "size_bytes": 10506,
+        "untracked": true
+      },
+      {
+        "kind": "file",
+        "mode": 420,
+        "path": "pear_runtime/fixtures/native/binding.py",
+        "sha256": "435bc0273c31fa6292fad3b14417342eef2074c5091b40c84bd494a0ee1c0281",
+        "size_bytes": 9592,
+        "untracked": true
+      },
+      {
+        "kind": "file",
+        "mode": 420,
+        "path": "pear_runtime/fixtures/native/context.py",
+        "sha256": "18919a4a84a7a2e29de19fb509492a28c3a7ab47e2f2037bf188351277d6f38d",
+        "size_bytes": 15788,
+        "untracked": true
+      },
+      {
+        "kind": "file",
+        "mode": 420,
+        "path": "pear_runtime/fixtures/native/driver.py",
+        "sha256": "6bdb8885dc9e3d438881ee6bcff7d9b16b74fcc3efc25921e06187523398ac31",
+        "size_bytes": 9374,
+        "untracked": true
+      },
+      {
+        "kind": "file",
+        "mode": 420,
+        "path": "pear_runtime/fixtures/native/execution.py",
+        "sha256": "60d6e3f539aff7ddf7a755fca53cc6243c66b1102bdca25f0033e5be128ff429",
+        "size_bytes": 11997,
+        "untracked": true
+      },
+      {
+        "kind": "file",
+        "mode": 420,
+        "path": "pear_runtime/fixtures/native/provider.py",
+        "sha256": "520c7bd2da1a7f91e8e76342767083e264dc969527b5bb73a835deb1844c3123",
+        "size_bytes": 14942,
+        "untracked": true
+      },
+      {
+        "kind": "file",
+        "mode": 420,
+        "path": "pear_runtime/fixtures/native/window_evidence.py",
+        "sha256": "210f86bdb19c791bd4f5e4aaa284c7645cb8002ee01f81f9ad83f1b1d95ee0d8",
+        "size_bytes": 19523,
+        "untracked": true
+      },
+      {
+        "kind": "file",
+        "mode": 420,
+        "path": "pear_runtime/fixtures/producers.py",
+        "sha256": "1ffa254beddc0da7f7882277bf94c623444a0dc51fbd9027c08c38e1d0ba72c9",
+        "size_bytes": 12612,
+        "untracked": false
+      },
+      {
+        "kind": "file",
+        "mode": 420,
+        "path": "pear_runtime/fixtures/release_controls.py",
+        "sha256": "ab1572b4b662f68a8074893eec499a7e050fcdf99f43beccb8fb89613749bd55",
+        "size_bytes": 13565,
+        "untracked": true
+      },
+      {
+        "kind": "file",
+        "mode": 420,
+        "path": "pear_runtime/header_use.py",
+        "sha256": "cb38d30a9305a471be2a11a867eb9e92631c53f38541c277319c3e266878eb06",
+        "size_bytes": 10165,
+        "untracked": true
+      },
+      {
+        "kind": "file",
+        "mode": 420,
+        "path": "pear_runtime/recipes/cpu_sources.py",
+        "sha256": "95f9ca8d6e862aaad0421904303031cbdeab914ea1e373cc82167ae3dc9775e8",
+        "size_bytes": 6972,
+        "untracked": true
+      },
+      {
+        "kind": "file",
+        "mode": 420,
+        "path": "pear_runtime/recipes/fex.py",
+        "sha256": "1be4a1b5591af5697f450247e96b768303ae53c6973238c2556ecca3bfcac5bc",
+        "size_bytes": 24672,
+        "untracked": false
+      },
+      {
+        "kind": "file",
+        "mode": 420,
+        "path": "pear_runtime/recovery.py",
+        "sha256": "22147775f5d5622b6e43b185b5d1660093c02336d507c7deabe284187b6b1950",
+        "size_bytes": 14656,
+        "untracked": true
+      },
+      {
+        "kind": "file",
+        "mode": 420,
+        "path": "provenance/assembly-import.json",
+        "sha256": "ee7ac54da46de2966319f9ba5c3aedf93445bba721f1426a78a9fbae056bc6a9",
+        "size_bytes": 27196,
+        "untracked": false
+      },
+      {
+        "kind": "file",
+        "mode": 420,
+        "path": "provenance/cpu-source-import.json",
+        "sha256": "c7a2b0eb5bfdbdfc9feda9871796b38e2cf10c648816cafce8d842510d840a4e",
+        "size_bytes": 8081,
+        "untracked": true
+      },
+      {
+        "kind": "file",
+        "mode": 420,
+        "path": "provenance/cpu-test-reconciliation.json",
+        "sha256": "821254b25c671cb728d08ed9d4025f0814c1707c7ac3145b1df6926c0b581eef",
+        "size_bytes": 19559,
+        "untracked": true
+      },
+      {
+        "kind": "file",
+        "mode": 420,
+        "path": "provenance/fixture-context-import.json",
+        "sha256": "338eb89ccb9ee2dde46546f08a8f217830a2fa586d05abe25711280ada7f8526",
+        "size_bytes": 25196,
+        "untracked": false
+      },
+      {
+        "kind": "file",
+        "mode": 420,
+        "path": "provenance/fixture-controls-execution-import.json",
+        "sha256": "5b332e0029dad39a9cab9aa66b4cbda51f7c378947f36e94bf2f562cd6223d4c",
+        "size_bytes": 14528,
+        "untracked": true
+      },
+      {
+        "kind": "file",
+        "mode": 420,
+        "path": "provenance/fixture-controls-import.json",
+        "sha256": "c022409344249005fc1c5d84102e0907212721087deb4ded5575aba7dcda8b7b",
+        "size_bytes": 80068,
+        "untracked": false
+      },
+      {
+        "kind": "file",
+        "mode": 420,
+        "path": "provenance/fixture-controls-release-import.json",
+        "sha256": "be2d3249d16a2e5f3c811cd470fcb458c50452954bd13cb2c6d6189567c51da6",
+        "size_bytes": 1369,
+        "untracked": true
+      },
+      {
+        "kind": "file",
+        "mode": 420,
+        "path": "provenance/fixture-cpu-import-errata.json",
+        "sha256": "88ef7b4c549facfe86346e9918fc4417f61af1bf3cd9708553ba1b1e0c0f27dd",
+        "size_bytes": 1165,
+        "untracked": true
+      },
+      {
+        "kind": "file",
+        "mode": 420,
+        "path": "provenance/fixture-cpu-import.json",
+        "sha256": "1661a225145f9b52aa73957385bc5977cf3d89804ae829570874987ded0e909a",
+        "size_bytes": 8399,
+        "untracked": true
+      },
+      {
+        "kind": "file",
+        "mode": 420,
+        "path": "provenance/fixture-native-import.json",
+        "sha256": "569e7ff3193996803da4809d6233467f61ce5d3a0b4b95ada83797a4be5f666f",
+        "size_bytes": 16409,
+        "untracked": true
+      },
+      {
+        "kind": "file",
+        "mode": 420,
+        "path": "provenance/memory-current-input-tests.json",
+        "sha256": "25405c727f1bc28ed13c990409f14f72c248e98ff3c4d87b0db0f5498e5b7bac",
+        "size_bytes": 30195,
+        "untracked": true
+      },
+      {
+        "kind": "file",
+        "mode": 420,
+        "path": "provenance/memory-fixture-source-import.json",
+        "sha256": "9159ad6ffa49cbb38535ed42e4227dbf21e4334cd0fe2c1eca843dbf14bd39fc",
+        "size_bytes": 12551,
+        "untracked": true
+      },
+      {
+        "kind": "file",
+        "mode": 420,
+        "path": "provenance/memory-remaining-input-tests.json",
+        "sha256": "824329e56c37f9e650dedc722be6dd99f2bce5237fefde7fe0d92d372e8da018",
+        "size_bytes": 4024,
+        "untracked": true
+      },
+      {
+        "kind": "file",
+        "mode": 420,
+        "path": "provenance/paired-memory-methods.json",
+        "sha256": "b680df7bbfc2203f3c7ab099f3cf04e15c508fe159691f5ef2eff072d74555ca",
+        "size_bytes": 293592,
+        "untracked": true
+      },
+      {
+        "kind": "file",
+        "mode": 420,
+        "path": "provenance/paired-memory-tests-import.json",
+        "sha256": "8573899c7e106215caf97081e5e62c1e542faf2b3c87e6ac69c0d4dc1dceb12a",
+        "size_bytes": 38418,
+        "untracked": true
+      },
+      {
+        "kind": "file",
+        "mode": 420,
+        "path": "provenance/wine-integration-tests-import.json",
+        "sha256": "838c9ea6c6a94731249f30630a4bc4663e8a9ed45b4c958d516e07127edbe84a",
+        "size_bytes": 189091,
+        "untracked": true
+      },
+      {
+        "kind": "file",
+        "mode": 420,
+        "path": "recipes/cpu/README.md",
+        "sha256": "b8c09947e863e0f3f26876a3c97895e5daf99e439bde124f687c4c314a623da3",
+        "size_bytes": 4365,
+        "untracked": true
+      },
+      {
+        "kind": "file",
+        "mode": 420,
+        "path": "recipes/cpu/sources-v1.json",
+        "sha256": "ecae78ad5e72f797d45f0d7ef9b3964fc3389f82c9f621e94c78f1b486fbde66",
+        "size_bytes": 21950,
+        "untracked": true
+      },
+      {
+        "kind": "file",
+        "mode": 420,
+        "path": "tests/assembly/test_raw_paths.py",
+        "sha256": "8b8737e485185b70b2357a2504e72e5b0766b2e096bd97c528bcec87e34a8876",
+        "size_bytes": 6598,
+        "untracked": true
+      },
+      {
+        "kind": "file",
+        "mode": 420,
+        "path": "tests/build/test_header_use.py",
+        "sha256": "0c6aeacc9cc42a7900da89dd92bb61d0984199426d253c1f2b8828b4065fb6e9",
+        "size_bytes": 11769,
+        "untracked": true
+      },
+      {
+        "kind": "file",
+        "mode": 420,
+        "path": "tests/cpu/abi.c",
+        "sha256": "8f745bce9240eb5e4fb64c641f12eebde16caae1f352e4c43a064273cea4c384",
+        "size_bytes": 2388,
+        "untracked": true
+      },
+      {
+        "kind": "file",
+        "mode": 420,
+        "path": "tests/cpu/cpu_legacy/__init__.py",
+        "sha256": "7c57e6f641715615f1aea7fb4bbcf5fcbe0894f76e570ae796ea4571483d7af9",
+        "size_bytes": 160,
+        "untracked": true
+      },
+      {
+        "kind": "file",
+        "mode": 420,
+        "path": "tests/cpu/cpu_legacy/correction.py",
+        "sha256": "909c8258f86c89bf066ceedd1045c594b2285c9cef53e3a7fdd0dd26d44fd2c5",
+        "size_bytes": 3457,
+        "untracked": true
+      },
+      {
+        "kind": "file",
+        "mode": 420,
+        "path": "tests/cpu/cpu_legacy/qualification.py",
+        "sha256": "0622dfbf4de983d32316a836c65daab76ecc6a9578d1715a957d5d2efe2e9903",
+        "size_bytes": 2109,
+        "untracked": true
+      },
+      {
+        "kind": "file",
+        "mode": 420,
+        "path": "tests/cpu/ordering.asm",
+        "sha256": "1297602b4fb41c90764265842ffcff3404a9943ccb2dd96ae90eda711efad404",
+        "size_bytes": 607,
+        "untracked": true
+      },
+      {
+        "kind": "file",
+        "mode": 420,
+        "path": "tests/cpu/ordering.c",
+        "sha256": "2bde8b2f86558e644c483a419da9c1a4c48c7c2f8cf39c267520a2d404c6f662",
+        "size_bytes": 6110,
+        "untracked": true
+      },
+      {
+        "kind": "file",
+        "mode": 420,
+        "path": "tests/cpu/seh.c",
+        "sha256": "df38f07c5b81b0b06f9f66d63cd934aa73cb295574ec6e87b1dc315cbcf1a1d6",
+        "size_bytes": 1718,
+        "untracked": true
+      },
+      {
+        "kind": "file",
+        "mode": 420,
+        "path": "tests/cpu/test_correction_evidence.py",
+        "sha256": "ad5210decacbfc81fd34bc1c26d74b36f0ca7387693a45fcfbdeb40ac682e557",
+        "size_bytes": 3260,
+        "untracked": true
+      },
+      {
+        "kind": "file",
+        "mode": 420,
+        "path": "tests/cpu/test_qualification.py",
+        "sha256": "deedcdc5906e719d26f8ed2e4ea6c6c278424d4c603b7a81e05fb3fea51d7ad0",
+        "size_bytes": 2788,
+        "untracked": true
+      },
+      {
+        "kind": "file",
+        "mode": 420,
+        "path": "tests/cpu/test_source_inputs.py",
+        "sha256": "ce18b33e61c20bb65ed619a12d62f8b70686776e2fbe9bc40426b37ef3f98000",
+        "size_bytes": 2766,
+        "untracked": true
+      },
+      {
+        "kind": "file",
+        "mode": 420,
+        "path": "tests/fex/NOTICE.md",
+        "sha256": "f893efaf1a4dcaa12ee87400a124ebd738c2871297c7503a9ab4757fa56a6541",
+        "size_bytes": 1810,
+        "untracked": true
+      },
+      {
+        "kind": "file",
+        "mode": 420,
+        "path": "tests/fex/ec_concurrent_lifetime.h",
+        "sha256": "e5f53abed4eec357b3d1b0985303f8b9941aef5fe8805f175b57a3ca0efc6b71",
+        "size_bytes": 4754,
+        "untracked": true
+      },
+      {
+        "kind": "file",
+        "mode": 420,
+        "path": "tests/fex/ec_memory_lifecycle.h",
+        "sha256": "c71a5128f1e360d448df66864d1222496a810875a625126c82ffb045a5601d27",
+        "size_bytes": 7231,
+        "untracked": true
+      },
+      {
+        "kind": "file",
+        "mode": 420,
+        "path": "tests/fex/guest_api.c",
+        "sha256": "d7d822004ec64cbd1fca703b1195abd40a55ac1d3825743178b7d7f1ed8a81ed",
+        "size_bytes": 3387,
+        "untracked": true
+      },
+      {
+        "kind": "file",
+        "mode": 420,
+        "path": "tests/fex/guest_context.c",
+        "sha256": "a7a47ea0fb4290297911c75df3f2e62566df7a2c41614cc8bafa33cb43b1f58f",
+        "size_bytes": 1371,
+        "untracked": true
+      },
+      {
+        "kind": "file",
+        "mode": 420,
+        "path": "tests/fex/guest_exception.c",
+        "sha256": "5cd3d261ca38786c60e445eef07661a718f4a0c7b2b1e42a5f26bb1bbeae7e7a",
+        "size_bytes": 2192,
+        "untracked": true
+      },
+      {
+        "kind": "file",
+        "mode": 420,
+        "path": "tests/fex/guest_invalidation.c",
+        "sha256": "2a61be720bf218f9bc4f2b684a7594eac849d3597b112fd5b46f44a198bf445f",
+        "size_bytes": 2047,
+        "untracked": true
+      },
+      {
+        "kind": "file",
+        "mode": 420,
+        "path": "tests/fex/guest_thread.c",
+        "sha256": "82d3df3728da1b156b0b0c1ce01cdecb841e16358c1414937ffb6744309eef2f",
+        "size_bytes": 1457,
+        "untracked": true
+      },
+      {
+        "kind": "file",
+        "mode": 420,
+        "path": "tests/fex/memory/bitmap_selection_probe.c",
+        "sha256": "38f8530837ecfa2b1270bff3c6ab8febe75965899de496fdc1e214dd0d3da97d",
+        "size_bytes": 3646,
+        "untracked": true
+      },
+      {
+        "kind": "file",
+        "mode": 420,
+        "path": "tests/fex/memory/fixture_suite.c",
+        "sha256": "846279777765506f70e83b7e1edc029d06804fc509b2883a370f59cf1cc263d6",
+        "size_bytes": 32780,
+        "untracked": true
+      },
+      {
+        "kind": "file",
+        "mode": 420,
+        "path": "tests/fex/memory/fixture_suite.h",
+        "sha256": "b884f768bcc8af7f94b2356960a76279cc761c69c969baed0dd4b06291db344b",
+        "size_bytes": 874,
+        "untracked": true
+      },
+      {
+        "kind": "file",
+        "mode": 420,
+        "path": "tests/fex/memory/metadata_budget.cpp",
+        "sha256": "f266db335251b0bb91b4677962da1627017396935aa99cc442e29cf7c206c40e",
+        "size_bytes": 1851,
+        "untracked": true
+      },
+      {
+        "kind": "file",
+        "mode": 420,
+        "path": "tests/fex/memory/metadata_observation.c",
+        "sha256": "b30311e24f2d4ebbb17199c56376c9480dcd67fd6c115aea46fd40b0a6de7117",
+        "size_bytes": 4530,
+        "untracked": true
+      },
+      {
+        "kind": "file",
+        "mode": 420,
+        "path": "tests/fex/memory/metadata_probe.c",
+        "sha256": "d7cbf5cfec2712640b579364d20bb54391ad98a818d93e74fbafa56728c325c2",
+        "size_bytes": 3305,
+        "untracked": true
+      },
+      {
+        "kind": "file",
+        "mode": 420,
+        "path": "tests/fex/memory/native_cooperative.c",
+        "sha256": "2b51d0f38cb58ca2caf9f462101fc1e2b9511293ce2276d61a5524127066bfe4",
+        "size_bytes": 18876,
+        "untracked": true
+      },
+      {
+        "kind": "file",
+        "mode": 420,
+        "path": "tests/fex/memory/native_owner.c",
+        "sha256": "9650cd2a1c1a48319cb03c03db2557c1e4addca7edff01f0b91765c61aa1fab9",
+        "size_bytes": 9167,
+        "untracked": true
+      },
+      {
+        "kind": "file",
+        "mode": 420,
+        "path": "tests/fex/memory/owner_launch.c",
+        "sha256": "dc9ca145c945f7eb232a7e8b0e47abb11faeb886699bdf57c6022590c0b56874",
+        "size_bytes": 5668,
+        "untracked": true
+      },
+      {
+        "kind": "file",
+        "mode": 420,
+        "path": "tests/fex/memory/protocol.py",
+        "sha256": "a56f018d6d017a150e2ada1b2172be792f54b26d0ba23abe803f7b4c92e0d91b",
+        "size_bytes": 5518,
+        "untracked": true
+      },
+      {
+        "kind": "file",
+        "mode": 420,
+        "path": "tests/fex/memory/view_capacity.c",
+        "sha256": "81e71789c1de997881ec81246ca6c778833a0ea13ec8137dae70fa4a5412d712",
+        "size_bytes": 1638,
+        "untracked": true
+      },
+      {
+        "kind": "file",
+        "mode": 420,
+        "path": "tests/fex/memory/virtual_free_provider.c",
+        "sha256": "dccc6f8f56f2a8c3338524992b1fd110f37f4ccb4839dfac3f8cd89015046b1e",
+        "size_bytes": 2488,
+        "untracked": true
+      },
+      {
+        "kind": "file",
+        "mode": 420,
+        "path": "tests/fex/memory/wine_debug_quiet.c",
+        "sha256": "0ca488b2ad2fe639cc49ddbfda0988c1f229c7c9e073d8a3570d214d76b53c43",
+        "size_bytes": 659,
+        "untracked": true
+      },
+      {
+        "kind": "file",
+        "mode": 420,
+        "path": "tests/fex/memory/wine_owner.c",
+        "sha256": "596e8a83e7f61ca4f795e3be02d32c827f7079ff204629058bf0a76f9a30637f",
+        "size_bytes": 6885,
+        "untracked": true
+      },
+      {
+        "kind": "file",
+        "mode": 420,
+        "path": "tests/fixtures/controls/test_capture_diagnostics.py",
+        "sha256": "bca90908627def51d72498b92259ad16d1e3c92e358888391be7e9e19f380268",
+        "size_bytes": 15715,
+        "untracked": true
+      },
+      {
+        "kind": "file",
+        "mode": 420,
+        "path": "tests/fixtures/controls/test_control_adapters.py",
+        "sha256": "61194437696c6db7ed60661170b7640f1d13cba733c266ffd1b40cdcc394d86d",
+        "size_bytes": 11474,
+        "untracked": false
+      },
+      {
+        "kind": "file",
+        "mode": 420,
+        "path": "tests/fixtures/controls/test_corpus_results.py",
+        "sha256": "28c924697c4d6c6a33781e73878c224038a1f470c2bfbc4f26401c4f0e939477",
+        "size_bytes": 6440,
+        "untracked": false
+      },
+      {
+        "kind": "file",
+        "mode": 420,
+        "path": "tests/fixtures/controls/test_cpu_driver.py",
+        "sha256": "cc17766661772d3df54d285f81b2187ed2c02f8d6835884d2bb4351460cc6891",
+        "size_bytes": 8628,
+        "untracked": true
+      },
+      {
+        "kind": "file",
+        "mode": 420,
+        "path": "tests/fixtures/controls/test_cpu_evidence.py",
+        "sha256": "8d649f90f766670b323cd68767557067fa104c15fc4737a51d1f7874f16aef26",
+        "size_bytes": 8553,
+        "untracked": true
+      },
+      {
+        "kind": "file",
+        "mode": 420,
+        "path": "tests/fixtures/controls/test_cpu_execution.py",
+        "sha256": "35f2dd6fc2db9117ebd58517476809ce2126644e6c6b555353545859a5cd0f68",
+        "size_bytes": 7979,
+        "untracked": true
+      },
+      {
+        "kind": "file",
+        "mode": 420,
+        "path": "tests/fixtures/controls/test_cpu_execution_successors.py",
+        "sha256": "c7fdea9cb3ee1bb9382913bcfe47796379530d33a418c5bece03b4f85ae7daf2",
+        "size_bytes": 2195,
+        "untracked": true
+      },
+      {
+        "kind": "file",
+        "mode": 420,
+        "path": "tests/fixtures/controls/test_cpu_provider.py",
+        "sha256": "a43fa7fe1257816365f34a03c78524092211a63700e8334c46f454d22055b4b9",
+        "size_bytes": 2789,
+        "untracked": true
+      },
+      {
+        "kind": "file",
+        "mode": 420,
+        "path": "tests/fixtures/controls/test_execution.py",
+        "sha256": "b63406e0f1e12db1f9e1d9f5ad9d502a9ae5ad933d5a5cba9440dc8b28eb088a",
+        "size_bytes": 35225,
+        "untracked": true
+      },
+      {
+        "kind": "file",
+        "mode": 420,
+        "path": "tests/fixtures/header_fixture.py",
+        "sha256": "0370e6ecdaf142508b2af4a8b1fb55822f5733179cf0d7a47956894e94d7d9a1",
+        "size_bytes": 7156,
+        "untracked": true
+      },
+      {
+        "kind": "file",
+        "mode": 420,
+        "path": "tests/fixtures/native/test_admission.py",
+        "sha256": "f2009294d188c2b6813d0013404760f0cc8868681f35a6c60e1fc2797583903c",
+        "size_bytes": 4021,
+        "untracked": true
+      },
+      {
+        "kind": "file",
+        "mode": 420,
+        "path": "tests/fixtures/native/test_api_variant.py",
+        "sha256": "a7c6a3101070d468da4eb5393bbcdfadcda6d8e2df68c3eee42e0f52d7c1d2cd",
+        "size_bytes": 7439,
+        "untracked": true
+      },
+      {
+        "kind": "file",
+        "mode": 420,
+        "path": "tests/fixtures/native/test_binding.py",
+        "sha256": "1429cb0ea2a7a9f68df1988d4c86f44f17cd5c9c7380c150a87faf887e3566d8",
+        "size_bytes": 2206,
+        "untracked": true
+      },
+      {
+        "kind": "file",
+        "mode": 420,
+        "path": "tests/fixtures/native/test_driver.py",
+        "sha256": "d436c173c3544e5806913efcd79641aa2b272c467e9589d15ec4297b3beea686",
+        "size_bytes": 5599,
+        "untracked": true
+      },
+      {
+        "kind": "file",
+        "mode": 420,
+        "path": "tests/fixtures/native/test_execution.py",
+        "sha256": "1d6ebb51f89008cf9eedf7a342039dce0c8e9ef7aedaaf85005b1005aef731f0",
+        "size_bytes": 5221,
+        "untracked": true
+      },
+      {
+        "kind": "file",
+        "mode": 420,
+        "path": "tests/fixtures/native/test_menu.py",
+        "sha256": "aee49a48a8d5784affb8dcef4c4ee76e17cae48b78ea12db5c79ca38aa2d7c1e",
+        "size_bytes": 3892,
+        "untracked": true
+      },
+      {
+        "kind": "file",
+        "mode": 420,
+        "path": "tests/fixtures/native/test_provider.py",
+        "sha256": "66340eaf67946ac2c9d33544d46cf00187cfe45d5e9f201813cfeb69725e0d23",
+        "size_bytes": 8409,
+        "untracked": true
+      },
+      {
+        "kind": "file",
+        "mode": 420,
+        "path": "tests/fixtures/native/test_relocation.py",
+        "sha256": "9ef294288b0b91358029046d9f8a6553036dd0ef6e25dd83ef0cae2a48fb602e",
+        "size_bytes": 6823,
+        "untracked": true
+      },
+      {
+        "kind": "file",
+        "mode": 420,
+        "path": "tests/fixtures/native/test_seed.py",
+        "sha256": "4ae3a55011cfdae67d3d6a01e29099f41de1a9d6e212118df8bc23867b85b087",
+        "size_bytes": 4325,
+        "untracked": true
+      },
+      {
+        "kind": "file",
+        "mode": 420,
+        "path": "tests/fixtures/native/test_window_authorization.py",
+        "sha256": "ee5f6415ede5f8b73e639ce775fad02f1d5bc6f46635375ddf93dfc586d4e65b",
+        "size_bytes": 8649,
+        "untracked": true
+      },
+      {
+        "kind": "file",
+        "mode": 420,
+        "path": "tests/fixtures/test_context.py",
+        "sha256": "422c24dfb8386495d4b0cbd47acd458cf202b8de2ccb6cd5a9cea637ae268321",
+        "size_bytes": 13739,
+        "untracked": false
+      },
+      {
+        "kind": "file",
+        "mode": 420,
+        "path": "tests/fixtures/test_header_binding.py",
+        "sha256": "af4f73961add84f11d4e413640e04e9fe10b2822d3e34d22d0c6bb4ece6ed897",
+        "size_bytes": 12746,
+        "untracked": true
+      },
+      {
+        "kind": "file",
+        "mode": 420,
+        "path": "tests/fixtures/test_producers.py",
+        "sha256": "02ee135b06548e5a8e5c5bca0a7c4fa67d4e0a7989621feeaa1d47d08c2b4f38",
+        "size_bytes": 9726,
+        "untracked": false
+      },
+      {
+        "kind": "file",
+        "mode": 420,
+        "path": "tests/fixtures/test_release_controls.py",
+        "sha256": "a863be545b61b0a95bda5e1d69a63d9a60ec2621408c7a16c185980435bc88d6",
+        "size_bytes": 13164,
+        "untracked": true
+      },
+      {
+        "kind": "file",
+        "mode": 420,
+        "path": "tests/recovery/test_recovery.py",
+        "sha256": "5a91b9e0eaa7a0d94eec73be2a14076c3b915fea4ba3dee9264d9510d7d89f70",
+        "size_bytes": 17412,
+        "untracked": true
+      },
+      {
+        "kind": "file",
+        "mode": 420,
+        "path": "tests/wine_integration/__init__.py",
+        "sha256": "6d36a3ff0893e178ac1d6b1e052e1039d220c83a15b9f022829824a3f70ee1ad",
+        "size_bytes": 162,
+        "untracked": true
+      },
+      {
+        "kind": "file",
+        "mode": 420,
+        "path": "tests/wine_integration/oracles/__init__.py",
+        "sha256": "6d9539fea5fefc49fc3287f230828d40de5c14265f170b6eea8223a370974ad6",
+        "size_bytes": 171,
+        "untracked": true
+      },
+      {
+        "kind": "file",
+        "mode": 420,
+        "path": "tests/wine_integration/oracles/bitmap.py",
+        "sha256": "ade8c806f8f51b3b1e17344ae5512e219dade99efb40b809531f831708af2034",
+        "size_bytes": 19958,
+        "untracked": true
+      },
+      {
+        "kind": "file",
+        "mode": 420,
+        "path": "tests/wine_integration/oracles/memory.py",
+        "sha256": "ae0d4c2bc43097ae68fe4dfb2189d62b27dc543f9d0f52e089dff69a295d8258",
+        "size_bytes": 52185,
+        "untracked": true
+      },
+      {
+        "kind": "file",
+        "mode": 420,
+        "path": "tests/wine_integration/oracles/pe.py",
+        "sha256": "3eefd74e2ae80fae68fcb8416917bd2c2b735fa6411daa30edb7570a242ba484",
+        "size_bytes": 4286,
+        "untracked": true
+      },
+      {
+        "kind": "file",
+        "mode": 420,
+        "path": "tests/wine_integration/oracles/resume.py",
+        "sha256": "d7d6509c21c2dc4573ec87122dbdd1ad3c00acb20aff755412ee267ef4f3520e",
+        "size_bytes": 10575,
+        "untracked": true
+      },
+      {
+        "kind": "file",
+        "mode": 420,
+        "path": "tests/wine_integration/oracles/synthetic_atomic.py",
+        "sha256": "a604e162a8a4c62ddd8134f4350299dc413f19883d714b7c5171527016a0f8e9",
+        "size_bytes": 3191,
+        "untracked": true
+      },
+      {
+        "kind": "file",
+        "mode": 420,
+        "path": "tests/wine_integration/oracles/synthetic_memory.py",
+        "sha256": "44567345884df7329bf56caecbdf5bc9504001472b6361e0d30a10c45ea1661f",
+        "size_bytes": 8354,
+        "untracked": true
+      },
+      {
+        "kind": "file",
+        "mode": 420,
+        "path": "tests/wine_integration/test_memory_atomic_resume.py",
+        "sha256": "b91097708b06d074ba8ce9f1bac18766d565b7345eb99ab12f8cce25110bbe39",
+        "size_bytes": 12597,
+        "untracked": true
+      },
+      {
+        "kind": "file",
+        "mode": 420,
+        "path": "tests/wine_integration/test_memory_check.py",
+        "sha256": "23b2b26a4fcb12d0ddbeca484c0f6f3cf0bcb41ff263591156163888bb444ce4",
+        "size_bytes": 6523,
+        "untracked": true
+      },
+      {
+        "kind": "file",
+        "mode": 420,
+        "path": "tests/wine_integration/test_memory_current_inputs.py",
+        "sha256": "79cb0f5f3fb9cf30062877934ff6af0ae32272054c6cd9185ee01a8010e77dda",
+        "size_bytes": 10714,
+        "untracked": true
+      },
+      {
+        "kind": "file",
+        "mode": 420,
+        "path": "tests/wine_integration/test_memory_protocol.py",
+        "sha256": "b54d224f322497aa310cd3c1f24fd5ab9a2f3621cf9badf5895482864953c1a6",
+        "size_bytes": 5538,
+        "untracked": true
+      },
+      {
+        "kind": "file",
+        "mode": 420,
+        "path": "tests/wine_integration/test_memory_remaining_inputs.py",
+        "sha256": "896d4b8492fba0d301eba3739b9286dd984967fa0cbc804068a69de638abaa6f",
+        "size_bytes": 3674,
+        "untracked": true
+      },
+      {
+        "kind": "file",
+        "mode": 420,
+        "path": "tests/wine_integration/test_memory_wine_bitmap.py",
+        "sha256": "5b0b74689e20444361e0969d1fea8a2e0ed5b480d93e50997667640636b01e49",
+        "size_bytes": 21671,
+        "untracked": true
+      },
+      {
+        "kind": "file",
+        "mode": 420,
+        "path": "tests/wine_integration/test_memory_wine_bitmap_prefix.py",
+        "sha256": "ab4249f94cfa7e6b7d1fd83cd64e8dec88050c26d851aa30be367463bcc49592",
+        "size_bytes": 6699,
+        "untracked": true
+      },
+      {
+        "kind": "file",
+        "mode": 420,
+        "path": "tests/wine_integration/test_stage3_memory_wine_build.py",
+        "sha256": "eda65d6473e75845dd2287425853c4836282c1caf895db6e2bd25476890ca91e",
+        "size_bytes": 2518,
+        "untracked": true
+      },
+      {
+        "kind": "file",
+        "mode": 420,
+        "path": "tests/wine_integration/test_stage3_memory_wine_run.py",
+        "sha256": "710310cf391c160bbbe88f79dd6f49412e500b6f401c7d24788acc43846530b2",
+        "size_bytes": 32579,
+        "untracked": true
+      }
+    ],
+    "logical_bytes_before_reports": 1824864
+  },
+  "evidence": [
+    {
+      "id": "implementation_plan",
+      "sha256": "d856f1a623eb335af47aa400eb69a833d8392b3954e40a176b057b6c006d1d88",
+      "size_bytes": 30942
+    },
+    {
+      "id": "stage4_1",
+      "sha256": "f573c0ca72cf8d3892c4a70620b3ad77ad0d139d03c03ea69b4b966f8637194d",
+      "size_bytes": 7774
+    },
+    {
+      "id": "portable715",
+      "sha256": "f498c1813bffe7f3e6fa30dc7da903f870e18c27f9954a79667b213101db7751",
+      "size_bytes": 387180
+    },
+    {
+      "id": "assembly174",
+      "sha256": "b660be8837d295a12a812411a97bbaa1566ffeaf55fbe42fb7121afcb03499db",
+      "size_bytes": 23745
+    },
+    {
+      "id": "fex94",
+      "sha256": "5bdad702cdac4c52ccb40a3c249149f640b35449775172af1da7c9a1d9ea76a7",
+      "size_bytes": 5107
+    },
+    {
+      "id": "fex_export",
+      "sha256": "fdab2cfaf410da442ded84eb28dcc35850458594762c74f53e2927ce7a16a6bc",
+      "size_bytes": 10869
+    },
+    {
+      "id": "canonical196",
+      "sha256": "b680df7bbfc2203f3c7ab099f3cf04e15c508fe159691f5ef2eff072d74555ca",
+      "size_bytes": 293592
+    },
+    {
+      "id": "runtime44_review",
+      "sha256": "3041556bc61b01adfeaf9d52036f643744a13a718f8f0c9cc65b781100a8ad02",
+      "size_bytes": 4838
+    },
+    {
+      "id": "fex47_review",
+      "sha256": "4d4054b2ef1a59ef2e7386c578f69a96c6e797825cfe8a09c8a3b337856e1e70",
+      "size_bytes": 2025
+    },
+    {
+      "id": "fex49_installed",
+      "sha256": "eab0167c61d4d0d301ca369251ed7414cc95fdda5f4d61c3fe37801a518ea3fb",
+      "size_bytes": 498
+    },
+    {
+      "id": "candidate3_assembly",
+      "sha256": "45d2c411bb1439e41b13b406104e98cb7cb5ded77ae9ccbc9b6ef52d982e65e5",
+      "size_bytes": 592
+    },
+    {
+      "id": "candidate3_comparison",
+      "sha256": "b484330107de5559385c03fd38abf1a81f1594963b77bc7cb794f931ecc56c99",
+      "size_bytes": 3938
+    },
+    {
+      "id": "header_binding",
+      "sha256": "86ddd8b38a8cdfa22a6ebad7d6db350031dc69056c49493288d8586911e856a5",
+      "size_bytes": 4105
+    },
+    {
+      "id": "window_adapter",
+      "sha256": "cd7c97b1f0ab7a9baae464ba6bf4d72e4ba031992d148015affdf9d8422d894d",
+      "size_bytes": 2084
+    },
+    {
+      "id": "seven3_prepared",
+      "sha256": "2dc2eb88eab783689519a2221497a7a9c45ee3c8b6a9677c315f44acf3f8d96d",
+      "size_bytes": 6755
+    },
+    {
+      "id": "native5_prepared",
+      "sha256": "71429cb02ed16506c7ca670a2a0fc8e598a0bce0e4b8ab9ddf7252ad3c251104",
+      "size_bytes": 6617
+    },
+    {
+      "id": "bootstrap5_prepared",
+      "sha256": "3f3a689a63e30a0eb82f858d452f532152ff05a043c3ac2e636b2740477f9114",
+      "size_bytes": 15647
+    },
+    {
+      "id": "cpu_historical",
+      "sha256": "ab301415e36358f281769a74fa7e9856a7b3a6e292a9b9ac96cc226b0863d3b3",
+      "size_bytes": 20985
+    },
+    {
+      "id": "graphics_historical",
+      "sha256": "9ffd891827ddd020bf6b44b692568ba0acaa155e6587d1d8d57781d3f25a3224",
+      "size_bytes": 102452
+    },
+    {
+      "id": "reuse_policy",
+      "sha256": "7fc5bf355d4569ab1c0336e64fd8f4ca898deab98b3825479b01793068b988f5",
+      "size_bytes": 7038
+    },
+    {
+      "id": "reuse_source_delta",
+      "sha256": "cba3d27a97b2af110d8c65a679844c27244299bc5bee53b5c84a363878b6fcfb",
+      "size_bytes": 40609
+    },
+    {
+      "id": "recovery",
+      "sha256": "ff1db6b6dcab01b0ddffd15c7864235272e44fca5817a4f7db09aaf5b01cb0c8",
+      "size_bytes": 5205
+    },
+    {
+      "id": "notice_exceptions",
+      "sha256": "fd9ed45784aa555b4a2fb82fb3455b83302043f425eccfe0e1d61c5f79af8d52",
+      "size_bytes": 1031
+    },
+    {
+      "id": "notice_result",
+      "sha256": "001ec9e6e3dae50f2a0b9bd8c29310118adacb694d18760fd25d8695ab312ec9",
+      "size_bytes": 558
+    },
+    {
+      "id": "notice_runtime_later",
+      "sha256": "a960d61abf8220e7da946600911e4fed8856f80ad700b2325223c8c1926efb06",
+      "size_bytes": 10366
+    },
+    {
+      "id": "cleanup2326",
+      "sha256": "32c82cec3c9e8912a4e4dbb0f644ac8d6e6e574e04ab5e0d232832c798975129",
+      "size_bytes": 293557
+    },
+    {
+      "id": "cleanup_retention",
+      "sha256": "e40ff24870806f8f6ee3fe37cb20f913e81f11166a10dcc1d2c92db33ab701e4",
+      "size_bytes": 8584
+    },
+    {
+      "id": "native5_window",
+      "sha256": "db844012936d5a1bbed88f7f925de50d0faa02ea98469486d0cf4349c6d60510",
+      "size_bytes": 6376
+    },
+    {
+      "id": "native5_api",
+      "sha256": "38f4ab41be3836ce6ef8b4b1a304190b304d3fd048fee7edf4f4f151231d6014",
+      "size_bytes": 6341
+    },
+    {
+      "id": "native5_abi",
+      "sha256": "4d24794e1d2edd0d1503930eba5c829397961b0f5f147e66eed9800eb05cd4e6",
+      "size_bytes": 6340
+    },
+    {
+      "id": "native5_threads",
+      "sha256": "785ecf68557b9a5a9e5ed727ec1e2f7b900e1e63175afc8de3cc0c6df05c3787",
+      "size_bytes": 6390
+    },
+    {
+      "id": "frames3",
+      "sha256": "253889f43807d46736a77dbef46e3ec7ffad91b4b50f24bddb7d8f86797a23e7",
+      "size_bytes": 6241
+    },
+    {
+      "id": "native_frames3_release",
+      "sha256": "70c2029c7d7470662741f04ab311848687b209961786223be3665dbbd9d3a3f9",
+      "size_bytes": 12417
+    },
+    {
+      "id": "bootstrap5_normal",
+      "sha256": "d83b6f3e71c458ab791ab2c2649b508748b94dd7395cad237967ba3c705809d5",
+      "size_bytes": 6394
+    },
+    {
+      "id": "native7_aggregate",
+      "sha256": "f8946a5c19922fcabeb36d04afb1ffd9edadc8725701884a1a026f1ee255a61e",
+      "size_bytes": 5558
+    },
+    {
+      "id": "native_frames_review",
+      "sha256": "1a5a7602b88f86f078c738f1c3ce93f5bf738dc834e13e4e9836d7cce5e1a4ee",
+      "size_bytes": 3471
+    },
+    {
+      "id": "native_bootstrap_release",
+      "sha256": "007513ab12a4ddd3f2d874595fa9e1721c20e111b983374d7b4d5786d53184dc",
+      "size_bytes": 6925
+    },
+    {
+      "id": "seven3_execution",
+      "sha256": "8e708b736a9da2a8149520b5fa8d401ec70ea94ca5c37f6302373b3d01266d22",
+      "size_bytes": 31537
+    },
+    {
+      "id": "seven3_release",
+      "sha256": "a62ce991c585a0d2b034eb8ec9ead4f2eeac77b2b367cd5a29f477b1b2ef4d3a",
+      "size_bytes": 13844
+    },
+    {
+      "id": "protected_final",
+      "sha256": "20b954278a7b17d96ada60fa13947ed6a65c5ce458db7ce295bc4690b1aafc04",
+      "size_bytes": 685
+    },
+    {
+      "id": "native7_frames_review",
+      "sha256": "1a5a7602b88f86f078c738f1c3ce93f5bf738dc834e13e4e9836d7cce5e1a4ee",
+      "size_bytes": 3471
+    },
+    {
+      "id": "bootstrap_release",
+      "sha256": "007513ab12a4ddd3f2d874595fa9e1721c20e111b983374d7b4d5786d53184dc",
+      "size_bytes": 6925
+    }
+  ],
+  "execution_candidate": "candidate3",
+  "execution_context": {
+    "candidate3_host_fixture_python_version": "3.14.4",
+    "portable_context": "Separate recorded runner contexts; no single Python version claimed for all portable checks."
+  },
+  "frame_current": {
+    "conditional_window_waiver_used": false,
+    "independent_review_rehashed_images": true,
+    "independent_review_replayed_pixel_decode": false,
+    "passed": true,
+    "saved_images": 18
+  },
+  "historical_reuse": {
+    "candidate": "candidate2_or_original_recorded_candidate",
+    "cpu_avx_exit_code": 77,
+    "cpu_passed": 18,
+    "cpu_shared_historical_cases": 6,
+    "cpu_total_selected_cases": 19,
+    "cpu_unsupported_not_exposed": 1,
+    "old_pass_reissued": false,
+    "ordering_in_cpu_count": false,
+    "ordering_status": "passed",
+    "saved_current_authority_reused": false
+  },
+  "limits": {
+    "cold_prefix_qualified": false,
+    "complete_clean_reconstruction": false,
+    "game_executed": false,
+    "game_qualified": false,
+    "ordinary_user_distribution_qualified": false,
+    "public_publication_authorized": false,
+    "source_authority_cutover": false,
+    "source_to_operable_game_window_measured": false
+  },
+  "native_current": [
+    {
+      "assessment": {
+        "sha256": "148766cad25817c4530e07ee0d10e0ba5c8523b83b2b98bda5d6a67a39ee73ab",
+        "size_bytes": 12435
+      },
+      "case": {
+        "sha256": "81b470e1b9348a5f2239b9bccd6294ff282680123713d726cca82fa8bad1f93f",
+        "size_bytes": 2464502
+      },
+      "case_id": "api",
+      "cold_prefix_initialization": false,
+      "operation": {
+        "sha256": "38f4ab41be3836ce6ef8b4b1a304190b304d3fd048fee7edf4f4f151231d6014",
+        "size_bytes": 6341
+      },
+      "operation_status": "passed",
+      "prefix_policy": "verified-synthetic-seed-with-current-modules-and-no-desktop-menu",
+      "preserved_snapshot_count": 133,
+      "recorded_pass": true
+    },
+    {
+      "assessment": {
+        "sha256": "a24026f78ca51edffdd472386b892bc68d8bc22c0f8e25cf585e4b0b009808b5",
+        "size_bytes": 12392
+      },
+      "case": {
+        "sha256": "fd786fbff1b68aa0183c2f86edba9205c1810ac526f8b1ad8cfce657c7c46138",
+        "size_bytes": 1806069
+      },
+      "case_id": "abi",
+      "cold_prefix_initialization": false,
+      "operation": {
+        "sha256": "4d24794e1d2edd0d1503930eba5c829397961b0f5f147e66eed9800eb05cd4e6",
+        "size_bytes": 6340
+      },
+      "operation_status": "passed",
+      "prefix_policy": "verified-synthetic-seed-with-current-modules-and-no-desktop-menu",
+      "preserved_snapshot_count": 133,
+      "recorded_pass": true
+    },
+    {
+      "assessment": {
+        "sha256": "7ce9cb5d8d9349551cc0d9788b4051b5f4a389688586822a2ad8464fc8b2a359",
+        "size_bytes": 17082
+      },
+      "case": {
+        "sha256": "f3272fc8407504f47e572baa3562c7323238ab1faa24dc1d7e053aa433d5fb1b",
+        "size_bytes": 2315468
+      },
+      "case_id": "threads",
+      "cold_prefix_initialization": false,
+      "operation": {
+        "sha256": "785ecf68557b9a5a9e5ed727ec1e2f7b900e1e63175afc8de3cc0c6df05c3787",
+        "size_bytes": 6390
+      },
+      "operation_status": "passed",
+      "prefix_policy": "verified-synthetic-seed-with-current-modules-and-no-desktop-menu",
+      "preserved_snapshot_count": 133,
+      "recorded_pass": true
+    },
+    {
+      "assessment": {
+        "sha256": "487322371135f9288595635deaa849c964422b6a62cad43bd7490eacde0df2f2",
+        "size_bytes": 13852
+      },
+      "case": {
+        "sha256": "3152e2a8457a52962fb7c387c154cd361f8b3d8305e44a96a4e79daf567f8d88",
+        "size_bytes": 4499380
+      },
+      "case_id": "window",
+      "cold_prefix_initialization": false,
+      "operation": {
+        "sha256": "db844012936d5a1bbed88f7f925de50d0faa02ea98469486d0cf4349c6d60510",
+        "size_bytes": 6376
+      },
+      "operation_status": "passed",
+      "prefix_policy": "verified-synthetic-seed-with-current-modules-and-no-desktop-menu",
+      "preserved_snapshot_count": 133,
+      "recorded_pass": true
+    },
+    {
+      "assessment": {
+        "sha256": "bf35093e61bcb85940bd386e4d03de3a56f67de162fc987a7bb24d36777fc92c",
+        "size_bytes": 6205
+      },
+      "case": {
+        "sha256": "d4e04549ef35c6d1ab94d5649fbd04e37607694c943fd4896362c747240257cc",
+        "size_bytes": 204646
+      },
+      "case_id": "bootstrap",
+      "cold_prefix_initialization": false,
+      "operation": {
+        "sha256": "d83b6f3e71c458ab791ab2c2649b508748b94dd7395cad237967ba3c705809d5",
+        "size_bytes": 6394
+      },
+      "operation_status": "passed",
+      "prefix_policy": "fresh-empty-bootstrap-no-pe",
+      "preserved_snapshot_count": 133,
+      "recorded_pass": true
+    },
+    {
+      "assessment": {
+        "sha256": "afafe0a340bf6edfab1bff5db2bc08f5739f7f74db701d33824cb46c25f109c3",
+        "size_bytes": 6255
+      },
+      "case": {
+        "sha256": "4b812cc3428d99b521534fb6cb961326c100f366d5edcacb02066109e738c23d",
+        "size_bytes": 204640
+      },
+      "case_id": "bootstrap-timeout",
+      "cold_prefix_initialization": false,
+      "operation": {
+        "sha256": "df45e524cc9001ff32e6db519ee41461aae632530737f1f4470c059b87c8b196",
+        "size_bytes": 6564
+      },
+      "operation_status": "passed",
+      "prefix_policy": "fresh-empty-bootstrap-no-pe",
+      "preserved_snapshot_count": 133,
+      "recorded_pass": true
+    },
+    {
+      "assessment": {
+        "sha256": "63c19de3830b96af87fc6a9d81da6a887ec19edb95e9bcb1f76557d906db4d88",
+        "size_bytes": 6274
+      },
+      "case": {
+        "sha256": "af828d799325b5de383464ce9d5b5cc8e77bbf4b0e54c7c3318707a7f9490632",
+        "size_bytes": 30368
+      },
+      "case_id": "wrong-prefix-server",
+      "cold_prefix_initialization": false,
+      "operation": {
+        "sha256": "459e67f3c9665b360db2e0713eaeb18d1e94b490e576ec6c4f6606bca92fea07",
+        "size_bytes": 6523
+      },
+      "operation_status": "passed",
+      "prefix_policy": "fresh-empty-bootstrap-no-pe",
+      "preserved_snapshot_count": 133,
+      "recorded_pass": true
+    }
+  ],
+  "notices": {
+    "automated_check_passed": false,
+    "automated_exit_code": 1,
+    "fex": 12,
+    "known_legacy_warnings": 100,
+    "new_unclassified_warnings": 0,
+    "reviewed_metadata_exceptions_added": 34,
+    "runtime": 35,
+    "wine": 53
+  },
+  "portable_tests": {
+    "assembly_build_unique_ids": 174,
+    "counts_are_additive": false,
+    "fex_source_tests": 94,
+    "inherited_body_executions": 14,
+    "integration_unique_bodies": 701,
+    "integration_unique_ids": 715
+  },
+  "protection": {
+    "all_original_files_or_concurrent_git_state_covered": false,
+    "differences": 0,
+    "frozen_sources_and_modes": 307,
+    "observed_free_bytes": 21747855360,
+    "original_selected_sha256": 29
+  },
+  "recovery": {
+    "candidate_inventory_checked": "candidate2",
+    "clean_git_build_performed": false,
+    "exercised_common_headers_bytes": 3634,
+    "full_input_pack_restore_performed": false
+  },
+  "report_component": "runtime",
+  "schema_version": 1,
+  "scope": "task56_stage4_sanitized_evidence",
+  "seven_current": [
+    {
+      "assessment": {
+        "sha256": "17d8a85e5973c23379a1929b3ae500100adb0ffdc2f9a5aa7ff9c4c7612941ea",
+        "size_bytes": 1403
+      },
+      "case": "tls-thread",
+      "elapsed_seconds": 24.005302875004418,
+      "operation": {
+        "sha256": "220d77bcf991b239365111996fc34bbc2c7218f6ac6acd9d83796737c1237952",
+        "size_bytes": 7861
+      },
+      "status": "passed"
+    },
+    {
+      "assessment": {
+        "sha256": "2d61c3dbd530acb3f7483ed5a422f4455b836a0834c11a2bc86aaa0863b0ef08",
+        "size_bytes": 1403
+      },
+      "case": "seh-unwind",
+      "elapsed_seconds": 22.568434708002314,
+      "operation": {
+        "sha256": "df0a3a31998044c3b14d10c93290c1a641e9d44635d9949e811fe3106f571ce9",
+        "size_bytes": 7871
+      },
+      "status": "passed"
+    },
+    {
+      "assessment": {
+        "sha256": "1a85f4bc76fb19ad71b3fcfdd9c92cbb795f68197b2191bffc8b5c3db74172f5",
+        "size_bytes": 1413
+      },
+      "case": "suspend-context",
+      "elapsed_seconds": 22.137855041997682,
+      "operation": {
+        "sha256": "583aad955e55002eb2de3d966131110887a9e008afbc3774b843f238a51379ed",
+        "size_bytes": 7920
+      },
+      "status": "passed"
+    },
+    {
+      "assessment": {
+        "sha256": "21aa1d49126716ce8dd65b7d23e3b561333907613218b183463671e4c93a2993",
+        "size_bytes": 1417
+      },
+      "case": "code-invalidation",
+      "elapsed_seconds": 22.59627333300159,
+      "operation": {
+        "sha256": "40eafd15522537fdae09b489225b4da604a80b45711db92bebcd65d298e66419",
+        "size_bytes": 7946
+      },
+      "status": "passed"
+    },
+    {
+      "assessment": {
+        "sha256": "bd130275cc4dc95fa6170a6d280d6e301acf5976af710069e2ce9b2de787bfdc",
+        "size_bytes": 1417
+      },
+      "case": "guest-fault-guard",
+      "elapsed_seconds": 22.2363968330028,
+      "operation": {
+        "sha256": "b3d2e9aa57eb8f43634e59f8a87f006d7cdcbbe5399f4eb20c4cbf9e08cbe4ab",
+        "size_bytes": 7948
+      },
+      "status": "passed"
+    },
+    {
+      "assessment": {
+        "sha256": "acbf660ad9987a201410a576b71e0927cac550b95edbf5e7da10dca9b61691cb",
+        "size_bytes": 1417
+      },
+      "case": "configured-memory",
+      "elapsed_seconds": 22.010883417002333,
+      "operation": {
+        "sha256": "c763afb878d109662181fe3a29a4eee3641eec06dda8b0b7876b8ec80c1f6369",
+        "size_bytes": 7947
+      },
+      "status": "passed"
+    },
+    {
+      "assessment": {
+        "sha256": "0e898bcc98009952c022c189a911aec7d286f39d2acbb4769ddbaf08c1349f4f",
+        "size_bytes": 3516
+      },
+      "case": "rendering-original",
+      "elapsed_seconds": 26.589460250004777,
+      "operation": {
+        "sha256": "fb09d618af452e2cdfabc5c84717939f4a2eb9371e4f85ab311b6cab755e1a7f",
+        "size_bytes": 7954
+      },
+      "status": "passed"
+    }
+  ],
+  "stage": 4,
+  "verification_gates": "passed"
+}

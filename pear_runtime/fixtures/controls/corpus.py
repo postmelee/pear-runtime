@@ -4,14 +4,17 @@
 
 These pure result checks do not authorize or prove host execution. The caller
 must separately bind each actual run, source/PE, producer, log, current authority
-and cleanup record. The versioned contract data has one owner in the import
-manifest. Existing unavailable-feature and candidate-admission refusals remain.
+and cleanup record. Canonical CPU sources belong to pear-fex; this module binds an explicit
+provider and checks its pinned derived contract snapshots. Existing unavailable-feature and candidate-admission refusals remain.
 """
-import copy
+import importlib.util
+import subprocess
+from dataclasses import dataclass
 import hashlib
 import json
 import re
 from pathlib import Path
+from pear_runtime.assembly._common import read_relative
 
 def require(condition, message):
     if not condition:
@@ -45,7 +48,8 @@ def hex64(value):
 def fixture_ids(manifest):
     return [c['id'] for c in manifest['cases']]+[c['id'] for c in manifest['boundaries'] if c['stage']==2]
 
-def admit_build(manifest, manifest_raw, build, root):
+def admit_build(manifest, manifest_raw, build, root, *, provider):
+    provider.recheck()
     require(build['scope']=='cpu_pe_build' and build['passed'] is True,'build_status')
     require(manifest==decode(manifest_raw) and build['manifest_sha256']==digest(canonical(manifest)), 'build_manifest')
     require(build.get('adaptations_sha256')==digest(canonical(rules())), 'build_adaptations')
@@ -62,8 +66,8 @@ def admit_build(manifest, manifest_raw, build, root):
         require(raw[off:off+6]==b'PE\0\0\x64\x86','pe_machine')
     return ids
 
-def case_result(case, row, manifest_hash):
-    case=effective_case(case)
+def case_result(case, row, manifest_hash, *, provider):
+    case=effective_case(case, provider=provider)
     require(row['id']==case['id'], 'case_identity')
     events=row['events']
     require(type(events) is list and events, 'missing_events')
@@ -101,7 +105,7 @@ def boundary_result(case, row):
     require(row['events']==[], 'unexpected_boundary_output')
     return dict(status='passed',values=[42])
 
-def assess_records(manifest, build_raw, record, route):
+def assess_records(manifest, build_raw, record, route, *, provider):
     build=decode(build_raw)
     require(record['scope']=='cpu_'+route+'_results' and record.get('complete') is True,'incomplete_run')
     require(record['build_sha256']==digest(build_raw),'mixed_build')
@@ -123,7 +127,7 @@ def assess_records(manifest, build_raw, record, route):
     for row,binary in zip(record['cases'],build['cases']):
         require(row['binary_sha256']==binary['sha256'] and row.get('outcome')=='exited','case_binary_or_outcome')
         c=cases.get(row['id'])
-        outcomes[row['id']]=case_result(c,row,build['manifest_sha256']) if c else boundary_result(boundaries[row['id']],row)
+        outcomes[row['id']]=case_result(c,row,build['manifest_sha256'],provider=provider) if c else boundary_result(boundaries[row['id']],row)
     return outcomes
 
 
@@ -143,19 +147,74 @@ def rules():
     """Original adaptation data, rebound from tests/cpu/adaptations.json."""
     return _contract('cpu_adaptations')
 
-def effective_case(case):
-    rule=rules()['cases'].get(case['id'])
-    if rule is None:return case
-    if case['sha256']!=rule['source_sha256']:raise ValueError('adaptation_source_changed')
-    c=copy.deepcopy(case);old=rule['original_data_page'];new=rule['effective_data_page']
-    if c['contract']['regions']!=[dict(address=old,size=4096)]:raise ValueError('adaptation_region_changed')
-    c['contract']['regions'][0]['address']=new
-    for item in c['contract']['initial_memory']:
-        if not old<=item['address']<old+4096:raise ValueError('adaptation_initial_memory')
-        item['address']+=new-old
-    c['contract']['expectations'].append(rule['additional_expectation'])
-    c['masks'].append(dict(bits='0xffffffffffffffff',reason='Preserve the original upper signed disp32 LEA boundary independently of data placement.'))
-    return c
+def _provider_pin():
+    return read(Path(__file__).resolve().parents[3] /
+                'provenance/fixture-controls-import.json')['canonical_cpu_provider']
+
+
+@dataclass(frozen=True)
+class CPUProvider:
+    root: Path
+    source_commit: str
+    files: tuple
+    module: object
+
+    def recheck(self):
+        pin = _provider_pin()
+        require(self.source_commit == pin['commit'] and list(self.files) == pin['files'],
+                'cpu_provider_pin_changed')
+        require(Path(self.module.__file__).resolve(strict=True) == self.root / pin['module_path'],
+                'cpu_provider_loaded_root')
+        for row in self.files:
+            path = self.root / row['path']
+            require(path.resolve(strict=True) == path, 'cpu_provider_file_alias')
+            raw = read_relative(self.root, row['path'])
+            require(digest(raw) == row['sha256'] and len(raw) == row['size_bytes'],
+                    'cpu_provider_source_changed')
+        for name, path in pin['contracts'].items():
+            require(decode(read_relative(self.root, path)) == _contract(name),
+                    'cpu_provider_snapshot_changed')
+        return self
+
+
+def bind_provider(fex_root, source_commit):
+    """Admit an explicitly supplied canonical FEX root before loading its code.
+
+    PYTHONPATH must expose that same checkout. This function never inserts a
+    historical worktree or guesses a sibling path. A reviewed new source pin
+    and regenerated derived snapshot are required for a changed corpus.
+    """
+    root = Path(fex_root)
+    require(root.is_absolute() and root.is_dir() and root.resolve(strict=True) == root,
+            'cpu_provider_root_alias')
+    pin = _provider_pin()
+    require(source_commit == pin['commit'], 'cpu_provider_commit')
+    try:
+        actual = subprocess.check_output(['git', '-C', str(root), 'rev-parse', 'HEAD'],
+                                         text=True, timeout=10).strip()
+    except (OSError, subprocess.SubprocessError) as exc:
+        raise ValueError('cpu_provider_git_identity') from exc
+    require(actual == source_commit, 'cpu_provider_checkout_commit')
+    for row in pin['files']:
+        path = root / row['path']
+        require(path.resolve(strict=True) == path, 'cpu_provider_file_alias')
+        raw = read_relative(root, row['path'])
+        require(digest(raw) == row['sha256'] and len(raw) == row['size_bytes'],
+                'cpu_provider_source_changed')
+    for name in ('Pear/__init__.py', 'Pear/Tools/__init__.py', 'Pear/Tools/CPU/__init__.py'):
+        require(not (root/name).exists(), 'cpu_provider_unreviewed_package')
+    spec = importlib.util.find_spec('Pear.Tools.CPU.adapt')
+    require(spec is not None and spec.origin == str(root / pin['module_path']),
+            'cpu_provider_import_root')
+    from Pear.Tools.CPU import adapt
+    return CPUProvider(root, source_commit, tuple(pin['files']), adapt).recheck()
+
+
+def effective_case(case, *, provider):
+    require(type(provider) is CPUProvider, 'cpu_provider_required')
+    provider.recheck()
+    return provider.module.effective_case(case, rules())
+
 
 def assess(events,iterations,rounds,exit_code):
     require(exit_code==42,'ordering_exit')
@@ -209,7 +268,7 @@ def retirements(raw,workers):
     return len(completed)
 
 
-def compare_result_rows(build_raw, reference, reference_logs, candidate_rows):
+def compare_result_rows(build_raw, reference, reference_logs, candidate_rows, *, provider):
     """Original comparison loop over explicitly supplied, separately admitted rows.
 
     reference_logs maps (fixture_id, stdout|stderr) to immutable bytes. This
@@ -217,7 +276,7 @@ def compare_result_rows(build_raw, reference, reference_logs, candidate_rows):
     it cannot replace the original live/runtime execution evidence adapter.
     """
     contract=manifest();built=decode(build_raw)
-    expected=assess_records(contract,build_raw,reference,'native')
+    expected=assess_records(contract,build_raw,reference,'native',provider=provider)
     for row in reference['cases']:
         for stream in ('stdout','stderr'):
             require(digest(reference_logs[(row['id'],stream)])==row[stream+'_sha256'],'reference_log_changed')
@@ -228,7 +287,7 @@ def compare_result_rows(build_raw, reference, reference_logs, candidate_rows):
     for fixture,row in zip(built['cases'],candidate_rows):
         require(row['binary_sha256']==fixture['sha256'] and row['outcome']=='exited','case_binary_or_outcome')
         c=cases.get(row['id'])
-        actual=case_result(c,row,built['manifest_sha256']) if c else boundary_result(boundaries[row['id']],row)
+        actual=case_result(c,row,built['manifest_sha256'],provider=provider) if c else boundary_result(boundaries[row['id']],row)
         reference_case=expected[row['id']]
         if actual['status']=='unavailable':
             status='unsupported_not_exposed'

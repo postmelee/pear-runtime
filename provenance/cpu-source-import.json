@@ -1,0 +1,202 @@
+{
+  "canonical_contract_provider": {
+    "manifest_sha256": "c6ad9b39b475d1dbd7f0fbe377c50022a11d32d7b08e967e684b2250d1d593f9",
+    "path": "Pear/Tests/CPU",
+    "repository": "pear-fex"
+  },
+  "compiler_execution": false,
+  "files": [
+    {
+      "adaptation": "exact bytes; preserve original MIT source notices and attribution",
+      "license": "MIT",
+      "mode": "100644",
+      "origin": {
+        "checkpoint": "951264bf5be4b9d2afb87320f5fac74778b2dd58",
+        "checkpoint_contains_exact_bytes": true,
+        "path": "tests/fex/guest_api.c",
+        "repository": "https://github.com/postmelee/pear",
+        "sha256": "d7d822004ec64cbd1fca703b1195abd40a55ac1d3825743178b7d7f1ed8a81ed",
+        "size_bytes": 3387
+      },
+      "path": "tests/fex/guest_api.c",
+      "sha256": "d7d822004ec64cbd1fca703b1195abd40a55ac1d3825743178b7d7f1ed8a81ed",
+      "size_bytes": 3387
+    },
+    {
+      "adaptation": "exact bytes; preserve original MIT source notices and attribution",
+      "license": "MIT",
+      "mode": "100644",
+      "origin": {
+        "checkpoint": "951264bf5be4b9d2afb87320f5fac74778b2dd58",
+        "checkpoint_contains_exact_bytes": true,
+        "path": "tests/fex/guest_thread.c",
+        "repository": "https://github.com/postmelee/pear",
+        "sha256": "82d3df3728da1b156b0b0c1ce01cdecb841e16358c1414937ffb6744309eef2f",
+        "size_bytes": 1457
+      },
+      "path": "tests/fex/guest_thread.c",
+      "sha256": "82d3df3728da1b156b0b0c1ce01cdecb841e16358c1414937ffb6744309eef2f",
+      "size_bytes": 1457
+    },
+    {
+      "adaptation": "exact bytes; preserve original MIT source notices and attribution",
+      "license": "MIT",
+      "mode": "100644",
+      "origin": {
+        "checkpoint": "951264bf5be4b9d2afb87320f5fac74778b2dd58",
+        "checkpoint_contains_exact_bytes": true,
+        "path": "tests/fex/guest_exception.c",
+        "repository": "https://github.com/postmelee/pear",
+        "sha256": "5cd3d261ca38786c60e445eef07661a718f4a0c7b2b1e42a5f26bb1bbeae7e7a",
+        "size_bytes": 2192
+      },
+      "path": "tests/fex/guest_exception.c",
+      "sha256": "5cd3d261ca38786c60e445eef07661a718f4a0c7b2b1e42a5f26bb1bbeae7e7a",
+      "size_bytes": 2192
+    },
+    {
+      "adaptation": "exact bytes; preserve original MIT source notices and attribution",
+      "license": "MIT",
+      "mode": "100644",
+      "origin": {
+        "checkpoint": "951264bf5be4b9d2afb87320f5fac74778b2dd58",
+        "checkpoint_contains_exact_bytes": true,
+        "path": "tests/fex/guest_context.c",
+        "repository": "https://github.com/postmelee/pear",
+        "sha256": "a7a47ea0fb4290297911c75df3f2e62566df7a2c41614cc8bafa33cb43b1f58f",
+        "size_bytes": 1371
+      },
+      "path": "tests/fex/guest_context.c",
+      "sha256": "a7a47ea0fb4290297911c75df3f2e62566df7a2c41614cc8bafa33cb43b1f58f",
+      "size_bytes": 1371
+    },
+    {
+      "adaptation": "exact bytes; preserve original MIT source notices and attribution",
+      "license": "MIT",
+      "mode": "100644",
+      "origin": {
+        "checkpoint": "951264bf5be4b9d2afb87320f5fac74778b2dd58",
+        "checkpoint_contains_exact_bytes": true,
+        "path": "tests/fex/guest_invalidation.c",
+        "repository": "https://github.com/postmelee/pear",
+        "sha256": "2a61be720bf218f9bc4f2b684a7594eac849d3597b112fd5b46f44a198bf445f",
+        "size_bytes": 2047
+      },
+      "path": "tests/fex/guest_invalidation.c",
+      "sha256": "2a61be720bf218f9bc4f2b684a7594eac849d3597b112fd5b46f44a198bf445f",
+      "size_bytes": 2047
+    },
+    {
+      "adaptation": "exact bytes; preserve original MIT source notices and attribution",
+      "license": "MIT",
+      "mode": "100644",
+      "origin": {
+        "checkpoint": "951264bf5be4b9d2afb87320f5fac74778b2dd58",
+        "checkpoint_contains_exact_bytes": true,
+        "path": "tests/cpu/abi.c",
+        "repository": "https://github.com/postmelee/pear",
+        "sha256": "8f745bce9240eb5e4fb64c641f12eebde16caae1f352e4c43a064273cea4c384",
+        "size_bytes": 2388
+      },
+      "path": "tests/cpu/abi.c",
+      "sha256": "8f745bce9240eb5e4fb64c641f12eebde16caae1f352e4c43a064273cea4c384",
+      "size_bytes": 2388
+    },
+    {
+      "adaptation": "exact bytes; preserve original MIT source notices and attribution",
+      "license": "MIT",
+      "mode": "100644",
+      "origin": {
+        "checkpoint": "951264bf5be4b9d2afb87320f5fac74778b2dd58",
+        "checkpoint_contains_exact_bytes": true,
+        "path": "tests/cpu/seh.c",
+        "repository": "https://github.com/postmelee/pear",
+        "sha256": "df38f07c5b81b0b06f9f66d63cd934aa73cb295574ec6e87b1dc315cbcf1a1d6",
+        "size_bytes": 1718
+      },
+      "path": "tests/cpu/seh.c",
+      "sha256": "df38f07c5b81b0b06f9f66d63cd934aa73cb295574ec6e87b1dc315cbcf1a1d6",
+      "size_bytes": 1718
+    },
+    {
+      "adaptation": "exact bytes; preserve original MIT source notices and attribution",
+      "license": "MIT",
+      "mode": "100644",
+      "origin": {
+        "checkpoint": "951264bf5be4b9d2afb87320f5fac74778b2dd58",
+        "checkpoint_contains_exact_bytes": true,
+        "path": "tests/cpu/ordering.c",
+        "repository": "https://github.com/postmelee/pear",
+        "sha256": "2bde8b2f86558e644c483a419da9c1a4c48c7c2f8cf39c267520a2d404c6f662",
+        "size_bytes": 6110
+      },
+      "path": "tests/cpu/ordering.c",
+      "sha256": "2bde8b2f86558e644c483a419da9c1a4c48c7c2f8cf39c267520a2d404c6f662",
+      "size_bytes": 6110
+    },
+    {
+      "adaptation": "exact bytes; preserve original MIT source notices and attribution",
+      "license": "MIT",
+      "mode": "100644",
+      "origin": {
+        "checkpoint": "951264bf5be4b9d2afb87320f5fac74778b2dd58",
+        "checkpoint_contains_exact_bytes": true,
+        "path": "tests/cpu/ordering.asm",
+        "repository": "https://github.com/postmelee/pear",
+        "sha256": "1297602b4fb41c90764265842ffcff3404a9943ccb2dd96ae90eda711efad404",
+        "size_bytes": 607
+      },
+      "path": "tests/cpu/ordering.asm",
+      "sha256": "1297602b4fb41c90764265842ffcff3404a9943ccb2dd96ae90eda711efad404",
+      "size_bytes": 607
+    }
+  ],
+  "generators": [
+    {
+      "adaptation": "abi_assembly function copied byte-exact; new explicit-root source preparation does not compile or launch. Emitted original Pear ABI assembly retains its MIT notice.",
+      "license": "GPL-3.0-or-later",
+      "mode": "100644",
+      "origin": {
+        "end_line": 49,
+        "path": "tools/cpu/build.py",
+        "sha256": "b989d1c627fd875da285bc9d30e54edf10eca3634188d67ae244a7ef69293f6f",
+        "start_line": 18,
+        "symbol": "abi_assembly",
+        "symbol_sha256": "d37a2c1b3a42ab478c84415e0f371683315d13e0586b342110ffc1df7a747aab"
+      },
+      "path": "pear_runtime/recipes/cpu_sources.py",
+      "sha256": "95f9ca8d6e862aaad0421904303031cbdeab914ea1e373cc82167ae3dc9775e8",
+      "size_bytes": 6972
+    }
+  ],
+  "license_note": "Exact retained MIT source; adjacent original source identity is authoritative. No new license inferred.",
+  "native_execution": false,
+  "recipe": {
+    "mode": "100644",
+    "path": "recipes/cpu/sources-v1.json",
+    "sha256": "ecae78ad5e72f797d45f0d7ef9b3964fc3389f82c9f621e94c78f1b486fbde66",
+    "size_bytes": 21950
+  },
+  "schema_version": 1,
+  "scope": "editable_runtime_cpu_boundary_sources",
+  "source_checkpoint": "951264bf5be4b9d2afb87320f5fac74778b2dd58",
+  "source_repository": "https://github.com/postmelee/pear",
+  "tests": [
+    {
+      "license": "GPL-3.0-or-later",
+      "mode": "100644",
+      "path": "tests/cpu/test_source_inputs.py",
+      "role": "Four new portable source-root/input rejection controls",
+      "sha256": "ce18b33e61c20bb65ed619a12d62f8b70686776e2fbe9bc40426b37ef3f98000",
+      "size_bytes": 2766
+    }
+  ],
+  "verification": {
+    "compiler_execution": false,
+    "full_fex_census_files": 2270,
+    "native_execution": false,
+    "portable_tests": 4,
+    "record": "Task56 Stage4 report binds local command/output references after final source verification.",
+    "source_only_generated_files_compared": 50
+  }
+}

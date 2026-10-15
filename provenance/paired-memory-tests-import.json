@@ -1,0 +1,1169 @@
+{
+  "schema_version": 1,
+  "scope": "paired_memory_test_only_import",
+  "original_repository": "https://github.com/postmelee/pear",
+  "original_checkpoint": "951264bf5be4b9d2afb87320f5fac74778b2dd58",
+  "license": "GPL-3.0-or-later",
+  "copyright_notice_addition": "2026 Pear contributors; original source without separate inline license retains Pear repository license.",
+  "authority": "Existing runtime test-owned memory/resume/synthetic modules remain sole authorities. tests/fex/memory/protocol.py remains exact historical ABI2 authority. No executable legacy builder, source materializer or launcher is imported.",
+  "historical_protocol_version": 2,
+  "current_wine_wire_abi": 3,
+  "native_runtime_execution": false,
+  "current_abi3_qualification": false,
+  "source_import_only": true,
+  "original_declared_methods_imported": 67,
+  "test_method_ast_unchanged": 67,
+  "imports": [
+    {
+      "source": "tests/fex/test_memory_protocol.py",
+      "source_sha256": "df79e686d05b8768addce037c397ed4d78bdb5dadc30c53b53a0397cf640d8cd",
+      "source_size_bytes": 5720,
+      "destination": {
+        "path": "tests/wine_integration/test_memory_protocol.py",
+        "sha256": "b54d224f322497aa310cd3c1f24fd5ab9a2f3621cf9badf5895482864953c1a6",
+        "size_bytes": 5538,
+        "mode": 420
+      },
+      "transformation": "Original class/method bodies unchanged. Imports rebind to sole runtime ABI2 protocol/resume/synthetic providers; notice added. No original synthetic helper duplication."
+    },
+    {
+      "source": "tests/fex/test_memory_atomic_resume.py",
+      "source_sha256": "879ddb2d4a67b1a7b0b12abdd5283dcac9a2d56f34d963727fde737ef87cc50b",
+      "source_size_bytes": 15494,
+      "destination": {
+        "path": "tests/wine_integration/test_memory_atomic_resume.py",
+        "sha256": "b91097708b06d074ba8ce9f1bac18766d565b7345eb99ab12f8cce25110bbe39",
+        "size_bytes": 12597,
+        "mode": 420
+      },
+      "transformation": "Original class/method bodies unchanged. Imports rebind to sole runtime ABI2 protocol/resume/synthetic providers; notice added. No original synthetic helper duplication."
+    },
+    {
+      "source": "tests/fex/test_memory_check.py",
+      "source_sha256": "538ff17d89ae23fed36678d4a4816684c1d2a48f2eb01a7644135b43d5ff42c2",
+      "source_size_bytes": 15596,
+      "destination": {
+        "path": "tests/wine_integration/test_memory_check.py",
+        "sha256": "23b2b26a4fcb12d0ddbeca484c0f6f3cf0bcb41ff263591156163888bb444ce4",
+        "size_bytes": 6523,
+        "mode": 420
+      },
+      "transformation": "Original class/method bodies unchanged. Imports rebind to sole runtime ABI2 protocol/resume/synthetic providers; notice added. No original synthetic helper duplication."
+    },
+    {
+      "source": "tools/fex/memory_run.py",
+      "source_sha256": "cd76ecdbea8df695cd1abdd2849276da7a417ee6a9ef6ad7f255aa3c95eccdf6",
+      "source_size_bytes": 32926,
+      "destination": {
+        "path": "tests/wine_integration/oracles/memory.py",
+        "sha256": "ae0d4c2bc43097ae68fe4dfb2189d62b27dc543f9d0f52e089dff69a295d8258",
+        "size_bytes": 52185,
+        "mode": 420
+      },
+      "base_sha256": "af8d1e8d52ab25a04c0703a08160319bd576f57a286511d1c2c75f7a57f84323",
+      "original_existing_function_bodies_unchanged": true,
+      "selected_functions": [
+        {
+          "symbol": "validate_ready",
+          "original_lines": [
+            40,
+            57
+          ],
+          "sha256": "1790ead01e2373e9581fb688218b4a33eec25df73e19bdf493b73e6f03e9ae78",
+          "ast_sha256": "03efc5095be8ff543fcb237c83ebadef5d9e69b39bd4782a947c09ee06d64489",
+          "imported_lines": [
+            502,
+            519
+          ],
+          "imported_sha256": "1790ead01e2373e9581fb688218b4a33eec25df73e19bdf493b73e6f03e9ae78",
+          "exact_function_bytes": true
+        },
+        {
+          "symbol": "validate_result",
+          "original_lines": [
+            60,
+            286
+          ],
+          "sha256": "1e6c497384bf15759437b498cbbb5af26bb3baf33518cb873391596655c00e10",
+          "ast_sha256": "15aac64a716afb2a7a51e9f7b2047889f3ac20e6bff2c11cf5b5b763f6674587",
+          "imported_lines": [
+            522,
+            748
+          ],
+          "imported_sha256": "1e6c497384bf15759437b498cbbb5af26bb3baf33518cb873391596655c00e10",
+          "exact_function_bytes": true
+        }
+      ],
+      "transformation": "Append exact selected pure function bytes. synthetic_memory additionally imports collections.Counter. No executable builder/run/signing functions imported."
+    },
+    {
+      "source": "tests/fex/test_memory_check.py",
+      "source_sha256": "538ff17d89ae23fed36678d4a4816684c1d2a48f2eb01a7644135b43d5ff42c2",
+      "source_size_bytes": 15596,
+      "destination": {
+        "path": "tests/wine_integration/oracles/synthetic_memory.py",
+        "sha256": "44567345884df7329bf56caecbdf5bc9504001472b6361e0d30a10c45ea1661f",
+        "size_bytes": 8354,
+        "mode": 420
+      },
+      "base_sha256": "38591dc0be12d32b03c5952c229e6eda293cf24c3a051ce0264c03c9fdf7b61a",
+      "original_existing_function_bodies_unchanged": true,
+      "selected_functions": [
+        {
+          "symbol": "cooperative_rows",
+          "original_lines": [
+            95,
+            137
+          ],
+          "sha256": "670671481b3cd0726c946a2a3ba4dcdfa4c58b556092c36175174c4ad7246243",
+          "ast_sha256": "07dc8b00e96471905d562949b79a8548f9afe534ad2c079394eb23ce68082293",
+          "imported_lines": [
+            90,
+            132
+          ],
+          "imported_sha256": "670671481b3cd0726c946a2a3ba4dcdfa4c58b556092c36175174c4ad7246243",
+          "exact_function_bytes": true
+        }
+      ],
+      "transformation": "Append exact selected pure function bytes. synthetic_memory additionally imports collections.Counter. No executable builder/run/signing functions imported."
+    }
+  ],
+  "methods": [
+    {
+      "source": "tests/fex/test_memory_protocol.py",
+      "destination": "tests/wine_integration/test_memory_protocol.py",
+      "symbol": "MemoryProtocolTests.test_request_offsets_and_malformed_control_are_independently_encoded",
+      "original_lines": [
+        20,
+        31
+      ],
+      "imported_lines": [
+        15,
+        26
+      ],
+      "ast_sha256": "665a2c737b33c6167255a6b62e9ddadff09b56253caad13ccd7b04863506b23e",
+      "method_ast_unchanged": true
+    },
+    {
+      "source": "tests/fex/test_memory_protocol.py",
+      "destination": "tests/wine_integration/test_memory_protocol.py",
+      "symbol": "MemoryProtocolTests.test_abi2_refuses_old_or_unknown_wire_versions",
+      "original_lines": [
+        33,
+        37
+      ],
+      "imported_lines": [
+        28,
+        32
+      ],
+      "ast_sha256": "b78cd5033c9884ece22631ed348efb406a2e46865514fd163630ab17f17b0154",
+      "method_ast_unchanged": true
+    },
+    {
+      "source": "tests/fex/test_memory_protocol.py",
+      "destination": "tests/wine_integration/test_memory_protocol.py",
+      "symbol": "MemoryProtocolTests.test_original_signed_ntstatus_is_preserved_in_refusal",
+      "original_lines": [
+        39,
+        44
+      ],
+      "imported_lines": [
+        34,
+        39
+      ],
+      "ast_sha256": "13201f17efc81cea0451d8ca34d17b0024667fc6e91c681537c3a0320efd5ab7",
+      "method_ast_unchanged": true
+    },
+    {
+      "source": "tests/fex/test_memory_protocol.py",
+      "destination": "tests/wine_integration/test_memory_protocol.py",
+      "symbol": "MemoryProtocolTests.test_refusal_cannot_expose_pointer_or_success_state",
+      "original_lines": [
+        46,
+        51
+      ],
+      "imported_lines": [
+        41,
+        46
+      ],
+      "ast_sha256": "6e97d3ba226ef82c4527d3ef5b2aef688347e7cbff3f5254236e42d54abe395c",
+      "method_ast_unchanged": true
+    },
+    {
+      "source": "tests/fex/test_memory_protocol.py",
+      "destination": "tests/wine_integration/test_memory_protocol.py",
+      "symbol": "MemoryProtocolTests.test_nonzero_errno_without_domain_is_not_accepted",
+      "original_lines": [
+        53,
+        58
+      ],
+      "imported_lines": [
+        48,
+        53
+      ],
+      "ast_sha256": "722284c57186ded21c36836eab3e6a7c82612bfb164717ef31707a14815b650f",
+      "method_ast_unchanged": true
+    },
+    {
+      "source": "tests/fex/test_memory_protocol.py",
+      "destination": "tests/wine_integration/test_memory_protocol.py",
+      "symbol": "MemoryProtocolTests.test_record_truncation_and_unknown_fields_are_rejected",
+      "original_lines": [
+        60,
+        69
+      ],
+      "imported_lines": [
+        55,
+        64
+      ],
+      "ast_sha256": "dfdd1cb9eb38ccbd7b1a8cc0e8fc04bbb8ac4312f52fc94e3e5427fd4b65c8e3",
+      "method_ast_unchanged": true
+    },
+    {
+      "source": "tests/fex/test_memory_protocol.py",
+      "destination": "tests/wine_integration/test_memory_protocol.py",
+      "symbol": "MemoryProtocolTests.test_write_address_requires_complete_writing_window",
+      "original_lines": [
+        71,
+        80
+      ],
+      "imported_lines": [
+        66,
+        75
+      ],
+      "ast_sha256": "29b6e971134abf78bf31ef95aa753acb21592ed2b74f20147eedec064ffa1c50",
+      "method_ast_unchanged": true
+    },
+    {
+      "source": "tests/fex/test_memory_protocol.py",
+      "destination": "tests/wine_integration/test_memory_protocol.py",
+      "symbol": "MemoryProtocolTests.test_standalone_native_publication_does_not_claim_ec",
+      "original_lines": [
+        82,
+        91
+      ],
+      "imported_lines": [
+        77,
+        86
+      ],
+      "ast_sha256": "5e3413718d992974776201fab413136e90c9c4c4f52d0aa45a04c0df11cb200b",
+      "method_ast_unchanged": true
+    },
+    {
+      "source": "tests/fex/test_memory_protocol.py",
+      "destination": "tests/wine_integration/test_memory_protocol.py",
+      "symbol": "MemoryProtocolTests.test_unobserved_protection_or_cache_never_admits_owned_execution",
+      "original_lines": [
+        93,
+        102
+      ],
+      "imported_lines": [
+        88,
+        97
+      ],
+      "ast_sha256": "145729597bc75a48b1a986f6202f9f185079c9a44fa85162a2b79de2f01112dc",
+      "method_ast_unchanged": true
+    },
+    {
+      "source": "tests/fex/test_memory_atomic_resume.py",
+      "destination": "tests/wine_integration/test_memory_atomic_resume.py",
+      "symbol": "AtomicReaderTests.test_realistic_native_transcript",
+      "original_lines": [
+        71,
+        75
+      ],
+      "imported_lines": [
+        25,
+        29
+      ],
+      "ast_sha256": "7b7d6e49337cdb6d635b4fc7b33bc58b0424882e43b1da1068ae614b3a401183",
+      "method_ast_unchanged": true
+    },
+    {
+      "source": "tests/fex/test_memory_atomic_resume.py",
+      "destination": "tests/wine_integration/test_memory_atomic_resume.py",
+      "symbol": "AtomicReaderTests.test_realistic_wine_transcript",
+      "original_lines": [
+        77,
+        80
+      ],
+      "imported_lines": [
+        31,
+        34
+      ],
+      "ast_sha256": "d285a3bccff66a8d3828fcf6a421a2bcb42d0b1681b080b1d671fbc03bb3a49c",
+      "method_ast_unchanged": true
+    },
+    {
+      "source": "tests/fex/test_memory_atomic_resume.py",
+      "destination": "tests/wine_integration/test_memory_atomic_resume.py",
+      "symbol": "AtomicReaderTests.test_scopes_fix_wrong_role_status",
+      "original_lines": [
+        82,
+        90
+      ],
+      "imported_lines": [
+        36,
+        44
+      ],
+      "ast_sha256": "c96d79b943b9fc2c199bdef87a5f58244aa28113ce2c6886d04b9d30ce6fe2aa",
+      "method_ast_unchanged": true
+    },
+    {
+      "source": "tests/fex/test_memory_atomic_resume.py",
+      "destination": "tests/wine_integration/test_memory_atomic_resume.py",
+      "symbol": "AtomicReaderTests.test_scope_is_explicit",
+      "original_lines": [
+        92,
+        96
+      ],
+      "imported_lines": [
+        46,
+        50
+      ],
+      "ast_sha256": "81b1baf67cc68a2119dee0975030fb53976d533108042599c0317817ef8c5c7d",
+      "method_ast_unchanged": true
+    },
+    {
+      "source": "tests/fex/test_memory_atomic_resume.py",
+      "destination": "tests/wine_integration/test_memory_atomic_resume.py",
+      "symbol": "AtomicReaderTests.test_unknown_scope",
+      "original_lines": [
+        98,
+        101
+      ],
+      "imported_lines": [
+        52,
+        55
+      ],
+      "ast_sha256": "ff8afa167ab7e439487497bcb6f20f1fb12c4263d4896e56d8b77d78148cb636",
+      "method_ast_unchanged": true
+    },
+    {
+      "source": "tests/fex/test_memory_atomic_resume.py",
+      "destination": "tests/wine_integration/test_memory_atomic_resume.py",
+      "symbol": "AtomicReaderTests.test_declared_scope_cannot_relabel_rows",
+      "original_lines": [
+        103,
+        104
+      ],
+      "imported_lines": [
+        57,
+        58
+      ],
+      "ast_sha256": "37c599880d44ad0a46ea8df3df8763ba0a66545efc883060551564bfd55444c3",
+      "method_ast_unchanged": true
+    },
+    {
+      "source": "tests/fex/test_memory_atomic_resume.py",
+      "destination": "tests/wine_integration/test_memory_atomic_resume.py",
+      "symbol": "AtomicReaderTests.test_one_changed_scope",
+      "original_lines": [
+        106,
+        109
+      ],
+      "imported_lines": [
+        60,
+        63
+      ],
+      "ast_sha256": "44a3b5c2aadd947a809b96d83793a5e0bf57e3f9fef9b8e20a4d61389e23a92e",
+      "method_ast_unchanged": true
+    },
+    {
+      "source": "tests/fex/test_memory_atomic_resume.py",
+      "destination": "tests/wine_integration/test_memory_atomic_resume.py",
+      "symbol": "AtomicReaderTests.test_negative_request_fields",
+      "original_lines": [
+        111,
+        120
+      ],
+      "imported_lines": [
+        65,
+        74
+      ],
+      "ast_sha256": "18ed3f05fb2baeb99629c7520a2d688a8b0993dbd12a06b29259b6d7b00ca5e7",
+      "method_ast_unchanged": true
+    },
+    {
+      "source": "tests/fex/test_memory_atomic_resume.py",
+      "destination": "tests/wine_integration/test_memory_atomic_resume.py",
+      "symbol": "AtomicReaderTests.test_positive_request_fields",
+      "original_lines": [
+        122,
+        128
+      ],
+      "imported_lines": [
+        76,
+        82
+      ],
+      "ast_sha256": "3730ad7337097162da47ec9898900270d08561a2fb7446e05a76b30e67f31879",
+      "method_ast_unchanged": true
+    },
+    {
+      "source": "tests/fex/test_memory_atomic_resume.py",
+      "destination": "tests/wine_integration/test_memory_atomic_resume.py",
+      "symbol": "AtomicReaderTests.test_refusal_cannot_grant_facts",
+      "original_lines": [
+        130,
+        134
+      ],
+      "imported_lines": [
+        84,
+        88
+      ],
+      "ast_sha256": "b1da17096f03f14caa6eac78a0749c6fe01a8267158c2c8f01d1cbd4bfb2ac7e",
+      "method_ast_unchanged": true
+    },
+    {
+      "source": "tests/fex/test_memory_atomic_resume.py",
+      "destination": "tests/wine_integration/test_memory_atomic_resume.py",
+      "symbol": "AtomicReaderTests.test_native_error_fields_not_discarded",
+      "original_lines": [
+        136,
+        139
+      ],
+      "imported_lines": [
+        90,
+        93
+      ],
+      "ast_sha256": "a82deede647f2a17644bc2bb63a04f86836bb135084b2b172f1dd474d41b7461",
+      "method_ast_unchanged": true
+    },
+    {
+      "source": "tests/fex/test_memory_atomic_resume.py",
+      "destination": "tests/wine_integration/test_memory_atomic_resume.py",
+      "symbol": "AtomicReaderTests.test_bool_scalar_is_not_integer_fact",
+      "original_lines": [
+        141,
+        144
+      ],
+      "imported_lines": [
+        95,
+        98
+      ],
+      "ast_sha256": "7e512895a6035fae12ee35faabc51266593e4108b761770c1c20d88019a6a31f",
+      "method_ast_unchanged": true
+    },
+    {
+      "source": "tests/fex/test_memory_atomic_resume.py",
+      "destination": "tests/wine_integration/test_memory_atomic_resume.py",
+      "symbol": "AtomicReaderTests.test_returned_status_matches_actual_status",
+      "original_lines": [
+        146,
+        150
+      ],
+      "imported_lines": [
+        100,
+        104
+      ],
+      "ast_sha256": "12e2dcaf38f1ddb766e2cf3d0e3ff437f38083cada350523bf4db6a76d2c6018",
+      "method_ast_unchanged": true
+    },
+    {
+      "source": "tests/fex/test_memory_atomic_resume.py",
+      "destination": "tests/wine_integration/test_memory_atomic_resume.py",
+      "symbol": "AtomicReaderTests.test_poll_preserves_original_identity",
+      "original_lines": [
+        152,
+        155
+      ],
+      "imported_lines": [
+        106,
+        109
+      ],
+      "ast_sha256": "abf8fb4b0895341db7d8cdc314f24096a92968ad09da7f58bc6951e573c73dc3",
+      "method_ast_unchanged": true
+    },
+    {
+      "source": "tests/fex/test_memory_atomic_resume.py",
+      "destination": "tests/wine_integration/test_memory_atomic_resume.py",
+      "symbol": "AtomicReaderTests.test_poll_no_managed_active_claim",
+      "original_lines": [
+        157,
+        159
+      ],
+      "imported_lines": [
+        111,
+        113
+      ],
+      "ast_sha256": "33b920e49748dad9209f954c880166af89e21abdc734f8686e4b417d01964912",
+      "method_ast_unchanged": true
+    },
+    {
+      "source": "tests/fex/test_memory_atomic_resume.py",
+      "destination": "tests/wine_integration/test_memory_atomic_resume.py",
+      "symbol": "AtomicReaderTests.test_initial_pin_not_fabricated",
+      "original_lines": [
+        161,
+        163
+      ],
+      "imported_lines": [
+        115,
+        117
+      ],
+      "ast_sha256": "abfe986e243c8f0bd63984621a9356f626f619c5f935cedc9b7ff687aee53fda",
+      "method_ast_unchanged": true
+    },
+    {
+      "source": "tests/fex/test_memory_atomic_resume.py",
+      "destination": "tests/wine_integration/test_memory_atomic_resume.py",
+      "symbol": "AtomicReaderTests.test_aligned_source_extent",
+      "original_lines": [
+        165,
+        170
+      ],
+      "imported_lines": [
+        119,
+        124
+      ],
+      "ast_sha256": "260441590327b78c0ffc88d5c9f4aa3678943a88bfa51926cac3e476306f6e61",
+      "method_ast_unchanged": true
+    },
+    {
+      "source": "tests/fex/test_memory_atomic_resume.py",
+      "destination": "tests/wine_integration/test_memory_atomic_resume.py",
+      "symbol": "AtomicReaderTests.test_resume_identity_matches_original",
+      "original_lines": [
+        172,
+        175
+      ],
+      "imported_lines": [
+        126,
+        129
+      ],
+      "ast_sha256": "be057de5d508f8bc9780d94e6b8653c5d2b3c98fc8302cade2f016a4c02310df",
+      "method_ast_unchanged": true
+    },
+    {
+      "source": "tests/fex/test_memory_atomic_resume.py",
+      "destination": "tests/wine_integration/test_memory_atomic_resume.py",
+      "symbol": "AtomicReaderTests.test_consumed_continuation_not_retained",
+      "original_lines": [
+        177,
+        179
+      ],
+      "imported_lines": [
+        131,
+        133
+      ],
+      "ast_sha256": "44f86ec33c9d429d94f0e8bc67719ee4451a0237f97612e1a0ce9e211531e44e",
+      "method_ast_unchanged": true
+    },
+    {
+      "source": "tests/fex/test_memory_atomic_resume.py",
+      "destination": "tests/wine_integration/test_memory_atomic_resume.py",
+      "symbol": "AtomicReaderTests.test_resume_epoch_really_advanced",
+      "original_lines": [
+        181,
+        183
+      ],
+      "imported_lines": [
+        135,
+        137
+      ],
+      "ast_sha256": "1cd9f87bcf97b51ba0420702cb99020e48ba2af04e49a63636f82782ee7358e4",
+      "method_ast_unchanged": true
+    },
+    {
+      "source": "tests/fex/test_memory_atomic_resume.py",
+      "destination": "tests/wine_integration/test_memory_atomic_resume.py",
+      "symbol": "AtomicReaderTests.test_made_up_new_epoch_requires_publisher",
+      "original_lines": [
+        185,
+        189
+      ],
+      "imported_lines": [
+        139,
+        143
+      ],
+      "ast_sha256": "b8c04104c4d0d8272316c312cbb0dbd1481b665042d702d261099f36ca24585d",
+      "method_ast_unchanged": true
+    },
+    {
+      "source": "tests/fex/test_memory_atomic_resume.py",
+      "destination": "tests/wine_integration/test_memory_atomic_resume.py",
+      "symbol": "AtomicReaderTests.test_exit_same_current_epoch",
+      "original_lines": [
+        191,
+        193
+      ],
+      "imported_lines": [
+        145,
+        147
+      ],
+      "ast_sha256": "4471d13c18f0119d4f49b482343a17f47515f6d8eb1e3a23a12b26738e4efb03",
+      "method_ast_unchanged": true
+    },
+    {
+      "source": "tests/fex/test_memory_atomic_resume.py",
+      "destination": "tests/wine_integration/test_memory_atomic_resume.py",
+      "symbol": "AtomicReaderTests.test_missing_initial_publisher",
+      "original_lines": [
+        195,
+        196
+      ],
+      "imported_lines": [
+        149,
+        150
+      ],
+      "ast_sha256": "f81640bda2f011e8f500df02f4b395f4b629c65d0162ea8ee55ea031be117ddc",
+      "method_ast_unchanged": true
+    },
+    {
+      "source": "tests/fex/test_memory_atomic_resume.py",
+      "destination": "tests/wine_integration/test_memory_atomic_resume.py",
+      "symbol": "AtomicReaderTests.test_initial_publisher_identity",
+      "original_lines": [
+        198,
+        201
+      ],
+      "imported_lines": [
+        152,
+        155
+      ],
+      "ast_sha256": "19d4eac3c270a4d204c86f63b4724f911bd737e1ca448c358941437087097708",
+      "method_ast_unchanged": true
+    },
+    {
+      "source": "tests/fex/test_memory_atomic_resume.py",
+      "destination": "tests/wine_integration/test_memory_atomic_resume.py",
+      "symbol": "AtomicReaderTests.test_initial_publisher_original_epoch",
+      "original_lines": [
+        203,
+        205
+      ],
+      "imported_lines": [
+        157,
+        159
+      ],
+      "ast_sha256": "381eaf880bcad2cf840fced062132e24cc7dec842bdd794bdc33a43c443b230b",
+      "method_ast_unchanged": true
+    },
+    {
+      "source": "tests/fex/test_memory_atomic_resume.py",
+      "destination": "tests/wine_integration/test_memory_atomic_resume.py",
+      "symbol": "AtomicReaderTests.test_initial_write_window_size",
+      "original_lines": [
+        207,
+        209
+      ],
+      "imported_lines": [
+        161,
+        163
+      ],
+      "ast_sha256": "d9c142bad419f41897260411bd77a4610d153bf14063bad3468f0b7d85c57180",
+      "method_ast_unchanged": true
+    },
+    {
+      "source": "tests/fex/test_memory_atomic_resume.py",
+      "destination": "tests/wine_integration/test_memory_atomic_resume.py",
+      "symbol": "AtomicReaderTests.test_publication_requires_actual_rx",
+      "original_lines": [
+        211,
+        213
+      ],
+      "imported_lines": [
+        165,
+        167
+      ],
+      "ast_sha256": "2797dbf197f58c5e2bcf45f69ee9df1b560b532b6569e1ed1fc0ed329498d1b5",
+      "method_ast_unchanged": true
+    },
+    {
+      "source": "tests/fex/test_memory_atomic_resume.py",
+      "destination": "tests/wine_integration/test_memory_atomic_resume.py",
+      "symbol": "AtomicReaderTests.test_replacement_write_identity",
+      "original_lines": [
+        215,
+        218
+      ],
+      "imported_lines": [
+        169,
+        172
+      ],
+      "ast_sha256": "ede211588e193e2ce20b35efff5df06204bc05dd615d992cf99c13c64b5ae700",
+      "method_ast_unchanged": true
+    },
+    {
+      "source": "tests/fex/test_memory_atomic_resume.py",
+      "destination": "tests/wine_integration/test_memory_atomic_resume.py",
+      "symbol": "AtomicReaderTests.test_replacement_current_epoch",
+      "original_lines": [
+        220,
+        222
+      ],
+      "imported_lines": [
+        174,
+        176
+      ],
+      "ast_sha256": "c46df4f8ef7c64aba00d7894073d1fd744fffc036f64581e0788e166663a5aed",
+      "method_ast_unchanged": true
+    },
+    {
+      "source": "tests/fex/test_memory_atomic_resume.py",
+      "destination": "tests/wine_integration/test_memory_atomic_resume.py",
+      "symbol": "AtomicReaderTests.test_refresh_status_is_actual_unavailable",
+      "original_lines": [
+        224,
+        227
+      ],
+      "imported_lines": [
+        178,
+        181
+      ],
+      "ast_sha256": "097acb51cf83ba13e1d5bb19528b9729c1433d164418768db01254c56863e9cf",
+      "method_ast_unchanged": true
+    },
+    {
+      "source": "tests/fex/test_memory_atomic_resume.py",
+      "destination": "tests/wine_integration/test_memory_atomic_resume.py",
+      "symbol": "AtomicReaderTests.test_refresh_refusal_facts_are_zero",
+      "original_lines": [
+        229,
+        231
+      ],
+      "imported_lines": [
+        183,
+        185
+      ],
+      "ast_sha256": "39f7aa3b31e83357696950d4076d27120b4017b7e14e2dc8f8f44ad3d22df83e",
+      "method_ast_unchanged": true
+    },
+    {
+      "source": "tests/fex/test_memory_atomic_resume.py",
+      "destination": "tests/wine_integration/test_memory_atomic_resume.py",
+      "symbol": "AtomicReaderTests.test_refresh_request_is_zero",
+      "original_lines": [
+        233,
+        235
+      ],
+      "imported_lines": [
+        187,
+        189
+      ],
+      "ast_sha256": "282b80342cbebc88b872e1bfabe72df11d1b93534e8684d0d8b28d5fe8255b9f",
+      "method_ast_unchanged": true
+    },
+    {
+      "source": "tests/fex/test_memory_atomic_resume.py",
+      "destination": "tests/wine_integration/test_memory_atomic_resume.py",
+      "symbol": "AtomicReaderTests.test_replacement_state_requires_pin",
+      "original_lines": [
+        237,
+        239
+      ],
+      "imported_lines": [
+        191,
+        193
+      ],
+      "ast_sha256": "1ed6aff5ccaf66c91a99b99e588d3d6be4b6f895e48cbe4fadd8f825a54a1361",
+      "method_ast_unchanged": true
+    },
+    {
+      "source": "tests/fex/test_memory_atomic_resume.py",
+      "destination": "tests/wine_integration/test_memory_atomic_resume.py",
+      "symbol": "AtomicReaderTests.test_retirement_precedes_write",
+      "original_lines": [
+        241,
+        244
+      ],
+      "imported_lines": [
+        195,
+        198
+      ],
+      "ast_sha256": "f4bd04cf1e650d85fb61c5fcd4460f7359b2fd57f30a2b0e3cb5b7649dec6079",
+      "method_ast_unchanged": true
+    },
+    {
+      "source": "tests/fex/test_memory_atomic_resume.py",
+      "destination": "tests/wine_integration/test_memory_atomic_resume.py",
+      "symbol": "AtomicReaderTests.test_no_extra_writer_between_pin_and_retire",
+      "original_lines": [
+        246,
+        249
+      ],
+      "imported_lines": [
+        200,
+        203
+      ],
+      "ast_sha256": "101db2b4ac25584b329cc3f1aee544e529337835b76e50f36df2bd32e34814f6",
+      "method_ast_unchanged": true
+    },
+    {
+      "source": "tests/fex/test_memory_atomic_resume.py",
+      "destination": "tests/wine_integration/test_memory_atomic_resume.py",
+      "symbol": "AtomicReaderTests.test_no_missing_refresh_before_current_write",
+      "original_lines": [
+        251,
+        253
+      ],
+      "imported_lines": [
+        205,
+        207
+      ],
+      "ast_sha256": "aee609e5494a58109a7552dedfdc607980cbadd03aaa798bef981156a91322ee",
+      "method_ast_unchanged": true
+    },
+    {
+      "source": "tests/fex/test_memory_atomic_resume.py",
+      "destination": "tests/wine_integration/test_memory_atomic_resume.py",
+      "symbol": "AtomicReaderTests.test_publication_order_not_interchangeable",
+      "original_lines": [
+        255,
+        257
+      ],
+      "imported_lines": [
+        209,
+        211
+      ],
+      "ast_sha256": "a36ba54191607bb3d14d8b0b43d2c6f5f1bc7a31139ada74bf9cdfa9978179d6",
+      "method_ast_unchanged": true
+    },
+    {
+      "source": "tests/fex/test_memory_atomic_resume.py",
+      "destination": "tests/wine_integration/test_memory_atomic_resume.py",
+      "symbol": "AtomicReaderTests.test_negative_pairs_source_order",
+      "original_lines": [
+        259,
+        261
+      ],
+      "imported_lines": [
+        213,
+        215
+      ],
+      "ast_sha256": "122e1a73b3b317ff7e9b86429c8ebdaeec6485d76fb420707b7423fc6b76bc30",
+      "method_ast_unchanged": true
+    },
+    {
+      "source": "tests/fex/test_memory_atomic_resume.py",
+      "destination": "tests/wine_integration/test_memory_atomic_resume.py",
+      "symbol": "AtomicReaderTests.test_poll_adjacent_to_refusal",
+      "original_lines": [
+        263,
+        265
+      ],
+      "imported_lines": [
+        217,
+        219
+      ],
+      "ast_sha256": "fe83574baed8adcc1e33da319698f50ea755e26b9a850bac1da98ca979b86a5e",
+      "method_ast_unchanged": true
+    },
+    {
+      "source": "tests/fex/test_memory_atomic_resume.py",
+      "destination": "tests/wine_integration/test_memory_atomic_resume.py",
+      "symbol": "AtomicReaderTests.test_no_extra_call_before_handoff",
+      "original_lines": [
+        267,
+        269
+      ],
+      "imported_lines": [
+        221,
+        223
+      ],
+      "ast_sha256": "889136f313a01897926342b3b411e5dba04c42c4580a1bd72a56a58d249527c3",
+      "method_ast_unchanged": true
+    },
+    {
+      "source": "tests/fex/test_memory_atomic_resume.py",
+      "destination": "tests/wine_integration/test_memory_atomic_resume.py",
+      "symbol": "AtomicReaderTests.test_no_gap_in_commit_sequence",
+      "original_lines": [
+        271,
+        274
+      ],
+      "imported_lines": [
+        225,
+        228
+      ],
+      "ast_sha256": "a9ca94043ada6b0b15ee037b1b2b938ae28f12a98de25fb894a460aa21f61d34",
+      "method_ast_unchanged": true
+    },
+    {
+      "source": "tests/fex/test_memory_atomic_resume.py",
+      "destination": "tests/wine_integration/test_memory_atomic_resume.py",
+      "symbol": "AtomicReaderTests.test_duplicate_objects_refused",
+      "original_lines": [
+        276,
+        278
+      ],
+      "imported_lines": [
+        230,
+        232
+      ],
+      "ast_sha256": "c4227d4776e754e29d41b39e57e32436c6fb7349eaaadb8d49feb5a0c7543faa",
+      "method_ast_unchanged": true
+    },
+    {
+      "source": "tests/fex/test_memory_atomic_resume.py",
+      "destination": "tests/wine_integration/test_memory_atomic_resume.py",
+      "symbol": "AtomicReaderTests.test_unknown_atomic_control",
+      "original_lines": [
+        280,
+        283
+      ],
+      "imported_lines": [
+        234,
+        237
+      ],
+      "ast_sha256": "5cf7fbc804ec25ab8f21033e2f91e7e9ca5dddef9e48c0b26b3ded92bd56ab27",
+      "method_ast_unchanged": true
+    },
+    {
+      "source": "tests/fex/test_memory_atomic_resume.py",
+      "destination": "tests/wine_integration/test_memory_atomic_resume.py",
+      "symbol": "AtomicReaderTests.test_missing_atomic_control",
+      "original_lines": [
+        285,
+        287
+      ],
+      "imported_lines": [
+        239,
+        241
+      ],
+      "ast_sha256": "e61c0d37fa499d4348591c50e8e47534d94a03caaceb3e7f31f0f576ad9b78c7",
+      "method_ast_unchanged": true
+    },
+    {
+      "source": "tests/fex/test_memory_atomic_resume.py",
+      "destination": "tests/wine_integration/test_memory_atomic_resume.py",
+      "symbol": "AtomicReaderTests.test_empty_calls",
+      "original_lines": [
+        289,
+        290
+      ],
+      "imported_lines": [
+        243,
+        244
+      ],
+      "ast_sha256": "96ef8e4f976e680aacf5b0db25034d3b3d2cdd7032f421c4c13f72940e05afb4",
+      "method_ast_unchanged": true
+    },
+    {
+      "source": "tests/fex/test_memory_atomic_resume.py",
+      "destination": "tests/wine_integration/test_memory_atomic_resume.py",
+      "symbol": "AtomicReaderTests.test_not_control_row",
+      "original_lines": [
+        292,
+        293
+      ],
+      "imported_lines": [
+        246,
+        247
+      ],
+      "ast_sha256": "81831e45be52f9f9b140d5ef5b4b82f5c82eedb3566aea51934168632c683e50",
+      "method_ast_unchanged": true
+    },
+    {
+      "source": "tests/fex/test_memory_check.py",
+      "destination": "tests/wine_integration/test_memory_check.py",
+      "symbol": "AdmissionAndResult.test_admission_binds_exact_current_identity_and_original_error_facts",
+      "original_lines": [
+        141,
+        149
+      ],
+      "imported_lines": [
+        11,
+        19
+      ],
+      "ast_sha256": "9b4870d74fa526d45dacc93cf704ab91522991743dfd1b47a01e7ac7177b24a6",
+      "method_ast_unchanged": true
+    },
+    {
+      "source": "tests/fex/test_memory_check.py",
+      "destination": "tests/wine_integration/test_memory_check.py",
+      "symbol": "AdmissionAndResult.test_successful_structural_transcript_keeps_native_scope_and_128_pins",
+      "original_lines": [
+        151,
+        155
+      ],
+      "imported_lines": [
+        21,
+        25
+      ],
+      "ast_sha256": "6f47ec4e92338eb523a9d89e733c13dab911f4f5ed6e0512eb0fd64904b66700",
+      "method_ast_unchanged": true
+    },
+    {
+      "source": "tests/fex/test_memory_check.py",
+      "destination": "tests/wine_integration/test_memory_check.py",
+      "symbol": "AdmissionAndResult.test_duplicate_or_missing_trace_sequence_never_passes",
+      "original_lines": [
+        157,
+        160
+      ],
+      "imported_lines": [
+        27,
+        30
+      ],
+      "ast_sha256": "a92fdc45c9905434448b0ddb3698c9e76e556356821efbac3dfe3c2e3c2bc1f5",
+      "method_ast_unchanged": true
+    },
+    {
+      "source": "tests/fex/test_memory_check.py",
+      "destination": "tests/wine_integration/test_memory_check.py",
+      "symbol": "AdmissionAndResult.test_unknown_records_extra_fields_and_boolean_status_are_closed",
+      "original_lines": [
+        162,
+        167
+      ],
+      "imported_lines": [
+        32,
+        37
+      ],
+      "ast_sha256": "184922784d0e9ea1255885d8e3b241da2780e545cf255017c7a064bfd48a1767",
+      "method_ast_unchanged": true
+    },
+    {
+      "source": "tests/fex/test_memory_check.py",
+      "destination": "tests/wine_integration/test_memory_check.py",
+      "symbol": "AdmissionAndResult.test_native_error_codes_and_refusal_facts_cannot_be_hidden",
+      "original_lines": [
+        169,
+        173
+      ],
+      "imported_lines": [
+        39,
+        43
+      ],
+      "ast_sha256": "4f2e15132568caa86c5a76cec1a33dd974bf8ef559d3a2d958f1c5015ed9f52f",
+      "method_ast_unchanged": true
+    },
+    {
+      "source": "tests/fex/test_memory_check.py",
+      "destination": "tests/wine_integration/test_memory_check.py",
+      "symbol": "AdmissionAndResult.test_uint64_malformed_range_is_lossless_hex_with_original_json_bound",
+      "original_lines": [
+        175,
+        181
+      ],
+      "imported_lines": [
+        45,
+        51
+      ],
+      "ast_sha256": "08bb982965dbe889b8967cceaa636fd5ab0c7363055a8c6ea3c88080c09f03cf",
+      "method_ast_unchanged": true
+    },
+    {
+      "source": "tests/fex/test_memory_check.py",
+      "destination": "tests/wine_integration/test_memory_check.py",
+      "symbol": "AdmissionAndResult.test_partial_pin_admission_or_generic_native_failure_does_not_qualify",
+      "original_lines": [
+        183,
+        191
+      ],
+      "imported_lines": [
+        53,
+        61
+      ],
+      "ast_sha256": "fba761ece45b2133db0b4c95cc4719c4e3f6df4f205ea343aba7600900bf4343",
+      "method_ast_unchanged": true
+    },
+    {
+      "source": "tests/fex/test_memory_check.py",
+      "destination": "tests/wine_integration/test_memory_check.py",
+      "symbol": "AdmissionAndResult.test_terminals_are_not_reordered_or_relabelled",
+      "original_lines": [
+        193,
+        196
+      ],
+      "imported_lines": [
+        63,
+        66
+      ],
+      "ast_sha256": "1c699bb1ab14ef691202be2a58ecadad6563ca6fe2f9dcc286171050a5b112fe",
+      "method_ast_unchanged": true
+    },
+    {
+      "source": "tests/fex/test_memory_check.py",
+      "destination": "tests/wine_integration/test_memory_check.py",
+      "symbol": "CooperativeResult.test_four_owned_workers_and_both_real_timeout_controls_are_required",
+      "original_lines": [
+        200,
+        204
+      ],
+      "imported_lines": [
+        70,
+        74
+      ],
+      "ast_sha256": "dd21c260f6319edbeaef4e5d72b3a6e1686a2e9cfb1127965fbc9007eb1ff37c",
+      "method_ast_unchanged": true
+    },
+    {
+      "source": "tests/fex/test_memory_check.py",
+      "destination": "tests/wine_integration/test_memory_check.py",
+      "symbol": "CooperativeResult.test_join_failure_duplicate_actor_and_cleanup_errors_never_pass",
+      "original_lines": [
+        206,
+        216
+      ],
+      "imported_lines": [
+        76,
+        86
+      ],
+      "ast_sha256": "fe85c2de87d08d55517746490132d313f9725a8d0598544bd3630f187837fbf6",
+      "method_ast_unchanged": true
+    },
+    {
+      "source": "tests/fex/test_memory_check.py",
+      "destination": "tests/wine_integration/test_memory_check.py",
+      "symbol": "CooperativeResult.test_pinned_or_active_state_is_not_a_completed_native_park",
+      "original_lines": [
+        218,
+        225
+      ],
+      "imported_lines": [
+        88,
+        95
+      ],
+      "ast_sha256": "1631456c35d19a9e11c8b54b109db9c507c2359172cc565d461a2b6f943cfba2",
+      "method_ast_unchanged": true
+    },
+    {
+      "source": "tests/fex/test_memory_check.py",
+      "destination": "tests/wine_integration/test_memory_check.py",
+      "symbol": "CooperativeResult.test_failed_cleanup_or_relabelled_opcode_cannot_count_as_retirement",
+      "original_lines": [
+        227,
+        233
+      ],
+      "imported_lines": [
+        97,
+        103
+      ],
+      "ast_sha256": "599d98653be0dfc35c52eb7a732e1ce581de6d9e5baee743add762156b82e519",
+      "method_ast_unchanged": true
+    }
+  ],
+  "canonical_provider_refs": [
+    {
+      "path": "tests/fex/memory/protocol.py",
+      "sha256": "a56f018d6d017a150e2ada1b2172be792f54b26d0ba23abe803f7b4c92e0d91b",
+      "size_bytes": 5518,
+      "mode": 420
+    },
+    {
+      "path": "tests/wine_integration/oracles/resume.py",
+      "sha256": "d7d6509c21c2dc4573ec87122dbdd1ad3c00acb20aff755412ee267ef4f3520e",
+      "size_bytes": 10575,
+      "mode": 420
+    },
+    {
+      "path": "tests/wine_integration/oracles/synthetic_atomic.py",
+      "sha256": "a604e162a8a4c62ddd8134f4350299dc413f19883d714b7c5171527016a0f8e9",
+      "size_bytes": 3191,
+      "mode": 420
+    }
+  ],
+  "previous_canonical_import_receipt": "provenance/wine-integration-tests-import.json",
+  "previous_receipt_scope": "Earlier full-file import hashes identify the prior import state; the exact base_sha256 and added functions here describe this later test-only extension without rewriting historical provenance.",
+  "not_adopted": [
+    "tools/fex/memory_run.py executable orchestration",
+    "tools/fex/memory_check.py old build replay",
+    "tools/fex/memory_fex_build.py",
+    "tools/fex/memory_fex_check.py"
+  ],
+  "remaining_original_methods": 129,
+  "remaining_method_plan": "Tracked separately; no claim that omitted build/orchestration assertions were executed or fully covered.",
+  "separator_adaptation": "Generation-only blank EOF lines removed; every selected method/function AST and exact helper function bytes preserved."
+}

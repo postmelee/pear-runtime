@@ -26,6 +26,7 @@ class FullCorpusComparisons(unittest.TestCase):
     def setUp(self):
         original = original_corpus.HarnessTests()
         original.setUp()
+        self.provider = original.provider
         self.build = corpus.canonical(original.build)
         self.reference = copy.deepcopy(original.run)
         self.candidate = copy.deepcopy(original.run['cases'])
@@ -37,7 +38,7 @@ class FullCorpusComparisons(unittest.TestCase):
                 row[stream + '_sha256'] = corpus.digest(raw)
 
     def compare(self):
-        return corpus.compare_result_rows(self.build, self.reference, self.logs, self.candidate)
+        return corpus.compare_result_rows(self.build, self.reference, self.logs, self.candidate, provider=self.provider)
 
     def test_complete19_preserves_separate_execution_admission(self):
         result = self.compare()
@@ -50,14 +51,14 @@ class FullCorpusComparisons(unittest.TestCase):
         for rows in (self.candidate[:-1], self.candidate + self.candidate[-1:],
                      self.candidate[1:] + self.candidate[:1]):
             with self.subTest(ids=[row['id'] for row in rows]), self.assertRaisesRegex(ValueError, 'candidate_case_set'):
-                corpus.compare_result_rows(self.build, self.reference, self.logs, rows)
+                corpus.compare_result_rows(self.build, self.reference, self.logs, rows, provider=self.provider)
 
     def test_foreign_binary_and_nonexit_are_rejected(self):
         for key, value in (('binary_sha256', 'b' * 64), ('outcome', 'timeout')):
             rows = copy.deepcopy(self.candidate)
             rows[0][key] = value
             with self.subTest(key=key), self.assertRaisesRegex(ValueError, 'case_binary_or_outcome'):
-                corpus.compare_result_rows(self.build, self.reference, self.logs, rows)
+                corpus.compare_result_rows(self.build, self.reference, self.logs, rows, provider=self.provider)
 
     def test_wrong_result_cannot_be_hidden_by_complete_suite(self):
         self.candidate[0]['events'][1]['values'][0] = '0x0000000000000000'
@@ -95,7 +96,7 @@ class FullCorpusComparisons(unittest.TestCase):
         record = copy.deepcopy(self.reference)
         record['scope'] = 'cpu_pear_results'
         with self.assertRaisesRegex(ValueError, 'candidate_admission_not_implemented'):
-            corpus.assess_records(corpus.manifest(), self.build, record, 'pear')
+            corpus.assess_records(corpus.manifest(), self.build, record, 'pear', provider=self.provider)
 
 
 class FullOrderingComparisons(unittest.TestCase):

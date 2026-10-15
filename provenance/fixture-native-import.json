@@ -1,0 +1,279 @@
+{
+  "api": {
+    "additional_context_refs": [
+      "api_variant_ref",
+      "seed_context_ref"
+    ],
+    "cases": [
+      "api",
+      "abi",
+      "threads",
+      "window",
+      "bootstrap",
+      "bootstrap-timeout",
+      "wrong-prefix-server"
+    ],
+    "context_schema_version": 2,
+    "entrypoint": "python3 -m pear_runtime.fixtures.native inspect|execute --request ABSOLUTE_JSON",
+    "execution": "Parent runs reviewed current controls under the shared lease. Four native PE controls use the verified synthetic seed plus exactly one optional desktop-menu startup removal; three no-PE bootstrap controls retain original fresh-empty policy. No cold-prefix or game qualification is inferred.",
+    "operation_scope": "development_native_fixture_execution",
+    "request_fields": [
+      "schema_version",
+      "scope",
+      "descriptor_ref",
+      "fixture",
+      "output_name",
+      "limits"
+    ],
+    "request_scope": "development_native_fixture_request"
+  },
+  "bindings": [
+    "Restore original native 262144-byte stream policy inside the isolated captured provider.",
+    "Retain original Session, DarwinObserver, APISession and APIObserver class bodies and code objects.",
+    "Rebind unchanged original API/dynamic function code objects to captured dictionaries so shared selected-header geometry helpers resolve transitively.",
+    "Replace historical requirements.json input with exact current-bound static control requirements; all remaining target-control assertions unchanged.",
+    "Replace historical authorization_scope gate with exact successful current authority/runtime/final-operation refs; preserve suite and entrypoint/page-WX checks.",
+    "Extract unchanged bootstrap _validate_runs per-case statements 12 through 28 from its original row loop; current context owns case/source/runtime refs and final operation rather than historical run.json/signed.json.",
+    "Preserve original API outer prefix/nonce/duration/log assertions and all inner API/native/arena/dynamic/window/cleanup assertions.",
+    "Bind all23 original fixture hash entries to canonical Wine fixture/source manifests, all12 installed outputs to original command receipts, nine whole PE payloads except COFF/debug timestamps, and three Mach-O code-origin comparisons.",
+    "Retain winemac.drv from explicit development_assembly.input_runtime/source_ledger; its historical source-to-PE build origin remains unknown. Original window oracle validates exact current guest/native exports.",
+    "Project native_images source_path as an explicit role alias of the same current path; original hash/code-origin/source receipts stay unchanged.",
+    "Require four current same-input API/ABI/thread/window successful final operation and assessment pairs before bootstrap controls.",
+    "Use existing shared lease/deadline/bounded-log worker primitives; final operation independently binds inner assessment and release. No saved authority or old runtime lookup is replayed.",
+    "Use the exact Wine-owned arm64ec-class181-arm64-i386-v1 generated API PE only for the api case. Preserve the original native-only C and expected_api_rows; a captured namespace changes only its exact first architecture row and run_case paths assignment. All remaining assertions and original class bodies remain unchanged.",
+    "Admit the explicit variant policy, original source, generator, recipe, bindings, all original tool/header/library inputs, generated source, compiler argv/logs/dependencies, successful build and released operation. This is one exact external API PE, never a general entrypoint override.",
+    "For api, abi, threads and window, intercept only the isolated original base.environment binding: reuse controls.clone_prefix once into the fresh case prefix with two exact module replacements. Later environment calls reuse that same prefix. The original function still produces every environment value.",
+    "Keep every original native process, arena, lifecycle, cleanup and static wrong-architecture assertion. Record the verified-account-free-device15-seed-with-current-modules policy and cold_prefix_initialization=false; original cold Wineboot failures remain failed historical evidence.",
+    "Bootstrap, bootstrap-timeout and wrong-prefix-server keep the original fresh-empty no-PE policy with no seed interception. They still require all four current exact successful native operations.",
+    "After the exact two module replacements on each of the four native PE clones, reuse unchanged controls.execution.without_desktop_menu to remove exactly one optional XDG desktop RunServices entry. Record original/current registry hashes, one-entry scope and immutable seed recheck; reject all other mutations. Bootstrap controls receive no transformation.",
+    "In original assess_relocation_events replace only top-level statements 3:6 (historical requirements.json read/hash/decode) with current bound authority validation and the exact native_fixture_policy requirements dictionary. All remaining original fixture-machine/permission/hash, byte copies, file no-alias, relocation, cookie, pointer, slot and lifetime assertions remain unchanged.",
+    "The isolated native API namespace copies ENVIRONMENT_POLICY and changes only prefix_initialization to the actual seeded/no-desktop-menu policy. Original provider bytes/constants and original run/assessment/validation function bodies are preserved; old v3 cases keep their historical label and separate truthful outer prefix origin.",
+    "Validate the exact canonical cases JSON through the unchanged original validate_cases function and original environment constant before returning a shallow configuration projection with only the truthful seeded environment policy changed. Original source JSON, bounds, cases and controls remain hash-bound and unmodified.",
+    "In original window_evidence.assess replace only top-level statement 2 (historical saved-grant scope) with the exact window case check and current mac-driver runtime/operation/authority validation. All other 27 original statements, all other original functions, class identities, scoped aliases and exit source rechecks remain unchanged."
+  ],
+  "canonical_editable_owner": "pear-runtime",
+  "cold_prefix_status": {
+    "cause": "Wine advertises I386 while the retained runtime lacks syswow64/rundll32.exe required by cold Wineboot. Native API/ABI initial failures remain separate evidence.",
+    "claim": "Seeded diagnostic controls only; ordinary-user initialization remains unqualified.",
+    "status": "unsupported_for_current_arm64ec_configuration"
+  },
+  "current_query_variant": {
+    "current_runtime_modified": false,
+    "expected_flags": [
+      7,
+      18
+    ],
+    "expected_machines": [
+      43620,
+      332
+    ],
+    "generator_path": "pear/native_api_variant.py",
+    "original_fixture_modified": false,
+    "owner": "pear-wine",
+    "policy_path": "pear/native-api-variant.json",
+    "returned_bytes": 12,
+    "terminator": 0,
+    "variant": "arm64ec-class181-arm64-i386-v1"
+  },
+  "driver_reuse": {
+    "source_path": "pear_runtime/fixtures/driver.py",
+    "source_sha256": "67ab8ac11dbc416283a5c048d7b012fbb5bf242caa1c4da299b4092cd90fa5c5",
+    "transformation": "Native context/request/assessment adapters; same shared lease/deadline/interrupt and bounded-log primitives, original final receipt error handling."
+  },
+  "files": [
+    {
+      "license": "GPL-3.0-or-later",
+      "path": "pear_runtime/fixtures/native/__init__.py",
+      "sha256": "5f8bdb841a188e9cc529bab30c5dc62ab1c63bda31e4e96329105c8d02619b38",
+      "size_bytes": 161
+    },
+    {
+      "license": "GPL-3.0-or-later",
+      "path": "pear_runtime/fixtures/native/__main__.py",
+      "sha256": "3347e07df5a5e663525102706125dc50604ab20a00d343cd55de6849232ec71c",
+      "size_bytes": 175
+    },
+    {
+      "license": "GPL-3.0-or-later",
+      "path": "pear_runtime/fixtures/native/api_variant.py",
+      "sha256": "2b88cbcd907f3dff449e008b7747e6f04647df78af217ef1007ba314c954c5ba",
+      "size_bytes": 10506
+    },
+    {
+      "license": "GPL-3.0-or-later",
+      "path": "pear_runtime/fixtures/native/binding.py",
+      "sha256": "435bc0273c31fa6292fad3b14417342eef2074c5091b40c84bd494a0ee1c0281",
+      "size_bytes": 9592
+    },
+    {
+      "license": "GPL-3.0-or-later",
+      "path": "pear_runtime/fixtures/native/context.py",
+      "sha256": "18919a4a84a7a2e29de19fb509492a28c3a7ab47e2f2037bf188351277d6f38d",
+      "size_bytes": 15788
+    },
+    {
+      "license": "GPL-3.0-or-later",
+      "path": "pear_runtime/fixtures/native/driver.py",
+      "sha256": "6bdb8885dc9e3d438881ee6bcff7d9b16b74fcc3efc25921e06187523398ac31",
+      "size_bytes": 9374
+    },
+    {
+      "license": "GPL-3.0-or-later",
+      "path": "pear_runtime/fixtures/native/execution.py",
+      "sha256": "60d6e3f539aff7ddf7a755fca53cc6243c66b1102bdca25f0033e5be128ff429",
+      "size_bytes": 11997
+    },
+    {
+      "license": "GPL-3.0-or-later",
+      "path": "pear_runtime/fixtures/native/provider.py",
+      "sha256": "520c7bd2da1a7f91e8e76342767083e264dc969527b5bb73a835deb1844c3123",
+      "size_bytes": 14942
+    }
+  ],
+  "menu_policy": {
+    "name": "verified-synthetic-seed-with-current-modules-and-no-desktop-menu",
+    "operation": "disable_optional_XDG_desktop_menu_autorun",
+    "oracle_policy": "No descendant filtering or exit-1 allowance; every original descendant, arena, lifecycle and cleanup assertion remains required.",
+    "process04_identity": "Optional winemenubuilder is inferred from startup registry/source and publication metadata. The case record contains no guest PE argv/path, so direct identity is unavailable.",
+    "provider_sha256": "5a16e158308b338f6e98d2807c60e16ee7cf09bde718940e3de554bf362bec8b",
+    "registry_path": "system.reg",
+    "removed_entries": 1,
+    "reused_function": "without_desktop_menu",
+    "reused_function_sha256": "ef4da147c7529882114f26dfb7d316436dc7e21b18f3cb444a0544cb8a776f73",
+    "reused_owner": "pear_runtime/fixtures/controls/execution.py",
+    "scope": "synthetic_native_four_prefix_only",
+    "v2_failure": "Preserved unexpected_pre_cleanup_descendant_exit; API loader itself and child protocol passed."
+  },
+  "native_execution_performed": false,
+  "origin_checkpoint": "951264bf5be4b9d2afb87320f5fac74778b2dd58",
+  "origin_repository": "https://github.com/postmelee/pear",
+  "original_units": [
+    {
+      "origin_path": "tools/wine/api_runner.py",
+      "provider_path": "pear_runtime/providers/pear_legacy/tools/wine/api_runner.py",
+      "sha256": "ae59778c676b4d1e0d4a569809f149833e23814723357a379e9bf52138879a3d",
+      "size_bytes": 87961,
+      "units": [
+        {
+          "name": "APIObserver",
+          "sha256": "8bcac5b33a0c33036dd6ccfd07b96c7089ed69424231afea31dba2ad37922748"
+        },
+        {
+          "name": "APISession",
+          "sha256": "18cba7399853553d842c8043c2c30ddc6e1d9b0e0fecfe6421fec9881b8f7c26"
+        },
+        {
+          "name": "assess_case",
+          "sha256": "54b2fe489e4d09470c305e510c2ea7faa60508623ac727b9996f502b4a4071b9"
+        },
+        {
+          "name": "run_case",
+          "sha256": "bd582c55706cd34384ee7e6f22d087eb7c5cc722b0f8dac1010edef2c535faf8"
+        },
+        {
+          "name": "target_controls",
+          "sha256": "c208fa1f7134fa09c18a62e6a30f9c52539c51a3ba2a9ec6d6b5c957b45b5022"
+        },
+        {
+          "name": "validate_suite_authorization",
+          "sha256": "989d7356ff81d452d3a6ee98a911f412d7333dfa57156c7572be2b2ce8e0675c"
+        },
+        {
+          "name": "validate_runs",
+          "sha256": "29495391672bdb9c84bbe94f7eca3a8d2f2ede5ec16abf96b8214485956454d6"
+        }
+      ]
+    },
+    {
+      "origin_path": "tools/wine/run_fixtures.py",
+      "provider_path": "pear_runtime/providers/pear_legacy/tools/wine/run_fixtures.py",
+      "sha256": "e6d79880e6fb46a20ed23f3966d3fa4139e2c78181a4ccf5e05f86e2ab87f688",
+      "size_bytes": 57987,
+      "units": [
+        {
+          "name": "DarwinObserver",
+          "sha256": "a47d4772263b4bf76315460e6bc3d1b2257dc4bdef074054f450b320261ee308"
+        },
+        {
+          "name": "Session",
+          "sha256": "8223c1c58b7b99dca27215b1832a1d224b4ef0e4a8d565d7ba2286bcac673fd6"
+        },
+        {
+          "name": "assess_case_record",
+          "sha256": "cf4efc1ab36ece4352718bacb0aebcf9935816158af2d3f1f4726153d1d2a0cf"
+        },
+        {
+          "name": "run_case",
+          "sha256": "ca404ee6d4f610f7beef0b72cb11b0712ff4381d3736e03d55db8d6849043440"
+        },
+        {
+          "name": "_validate_runs",
+          "sha256": "35ac1ba6799c17db063d96472ecbf8d0603de75e8e462189e28355003a2fa07e"
+        }
+      ]
+    },
+    {
+      "origin_path": "tools/wine/dynamic_evidence.py",
+      "provider_path": "pear_runtime/providers/pear_legacy/tools/wine/dynamic_evidence.py",
+      "sha256": "d358c8f987297b94ba7938cc277f48b661169edf2d0400a714a914a47e6b1a0e",
+      "size_bytes": 13409,
+      "units": [
+        {
+          "name": "validate_budget",
+          "sha256": "245b4c331151d681f0af7da09ac8d892f0485ea288fa90f1b2291be29c66fa59"
+        },
+        {
+          "name": "_process",
+          "sha256": "aa006be5e3d7469b13435c2bc7ab573864af08dd7fd6c3a119f401d12f7df498"
+        },
+        {
+          "name": "assess_events",
+          "sha256": "869ccb4c3fe94227a59d34c7922746b7a54d0b69ec2f9c92dacbeaf43be8350f"
+        }
+      ]
+    }
+  ],
+  "relocation_input_seam": {
+    "function": "assess_relocation_events",
+    "origin_provider_path": "pear_runtime/providers/pear_legacy/tools/wine/api_runner.py",
+    "original_function_sha256": "ad6befa08503917786c10ad8b0594d7b38ef8852fa9782c8094c748896b56198",
+    "original_statement_slice": [
+      3,
+      6
+    ],
+    "prior_failure": "ABI-v3 remains failed because the omitted input adapter attempted to read absent historical requirements.json; raw ABI/lifetime/relocation rows passed but do not upgrade the failed operation.",
+    "replacement_statement_count": 2,
+    "requirement_source": "Current admitted lifetime_dll candidate identity; machine ARM64, execution permitted only for this diagnostic fixture, exact SHA256. No historical saved grant.",
+    "unchanged_original_statements": "0:3 and6:end; verified by AST regression test"
+  },
+  "schema_version": 1,
+  "scope": "native_wine_execution_adapter",
+  "window_authorization_seam": {
+    "authority": "Exact window case plus validate_suite_authorization(mac-driver, signed) using independently bound current runtime, assembly operation and authority refs; the obsolete saved-grant field is never manufactured.",
+    "function": "assess",
+    "new_native_execution_performed": false,
+    "origin_provider_path": "pear_runtime/fixtures/native/window_evidence.py",
+    "original_file_sha256": "210f86bdb19c791bd4f5e4aaa284c7645cb8002ee01f81f9ad83f1b1d95ee0d8",
+    "original_function_ast_sha256": "a40eb39ba25c5fb0e8b1a7743e2fd5de12d9345a4beca9a351ba12c32014698a",
+    "original_function_sha256": "d7a069e895564ab57c72c00548555f6dcc4eb31acbe7d3c683758af26074438f",
+    "original_statement_index": 2,
+    "prior_failure": "The unchanged-source unlocked native window operation remains failed at window_authorization_scope. Its raw twenty-cycle fixture result and supplemental offline reassessment do not rewrite that operation or grant current execution authority.",
+    "replacement_statement_count": 2,
+    "test_source": {
+      "license": "GPL-3.0-or-later",
+      "path": "tests/fixtures/native/test_window_authorization.py",
+      "sha256": "ee5f6415ede5f8b73e639ce775fad02f1d5bc6f46635375ddf93dfc586d4e65b",
+      "size_bytes": 8649
+    },
+    "unchanged_oracles": "All guest/native image, process/thread, callback lifetime, deallocation, queue/barrier/turn, teardown, real exit and dynamic reservation assertions remain original. No deallocation waiver is applied.",
+    "unchanged_original_statements": "0:2 and 3:end; all27 retained and checked by AST regression"
+  },
+  "window_provider": {
+    "editable_destination": "pear_runtime/fixtures/native/window_evidence.py",
+    "license": "GPL-3.0-or-later",
+    "origin_path": "tools/wine/window_evidence.py",
+    "sha256": "210f86bdb19c791bd4f5e4aaa284c7645cb8002ee01f81f9ad83f1b1d95ee0d8",
+    "size_bytes": 19523,
+    "transformation": "Exact file bytes retained; the isolated captured namespace binds only the independently matched historical authorization statement through the current policy adapter."
+  }
+}

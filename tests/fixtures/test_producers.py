@@ -84,11 +84,11 @@ class ProducerTests(unittest.TestCase):
     def test_post_snapshot_source_drift_fails(self):
         captured=self.capture();output=self.root/'output';output.mkdir()
         original=producers.capture;calls=0
-        def change_after_copy(*args):
+        def change_after_copy(*args, **kwargs):
             nonlocal calls
             calls+=1
             if calls==2:raise Error('fixture_producer_incomplete_or_changed')
-            return original(*args)
+            return original(*args, **kwargs)
         with patch.object(producers,'capture',side_effect=change_after_copy):
             with self.assertRaisesRegex(Error,'fixture_producer_incomplete_or_changed'):captured.preserve(output)
         self.assertTrue((output/'producers.json').is_file())
@@ -109,6 +109,46 @@ class ProducerTests(unittest.TestCase):
         with patch.object(producers,'_loaded_sources'):
             captured=producers.capture(build.fact(self.manifest),PROVIDER)
         self.assertEqual(len(captured.refs),len(value['files']))
+
+    def test_extended_scope_survives_recheck_and_cannot_use_default_admission(self):
+        self.required.stop();self.loaded.stop();self.provider.stop()
+        entries=producers.ENTRY_MODULES+('pear_runtime.fixtures.release',)
+        dynamic=producers.DYNAMIC_PATHS+('provenance/fixture-release-import.json',)
+        options=dict(entry_modules=entries,dynamic_paths=dynamic,scope='fixture_controls_producer_sources')
+        value=producers.manifest_for_roots({'runtime':str(REPO)},**options)
+        paths={row['path'] for row in value['files']}
+        self.assertIn('pear_runtime/fixtures/release.py',paths)
+        self.assertIn('provenance/fixture-release-import.json',paths)
+        build.write_json(self.manifest,value);ref=build.fact(self.manifest)
+        with self.assertRaisesRegex(Error,'fixture_producer_manifest'):
+            producers.capture(ref,PROVIDER)
+        with patch.object(producers,'_loaded_sources'):
+            captured=producers.capture(ref,PROVIDER,**options)
+            captured.recheck()
+            self.assertEqual(captured.scope,options['scope'])
+            # An explicit dynamic input disappearing cannot pass after capture.
+            with patch.object(producers,'DYNAMIC_PATHS',()):captured.recheck()
+            with patch.object(producers,'required_sources',return_value=({'runtime':REPO},{},{})):
+                with self.assertRaisesRegex(Error,'fixture_producer_incomplete_or_changed'):captured.recheck()
+
+    def test_duplicate_unsafe_or_unknown_closure_options_refused(self):
+        bad=[dict(entry_modules=()),dict(entry_modules=('pear_runtime.fixtures.driver',)*2),
+             dict(entry_modules=('os',)),dict(dynamic_paths=('../outside.py',)),
+             dict(dynamic_paths=('same.py','same.py')),dict(scope='unreviewed')]
+        for options in bad:
+            with self.subTest(options=options),self.assertRaises((Error,ValueError)):
+                producers.manifest_for_roots({'runtime':str(self.code)},**options)
+
+    def test_fex_cpu_provider_is_an_explicit_owned_module(self):
+        path=self.code/'Pear/Tools/CPU';path.mkdir(parents=True)
+        (path/'adapt.py').write_text('VALUE=1\n')
+        self.assertEqual(producers._module_location('Pear.Tools.CPU.adapt',{'fex':self.code}),
+                         ('fex','Pear/Tools/CPU/adapt.py'))
+        self.assertIsNone(producers._module_location('Pear.Tools',{'fex':self.code}))
+        with self.assertRaisesRegex(Error,'fixture_producer_fex_root_required'):
+            producers._module_location('Pear.Tools.CPU.adapt',{})
+        with self.assertRaisesRegex(Error,'fixture_producer_module_missing'):
+            producers._module_location('Pear.Tools.CPU.missing',{'fex':self.code})
 
     def test_real_root_alias_and_extra_unused_root_refused(self):
         self.required.stop();alias=self.root/'alias';alias.symlink_to(REPO,target_is_directory=True)

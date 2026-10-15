@@ -1,0 +1,89 @@
+{
+  "schema_version": 1,
+  "scope": "remaining_paired_memory_current_input_assertions",
+  "source_repository": "https://github.com/postmelee/pear",
+  "source_checkpoint": "951264bf5be4b9d2afb87320f5fac74778b2dd58",
+  "source_file": {
+    "path": "tests/fex/test_memory_fex_pair.py",
+    "sha256": "492c50a35a5fa12ee387f2b551e37ec8ab4a4de1bbbf0f8295daab5934ae1be4",
+    "size_bytes": 54855
+  },
+  "license": "GPL-3.0-or-later",
+  "rows": [
+    {
+      "original_id": "tests/fex/test_memory_fex_pair.py::ExactCommandControls.test_missing_command_refused",
+      "original_method_sha256": "3bd547cfc7dbf71bb9f95cff782167c1b79d672f10c79f5ad2b06c32919c53d7",
+      "original_lines": [
+        225,
+        226
+      ],
+      "status": "current_contract_regression_adopted",
+      "destination": {
+        "path": "tests/wine_integration/test_memory_remaining_inputs.py",
+        "symbol": "RemainingInputCases.test_each_required_compile_command_omission_refused"
+      },
+      "whole_original_method_equivalence": false
+    },
+    {
+      "original_id": "tests/fex/test_memory_fex_pair.py::CanonicalGraphControls.test_absolute_parent_dot_empty_and_double_component_refused",
+      "original_method_sha256": "bd333d5d9b9fca6386d4dbb6ce808eea3e7da2c3b5d37a3504a06b2885d236b2",
+      "original_lines": [
+        543,
+        547
+      ],
+      "status": "current_contract_regression_adopted",
+      "destination": {
+        "path": "tests/wine_integration/test_memory_remaining_inputs.py",
+        "symbol": "RemainingInputCases.test_complete_root_relative_path_refusal_matrix"
+      },
+      "whole_original_method_equivalence": false
+    },
+    {
+      "original_id": "tests/fex/test_memory_fex_pair.py::CurrentProjectionControlControls.test_extra_control_error_refused",
+      "original_method_sha256": "dc11fcf89f71645ea649963fccc51274cab1fc792a5be7d25f9919eb4227a601",
+      "original_lines": [
+        715,
+        715
+      ],
+      "status": "current_contract_regression_adopted",
+      "destination": {
+        "path": "tests/wine_integration/test_memory_remaining_inputs.py",
+        "symbol": "RemainingInputCases.test_positive_receipt_refuses_current_failure_markers"
+      },
+      "whole_original_method_equivalence": false
+    },
+    {
+      "original_id": "tests/fex/test_memory_fex_pair.py::CurrentProjectionControlControls.test_omitted_command_refused",
+      "original_method_sha256": "9fa7bf20bdaef3ad2b8de4203dba5f2948e49a2167e292feed2aa95322af1b0f",
+      "original_lines": [
+        741,
+        741
+      ],
+      "status": "current_contract_regression_adopted",
+      "destination": {
+        "path": "tests/wine_integration/test_memory_remaining_inputs.py",
+        "symbol": "RemainingInputCases.test_each_required_compile_command_omission_refused"
+      },
+      "whole_original_method_equivalence": false
+    }
+  ],
+  "files": [
+    {
+      "path": "tests/wine_integration/test_memory_remaining_inputs.py",
+      "sha256": "896d4b8492fba0d301eba3739b9286dd984967fa0cbc804068a69de638abaa6f",
+      "size_bytes": 3674
+    }
+  ],
+  "limitations": [
+    "Three current test bodies cover four original method requirements, not original method body execution.",
+    "Compile omission is the selected three-unit capability contract; it does not reconstruct the historical 170-command Git roster or a generic link/strip sequence.",
+    "The original contradictory receipt characterization remains historical evidence; current tests require refusal of current failure/failure_code markers."
+  ],
+  "native_execution": false,
+  "component_receipt_admission": {
+    "symbol": "pear_runtime.assembly.core._build_artifacts",
+    "sha256": "55675805f86085777e33930dce1a8703efebd5215de00d70d7d9b4c7dcb1bbce",
+    "policy": "Current failure/failure_code must be absent or null; any non-null value is contradictory to passed. Original primary_error is not a current producer field.",
+    "selected_receipt_review": "Selected FEX06, Wine3 and graphics6 have both fields absent; no original receipt was rewritten."
+  }
+}

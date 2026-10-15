@@ -5,7 +5,7 @@
 from pathlib import Path
 import time
 import shutil
-from pear_runtime import build
+from pear_runtime import build, header_use
 from pear_runtime.errors import need
 from pear_runtime.assembly import core
 from pear_runtime.assembly._common import encoded
@@ -20,6 +20,7 @@ NAMES=('tls-thread','seh-unwind','suspend-context','code-invalidation',
 FIELDS={'schema_version','scope','candidate','runtime_ref','operation_ref','profile_ref',
         'capabilities_ref','provider_root','producer_manifest_ref','fixture_refs',
         'seed_root','seed_ref','seed_inventory','modules','output_root'}
+CAPABILITY_CATALOG=Path(__file__).with_name('capabilities')/'d36.json'
 CAPABILITIES=('abort_observer','mismatch_observer','target_observer',
               'target_value2_observer','writer_observer','attach_observer',
               'idempotent_repair','binding_census','slot_lifetime_observer')
@@ -30,8 +31,7 @@ def capability_binding(ref, runtime):
     need(set(value)=={'schema_version','scope','catalog_ref','fex_build_ref'} and
          type(value['schema_version']) is int and value['schema_version']==1 and value['scope']=='compiled_runtime_capabilities',
          'fixture_capability_shape')
-    catalog_path=Path(__file__).with_name('capabilities')/'d36.json'
-    need(value['catalog_ref']==build.fact(catalog_path),'fixture_capability_catalog')
+    need(value['catalog_ref']==build.fact(CAPABILITY_CATALOG),'fixture_capability_catalog')
     catalog=core.read_ref(value['catalog_ref'])
     need(value['fex_build_ref'] in runtime['development_assembly']['builds'],
          'fixture_capability_build_binding')
@@ -42,13 +42,79 @@ def capability_binding(ref, runtime):
          built['public_recipe']['sha256']==catalog['public_recipe_sha256'] and
          built['artifacts']['fex_pe']==runtime['development_assembly']['artifacts']['fex_pe'],
          'fixture_capability_compiled_source')
+    review_refs=_capability_review(built,catalog,value['fex_build_ref'],runtime['development_assembly'])
     compiled_capabilities(built,catalog)
     capabilities=catalog['capabilities']
     need(set(capabilities)==set(CAPABILITIES) and all(type(v) is bool for v in capabilities.values()),
          'fixture_capability_values')
-    for row in (ref,value['catalog_ref'],value['fex_build_ref']):core.checked_ref(row)
+    for row in (ref,value['catalog_ref'],value['fex_build_ref'],*review_refs):core.checked_ref(row)
     return dict(capabilities)
 
+
+
+def _compiled_inputs(built,catalog):
+    """Read every required metadata input; missing legacy evidence is a refusal."""
+    keys=('public_recipe','bindings_manifest','private_manifest')
+    need(all(type(built.get(key)) is dict for key in keys),'fixture_capability_metadata')
+    refs=[built[key] for key in keys]
+    recipe,bindings,private=[core.read_ref(ref) for ref in refs]
+    need(built['public_recipe']['sha256']==catalog['public_recipe_sha256'],
+         'fixture_capability_recipe_pin')
+    roots=header_use.bound_roots(recipe,bindings)
+    need(type(built.get('roots')) is dict and set(built['roots'])==set(roots),
+         'fixture_capability_root_binding')
+    for name,path in roots.items():
+        need(built['roots'][name]==dict(path=str(path),**recipe['roots'][name]),
+             'fixture_capability_root_binding')
+    need(recipe['roots']['fex']['kind']=='git' and
+         recipe['roots']['fex']['commit']==catalog['source_commit'],
+         'fixture_capability_source_pin')
+    need(header_use.expanded_recipe_sha256(recipe,bindings,private)==built.get('recipe_sha256'),
+         'fixture_capability_expanded_recipe')
+    artifact=built.get('artifacts',{}).get('fex_pe')
+    header_use.valid_identity(artifact)
+    output=header_use.canonical(artifact['path']).parent
+    contract=header_use.derive_fex_headers(recipe,bindings,private,output_root=output)
+    expected={row['path']:{key:row[key] for key in ('sha256','size_bytes')}
+              for row in catalog['compile_units']}
+    actual={row['path']:{key:row[key] for key in ('sha256','size_bytes')}
+            for row in recipe['compile_units']}
+    need(expected==actual,'fixture_capability_recipe_units')
+    return recipe,refs,output,contract
+
+
+def _capability_review(built,catalog,build_ref,assembly):
+    """Join retained local metadata to the independently bound assembly request."""
+    refs=assembly.get('review_refs')
+    need(type(refs) is list and refs,'fixture_capability_review_refs')
+    request=core.read_ref(refs[0])
+    need(type(request.get('schema_version')) is int and request['schema_version']==1 and
+         request.get('scope')=='development_candidate_assembly', 'fixture_capability_review_scope')
+    rows=request.get('inputs',{}).get('builds')
+    need(type(rows) is list,'fixture_capability_review_build')
+    entries=[row for row in rows if row.get('ref')==build_ref]
+    need(len(entries)==1,'fixture_capability_review_build')
+    entry=entries[0];review=entry.get('recipe_review')
+    pairs=(('public_recipe_ref','public_recipe'),('bindings_ref','bindings_manifest'),
+           ('private_manifest_ref','private_manifest'))
+    need(type(review) is dict and set(review)=={'mode',*(key for key,_ in pairs)} and
+         review['mode']=='expanded_dict_sha256','fixture_capability_review_shape')
+    for key,field in pairs:
+        need(refs.count(review[key])==1 and built.get(field)==review[key],
+             'fixture_capability_review_binding')
+    recipe,bindings,private=[core.read_ref(review[key]) for key,_ in pairs]
+    need(review['public_recipe_ref']['sha256']==catalog['public_recipe_sha256'],
+         'fixture_capability_review_recipe_pin')
+    pins={name:row['commit'] for name,row in recipe['roots'].items() if row['kind']=='git'}
+    need(entry.get('source_commits')==pins and all(built['roots'][name].get('kind')=='git' and
+         built['roots'][name].get('commit')==pin for name,pin in pins.items()),
+         'fixture_capability_review_source_pins')
+    digest=header_use.expanded_recipe_sha256(recipe,bindings,private)
+    need(entry.get('recipe_sha256')==digest and built.get('recipe_sha256')==digest,
+         'fixture_capability_review_expanded_recipe')
+    need(Path(built['artifacts']['fex_pe']['path']).parent==Path(build_ref['path']).parent,
+         'fixture_capability_output_binding')
+    return [refs[0],*(review[key] for key,_ in pairs)]
 
 
 def compiled_capabilities(built,catalog):
@@ -61,6 +127,9 @@ def compiled_capabilities(built,catalog):
     units=catalog['compile_units']
     need(type(units) is list and len(units)==3 and len({u['path'] for u in units})==3,
          'fixture_capability_units')
+    recipe,metadata_refs,output,contract=_compiled_inputs(built,catalog)
+    recipe_units={row['path']:row for row in recipe['compile_units']}
+    depfile_refs=[]
     source_root=Path(built['roots']['fex']['path'])
     need(source_root.is_absolute() and source_root.resolve(strict=True)==source_root,
          'fixture_capability_source_root')
@@ -96,8 +165,19 @@ def compiled_capabilities(built,catalog):
              'fixture_capability_unit')
         need(argv.count('-MF')==1 and argv.index('-MF')+1<len(argv) and
              argv[argv.index('-MF')+1]==groups[0]['depfile']['path'],'fixture_capability_depfile')
+        selected=recipe_units[unit['path']]
+        need(row.get('id')==selected['id'] and row.get('cwd')==str(output),
+             'fixture_capability_compile_binding')
+        need(groups[0]['depfile']['path']==str(output/build.relative(selected['depfile'])),
+             'fixture_capability_depfile_output')
         core.checked_ref(groups[0]['depfile'])
+        paths=header_use.depfile_paths(groups[0]['depfile'])
+        header_use.require_fex_header_use(contract,selected['id'],groups[0]['files'],
+                                        depfile_paths=paths,cwd=output)
+        depfile_refs.append(groups[0]['depfile'])
         for log in row['logs'].values():core.checked_ref(log)
+    header_use.recheck_fex_headers(contract)
+    for ref in (*metadata_refs,*depfile_refs):core.checked_ref(ref)
 
 
 def inventory_shape(rows):
