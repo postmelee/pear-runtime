@@ -29,8 +29,13 @@ and a separate 174-test build/assembly gate. These overlapping evidence scopes a
 not summed and are not native or game qualification. The
 [196-method ownership map](provenance/paired-memory-methods.json) has accepted
 per-method dispositions. The recorded Stage 4 component checkpoints are published
-on the private repositories; collaborator access is required. Stage 5 publication
-and final source-owner cutover remain separate gates.
+on the private repositories; collaborator access is required. Owners #10, #11
+and #12 accepted the exact Stage 5.2 imported scope and bounded development route.
+The [source-authority record](provenance/source-cutover-task56.json) identifies
+the single future editing owners, accepted commits and retained provenance. Final
+documentation/report refs are recorded by the Pear Task #56 final handoff;
+historical build and executed-tool revisions remain separate. This source transfer
+does not activate a runtime, release retained inputs or qualify game execution.
 
 The committed Stage 5.1 runtime tool checkpoint is
 `6f0202b457f0e585c5c7621a63d203e77d07386d`. Stage 5.2 executed seven fresh
@@ -80,7 +85,9 @@ separates those identities from the committed Stage 4 tool revision
 `625fd0f97b9955e43f71cb7906ccc41d8f70853b`. Its
 [Stage 4 report](mydocs/working/task_m1_56_stage4.md) is published with that
 private checkpoint. The Stage 5.1 source is committed at the tool revision above;
-its publication and final source-owner handoff remain separate.
+its executed identity remains separate from the accepted Stage 5.2 handoff
+commits recorded above. Earlier deferred ownership records remain historical;
+they are not parallel editing authority for the accepted imported scope.
 
 ## Portable verification
 

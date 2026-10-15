@@ -47,8 +47,13 @@ and a separate 174-test build/assembly gate. These overlapping evidence scopes a
 not summed and are not native or game qualification. The
 [196-method ownership map](../provenance/paired-memory-methods.json) has accepted
 per-method dispositions. The recorded Stage 4 component checkpoints are published
-on the private repositories; collaborator access is required. Stage 5 publication
-and final source-owner cutover remain separate gates.
+on the private repositories; collaborator access is required. Owners #10, #11
+and #12 accepted the exact Stage 5.2 imported scope and bounded development route.
+The [source-authority record](../provenance/source-cutover-task56.json) identifies
+the single future editing owners, accepted commits and retained provenance. Final
+documentation/report refs are recorded by the Pear Task #56 final handoff;
+historical build and executed-tool revisions remain separate. This source transfer
+does not activate a runtime, release retained inputs or qualify game execution.
 
 The committed Stage 5.1 runtime tool checkpoint is
 `6f0202b457f0e585c5c7621a63d203e77d07386d`. Stage 5.2 executed seven fresh
@@ -123,8 +128,9 @@ Collaborator links to the local committed checkpoints are
 [Wine](https://github.com/postmelee/pear-wine/tree/d31a50d7385b3385ab278e0fe7687b9d1267de94) and
 [FEX](https://github.com/postmelee/pear-fex/tree/a8ba1cbd0148b46817842f3b7307689d4b2acbd7).
 They require private-repository access. Their exact Stage 4 commits were
-verified on the private remotes. Stage 5 source has a separate publication gate;
-historical source acquisition below does not fetch unpublished commits.
+verified on the private remotes. Final documentation/report refs are recorded
+by the Pear Task #56 final handoff; historical build and executed-tool revisions
+remain separate. Acquire the exact published refs and fixed revisions below.
 
 ### Keep the selected tool checkout immutable
 
@@ -355,6 +361,38 @@ game/runtime qualification and ordinary-user support remain unperformed. Future 
 private inputs, fresh capacity, current authority and an independent release
 check after the owned worker exits, including failure outcomes.
 
+### Accepted developer handoff and next investigation
+
+The [canonical cutover record](../provenance/source-cutover-task56.json) records
+owner acceptance of the selected implementation, tests and development boundary.
+This changes future editable ownership; historical build pins, executed tool
+pins and retained original evidence remain distinct. The reviewed successor to
+the recovered D25 producer passed bounded component reconstruction, although the
+original D25 build failed overall. Retained lower-layer objects/configuration and
+explicit tools remain required; source history alone does not reconstruct them.
+
+The original D36 result is still a loading-time `owner_refused` / EC-gate status 3,
+followed by owner cleanup. It does not establish an independent crash or a binding
+capacity cause. Candidate3 and runtime12 contain identical WGI PE bytes, but the
+source-to-PE binding and natural-call cause are unresolved. WGI work belongs in
+`pear-wine/dlls/windows.gaming.input/`; EC gate/lifecycle work belongs in
+`pear-fex/Source/Windows/ARM64EC/Module.cpp` and
+`Source/Windows/Common/PearFEXMemory.cpp`. WGI needs a new explicit recipe/input
+closure; the selected Wine recipe does not compile it.
+
+Use the existing [Pear game request and independent-release interface](https://github.com/postmelee/pear/blob/codex/task56/docs/development/rosetta-free.md#finish-a-future-game-diagnostic-with-independent-release).
+The reviewed future request uses `manual_feedback_v1`, a 5,400-second whole bound
+and an 8 MiB worker-log limit. Its metadata-only plan needs 2,440,580,183 additional
+bytes plus 6,442,450,944 bytes of reserve, without assuming APFS savings. Before
+execution, recheck exact inputs, free space, predecessor resources, the live lease
+and current authority. Task #56 did not copy or run the game.
+
+Retain exact canonical builder paths, selected builds/packs, current candidate,
+candidate2 reuse and failed-attempt evidence. Fresh fixture success and accepted
+source cutover do not discharge those dependencies. Selection rollback restores
+only the pointer through a retained valid prepared record; the bounded header
+restore is not full input-pack or private-state recovery.
+
 ## Accepted evidence reuse
 
 The accepted candidate2-to-candidate3 review retains exact original operations,
@@ -404,9 +442,10 @@ checks independently bound owner/export/private identities and actual depfile
 uses. It rejects omitted or same-name shadow headers. Its retained FEX06 proof
 is supplemental admission evidence, not a component rebuild. The seven selected-
 only mappings and the command-construction mapping do not automatically renew
-source-symbol semantics for a changed candidate. The accepted cross-repository
-metadata is committed at the Stage 4 revisions above; final source-owner
-acceptance remains a separate gate.
+source-symbol semantics for a changed candidate. The cross-repository method metadata
+retains its Stage 4 origin. The [accepted source-authority record](../provenance/source-cutover-task56.json)
+now binds the exact Stage 5.2 owner approvals without rewriting those historical
+records or broadening selected-input test claims.
 
 From the developer-tool checkout, the following per-directory discovery forms
 cover synthetic-data and mocked runtime-operation suites. The native test
@@ -447,13 +486,21 @@ they do not compile components, sign a runtime or launch Wine. The helper root
 must contain the exact admitted source pack. See the component ownership maps
 and runtime `provenance/` records for method-level limits.
 
-The latest original source-owner review found no selected source/patch/input
-changes beyond the accepted export checkpoint; that review did not transfer
-source authority or execute the later diagnostics. The committed seven-fixture
-checkpoint and newer Stage 4 work have different source scopes. Reuse portable results only while their recorded loaded-source
-identities remain exact. Later control/recovery entrypoints are unavailable from
-the historical build commit. Stage 4 source is published privately; Stage 5
-publication and final source-owner acceptance are separate gates.
+The final owner reviews accept the exact mapped imports as the single future
+editable source in the component, runtime and Pear repositories. Canonical common
+providers live under `pear_runtime/providers/pear_legacy`; the original worktrees
+and immutable helper packs remain retained evidence and consumer inputs. A future
+provider change needs a new reviewed pack/binding and affected checks. The separate
+offline D24/D32/N1 and parked D37 work remains outside this transfer. Earlier
+`source_cutover: false` and deferred records remain unchanged historical snapshots,
+superseded only for the accepted mapped scope by the canonical record.
+
+The committed seven-fixture checkpoint, Stage 4 controls and Stage 5.1 tools have
+different source scopes. Reuse portable results only while their recorded loaded
+source identities remain exact. Later control/recovery entrypoints are unavailable
+from the historical build commit. Stage 4 source is published privately. Final
+documentation/report refs are recorded by the Pear Task #56 final handoff;
+historical build and executed-tool revisions remain separate.
 
 ## Retention and recovery
 

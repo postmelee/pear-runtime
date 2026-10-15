@@ -1,0 +1,59 @@
+{
+  "schema_version": 1,
+  "issue": 56,
+  "stage": 6,
+  "owner": "runtime",
+  "accepted_source_checkpoint": "b9609167197ffab498ef9b58053393ff5aafb348",
+  "scope": "source_authority_and_development_handoff",
+  "changed_files_before_reports": [
+    {
+      "path": "README.md",
+      "name": "README.md",
+      "sha256": "d6369f3ad182a78f52bf516f3c5c77c20b9f2256adff5d3404ab517be2f21339",
+      "size_bytes": 7506
+    },
+    {
+      "path": "docs/development.md",
+      "name": "development.md",
+      "sha256": "fc41eb84f6474c22acf5ef5f5ccb78a9fe0c265835e221ed2c21e423fcc56044",
+      "size_bytes": 35552
+    },
+    {
+      "path": "provenance/source-cutover-task56.json",
+      "name": "source-cutover-task56.json",
+      "sha256": "4c07cd037cb71df1d487e50b6423c8acc3d04a7d534e99c21eb5a8544671542b",
+      "size_bytes": 19460
+    }
+  ],
+  "verification": {
+    "name": "stage6-runtime-precommit-verification.json",
+    "sha256": "b890f52bc179969388fc8e2badd761c1da7f2ae525ab3bf1d245b597f684689c",
+    "size_bytes": 995
+  },
+  "owner_acceptance": [
+    {
+      "owner_task": 10,
+      "name": "stage6-owner10-acceptance-thread.json",
+      "sha256": "e8831da76c17c5d45559ba0178a2f9290f11edc643ee87a273c4f34329a03363",
+      "size_bytes": 232114
+    },
+    {
+      "owner_task": 11,
+      "name": "stage6-owner11-acceptance-thread.json",
+      "sha256": "5f4373d34857bf4c8e690cb4b1450aec8088552d60b88140f45d54ab05a74b97",
+      "size_bytes": 256561
+    },
+    {
+      "owner_task": 12,
+      "name": "stage6-owner12-acceptance-thread.json",
+      "sha256": "f8af3e291e57063b18414a84b8871dcd4ded1d77bd447b8a4b3472312fff0815",
+      "size_bytes": 175988
+    }
+  ],
+  "source_execution_changed": false,
+  "selected_build_or_tool_pin_changed": false,
+  "runtime_activation": false,
+  "game_executed": false,
+  "additional_deletion": false,
+  "publication": "Private final branch refs are verified after the bundled commits and recorded in the Pear final handoff. No public Pear publication is performed."
+}

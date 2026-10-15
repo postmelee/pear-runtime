@@ -1,0 +1,381 @@
+{
+  "schema_version": 1,
+  "scope": "task56_selected_source_authority_cutover",
+  "task": 56,
+  "status": "accepted_for_the_exact_mapped_imported_scope",
+  "source_cutover": true,
+  "interpretation": "Canonical future editable ownership for the mapped source and tests. This record is provenance, not a loader selection, live authorization, artifact-release decision or qualification result.",
+  "acceptance_checkpoint": {
+    "repositories": {
+      "pear": "2bfcc9dff80212ba40b841a2fe6c32033ca0e801",
+      "pear-runtime": "b9609167197ffab498ef9b58053393ff5aafb348",
+      "pear-wine": "f403ac12954e1491078515272bab63e3f0f23e05",
+      "pear-fex": "afdf06c4099f6c169b593f520a7aca9ced63d700",
+      "pear-dxmt": "9aa0b34187a9a1c9034270e62d07d17583a0c351"
+    },
+    "record_self_commit": "Not self-pinned. The enclosing commit carries this record; accepted input commits remain fixed."
+  },
+  "owner_acceptance": [
+    {
+      "owner_task": 10,
+      "decision": "accepted",
+      "scope": "Exact imported provider/common execution and observation pieces move to pear-runtime; game observation/manual policy stays Pear. Separate offline D24/D32/N1 and parked D37 remain with their existing owners.",
+      "evidence": {
+        "role": "owner10_final_read_only_acceptance",
+        "storage": "private evidence; exact content identity only",
+        "sha256": "e8831da76c17c5d45559ba0178a2f9290f11edc643ee87a273c4f34329a03363",
+        "size_bytes": 232114
+      }
+    },
+    {
+      "owner_task": 11,
+      "decision": "accepted",
+      "scope": "Selected component implementation/tests and shared lifecycle, providers, integration admission/recovery, plus Pear game policy and development selection. No additional source-ownership blocker was reported.",
+      "evidence": {
+        "role": "owner11_final_read_only_acceptance",
+        "storage": "private evidence; exact content identity only",
+        "sha256": "5f4373d34857bf4c8e690cb4b1450aec8088552d60b88140f45d54ab05a74b97",
+        "size_bytes": 256561
+      }
+    },
+    {
+      "owner_task": 12,
+      "decision": "accepted",
+      "scope": "Bounded development/manual diagnostic route and next implementation locations; shared source transfer relies on owner11 acceptance. Actual game execution remains unperformed.",
+      "evidence": {
+        "role": "owner12_final_read_only_acceptance",
+        "storage": "private evidence; exact content identity only",
+        "sha256": "f8af3e291e57063b18414a84b8871dcd4ded1d77bd447b8a4b3472312fff0815",
+        "size_bytes": 175988
+      }
+    }
+  ],
+  "review_packet": {
+    "role": "reviewed_stage5_2_owner_packet",
+    "storage": "private evidence; exact content identity only",
+    "sha256": "31a2495e2f0daf75e3540b4202df4ef44ab582eb5e099c38800d8f6832580f2f",
+    "size_bytes": 10927
+  },
+  "canonical_owners": {
+    "pear-wine": {
+      "scope": "Mapped Wine implementation, native owner, canonical wire ABI, Wine fixtures and component-specific tests. Windows Gaming Input implementation remains Wine-owned; its unresolved source-to-PE and natural-call behavior are not qualified here.",
+      "provenance": [
+        {
+          "repository": "pear-wine",
+          "commit": "f403ac12954e1491078515272bab63e3f0f23e05",
+          "path": "pear/source-manifest.json",
+          "sha256": "2a875d84b71c057a0b19c0f0d37f7a00a6125a2fd0e06ae1573acc8082fd27f0",
+          "size_bytes": 88829
+        },
+        {
+          "repository": "pear-wine",
+          "commit": "f403ac12954e1491078515272bab63e3f0f23e05",
+          "path": "pear/fixture-source-manifest.json",
+          "sha256": "ce72c27bba4726b846e03865081cbd74ba45688d943b4316535a77d8fa1cdf55",
+          "size_bytes": 10112
+        },
+        {
+          "repository": "pear-wine",
+          "commit": "f403ac12954e1491078515272bab63e3f0f23e05",
+          "path": "pear/test-ownership.json",
+          "sha256": "963d556b9e5a201a83656dc0ca987de11a88d6d2cfb9a9a2f0775dfb10bc8942",
+          "size_bytes": 22335
+        }
+      ]
+    },
+    "pear-fex": {
+      "scope": "Mapped translator/frontends, generic diagnostics, canonical D36 diagnostic parsers and FEX CPU/repair/lifetime source tests. Private game-derived phase selectors are external inputs, not repository source.",
+      "provenance": [
+        {
+          "repository": "pear-fex",
+          "commit": "afdf06c4099f6c169b593f520a7aca9ced63d700",
+          "path": "Pear/Provenance/source-manifest.json",
+          "sha256": "730467cc0c0637aa05908224222a2e45502146cc19cc0b548ca9ab21d727c743",
+          "size_bytes": 87510
+        },
+        {
+          "repository": "pear-fex",
+          "commit": "afdf06c4099f6c169b593f520a7aca9ced63d700",
+          "path": "Pear/Provenance/test-ownership.json",
+          "sha256": "9fdaeffbf2ad34928a7d392b5b4208d6ecd786a0c04e23040c9a9c4bc5ebff41",
+          "size_bytes": 385967
+        },
+        {
+          "repository": "pear-fex",
+          "commit": "afdf06c4099f6c169b593f520a7aca9ced63d700",
+          "path": "Pear/Provenance/runtime-test-reconciliation.json",
+          "sha256": "4d320af25d532441ff97751faddd32cfbd9b7b3df55b097fe01b98d2da549853",
+          "size_bytes": 8109
+        }
+      ]
+    },
+    "pear-dxmt": {
+      "scope": "Mapped renderer and typed consumer changes, upstream winemetal header exports and renderer-specific test dispositions.",
+      "provenance": [
+        {
+          "repository": "pear-dxmt",
+          "commit": "9aa0b34187a9a1c9034270e62d07d17583a0c351",
+          "path": "pear/source-manifest.json",
+          "sha256": "27bb5164daca70a3558ae154bfd48c7704b42b518e2aa60f9c4924d77aeaaebd",
+          "size_bytes": 10020
+        },
+        {
+          "repository": "pear-dxmt",
+          "commit": "9aa0b34187a9a1c9034270e62d07d17583a0c351",
+          "path": "pear/test-ownership.json",
+          "sha256": "c3fb31a54bdf450002b44e2784e9e04fb65cd08964744feb81909c4dc9d5611d",
+          "size_bytes": 49629
+        }
+      ]
+    },
+    "pear-runtime": {
+      "scope": "Contracts, common Abort schema/header generator, exact reconstruction recipes/locks, assembly/admission, canonical common execution/observer/companion providers, lifecycle/resource release, and cross-component fixtures and recovery.",
+      "canonical_provider_root": "pear_runtime/providers/pear_legacy",
+      "provenance": [
+        {
+          "repository": "pear-runtime",
+          "commit": "b9609167197ffab498ef9b58053393ff5aafb348",
+          "path": "provenance/source-import.json",
+          "sha256": "b0b1e7608d987e157c1903600ca44e52095bb846e55c58e98fef8ebe1347e3e6",
+          "size_bytes": 56757
+        },
+        {
+          "repository": "pear-runtime",
+          "commit": "b9609167197ffab498ef9b58053393ff5aafb348",
+          "path": "provenance/assembly-import.json",
+          "sha256": "ee7ac54da46de2966319f9ba5c3aedf93445bba721f1426a78a9fbae056bc6a9",
+          "size_bytes": 27196
+        },
+        {
+          "repository": "pear-runtime",
+          "commit": "b9609167197ffab498ef9b58053393ff5aafb348",
+          "path": "provenance/fixture-provider-import.json",
+          "sha256": "9400b7272bc3891e626b4aa9cf5ececefafcbcf67b0ef98877ae35f9c6db588e",
+          "size_bytes": 38823
+        },
+        {
+          "repository": "pear-runtime",
+          "commit": "b9609167197ffab498ef9b58053393ff5aafb348",
+          "path": "provenance/fixture-context-import.json",
+          "sha256": "338eb89ccb9ee2dde46546f08a8f217830a2fa586d05abe25711280ada7f8526",
+          "size_bytes": 25196
+        },
+        {
+          "repository": "pear-runtime",
+          "commit": "b9609167197ffab498ef9b58053393ff5aafb348",
+          "path": "provenance/fixture-direct-import.json",
+          "sha256": "8c6ba1d8d8f44c1ab00fdee2010aeddd006c5854af15dcd418dcf46b812bcb66",
+          "size_bytes": 2190
+        },
+        {
+          "repository": "pear-runtime",
+          "commit": "b9609167197ffab498ef9b58053393ff5aafb348",
+          "path": "provenance/fixture-checks-import.json",
+          "sha256": "25a0938c76b0111f3b1d4eb36ee04ae1f5a6be7977d87a6ef0bf11b9e21b7277",
+          "size_bytes": 1016
+        },
+        {
+          "repository": "pear-runtime",
+          "commit": "b9609167197ffab498ef9b58053393ff5aafb348",
+          "path": "provenance/fixture-assessment-import.json",
+          "sha256": "411f722797b092e511be00e0acae905dad0651f831cf54b2247fc22e0110c33e",
+          "size_bytes": 63400
+        },
+        {
+          "repository": "pear-runtime",
+          "commit": "b9609167197ffab498ef9b58053393ff5aafb348",
+          "path": "provenance/fixture-graphics-import.json",
+          "sha256": "4e6c3b5f3998b33e270b3f77b59a2b8835eb3f30a9921da194eb447b70717013",
+          "size_bytes": 9821
+        },
+        {
+          "repository": "pear-runtime",
+          "commit": "b9609167197ffab498ef9b58053393ff5aafb348",
+          "path": "provenance/fixture-native-import.json",
+          "sha256": "569e7ff3193996803da4809d6233467f61ce5d3a0b4b95ada83797a4be5f666f",
+          "size_bytes": 16409
+        },
+        {
+          "repository": "pear-runtime",
+          "commit": "b9609167197ffab498ef9b58053393ff5aafb348",
+          "path": "provenance/fixture-controls-execution-import.json",
+          "sha256": "5b332e0029dad39a9cab9aa66b4cbda51f7c378947f36e94bf2f562cd6223d4c",
+          "size_bytes": 14528
+        },
+        {
+          "repository": "pear-runtime",
+          "commit": "b9609167197ffab498ef9b58053393ff5aafb348",
+          "path": "provenance/fixture-cpu-import.json",
+          "sha256": "1661a225145f9b52aa73957385bc5977cf3d89804ae829570874987ded0e909a",
+          "size_bytes": 8399
+        },
+        {
+          "repository": "pear-runtime",
+          "commit": "b9609167197ffab498ef9b58053393ff5aafb348",
+          "path": "provenance/fixture-release-import.json",
+          "sha256": "ce97914b0911d3a02936019ce70cabafa13b5e5c234cab41f50ed40d75ea831d",
+          "size_bytes": 2803
+        },
+        {
+          "repository": "pear-runtime",
+          "commit": "b9609167197ffab498ef9b58053393ff5aafb348",
+          "path": "provenance/fixture-controls-release-import.json",
+          "sha256": "d8dfef7668b3cc831b331c7dea53d70ad1912ed514d18dc0825bf8da302fd1a8",
+          "size_bytes": 3144
+        },
+        {
+          "repository": "pear-runtime",
+          "commit": "b9609167197ffab498ef9b58053393ff5aafb348",
+          "path": "provenance/fixture-game-seam.json",
+          "sha256": "ce564e350ee5ec0720be65bb5c882b3d4b8bf5a2e200f20daafd5a8ad784c739",
+          "size_bytes": 22754
+        },
+        {
+          "repository": "pear-runtime",
+          "commit": "b9609167197ffab498ef9b58053393ff5aafb348",
+          "path": "provenance/paired-memory-methods.json",
+          "sha256": "b680df7bbfc2203f3c7ab099f3cf04e15c508fe159691f5ef2eff072d74555ca",
+          "size_bytes": 293592
+        }
+      ]
+    },
+    "pear": {
+      "scope": "Application, manager, Steam/account/game ownership and input selection, explicit GameContext/manual feedback policy, development selector, Preview and user-state policy. Existing installed-app behavior and manager dependencies are unchanged.",
+      "provenance": [
+        {
+          "repository": "pear",
+          "commit": "2bfcc9dff80212ba40b841a2fe6c32033ca0e801",
+          "path": "tools/development/game/import-provenance.json",
+          "sha256": "cf93592620559ae5065a01e7427f22d275b755d973d01f1029e45f1cd2ced996",
+          "size_bytes": 213775
+        }
+      ]
+    }
+  },
+  "shared_headers": [
+    {
+      "owner": "pear-wine",
+      "path": "include/wine/pear_fex_memory.h",
+      "kind": "Wine-owned request ABI; exact export identity is recorded in the Wine source manifest",
+      "sha256": "a089b475fe6d6f2401977319eb4f0702e85c0753063f5748093131088f9f8b55"
+    },
+    {
+      "owner": "pear-runtime",
+      "path": "include/PearAbortObservation.h",
+      "kind": "Shared diagnostic schema output; edit the canonical schema/generator, not consumer copies",
+      "sha256": "da52c81da2051d3c255dc953f1c49758d76920f065de076de2adfa53c6f324a5"
+    }
+  ],
+  "revision_roles": {
+    "executed_stage5_2_tools": {
+      "pear-runtime": "6f0202b457f0e585c5c7621a63d203e77d07386d",
+      "pear": "0453474ba59b5a853d58d9556d849c175ad4677a",
+      "pear-fex": "9c9b602c07b57a08500862abfdf62e1bac351640"
+    },
+    "selected_component_build_sources": {
+      "dxmt": "e800e770006fc7c37831ab857000a4781c85f6fd",
+      "fex": "c62ed75aa6a33809ddb76c7f40aabbe4f4fbdda6",
+      "wine": "1b76db6902345388c589ba3909b22badf751dfd5"
+    },
+    "historical_reconstruction_builder": "c8887f9edaba57dffe7772cc26fd19aa9571d451",
+    "assembly_tool_checkpoint": "625fd0f97b9955e43f71cb7906ccc41d8f70853b",
+    "development_lock": {
+      "repository": "pear",
+      "commit": "2bfcc9dff80212ba40b841a2fe6c32033ca0e801",
+      "path": "tools/development/locks/task56-development-v1.json",
+      "sha256": "932ea9eb3e9218e13bf514b6dc6b1736f7e714d10ce3008af0b538a9d74dc08f",
+      "size_bytes": 1508
+    },
+    "historical_reconstruction_lock": {
+      "repository": "pear-runtime",
+      "commit": "b9609167197ffab498ef9b58053393ff5aafb348",
+      "path": "locks/task56-reconstruction-v1.json",
+      "sha256": "f3a3cba6d2ffc762cad176a51ba6f4a9b3cc199da8708a5e6fdbb3ecf850be22",
+      "size_bytes": 6318
+    },
+    "candidate3": {
+      "assembly_operation": {
+        "sha256": "0de34ec5eb5afcf7d088f3032995ccf4d6a69a73b6225d47e27bad1947fc6b59",
+        "size_bytes": 9289
+      },
+      "builds": {
+        "fex": {
+          "sha256": "7d6dd8687793cd9f9e8eb46cd0f2f9ecfb3276fbc8645f5eb21d2ef2212b06b3",
+          "size_bytes": 3617500
+        },
+        "graphics": {
+          "sha256": "2dbcafc16a00ec547987a81101bf898e29f0eae30926850fab0b1e4fa2b11b38",
+          "size_bytes": 5968320
+        },
+        "wine": {
+          "sha256": "fe70874ffb0cd23564e6ecb5928b4cfb3214148f1ca7d37686d6131a60be9880",
+          "size_bytes": 6615478
+        }
+      },
+      "runtime": {
+        "sha256": "b9bee774f596c4f7bf908dc30ef1c11745797af2837ee4b42016bdf152086fc7",
+        "size_bytes": 2455486
+      }
+    },
+    "rule": "Accepted Stage5.2 source/report commits, executed producer commits and historical component-build commits are different roles. No old artifact or execution receipt is relabeled as built or run from a newer commit."
+  },
+  "historical_records": {
+    "rule": "Earlier manifests remain immutable snapshots. Their deferred, proposed, owner-pending and source_cutover:false fields are superseded only as ownership status for the exact imported scope mapped above. Their hashes, original-source facts, unfinished exclusions, test dispositions and retention conditions remain valid historical evidence.",
+    "stage2_fixture_plan": {
+      "repository": "pear-runtime",
+      "commit": "b9609167197ffab498ef9b58053393ff5aafb348",
+      "path": "provenance/fixture-ownership.json",
+      "sha256": "e9ce29446d764730e0eb7c6cec610c49160b7bcf51d142bf9fc183eeb4cce88e",
+      "size_bytes": 84846
+    },
+    "test_mapping": "All 196 historical paired-memory methods have individual accepted dispositions in the canonical runtime map. This is neither 196 new test executions nor broad old-API equivalence; selected-only mappings do not qualify future changed inputs.",
+    "legacy_source": "Retained selected patches/generated files, original worktrees and immutable source packs remain provenance and exact consumer inputs, not a second editable implementation authority.",
+    "provider_source_pack": "The six historical assembly helper files also exist byte-exact under the canonical runtime provider root. Future changes belong at those mapped provider paths and require a reviewed new source-pack/binding and affected admission. Existing packs and consumers remain unchanged."
+  },
+  "verified_development_scope": {
+    "fresh_stage5_2_fixtures": 7,
+    "retained_stage4_native_bootstrap_frames_operations": 8,
+    "fresh_independent_release_operations_covered": 15,
+    "game_input_inspection_files": 69,
+    "game_producer_source_files": 92,
+    "metadata_selection_recovery": "game to fixture to the same game selection; no payload restoration",
+    "game_copied": false,
+    "game_executed": false,
+    "evidence": [
+      {
+        "role": "fresh_seven_fixture_operations",
+        "storage": "private evidence; exact content identity only",
+        "sha256": "2020f4f5e4fdbb8cfd90736812ec3ced24ff597c0522bfa20b117ce977b411be",
+        "size_bytes": 33052
+      },
+      {
+        "role": "fifteen_operation_release_and_game_metadata_review",
+        "storage": "private evidence; exact content identity only",
+        "sha256": "92b9be191de5e1022485f12a77349b67568ab471d76879c2332fc9637e56b602",
+        "size_bytes": 3647
+      },
+      {
+        "role": "selection_only_recovery",
+        "storage": "private evidence; exact content identity only",
+        "sha256": "f8c4cfa6290f23e903d019045765e78a762a4a0566165f390224664f82badcd8",
+        "size_bytes": 9004
+      }
+    ]
+  },
+  "retained_boundaries": [
+    "No runtime activation, installed Preview/#47 change, old environment mutation, artifact deletion, game execution or new current authority is authorized by this source transfer.",
+    "Keep the selected clean runtime and FEX tool checkouts, the ten exact assembly builder paths, the path-bound historical 494-byte frame request, original failure evidence, immutable generated/object/toolchain/SDK packs, candidates, private configuration and user state while required by any consumer.",
+    "Source commit or byte equality does not authorize relocating a retained builder path. Different bindings require reviewed new assembly records and affected checks.",
+    "Initial private evidence archive hashes metadata and copied evidence objects; it is not a full payload backup. External dependencies and explicitly retired/unavailable objects remain separately recorded.",
+    "Actual input recovery covers exact binding metadata and one 3634-byte common header on the historical candidate2 scope. No full candidate3, object/toolchain, prefix, save, credential or private-state restore is claimed.",
+    "Separate offline D24/D32/N1 and parked D37 research retain their existing owner and unfinished status. Only exact imported pieces are transferred.",
+    "D36 Loading/owner_refused/ECGate observations remain unresolved; WGI remains a hypothesis. Gameplay, manual response timing, audio, Steamworks, full Rosetta independence, cold-prefix initialization and ordinary-user distribution remain unqualified.",
+    "Future diagnostics require fresh exact-input, producer, space, authority, lease/deadline and independent resource-release checks. Saved acceptance, inspection or pass records are not live grants.",
+    "Original copyright/license notices and per-path exceptions remain unchanged. Source ownership here means editing responsibility, not a transfer of copyright or a new license."
+  ],
+  "publication": {
+    "repository_visibility": "The four component/runtime repositories remain private; Pear public publication requires a separate explicit decision.",
+    "accepted_checkpoint_remote_verification": "Not asserted by this record. Final private ref/privacy verification follows the final bundled commits.",
+    "evidence_privacy": "Only scoped summaries and content identities are included. Raw owner chats, local absolute bindings, game payloads, credentials, signing material and private diagnostics stay outside Git."
+  }
+}
