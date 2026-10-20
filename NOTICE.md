@@ -25,11 +25,13 @@ new digest and precise transformation. A checkpoint plus content digest identifi
 selected generated/working bytes; it does not claim all such bytes were in the
 checkpoint Git tree. Existing authorship is not rewritten as upstream acceptance.
 
-The shared Abort schema and generator have one proposed editable owner,
+The shared Abort schema and generator have one accepted editable owner,
 `pear-runtime`. Wine and FEX consume an exact export. The imported header is a
 materialized result, not a second hand-maintained implementation. Its selected
 SHA-256 is `da52c81da2051d3c255dc953f1c49758d76920f065de076de2adfa53c6f324a5`.
-Final source-owner cutover remains a separate Task #56 gate.
+The accepted [Task #56 source-owner cutover](provenance/source-cutover-task56.json)
+records this ownership. This does not change frozen exported bytes, license terms
+or their consumers' retention requirements.
 
 The Python dependency record contains the dependencies' own MIT license metadata
 and wheel identities. No Python dependency wheel or component binary is vendored.
