@@ -338,8 +338,11 @@ as a fresh native run.
 ## Pear-owned game policy and selection
 
 Pear owns its [development selection and game-policy guide](https://github.com/postmelee/pear/blob/2bfcc9dff80212ba40b841a2fe6c32033ca0e801/docs/development/rosetta-free.md#select-an-isolated-development-candidate).
-That Pear revision is publication-pending; the local Task #56 checkout contains
-the draft until its separate public publication decision. The guide supplies the
+That historical checkpoint is publicly reachable through merged Pear PR #58.
+For the corrected selector and manual-confirmation policy, use Pear source
+`400da1145b20ff787ad30b251ea5c810ed291c29` and its newly reviewed descriptors;
+the [current guide](https://github.com/postmelee/pear/blob/master/docs/development/rosetta-free.md#select-an-isolated-development-candidate)
+records the current handoff. The guide supplies the
 closed local selection shape and fixed commands. The runtime owns the single
 `APISession` lifecycle, live lease/current authority, captured companion provider,
 final operation and independent resource release. Pear owns the explicit
@@ -564,4 +567,10 @@ restore or a new implementation build needs its own complete input and capacity
 plan. The original build receipts, artifact lock and new developer-tool revision
 remain separate evidence. No recovery command here grants execution permission.
 
-The linked Pear documents are pinned to the accepted Stage 5.2 checkpoint. Their public reachability awaits authorized publication of Pear ancestry; the local reviewed checkout contains those exact files.
+The historical Pear document links remain pinned to their accepted checkpoint.
+Pear PR #58 merged the handoff and subsequent selector/manual-confirmation fixes
+at `26927fa2cc4e5d606ac02f2c1c1eceb54e83f60e`; those sources are publicly reachable.
+The [corrected final report](https://github.com/postmelee/pear/blob/26927fa2cc4e5d606ac02f2c1c1eceb54e83f60e/mydocs/report/task_m1_56_report.md)
+separates original evidence from the later regression checks. Component
+repositories remain private. Neither this documentation update nor the merge
+changes the selected runtime tool, candidate, build lock or source-cutover bytes.

@@ -2,7 +2,7 @@
 
 Shared runtime contracts, diagnostic interfaces and integration tooling for
 [Pear](https://github.com/postmelee/pear) and future consumers. This repository is
-being established by [Pear Task #56](https://github.com/postmelee/pear/issues/56).
+established for the accepted scope of [Pear Task #56](https://github.com/postmelee/pear/issues/56).
 The package contains the existing v1/v2 contracts and shared Abort schema, plus
 explicit-input Wine/FEX/graphics reconstruction and isolated candidate assembly.
 
