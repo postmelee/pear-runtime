@@ -28,8 +28,8 @@ The Stage 4 portable evidence records 715 unique test IDs / 701 method bodies pa
 and a separate 174-test build/assembly gate. These overlapping evidence scopes are
 not summed and are not native or game qualification. The
 [196-method ownership map](provenance/paired-memory-methods.json) has accepted
-per-method dispositions. The recorded Stage 4 component checkpoints are published
-on the private repositories; collaborator access is required. Owners #10, #11
+per-method dispositions. The recorded Stage 4 component checkpoints are retained
+in the public source repositories. Owners #10, #11
 and #12 accepted the exact Stage 5.2 imported scope and bounded development route.
 The [source-authority record](provenance/source-cutover-task56.json) identifies
 the single future editing owners, accepted commits and retained provenance. Final
@@ -55,10 +55,16 @@ Start with [reconstruction, controls and bounded recovery](docs/development.md),
 Required retained compiled/generated inputs and private local configuration are
 explicit prerequisites; cloning these repositories alone does not recover them.
 
+Task #75 separately established the selected WGI module's source-to-PE
+correspondence with the [WGI module recipe](recipes/wine/README.md#wgi-module-correspondence).
+Raw output differences remain recorded; timestamp-only derivation reproduces
+the selected PE exactly. Natural-call behavior and the loading-failure cause
+remain unverified.
+
 Pear retains its app, manager, game/account policy, Preview selection and recovery
 state. Component implementation belongs to the repositories below. Private
 game-derived selectors, owned game data, prefixes, credentials, saves, signing
-material and raw diagnostics do not belong in this repository, even while private.
+material and raw diagnostics do not belong in this repository.
 
 ## Source pins and related repositories
 
@@ -68,7 +74,7 @@ from the accepted Pear diagnostic checkpoint
 `951264bf5be4b9d2afb87320f5fac74778b2dd58`; generated and working-file provenance is
 recorded separately in [source-import.json](provenance/source-import.json).
 
-The component repositories currently require collaborator access. These are
+The component repositories below are public source repositories. These are
 upstream bases; the selected fork commits and reconstructed artifact identities
 are in the lock above:
 
@@ -83,8 +89,8 @@ checkpoint is `c13c7030ec3b780df12373cb9e0460bbcb5b0652`. Later test/tool work d
 component build pins. [Revision roles](docs/development.md#build-pins-and-later-development-revisions)
 separates those identities from the committed Stage 4 tool revision
 `625fd0f97b9955e43f71cb7906ccc41d8f70853b`. Its
-[Stage 4 report](mydocs/working/task_m1_56_stage4.md) is published with that
-private checkpoint. The Stage 5.1 source is committed at the tool revision above;
+[Stage 4 report](mydocs/working/task_m1_56_stage4.md) is retained with that
+historical checkpoint. The Stage 5.1 source is committed at the tool revision above;
 its executed identity remains separate from the accepted Stage 5.2 handoff
 commits recorded above. Earlier deferred ownership records remain historical;
 they are not parallel editing authority for the accepted imported scope.

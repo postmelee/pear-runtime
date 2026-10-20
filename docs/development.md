@@ -1,10 +1,9 @@
 # Reconstructing a development runtime
 
 This guide belongs to [Pear Task #56](https://github.com/postmelee/pear/issues/56).
-The selected source lives in the private [Wine](https://github.com/postmelee/pear-wine),
+The selected source lives in the public [Wine](https://github.com/postmelee/pear-wine),
 [FEX](https://github.com/postmelee/pear-fex) and
-[DXMT](https://github.com/postmelee/pear-dxmt) repositories; collaborator access is
-required. The common runtime owns input admission, component recipes, assembly
+[DXMT](https://github.com/postmelee/pear-dxmt) repositories. The common runtime owns input admission, component recipes, assembly
 and cross-component diagnostics. Pear retains application and game/account policy.
 
 ## Current reconstruction boundary
@@ -46,8 +45,8 @@ The Stage 4 portable evidence records 715 unique test IDs / 701 method bodies pa
 and a separate 174-test build/assembly gate. These overlapping evidence scopes are
 not summed and are not native or game qualification. The
 [196-method ownership map](../provenance/paired-memory-methods.json) has accepted
-per-method dispositions. The recorded Stage 4 component checkpoints are published
-on the private repositories; collaborator access is required. Owners #10, #11
+per-method dispositions. The recorded Stage 4 component checkpoints are retained
+in the public source repositories. Owners #10, #11
 and #12 accepted the exact Stage 5.2 imported scope and bounded development route.
 The [source-authority record](../provenance/source-cutover-task56.json) identifies
 the single future editing owners, accepted commits and retained provenance. Final
@@ -96,13 +95,15 @@ build uses the current source and records its own producer snapshot.
 ## Build pins and later development revisions
 
 The following completed build identities remain fixed. A later test commit is
-not evidence that the earlier artifact was built from that commit. The private
-component repositories use the development branch `codex/task56`; the exact
-Stage 4 revisions below were verified on their private remotes.
-The three upstream forks retain their original pin as `upstream/pinned`; this is
-an upstream reference, not a new integration branch. No `master` integration
-branch or completed merge is claimed. Use explicit refs and commits below,
-independently of the repository's default branch.
+not evidence that the earlier artifact was built from that commit. The component
+integration/default branch remains `codex/task56`. The table records historical
+Task #56 checkpoints, first verified while the repositories were private.
+Task #75 component PR #1 is now merged; the
+[runtime merge](https://github.com/postmelee/pear-runtime/commit/d49869e94ab6c2f7e40d4370aa623a9e99541527)
+and [DXMT merge](https://github.com/postmelee/pear-dxmt/commit/e02987bbe1bfee6b56759f6d1a35090e3404568a)
+do not replace the selected build pins. The three upstream forks retain their
+original pin as `upstream/pinned`. No component `master` branch was created.
+Use explicit refs and commits below, independently of the default branch.
 
 | Repository | Upstream base | Selected build/source commit | Later development checkpoint |
 | --- | --- | --- | --- |
@@ -116,19 +117,19 @@ lineages. The merged fork source view also differs from the per-artifact source
 views of explicitly retained lower-layer objects. Preserve both distinctions.
 Use a separate development checkout for current admission and fixture tools;
 keep historical build roots clean and pinned. The [Stage 4 report](../mydocs/working/task_m1_56_stage4.md)
-binds the completed candidate3 controls to these published private tool/test
+binds the completed candidate3 controls to these historical tool/test
 checkpoints. Stage 5
 lifecycle/selector changes are committed at
 `6f0202b457f0e585c5c7621a63d203e77d07386d`; the fresh seven-case selector
 verification binds that exact tool source. A dirty checkout does not inherit a
 committed producer identity.
 
-Collaborator links to the local committed checkpoints are
+Fixed-revision links to the historical checkpoints are
 [runtime](https://github.com/postmelee/pear-runtime/tree/625fd0f97b9955e43f71cb7906ccc41d8f70853b),
 [Wine](https://github.com/postmelee/pear-wine/tree/d31a50d7385b3385ab278e0fe7687b9d1267de94) and
 [FEX](https://github.com/postmelee/pear-fex/tree/a8ba1cbd0148b46817842f3b7307689d4b2acbd7).
-They require private-repository access. Their exact Stage 4 commits were
-verified on the private remotes. Final documentation/report refs are recorded
+Their exact Stage 4 commits were first verified while the repositories were
+private and are now available in the public source history. Final documentation/report refs are recorded
 by the Pear Task #56 final handoff; historical build and executed-tool revisions
 remain separate. Acquire the exact published refs and fixed revisions below.
 
@@ -376,12 +377,17 @@ explicit tools remain required; source history alone does not reconstruct them.
 
 The original D36 result is still a loading-time `owner_refused` / EC-gate status 3,
 followed by owner cleanup. It does not establish an independent crash or a binding
-capacity cause. Candidate3 and runtime12 contain identical WGI PE bytes, but the
-source-to-PE binding and natural-call cause are unresolved. WGI work belongs in
-`pear-wine/dlls/windows.gaming.input/`; EC gate/lifecycle work belongs in
-`pear-fex/Source/Windows/ARM64EC/Module.cpp` and
-`Source/Windows/Common/PearFEXMemory.cpp`. WGI needs a new explicit recipe/input
-closure; the selected Wine recipe does not compile it.
+capacity cause. Candidate3 and runtime12 contain identical WGI PE bytes.
+Task #75 established their module's source-to-PE correspondence through the
+[separate WGI recipe](../recipes/wine/README.md#wgi-module-correspondence) and its
+[recorded reconstruction](../mydocs/working/task_m1_75_stage3.md). Raw outputs
+remain distinct; deriving only COFF/debug timestamps reproduces the selected PE
+exactly without normalizing RSDS, code, imports, unwind or ARM64X data.
+Natural WGI invocation, HRESULT/output propagation and the loading-failure cause
+remain unverified. WGI work belongs in `pear-wine/dlls/windows.gaming.input/`;
+EC gate/lifecycle work belongs in `pear-fex/Source/Windows/ARM64EC/Module.cpp` and
+`Source/Windows/Common/PearFEXMemory.cpp`. The original selected Wine recipe
+does not compile WGI; the separate recipe requires its declared retained inputs.
 
 Use the existing [Pear game request and independent-release interface](https://github.com/postmelee/pear/blob/2bfcc9dff80212ba40b841a2fe6c32033ca0e801/docs/development/rosetta-free.md#finish-a-future-game-diagnostic-with-independent-release).
 The reviewed future request uses `manual_feedback_v1`, a 5,400-second whole bound
@@ -501,7 +507,7 @@ superseded only for the accepted mapped scope by the canonical record.
 The committed seven-fixture checkpoint, Stage 4 controls and Stage 5.1 tools have
 different source scopes. Reuse portable results only while their recorded loaded
 source identities remain exact. Later control/recovery entrypoints are unavailable
-from the historical build commit. Stage 4 source is published privately. Final
+from the historical build commit. Stage 4 source was first published privately. Final
 documentation/report refs are recorded by the Pear Task #56 final handoff;
 historical build and executed-tool revisions remain separate.
 
@@ -571,6 +577,7 @@ The historical Pear document links remain pinned to their accepted checkpoint.
 Pear PR #58 merged the handoff and subsequent selector/manual-confirmation fixes
 at `26927fa2cc4e5d606ac02f2c1c1eceb54e83f60e`; those sources are publicly reachable.
 The [corrected final report](https://github.com/postmelee/pear/blob/26927fa2cc4e5d606ac02f2c1c1eceb54e83f60e/mydocs/report/task_m1_56_report.md)
-separates original evidence from the later regression checks. Component
-repositories remain private. Neither this documentation update nor the merge
-changes the selected runtime tool, candidate, build lock or source-cutover bytes.
+separates original evidence from the later regression checks. The component
+source repositories are now public. Source publication and the documentation
+update do not change the selected runtime tool, candidate, build lock or
+source-cutover bytes.
