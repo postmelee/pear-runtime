@@ -96,13 +96,15 @@ build uses the current source and records its own producer snapshot.
 
 The following completed build identities remain fixed. A later test commit is
 not evidence that the earlier artifact was built from that commit. The component
-integration/default branch remains `codex/task56`. The table records historical
+default and integration branch is `master`; new task branches and pull requests
+start from and target `master`. The table records historical
 Task #56 checkpoints, first verified while the repositories were private.
 Task #75 component PR #1 is now merged; the
 [runtime merge](https://github.com/postmelee/pear-runtime/commit/d49869e94ab6c2f7e40d4370aa623a9e99541527)
 and [DXMT merge](https://github.com/postmelee/pear-dxmt/commit/e02987bbe1bfee6b56759f6d1a35090e3404568a)
 do not replace the selected build pins. The three upstream forks retain their
-original pin as `upstream/pinned`. No component `master` branch was created.
+original pin as `upstream/pinned`. The later integration-branch migration
+preserves the selected source, build and executed-tool commits.
 Use explicit refs and commits below, independently of the default branch.
 
 | Repository | Upstream base | Selected build/source commit | Later development checkpoint |
@@ -133,13 +135,20 @@ private and are now available in the public source history. Final documentation/
 by the Pear Task #56 final handoff; historical build and executed-tool revisions
 remain separate. Acquire the exact published refs and fixed revisions below.
 
+For new work, clone the public repository's `master` into a new task-owned
+directory and create a task branch there. Plan capacity for that source checkout
+separately. Do not switch, pull or reset a retained producer root. A fresh clone
+does not restore object/toolchain packs, private bindings or runtime state.
+
 ### Keep the selected tool checkout immutable
 
 The selected tool root is the clean, detached `.worktrees/runtime-task56`
 checkout at `6f0202b457f0e585c5c7621a63d203e77d07386d` under the component
 workspace. Bind this root in the development lock, fixture/game producer
 manifests and Pear selection. Later documentation and reports belong in the
-separate editable `.worktrees/runtime-development-v1` worktree on `codex/task56`.
+separate `.worktrees/runtime-development-v1` worktree, which retains its historical
+local `codex/task56` branch. Preserve that existing checkout and its HEAD; new
+work uses a fresh checkout and a task branch from `master`.
 The selector checks clean Git state and committed producer bytes; the selected
 tool root must remain immutable.
 
@@ -172,7 +181,7 @@ a default-branch checkout is not part of this procedure:
 
 ```sh
 for COMPONENT_REPO in "$RUNTIME_REPO" "$WINE_REPO" "$FEX_REPO" "$DXMT_REPO"; do
-  git -C "$COMPONENT_REPO" fetch origin refs/heads/codex/task56
+  git -C "$COMPONENT_REPO" fetch origin refs/heads/master
 done
 
 git -C "$RUNTIME_REPO" worktree add --detach "$HISTORICAL_ROOT/runtime" c8887f9edaba57dffe7772cc26fd19aa9571d451

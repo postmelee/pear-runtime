@@ -68,6 +68,11 @@ material and raw diagnostics do not belong in this repository.
 
 ## Source pins and related repositories
 
+`master` is the default and integration branch for new downstream development.
+Create task branches from `master` and target `master` in pull requests. Historical
+source, build and executed-tool pins below remain unchanged; use a fresh development
+checkout rather than switching a retained producer root.
+
 Contract files come unchanged from Pear
 `bcd27806da5c9885cfcf40e639ae02b2c400e3c1`. Shared Abort inputs are content-pinned
 from the accepted Pear diagnostic checkpoint
